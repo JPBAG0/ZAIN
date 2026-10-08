@@ -1368,16 +1368,24 @@
   marcar(".empresas__usos li", "sube", 4);
   marcar(".pregunta", "sube", 6);
   if (raiz.classList.contains("anim")) {
+    // los títulos «mascara» empiezan recortados al 100% y el navegador los da por
+    // invisibles; por eso se vigila su contenedor y se marca el título
+    const vigilado = new Map();
     const io = new IntersectionObserver(
       (ents) =>
         ents.forEach((en) => {
           if (!en.isIntersecting) return;
-          en.target.classList.add("visto");
+          (vigilado.get(en.target) || [en.target]).forEach((el) => el.classList.add("visto"));
           io.unobserve(en.target);
         }),
       { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
     );
-    $$("[data-anim], #pieMarca").forEach((el) => io.observe(el));
+    $$("[data-anim], #pieMarca").forEach((el) => {
+      if (el.dataset.anim !== "mascara") return io.observe(el);
+      const padre = el.parentElement;
+      if (!vigilado.has(padre)) vigilado.set(padre, []), io.observe(padre);
+      vigilado.get(padre).push(el);
+    });
   } else {
     $("#pieMarca").classList.add("visto");
   }

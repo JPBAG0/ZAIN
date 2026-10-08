@@ -481,7 +481,7 @@ p { margin: 0; }
 .pie__datos span { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #a3a3a8; }
 .pie__datos b, .pie__datos a { font-weight: 550; }
 .pie__marca { width: 100%; height: auto; color: var(--algodon); margin-top: 24px; margin-bottom: 20px; }
-.pie__legal { font-size: 13px; color: #a3a3a8; }
+.pie__legal { font-size: 13px; color: #a3a3a8; padding-right: 72px; }
 
 /* ---------------------------------------------------------------- pedido (carrito) */
 .pedido { position: fixed; inset: 0; z-index: 100; visibility: hidden; }
@@ -506,7 +506,7 @@ p { margin: 0; }
 .renglon__txt b { font-size: 15px; color: var(--tinta); }
 .renglon__pzs { color: var(--tinta); font-size: 13px; margin-top: 4px; }
 .renglon__acc { display: grid; gap: 6px; }
-@media (hover: hover) and (pointer: fine) { .rapido__cuerpo { padding-bottom: 12px; }
+.rapido__cuerpo { padding-bottom: 12px; }
 .rapido__prod { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; padding: 16px 0; }
 .rapido__prod canvas { width: 96px; height: 96px; padding: 6px; border-radius: 10px; background: var(--mesa); }
 .rapido__prod div { display: grid; gap: 4px; }
