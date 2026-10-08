@@ -94,6 +94,7 @@ window.ZAIN = {
        colores   ids de la lista de colores de arriba (el primero es el que se ve en el catálogo)
        tecnicas  ids de la lista de técnicas de arriba
        tallas    lista de tallas; [] para unitalla
+       tallasNombre  (opcional) cómo se llaman las tallas, p. ej. "Tamaños"
        pxPorCm   cuántos píxeles de la foto equivalen a 1 cm (para el tamaño del logo)
        zonas     dónde se puede poner el logo: x, y = centro en píxeles de la
                  foto (de 0 a 1000); max = ancho máximo del logo en cm
@@ -198,12 +199,13 @@ window.ZAIN = {
       id: "bolsa",
       nombre: "Bolsa de manta",
       categoria: "Accesorios",
-      descripcion: "Manta gruesa 38 × 42 cm. Para ferias, kits de bienvenida y tiendas.",
+      descripcion: "Manta gruesa en 5 tamaños. Para ferias, kits de bienvenida y tiendas.",
       foto: "img/productos/bolsa.webp",
       precio: 59,
       colores: ["natural", "negro", "marino", "rojo", "botella"],
       tecnicas: ["serigrafia", "dtf"],
-      tallas: [],
+      tallasNombre: "Tamaños", // ✏️ se muestra en vez de «Tallas»
+      tallas: ["Mini 25×30 cm", "Chica 30×35 cm", "Mediana 38×42 cm", "Grande 45×50 cm", "Jumbo 50×60 cm"], // ✏️
       pxPorCm: 14,
       zonas: [{ id: "frente", nombre: "Frente", x: 480, y: 640, max: 28 }],
     },

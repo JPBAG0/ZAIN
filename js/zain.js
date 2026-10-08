@@ -396,7 +396,9 @@
     .map((p) => {
       const cols = p.colores.map(color).filter(Boolean);
       return `<article class="producto" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}">
-        <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}" role="img"></canvas></div>
+        <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}" role="img"></canvas>
+          <button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+        </div>
         <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombre)}">
           ${cols.map((c, i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(c.nombre)}" title="${esc(c.nombre)}"></button>`).join("")}
         </div>
@@ -442,13 +444,17 @@
   $("#rejilla").addEventListener("click", (e) => {
     const art = e.target.closest(".producto");
     if (!art) return;
-    const punto = e.target.closest("[data-color]");
+    const punto = e.target.closest(".punto[data-color]");
     if (punto) {
       $$(".punto", art).forEach((x) => {
         x.classList.toggle("on", x === punto);
         x.setAttribute("aria-checked", x === punto);
       });
       pintarTarjeta(art, punto.dataset.color);
+      return;
+    }
+    if (e.target.closest("[data-agregar]")) {
+      abrirRapido(art);
       return;
     }
     if (e.target.closest("[data-personalizar]")) {
@@ -1001,6 +1007,179 @@
   $$("[data-cerrar]", pedidoEl).forEach((x) => x.addEventListener("click", cerrarPedido));
   addEventListener("keydown", (e) => e.key === "Escape" && pedidoEl.classList.contains("abierto") && cerrarPedido());
 
+  /* ------------------------------------------------------------------
+     Botón «+» del catálogo: panel para elegir color, técnica, ubicación,
+     logo y piezas por talla sin pasar por el personalizador
+     ------------------------------------------------------------------ */
+  const rapidoEl = $("#rapido");
+  const R = { p: null, c: "", t: "", z: "", tallas: {}, archivo: "" };
+  let focoRapido = null;
+  const rUnit = () => {
+    const p = prod(R.p);
+    return p.precio ? p.precio + (tecnica(R.t)?.extra || 0) : 0;
+  };
+  const rTallas = () => (prod(R.p).tallas.length ? prod(R.p).tallas : ["Piezas"]);
+  const rPiezas = () => rTallas().reduce((a, t) => a + (Number(R.tallas[t]) || 0), 0);
+
+  async function rPintarFoto() {
+    const p = prod(R.p);
+    const cv = $("#rapFoto");
+    const img = await ZR.cargar(p.foto);
+    const g = cv.getContext("2d");
+    g.clearRect(0, 0, cv.width, cv.height);
+    g.drawImage(ZR.tenir(img, color(R.c).hex, 320), 0, 0);
+  }
+
+  function rPintar() {
+    const p = prod(R.p);
+    $("#rapNombre").textContent = p.nombre;
+    $("#rapPrecio").textContent = p.precio ? `${dinero(p.precio)} por pieza + técnica` : "A cotizar";
+    $("#rapColorTxt").textContent = color(R.c).nombre;
+    $("#rapColor").innerHTML = p.colores
+      .map(color)
+      .filter(Boolean)
+      .map((c) => `<button type="button" class="punto punto--grande${c.id === R.c ? " on" : ""}" style="--c:${c.hex}" data-rc="${c.id}" aria-pressed="${c.id === R.c}" aria-label="${esc(c.nombre)}" title="${esc(c.nombre)}"></button>`)
+      .join("");
+    $("#rapTecnica").innerHTML = p.tecnicas
+      .map(tecnica)
+      .filter(Boolean)
+      .map((t) => `<button type="button" class="op op--tec${t.id === R.t ? " on" : ""}" data-rt="${t.id}" aria-pressed="${t.id === R.t}"><b>${esc(t.nombre)}</b><small class="num">${t.extra ? "+" + dinero(t.extra) : "Incluido"}</small></button>`)
+      .join("");
+    $("#rapZona").innerHTML = p.zonas
+      .map((z) => `<button type="button" class="op${z.id === R.z ? " on" : ""}" data-rz="${z.id}" aria-pressed="${z.id === R.z}">${esc(z.nombre)}</button>`)
+      .join("");
+    $("#rapTallasTit").textContent = p.tallas.length ? p.tallasNombre || "Tallas" : "Piezas";
+    $("#rapTallas").innerHTML = rTallas()
+      .map(
+        (t) => `<label class="talla"><span>${esc(t)}</span>
+          <span class="talla__ctl"><button type="button" data-rtt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="0" max="9999" value="${R.tallas[t] || 0}" data-rtalla="${esc(t)}" aria-label="Piezas ${esc(t)}" /><button type="button" data-rtt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
+      )
+      .join("");
+    rTotal();
+  }
+
+  function rTotal() {
+    const n = rPiezas();
+    const u = rUnit();
+    const t = tecnica(R.t);
+    $("#rapPiezas").textContent = `${n} ${n === 1 ? "pza" : "pzas"}`;
+    $("#rapTotal").textContent = u ? (n ? `${dinero(u * n)} ${C.moneda}` : `${dinero(u)} c/u`) : "A cotizar";
+    $("#rapDetalle").textContent = u && n ? `${n} × ${dinero(u)} (prenda ${dinero(prod(R.p).precio)} + ${t.nombre.toLowerCase()} ${dinero(t.extra || 0)})` : "";
+  }
+
+  function abrirRapido(art) {
+    const p = prod(art.dataset.id);
+    Object.assign(R, { p: p.id, c: art.dataset.color || p.colores[0], t: p.tecnicas[0], z: p.zonas[0].id, tallas: {}, archivo: "" });
+    $("#rapArchivo").value = "";
+    $("#rapSubirTxt").innerHTML = "<b>Elige tu logo</b> · PNG, JPG, SVG o PDF";
+    $("#rapSubir").classList.remove("con-logo");
+    $("#rapTexto").value = "";
+    $("#rapNotas").value = "";
+    $("#rapAviso").textContent = "";
+    rPintar();
+    rPintarFoto();
+    focoRapido = document.activeElement;
+    rapidoEl.classList.add("abierto");
+    rapidoEl.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("sin-scroll");
+    $(".rapido__cuerpo").scrollTop = 0;
+    setTimeout(() => $(".pedido__x", rapidoEl).focus(), 50);
+  }
+  const cerrarRapido = () => {
+    rapidoEl.classList.remove("abierto");
+    rapidoEl.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("sin-scroll");
+    focoRapido?.focus?.();
+  };
+  $$("[data-cerrar]", rapidoEl).forEach((x) => x.addEventListener("click", cerrarRapido));
+  addEventListener("keydown", (e) => e.key === "Escape" && rapidoEl.classList.contains("abierto") && cerrarRapido());
+
+  $(".rapido__cuerpo").addEventListener("click", (e) => {
+    const c = e.target.closest("[data-rc]");
+    const t = e.target.closest("[data-rt]");
+    const z = e.target.closest("[data-rz]");
+    const tt = e.target.closest("[data-rtt]");
+    if (c) {
+      R.c = c.dataset.rc;
+      $$("[data-rc]", rapidoEl).forEach((x) => {
+        x.classList.toggle("on", x === c);
+        x.setAttribute("aria-pressed", x === c);
+      });
+      $("#rapColorTxt").textContent = color(R.c).nombre;
+      rPintarFoto();
+    }
+    if (t || z) {
+      const b = t || z;
+      if (t) R.t = t.dataset.rt;
+      else R.z = z.dataset.rz;
+      $$(t ? "[data-rt]" : "[data-rz]", rapidoEl).forEach((x) => {
+        x.classList.toggle("on", x === b);
+        x.setAttribute("aria-pressed", x === b);
+      });
+      rTotal();
+    }
+    if (tt) {
+      const k = tt.dataset.rtt;
+      R.tallas[k] = Math.max(0, (Number(R.tallas[k]) || 0) + Number(tt.dataset.d));
+      $$("[data-rtalla]", rapidoEl).find((i) => i.dataset.rtalla === k).value = R.tallas[k];
+      $("#rapAviso").textContent = "";
+      rTotal();
+    }
+  });
+  $("#rapTallas").addEventListener("input", (e) => {
+    const i = e.target.closest("[data-rtalla]");
+    if (!i) return;
+    R.tallas[i.dataset.rtalla] = Math.max(0, Math.min(9999, Math.floor(Number(i.value) || 0)));
+    $("#rapAviso").textContent = "";
+    rTotal();
+  });
+  $("#rapArchivo").addEventListener("change", (e) => {
+    const f = e.target.files[0];
+    R.archivo = f ? f.name : "";
+    $("#rapSubir").classList.toggle("con-logo", !!f);
+    $("#rapSubirTxt").innerHTML = f ? `<b>${esc(f.name)}</b> · tócalo para cambiarlo` : "<b>Elige tu logo</b> · PNG, JPG, SVG o PDF";
+  });
+
+  $("#rapidoForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const p = prod(R.p);
+    const n = rPiezas();
+    if (!n) {
+      $("#rapAviso").textContent = p.tallas.length ? `Indica cuántas piezas quieres de cada ${p.tallasNombre ? "tamaño" : "talla"}.` : "Indica cuántas piezas quieres.";
+      $("#rapTallas input")?.focus();
+      return;
+    }
+    const t = tecnica(R.t);
+    const texto = $("#rapTexto").value.trim();
+    const logo = [R.archivo && `archivo «${R.archivo}» (lo envío por WhatsApp)`, texto && `texto «${texto}»`].filter(Boolean).join(" + ") || "lo envío por WhatsApp";
+    await rPintarFoto(); // que la miniatura tenga el color final
+    const m = document.createElement("canvas");
+    m.width = m.height = 180;
+    const g = m.getContext("2d");
+    g.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--mesa").trim() || "#e7e7e3";
+    g.fillRect(0, 0, 180, 180);
+    g.drawImage($("#rapFoto"), 10, 10, 160, 160);
+    pedido.push({
+      id: Date.now().toString(36),
+      p: p.id,
+      nombre: p.nombre,
+      color: color(R.c).nombre,
+      tecnica: t.nombre,
+      zona: p.zonas.find((z) => z.id === R.z).nombre,
+      cm: 0,
+      tallas: p.tallas.length ? rTallas().filter((x) => R.tallas[x] > 0).map((x) => `${x}: ${R.tallas[x]}`).join(" · ") : "",
+      tallasEtq: p.tallasNombre || "Tallas",
+      piezas: n,
+      unit: rUnit(),
+      logo,
+      notas: $("#rapNotas").value.trim(),
+      mini: m.toDataURL("image/jpeg", 0.8),
+    });
+    guardarPedido();
+    cerrarRapido();
+    toast(`${p.nombre} agregado al pedido ✓`);
+  });
+
   const guardarPedido = () => {
     if (!almacen.guardar(LLAVE, pedido)) {
       // si no cabe (muchas imágenes), se guarda sin las vistas previas
@@ -1037,6 +1216,7 @@
       zona: z.nombre + (E.dx || E.dy ? " (posición ajustada)" : ""),
       cm: E.cm,
       tallas: p.tallas.length ? desglose.join(" · ") : "",
+      tallasEtq: p.tallasNombre || "Tallas",
       piezas: E.piezas,
       unit: p.precio ? p.precio + (t.extra || 0) : 0,
       logo,
@@ -1055,8 +1235,8 @@
 
   function mensajePedido() {
     const lineas = pedido.map((x, i) => {
-      const r = [`${i + 1}) ${x.nombre} — ${x.color}`, `   ${x.tecnica} · ${x.zona} · logo de ${cm(x.cm)}`];
-      r.push(`   ${x.tallas ? `Tallas: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
+      const r = [`${i + 1}) ${x.nombre} — ${x.color}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
+      r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
       if (x.unit) r.push(`   Referencia: ${dinero(x.unit)} c/u → ${dinero(x.unit * x.piezas)}`);
       r.push(`   Logo: ${x.logo}`);
       if (x.notas) r.push(`   Notas: ${x.notas}`);
@@ -1088,7 +1268,9 @@
           <div class="renglon__txt">
             <b>${esc(x.nombre)}</b>
             <span>${esc(x.color)} · ${esc(x.tecnica)} · ${esc(x.zona.toLowerCase())}</span>
-            <span class="num">${x.tallas ? esc(x.tallas) : ""}</span>
+            ${x.tallas ? `<span class="num">${esc(x.tallas)}</span>` : ""}
+            <span>Logo: ${esc(x.logo)}</span>
+            ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
             <span class="renglon__pzs num">${x.piezas} pzas${x.unit ? ` · ${dinero(x.unit * x.piezas)}` : " · a cotizar"}</span>
           </div>
           <div class="renglon__acc">
