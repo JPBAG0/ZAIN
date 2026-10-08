@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ZAIN — Uniformes y artículos promocionales con tu logo</title>
+  <meta name="description" content="Playeras, polos, camisas, chamarras, gorras y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
+  <meta name="theme-color" content="#f3f3f1" />
+  <meta property="og:title" content="ZAIN — Tu logo en todo lo que usa tu equipo" />
+  <meta property="og:description" content="Uniformes y promocionales con bordado, serigrafía y DTF. Render al instante y pedido por WhatsApp." />
+  <meta property="og:image" content="img/fotos/hero.webp" />
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/zain.css?v=4" />
+  <script>
+    /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
+    (function () {
+      var h = document.documentElement;
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      h.classList.add("anim");
+      try { if (sessionStorage.getItem("zain-intro")) h.classList.add("sin-intro"); } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- entrada: las letras suben y la Z y la N se voltean a espejo, como el logo -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="intro__logo" viewBox="0 0 370 150" fill="currentColor"><path class="letra letra--espejo" d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z" /><path class="letra" fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z" /><path class="letra" d="M227 0H253V150H227Z" /><path class="letra letra--espejo" d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z" /></svg>
+    <span class="intro__linea"></span>
+  </div>
+  <a class="saltar" href="#catalogo">Saltar al catálogo</a>
+
+  <!-- ===================== BARRA ===================== -->
+  <header class="barra" id="barra">
+    <a class="barra__logo" href="#inicio" aria-label="ZAIN, ir al inicio">
+      <svg viewBox="0 0 370 150" aria-hidden="true"><use href="#logo" /></svg>
+    </a>
+    <nav class="barra__nav" aria-label="Secciones">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personaliza">Personaliza</a>
+      <a href="#tecnicas">Técnicas</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="barra__pedido" id="abrirPedido" type="button" aria-controls="pedido">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z" /><path d="M9 7V5.5a3 3 0 0 1 6 0V7" /></svg>
+      <span>Pedido</span>
+      <b class="barra__cuenta" id="cuenta" hidden>0</b>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===================== PORTADA ===================== -->
+    <section class="portada" id="inicio" aria-labelledby="titulo">
+      <div class="portada__texto">
+        <h1 id="titulo" class="portada__titulo">
+          <span class="linea"><span>Tu logo</span></span>
+          <span class="linea"><span>en todo lo que</span></span>
+          <span class="linea"><span>usa tu equipo.</span></span>
+        </h1>
+        <p class="portada__lede">Playeras, polos, camisas, chamarras, gorras y bolsas con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
+        <div class="portada__acciones">
+          <a class="btn btn--tinta" href="#personaliza">Personalizar ahora</a>
+          <a class="btn btn--linea" href="#catalogo">Ver catálogo</a>
+        </div>
+      </div>
+
+      <div class="portada__escena" id="escena" aria-label="Prendas de muestra. Arrastra para ver más.">
+        <svg class="portada__marca" viewBox="0 0 370 150" aria-hidden="true"><use href="#logo" /></svg>
+        <!-- las prendas se dibujan desde js/zain.js -->
+      </div>
+
+      <div class="ficha" id="ficha" aria-live="polite">
+        <span class="ficha__reg" aria-hidden="true"></span>
+        <dl>
+          <div><dt>Prenda</dt><dd id="fPrenda">Polo piqué</dd></div>
+          <div><dt>Color</dt><dd id="fColor">Azul marino</dd></div>
+          <div><dt>Técnica</dt><dd id="fTecnica">Bordado · pecho izq.</dd></div>
+          <div><dt>Logo</dt><dd id="fMedida" class="num">9.0 cm</dd></div>
+        </dl>
+        <button class="ficha__ir" id="fIr" type="button">Personalizar esta prenda
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </button>
+      </div>
+
+      <ul class="portada__datos" id="datos">
+        <!-- se llenan con config.js -->
+      </ul>
+    </section>
+
+    <!-- cinta que corre con el scroll -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista" id="cinta">
+        <span>Bordado</span><i></i><span>Serigrafía</span><i></i><span>DTF</span><i></i><span>Uniformes</span><i></i><span>Merch para eventos</span><i></i><span>Kits de bienvenida</span><i></i>
+      </div>
+    </div>
+
+    <!-- ===================== CATÁLOGO ===================== -->
+    <section class="seccion catalogo" id="catalogo" aria-labelledby="catTitulo">
+      <div class="seccion__cabeza">
+        <h2 id="catTitulo">Catálogo</h2>
+        <p>Toca un color para verlo en la prenda. Los precios son por pieza, antes de la técnica.</p>
+      </div>
+      <div class="filtros" id="filtros" role="tablist" aria-label="Filtrar catálogo"></div>
+      <div class="rejilla" id="rejilla"></div>
+      <div class="promos">
+        <h3>También manejamos</h3>
+        <ul id="promos"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== PERSONALIZADOR ===================== -->
+    <section class="seccion personaliza" id="personaliza" aria-labelledby="perTitulo">
+      <div class="seccion__cabeza">
+        <h2 id="perTitulo">Personaliza tu prenda</h2>
+        <p>Sube tu logo o escribe un texto, elige técnica y ubicación, y agrégalo a tu pedido. El render es una vista previa: antes de producir te mandamos la prueba con medidas reales.</p>
+      </div>
+
+      <div class="taller">
+        <figure class="taller__lienzo">
+          <canvas id="lienzo" width="1000" height="1000" aria-label="Vista previa de la prenda personalizada" role="img"></canvas>
+          <canvas id="fantasma" class="taller__fantasma" width="1000" height="1000" aria-hidden="true"></canvas>
+          <div class="taller__regla" aria-hidden="true"><span id="reglaTxt" class="num">9.0 cm</span></div>
+          <div class="mover" role="group" aria-label="Mover el logo">
+            <button type="button" data-mover="arr" aria-label="Subir el logo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+            <button type="button" data-mover="izq" aria-label="Mover el logo a la izquierda"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" data-mover="centro" aria-label="Centrar el logo en su zona"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v4M12 16v4M4 12h4M16 12h4M12 12h.01"/></svg></button>
+            <button type="button" data-mover="der" aria-label="Mover el logo a la derecha"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button type="button" data-mover="aba" aria-label="Bajar el logo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          </div>
+          <figcaption class="taller__pie">
+            <span id="pieTxt">Polo piqué · Azul marino</span>
+            <button class="btn-mini" id="descargar" type="button">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
+              Descargar render
+            </button>
+          </figcaption>
+        </figure>
+
+        <form class="taller__panel" id="panel" novalidate>
+          <fieldset class="paso">
+            <legend>Prenda</legend>
+            <div class="opciones opciones--prendas" id="oPrenda"></div>
+          </fieldset>
+
+          <fieldset class="paso">
+            <legend>Color <span class="paso__valor" id="vColor"></span></legend>
+            <div class="opciones opciones--colores" id="oColor"></div>
+          </fieldset>
+
+          <fieldset class="paso">
+            <legend>Tu logo</legend>
+            <div class="pestanas" role="tablist">
+              <button type="button" role="tab" class="pestana on" data-modo="imagen" aria-selected="true">Subir imagen</button>
+              <button type="button" role="tab" class="pestana" data-modo="texto" aria-selected="false">Escribir texto</button>
+            </div>
+            <div class="modo" data-modo="imagen">
+              <label class="subir" id="subir">
+                <input type="file" id="archivo" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg>
+                <span id="subirTxt"><b>Elige tu logo</b> o arrástralo aquí · PNG, JPG o SVG</span>
+              </label>
+              <div class="analisis" id="analisis" hidden aria-live="polite"></div>
+              <label class="interruptor">
+                <input type="checkbox" id="quitarFondo" checked />
+                <span>Quitar el fondo automáticamente</span>
+              </label>
+              <div class="tinta-logo">
+                <span>Color del logo</span>
+                <div class="opciones" id="oTinta">
+                  <button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>
+                  <button type="button" class="op op--chico" data-tinta="#f6f6f4" aria-pressed="false"><i style="--c:#f6f6f4"></i>Blanco</button>
+                  <button type="button" class="op op--chico" data-tinta="#141416" aria-pressed="false"><i style="--c:#141416"></i>Negro</button>
+                  <button type="button" class="op op--chico" data-tinta="#c9a453" aria-pressed="false"><i style="--c:#c9a453"></i>Dorado</button>
+                </div>
+              </div>
+            </div>
+            <div class="modo" data-modo="texto" hidden>
+              <label class="campo">
+                <span>Texto</span>
+                <input type="text" id="texto" maxlength="28" placeholder="Nombre de tu empresa" autocomplete="organization" />
+              </label>
+              <div class="fila">
+                <label class="campo">
+                  <span>Letra</span>
+                  <select id="letra">
+                    <option value="ancha">Ancha</option>
+                    <option value="clasica">Clásica</option>
+                    <option value="script">Manuscrita</option>
+                  </select>
+                </label>
+                <label class="campo campo--color">
+                  <span>Color del texto</span>
+                  <input type="color" id="colorTexto" value="#ffffff" />
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="paso">
+            <legend>Técnica</legend>
+            <div class="opciones opciones--tecnicas" id="oTecnica"></div>
+          </fieldset>
+
+          <fieldset class="paso">
+            <legend>Ubicación y tamaño</legend>
+            <div class="opciones opciones--zonas" id="oZona"></div>
+            <label class="deslizador">
+              <span>Ancho del logo</span>
+              <input type="range" id="tamano" min="3" max="28" step="0.5" value="9" />
+              <output id="tamanoTxt" class="num" for="tamano">9.0 cm</output>
+            </label>
+          </fieldset>
+
+          <fieldset class="paso">
+            <legend>Piezas <span class="paso__valor num" id="vPiezas">0 pzas</span></legend>
+            <div class="tallas" id="oTallas"></div>
+            <label class="campo">
+              <span>Notas (opcional)</span>
+              <input type="text" id="notas" maxlength="120" placeholder="Ej. también bordar la espalda, nombres individuales…" />
+            </label>
+          </fieldset>
+
+          <div class="taller__total">
+            <div>
+              <span class="taller__totalEtq">Precio de referencia</span>
+              <strong class="num" id="precioTxt">—</strong>
+              <small id="precioDetalle"></small>
+            </div>
+            <button class="btn btn--tinta" id="agregar" type="submit">Agregar al pedido</button>
+          </div>
+          <p class="taller__aviso" id="aviso" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== TÉCNICAS ===================== -->
+    <section class="seccion tecnicas" id="tecnicas" aria-labelledby="tecTitulo">
+      <div class="seccion__cabeza">
+        <h2 id="tecTitulo">Tres técnicas, una para cada prenda</h2>
+        <p>No todas las prendas ni todos los logos piden lo mismo. Te recomendamos la que mejor dura y mejor se ve para tu caso.</p>
+      </div>
+      <div class="tecnicas__lista" id="tecnicasLista"></div>
+    </section>
+
+    <!-- ===================== PROCESO ===================== -->
+    <section class="seccion proceso" aria-labelledby="proTitulo">
+      <div class="seccion__cabeza">
+        <h2 id="proTitulo">Del logo a la caja, en cuatro pasos</h2>
+      </div>
+      <ol class="proceso__pasos">
+        <li><b>Arma tu pedido</b><p>Elige prendas, colores, técnica y tallas. Ve el render de cada una.</p></li>
+        <li><b>Envíalo por WhatsApp</b><p>Te llega a nosotros con todo el detalle. Mándanos tu logo en el chat.</p></li>
+        <li><b>Aprueba la prueba</b><p>Te enviamos la cotización formal y una prueba digital con medidas reales.</p></li>
+        <li><b>Producción y entrega</b><p>Con el anticipo arrancamos. Entregamos en <span id="pEntrega">7 a 12 días hábiles</span>.</p></li>
+      </ol>
+    </section>
+
+    <!-- ===================== EMPRESAS ===================== -->
+    <section class="empresas" aria-labelledby="empTitulo">
+      <figure class="empresas__foto">
+        <img src="img/fotos/hero.webp" alt="Polos, playeras, gorra y bolsa personalizadas sobre una mesa de taller con bastidor de bordado e hilos" loading="lazy" width="1120" height="1400" />
+      </figure>
+      <div class="empresas__texto">
+        <h2 id="empTitulo">Para empresas que cuidan su imagen</h2>
+        <ul class="empresas__usos">
+          <li><b>Uniformes corporativos</b><span>Oficina, piso de venta, planta y campo.</span></li>
+          <li><b>Kits de bienvenida</b><span>Playera, gorra, bolsa y termo con tu marca.</span></li>
+          <li><b>Eventos y ferias</b><span>Merch para stands, congresos y activaciones.</span></li>
+          <li><b>Equipos y escuelas</b><span>Generaciones, torneos y clubes.</span></li>
+        </ul>
+        <a class="btn btn--tinta" id="ctaEmpresas" href="#contacto">Hablar con un asesor</a>
+      </div>
+    </section>
+
+    <!-- ===================== PREGUNTAS ===================== -->
+    <section class="seccion preguntas" id="preguntas" aria-labelledby="preTitulo">
+      <div class="seccion__cabeza">
+        <h2 id="preTitulo">Preguntas frecuentes</h2>
+      </div>
+      <div class="preguntas__lista" id="preguntasLista"></div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE / CONTACTO ===================== -->
+  <footer class="pie" id="contacto">
+    <div class="pie__cta">
+      <h2>¿Listo para vestir a tu equipo?</h2>
+      <a class="btn btn--wa" id="ctaPie" href="#contacto">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z" /><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z" /></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+    <div class="pie__datos" id="pieDatos"></div>
+    <svg class="pie__marca" id="pieMarca" viewBox="0 0 370 150" fill="currentColor" aria-hidden="true"><path class="letra letra--espejo" d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z" /><path class="letra" fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z" /><path class="letra" d="M227 0H253V150H227Z" /><path class="letra letra--espejo" d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z" /></svg>
+    <p class="pie__legal"><span id="anio"></span> ZAIN. Precios de referencia por pieza, sujetos a cotización final.</p>
+  </footer>
+
+  <!-- ===================== PEDIDO (carrito) ===================== -->
+  <div class="pedido" id="pedido" aria-hidden="true">
+    <div class="pedido__fondo" data-cerrar></div>
+    <aside class="pedido__caja" role="dialog" aria-modal="true" aria-labelledby="pedTitulo">
+      <header class="pedido__cabeza">
+        <h2 id="pedTitulo">Tu pedido</h2>
+        <button class="pedido__x" type="button" data-cerrar aria-label="Cerrar pedido">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </header>
+      <div class="pedido__items" id="pedidoItems"></div>
+      <footer class="pedido__pie" id="pedidoPie"></footer>
+    </aside>
+  </div>
+
+  <a class="flotante" id="flotante" href="#contacto" aria-label="Escríbenos por WhatsApp">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z" /><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z" /></svg>
+  </a>
+  <div class="aviso-flot" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- logo ZAIN en vector (se reutiliza con <use href="#logo">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 370 150">
+      <path fill="currentColor" d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z" />
+      <path fill="currentColor" fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z" />
+      <path fill="currentColor" d="M227 0H253V150H227Z" />
+      <path fill="currentColor" d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z" />
+    </symbol>
+  </svg>
+
+  <script src="js/config.js?v=3"></script>
+  <script src="js/render.js?v=2"></script>
+  <script src="js/trama.js?v=1"></script>
+  <script src="js/zain.js?v=4"></script>
+</body>
+</html>
