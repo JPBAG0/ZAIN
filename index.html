@@ -23,6 +23,11 @@
       try { if (sessionStorage.getItem("zain-intro")) h.classList.add("sin-intro"); } catch (e) {}
     })();
   </script>
+  <!-- Vercel Web Analytics (visitas y páginas vistas). Solo funciona publicado en Vercel; en local da 404 y no pasa nada -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <!-- entrada: las letras suben y la Z y la N se voltean a espejo, como el logo -->
