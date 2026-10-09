@@ -16,9 +16,9 @@ window.ZAIN = {
   whatsapp: "525662923967",
 
   // ✏️ Datos de contacto que aparecen en el pie de página
-  correo: "hola@zain.mx",
+  correo: "atencion.zain@gmail.com",
   ciudad: "Guadalajara, Jalisco",
-  instagram: "", // ej. "https://instagram.com/zain"
+  instagram: "https://instagram.com/thezainlab", // ej. "https://instagram.com/zain"
   horario: "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
 
   // ✏️ Datos rápidos de la portada
