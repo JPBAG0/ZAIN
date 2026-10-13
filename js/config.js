@@ -22,8 +22,22 @@ window.ZAIN = {
   horario: "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
 
   // ✏️ Datos rápidos de la portada
-  minimoPiezas: 12,
+  minimoPiezas: null,
   diasEntrega: "7 a 12 días hábiles",
+
+  // Tonos de vista previa; las referencias Pantone se confirman al cotizar.
+  tintasLogo: [
+    { nombre: "Blanco", hex: "#f6f6f4" }, { nombre: "Negro", hex: "#141416" },
+    { nombre: "Dorado", hex: "#c9a453" }, { nombre: "Plata", hex: "#b4b4b4" },
+    { nombre: "Rojo", hex: "#d02f35" }, { nombre: "Vino", hex: "#7a2438" },
+    { nombre: "Naranja", hex: "#f07828" }, { nombre: "Amarillo", hex: "#f2c52b" },
+    { nombre: "Verde", hex: "#399c59" }, { nombre: "Verde botella", hex: "#205a42" },
+    { nombre: "Azul rey", hex: "#2457c7" }, { nombre: "Azul marino", hex: "#182f53" },
+    { nombre: "Cian", hex: "#21b5cf" }, { nombre: "Morado", hex: "#7951b7" },
+    { nombre: "Rosa", hex: "#e66aa4" },
+  ],
+  // Más espacio en el render; se confirma el área de impresión antes de producir.
+  escalaMaxLogo: 1.3,
 
 
   /* --------------------------------------------------------------------------
@@ -133,7 +147,7 @@ window.ZAIN = {
 
       corto: "Transfer a todo color planchado con calor. Fotos, degradados y detalle fino.",
       ideal: "Logos a todo color y tirajes cortos",
-      detalle: "Color ilimitado · detalle fino · listo desde 1 pieza",
+      detalle: "Color ilimitado · detalle fino · cantidad a confirmar al cotizar",
       foto: "img/fotos/t-dtf.webp",
     },
   ],
@@ -159,7 +173,8 @@ window.ZAIN = {
       nombre: "Bolsas",
       descripcion: "Bolsas ecológicas para regalos, eventos, tiendas y pedidos de volumen. Elige el modelo, sus medidas y su color.",
       aviso: "Consulta disponibilidad de modelo y color. Las imágenes son ilustrativas y los colores pueden variar.",
-      foto: "img/productos/bolsas/manta.webp",
+      foto: "img/productos/bolsas/expo.webp",
+      productoInicial: "bolsa-expo",
     },
   },
   productos: [
@@ -257,6 +272,8 @@ window.ZAIN = {
       "nombre": "Bolsa Boutique",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "18 × 24 × 8 cm",
       "dimensiones": {
@@ -299,6 +316,8 @@ window.ZAIN = {
       "nombre": "Bolsa Sobre chico",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "30 × 30 cm",
       "dimensiones": {
@@ -343,6 +362,8 @@ window.ZAIN = {
       "nombre": "Bolsa Sobre grande",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "40 × 40 cm",
       "dimensiones": {
@@ -384,6 +405,8 @@ window.ZAIN = {
       "nombre": "Bolsa Regalo",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "25 × 35 × 10 cm",
       "dimensiones": {
@@ -427,6 +450,8 @@ window.ZAIN = {
       "nombre": "Bolsa Expo",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "38 × 32 cm",
       "dimensiones": {
@@ -467,6 +492,8 @@ window.ZAIN = {
       "nombre": "Bolsa Zapatera",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "35 × 25 × 10 cm",
       "dimensiones": {
@@ -510,6 +537,8 @@ window.ZAIN = {
       "nombre": "Bolsa Market",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "45 × 35 × 12 cm",
       "dimensiones": {
@@ -563,6 +592,8 @@ window.ZAIN = {
       "nombre": "Bolsa Restaurant",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 70 gr.",
       "medidas": "31 × 30 × 22 cm",
       "dimensiones": {
@@ -604,6 +635,8 @@ window.ZAIN = {
       "nombre": "Bolsa Colombia",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Cosida. 100% poliéster 130 gr.",
       "medidas": "38 × 42 cm",
       "dimensiones": {
@@ -646,6 +679,8 @@ window.ZAIN = {
       "nombre": "Bolsa Manta",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Poli-cotton 80%-20%. Manta 180 gr.",
       "medidas": "40 × 45 cm",
       "dimensiones": {
@@ -685,6 +720,8 @@ window.ZAIN = {
       "nombre": "Bolsa Mezclilla",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Mezclilla. GSM: 270 gr.",
       "medidas": "38 × 45 cm",
       "dimensiones": {
@@ -724,6 +761,8 @@ window.ZAIN = {
       "nombre": "Bolsa Morral",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Termo sellada. Non woven 80 gr.",
       "medidas": "36 × 46 cm",
       "dimensiones": {
@@ -762,6 +801,8 @@ window.ZAIN = {
       "nombre": "Bolsa Jumbo",
       "categoria": "Bolsas",
       "grupo": "bolsas",
+      "minimoPiezas": 100,
+      "pasoPiezas": 50,
       "descripcion": "Cosida. Non woven 70 gr.",
       "medidas": "58 × 52 × 25 cm",
       "dimensiones": {
@@ -809,7 +850,7 @@ window.ZAIN = {
     },
     {
       p: "¿Cuál es el pedido mínimo?",
-      r: "En bordado y DTF trabajamos desde 12 piezas. En serigrafía conviene desde 50 piezas por diseño, porque el costo de la malla se reparte entre más piezas.",
+      r: "En bolsas el mínimo es de 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200… Para los demás productos confirmamos la cantidad y las condiciones al cotizar.",
     },
     {
       p: "¿Cuánto tarda mi pedido?",

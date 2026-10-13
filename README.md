@@ -4,6 +4,9 @@ Página para vender uniformes y artículos promocionales con logo (bordado, seri
 
 - **Catálogo** con filtros y vista de cada prenda en todos sus colores.
 - **Bolsas**: una entrada abre 13 modelos del catálogo 2026, con fotos del proveedor, medidas y colores por modelo. Se excluye Metálica. Cada modelo pide consultar disponibilidad; los colores del render son ilustrativos.
+- Bolsas desde **100 piezas por modelo y color**, en incrementos de 50. Otros mínimos se confirman al cotizar. Expo es la muestra de portada y se elige directamente desde el editor.
+- **Logo**: colores, selector HEX y referencia Pantone para cotización. Tamaño máximo de vista previa ampliado 30%; las medidas finales se confirman antes de producir.
+- **Archivos del pedido**: texto, renders PNG y logos originales guardados en el dispositivo. Compartirlos por el menú del celular cuando sea compatible, o descargar un ZIP y adjuntarlo en WhatsApp. No se envían automáticamente a un destinatario ni se suben a un servidor.
 - **Personalizador**: el cliente sube su logo (o escribe un texto), elige prenda, color, técnica, ubicación, tamaño en cm y piezas por talla, y ve el **render al momento**. Lo puede descargar.
 - **Pedido (carrito)**: junta varias prendas y lo **envía por WhatsApp** con productos, colores, tallas, cantidades y detalles de personalización. No hay pagos en línea: la venta se cierra por WhatsApp.
 - Funciona en celular y en compu. No necesita base de datos, ni instalar nada, ni compilar: son archivos estáticos.

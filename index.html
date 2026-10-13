@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=13" />
+  <link rel="stylesheet" href="css/zain.css?v=14" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
     (function () {
@@ -113,10 +113,6 @@
         <button type="button" class="btn btn--linea btn--chico" id="volverCatalogo">← Volver al catálogo</button>
       </div>
       <div class="rejilla" id="rejilla"></div>
-      <div class="promos">
-        <h3>También manejamos</h3>
-        <ul id="promos"></ul>
-      </div>
     </section>
 
     <!-- ===================== PERSONALIZADOR ===================== -->
@@ -151,6 +147,7 @@
           <fieldset class="paso">
             <legend>Prenda</legend>
             <div class="opciones opciones--prendas" id="oPrenda"></div>
+            <label class="campo modelo-bolsa" id="modeloBolsaCampo" hidden><span>Modelo de bolsa</span><select id="modeloBolsa"></select></label>
             <div class="producto__info" id="productoInfo"></div>
           </fieldset>
 
@@ -178,12 +175,13 @@
               </label>
               <div class="tinta-logo">
                 <span>Color del logo</span>
-                <div class="opciones" id="oTinta">
-                  <button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>
-                  <button type="button" class="op op--chico" data-tinta="#f6f6f4" aria-pressed="false"><i style="--c:#f6f6f4"></i>Blanco</button>
-                  <button type="button" class="op op--chico" data-tinta="#141416" aria-pressed="false"><i style="--c:#141416"></i>Negro</button>
-                  <button type="button" class="op op--chico" data-tinta="#c9a453" aria-pressed="false"><i style="--c:#c9a453"></i>Dorado</button>
+                <div class="opciones" id="oTinta"></div>
+                <div class="fila">
+                  <label class="campo campo--color"><span>Elegir otro color</span><input type="color" id="colorLogo" value="#141416" /></label>
+                  <label class="campo"><span>Código HEX</span><input type="text" id="hexLogo" value="#141416" maxlength="7" spellcheck="false" autocomplete="off" aria-describedby="hexLogoAviso" /></label>
                 </div>
+                <small id="hexLogoAviso" role="status"></small>
+                <span id="tintaActual">Color original del archivo</span>
               </div>
             </div>
             <div class="modo" data-modo="texto" hidden>
@@ -206,6 +204,11 @@
                 </label>
               </div>
             </div>
+            <label class="campo pantone-logo">
+              <span>Referencia Pantone (opcional)</span>
+              <input type="text" id="pantoneLogo" maxlength="50" placeholder="Ej. 186 C" autocomplete="off" aria-describedby="pantoneNota" />
+              <small id="pantoneNota">Para producción. La vista previa usa el color seleccionado o HEX; confirmamos el Pantone al cotizar.</small>
+            </label>
           </fieldset>
 
           <fieldset class="paso">
@@ -221,6 +224,7 @@
               <input type="range" id="tamano" min="3" max="28" step="0.5" value="9" />
               <output id="tamanoTxt" class="num" for="tamano">9.0 cm</output>
             </label>
+            <p class="producto__nota">El tamaño y la posición son una vista previa. Confirmamos las medidas de impresión antes de producir.</p>
           </fieldset>
 
           <fieldset class="paso">
@@ -395,9 +399,10 @@
     </symbol>
   </svg>
 
-  <script src="js/config.js?v=6"></script>
+  <script src="js/config.js?v=7"></script>
   <script src="js/render.js?v=3"></script>
   <script src="js/trama.js?v=1"></script>
-  <script src="js/zain.js?v=13"></script>
+  <script src="js/archivos.js?v=1"></script>
+  <script src="js/zain.js?v=14"></script>
 </body>
 </html>

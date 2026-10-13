@@ -5,6 +5,7 @@
 (() => {
   "use strict";
   const C = window.ZAIN;
+  const A = window.ZAINArchivos;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -13,13 +14,17 @@
   const prod = (id) => C.productos.find((p) => p.id === id);
   const color = (id) => C.colores.find((c) => c.id === id);
   const tecnica = (id) => C.tecnicas.find((t) => t.id === id);
+  const minimo = (p) => p.minimoPiezas || 0;
+  const pasoCantidad = (p) => p.pasoPiezas || 1;
+  const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
+  const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
   const medidasTexto = (p) => {
     const d = p.dimensiones;
     return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : "";
   };
   const fichaProducto = (p) => p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
-    <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
+    <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${minimo(p) ? `<p class="producto__nota">${esc(reglaCantidad(p))}</p>` : ""}${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
   const wa = (texto) => (C.whatsapp ? `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(texto)}` : "#contacto");
   const almacen = {
     leer(k, d) {
@@ -52,14 +57,13 @@
   /* ---------------------------------------------------------------- datos */
   $("#datos").innerHTML = [
     ["Técnicas", "Bordado · Serigrafía · DTF"],
-    ["Pedido mínimo", `${C.minimoPiezas} piezas`],
+    ["Pedidos", "Mínimos según producto"],
     ["Entrega", C.diasEntrega],
     ["Render", "Al instante, aquí mismo"],
   ]
     .map(([a, b]) => `<li><span>${esc(a)}</span><b>${esc(b)}</b></li>`)
     .join("");
   $("#pEntrega").textContent = C.diasEntrega;
-  $("#promos").innerHTML = C.promocionales.map((p) => `<li>${esc(p)}</li>`).join("");
   $("#anio").textContent = "© " + new Date().getFullYear();
 
   $("#preguntasLista").innerHTML = C.preguntas
@@ -142,7 +146,7 @@
     { p: "gorra", c: "negro", t: "bordado", z: "frente", cm: 10, e: 0.66 },
     { p: "sudadera", c: "oxford", t: "dtf", z: "centro", cm: 20 },
     { p: "chamarra", c: "botella", t: "bordado", z: "pecho-izq", cm: 9 },
-    { p: "bolsa-manta", c: "bolsa-manta-manta", t: "serigrafia", z: "frente", cm: 15, e: 0.9 },
+    { p: "bolsa-expo", c: "bolsa-expo-rojo", t: "serigrafia", z: "frente", cm: 15, e: 0.9 },
     { p: "camisa", c: "blanco", t: "bordado", z: "pecho-izq", cm: 8 },
   ].filter((m) => prod(m.p) && color(m.c));
 
@@ -524,6 +528,7 @@
     logo: null, // canvas del logo subido
     logoNombre: "",
     tinta: "original", // color del logo subido: "original" o un hex
+    pantone: "",
     info: null, // resultado del análisis del logo subido
     dx: 0, // ajuste fino de la posición, en cm
     dy: 0,
@@ -541,6 +546,20 @@
 
   const pAct = () => prod(E.p);
   const zAct = () => pAct().zonas.find((z) => z.id === E.z) || pAct().zonas[0];
+  const maxLogo = (z) => Math.round(z.max * (C.escalaMaxLogo || 1) * 2) / 2;
+  const nombreTinta = () => E.tinta === "original" ? "Original" : (C.tintasLogo.find((c) => c.hex === E.tinta)?.nombre || "Color personalizado");
+  $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--chico" data-tinta="${c.hex}" aria-pressed="false"><i style="--c:${c.hex}"></i>${esc(c.nombre)}</button>`).join("");
+  const sincronizarTinta = () => {
+    $$("#oTinta [data-tinta]").forEach((x) => {
+      const on = x.dataset.tinta === E.tinta;
+      x.classList.toggle("on", on); x.setAttribute("aria-pressed", on);
+    });
+    if (E.tinta !== "original") { $("#colorLogo").value = E.tinta; $("#hexLogo").value = E.tinta.toUpperCase(); }
+    $("#hexLogo").setCustomValidity("");
+    $("#hexLogo").removeAttribute("aria-invalid");
+    $("#hexLogoAviso").textContent = "";
+    $("#tintaActual").textContent = E.tinta === "original" ? "Color original del archivo" : `${nombreTinta()} · ${E.tinta.toUpperCase()}`;
+  };
 
   function construirOpciones() {
     const p = pAct();
@@ -548,9 +567,11 @@
     if (!p.tecnicas.includes(E.t)) E.t = p.tecnicas[0];
     if (!p.zonas.some((z) => z.id === E.z)) E.z = p.zonas[0].id;
 
-    $("#oPrenda").innerHTML = C.productos.filter((x) => p.grupo === "bolsas" ? x.grupo === "bolsas" : x.grupo !== "bolsas")
+    $("#oPrenda").innerHTML = C.productos.filter((x) => x.grupo !== "bolsas")
       .map((x) => `<button type="button" class="op op--prenda${x.id === E.p ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombre)}</span></button>`)
-      .join("") + `<button type="button" class="op op--prenda" data-elegir-bolsas><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${p.grupo === "bolsas" ? "Ver catálogo" : "Bolsas"}</span></button>`;
+      .join("") + `<button type="button" class="op op--prenda${p.grupo === "bolsas" ? " on" : ""}" data-elegir-bolsas aria-pressed="${p.grupo === "bolsas"}"><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>Bolsas</span></button>`;
+    $("#modeloBolsaCampo").hidden = p.grupo !== "bolsas";
+    $("#modeloBolsa").innerHTML = bolsas.map((x) => `<option value="${esc(x.id)}"${x.id === p.id ? " selected" : ""}>${esc(x.nombre)} · ${esc(x.medidas)}</option>`).join("");
     $("#productoInfo").innerHTML = fichaProducto(p);
     $("#oColor").innerHTML = p.colores
       .map(color)
@@ -568,11 +589,12 @@
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     tallas.forEach((t) => {
       if (!(t in E.tallas)) E.tallas[t] = 0;
+      if (minimo(p) && E.tallas[t] < minimo(p)) E.tallas[t] = minimo(p);
     });
     $("#oTallas").innerHTML = tallas
       .map(
         (t) => `<label class="talla"><span>${esc(t)}</span>
-          <span class="talla__ctl"><button type="button" data-tt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="0" max="9999" value="${E.tallas[t] || 0}" data-talla="${esc(t)}" aria-label="Piezas talla ${esc(t)}" /><button type="button" data-tt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
+          <span class="talla__ctl"><button type="button" data-tt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimo(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${E.tallas[t] || 0}" data-talla="${esc(t)}" aria-label="Piezas talla ${esc(t)}" /><button type="button" data-tt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
       )
       .join("");
     ajustarTamano();
@@ -582,8 +604,8 @@
   function ajustarTamano() {
     const z = zAct();
     const r = $("#tamano");
-    r.max = z.max;
-    E.cm = Math.min(Math.max(E.cm, 3), z.max);
+    r.max = maxLogo(z);
+    E.cm = Math.min(Math.max(E.cm, 3), maxLogo(z));
     r.value = E.cm;
     $("#tamanoTxt").textContent = cm(E.cm);
     $("#reglaTxt").textContent = cm(E.cm);
@@ -602,7 +624,7 @@
       pt.classList.add("cambia");
     }
     pt.textContent = nuevo;
-    $("#precioDetalle").textContent = "Te cotizamos según tu diseño y cantidad por WhatsApp.";
+    $("#precioDetalle").textContent = reglaCantidad(p);
   }
 
   // logo de un solo color (hilo o tinta): se pinta la silueta del logo subido
@@ -657,12 +679,17 @@
 
   let rafRender = 0;
   let renderVersion = 0;
+  let rendersActivos = 0;
+  let errorRender = null;
   let transicion = false;
   let caja = null; // dónde quedó el logo en el lienzo (para arrastrarlo)
   const pedirRender = () => {
     if (rafRender) return;
     rafRender = requestAnimationFrame(async () => {
       rafRender = 0;
+      rendersActivos++;
+      errorRender = null;
+      try {
       const v = ++renderVersion;
       const p = pAct();
       const z = zAct();
@@ -687,7 +714,7 @@
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
-        const altoMax = z.max * p.pxPorCm * 0.9;
+        const altoMax = maxLogo(z) * p.pxPorCm * 0.9;
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
@@ -702,6 +729,20 @@
       }
       $("#pieTxt").textContent = `${p.nombre} · ${color(E.c).nombre} · ${tecnica(E.t).nombre}`;
       lienzo.classList.add("listo");
+      } catch (er) { errorRender = er; aviso("No se pudo preparar la vista previa. Intenta otra vez.", true); }
+      finally { rendersActivos--; }
+    });
+  };
+  const esperarRender = () => {
+    pedirRender();
+    return new Promise((ok, mal) => {
+      const inicio = performance.now();
+      const revisar = () => {
+        if (!rafRender && !rendersActivos) return errorRender ? mal(errorRender) : ok();
+        if (performance.now() - inicio > 10000) return mal(new Error("La vista previa sigue cargando. Intenta agregarla otra vez."));
+        setTimeout(revisar, 16);
+      };
+      revisar();
     });
   };
 
@@ -713,7 +754,13 @@
   }
 
   $("#oPrenda").addEventListener("click", (e) => {
-    if (e.target.closest("[data-elegir-bolsas]")) { abrirBolsas(); return; }
+    if (e.target.closest("[data-elegir-bolsas]")) {
+      const p = pAct().grupo === "bolsas" ? pAct() : prod(grupoBolsas.productoInicial);
+      transicion = true;
+      E.dx = E.dy = 0;
+      abrirEnTaller({ p: p.id, c: p.colores[0] });
+      return;
+    }
     const b = e.target.closest("[data-p]");
     if (!b) return;
     E.p = b.dataset.p; transicion = true;
@@ -723,6 +770,13 @@
       E.cm = tamanoIdeal();
       E.t = tecnicaIdeal(E.info);
     }
+    actualizar();
+  });
+  $("#modeloBolsa").addEventListener("change", (e) => {
+    const p = prod(e.target.value);
+    if (!p || p.grupo !== "bolsas") return;
+    E.p = p.id; E.c = p.colores[0]; E.dx = E.dy = 0;
+    transicion = true;
     actualizar();
   });
   $("#oColor").addEventListener("click", (e) => {
@@ -756,14 +810,14 @@
     const b = e.target.closest("[data-tt]");
     if (!b) return;
     const t = b.dataset.tt;
-    E.tallas[t] = Math.max(0, (Number(E.tallas[t]) || 0) + Number(b.dataset.d));
+    E.tallas[t] = Math.min(pasoCantidad(pAct()) > 1 ? 9950 : 9999, Math.max(minimo(pAct()), (Number(E.tallas[t]) || 0) + Number(b.dataset.d) * pasoCantidad(pAct())));
     $(`input[data-talla="${CSS.escape(t)}"]`).value = E.tallas[t];
     contarPiezas();
   });
   $("#oTallas").addEventListener("input", (e) => {
     const i = e.target.closest("[data-talla]");
     if (!i) return;
-    E.tallas[i.dataset.talla] = Math.max(0, Math.min(9999, Math.floor(Number(i.value) || 0)));
+    E.tallas[i.dataset.talla] = Math.max(0, Math.min(pasoCantidad(pAct()) > 1 ? 9950 : 9999, Math.floor(Number(i.value) || 0)));
     contarPiezas();
   });
   $("#notas").addEventListener("input", (e) => (E.notas = e.target.value));
@@ -829,10 +883,7 @@
       E.tinta = luzPrenda < 0.5 ? "#f6f6f4" : "#141416";
       cambios.push(`Lo pasamos a ${luzPrenda < 0.5 ? "blanco" : "negro"} para que resalte sobre ${color(E.c).nombre.toLowerCase()}`);
     }
-    $$("#oTinta [data-tinta]").forEach((x) => {
-      x.classList.toggle("on", x.dataset.tinta === E.tinta);
-      x.setAttribute("aria-pressed", x.dataset.tinta === E.tinta);
-    });
+    sincronizarTinta();
     transicion = true;
     actualizar();
     pintarAnalisis(cambios);
@@ -873,7 +924,7 @@
     if (!f) return;
     if (!/^image\//.test(f.type)) return aviso("Ese archivo no es una imagen. Sube tu logo en PNG, JPG o SVG.", true);
     if (f.size > 15 * 1024 * 1024) return aviso("La imagen pesa más de 15 MB. Prueba con una versión más ligera.", true);
-    archivoActual = f;
+    $("#agregar").disabled = true;
     $("#subirTxt").innerHTML = `<b>Analizando tu logo…</b>`;
     $("#subir").classList.add("analizando");
     try {
@@ -881,6 +932,7 @@
       await new Promise((r) => setTimeout(r, 30)); // deja pintar el «Analizando…»
       analizar();
       E.logoNombre = f.name;
+      archivoActual = f;
       $("#subirTxt").innerHTML = `<b>${esc(f.name)}</b> · toca para cambiarlo`;
       $("#subir").classList.add("con-logo");
       aviso("");
@@ -889,6 +941,7 @@
       aviso(er.message, true);
     } finally {
       $("#subir").classList.remove("analizando");
+      $("#agregar").disabled = false;
     }
   };
   $("#archivo").addEventListener("change", (e) => procesarArchivo(e.target.files[0]));
@@ -897,12 +950,26 @@
     if (!b) return;
     E.tinta = b.dataset.tinta;
     transicion = true;
-    $$("#oTinta [data-tinta]").forEach((x) => {
-      x.classList.toggle("on", x === b);
-      x.setAttribute("aria-pressed", x === b);
-    });
+    sincronizarTinta();
     pedirRender();
   });
+  $("#colorLogo").addEventListener("input", (e) => {
+    E.tinta = e.target.value.toLowerCase(); transicion = true;
+    sincronizarTinta(); pedirRender();
+  });
+  $("#hexLogo").addEventListener("input", (e) => {
+    let valor = e.target.value.trim().replace(/^#/, "");
+    if (!/^[0-9a-f]{6}$/i.test(valor)) {
+      e.target.setCustomValidity("Usa un código HEX como #2457C7.");
+      e.target.setAttribute("aria-invalid", "true");
+      $("#hexLogoAviso").textContent = "Usa un código HEX como #2457C7.";
+      $("#hexLogoAviso").classList.add("error");
+      return;
+    }
+    E.tinta = "#" + valor.toLowerCase(); transicion = true;
+    sincronizarTinta(); pedirRender();
+  });
+  $("#pantoneLogo").addEventListener("input", (e) => { E.pantone = e.target.value.trim(); });
   $("#quitarFondo").addEventListener("change", () => {
     if (!crudo) return;
     try {
@@ -980,14 +1047,15 @@
   let tTexto = 0;
   const rehacerTexto = () => {
     clearTimeout(tTexto);
-    tTexto = setTimeout(async () => {
+    tTexto = setTimeout(actualizarLogoTexto, 120);
+  };
+  async function actualizarLogoTexto() {
       E.texto = $("#texto").value;
       E.letra = $("#letra").value;
       E.colorTexto = $("#colorTexto").value;
       logoTexto = E.texto.trim() ? await ZR.logoDeTexto(E.texto.trim(), E.letra, E.colorTexto) : null;
       pedirRender();
-    }, 120);
-  };
+  }
   ["#texto", "#letra", "#colorTexto"].forEach((s) => $(s).addEventListener("input", rehacerTexto));
 
   // render final (para descargar y para el pedido): fondo, prenda y ficha técnica
@@ -1037,6 +1105,51 @@
   const LLAVE = "zain-pedido";
   const pedidoGuardado = almacen.leer(LLAVE, []);
   let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => x) : [];
+  let paquete = null, revisionArchivos = 0;
+  const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
+  const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)));
+  function estadoArchivos() {
+    const boton = $("#compartirPedido"), estado = $("#archivosEstado");
+    if (!boton || !estado) return;
+    const invalidos = erroresCantidad();
+    boton.disabled = !paquete || !!invalidos.length;
+    $("#descargarPaquete").disabled = !paquete || !!invalidos.length;
+    $("#enviar").setAttribute("aria-disabled", !!invalidos.length);
+    $("#enviar").href = invalidos.length ? "#pedido" : wa(mensajePedido());
+    estado.classList.toggle("error", !!invalidos.length || !!paquete?.faltan.length);
+    if (invalidos.length) { estado.textContent = "Ajusta las cantidades indicadas antes de enviar el pedido."; return; }
+    if (!paquete) { estado.textContent = "Preparando los archivos de tu pedido…"; return; }
+    const puede = A.puedeCompartir(paquete.files);
+    const conArchivos = paquete.files.length > 1;
+    boton.hidden = !conArchivos;
+    boton.textContent = puede ? "Compartir pedido y archivos" : "Descargar pedido y archivos";
+    $("#descargarPaquete").hidden = !puede || !conArchivos;
+    $("#enviar").classList.toggle("btn--wa", !conArchivos);
+    $("#enviar").classList.toggle("btn--linea", conArchivos);
+    $("#enviar").textContent = conArchivos ? "Abrir chat de ZAIN" : "Solicitar cotización por WhatsApp";
+    estado.textContent = `${paquete.renders} render${paquete.renders === 1 ? "" : "s"} y ${paquete.logos} logo${paquete.logos === 1 ? "" : "s"} original${paquete.logos === 1 ? "" : "es"}.`;
+    if (paquete.faltan.length) estado.textContent += " Faltan archivos de pedidos guardados anteriormente; vuelve a agregarlos con su logo.";
+    else if (pedido.some((x) => x.archivosTemporales)) estado.textContent += " Descarga el paquete antes de cerrar esta pestaña: no pudimos guardar los archivos en este equipo.";
+    $("#pedidoNota").textContent = !conArchivos ? "Se abre WhatsApp con el detalle de tu pedido." : puede
+      ? `Elige WhatsApp y el contacto de ZAIN (+${C.whatsapp}). El texto también va incluido como archivo.`
+      : "Descarga el paquete y adjúntalo en el chat de ZAIN. Incluye el pedido, los renders y los logos originales disponibles.";
+  }
+  async function prepararArchivos() {
+    const rev = ++revisionArchivos;
+    paquete = null;
+    if (!pedido.length) return;
+    estadoArchivos();
+    try {
+      const nuevo = await A.preparar(pedido.map((x) => ({ ...x })), mensajePedido());
+      if (rev !== revisionArchivos) return;
+      nuevo.zip = await A.zip(nuevo.files);
+      if (rev !== revisionArchivos) return;
+      paquete = nuevo; estadoArchivos();
+    } catch (_) {
+      if (rev !== revisionArchivos || !$("#archivosEstado")) return;
+      $("#archivosEstado").textContent = "No se pudieron preparar los archivos. Tu pedido sigue guardado; puedes enviar el texto por WhatsApp.";
+    }
+  }
   // Conserva pedidos anteriores y elimina sus importes de referencia.
   if (Array.isArray(pedidoGuardado) && pedidoGuardado.some((x) => x && typeof x === "object" && "unit" in x)) almacen.guardar(LLAVE, pedido);
   const pedidoEl = $("#pedido");
@@ -1063,7 +1176,7 @@
      logo y piezas por talla sin pasar por el personalizador
      ------------------------------------------------------------------ */
   const rapidoEl = $("#rapido");
-  const R = { p: null, c: "", t: "", z: "", tallas: {}, archivo: "" };
+  const R = { p: null, c: "", t: "", z: "", tallas: {}, archivo: "", archivoOriginal: null };
   let focoRapido = null;
   const rTallas = () => (prod(R.p).tallas.length ? prod(R.p).tallas : ["Piezas"]);
   const rPiezas = () => rTallas().reduce((a, t) => a + (Number(R.tallas[t]) || 0), 0);
@@ -1100,7 +1213,7 @@
     $("#rapTallas").innerHTML = rTallas()
       .map(
         (t) => `<label class="talla"><span>${esc(t)}</span>
-          <span class="talla__ctl"><button type="button" data-rtt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="0" max="9999" value="${R.tallas[t] || 0}" data-rtalla="${esc(t)}" aria-label="Piezas ${esc(t)}" /><button type="button" data-rtt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
+          <span class="talla__ctl"><button type="button" data-rtt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimo(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${R.tallas[t] || 0}" data-rtalla="${esc(t)}" aria-label="Piezas ${esc(t)}" /><button type="button" data-rtt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
       )
       .join("");
     rTotal();
@@ -1110,12 +1223,12 @@
     const n = rPiezas();
     $("#rapPiezas").textContent = `${n} ${n === 1 ? "pza" : "pzas"}`;
     $("#rapTotal").textContent = `${n} ${n === 1 ? "pieza" : "piezas"}`;
-    $("#rapDetalle").textContent = "Elige tus cantidades; te cotizamos por WhatsApp.";
+    $("#rapDetalle").textContent = reglaCantidad(prod(R.p));
   }
 
   function abrirRapido(art) {
     const p = prod(art.dataset.id);
-    Object.assign(R, { p: p.id, c: art.dataset.color || p.colores[0], t: p.tecnicas[0], z: p.zonas[0].id, tallas: {}, archivo: "" });
+    Object.assign(R, { p: p.id, c: art.dataset.color || p.colores[0], t: p.tecnicas[0], z: p.zonas[0].id, tallas: minimo(p) ? { Piezas: minimo(p) } : {}, archivo: "", archivoOriginal: null });
     $("#rapArchivo").value = "";
     $("#rapSubirTxt").innerHTML = "<b>Elige tu logo</b> · PNG, JPG, SVG o PDF";
     $("#rapSubir").classList.remove("con-logo");
@@ -1166,7 +1279,7 @@
     }
     if (tt) {
       const k = tt.dataset.rtt;
-      R.tallas[k] = Math.max(0, (Number(R.tallas[k]) || 0) + Number(tt.dataset.d));
+      R.tallas[k] = Math.min(pasoCantidad(prod(R.p)) > 1 ? 9950 : 9999, Math.max(minimo(prod(R.p)), (Number(R.tallas[k]) || 0) + Number(tt.dataset.d) * pasoCantidad(prod(R.p))));
       $$("[data-rtalla]", rapidoEl).find((i) => i.dataset.rtalla === k).value = R.tallas[k];
       $("#rapAviso").textContent = "";
       rTotal();
@@ -1175,19 +1288,29 @@
   $("#rapTallas").addEventListener("input", (e) => {
     const i = e.target.closest("[data-rtalla]");
     if (!i) return;
-    R.tallas[i.dataset.rtalla] = Math.max(0, Math.min(9999, Math.floor(Number(i.value) || 0)));
+    R.tallas[i.dataset.rtalla] = Math.max(0, Math.min(pasoCantidad(prod(R.p)) > 1 ? 9950 : 9999, Math.floor(Number(i.value) || 0)));
     $("#rapAviso").textContent = "";
     rTotal();
   });
   $("#rapArchivo").addEventListener("change", (e) => {
     const f = e.target.files[0];
+    if (f && (f.size > 15 * 1024 * 1024 || !/^image\//.test(f.type) && f.type !== "application/pdf")) {
+      e.target.value = ""; R.archivo = ""; R.archivoOriginal = null;
+      $("#rapSubirTxt").innerHTML = "<b>Elige tu logo</b> · PNG, JPG, SVG o PDF";
+      $("#rapSubir").classList.remove("con-logo");
+      $("#rapAviso").textContent = "Elige una imagen o PDF de hasta 15 MB.";
+      return;
+    }
     R.archivo = f ? f.name : "";
+    R.archivoOriginal = f || null;
     $("#rapSubir").classList.toggle("con-logo", !!f);
     $("#rapSubirTxt").innerHTML = f ? `<b>${esc(f.name)}</b> · tócalo para cambiarlo` : "<b>Elige tu logo</b> · PNG, JPG, SVG o PDF";
   });
 
+  let guardandoRapido = false;
   $("#rapidoForm").addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (guardandoRapido) return;
     const p = prod(R.p);
     const n = rPiezas();
     if (!n) {
@@ -1195,9 +1318,16 @@
       $("#rapTallas input")?.focus();
       return;
     }
+    if (!cantidadValida(p, n)) { $("#rapAviso").textContent = reglaCantidad(p); return; }
+    guardandoRapido = true;
+    const boton = $("#rapidoForm button[type='submit']");
+    const campos = $$("#rapidoForm fieldset");
+    boton.disabled = true;
+    campos.forEach((f) => { f.disabled = true; });
+    try {
     const t = tecnica(R.t);
     const texto = $("#rapTexto").value.trim();
-    const logo = [R.archivo && `archivo «${R.archivo}» (lo envío por WhatsApp)`, texto && `texto «${texto}»`].filter(Boolean).join(" + ") || "lo envío por WhatsApp";
+    const logo = [R.archivo && `archivo «${R.archivo}»`, texto && `texto «${texto}»`].filter(Boolean).join(" + ") || "lo envío por WhatsApp";
     await rPintarFoto(); // que la miniatura tenga el color final
     const m = document.createElement("canvas");
     m.width = m.height = 180;
@@ -1205,8 +1335,8 @@
     g.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--mesa").trim() || "#e7e7e3";
     g.fillRect(0, 0, 180, 180);
     g.drawImage($("#rapFoto"), 10, 10, 160, 160);
-    pedido.push({
-      id: Date.now().toString(36),
+    const item = {
+      id: crypto.randomUUID(),
       p: p.id,
       nombre: p.nombre,
       medidas: p.medidas || "",
@@ -1221,10 +1351,16 @@
       logo,
       notas: $("#rapNotas").value.trim(),
       mini: m.toDataURL("image/jpeg", 0.8),
-    });
+      tieneLogo: !!R.archivoOriginal,
+      tieneRender: false,
+    };
+    if (R.archivoOriginal) item.archivosTemporales = !await A.guardar(item.id, { logo: R.archivoOriginal, logoNombre: R.archivoOriginal.name });
+    pedido.push(item);
     guardarPedido();
     cerrarRapido();
     toast(`${p.nombre} agregado al pedido ✓`);
+    } catch (_) { $("#rapAviso").textContent = "No se pudo agregar al pedido. Intenta otra vez."; }
+    finally { guardandoRapido = false; boton.disabled = false; campos.forEach((f) => { f.disabled = false; }); }
   });
 
   const guardarPedido = () => {
@@ -1238,14 +1374,25 @@
     pintarPedido();
   };
 
-  $("#panel").addEventListener("submit", (e) => {
+  let guardandoEditor = false;
+  $("#panel").addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (guardandoEditor) return;
     contarPiezas();
     if (!E.piezas) {
       aviso("Indica cuántas piezas quieres en cada talla para agregarlo al pedido.", true);
       $("#oTallas input")?.focus();
       return;
     }
+    if (!cantidadValida(pAct(), E.piezas)) return aviso(reglaCantidad(pAct()), true);
+    if (E.modo === "imagen" && !$("#hexLogo").checkValidity()) { $("#hexLogo").focus(); return aviso("Revisa el código HEX del logo.", true); }
+    guardandoEditor = true;
+    $("#agregar").disabled = true;
+    const campos = $$("#panel fieldset");
+    campos.forEach((f) => { f.disabled = true; });
+    try {
+    if (E.modo === "texto") { clearTimeout(tTexto); await actualizarLogoTexto(); }
+    await esperarRender();
     const p = pAct();
     const t = tecnica(E.t);
     const z = zAct();
@@ -1253,9 +1400,13 @@
     const desglose = tallas.filter((x) => E.tallas[x] > 0).map((x) => (p.tallas.length ? `${x} ${E.tallas[x]}` : `${E.tallas[x]}`));
     const mini = renderFinal(360).toDataURL("image/jpeg", 0.78);
     const logo =
-      E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${$(`#oTinta [data-tinta="${E.tinta}"]`).textContent.trim().toLowerCase()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
-    pedido.push({
-      id: Date.now().toString(36),
+      E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${nombreTinta()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
+    const tieneRender = !!(E.modo === "imagen" ? E.logo : E.texto.trim());
+    const original = E.modo === "imagen" && E.logo ? archivoActual : null;
+    const render = tieneRender ? await new Promise((ok) => renderFinal(1200).toBlob(ok, "image/png")) : null;
+    if (tieneRender && !render) throw new Error("No se pudo guardar el render. Intenta otra vez.");
+    const item = {
+      id: crypto.randomUUID(),
       p: p.id,
       nombre: p.nombre,
       medidas: p.medidas || "",
@@ -1268,17 +1419,25 @@
       tallasEtq: p.tallasNombre || "Tallas",
       piezas: E.piezas,
       logo,
+      colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
+      pantone: E.pantone,
       notas: E.notas.trim(),
       mini,
-    });
+      tieneLogo: !!original,
+      tieneRender,
+    };
+    if (original || render) item.archivosTemporales = !await A.guardar(item.id, { logo: original, logoNombre: original?.name, render });
+    pedido.push(item);
     guardarPedido();
-    aviso(E.piezas < C.minimoPiezas ? `Agregado. Ojo: el pedido mínimo es de ${C.minimoPiezas} piezas en total.` : "Agregado a tu pedido.");
+    aviso("Agregado a tu pedido.");
     toast("Agregado a tu pedido ✓");
     E.tallas = {};
     E.notas = "";
     $("#notas").value = "";
     actualizar();
     abrirPedido();
+    } catch (er) { aviso(er.message || "No se pudo agregar al pedido. Intenta otra vez.", true); }
+    finally { guardandoEditor = false; $("#agregar").disabled = false; campos.forEach((f) => { f.disabled = false; }); }
   });
 
   function mensajePedido() {
@@ -1287,11 +1446,13 @@
       if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
       r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
       r.push(`   Logo: ${x.logo}`);
+      if (x.colorLogo) r.push(`   Color del logo: ${x.colorLogo}`);
+      if (x.pantone) r.push(`   Referencia Pantone: ${x.pantone} (confirmar al cotizar)`);
       if (x.notas) r.push(`   Notas: ${x.notas}`);
       return r.join("\n");
     });
     const pzs = pedido.reduce((a, x) => a + x.piezas, 0);
-    return `Hola ${C.marca} 👋 quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\nTe mando mi logo y los renders por aquí. ¿Me ayudan con la cotización y fecha de entrega?`;
+    return `Hola ${C.marca} 👋 quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\n¿Me ayudan con la cotización y fecha de entrega?`;
   }
 
   let pintado = false;
@@ -1318,8 +1479,11 @@
             <span>${esc(x.color)} · ${esc(x.tecnica)} · ${esc(x.zona.toLowerCase())}</span>
             ${x.tallas ? `<span class="num">${esc(x.tallas)}</span>` : ""}
             <span>Logo: ${esc(x.logo)}</span>
+            ${x.colorLogo ? `<span>Color del logo: ${esc(x.colorLogo)}</span>` : ""}
+            ${x.pantone ? `<span>Referencia Pantone: ${esc(x.pantone)}</span>` : ""}
             ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
             <span class="renglon__pzs num">${x.piezas} ${x.piezas === 1 ? "pieza" : "piezas"}</span>
+            ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : ""}
           </div>
           <div class="renglon__acc">
             ${x.mini ? `<button type="button" class="btn-icono" data-bajar="${i}" aria-label="Descargar render de ${esc(x.nombre)}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>` : ""}
@@ -1332,23 +1496,36 @@
 
     $("#pedidoPie").innerHTML = pedido.length
       ? `<div class="pedido__total"><span>Cotización personalizada</span><b>Por WhatsApp</b></div>
-         <div class="pedido__piezas num">${n} piezas${n < C.minimoPiezas ? ` · mínimo ${C.minimoPiezas}` : ""}</div>
-         <a class="btn btn--wa btn--ancho" id="enviar" href="${esc(wa(mensajePedido()))}" ${C.whatsapp ? 'target="_blank" rel="noopener"' : ""}>
+         <div class="pedido__piezas num">${n} piezas</div>
+         <button class="btn btn--wa btn--ancho" type="button" id="compartirPedido" disabled>Preparando archivos…</button>
+         <a class="btn btn--linea btn--ancho" id="enviar" href="${esc(wa(mensajePedido()))}" ${C.whatsapp ? 'target="_blank" rel="noopener"' : ""}>
            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z"/></svg>
-           Solicitar cotización por WhatsApp</a>
-         <p class="pedido__nota">Se abre WhatsApp con tus productos, colores y cantidades. Adjunta tu logo y los renders para cotizar tu pedido.</p>
+           Abrir chat de ZAIN</a>
+         <p class="pedido__archivos" id="archivosEstado" role="status"></p>
+         <p class="pedido__nota" id="pedidoNota"></p>
+         <button type="button" class="btn-texto" id="descargarPaquete" hidden>Descargar pedido y archivos</button>
          <button type="button" class="btn-texto" id="vaciar">Vaciar pedido</button>`
       : "";
+    prepararArchivos();
   }
-  $("#pedidoItems").addEventListener("click", (e) => {
+  $("#pedidoItems").addEventListener("click", async (e) => {
     const q = e.target.closest("[data-quitar]");
     const b = e.target.closest("[data-bajar]");
+    const ajustar = e.target.closest("[data-ajustar]");
+    if (ajustar) {
+      const x = pedido[Number(ajustar.dataset.ajustar)], p = datosItem(x);
+      x.piezas = Math.max(1, minimo(p) + Math.ceil((Math.max(minimo(p), Number(x.piezas)) - minimo(p)) / pasoCantidad(p)) * pasoCantidad(p));
+      guardarPedido();
+    }
     if (q) {
-      pedido.splice(Number(q.dataset.quitar), 1);
+      const [item] = pedido.splice(Number(q.dataset.quitar), 1);
+      A.eliminar([item.id]);
       guardarPedido();
     }
     if (b) {
       const x = pedido[Number(b.dataset.bajar)];
+      const files = await A.obtener(x.id);
+      if (files?.render) { A.descargar(files.render, `${C.marca.toLowerCase()}-${x.p}-render.png`); return; }
       const a = document.createElement("a");
       a.href = x.mini;
       a.download = `${C.marca.toLowerCase()}-${x.p}-${x.color.toLowerCase().replace(/\s+/g, "-")}.jpg`;
@@ -1359,7 +1536,24 @@
     if (e.target.closest("[data-cerrar-ir]")) cerrarPedido();
   });
   $("#pedidoPie").addEventListener("click", (e) => {
+    if (e.target.closest("#enviar") && erroresCantidad().length) { e.preventDefault(); estadoArchivos(); return; }
+    if (e.target.closest("#compartirPedido, #descargarPaquete")) {
+      if (!paquete || erroresCantidad().length) return;
+      if (e.target.closest("#descargarPaquete") || !A.puedeCompartir(paquete.files)) {
+        A.descargar(paquete.zip, "pedido-zain.zip");
+        $("#archivosEstado").textContent = "Paquete descargado. Adjunta pedido-zain.zip en el chat de ZAIN.";
+      } else {
+        try {
+          // Archivos ya preparados: la llamada conserva la activación del toque.
+          Promise.resolve(navigator.share({ title: `Pedido ${C.marca}`, text: paquete.texto, files: paquete.files }))
+            .then(() => { if ($("#archivosEstado")) $("#archivosEstado").textContent = "Confirma el envío en WhatsApp. Tu pedido sigue guardado aquí."; })
+            .catch((er) => { if ($("#archivosEstado")) $("#archivosEstado").textContent = er.name === "AbortError" ? "Compartir cancelado. Tu pedido sigue guardado." : "No se pudo compartir. Descarga el paquete y adjúntalo en el chat de ZAIN."; });
+        } catch (_) { $("#archivosEstado").textContent = "No se pudo compartir. Descarga el paquete y adjúntalo en el chat de ZAIN."; }
+      }
+      return;
+    }
     if (e.target.closest("#vaciar")) {
+      A.eliminar(pedido.map((x) => x.id));
       pedido = [];
       guardarPedido();
     }
@@ -1463,5 +1657,6 @@
 
   /* ---------------------------------------------------------- arranque */
   actualizar();
+  sincronizarTinta();
   pintarPedido();
 })();
