@@ -1,6 +1,6 @@
 /* ============================================================================
    ZAIN — lógica de la página (portada, catálogo, personalizador y pedido)
-   Los datos (productos, precios, WhatsApp…) viven en js/config.js.
+   Los datos (productos, colores, WhatsApp…) viven en js/config.js.
    ============================================================================ */
 (() => {
   "use strict";
@@ -9,7 +9,6 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-  const dinero = (n) => "$" + Math.round(n).toLocaleString("es-MX");
   const cm = (n) => (Math.round(n * 10) / 10).toFixed(1) + " cm";
   const prod = (id) => C.productos.find((p) => p.id === id);
   const color = (id) => C.colores.find((c) => c.id === id);
@@ -78,7 +77,6 @@
           <dl>
             <div><dt>Ideal para</dt><dd>${esc(t.ideal)}</dd></div>
             <div><dt>Acabado</dt><dd>${esc(t.detalle)}</dd></div>
-            <div><dt>Costo</dt><dd class="num">${t.extra ? `+${dinero(t.extra)} por pieza` : "Incluido"}</dd></div>
           </dl>
         </div>
       </article>`,
@@ -391,7 +389,6 @@
     $$(".producto").forEach((t) => (t.hidden = filtro !== "Todo" && t.dataset.cat !== filtro));
   });
 
-  const precioTxt = (p) => (p.precio ? `<b class="num">${dinero(p.precio)}</b><span>por pieza</span>` : `<b>A cotizar</b>`);
   $("#rejilla").innerHTML = C.productos
     .map((p) => {
       const cols = p.colores.map(color).filter(Boolean);
@@ -408,7 +405,7 @@
           <ul class="producto__tec">${p.tecnicas.map((t) => `<li>${esc(tecnica(t)?.nombre)}</li>`).join("")}</ul>
         </div>
         <div class="producto__pie">
-          <div class="producto__precio">${precioTxt(p)}</div>
+          <div class="producto__precio"><b>Cotiza por WhatsApp</b></div>
           <button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button>
         </div>
       </article>`;
@@ -511,7 +508,7 @@
     $("#oTecnica").innerHTML = p.tecnicas
       .map(tecnica)
       .filter(Boolean)
-      .map((t) => `<button type="button" class="op op--tec${t.id === E.t ? " on" : ""}" data-t="${t.id}" aria-pressed="${t.id === E.t}"><b>${esc(t.nombre)}</b><small class="num">${t.extra ? "+" + dinero(t.extra) : "Incluido"}</small></button>`)
+      .map((t) => `<button type="button" class="op op--tec${t.id === E.t ? " on" : ""}" data-t="${t.id}" aria-pressed="${t.id === E.t}"><b>${esc(t.nombre)}</b></button>`)
       .join("");
     $("#oZona").innerHTML = p.zonas
       .map((z) => `<button type="button" class="op op--zona${z.id === E.z ? " on" : ""}" data-z="${z.id}" aria-pressed="${z.id === E.z}">${esc(z.nombre)}</button>`)
@@ -545,17 +542,15 @@
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     E.piezas = tallas.reduce((a, t) => a + (Number(E.tallas[t]) || 0), 0);
     $("#vPiezas").textContent = `${E.piezas} ${E.piezas === 1 ? "pza" : "pzas"}`;
-    const t = tecnica(E.t);
-    const unit = p.precio ? p.precio + (t?.extra || 0) : 0;
     const pt = $("#precioTxt");
-    const nuevo = unit ? (E.piezas ? dinero(unit * E.piezas) : `${dinero(unit)} c/u`) : "A cotizar";
+    const nuevo = `${E.piezas} ${E.piezas === 1 ? "pieza" : "piezas"}`;
     if (pt.textContent !== nuevo && pt.textContent !== "—" && !reducido) {
       pt.classList.remove("cambia");
       void pt.offsetWidth;
       pt.classList.add("cambia");
     }
     pt.textContent = nuevo;
-    $("#precioDetalle").textContent = unit && E.piezas ? `${E.piezas} × ${dinero(unit)} (${p.nombre.split(" ")[0].toLowerCase()} ${dinero(p.precio)} + ${t.nombre.toLowerCase()} ${dinero(t.extra)})` : unit ? "Indica tus piezas por talla" : "";
+    $("#precioDetalle").textContent = "Te cotizamos según tu diseño y cantidad por WhatsApp.";
   }
 
   // logo de un solo color (hilo o tinta): se pinta la silueta del logo subido
@@ -987,7 +982,10 @@
      PEDIDO (carrito) — se guarda en el teléfono y se envía por WhatsApp
      ===================================================================== */
   const LLAVE = "zain-pedido";
-  let pedido = almacen.leer(LLAVE, []);
+  const pedidoGuardado = almacen.leer(LLAVE, []);
+  let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => x) : [];
+  // Conserva pedidos anteriores y elimina sus importes de referencia.
+  if (Array.isArray(pedidoGuardado) && pedidoGuardado.some((x) => x && typeof x === "object" && "unit" in x)) almacen.guardar(LLAVE, pedido);
   const pedidoEl = $("#pedido");
   let focoAntes = null;
   const abrirPedido = () => {
@@ -1014,10 +1012,6 @@
   const rapidoEl = $("#rapido");
   const R = { p: null, c: "", t: "", z: "", tallas: {}, archivo: "" };
   let focoRapido = null;
-  const rUnit = () => {
-    const p = prod(R.p);
-    return p.precio ? p.precio + (tecnica(R.t)?.extra || 0) : 0;
-  };
   const rTallas = () => (prod(R.p).tallas.length ? prod(R.p).tallas : ["Piezas"]);
   const rPiezas = () => rTallas().reduce((a, t) => a + (Number(R.tallas[t]) || 0), 0);
 
@@ -1033,7 +1027,7 @@
   function rPintar() {
     const p = prod(R.p);
     $("#rapNombre").textContent = p.nombre;
-    $("#rapPrecio").textContent = p.precio ? `${dinero(p.precio)} por pieza + técnica` : "A cotizar";
+    $("#rapPrecio").textContent = "Cotización por WhatsApp";
     $("#rapColorTxt").textContent = color(R.c).nombre;
     $("#rapColor").innerHTML = p.colores
       .map(color)
@@ -1043,7 +1037,7 @@
     $("#rapTecnica").innerHTML = p.tecnicas
       .map(tecnica)
       .filter(Boolean)
-      .map((t) => `<button type="button" class="op op--tec${t.id === R.t ? " on" : ""}" data-rt="${t.id}" aria-pressed="${t.id === R.t}"><b>${esc(t.nombre)}</b><small class="num">${t.extra ? "+" + dinero(t.extra) : "Incluido"}</small></button>`)
+      .map((t) => `<button type="button" class="op op--tec${t.id === R.t ? " on" : ""}" data-rt="${t.id}" aria-pressed="${t.id === R.t}"><b>${esc(t.nombre)}</b></button>`)
       .join("");
     $("#rapZona").innerHTML = p.zonas
       .map((z) => `<button type="button" class="op${z.id === R.z ? " on" : ""}" data-rz="${z.id}" aria-pressed="${z.id === R.z}">${esc(z.nombre)}</button>`)
@@ -1060,11 +1054,9 @@
 
   function rTotal() {
     const n = rPiezas();
-    const u = rUnit();
-    const t = tecnica(R.t);
     $("#rapPiezas").textContent = `${n} ${n === 1 ? "pza" : "pzas"}`;
-    $("#rapTotal").textContent = u ? (n ? `${dinero(u * n)} ${C.moneda}` : `${dinero(u)} c/u`) : "A cotizar";
-    $("#rapDetalle").textContent = u && n ? `${n} × ${dinero(u)} (prenda ${dinero(prod(R.p).precio)} + ${t.nombre.toLowerCase()} ${dinero(t.extra || 0)})` : "";
+    $("#rapTotal").textContent = `${n} ${n === 1 ? "pieza" : "piezas"}`;
+    $("#rapDetalle").textContent = "Elige tus cantidades; te cotizamos por WhatsApp.";
   }
 
   function abrirRapido(art) {
@@ -1170,7 +1162,6 @@
       tallas: p.tallas.length ? rTallas().filter((x) => R.tallas[x] > 0).map((x) => `${x}: ${R.tallas[x]}`).join(" · ") : "",
       tallasEtq: p.tallasNombre || "Tallas",
       piezas: n,
-      unit: rUnit(),
       logo,
       notas: $("#rapNotas").value.trim(),
       mini: m.toDataURL("image/jpeg", 0.8),
@@ -1218,7 +1209,6 @@
       tallas: p.tallas.length ? desglose.join(" · ") : "",
       tallasEtq: p.tallasNombre || "Tallas",
       piezas: E.piezas,
-      unit: p.precio ? p.precio + (t.extra || 0) : 0,
       logo,
       notas: E.notas.trim(),
       mini,
@@ -1237,14 +1227,12 @@
     const lineas = pedido.map((x, i) => {
       const r = [`${i + 1}) ${x.nombre} — ${x.color}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
       r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
-      if (x.unit) r.push(`   Referencia: ${dinero(x.unit)} c/u → ${dinero(x.unit * x.piezas)}`);
       r.push(`   Logo: ${x.logo}`);
       if (x.notas) r.push(`   Notas: ${x.notas}`);
       return r.join("\n");
     });
-    const total = pedido.reduce((a, x) => a + x.unit * x.piezas, 0);
     const pzs = pedido.reduce((a, x) => a + x.piezas, 0);
-    return `Hola ${C.marca} 👋 quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\n${total ? `Total de referencia: ${dinero(total)} ${C.moneda} (${pzs} piezas)` : `Total: ${pzs} piezas`}\n\nTe mando mi logo y los renders por aquí. ¿Me confirman precio final y fecha de entrega?`;
+    return `Hola ${C.marca} 👋 quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\nTe mando mi logo y los renders por aquí. ¿Me ayudan con la cotización y fecha de entrega?`;
   }
 
   let pintado = false;
@@ -1271,7 +1259,7 @@
             ${x.tallas ? `<span class="num">${esc(x.tallas)}</span>` : ""}
             <span>Logo: ${esc(x.logo)}</span>
             ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
-            <span class="renglon__pzs num">${x.piezas} pzas${x.unit ? ` · ${dinero(x.unit * x.piezas)}` : " · a cotizar"}</span>
+            <span class="renglon__pzs num">${x.piezas} ${x.piezas === 1 ? "pieza" : "piezas"}</span>
           </div>
           <div class="renglon__acc">
             ${x.mini ? `<button type="button" class="btn-icono" data-bajar="${i}" aria-label="Descargar render de ${esc(x.nombre)}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>` : ""}
@@ -1282,15 +1270,13 @@
           .join("")
       : `<div class="pedido__vacio"><p>Tu pedido está vacío.</p><a class="btn btn--linea" href="#catalogo" data-cerrar-ir>Ver catálogo</a></div>`;
 
-    const total = pedido.reduce((a, x) => a + x.unit * x.piezas, 0);
-    const conPrecio = pedido.every((x) => x.unit);
     $("#pedidoPie").innerHTML = pedido.length
-      ? `<div class="pedido__total"><span>Total de referencia</span><b class="num">${total ? dinero(total) + " " + C.moneda + (conPrecio ? "" : " +") : "A cotizar"}</b></div>
+      ? `<div class="pedido__total"><span>Cotización personalizada</span><b>Por WhatsApp</b></div>
          <div class="pedido__piezas num">${n} piezas${n < C.minimoPiezas ? ` · mínimo ${C.minimoPiezas}` : ""}</div>
          <a class="btn btn--wa btn--ancho" id="enviar" href="${esc(wa(mensajePedido()))}" ${C.whatsapp ? 'target="_blank" rel="noopener"' : ""}>
            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z"/></svg>
-           Enviar pedido por WhatsApp</a>
-         <p class="pedido__nota">Se abre WhatsApp con tu pedido escrito. Adjunta ahí tu logo y los renders.</p>
+           Solicitar cotización por WhatsApp</a>
+         <p class="pedido__nota">Se abre WhatsApp con tus productos, colores y cantidades. Adjunta tu logo y los renders para cotizar tu pedido.</p>
          <button type="button" class="btn-texto" id="vaciar">Vaciar pedido</button>`
       : "";
   }

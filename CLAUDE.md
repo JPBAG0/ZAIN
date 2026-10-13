@@ -1,3 +1,5 @@
+> **Decisión vigente de JP:** catálogo de productos individuales y carrito personalizado sin precios ni importes de referencia. El cliente arma su selección y solicita la cotización por WhatsApp. JP está considerando paquetes separados con precio publicado; incorporarlos cuando confirme su alcance y costos. Cada producto nuevo se incorpora desde un PDF del proveedor, con modelo y colores confirmados por JP.
+
 # ZAIN — instrucciones para Claude Code
 
 Página estática (HTML + CSS + JavaScript sin frameworks) de **ZAIN**: uniformes y artículos promocionales con logo (bordado, serigrafía, DTF). Responde al dueño **en español**.
@@ -5,7 +7,7 @@ Página estática (HTML + CSS + JavaScript sin frameworks) de **ZAIN**: uniforme
 ## Cómo está hecha
 
 - **Sin build ni dependencias.** No agregues React, Vite, Tailwind, npm ni ningún paso de compilación. Se publica subiendo la carpeta tal cual.
-- `js/config.js` es la **única fuente de datos**: marca, WhatsApp, contacto, colores, técnicas (y su costo extra), productos (precio, colores, tallas, zonas del logo, `pxPorCm`), promocionales y preguntas. Cualquier cambio de contenido se hace ahí, no en el HTML.
+- `js/config.js` es la **única fuente de datos**: marca, WhatsApp, contacto, colores, técnicas y productos (colores, tallas, zonas del logo, `pxPorCm`), promocionales y preguntas. Cualquier cambio de contenido se hace ahí, no en el HTML.
 - `js/render.js` (`window.ZR`) es el motor del render en `<canvas>`:
   - `tenir()` pinta la foto blanca de la prenda del color elegido usando un mapa de sombras (los pliegues salen de la foto).
   - `estampar()` aplica el logo con el acabado de cada técnica (bordado: puntadas, relieve y sombra; serigrafía: tinta mate con grano; DTF: lustre) y pasa las arrugas de la tela por encima.

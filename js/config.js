@@ -1,7 +1,7 @@
 /* ============================================================================
    ZAIN — CONFIGURACIÓN DE LA PÁGINA
    ----------------------------------------------------------------------------
-   Este es el ÚNICO archivo que necesitas editar para cambiar datos, precios,
+   Este es el ÚNICO archivo que necesitas editar para cambiar datos,
    productos, colores, técnicas y preguntas frecuentes. No hace falta tocar el
    HTML ni el resto del código.
 
@@ -25,8 +25,6 @@ window.ZAIN = {
   minimoPiezas: 12,
   diasEntrega: "7 a 12 días hábiles",
 
-  // Moneda para mostrar precios
-  moneda: "MXN",
 
   /* --------------------------------------------------------------------------
      COLORES DE PRENDA
@@ -50,13 +48,13 @@ window.ZAIN = {
 
   /* --------------------------------------------------------------------------
      TÉCNICAS
-     extra = cuánto se suma por pieza (✏️ precios de ejemplo). 0 = sin cargo.
+     El importe se cotiza por WhatsApp según el diseño y la cantidad.
      -------------------------------------------------------------------------- */
   tecnicas: [
     {
       id: "bordado",
       nombre: "Bordado",
-      extra: 45,
+
       corto: "Hilo cosido a la prenda. El acabado más elegante y el que más dura.",
       ideal: "Polos, camisas, chamarras y gorras",
       detalle: "Relieve real · hasta 12 colores de hilo · no se despinta",
@@ -65,8 +63,8 @@ window.ZAIN = {
     {
       id: "serigrafia",
       nombre: "Serigrafía",
-      extra: 25,
-      corto: "Tinta aplicada con malla. Colores sólidos y el mejor precio en volumen.",
+
+      corto: "Tinta aplicada con malla. Colores sólidos para pedidos de volumen.",
       ideal: "Playeras, sudaderas y bolsas en volumen",
       detalle: "Tintas planas · ideal desde 50 piezas · muy resistente al lavado",
       foto: "img/fotos/t-serigrafia.webp",
@@ -74,7 +72,7 @@ window.ZAIN = {
     {
       id: "dtf",
       nombre: "DTF",
-      extra: 35,
+
       corto: "Transfer a todo color planchado con calor. Fotos, degradados y detalle fino.",
       ideal: "Logos a todo color y tirajes cortos",
       detalle: "Color ilimitado · detalle fino · listo desde 1 pieza",
@@ -90,7 +88,6 @@ window.ZAIN = {
        categoria "Textil", "Accesorios" o la que quieras (crea un filtro nuevo)
        foto      foto de la prenda EN BLANCO con fondo transparente (.webp o .png),
                  cuadrada (1000×1000 recomendado)
-       precio    precio base por pieza ✏️ (pon 0 para mostrar «A cotizar»)
        colores   ids de la lista de colores de arriba (el primero es el que se ve en el catálogo)
        tecnicas  ids de la lista de técnicas de arriba
        tallas    lista de tallas; [] para unitalla
@@ -106,7 +103,7 @@ window.ZAIN = {
       categoria: "Textil",
       descripcion: "Algodón peinado 180 g. La base de todo uniforme y evento.",
       foto: "img/productos/playera.webp",
-      precio: 89,
+
       colores: ["negro", "blanco", "marino", "rey", "gris", "oxford", "rojo", "vino", "botella", "arena"],
       tecnicas: ["serigrafia", "dtf", "bordado"],
       tallas: ["CH", "M", "G", "XG", "2XG"],
@@ -123,7 +120,7 @@ window.ZAIN = {
       categoria: "Textil",
       descripcion: "Piqué 220 g con cuello tejido. El uniforme de oficina por excelencia.",
       foto: "img/productos/polo.webp",
-      precio: 189,
+
       colores: ["marino", "blanco", "negro", "rey", "gris", "rojo", "vino", "botella", "arena"],
       tecnicas: ["bordado", "dtf", "serigrafia"],
       tallas: ["CH", "M", "G", "XG", "2XG"],
@@ -140,7 +137,7 @@ window.ZAIN = {
       categoria: "Textil",
       descripcion: "Manga larga, tela oxford. Para atención a clientes y fuerza de ventas.",
       foto: "img/productos/camisa.webp",
-      precio: 329,
+
       colores: ["blanco", "marino", "rey", "gris", "negro", "arena"],
       tecnicas: ["bordado"],
       tallas: ["CH", "M", "G", "XG", "2XG"],
@@ -156,7 +153,7 @@ window.ZAIN = {
       categoria: "Textil",
       descripcion: "Cierre completo, rompevientos y repelente al agua. Para campo y temporada de frío.",
       foto: "img/productos/chamarra.webp",
-      precio: 549,
+
       colores: ["negro", "marino", "oxford", "rojo", "botella", "olivo", "blanco"],
       tecnicas: ["bordado", "dtf"],
       tallas: ["CH", "M", "G", "XG", "2XG"],
@@ -172,7 +169,7 @@ window.ZAIN = {
       categoria: "Textil",
       descripcion: "Felpa perchada 280 g con bolsa canguro. Merch que sí se usa.",
       foto: "img/productos/sudadera.webp",
-      precio: 389,
+
       colores: ["gris", "negro", "oxford", "marino", "vino", "botella", "arena", "blanco"],
       tecnicas: ["serigrafia", "dtf", "bordado"],
       tallas: ["CH", "M", "G", "XG", "2XG"],
@@ -188,7 +185,7 @@ window.ZAIN = {
       categoria: "Accesorios",
       descripcion: "Frente estructurado y ajuste trasero. El accesorio más pedido para eventos.",
       foto: "img/productos/gorra.webp",
-      precio: 129,
+
       colores: ["arena", "negro", "blanco", "marino", "rey", "rojo", "gris", "botella"],
       tecnicas: ["bordado", "dtf"],
       tallas: [],
@@ -201,7 +198,7 @@ window.ZAIN = {
       categoria: "Accesorios",
       descripcion: "Manta gruesa en 5 tamaños. Para ferias, kits de bienvenida y tiendas.",
       foto: "img/productos/bolsa.webp",
-      precio: 59,
+
       colores: ["natural", "negro", "marino", "rojo", "botella"],
       tecnicas: ["serigrafia", "dtf"],
       tallasNombre: "Tamaños", // ✏️ se muestra en vez de «Tallas»
@@ -216,6 +213,10 @@ window.ZAIN = {
 
   /* Preguntas frecuentes ✏️ */
   preguntas: [
+    {
+      p: "¿Cómo solicito una cotización?",
+      r: "Elige productos, colores, técnica y cantidades, agrégalos a tu pedido y envíalo por WhatsApp. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir.",
+    },
     {
       p: "¿Cuál es el pedido mínimo?",
       r: "En bordado y DTF trabajamos desde 12 piezas. En serigrafía conviene desde 50 piezas por diseño, porque el costo de la malla se reparte entre más piezas.",
@@ -238,7 +239,7 @@ window.ZAIN = {
     },
     {
       p: "¿Cómo pago?",
-      r: "Al confirmar tu pedido por WhatsApp te compartimos la cotización formal y los datos para el anticipo. Facturamos.",
+      r: "Arma tu pedido en la página y envíalo por WhatsApp. Te compartimos una cotización personalizada; cuando la apruebes, coordinamos el anticipo y la producción. Facturamos.",
     },
   ],
 };

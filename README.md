@@ -4,7 +4,7 @@ Página para vender uniformes y artículos promocionales con logo (bordado, seri
 
 - **Catálogo** con filtros y vista de cada prenda en todos sus colores.
 - **Personalizador**: el cliente sube su logo (o escribe un texto), elige prenda, color, técnica, ubicación, tamaño en cm y piezas por talla, y ve el **render al momento**. Lo puede descargar.
-- **Pedido (carrito)**: junta varias prendas y lo **envía por WhatsApp** con todo el detalle y un total de referencia. No hay pagos en línea: la venta se cierra por WhatsApp.
+- **Pedido (carrito)**: junta varias prendas y lo **envía por WhatsApp** con productos, colores, tallas, cantidades y detalles de personalización. No hay pagos en línea: la venta se cierra por WhatsApp.
 - Funciona en celular y en compu. No necesita base de datos, ni instalar nada, ni compilar: son archivos estáticos.
 
 ---
@@ -16,7 +16,7 @@ Todo se cambia en **`js/config.js`** (los datos de ejemplo están marcados con �
 - [ ] `whatsapp`: número con lada de país, sin espacios. México: `52` + 10 dígitos (ej. `523312345678`).
 - [ ] `correo`, `ciudad`, `instagram`, `horario`.
 - [ ] `minimoPiezas` y `diasEntrega`.
-- [ ] Precios de cada producto (`precio`) y el costo extra de cada técnica (`extra`). Si pones `precio: 0`, el producto sale como «A cotizar».
+- [ ] Confirmar productos, colores, tallas y técnicas contra los catálogos de proveedores. Los productos individuales se cotizan por WhatsApp sin importes en el carrito. Los paquetes podrán mostrar un precio cuando JP confirme su alcance y costos.
 - [ ] Productos del catálogo, colores y preguntas frecuentes.
 - [ ] Fotos: las de `img/` son **de ejemplo** (generadas con IA). Cámbialas por las reales cuando las tengas.
 - [ ] Revisa el pie de página y el título de la pestaña en `index.html` si quieres otro texto.
@@ -93,7 +93,7 @@ Los navegadores guardan los `.css` y `.js` en caché. Para que todos vean el cam
 ```
 index.html          la página
 css/zain.css        estilos (la paleta está en :root, al inicio)
-js/config.js        ← DATOS: productos, precios, WhatsApp, preguntas
+js/config.js        ← DATOS: productos, colores, WhatsApp, preguntas
 js/render.js        motor del render (pinta la prenda y estampa el logo)
 js/zain.js          portada, catálogo, personalizador, pedido y animaciones
 js/trama.js         efecto de semitono (WebGL) de la foto de serigrafía
