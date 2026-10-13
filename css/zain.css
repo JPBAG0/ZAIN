@@ -549,6 +549,10 @@ p { margin: 0; }
 .pedido__piezas { font-size: 13px; color: var(--tenue); text-align: right; margin-top: -6px; }
 .pedido__nota { font-size: 13px; color: var(--tenue); text-align: center; }
 .pedido__pie .btn-texto { justify-self: center; }
+.pedido__alternativas { font-size: 13px; color: var(--tenue); text-align: center; }
+.pedido__alternativas summary { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.pedido__alternativas > div { display: grid; gap: 10px; padding-top: 12px; }
+.pedido__alternativas p { margin: 0; line-height: 1.45; }
 
 /* ---------------------------------------------------------------- flotante y aviso */
 .flotante {

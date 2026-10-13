@@ -94,7 +94,7 @@
     )
     .join("");
 
-  const saludo = `Hola ${C.marca} 👋 quiero información para un pedido con mi logo.`;
+  const saludo = `Hola ${C.marca}, quiero información para un pedido con mi logo.`;
   // 525662923967 → +52 56 6292 3967
   const telefono = (n) => {
     const d = String(n).replace(/\D/g, "");
@@ -1105,14 +1105,14 @@
   const LLAVE = "zain-pedido";
   const pedidoGuardado = almacen.leer(LLAVE, []);
   let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => x) : [];
-  let paquete = null, revisionArchivos = 0;
+  let paquete = null, revisionArchivos = 0, compartiendo = false;
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
   const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)));
   function estadoArchivos() {
     const boton = $("#compartirPedido"), estado = $("#archivosEstado");
     if (!boton || !estado) return;
     const invalidos = erroresCantidad();
-    boton.disabled = !paquete || !!invalidos.length;
+    boton.disabled = compartiendo || !paquete || !!invalidos.length;
     $("#descargarPaquete").disabled = !paquete || !!invalidos.length;
     $("#enviar").setAttribute("aria-disabled", !!invalidos.length);
     $("#enviar").href = invalidos.length ? "#pedido" : wa(mensajePedido());
@@ -1121,18 +1121,15 @@
     if (!paquete) { estado.textContent = "Preparando los archivos de tu pedido…"; return; }
     const puede = A.puedeCompartir(paquete.files);
     const conArchivos = paquete.files.length > 1;
-    boton.hidden = !conArchivos;
-    boton.textContent = puede ? "Compartir pedido y archivos" : "Descargar pedido y archivos";
-    $("#descargarPaquete").hidden = !puede || !conArchivos;
-    $("#enviar").classList.toggle("btn--wa", !conArchivos);
-    $("#enviar").classList.toggle("btn--linea", conArchivos);
-    $("#enviar").textContent = conArchivos ? "Abrir chat de ZAIN" : "Solicitar cotización por WhatsApp";
-    estado.textContent = `${paquete.renders} render${paquete.renders === 1 ? "" : "s"} y ${paquete.logos} logo${paquete.logos === 1 ? "" : "s"} original${paquete.logos === 1 ? "" : "es"}.`;
+    boton.textContent = "Enviar pedido por WhatsApp";
+    $("#otrasFormas").hidden = !conArchivos && !paquete.faltan.length;
+    $("#descargarPaquete").hidden = !conArchivos;
+    estado.textContent = conArchivos ? `Listos para adjuntar: ${paquete.renders} render${paquete.renders === 1 ? "" : "s"} y ${paquete.logos} logo${paquete.logos === 1 ? "" : "s"} original${paquete.logos === 1 ? "" : "es"}.` : "";
     if (paquete.faltan.length) estado.textContent += " Faltan archivos de pedidos guardados anteriormente; vuelve a agregarlos con su logo.";
     else if (pedido.some((x) => x.archivosTemporales)) estado.textContent += " Descarga el paquete antes de cerrar esta pestaña: no pudimos guardar los archivos en este equipo.";
     $("#pedidoNota").textContent = !conArchivos ? "Se abre WhatsApp con el detalle de tu pedido." : puede
-      ? `Elige WhatsApp y el contacto de ZAIN (+${C.whatsapp}). El texto también va incluido como archivo.`
-      : "Descarga el paquete y adjúntalo en el chat de ZAIN. Incluye el pedido, los renders y los logos originales disponibles.";
+      ? `Se abrirá el menú de tu equipo. Elige WhatsApp y ZAIN (${telefono(C.whatsapp)}): el render, el logo original y el pedido ya van preparados. Confirma el envío allí.`
+      : "Se abrirá el chat de ZAIN y se descargará un ZIP con el pedido y los archivos. Adjunta el ZIP en el chat: este navegador no permite llevar las imágenes directamente a WhatsApp.";
   }
   async function prepararArchivos() {
     const rev = ++revisionArchivos;
@@ -1147,6 +1144,10 @@
       paquete = nuevo; estadoArchivos();
     } catch (_) {
       if (rev !== revisionArchivos || !$("#archivosEstado")) return;
+      $("#compartirPedido").textContent = "Archivos no disponibles";
+      $("#otrasFormas").hidden = false;
+      $("#otrasFormas").open = true;
+      $("#descargarPaquete").hidden = true;
       $("#archivosEstado").textContent = "No se pudieron preparar los archivos. Tu pedido sigue guardado; puedes enviar el texto por WhatsApp.";
     }
   }
@@ -1452,7 +1453,7 @@
       return r.join("\n");
     });
     const pzs = pedido.reduce((a, x) => a + x.piezas, 0);
-    return `Hola ${C.marca} 👋 quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\n¿Me ayudan con la cotización y fecha de entrega?`;
+    return `Hola ${C.marca}, quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\n¿Me ayudan con la cotización y fecha de entrega?`;
   }
 
   let pintado = false;
@@ -1498,12 +1499,16 @@
       ? `<div class="pedido__total"><span>Cotización personalizada</span><b>Por WhatsApp</b></div>
          <div class="pedido__piezas num">${n} piezas</div>
          <button class="btn btn--wa btn--ancho" type="button" id="compartirPedido" disabled>Preparando archivos…</button>
-         <a class="btn btn--linea btn--ancho" id="enviar" href="${esc(wa(mensajePedido()))}" ${C.whatsapp ? 'target="_blank" rel="noopener"' : ""}>
-           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z"/></svg>
-           Abrir chat de ZAIN</a>
          <p class="pedido__archivos" id="archivosEstado" role="status"></p>
          <p class="pedido__nota" id="pedidoNota"></p>
-         <button type="button" class="btn-texto" id="descargarPaquete" hidden>Descargar pedido y archivos</button>
+         <details class="pedido__alternativas" id="otrasFormas" hidden>
+           <summary>Otra forma de enviar</summary>
+           <div>
+             <button type="button" class="btn-texto" id="descargarPaquete" disabled>Descargar pedido y archivos (ZIP)</button>
+             <a class="btn-texto" id="enviar" href="${esc(wa(mensajePedido()))}" ${C.whatsapp ? 'target="_blank" rel="noopener"' : ""}>Abrir chat de ZAIN solo con el texto</a>
+             <p>Si abres el chat por este enlace, adjunta el ZIP descargado para incluir el render y el logo.</p>
+           </div>
+         </details>
          <button type="button" class="btn-texto" id="vaciar">Vaciar pedido</button>`
       : "";
     prepararArchivos();
@@ -1538,17 +1543,40 @@
   $("#pedidoPie").addEventListener("click", (e) => {
     if (e.target.closest("#enviar") && erroresCantidad().length) { e.preventDefault(); estadoArchivos(); return; }
     if (e.target.closest("#compartirPedido, #descargarPaquete")) {
-      if (!paquete || erroresCantidad().length) return;
-      if (e.target.closest("#descargarPaquete") || !A.puedeCompartir(paquete.files)) {
+      if (!paquete || compartiendo || erroresCantidad().length) return;
+      if (e.target.closest("#descargarPaquete")) {
         A.descargar(paquete.zip, "pedido-zain.zip");
         $("#archivosEstado").textContent = "Paquete descargado. Adjunta pedido-zain.zip en el chat de ZAIN.";
-      } else {
+        return;
+      }
+      const conArchivos = paquete.files.length > 1;
+      if (conArchivos && A.puedeCompartir(paquete.files)) {
+        const boton = $("#compartirPedido");
+        const mostrarResultado = (txt) => {
+          if ($("#compartirPedido") === boton) $("#archivosEstado").textContent = txt;
+        };
+        const fallo = (er) => {
+          mostrarResultado(er.name === "AbortError" ? "Compartir cancelado. Tu pedido sigue guardado." : "No se pudo compartir. Usa Otra forma de enviar para descargar los archivos y adjuntarlos en el chat de ZAIN.");
+          if (er.name !== "AbortError" && $("#compartirPedido") === boton) $("#otrasFormas").open = true;
+        };
+        compartiendo = true;
+        estadoArchivos();
         try {
           // Archivos ya preparados: la llamada conserva la activación del toque.
           Promise.resolve(navigator.share({ title: `Pedido ${C.marca}`, text: paquete.texto, files: paquete.files }))
-            .then(() => { if ($("#archivosEstado")) $("#archivosEstado").textContent = "Confirma el envío en WhatsApp. Tu pedido sigue guardado aquí."; })
-            .catch((er) => { if ($("#archivosEstado")) $("#archivosEstado").textContent = er.name === "AbortError" ? "Compartir cancelado. Tu pedido sigue guardado." : "No se pudo compartir. Descarga el paquete y adjúntalo en el chat de ZAIN."; });
-        } catch (_) { $("#archivosEstado").textContent = "No se pudo compartir. Descarga el paquete y adjúntalo en el chat de ZAIN."; }
+            .then(() => mostrarResultado("Elige WhatsApp y ZAIN en el menú, y confirma el envío. Tu pedido sigue guardado aquí."))
+            .catch(fallo)
+            .finally(() => { compartiendo = false; if ($("#compartirPedido") === boton) boton.disabled = !!erroresCantidad().length; else estadoArchivos(); });
+        } catch (er) { compartiendo = false; estadoArchivos(); fallo(er); }
+      } else {
+        // Un enlace de WhatsApp solo admite texto: los adjuntos usan un ZIP.
+        if (C.whatsapp) window.open(wa(paquete.texto), "_blank", "noopener");
+        else { location.hash = "contacto"; cerrarPedido(); }
+        if (conArchivos) {
+          A.descargar(paquete.zip, "pedido-zain.zip");
+          $("#archivosEstado").textContent = "Adjunta pedido-zain.zip en el chat de ZAIN. Si el chat no se abrió, usa Otra forma de enviar.";
+          $("#otrasFormas").open = true;
+        }
       }
       return;
     }

@@ -10,6 +10,7 @@
 - `escalaMaxLogo` amplía 30% el espacio de vista previa, sin prometer un área de impresión. Mantener el aviso de confirmación de medidas.
 - `js/archivos.js` guarda logos originales y renders PNG de 1200 px en IndexedDB del dispositivo. Conservar bytes originales, también PDF en pedido rápido. No subir archivos a un servidor.
 - Web Share se llama desde el toque con archivos ya preparados; el cliente elige WhatsApp/contacto. Nunca afirmar que el pedido fue enviado al resolver `share()`. Alternativa: ZIP con pedido TXT, renders y originales, más enlace de WhatsApp para el texto. Guardados antiguos sin originales deben avisarlo; no inventar un archivo.
+- Mantener un solo botón principal «Enviar pedido por WhatsApp». Sin adjuntos, abre el chat con texto; con adjuntos compatibles, usa el menú nativo. Si no hay soporte, abre el chat y descarga el ZIP indicando que debe adjuntarse. Las alternativas quedan dentro de «Otra forma de enviar». Los saludos usan coma, sin emoji, para evitar el carácter roto observado en WhatsApp.
 - Al quitar o vaciar un pedido, eliminar sus archivos locales. Si no se pueden guardar, mantenerlos en memoria y avisar para descargarlos antes de salir.
 
 - Fuente: PDF «1-BOLSAS CATÁLOGO 2026», páginas de producto 3–16. Se incluyen 13 modelos, excluyendo Metálica. Usa las páginas de producto; el índice tiene números desfasados.
