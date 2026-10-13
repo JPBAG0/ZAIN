@@ -78,7 +78,31 @@ export function createHandler(env={}, fetcher=fetch) {
     if(!users.length){await sb('/rest/v1/zain_equipo?on_conflict=user_id',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates'},body:JSON.stringify({user_id:u.id,nombre:access[0].nombre})});users=await sb('/rest/v1/zain_equipo?user_id=eq.'+u.id+'&select=user_id,nombre,activo&limit=1');}
     if(!users[0]?.activo)fail(403,'Esta cuenta no tiene acceso al panel de ZAIN.');return {id:u.id,nombre:users[0].nombre};
   };
-  const publicRow=x=>{const {token_hash,...rest}=x;return rest;};
+  // Capacidad de consulta independiente del token que autoriza las cargas.
+  const readToken=x=>{
+    if(!/^[a-f0-9]{64}$/.test(x.token_hash||'') || !x.consulta_nonce)fail(503,'El seguimiento todavía no está disponible.');
+    return createHmac('sha256',Buffer.from(x.token_hash,'hex')).update('zain:consulta:v1:'+x.id+':'+x.consulta_nonce).digest('hex');
+  };
+  const receipt=x=>({id:x.id,folio:x.folio,url:site+'/mi-pedido#'+x.id+'/'+readToken(x)});
+  const customer=async b=>{
+    validateID(b.id);
+    if(!/^[a-f0-9]{64}$/.test(b.token||''))fail(404,'Enlace de seguimiento no válido.');
+    const x=await row(b.id);
+    if(!x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
+    return x;
+  };
+  const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
+    items:x.items.map(p=>Object.fromEntries(['indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas'].map(k=>[k,p[k]]))),
+    archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
+  const signedFile=async(x,b)=>{
+    if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
+    const f=x.archivos.find(f=>f.item===b.item&&f.kind===b.kind);if(!f)fail(404,'Archivo no encontrado.');
+    const data=await sb('/storage/v1/object/sign/'+bucket+'/'+f.path,{method:'POST',body:JSON.stringify({expiresIn:120})});
+    const signed=storageURL(data.signedURL);
+    if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
+    return {url:signed.href,name:f.name,type:f.type};
+  };
+  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return rest;};
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -113,9 +137,18 @@ export function createHandler(env={}, fetcher=fetch) {
           for(const f of x.archivos){const s=stored.find(s=>s.name===f.path.split('/')[1]);if(!s||Number(s.metadata?.size)!==f.size||s.metadata?.mimetype!==f.type)fail(409,'Todavía faltan archivos por subir. Reintenta para completar la solicitud.');}
           await sb('/rest/v1/zain_pedidos?id=eq.'+x.id+'&guardado_at=is.null',{method:'PATCH',body:JSON.stringify({guardado_at:new Date().toISOString()})});
         }
-        return response(200,{id:x.id,folio:x.folio,url:site+'/pedidos#'+x.id});
+        return response(200,receipt(x));
+      }
+      if(request.method==='POST'&&['consulta','archivo-consulta'].includes(op)) {
+        const b=await jsonBody(request),x=await customer(b);
+        return response(200,op==='consulta'?{pedido:customerRow(x)}:await signedFile(x,b));
       }
       const user=await staff(request);
+      if(request.method==='POST'&&op==='enlace') {
+        const b=await jsonBody(request),x=await row(b.id);
+        if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
+        return response(200,receipt(x));
+      }
       if(request.method==='GET'&&op==='lista') {
         const offset=Math.max(0,Math.min(100000,Number(url.searchParams.get('offset'))||0));
         const state=url.searchParams.get('estado');if(state&&!STATES.includes(state))fail(400,'Estado inválido.');
@@ -134,12 +167,7 @@ export function createHandler(env={}, fetcher=fetch) {
       }
       if(request.method==='POST'&&op==='archivo') {
         const b=await jsonBody(request),x=await row(b.id);
-        if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
-        const f=x.archivos.find(f=>f.item===b.item&&f.kind===b.kind);if(!f)fail(404,'Archivo no encontrado.');
-        const data=await sb('/storage/v1/object/sign/'+bucket+'/'+f.path,{method:'POST',body:JSON.stringify({expiresIn:120})});
-        const signed=storageURL(data.signedURL);
-        if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
-        return response(200,{url:signed.href,name:f.name,type:f.type});
+        return response(200,await signedFile(x,b));
       }
       fail(404,'Operación no encontrada.');
     }catch(e){if(!e.status)console.error('ZAIN pedidos: error interno',e.name);return response(e.status||502,{error:e.status?e.message:'No se pudo completar la solicitud. Intenta de nuevo.'});}

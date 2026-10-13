@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
+import { createHash,createHmac } from 'node:crypto';
 import {createHandler,validateOrder} from '../server/pedidos.mjs';
 const id='12345678-1234-4123-8123-123456789abc',token='a'.repeat(64),staffID='87654321-4321-4321-8321-cba987654321';
 const item={p:'bolsa-expo',color:'Rojo',tecnica:'Serigrafía',piezas:100,zona:'Frente',cm:9,logo:'archivo «logo.svg»',tieneLogo:true,tieneRender:true};
@@ -9,7 +9,7 @@ const env={SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'sb_se
 const json=x=>Response.json(x);
 function setup({member=true,stored=true}={}) {
   const calls=[],checked=validateOrder({id,token,items:[item],files});
-  const row={id,folio:'ZAIN-PRUEBA',token_hash:createHash('sha256').update(token).digest('hex'),items:checked.items,archivos:checked.manifest,created_at:new Date().toISOString(),guardado_at:null,total:100,version:0};
+  const row={id,folio:'ZAIN-PRUEBA',token_hash:createHash('sha256').update(token).digest('hex'),consulta_nonce:'87654321-1234-4123-8123-123456789abc',items:checked.items,archivos:checked.manifest,created_at:new Date().toISOString(),guardado_at:null,total:100,version:0,estado:'nuevo',notas_internas:'PRIVADO DEL EQUIPO'};
   const fake=async(url,opts={})=>{
     calls.push({url,opts});
     if(url.includes('/auth/v1/user'))return opts.headers.Authorization==='Bearer valid-user'?json({id:staffID,email:'equipo@example.test',email_confirmed_at:'2026-10-13'}):json({error:'bad'});
@@ -52,7 +52,7 @@ test('no marca guardado si falta un archivo',async()=>{
   const {request,calls}=setup({stored:false});assert.equal((await request('finalizar',{id,token})).status,409);assert.ok(!calls.some(x=>x.opts.method==='PATCH'));
 });
 test('confirmación solo tras verificar todos los originales y renders',async()=>{
-  const {request,calls}=setup();const r=await request('finalizar',{id,token});assert.equal(r.status,200);assert.ok((await r.json()).url.startsWith('https://zain.test/pedidos#'));assert.ok(calls.some(x=>x.opts.method==='PATCH'));
+  const {request,calls}=setup();const r=await request('finalizar',{id,token});assert.equal(r.status,200);assert.ok((await r.json()).url.startsWith('https://zain.test/mi-pedido#'));assert.ok(calls.some(x=>x.opts.method==='PATCH'));
 });
 test('URLs firmadas incluyen la ruta correcta y reintentos omiten archivos existentes',async()=>{
   const a=setup({stored:false});const r=await a.request('subidas',{id,token});assert.equal(r.status,200);const body=await r.json();assert.ok(body.files.every(f=>f.url.startsWith('https://project.supabase.co/storage/v1/object/upload/sign/')));
@@ -66,4 +66,46 @@ test('otro sitio no puede usar la API desde su navegador',async()=>{
 });
 test('sin configuración no anuncia guardado ni permite escrituras',async()=>{
   const h=createHandler({},()=>{throw Error('No debe llamar Supabase');});assert.deepEqual(await(await h(new Request('https://zain.test/api/pedidos'))).json(),{activo:false});assert.equal((await h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST'}))).status,503);
+});
+
+const consultaToken=x=>createHmac('sha256',Buffer.from(x.token_hash,'hex')).update('zain:consulta:v1:'+x.id+':'+x.consulta_nonce).digest('hex');
+test('consulta exige enlace independiente y pedido con carga completa',async()=>{
+  const {request,row}=setup();const read=consultaToken(row);
+  assert.notEqual(read,token);assert.equal((await request('consulta',{id,token:read})).status,404);
+  row.guardado_at=new Date().toISOString();
+  for(const wrong of [token,'b'.repeat(64),'',undefined])assert.equal((await request('consulta',{id,token:wrong})).status,404);
+  assert.equal((await request('consulta',{id,token:read})).status,200);
+});
+test('consulta devuelve solo datos del cliente, sin hashes, rutas ni notas internas',async()=>{
+  const {request,row}=setup();row.guardado_at=new Date().toISOString();row.items[0].secreto='NO PUBLICAR';
+  const r=await request('consulta',{id,token:consultaToken(row)}),s=await r.text(),body=JSON.parse(s);
+  assert.equal(body.pedido.total,100);assert.equal(body.pedido.estado,'nuevo');
+  for(const value of ['token_hash','consulta_nonce',row.token_hash,row.consulta_nonce,'notas_internas','PRIVADO DEL EQUIPO','NO PUBLICAR','path','version'])assert.ok(!s.includes(value),value);
+});
+test('enlace de consulta no lista pedidos, no escribe y no autoriza cargas',async()=>{
+  const {request,row,calls}=setup();row.guardado_at=new Date().toISOString();const read=consultaToken(row);
+  assert.equal((await request('finalizar',{id,token:read})).status,403);
+  assert.equal((await request('subidas',{id,token:read})).status,403);
+  assert.equal((await request('actualizar',{id,token:read,estado:'confirmado',version:0})).status,401);
+  assert.equal((await request('lista')).status,401);
+  assert.ok(!calls.some(c=>c.opts.method==='PATCH'||c.url.includes('actualizar_pedido')));
+});
+test('otro pedido o nonce no acepta un enlace válido para esta solicitud',async()=>{
+  const {request,row}=setup();row.guardado_at=new Date().toISOString();const read=consultaToken(row);
+  row.id=staffID;assert.equal((await request('consulta',{id:staffID,token:read})).status,404);
+  row.id=id;row.consulta_nonce=staffID;assert.equal((await request('consulta',{id,token:read})).status,404);
+});
+test('archivos de consulta solo se firman tras validar el enlace y su manifiesto',async()=>{
+  const {request,row,calls}=setup();row.guardado_at=new Date().toISOString();const read=consultaToken(row);
+  assert.equal((await request('archivo-consulta',{id,token,item:0,kind:'render'})).status,404);
+  assert.equal((await request('archivo-consulta',{id,token:read,item:1,kind:'render'})).status,404);
+  assert.ok(!calls.some(c=>c.url.includes('/object/sign/')));
+  const data=await(await request('archivo-consulta',{id,token:read,item:0,kind:'render'})).json();assert.ok(data.url.includes('/storage/v1/object/sign/'));
+});
+test('equipo puede recuperar enlace de pedidos existentes sin exponer permiso de carga',async()=>{
+  const {request,row}=setup();row.guardado_at=new Date().toISOString();
+  assert.equal((await request('enlace',{id})).status,401);
+  const a=await(await request('enlace',{id},'Bearer valid-user')).json(),b=await(await request('enlace',{id},'Bearer valid-user')).json();
+  assert.deepEqual(a,b);assert.equal(a.folio,row.folio);assert.ok(a.url.endsWith(consultaToken(row)));assert.ok(!a.url.endsWith(token));
+  const privateRow=await(await request('detalle&id='+id,null,'Bearer valid-user')).json();assert.equal(privateRow.pedido.folio,row.folio);for(const field of ['consulta_nonce','token_hash'])assert.ok(!JSON.stringify(privateRow).includes(field));
 });

@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /gestion-zain
+Disallow: /mi-pedido
 Disallow: /pedidos
 Disallow: /pedidos.html
 Disallow: /api/

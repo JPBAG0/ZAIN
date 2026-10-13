@@ -25,10 +25,17 @@
     const cleanItems=items.map(({mini,unit,archivosTemporales,...x})=>x),manifest=files.map(({blob,...x})=>x);
     const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify({items:cleanItems,files:manifest})));
     const fingerprint=Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,'0')).join('');
-    if(!draft || draft.fingerprint!==fingerprint || !draft.created || Date.now()-draft.created>23*3600000) {
+    if(!draft || draft.fingerprint!==fingerprint || !draft.created || !draft.recibo&&Date.now()-draft.created>23*3600000) {
       draft={id:crypto.randomUUID(),token:Array.from(crypto.getRandomValues(new Uint8Array(32)),x=>x.toString(16).padStart(2,'0')).join(''),fingerprint,created:Date.now()};guardarDraft();
     }
-    if(draft.recibo)return draft.recibo;
+    if(draft.recibo) {
+      // Migra las fichas antiguas sin crear otro pedido ni cambiar el folio.
+      if(!new URL(draft.recibo.url,location.href).pathname.startsWith('/mi-pedido')) {
+        progreso('Preparando tu enlace de seguimiento…');
+        draft.recibo=await api('finalizar',{id:draft.id,token:draft.token});guardarDraft();
+      }
+      return draft.recibo;
+    }
     progreso('Guardando tu solicitud…');
     const owner={id:draft.id,token:draft.token};
     await api('crear',{...owner,items:cleanItems,files:manifest});

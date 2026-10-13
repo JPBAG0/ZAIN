@@ -6,11 +6,11 @@ Página para vender uniformes y artículos promocionales con logo (bordado, seri
 - **Bolsas**: una entrada abre 13 modelos del catálogo 2026, con fotos del proveedor, medidas y colores por modelo. Se excluye Metálica. Cada modelo pide consultar disponibilidad; los colores del render son ilustrativos.
 - Bolsas desde **100 piezas por modelo y color**, en incrementos de 50. Otros mínimos se confirman al cotizar. Expo es la muestra de portada y se elige directamente desde el editor.
 - **Logo**: colores, selector HEX y referencia Pantone para cotización. Tamaño máximo de vista previa ampliado 30%; las medidas finales se confirman antes de producir.
-- **Archivos y solicitudes**: «Solicitar cotización por WhatsApp» guarda la selección, el render y el logo original en Supabase privado y abre directamente el chat de ZAIN con un folio y enlace a su ficha. Las alternativas de texto/ZIP son explícitas; el cliente confirma el mensaje en WhatsApp.
-- **Panel privado `/pedidos`**: login del equipo autorizado, búsqueda, imágenes, originales, notas, estados e historial. Instrucciones de operación y migración a servidor mensual en [docs/PEDIDOS.md](docs/PEDIDOS.md).
+- **Archivos y solicitudes**: «Solicitar cotización por WhatsApp» guarda la selección, el render y el logo original en Supabase privado y abre directamente el chat de ZAIN con un folio y enlace de consulta del cliente en `/mi-pedido#ID/TOKEN`. Las alternativas de texto/ZIP son explícitas; el cliente confirma el mensaje en WhatsApp.
+- **Panel privado `/gestion-zain`**: login del equipo autorizado, búsqueda, imágenes, originales, notas, estados e historial. Instrucciones de operación y migración a servidor mensual en [docs/PEDIDOS.md](docs/PEDIDOS.md).
 - **Personalizador**: el cliente sube su logo (o escribe un texto), elige prenda, color, técnica, ubicación, tamaño en cm y piezas por talla, y ve el **render al momento**. Lo puede descargar.
 - **Pedido (carrito)**: junta varias prendas y lo **envía por WhatsApp** con productos, colores, tallas, cantidades y detalles de personalización. No hay pagos en línea: la venta se cierra por WhatsApp.
-- Funciona en celular y en compu. No necesita base de datos, ni instalar nada, ni compilar: son archivos estáticos.
+- Funciona en celular y en compu. El catálogo no requiere build; las solicitudes, archivos y accesos del equipo usan Supabase.
 
 ---
 

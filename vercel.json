@@ -1,6 +1,8 @@
 {
   "functions": {"api/pedidos.mjs": {"maxDuration":60}},
   "routes": [
+    {"src":"/gestion-zain(?:\\.html)?","dest":"/gestion-zain.html","headers":{"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff"}},
+    {"src":"/mi-pedido(?:\\.html)?","dest":"/mi-pedido.html","headers":{"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff"}},
     {"src":"/pedidos(?:\\.html)?","dest":"/pedidos.html","headers":{"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff"}},
     {"src":"/(server|supabase|tests|docs)(/.*)?","status":404},
     {"src":"/\\..*","status":404},

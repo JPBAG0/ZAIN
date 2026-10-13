@@ -5,8 +5,8 @@
 ## Decisión vigente posterior: pedidos privados (13-oct-2026)
 
 - JP aprobó guardar solicitudes, logos originales y renders en un proyecto Supabase dedicado `Zain Pedidos`; los detalles operativos están en `docs/PEDIDOS.md`. Esta decisión reemplaza las instrucciones anteriores de archivos solo locales y Web Share.
-- El botón principal guarda primero y abre directamente el número de ZAIN con texto, folio y enlace a `/pedidos`. El cliente confirma el mensaje; guardado NO implica envío, pago ni pedido confirmado. No regresar al menú de compartir aplicaciones.
-- `/pedidos` es el login del equipo. Usuario real verificado, correo confirmado y autorización privada; nunca confiar en `user_metadata` ni en haber visitado la URL.
+- El botón principal guarda primero y abre directamente el número de ZAIN con texto, folio y enlace de seguimiento a `/mi-pedido#ID/TOKEN`. El cliente confirma el mensaje; guardado NO implica envío, pago ni pedido confirmado. No regresar al menú de compartir aplicaciones.
+- `/gestion-zain` es el login del equipo. `/pedidos` conserva enlaces privados anteriores redirigiéndolos al nuevo panel. `/mi-pedido` es una consulta individual sin login, con capacidad de lectura distinta del secreto de carga; nunca devolver notas internas, hashes, nonce ni rutas de objetos. Cambiar una ruta no sustituye autorización. Usuario real verificado, correo confirmado y autorización privada; nunca confiar en `user_metadata` ni en haber visitado la URL.
 - `server/pedidos.mjs` es el servidor portable; la función Supabase se genera con `server/preparar-edge.mjs`. Un push a GitHub no despliega la función de Supabase. Catálogo/reglas nuevas requieren generar y desplegar ambos si afectan validación.
 - No publicar claves ni datos de clientes. La configuración de autenticación usa solo claves públicas proporcionadas por el servidor; las de servicio se quedan en su entorno. No guardar correos de acceso reales en el código.
 - Mantener `docs/PEDIDOS.md` y las notas del Cerebro actualizadas, conservar versiones anteriores, distinguir ejecutado/probado de pendiente. No reconstruir índices/grafos por este cambio.

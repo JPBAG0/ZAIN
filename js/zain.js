@@ -1561,7 +1561,7 @@
         let mensaje=texto;
         if(P.activo()) {
           const receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;});
-          mensaje+=`\n\nFolio: ${receipt.folio}\nFicha de la solicitud para ZAIN: ${receipt.url}`;
+          mensaje+=`\n\nFolio: ${receipt.folio}\nConsulta tu pedido: ${receipt.url}`;
           $("#archivosEstado").textContent=`Solicitud ${receipt.folio} guardada. Confirma el envío del mensaje en WhatsApp.`;
         }
         dispatchEvent(new CustomEvent('zain:whatsapp_click',{detail:{piezas:snapshot.reduce((s,x)=>s+x.piezas,0)}}));
