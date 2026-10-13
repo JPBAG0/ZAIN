@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+  <title>Pedidos · ZAIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/zain.css?v=15"><link rel="stylesheet" href="css/pedidos.css?v=1">
+</head>
+<body class="control">
+  <header class="control__cab"><a href="/" aria-label="Volver a ZAIN">ZAIN <span>Pedidos</span></a><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></header>
+  <main>
+    <section class="control__login" id="acceso">
+      <span class="control__etq">SOLO EQUIPO ZAIN</span><h1>Todo el pedido,<br>en un lugar.</h1>
+      <p>Consulta las solicitudes, los renders y los logos originales de tus clientes.</p>
+      <form id="login"><label>Correo<input id="correo" type="email" autocomplete="username" required maxlength="254"></label><label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label><button class="btn btn--azul btn--ancho" id="entrar" disabled>Preparando acceso…</button></form>
+    </section>
+    <p id="estadoPanel" class="control__estado" role="status" aria-live="polite"></p>
+    <section id="trabajo" hidden>
+      <div class="control__titulo"><div><span class="control__etq" id="equipo"></span><h1>Solicitudes</h1></div><button type="button" class="btn btn--linea" id="recargar">Actualizar</button></div>
+      <p>Una solicitud guardada todavía no es un pedido confirmado ni pagado.</p>
+      <form id="filtros" class="control__filtros"><label>Buscar folio<input id="buscar" type="search" placeholder="ZAIN-…" maxlength="50"></label><label>Estado<select id="estadoFiltro"><option value="">Todos</option></select></label><button class="btn btn--linea">Buscar</button></form>
+      <div class="control__grid"><div><div id="lista"></div><nav class="control__paginas" aria-label="Páginas de solicitudes"><button type="button" class="btn-texto" id="anterior">Anterior</button><span id="pagina"></span><button type="button" class="btn-texto" id="siguiente">Siguiente</button></nav></div><section id="detalle" class="control__detalle" aria-label="Ficha de solicitud"><p>Elige una solicitud para ver sus archivos y detalles.</p></section></div>
+    </section>
+  </main>
+  <script src="js/config.js?v=8"></script><script src="js/control-pedidos.js?v=1"></script>
+</body>
+</html>

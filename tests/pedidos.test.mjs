@@ -1,0 +1,69 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import {createHandler,validateOrder} from '../server/pedidos.mjs';
+const id='12345678-1234-4123-8123-123456789abc',token='a'.repeat(64),staffID='87654321-4321-4321-8321-cba987654321';
+const item={p:'bolsa-expo',color:'Rojo',tecnica:'Serigrafía',piezas:100,zona:'Frente',cm:9,logo:'archivo «logo.svg»',tieneLogo:true,tieneRender:true};
+const files=[{item:0,kind:'logo',type:'image/svg+xml',size:90,name:'logo.svg'},{item:0,kind:'render',type:'image/png',size:1000,name:'render.png'}];
+const env={SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'sb_secret_prueba_no_real',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_prueba_no_real',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'};
+const json=x=>Response.json(x);
+function setup({member=true,stored=true}={}) {
+  const calls=[],checked=validateOrder({id,token,items:[item],files});
+  const row={id,folio:'ZAIN-PRUEBA',token_hash:createHash('sha256').update(token).digest('hex'),items:checked.items,archivos:checked.manifest,created_at:new Date().toISOString(),guardado_at:null,total:100,version:0};
+  const fake=async(url,opts={})=>{
+    calls.push({url,opts});
+    if(url.includes('/auth/v1/user'))return opts.headers.Authorization==='Bearer valid-user'?json({id:staffID,email:'equipo@example.test',email_confirmed_at:'2026-10-13'}):json({error:'bad'});
+    if(url.includes('/zain_accesos?'))return json(member?[{nombre:'Prueba'}]:[]);
+    if(url.includes('/zain_equipo?'))return json(member?[{user_id:staffID,nombre:'Prueba',activo:true}]:[]);
+    if(url.includes('/rpc/zain_crear_pedido'))return json({folio:row.folio});
+    if(url.includes('/rpc/zain_actualizar_pedido'))return json(null);
+    if(url.includes('/zain_pedidos?'))return opts.method==='PATCH'?json(null):json([row]);
+    if(url.includes('/object/list/'))return json(stored?checked.manifest.map(f=>({name:f.path.split('/')[1],metadata:{size:f.size,mimetype:f.type}})):[]);
+    if(url.includes('/object/upload/sign/'))return json({url:'/object/upload/sign/zain-pedidos/'+url.split('/zain-pedidos/')[1]+'?token=signed-test'});
+    if(url.includes('/object/sign/'))return json({signedURL:'/object/sign/zain-pedidos/render.png?token=signed-test'});
+    throw Error('Ruta inesperada '+url);
+  };
+  const handler=createHandler(env,fake);
+  const request=(op,body,authorization,origin='https://zain.test')=>handler(new Request('https://zain.test/api/pedidos?op='+op,{method:body?'POST':'GET',headers:{Origin:origin,...(body?{'Content-Type':'application/json'}:{}),...(authorization?{Authorization:authorization}:{})},body:body?JSON.stringify(body):undefined}));
+  return {request,calls,row};
+}
+test('mínimos por selección y colores/técnicas reales',()=>{
+  assert.equal(validateOrder({id,token,items:[item],files}).total,100);
+  assert.throws(()=>validateOrder({id,token,items:[{...item,piezas:125}],files}),/cantidades/);
+  assert.throws(()=>validateOrder({id,token,items:[{...item,color:'Color inventado'}],files}),/Color/);
+  assert.throws(()=>validateOrder({id,token,items:[{...item,tecnica:'Bordado'}],files}),/Técnica/);
+});
+test('rechaza archivos faltantes, HTML y exceso de tamaño',()=>{
+  assert.throws(()=>validateOrder({id,token,items:[item],files:[]}),/Faltan/);
+  assert.throws(()=>validateOrder({id,token,items:[item],files:[{...files[0],type:'text/html'}]}),/válido/);
+  assert.throws(()=>validateOrder({id,token,items:[item],files:[{...files[0],size:16000000}]}),/15 MB/);
+});
+test('config pública no expone secretos',async()=>{
+  const {request}=setup();const r=await request('config'),body=await r.text();assert.equal(r.status,200);assert.ok(body.includes('sb_publishable'));assert.ok(!body.includes('sb_secret'));assert.equal(r.headers.get('cache-control'),'no-store');
+});
+test('anónimo y usuario fuera del equipo no consultan pedidos',async()=>{
+  const a=setup();assert.equal((await a.request('lista')).status,401);assert.equal((await a.request('archivo',{id,item:0,kind:'render'})).status,401);
+  const b=setup({member:false});assert.equal((await b.request('detalle',null,'Bearer valid-user')).status,403);
+});
+test('un token del cliente no permite modificar otra solicitud',async()=>{
+  const {request,calls}=setup();assert.equal((await request('finalizar',{id,token:'b'.repeat(64)})).status,403);assert.ok(!calls.some(x=>x.opts.method==='PATCH'));
+});
+test('no marca guardado si falta un archivo',async()=>{
+  const {request,calls}=setup({stored:false});assert.equal((await request('finalizar',{id,token})).status,409);assert.ok(!calls.some(x=>x.opts.method==='PATCH'));
+});
+test('confirmación solo tras verificar todos los originales y renders',async()=>{
+  const {request,calls}=setup();const r=await request('finalizar',{id,token});assert.equal(r.status,200);assert.ok((await r.json()).url.startsWith('https://zain.test/pedidos#'));assert.ok(calls.some(x=>x.opts.method==='PATCH'));
+});
+test('URLs firmadas incluyen la ruta correcta y reintentos omiten archivos existentes',async()=>{
+  const a=setup({stored:false});const r=await a.request('subidas',{id,token});assert.equal(r.status,200);const body=await r.json();assert.ok(body.files.every(f=>f.url.startsWith('https://project.supabase.co/storage/v1/object/upload/sign/')));
+  const b=setup();const done=await b.request('subidas',{id,token});assert.ok((await done.json()).files.every(f=>f.subido));
+});
+test('conflicto entre compañeros no sobrescribe una versión nueva',async()=>{
+  const {request}=setup();assert.equal((await request('actualizar',{id,estado:'cotizado',version:0,notas:'Prueba'},'Bearer valid-user')).status,409);
+});
+test('otro sitio no puede usar la API desde su navegador',async()=>{
+  const {request,calls}=setup();assert.equal((await request('config',null,null,'https://intruso.test')).status,403);assert.equal(calls.length,0);
+});
+test('sin configuración no anuncia guardado ni permite escrituras',async()=>{
+  const h=createHandler({},()=>{throw Error('No debe llamar Supabase');});assert.deepEqual(await(await h(new Request('https://zain.test/api/pedidos'))).json(),{activo:false});assert.equal((await h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST'}))).status,503);
+});

@@ -6,6 +6,7 @@
   "use strict";
   const C = window.ZAIN;
   const A = window.ZAINArchivos;
+  const P = window.ZAINPedidos;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1114,22 +1115,22 @@
     const invalidos = erroresCantidad();
     boton.disabled = compartiendo || !paquete || !!invalidos.length;
     $("#descargarPaquete").disabled = !paquete || !!invalidos.length;
-    $("#enviar").setAttribute("aria-disabled", !!invalidos.length);
+    $("#enviar").setAttribute("aria-disabled", compartiendo || !!invalidos.length);
     $("#enviar").href = invalidos.length ? "#pedido" : wa(mensajePedido());
     estado.classList.toggle("error", !!invalidos.length || !!paquete?.faltan.length);
     if (invalidos.length) { estado.textContent = "Ajusta las cantidades indicadas antes de enviar el pedido."; return; }
     if (!paquete) { estado.textContent = "Preparando los archivos de tu pedido…"; return; }
-    const puede = A.puedeCompartir(paquete.files);
     const conArchivos = paquete.files.length > 1;
-    boton.textContent = "Enviar pedido por WhatsApp";
+    boton.textContent = compartiendo ? "Guardando solicitud…" : "Solicitar cotización por WhatsApp";
     $("#otrasFormas").hidden = !conArchivos && !paquete.faltan.length;
     $("#descargarPaquete").hidden = !conArchivos;
     estado.textContent = conArchivos ? `Listos para adjuntar: ${paquete.renders} render${paquete.renders === 1 ? "" : "s"} y ${paquete.logos} logo${paquete.logos === 1 ? "" : "s"} original${paquete.logos === 1 ? "" : "es"}.` : "";
     if (paquete.faltan.length) estado.textContent += " Faltan archivos de pedidos guardados anteriormente; vuelve a agregarlos con su logo.";
     else if (pedido.some((x) => x.archivosTemporales)) estado.textContent += " Descarga el paquete antes de cerrar esta pestaña: no pudimos guardar los archivos en este equipo.";
-    $("#pedidoNota").textContent = !conArchivos ? "Se abre WhatsApp con el detalle de tu pedido." : puede
-      ? `Se abrirá el menú de tu equipo. Elige WhatsApp y ZAIN (${telefono(C.whatsapp)}): el render, el logo original y el pedido ya van preparados. Confirma el envío allí.`
-      : "Se abrirá el chat de ZAIN y se descargará un ZIP con el pedido y los archivos. Adjunta el ZIP en el chat: este navegador no permite llevar las imágenes directamente a WhatsApp.";
+    $("#pedidoNota").textContent = P.activo()
+      ? "Guardaremos tu solicitud y sus archivos para que ZAIN pueda cotizarla. Después se abrirá directamente nuestro WhatsApp; confirma allí el envío del mensaje."
+      : conArchivos ? "Se abrirá directamente el WhatsApp de ZAIN con el texto. El guardado de imágenes todavía no está habilitado: puedes descargar los archivos en Otra forma de enviar y adjuntarlos al chat."
+      : "Se abrirá directamente WhatsApp con el detalle de tu pedido.";
   }
   async function prepararArchivos() {
     const rev = ++revisionArchivos;
@@ -1540,8 +1541,9 @@
     }
     if (e.target.closest("[data-cerrar-ir]")) cerrarPedido();
   });
-  $("#pedidoPie").addEventListener("click", (e) => {
-    if (e.target.closest("#enviar") && erroresCantidad().length) { e.preventDefault(); estadoArchivos(); return; }
+  P.ready.then(()=>estadoArchivos());
+  $("#pedidoPie").addEventListener("click", async (e) => {
+    if (e.target.closest("#enviar") && (compartiendo || erroresCantidad().length)) { e.preventDefault(); estadoArchivos(); return; }
     if (e.target.closest("#compartirPedido, #descargarPaquete")) {
       if (!paquete || compartiendo || erroresCantidad().length) return;
       if (e.target.closest("#descargarPaquete")) {
@@ -1549,34 +1551,30 @@
         $("#archivosEstado").textContent = "Paquete descargado. Adjunta pedido-zain.zip en el chat de ZAIN.";
         return;
       }
-      const conArchivos = paquete.files.length > 1;
-      if (conArchivos && A.puedeCompartir(paquete.files)) {
-        const boton = $("#compartirPedido");
-        const mostrarResultado = (txt) => {
-          if ($("#compartirPedido") === boton) $("#archivosEstado").textContent = txt;
-        };
-        const fallo = (er) => {
-          mostrarResultado(er.name === "AbortError" ? "Compartir cancelado. Tu pedido sigue guardado." : "No se pudo compartir. Usa Otra forma de enviar para descargar los archivos y adjuntarlos en el chat de ZAIN.");
-          if (er.name !== "AbortError" && $("#compartirPedido") === boton) $("#otrasFormas").open = true;
-        };
-        compartiendo = true;
-        estadoArchivos();
-        try {
-          // Archivos ya preparados: la llamada conserva la activación del toque.
-          Promise.resolve(navigator.share({ title: `Pedido ${C.marca}`, text: paquete.texto, files: paquete.files }))
-            .then(() => mostrarResultado("Elige WhatsApp y ZAIN en el menú, y confirma el envío. Tu pedido sigue guardado aquí."))
-            .catch(fallo)
-            .finally(() => { compartiendo = false; if ($("#compartirPedido") === boton) boton.disabled = !!erroresCantidad().length; else estadoArchivos(); });
-        } catch (er) { compartiendo = false; estadoArchivos(); fallo(er); }
-      } else {
-        // Un enlace de WhatsApp solo admite texto: los adjuntos usan un ZIP.
-        if (C.whatsapp) window.open(wa(paquete.texto), "_blank", "noopener");
-        else { location.hash = "contacto"; cerrarPedido(); }
-        if (conArchivos) {
-          A.descargar(paquete.zip, "pedido-zain.zip");
-          $("#archivosEstado").textContent = "Adjunta pedido-zain.zip en el chat de ZAIN. Si el chat no se abrió, usa Otra forma de enviar.";
-          $("#otrasFormas").open = true;
+      const snapshot=pedido.map(x=>({...x})), texto=paquete.texto;
+      compartiendo=true; estadoArchivos();
+      // Evita cambiar selecciones durante la subida y conserva el folio al reintentar.
+      $$("#pedidoItems button, #vaciar").forEach(x=>x.disabled=true);
+      try {
+        await P.ready;
+        if(P.error()) await P.reintentar();
+        let mensaje=texto;
+        if(P.activo()) {
+          const receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;});
+          mensaje+=`\n\nFolio: ${receipt.folio}\nFicha de la solicitud para ZAIN: ${receipt.url}`;
+          $("#archivosEstado").textContent=`Solicitud ${receipt.folio} guardada. Confirma el envío del mensaje en WhatsApp.`;
         }
+        dispatchEvent(new CustomEvent('zain:whatsapp_click',{detail:{piezas:snapshot.reduce((s,x)=>s+x.piezas,0)}}));
+        // Misma pestaña para evitar popups bloqueados después de subir los archivos.
+        location.assign(wa(mensaje));
+      }catch(er){
+        $("#archivosEstado").textContent=er.message||"No se pudo guardar. Tu pedido sigue aquí; reintenta o envía solo el texto desde Otra forma de enviar.";
+        $("#archivosEstado").classList.add("error");
+        $("#otrasFormas").hidden=false; $("#otrasFormas").open=true;
+      }finally{
+        compartiendo=false; $("#compartirPedido").disabled=!!erroresCantidad().length;
+        $("#compartirPedido").textContent="Solicitar cotización por WhatsApp";
+        $$("#pedidoItems button, #vaciar").forEach(x=>x.disabled=false);
       }
       return;
     }

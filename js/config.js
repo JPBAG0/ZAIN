@@ -8,8 +8,10 @@
    ✏️  = dato de ejemplo: cámbialo por el real antes de publicar.
    ============================================================================ */
 
-window.ZAIN = {
+(() => {
+const config = {
   marca: "ZAIN",
+  pedidosApi: "https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos",
 
   // ✏️ WhatsApp con lada de país, sin espacios ni signos. México: 52 + 10 dígitos.
   //    Ejemplo: "523312345678". Mientras esté vacío, los botones llevan a «Contacto».
@@ -874,3 +876,6 @@ window.ZAIN = {
     },
   ],
 };
+if (typeof module !== "undefined" && module.exports) module.exports = config;
+else window.ZAIN = config;
+})();
