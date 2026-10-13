@@ -23,7 +23,9 @@
   async function cargar() {
     status('Consultando solicitudes…');
     const data=await call('lista',null,{offset:String(offset),q:$('#buscar').value,estado:$('#estadoFiltro').value});
+    const entrando=!$('#acceso').hidden;
     $('#acceso').hidden=true;$('#trabajo').hidden=false;$('#salir').hidden=false;
+    if(entrando)window.scrollTo({top:0,behavior:'auto'});
     $('#equipo').textContent=data.equipo.nombre||'EQUIPO ZAIN';
     $('#lista').innerHTML=data.pedidos.map(x=>`<button type="button" class="control__pedido" data-id="${esc(x.id)}" aria-current="${x.id===selected?.id}"><b class="num">${esc(x.folio)}</b><span>${esc(fecha(x.created_at))}</span><span>${esc(labels[x.estado])} · ${x.total} piezas</span></button>`).join('')||'<p>No hay solicitudes en esta búsqueda.</p>';
     $('#anterior').disabled=!offset;$('#siguiente').disabled=data.pedidos.length<50;$('#pagina').textContent='Página '+(offset/50+1);status('');

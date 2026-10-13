@@ -1,4 +1,5 @@
 .control { min-height: 100vh; --borde:var(--linea); --azul:var(--cobalto); }
+.control [hidden] { display:none !important; }
 .control .btn--azul { background:var(--cobalto);color:#fff; }
 .control__cab { display:flex; justify-content:space-between; align-items:center; padding:20px clamp(20px,5vw,64px); border-bottom:1px solid var(--tinta); }
 .control__cab > a { font-weight:800; font-size:26px; letter-spacing:-1px; }.control__cab span { font-weight:400;font-size:15px;letter-spacing:0;margin-left:12px;color:var(--tenue); }
