@@ -81,12 +81,14 @@
 
   /* --- prenda del color elegido --- */
   const tenidas = new Map();
-  function tenir(img, hex, S = 1000) {
-    const k = img.src + "|" + hex + "|" + S;
+  function tenir(img, hex, S = 1000, fotoColor = null) {
+    const k = img.src + "|" + hex + "|" + S + "|" + fotoColor;
     if (tenidas.has(k)) return tenidas.get(k);
     const c = lienzo(S);
     const g = ctx2(c);
-    if (!hex || hex.toLowerCase() === "#ffffff") {
+    // Las fotos del proveedor ya tienen color: conserva la original al elegirlo.
+    // Para las demás variantes (también blanco), aplica el mapa de sombras.
+    if (!hex || (fotoColor ? hex.toLowerCase() === fotoColor.toLowerCase() : hex.toLowerCase() === "#ffffff")) {
       g.drawImage(img, 0, 0, S, S); // «natural»: la foto tal cual
     } else {
       const { s, alfa } = mapaSombras(img, S);

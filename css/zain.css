@@ -266,6 +266,19 @@ p { margin: 0; }
 .producto[hidden] { display: none; }
 .producto__foto { position: relative; aspect-ratio: 1; max-width: 100%; border-radius: var(--radio); background: var(--mesa); overflow: hidden; }
 .producto__foto canvas { width: 100%; height: 100%; padding: 6%; opacity: 0; transition: opacity 400ms var(--sale), transform 600ms var(--sale); }
+.producto--grupo .producto__foto img { width: 100%; height: 100%; object-fit: contain; padding: 6%; transition: transform 600ms var(--sale); }
+.producto--grupo .producto__colores { color: var(--tenue); font-size: 14px; }
+.producto--grupo .producto__pie > span { color: var(--tenue); font-size: 14px; }
+.producto__medidas { display: grid; gap: 4px; padding: 8px 0; }
+.producto__medidas > b { font-size: 17px; }
+.producto__medidas > small, .producto__nota { font-size: 13px; line-height: 1.5; color: var(--tenue); }
+.producto__txt .producto__disponibilidad, .producto__info .producto__disponibilidad { margin: 0; color: var(--cobalto-txt); font-size: 14px; }
+.producto__info { font-size: 14px; margin-top: 10px; }
+.producto__info:empty { display: none; }
+.producto__info p { margin-block: 6px; }
+.catalogo__grupo { margin-bottom: 28px; }
+.catalogo__grupo[hidden], .filtros[hidden] { display: none; }
+@media (hover: hover) and (pointer: fine) { .producto--grupo:hover .producto__foto img { transform: scale(1.035); } }
 .producto.lista .producto__foto canvas { opacity: 1; }
 @media (hover: hover) and (pointer: fine) { .producto:hover .producto__foto canvas { transform: scale(1.035); } }
 .producto__mas {

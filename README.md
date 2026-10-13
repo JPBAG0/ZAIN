@@ -3,6 +3,7 @@
 Página para vender uniformes y artículos promocionales con logo (bordado, serigrafía y DTF).
 
 - **Catálogo** con filtros y vista de cada prenda en todos sus colores.
+- **Bolsas**: una entrada abre 13 modelos del catálogo 2026, con fotos del proveedor, medidas y colores por modelo. Se excluye Metálica. Cada modelo pide consultar disponibilidad; los colores del render son ilustrativos.
 - **Personalizador**: el cliente sube su logo (o escribe un texto), elige prenda, color, técnica, ubicación, tamaño en cm y piezas por talla, y ve el **render al momento**. Lo puede descargar.
 - **Pedido (carrito)**: junta varias prendas y lo **envía por WhatsApp** con productos, colores, tallas, cantidades y detalles de personalización. No hay pagos en línea: la venta se cierra por WhatsApp.
 - Funciona en celular y en compu. No necesita base de datos, ni instalar nada, ni compilar: son archivos estáticos.

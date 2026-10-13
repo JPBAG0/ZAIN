@@ -13,6 +13,13 @@
   const prod = (id) => C.productos.find((p) => p.id === id);
   const color = (id) => C.colores.find((c) => c.id === id);
   const tecnica = (id) => C.tecnicas.find((t) => t.id === id);
+  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
+  const medidasTexto = (p) => {
+    const d = p.dimensiones;
+    return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : "";
+  };
+  const fichaProducto = (p) => p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
+    <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
   const wa = (texto) => (C.whatsapp ? `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(texto)}` : "#contacto");
   const almacen = {
     leer(k, d) {
@@ -135,7 +142,7 @@
     { p: "gorra", c: "negro", t: "bordado", z: "frente", cm: 10, e: 0.66 },
     { p: "sudadera", c: "oxford", t: "dtf", z: "centro", cm: 20 },
     { p: "chamarra", c: "botella", t: "bordado", z: "pecho-izq", cm: 9 },
-    { p: "bolsa", c: "natural", t: "serigrafia", z: "frente", cm: 22, e: 0.9 },
+    { p: "bolsa-manta", c: "bolsa-manta-manta", t: "serigrafia", z: "frente", cm: 15, e: 0.9 },
     { p: "camisa", c: "blanco", t: "bordado", z: "pecho-izq", cm: 8 },
   ].filter((m) => prod(m.p) && color(m.c));
 
@@ -166,7 +173,7 @@
     const S = 640;
     const t = ZR.lienzo(S);
     const g = t.getContext("2d");
-    g.drawImage(ZR.tenir(img, col.hex, S), 0, 0);
+    g.drawImage(prendaTenida(p, img, pz.m.c, S), 0, 0);
     const zona = p.zonas.find((z) => z.id === pz.m.z) || p.zonas[0];
     const tinta = ZR.luz(ZR.hexARgb(col.hex)) > 0.55 ? "#141416" : "#f4f4f2";
     const k = S / 1000;
@@ -375,24 +382,59 @@
      ===================================================================== */
   const categorias = ["Todo", ...new Set(C.productos.map((p) => p.categoria))];
   let filtro = "Todo";
+  let grupo = location.hash === "#bolsas" ? "bolsas" : null;
+  const bolsas = C.productos.filter((p) => p.grupo === "bolsas");
+  const grupoBolsas = C.grupos.bolsas;
+  const abrirBolsas = () => {
+    grupo = "bolsas";
+    if (location.hash !== "#bolsas") location.hash = "bolsas";
+    pintarCatalogo();
+    $("#catalogo").scrollIntoView({ behavior: reducido ? "auto" : "smooth" });
+    $("#catTitulo").focus({ preventScroll: true });
+  };
+  function pintarCatalogo() {
+    $("#catalogoGrupo").hidden = !grupo;
+    $("#filtros").hidden = !!grupo;
+    $("#catTitulo").textContent = grupo ? grupoBolsas.nombre : "Catálogo";
+    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Arma tu pedido y solicita una cotización por WhatsApp.";
+    $$("#rejilla .producto").forEach((art) => {
+      const p = prod(art.dataset.id);
+      art.hidden = art.dataset.grupo ? !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
+        : grupo ? p.grupo !== grupo : p.grupo === "bolsas" || (filtro !== "Todo" && filtro !== p.categoria);
+    });
+  }
+  $("#volverCatalogo").addEventListener("click", () => {
+    grupo = null;
+    filtro = "Todo";
+    location.hash = "catalogo";
+    $$(".filtro").forEach((x) => { x.classList.toggle("on", x.dataset.cat === filtro); x.setAttribute("aria-selected", x.dataset.cat === filtro); });
+    pintarCatalogo();
+    $("[data-abrir-bolsas]").focus({ preventScroll: true });
+  });
+  addEventListener("hashchange", () => {
+    grupo = location.hash === "#bolsas" ? "bolsas" : null;
+    pintarCatalogo();
+    if (grupo) $("#catalogo").scrollIntoView({ behavior: reducido ? "auto" : "smooth" });
+  });
   $("#filtros").innerHTML = categorias
     .map((c) => `<button type="button" role="tab" class="filtro${c === filtro ? " on" : ""}" aria-selected="${c === filtro}" data-cat="${esc(c)}">${esc(c)}</button>`)
     .join("");
   $("#filtros").addEventListener("click", (e) => {
     const b = e.target.closest("[data-cat]");
     if (!b) return;
+    if (b.dataset.cat === "Bolsas") { abrirBolsas(); return; }
     filtro = b.dataset.cat;
     $$(".filtro").forEach((x) => {
       x.classList.toggle("on", x === b);
       x.setAttribute("aria-selected", x === b);
     });
-    $$(".producto").forEach((t) => (t.hidden = filtro !== "Todo" && t.dataset.cat !== filtro));
+    pintarCatalogo();
   });
 
   $("#rejilla").innerHTML = C.productos
     .map((p) => {
       const cols = p.colores.map(color).filter(Boolean);
-      return `<article class="producto" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}">
+      return `<article class="producto" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
         <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}" role="img"></canvas>
           <button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
         </div>
@@ -402,6 +444,7 @@
         <div class="producto__txt">
           <h3>${esc(p.nombre)}</h3>
           <p>${esc(p.descripcion)}</p>
+          ${fichaProducto(p)}
           <ul class="producto__tec">${p.tecnicas.map((t) => `<li>${esc(tecnica(t)?.nombre)}</li>`).join("")}</ul>
         </div>
         <div class="producto__pie">
@@ -410,7 +453,12 @@
         </div>
       </article>`;
     })
-    .join("");
+    .join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
+      <div class="producto__foto"><img src="${esc(grupoBolsas.foto)}" alt="Bolsas ecológicas del catálogo" width="1000" height="1000" loading="lazy" /></div>
+      <div class="producto__colores"><span>${bolsas.length} modelos</span></div>
+      <div class="producto__txt"><h3>${esc(grupoBolsas.nombre)}</h3><p>${esc(grupoBolsas.descripcion)}</p><p class="producto__disponibilidad">Consulta disponibilidad.</p></div>
+      <div class="producto__pie"><span>Modelos, medidas y colores</span><button class="btn btn--tinta btn--chico" type="button" data-abrir-bolsas>Ver bolsas</button></div>
+    </article>`;
 
   const pintarTarjeta = async (art, idColor) => {
     const p = prod(art.dataset.id);
@@ -418,7 +466,7 @@
     const img = await ZR.cargar(p.foto);
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
-    g.drawImage(ZR.tenir(img, color(idColor).hex, 560), 0, 0);
+    g.drawImage(prendaTenida(p, img, idColor, 560), 0, 0);
     if (art.classList.contains("lista")) {
       cv.classList.remove("cambia");
       void cv.offsetWidth;
@@ -432,13 +480,15 @@
     (ents) =>
       ents.forEach((en) => {
         if (!en.isIntersecting) return;
+        if (en.target.dataset.grupo) return;
         ioTarjetas.unobserve(en.target);
         pintarTarjeta(en.target, prod(en.target.dataset.id).colores[0]);
       }),
     { rootMargin: "300px" },
   );
-  $$(".producto").forEach((a) => ioTarjetas.observe(a));
+  $$(".producto[data-id]").forEach((a) => ioTarjetas.observe(a));
   $("#rejilla").addEventListener("click", (e) => {
+    if (e.target.closest("[data-abrir-bolsas]")) { abrirBolsas(); return; }
     const art = e.target.closest(".producto");
     if (!art) return;
     const punto = e.target.closest(".punto[data-color]");
@@ -459,6 +509,7 @@
       abrirEnTaller({ p: p.id, c: art.dataset.color || p.colores[0] });
     }
   });
+  pintarCatalogo();
 
   /* =====================================================================
      PERSONALIZADOR
@@ -497,9 +548,10 @@
     if (!p.tecnicas.includes(E.t)) E.t = p.tecnicas[0];
     if (!p.zonas.some((z) => z.id === E.z)) E.z = p.zonas[0].id;
 
-    $("#oPrenda").innerHTML = C.productos
+    $("#oPrenda").innerHTML = C.productos.filter((x) => p.grupo === "bolsas" ? x.grupo === "bolsas" : x.grupo !== "bolsas")
       .map((x) => `<button type="button" class="op op--prenda${x.id === E.p ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombre)}</span></button>`)
-      .join("");
+      .join("") + `<button type="button" class="op op--prenda" data-elegir-bolsas><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${p.grupo === "bolsas" ? "Ver catálogo" : "Bolsas"}</span></button>`;
+    $("#productoInfo").innerHTML = fichaProducto(p);
     $("#oColor").innerHTML = p.colores
       .map(color)
       .filter(Boolean)
@@ -631,7 +683,7 @@
       }
       transicion = false;
       lg.clearRect(0, 0, 1000, 1000);
-      lg.drawImage(ZR.tenir(img, color(E.c).hex, 1000), 0, 0);
+      lg.drawImage(prendaTenida(p, img, E.c, 1000), 0, 0);
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
@@ -661,6 +713,7 @@
   }
 
   $("#oPrenda").addEventListener("click", (e) => {
+    if (e.target.closest("[data-elegir-bolsas]")) { abrirBolsas(); return; }
     const b = e.target.closest("[data-p]");
     if (!b) return;
     E.p = b.dataset.p; transicion = true;
@@ -1021,13 +1074,14 @@
     const img = await ZR.cargar(p.foto);
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
-    g.drawImage(ZR.tenir(img, color(R.c).hex, 320), 0, 0);
+    g.drawImage(prendaTenida(p, img, R.c, 320), 0, 0);
   }
 
   function rPintar() {
     const p = prod(R.p);
     $("#rapNombre").textContent = p.nombre;
     $("#rapPrecio").textContent = "Cotización por WhatsApp";
+    $("#rapFicha").innerHTML = fichaProducto(p);
     $("#rapColorTxt").textContent = color(R.c).nombre;
     $("#rapColor").innerHTML = p.colores
       .map(color)
@@ -1155,6 +1209,8 @@
       id: Date.now().toString(36),
       p: p.id,
       nombre: p.nombre,
+      medidas: p.medidas || "",
+      detalleMedidas: medidasTexto(p),
       color: color(R.c).nombre,
       tecnica: t.nombre,
       zona: p.zonas.find((z) => z.id === R.z).nombre,
@@ -1202,6 +1258,8 @@
       id: Date.now().toString(36),
       p: p.id,
       nombre: p.nombre,
+      medidas: p.medidas || "",
+      detalleMedidas: medidasTexto(p),
       color: color(E.c).nombre,
       tecnica: t.nombre,
       zona: z.nombre + (E.dx || E.dy ? " (posición ajustada)" : ""),
@@ -1226,6 +1284,7 @@
   function mensajePedido() {
     const lineas = pedido.map((x, i) => {
       const r = [`${i + 1}) ${x.nombre} — ${x.color}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
+      if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
       r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
       r.push(`   Logo: ${x.logo}`);
       if (x.notas) r.push(`   Notas: ${x.notas}`);
@@ -1255,6 +1314,7 @@
           ${x.mini ? `<img src="${x.mini}" alt="" width="88" height="88" />` : `<span class="renglon__sin"></span>`}
           <div class="renglon__txt">
             <b>${esc(x.nombre)}</b>
+            ${x.medidas ? `<span class="num">${esc(x.medidas)}</span>` : ""}
             <span>${esc(x.color)} · ${esc(x.tecnica)} · ${esc(x.zona.toLowerCase())}</span>
             ${x.tallas ? `<span class="num">${esc(x.tallas)}</span>` : ""}
             <span>Logo: ${esc(x.logo)}</span>

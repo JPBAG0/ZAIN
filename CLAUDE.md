@@ -2,6 +2,16 @@
 
 # ZAIN — instrucciones para Claude Code
 
+## Bolsas: catálogo confirmado el 13-oct-2026
+
+- Fuente: PDF «1-BOLSAS CATÁLOGO 2026», páginas de producto 3–16. Se incluyen 13 modelos, excluyendo Metálica. Usa las páginas de producto; el índice tiene números desfasados.
+- Fotos originales extraídas del PDF con su transparencia, proporcionadas en un lienzo cuadrado. No sustituirlas por imágenes generadas. `fotoColor` identifica el tono original; el motor lo conserva y simula las otras variantes con el mapa de sombras.
+- Colores específicos de cada modelo y sus muestras del PDF. Market enumera 15 tonos aunque el encabezado dice 14; se conservan los 15 nombrados, incluido Lino.
+- Medidas: largo de base, altura, fuelle y altura con asas donde constan. Mezclilla se titula 38×45 y especifica fuelle de 8 cm: mostrar ambos datos.
+- Consulta de disponibilidad en cada modelo. Fotografías ilustrativas y colores sujetos a variación. Las piezas por bulto son información del proveedor, no el mínimo de venta de ZAIN.
+- La portada del catálogo muestra una sola entrada «Bolsas». Al entrar se muestran los modelos. El personalizador usa el mismo motor, colores y animaciones de las prendas existentes.
+- Serigrafía es la aplicación documentada. Colombia y Manta incluyen notas de sublimación del PDF; no añadir técnicas a otras bolsas sin confirmación.
+
 Página estática (HTML + CSS + JavaScript sin frameworks) de **ZAIN**: uniformes y artículos promocionales con logo (bordado, serigrafía, DTF). Responde al dueño **en español**.
 
 ## Cómo está hecha
