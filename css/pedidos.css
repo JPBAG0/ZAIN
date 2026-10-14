@@ -65,3 +65,4 @@
 .control__guardar{display:block}.control__guardar>div{justify-content:stretch}.control__guardar button{flex:1;padding:14px 16px}
 .control__subirfoto{font-size:12px;padding:10px}.control__fotocatalogo img{max-height:260px}
 }
+.control .control__publicar{display:flex;align-items:center;gap:10px}
