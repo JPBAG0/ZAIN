@@ -1,8 +1,15 @@
 > **Decisión vigente de JP:** catálogo de productos individuales y carrito personalizado sin precios ni importes de referencia. El cliente arma su selección y solicita la cotización por WhatsApp. JP está considerando paquetes separados con precio publicado; incorporarlos cuando confirme su alcance y costos. Cada producto nuevo se incorpora desde un PDF del proveedor, con modelo y colores confirmados por JP.
 
+## Condición vigente de Juan Pablo — 14-oct-2026
+
+Los seis modelos originales y sus imágenes se conservan intactos; las 13 bolsas también. Las 14 familias Yazbek se deben agregar, no reemplazar lo existente. Juan Pablo exige fidelidad muy alta al producto y pidió no publicar los renders si no se puede cumplir. Los 25 prototipos IA generados no permiten garantizar una réplica exacta desde fotografías con prendas vestidas/ocultas: NO se publicaron y se archivaron fuera del repositorio. No instalar la preparación anterior, no reactivar fotos con personas o esquemas, no presentar IA como foto oficial. Conseguir fotos de prendas solas del proveedor o muestras fotografiadas para continuar.
+
+Estado actual: GitHub `fd2863c`, Vercel success, catálogo original activo (6 prendas + 13 bolsas), API Edge versión 7 y 34 pruebas aprobadas. Datos Yazbek y solicitudes previas conservados. Documentado en Cerebro: `Catalogo ZAIN - prendas Yazbek` y `2026-10-14 ZAIN - originales restaurados y fidelidad del catalogo`.
+
+
 ## Correccion de JP: conservar originales y agregar prendas IA (13-oct-2026)
 
-JP rechazo sustituir sus modelos existentes por personas y esquemas. Las seis prendas originales y las bolsas se restablecen sin modificar sus imagenes. Las 14 familias Yazbek se incorporaran adicionalmente con mockups IA de prendas solas, blancos y transparentes, aptos para tintado y logo. No presentar un mockup IA como fotografia oficial ni replica exacta verificada. Mientras se generan, el catalogo publico original permanece activo; los datos Yazbek y solicitudes guardadas se conservan. Esta decision posterior prevalece sobre las secciones anteriores.
+JP rechazo sustituir sus modelos existentes por personas y esquemas. Las seis prendas originales y las bolsas se restablecen sin modificar sus imagenes. La intención inicial de sumar mockups IA queda condicionada por la exigencia posterior de fidelidad; no publicar los prototipos. No presentar un mockup IA como fotografia oficial ni replica exacta verificada. Mientras se generan, el catalogo publico original permanece activo; los datos Yazbek y solicitudes guardadas se conservan. Esta decision posterior prevalece sobre las secciones anteriores.
 
 
 ## Catálogo vigente de prendas — Yazbek, 13-oct-2026
