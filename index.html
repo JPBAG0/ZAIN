@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>ZAIN — Uniformes y artículos promocionales con tu logo</title>
-  <meta name="description" content="Playeras, polos, camisas, chamarras, gorras y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
+  <meta name="description" content="Playeras, polos, camisas, sudaderas y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
   <meta name="theme-color" content="#f3f3f1" />
   <meta property="og:title" content="ZAIN — Tu logo en todo lo que usa tu equipo" />
   <meta property="og:description" content="Uniformes y promocionales con bordado, serigrafía y DTF. Render al instante y pedido por WhatsApp." />
@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=15" />
+  <link rel="stylesheet" href="css/zain.css?v=16" />
   <link rel="stylesheet" href="css/privacidad.css?v=1" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
@@ -65,7 +65,7 @@
           <span class="linea"><span>en todo lo que</span></span>
           <span class="linea"><span>usa tu equipo.</span></span>
         </h1>
-        <p class="portada__lede">Playeras, polos, camisas, chamarras, gorras y bolsas con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
+        <p class="portada__lede">Playeras, polos, camisas, sudaderas y bolsas con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
         <div class="portada__acciones">
           <a class="btn btn--tinta" href="#personaliza">Personalizar ahora</a>
           <a class="btn btn--linea" href="#catalogo">Ver catálogo</a>
@@ -127,6 +127,7 @@
         <figure class="taller__lienzo">
           <canvas id="lienzo" width="1000" height="1000" aria-label="Vista previa de la prenda personalizada" role="img"></canvas>
           <canvas id="fantasma" class="taller__fantasma" width="1000" height="1000" aria-hidden="true"></canvas>
+          <p class="vista-orientativa" id="vistaOrientativa" hidden>Esquema orientativo · no fotografía. Color, tamaño y área de impresión se confirman al cotizar.</p>
           <div class="taller__regla" aria-hidden="true"><span id="reglaTxt" class="num">9.0 cm</span></div>
           <div class="mover" role="group" aria-label="Mover el logo">
             <button type="button" data-mover="arr" aria-label="Subir el logo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
@@ -149,6 +150,8 @@
             <legend>Prenda</legend>
             <div class="opciones opciones--prendas" id="oPrenda"></div>
             <label class="campo modelo-bolsa" id="modeloBolsaCampo" hidden><span>Modelo de bolsa</span><select id="modeloBolsa"></select></label>
+            <figure class="foto-referencia" id="fotoReferenciaEditor" hidden><img alt="" width="180" height="180" /><figcaption></figcaption></figure>
+            <div id="siluetaCampo" hidden></div>
             <div class="producto__info" id="productoInfo"></div>
           </fieldset>
 
@@ -275,13 +278,14 @@
     <!-- ===================== EMPRESAS ===================== -->
     <section class="empresas" aria-labelledby="empTitulo">
       <figure class="empresas__foto">
-        <img src="img/fotos/hero.webp" alt="Polos, playeras, gorra y bolsa personalizadas sobre una mesa de taller con bastidor de bordado e hilos" loading="lazy" width="1120" height="1400" />
+        <img src="img/fotos/hero.webp" alt="Imagen ilustrativa de personalización sobre una mesa de taller" loading="lazy" width="1120" height="1400" />
+        <figcaption class="producto__nota">Imagen ilustrativa de personalización.</figcaption>
       </figure>
       <div class="empresas__texto">
         <h2 id="empTitulo">Para empresas que cuidan su imagen</h2>
         <ul class="empresas__usos">
           <li><b>Uniformes corporativos</b><span>Oficina, piso de venta, planta y campo.</span></li>
-          <li><b>Kits de bienvenida</b><span>Playera, gorra, bolsa y termo con tu marca.</span></li>
+          <li><b>Kits de bienvenida</b><span>Playera y bolsa con tu marca.</span></li>
           <li><b>Eventos y ferias</b><span>Merch para stands, congresos y activaciones.</span></li>
           <li><b>Equipos y escuelas</b><span>Generaciones, torneos y clubes.</span></li>
         </ul>
@@ -343,6 +347,7 @@
           <canvas id="rapFoto" width="320" height="320" aria-hidden="true"></canvas>
           <div><b id="rapNombre"></b><span id="rapPrecio" class="num"></span></div>
         </div>
+        <div id="rapSilueta" hidden></div>
         <div class="producto__info" id="rapFicha"></div>
         <fieldset class="paso">
           <legend>Color <span class="paso__valor" id="rapColorTxt"></span></legend>
@@ -407,12 +412,12 @@
     <p>Puedes cotizar con cualquiera de las dos opciones y cambiar tu elección desde el pie de página. <a href="/privacidad">Aviso de privacidad</a>.</p>
     <div class="medicion__acciones"><button class="btn btn--linea" type="button" id="medicionRechazar">Solo necesarias</button><button class="btn btn--tinta" type="button" id="medicionPermitir">Permitir medición</button></div>
   </section>
-  <script src="js/config.js?v=9"></script>
+  <script src="js/config.js?v=10"></script>
   <script src="js/medicion.js?v=1"></script>
   <script src="js/render.js?v=3"></script>
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=4"></script>
-  <script src="js/zain.js?v=19"></script>
+  <script src="js/zain.js?v=20"></script>
 </body>
 </html>

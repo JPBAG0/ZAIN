@@ -885,6 +885,2568 @@ const config = {
     },
   ],
 };
+// Catálogo Yazbek verificado: fotos reales y esquemas orientativos separados.
+const yazbek = {
+  "version": "yazbek-2026-10-13",
+  "colores": [
+    {
+      "id": "yazbek-415",
+      "nombre": "Negro",
+      "codigo": "415",
+      "hex": "#292829",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-414",
+      "nombre": "Marino",
+      "codigo": "414",
+      "hex": "#242d3f",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-100",
+      "nombre": "Blanco",
+      "codigo": "100",
+      "hex": "#ebebeb",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-102",
+      "nombre": "Gris Jaspe",
+      "codigo": "102",
+      "hex": "#c7c6c6",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-421",
+      "nombre": "Royal",
+      "codigo": "421",
+      "hex": "#263c76",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-413",
+      "nombre": "Rojo",
+      "codigo": "413",
+      "hex": "#a82b27",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-420",
+      "nombre": "Jade",
+      "codigo": "420",
+      "hex": "#296d46",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-426",
+      "nombre": "Gris",
+      "codigo": "426",
+      "hex": "#494949",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-700",
+      "nombre": "Blanco",
+      "codigo": "700",
+      "hex": "#f0f0f1",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-701",
+      "nombre": "Azul Cielo",
+      "codigo": "701",
+      "hex": "#b1c8da",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-703",
+      "nombre": "Gris",
+      "codigo": "703",
+      "hex": "#9fa1ae",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-704",
+      "nombre": "Cobalto",
+      "codigo": "704",
+      "hex": "#7789bb",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-705",
+      "nombre": "Rosa",
+      "codigo": "705",
+      "hex": "#f0d0df",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-200",
+      "nombre": "Beige",
+      "codigo": "200",
+      "hex": "#aaa588",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-213",
+      "nombre": "Azul Francia",
+      "codigo": "213",
+      "hex": "#3063a5",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-425",
+      "nombre": "Vino",
+      "codigo": "425",
+      "hex": "#4c0f14",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-652",
+      "nombre": "Índigo Claro",
+      "codigo": "652",
+      "hex": "#425677",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-230",
+      "nombre": "Arena",
+      "codigo": "230",
+      "hex": "#eddab9",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-427",
+      "nombre": "Verde Bosque",
+      "codigo": "427",
+      "hex": "#353a26",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    },
+    {
+      "id": "yazbek-2415",
+      "nombre": "Negro Jaspe",
+      "codigo": "2415",
+      "hex": "#474c4f",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+    }
+  ],
+  "productos": [
+    {
+      "id": "yazbek-c0550",
+      "nombre": "Polo piqué manga corta · Caballero (C0550)",
+      "nombreFamilia": "Polo piqué manga corta",
+      "familia": "yazbek-pique",
+      "codigoFabricante": "C0550",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Polos",
+      "descripcion": "Uniformes de atención al público y equipos comerciales.",
+      "gramaje": 225,
+      "tejido": "Piqué",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0550.webp",
+      "fotoReferenciaColor": "Fucsia · 322",
+      "esquema": "img/productos/yazbek/polo-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413",
+        "yazbek-420"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 53.3,
+          "largo": 73
+        },
+        "G": {
+          "ancho": 58.4,
+          "largo": 75.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 78.1
+        },
+        "EEG": {
+          "ancho": 68.6,
+          "largo": 80.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.3356,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 20,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 20,
+        "objeto": "20-Im0",
+        "recorte": [
+          0,
+          0,
+          635,
+          922
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0550",
+      "nombre": "Polo piqué manga corta · Dama (D0550)",
+      "nombreFamilia": "Polo piqué manga corta",
+      "familia": "yazbek-pique",
+      "codigoFabricante": "D0550",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Polos",
+      "descripcion": "Uniformes de atención al público y equipos comerciales.",
+      "gramaje": 225,
+      "tejido": "Piqué",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0550.webp",
+      "fotoReferenciaColor": "Marrón · 424",
+      "esquema": "img/productos/yazbek/polo-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413",
+        "yazbek-420"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 43.2,
+          "largo": 64.1
+        },
+        "M": {
+          "ancho": 47.6,
+          "largo": 66.7
+        },
+        "G": {
+          "ancho": 52.1,
+          "largo": 69.2
+        },
+        "EG": {
+          "ancho": 56.5,
+          "largo": 71.8
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.1017,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 20,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 20,
+        "objeto": "20-Im0",
+        "recorte": [
+          635,
+          0,
+          1283,
+          922
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0605",
+      "nombre": "Camisa Oxford manga larga · Caballero (C0605)",
+      "nombreFamilia": "Camisa Oxford manga larga",
+      "familia": "yazbek-oxford-larga",
+      "codigoFabricante": "C0605",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Camisas",
+      "descripcion": "Una opción de oficina y representación comercial.",
+      "gramaje": 155,
+      "tejido": "Oxford",
+      "composicion": "75% algodón / 25% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0605.webp",
+      "fotoReferenciaColor": "Gris · 703",
+      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-700",
+        "yazbek-701",
+        "yazbek-703",
+        "yazbek-704",
+        "yazbek-705"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 54.6,
+          "largo": 76.2
+        },
+        "M": {
+          "ancho": 57.2,
+          "largo": 78.7
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 82.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 85.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 87.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 40,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 40,
+        "objeto": "40-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0605",
+      "nombre": "Camisa Oxford manga larga · Dama (D0605)",
+      "nombreFamilia": "Camisa Oxford manga larga",
+      "familia": "yazbek-oxford-larga",
+      "codigoFabricante": "D0605",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Camisas",
+      "descripcion": "Una opción de oficina y representación comercial.",
+      "gramaje": 155,
+      "tejido": "Oxford",
+      "composicion": "75% algodón / 25% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0605.webp",
+      "fotoReferenciaColor": "Rosa · 705",
+      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-700",
+        "yazbek-701",
+        "yazbek-703",
+        "yazbek-704",
+        "yazbek-705"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 64.8
+        },
+        "G": {
+          "ancho": 53.3,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 67.3
+        },
+        "EEG": {
+          "ancho": 58.4,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.9418,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 40,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 40,
+        "objeto": "40-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0200",
+      "nombre": "Playera básica 155 g · Caballero (C0200)",
+      "nombreFamilia": "Playera básica 155 g",
+      "familia": "yazbek-basica",
+      "codigoFabricante": "C0200",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Playeras",
+      "descripcion": "Para eventos y promociones; tejido de menor gramaje.",
+      "gramaje": 155,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek/c0200.webp",
+      "fotoReferenciaColor": "Caribe · 220",
+      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG",
+        "EEEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 45.7,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 73
+        },
+        "G": {
+          "ancho": 55.9,
+          "largo": 75.6
+        },
+        "EG": {
+          "ancho": 61,
+          "largo": 78.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 80.6
+        },
+        "EEEG": {
+          "ancho": 71.1,
+          "largo": 83.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.619,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 6,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 6,
+        "objeto": "06-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0200",
+      "nombre": "Playera básica 155 g · Dama (D0200)",
+      "nombreFamilia": "Playera básica 155 g",
+      "familia": "yazbek-basica",
+      "codigoFabricante": "D0200",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Playeras",
+      "descripcion": "Para eventos y promociones; tejido de menor gramaje.",
+      "gramaje": 155,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek/d0200.webp",
+      "fotoReferenciaColor": "Lavanda · 229",
+      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 43.2,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 45.7,
+          "largo": 66
+        },
+        "G": {
+          "ancho": 50.8,
+          "largo": 68.6
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 71.1
+        },
+        "EEG": {
+          "ancho": 61,
+          "largo": 73.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.2835,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 6,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 6,
+        "objeto": "06-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0300",
+      "nombre": "Playera peso completo 195 g · Caballero (C0300)",
+      "nombreFamilia": "Playera peso completo 195 g",
+      "familia": "yazbek-completa",
+      "codigoFabricante": "C0300",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Playeras",
+      "descripcion": "Más gramaje que la básica para elegir según el uso de tu equipo.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek/c0300.webp",
+      "fotoReferenciaColor": "Aqua · 231",
+      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413",
+        "yazbek-420"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG",
+        "EEEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 45.7,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 73
+        },
+        "G": {
+          "ancho": 55.9,
+          "largo": 75.6
+        },
+        "EG": {
+          "ancho": 61,
+          "largo": 78.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 80.6
+        },
+        "EEEG": {
+          "ancho": 71.1,
+          "largo": 83.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.619,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 10,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 10,
+        "objeto": "10-Im0",
+        "recorte": [
+          280,
+          0,
+          1000,
+          921
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0300",
+      "nombre": "Playera peso completo 195 g · Dama (D0300)",
+      "nombreFamilia": "Playera peso completo 195 g",
+      "familia": "yazbek-completa",
+      "codigoFabricante": "D0300",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Playeras",
+      "descripcion": "Más gramaje que la básica para elegir según el uso de tu equipo.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek/d0300.webp",
+      "fotoReferenciaColor": "Coral · 234",
+      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-102",
+        "yazbek-421",
+        "yazbek-413",
+        "yazbek-420"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 41.3,
+          "largo": 59.7
+        },
+        "M": {
+          "ancho": 43.8,
+          "largo": 62.2
+        },
+        "G": {
+          "ancho": 48.9,
+          "largo": 64.8
+        },
+        "EG": {
+          "ancho": 54,
+          "largo": 67.3
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.5665,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 11,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 10,
+        "objeto": "11-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0606",
+      "nombre": "Camisa gabardina manga corta · Caballero (C0606)",
+      "nombreFamilia": "Camisa gabardina manga corta",
+      "familia": "yazbek-gabardina-corta",
+      "codigoFabricante": "C0606",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Camisas",
+      "descripcion": "Para comercios y personal operativo; versión de manga corta.",
+      "gramaje": 160,
+      "tejido": "Gabardina",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0606.webp",
+      "fotoReferenciaColor": "Azul Francia · 213",
+      "esquema": "img/productos/yazbek/camisa-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-200",
+        "yazbek-213",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 54.6,
+          "largo": 76.2
+        },
+        "M": {
+          "ancho": 57.2,
+          "largo": 78.7
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 82.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 85.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 87.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 41,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 41,
+        "objeto": "41-Im0",
+        "recorte": [
+          0,
+          0,
+          635,
+          922
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0606",
+      "nombre": "Camisa gabardina manga corta · Dama (D0606)",
+      "nombreFamilia": "Camisa gabardina manga corta",
+      "familia": "yazbek-gabardina-corta",
+      "codigoFabricante": "D0606",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Camisas",
+      "descripcion": "Para comercios y personal operativo; versión de manga corta.",
+      "gramaje": 160,
+      "tejido": "Gabardina",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0606.webp",
+      "fotoReferenciaColor": "Beige · 200",
+      "esquema": "img/productos/yazbek/camisa-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100",
+        "yazbek-200",
+        "yazbek-213",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 64.8
+        },
+        "G": {
+          "ancho": 53.3,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 67.3
+        },
+        "EEG": {
+          "ancho": 58.4,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.9418,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 41,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 41,
+        "objeto": "41-Im0",
+        "recorte": [
+          635,
+          0,
+          1283,
+          922
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0607",
+      "nombre": "Camisa gabardina manga larga · Caballero (C0607)",
+      "nombreFamilia": "Camisa gabardina manga larga",
+      "familia": "yazbek-gabardina-larga",
+      "codigoFabricante": "C0607",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Camisas",
+      "descripcion": "Alternativa de manga larga para operaciones y supervisión.",
+      "gramaje": 160,
+      "tejido": "Gabardina",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0607.webp",
+      "fotoReferenciaColor": "Marino · 414",
+      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-200",
+        "yazbek-213",
+        "yazbek-425",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 54.6,
+          "largo": 76.2
+        },
+        "M": {
+          "ancho": 57.2,
+          "largo": 78.7
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 82.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 85.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 87.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 42,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 42,
+        "objeto": "42-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0607",
+      "nombre": "Camisa gabardina manga larga · Dama (D0607)",
+      "nombreFamilia": "Camisa gabardina manga larga",
+      "familia": "yazbek-gabardina-larga",
+      "codigoFabricante": "D0607",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Camisas",
+      "descripcion": "Alternativa de manga larga para operaciones y supervisión.",
+      "gramaje": 160,
+      "tejido": "Gabardina",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0607.webp",
+      "fotoReferenciaColor": "Gris · 426",
+      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-200",
+        "yazbek-213",
+        "yazbek-425",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 64.8
+        },
+        "G": {
+          "ancho": 53.3,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 67.3
+        },
+        "EEG": {
+          "ancho": 58.4,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.9418,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 42,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 42,
+        "objeto": "42-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0604",
+      "nombre": "Camisa Oxford manga corta · Caballero (C0604)",
+      "nombreFamilia": "Camisa Oxford manga corta",
+      "familia": "yazbek-oxford-corta",
+      "codigoFabricante": "C0604",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Camisas",
+      "descripcion": "Para oficina y atención al público con manga corta.",
+      "gramaje": 155,
+      "tejido": "Oxford",
+      "composicion": "75% algodón / 25% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0604.webp",
+      "fotoReferenciaColor": "Azul Cielo · 701",
+      "esquema": "img/productos/yazbek/camisa-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-700",
+        "yazbek-701"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 54.6,
+          "largo": 76.2
+        },
+        "M": {
+          "ancho": 57.2,
+          "largo": 78.7
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 82.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 85.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 87.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 39,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 39,
+        "objeto": "39-Im0",
+        "recorte": [
+          0,
+          0,
+          520,
+          772
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0604",
+      "nombre": "Camisa Oxford manga corta · Dama (D0604)",
+      "nombreFamilia": "Camisa Oxford manga corta",
+      "familia": "yazbek-oxford-corta",
+      "codigoFabricante": "D0604",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Camisas",
+      "descripcion": "Para oficina y atención al público con manga corta.",
+      "gramaje": 155,
+      "tejido": "Oxford",
+      "composicion": "75% algodón / 25% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0604.webp",
+      "fotoReferenciaColor": "Blanco · 700",
+      "esquema": "img/productos/yazbek/camisa-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-700",
+        "yazbek-701"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 64.8
+        },
+        "G": {
+          "ancho": 53.3,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 67.3
+        },
+        "EEG": {
+          "ancho": 58.4,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.9418,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 39,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 39,
+        "objeto": "39-Im0",
+        "recorte": [
+          425,
+          0,
+          900,
+          772
+        ],
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c1502",
+      "nombre": "Polo ActiviTee manga corta · Caballero (C1502)",
+      "nombreFamilia": "Polo ActiviTee manga corta",
+      "familia": "yazbek-activa-polo",
+      "codigoFabricante": "C1502",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Polos",
+      "descripcion": "Tejido ligero para equipos con trabajo activo.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c1502.webp",
+      "fotoReferenciaColor": "Royal · 421",
+      "esquema": "img/productos/yazbek/polo-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 53.3,
+          "largo": 73
+        },
+        "G": {
+          "ancho": 58.4,
+          "largo": 75.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 78.1
+        },
+        "EEG": {
+          "ancho": 68.6,
+          "largo": 80.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.3356,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 27,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 27,
+        "objeto": "27-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d1502",
+      "nombre": "Polo ActiviTee manga corta · Dama (D1502)",
+      "nombreFamilia": "Polo ActiviTee manga corta",
+      "familia": "yazbek-activa-polo",
+      "codigoFabricante": "D1502",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Polos",
+      "descripcion": "Tejido ligero para equipos con trabajo activo.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d1502.webp",
+      "fotoReferenciaColor": "Rojo · 413",
+      "esquema": "img/productos/yazbek/polo-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 43.2,
+          "largo": 64.1
+        },
+        "M": {
+          "ancho": 47.6,
+          "largo": 66.7
+        },
+        "G": {
+          "ancho": 52.1,
+          "largo": 69.2
+        },
+        "EG": {
+          "ancho": 56.5,
+          "largo": 71.8
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.1017,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 27,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 27,
+        "objeto": "27-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c1302",
+      "nombre": "Playera ActiviTee manga corta · Caballero (C1302)",
+      "nombreFamilia": "Playera ActiviTee manga corta",
+      "familia": "yazbek-activa-playera",
+      "codigoFabricante": "C1302",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Playeras",
+      "descripcion": "Una alternativa ligera de poliéster para eventos y equipos.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c1302.webp",
+      "fotoReferenciaColor": "Gris · 426",
+      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 45.7,
+          "largo": 68.6
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 71.1
+        },
+        "G": {
+          "ancho": 55.9,
+          "largo": 73.7
+        },
+        "EG": {
+          "ancho": 61,
+          "largo": 76.2
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 78.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.619,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 24,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 24,
+        "objeto": "24-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d1302",
+      "nombre": "Playera ActiviTee manga corta · Dama (D1302)",
+      "nombreFamilia": "Playera ActiviTee manga corta",
+      "familia": "yazbek-activa-playera",
+      "codigoFabricante": "D1302",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Playeras",
+      "descripcion": "Una alternativa ligera de poliéster para eventos y equipos.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d1302.webp",
+      "fotoReferenciaColor": "Negro · 415",
+      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-426",
+        "yazbek-100",
+        "yazbek-421",
+        "yazbek-413"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 42.5,
+          "largo": 61
+        },
+        "M": {
+          "ancho": 46.4,
+          "largo": 63.5
+        },
+        "G": {
+          "ancho": 50.2,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 54,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.3705,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 24,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 24,
+        "objeto": "24-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0702",
+      "nombre": "Sudadera con capucha y cierre · Adultos (C0702)",
+      "nombreFamilia": "Sudadera con capucha y cierre",
+      "familia": "yazbek-sudadera-cierre",
+      "codigoFabricante": "C0702",
+      "fabricante": "Yazbek",
+      "silueta": "Adultos",
+      "categoria": "Sudaderas",
+      "descripcion": "Capucha, cangurera y cierre completo para uniforme casual.",
+      "gramaje": 275,
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0702.webp",
+      "fotoReferenciaColor": "Negro Jaspe · 2415",
+      "esquema": "img/productos/yazbek/sudadera-cierre-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-102",
+        "yazbek-2415"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 49.5,
+          "largo": 68.6
+        },
+        "M": {
+          "ancho": 54.6,
+          "largo": 71.1
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 73.7
+        },
+        "EG": {
+          "ancho": 64.8,
+          "largo": 76.2
+        },
+        "EEG": {
+          "ancho": 69.9,
+          "largo": 78.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 3.2
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 31,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 31,
+        "objeto": "31-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0601",
+      "nombre": "Camisa mezclilla manga larga · Caballero (C0601)",
+      "nombreFamilia": "Camisa mezclilla manga larga",
+      "familia": "yazbek-mezclilla",
+      "codigoFabricante": "C0601",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Camisas",
+      "descripcion": "Para equipos que buscan una presentación casual.",
+      "gramaje": 255,
+      "tejido": "Mezclilla",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0601.webp",
+      "fotoReferenciaColor": "Índigo Claro · 652",
+      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-652"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 54.6,
+          "largo": 76.2
+        },
+        "M": {
+          "ancho": 57.2,
+          "largo": 78.7
+        },
+        "G": {
+          "ancho": 59.7,
+          "largo": 82.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 85.1
+        },
+        "EEG": {
+          "ancho": 66,
+          "largo": 87.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.1977,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 36,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 36,
+        "objeto": "36-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d0601",
+      "nombre": "Camisa mezclilla manga larga · Dama (D0601)",
+      "nombreFamilia": "Camisa mezclilla manga larga",
+      "familia": "yazbek-mezclilla",
+      "codigoFabricante": "D0601",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Camisas",
+      "descripcion": "Para equipos que buscan una presentación casual.",
+      "gramaje": 255,
+      "tejido": "Mezclilla",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d0601.webp",
+      "fotoReferenciaColor": "Índigo Claro · 652",
+      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-652"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 64.8
+        },
+        "G": {
+          "ancho": 53.3,
+          "largo": 66
+        },
+        "EG": {
+          "ancho": 55.9,
+          "largo": 67.3
+        },
+        "EEG": {
+          "ancho": 58.4,
+          "largo": 68.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.3,
+        "largo": 1.3
+      },
+      "pxPorCm": 6.9418,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 36,
+        "tablaTallas": 45,
+        "matrizColor": 48,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 36,
+        "objeto": "36-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0701",
+      "nombre": "Sudadera con capucha y cangurera · Adultos (C0701)",
+      "nombreFamilia": "Sudadera con capucha y cangurera",
+      "familia": "yazbek-sudadera-capucha",
+      "codigoFabricante": "C0701",
+      "fabricante": "Yazbek",
+      "silueta": "Adultos",
+      "categoria": "Sudaderas",
+      "descripcion": "Una opción casual para equipos y artículos de marca.",
+      "gramaje": 275,
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0701.webp",
+      "fotoReferenciaColor": "Arena · 230",
+      "esquema": "img/productos/yazbek/sudadera-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-102",
+        "yazbek-230",
+        "yazbek-427"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 50.8,
+          "largo": 68.6
+        },
+        "M": {
+          "ancho": 55.9,
+          "largo": 71.1
+        },
+        "G": {
+          "ancho": 61,
+          "largo": 73.7
+        },
+        "EG": {
+          "ancho": 66,
+          "largo": 76.2
+        },
+        "EEG": {
+          "ancho": 71.1,
+          "largo": 78.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 3.2
+      },
+      "pxPorCm": 6.0656,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 30,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 30,
+        "objeto": "30-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c0703",
+      "nombre": "Sudadera con ¼ de cierre · Adultos (C0703)",
+      "nombreFamilia": "Sudadera con ¼ de cierre",
+      "familia": "yazbek-sudadera-cuarto",
+      "codigoFabricante": "C0703",
+      "fabricante": "Yazbek",
+      "silueta": "Adultos",
+      "categoria": "Sudaderas",
+      "descripcion": "Cuello y cierre corto; alternativa sin capucha.",
+      "gramaje": 275,
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c0703.webp",
+      "fotoReferenciaColor": "Marino · 414",
+      "esquema": "img/productos/yazbek/sudadera-cuarto-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-2415"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 50.8,
+          "largo": 71.8
+        },
+        "M": {
+          "ancho": 55.9,
+          "largo": 74.3
+        },
+        "G": {
+          "ancho": 61,
+          "largo": 76.8
+        },
+        "EG": {
+          "ancho": 66,
+          "largo": 79.4
+        },
+        "EEG": {
+          "ancho": 71.1,
+          "largo": 82
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 3.2
+      },
+      "pxPorCm": 6.0656,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 31,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 31,
+        "objeto": "31-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-c1504",
+      "nombre": "Polo ActiviTee manga larga · Caballero (C1504)",
+      "nombreFamilia": "Polo ActiviTee manga larga",
+      "familia": "yazbek-activa-polo-larga",
+      "codigoFabricante": "C1504",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Polos",
+      "descripcion": "Complemento de manga larga para uniformes ligeros.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/c1504.webp",
+      "fotoReferenciaColor": "Marino · 414",
+      "esquema": "img/productos/yazbek/polo-larga-recta.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG",
+        "EEG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 48.3,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 53.3,
+          "largo": 73
+        },
+        "G": {
+          "ancho": 58.4,
+          "largo": 75.6
+        },
+        "EG": {
+          "ancho": 63.5,
+          "largo": 78.1
+        },
+        "EEG": {
+          "ancho": 68.6,
+          "largo": 80.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 6.3356,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 28,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 28,
+        "objeto": "28-Im1",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    },
+    {
+      "id": "yazbek-d1504",
+      "nombre": "Polo ActiviTee manga larga · Dama (D1504)",
+      "nombreFamilia": "Polo ActiviTee manga larga",
+      "familia": "yazbek-activa-polo-larga",
+      "codigoFabricante": "D1504",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Polos",
+      "descripcion": "Complemento de manga larga para uniformes ligeros.",
+      "gramaje": 150,
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek/d1504.webp",
+      "fotoReferenciaColor": "Blanco · 100",
+      "esquema": "img/productos/yazbek/polo-larga-dama.svg",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-414",
+        "yazbek-100"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "EG"
+      ],
+      "tablaTallas": {
+        "CH": {
+          "ancho": 43.2,
+          "largo": 64.1
+        },
+        "M": {
+          "ancho": 47.6,
+          "largo": 66.7
+        },
+        "G": {
+          "ancho": 52.1,
+          "largo": 69.2
+        },
+        "EG": {
+          "ancho": 56.5,
+          "largo": 71.8
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.1017,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 365,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 430,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 28,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "pagina": 28,
+        "objeto": "28-Im0",
+        "recorte": null,
+        "alteracionColor": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+    }
+  ]
+};
+config.productosHistoricos = config.productos.filter(p => p.grupo !== "bolsas");
+config.catalogoVersion = yazbek.version;
+config.colores.push(...yazbek.colores);
+config.productos = [...yazbek.productos, ...config.productos.filter(p => p.grupo === "bolsas")];
 if (typeof module !== "undefined" && module.exports) module.exports = config;
 else window.ZAIN = config;
 })();

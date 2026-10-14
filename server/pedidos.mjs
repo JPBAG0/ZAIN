@@ -12,17 +12,37 @@ const equal = (a,b) => typeof a === 'string' && typeof b === 'string' && a.lengt
 const validateID = id => { if (!UUID.test(id || '')) fail(400,'Folio inválido.'); return id; };
 const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(403,'No se pudo verificar esta solicitud.'); return sha(token); };
 
-export function validateOrder(body) {
+export function validateOrder(body, { allowHistoricos = false } = {}) {
   if (!body || typeof body!=='object' || Array.isArray(body)) fail(400,'Falta el pedido.');
   validateID(body.id); validateToken(body.token);
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
-    const p = C.productos.find(p=>p.id===x.p);
+    if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
+    const p = C.productos.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
     const n = Number(x.piezas);
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
-    if (!p.colores.map(id=>C.colores.find(c=>c.id===id)?.nombre).includes(x.color)) fail(400,'Color de producto inválido.');
+    const colors=p.colores.map(id=>C.colores.find(c=>c.id===id));
+    if (!colors.some(c=>c?.nombre===x.color)) fail(400,'Color de producto inválido.');
     if (!p.tecnicas.map(id=>C.tecnicas.find(t=>t.id===id)?.nombre).includes(x.tecnica)) fail(400,'Técnica inválida.');
-    return { indice:i,p:p.id,nombre:p.nombre,color:x.color,tecnica:x.tecnica,piezas:n,medidas:p.medidas||'',detalleMedidas:text(x.detalleMedidas,500),zona:text(x.zona,120),cm:Number.isFinite(x.cm)?Math.max(0,Math.min(200,x.cm)):0,tallas:text(x.tallas,500),tallasEtq:text(x.tallasEtq,80),logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender };
+    const item={ indice:i,p:p.id,nombre:p.nombre,color:x.color,tecnica:x.tecnica,piezas:n,medidas:p.medidas||'',detalleMedidas:text(x.detalleMedidas,500),zona:text(x.zona,120),cm:Number.isFinite(x.cm)?Math.max(0,Math.min(200,x.cm)):0,tallas:text(x.tallas,500),tallasEtq:text(x.tallasEtq,80),logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender };
+    if(p.fabricante) {
+      const col=colors.find(c=>c?.codigo===x.colorCodigo && c.nombre===x.color);
+      if(!col)fail(400,'Código de color inválido para este modelo.');
+      const counts=x.tallasDetalle;
+      if(!counts || typeof counts!=='object' || Array.isArray(counts) || !Object.keys(counts).length || Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1||v>9999) || Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma para la silueta elegida.');
+      const zone=p.zonas.find(z=>z.nombre===(typeof x.zona==='string'?x.zona.replace(/ \(posición ajustada\)$/,''):''));
+      if(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>zone.max)fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
+      Object.assign(item,{
+        codigoFabricante:p.codigoFabricante,fabricante:p.fabricante,silueta:p.silueta,
+        color:col.nombre+' · '+col.codigo,colorCodigo:col.codigo,
+        tallasDetalle:Object.fromEntries(p.tallas.filter(t=>counts[t]).map(t=>[t,counts[t]])),
+        tallas:p.tallas.filter(t=>counts[t]).map(t=>t+' '+counts[t]).join(' · '),tallasEtq:'Tallas',
+        gramaje:p.gramaje,tejido:p.tejido,composicion:p.composicionColor[col.codigo]||p.composicion,
+        fuente:p.fuente,renderOrientativo:p.renderOrientativo,
+        detalleMedidas:'Medidas por talla: ancho plano y largo según la guía Yazbek. No es un área de impresión.',
+      });
+    }
+    return item;
   });
   const files = body.files || [];
   if (!Array.isArray(files) || files.length>40) fail(400,'Revisa los archivos del pedido.');
@@ -92,7 +112,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return x;
   };
   const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
-    items:x.items.map(p=>Object.fromEntries(['indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas'].map(k=>[k,p[k]]))),
+    items:x.items.map(p=>Object.fromEntries(['indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','codigoFabricante','fabricante','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
   const signedFile=async(x,b)=>{
     if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
@@ -117,7 +137,13 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='POST'&&['crear','subidas','finalizar'].includes(op)) {
         const body=await jsonBody(request);
         if(op==='crear') {
-          const x=validateOrder(body);
+          // El catálogo retirado solo puede reintentarse en un folio ya registrado
+          // y con su secreto de carga. La RPC conserva la igualdad del contenido.
+          const historical=Array.isArray(body.items)&&body.items.some(x=>C.productosHistoricos?.some(p=>p.id===x?.p));
+          if(historical) {
+            try{await owner(body);}catch(e){if(e.status===404)fail(400,'Esta selección pertenece al catálogo anterior. Elige una referencia del catálogo actual; tus archivos siguen guardados.');throw e;}
+          }
+          const x=validateOrder(body,{allowHistoricos:historical});
           const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
           const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');
           const result=await sb('/rest/v1/rpc/zain_crear_pedido',{method:'POST',body:JSON.stringify({p_id:body.id,p_token_hash:validateToken(body.token),p_items:x.items,p_archivos:x.manifest,p_total:x.total,p_bytes:x.bytes,p_capacity:Math.min(Number(env.ZAIN_CAPACITY_MB)||800,100000)*1024*1024,p_client:client})});
