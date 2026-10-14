@@ -61,7 +61,7 @@ Archivos principales: `js/config.js`, `js/zain.js`, `index.html`, `css/zain.css`
 
 - `node --test tests/*.test.mjs`: **34 pruebas aprobadas**, incluidas **614 combinaciones modelo/color/talla**; variantes inválidas, composición gris jaspe, mínimos de bolsas, autorización y compatibilidad histórica. Pruebas de medición existentes permanecen aprobadas/desactivadas.
 - Navegador: fotografía permanece igual al cambiar color; selector cambia código/tallas; cantidades se reinician al cambiar silueta; Expo carga en el editor con min=100/step=50; escritorio 1280×800 y móvil 390×844, sin desbordamiento.
-- **Supabase Edge `zain-pedidos` versión 5, ACTIVE**, desplegada independientemente del push de GitHub. Catálogo y handler regenerados desde la misma fuente. Conserva verificación de permisos propia; no cambia RLS, tablas ni bucket.
+- **Supabase Edge `zain-pedidos` versión 6, ACTIVE**, desplegada independientemente del push de GitHub. Catálogo y handler regenerados desde la misma fuente. Conserva verificación de permisos propia; no cambia RLS, tablas ni bucket.
 - Solicitud sintética **NO COTIZAR**, cinco prendas D0300 Gris Jaspe 102: se guardaron original SVG y render PNG; consulta devolvió el código/material/cantidad correctos; carrito vacío y borrador cerrado tras guardado. Seguimiento cargó el render y los dos botones de descarga, sin notas privadas. La prueba se dejó **cancelada**; WhatsApp fue interceptado, sin mensaje real. Ningún enlace con token se guarda en esta guía.
 - Sitio objetivo: https://zain-amber-sigma.vercel.app ; evidencia final de commit y comprobación de publicación se conserva en las notas del Cerebro.
 

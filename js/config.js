@@ -2319,7 +2319,7 @@ const yazbek = {
         "recorte": [
           0,
           0,
-          520,
+          350,
           772
         ],
         "alteracionColor": false
@@ -2409,9 +2409,9 @@ const yazbek = {
         "pagina": 39,
         "objeto": "39-Im0",
         "recorte": [
-          425,
-          0,
-          900,
+          295,
+          70,
+          640,
           772
         ],
         "alteracionColor": false
