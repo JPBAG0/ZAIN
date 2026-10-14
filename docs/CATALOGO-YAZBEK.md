@@ -1,14 +1,22 @@
 # Catálogo ZAIN — prendas Yazbek
 
-## Condición vigente de Juan Pablo — 14-oct-2026
+## Decisión vigente: renders aprobados, contornos limpios y categorías — 14-oct-2026
 
-Los seis modelos originales y sus imágenes se conservan intactos; las 13 bolsas también. Las 14 familias Yazbek se deben agregar, no reemplazar lo existente. Juan Pablo exige fidelidad muy alta al producto y pidió no publicar los renders si no se puede cumplir. Los 25 prototipos IA generados no permiten garantizar una réplica exacta desde fotografías con prendas vestidas/ocultas: NO se publicaron y se archivaron fuera del repositorio. No instalar la preparación anterior, no reactivar fotos con personas o esquemas, no presentar IA como foto oficial. Conseguir fotos de prendas solas del proveedor o muestras fotografiadas para continuar.
+Después de revisar la galería de pruebas, JP autorizó explícitamente publicar las 14 familias / 25 referencias de prendas IA y pidió limpiar los puntos/manchas en contornos de las prendas anteriores. Esta autorización posterior reemplaza la pausa por exigencia de réplica exacta. Las imágenes siguen siendo ilustrativas: no llamarlas fotografías oficiales o réplicas verificadas del fabricante.
 
-Estado actual: GitHub `fd2863c`, Vercel success, catálogo original activo (6 prendas + 13 bolsas), API Edge versión 7 y 34 pruebas aprobadas. Datos Yazbek y solicitudes previas conservados. Documentado en Cerebro: `Catalogo ZAIN - prendas Yazbek` y `2026-10-14 ZAIN - originales restaurados y fidelidad del catalogo`.
+Se conservan los seis productos originales y sus IDs, colores, tallas y técnicas; sus archivos de imagen originales se mantienen intactos. Se usan versiones nuevas con limpieza IA de recorte en `img/productos/originales-limpios/`, sin retirar productos. Los 25 modelos nuevos están en `img/productos/yazbek-ia/`. Fuentes, prompts y hashes en `docs/IMAGENES-YAZBEK-IA.json` y `docs/IMAGENES-ORIGINALES-LIMPIAS.json`. La limpieza fue realizada con `image_gen` integrada; no se sustituyó por dibujos SVG. El motor omite ruido casi transparente en esas imágenes y conserva pliegues al cambiar de color.
 
-## Preselección verificada, pendiente de incorporación
+Catálogo: 44 referencias (6 originales + 25 nuevas + 13 bolsas); 20 fichas de prendas en la vista inicial y una entrada Bolsas. Categorías ordenadas: Playeras, Polos, Camisas, Sudaderas, Chamarras, Gorras y Bolsas. Caballero/dama dentro de una ficha donde corresponde; sudaderas Adultos. Las bolsas mantienen Expo como entrada, sus fotografías/datos y mínimo de 100 por modelo/color, incrementos de 50.
 
-| Familia | Referencias y siluetas | Colores preseleccionados: código y nombre | Tallas | Página física PDF |
+Verificación: 34 pruebas aprobadas; las 31 imágenes de prendas cargan y se tiñen en negro, blanco y rojo. Comparación visual antes/después confirma eliminación de puntos blancos de axilas/mangas, especialmente sudadera/chamarra. Filtros y variantes comprobados en móvil; sin desbordamiento. Prueba sintética de cinco polos D0550 Rojo 413 guardó el logo original y render, dio seguimiento y descargas 200, y vació el carrito. Ningún mensaje WhatsApp real: navegación interceptada. La solicitud está marcada NO COTIZAR; su cancelación administrativa quedó solicitada a JP porque el conector SQL falló y una limpieza temporal en Edge fue rechazada. No se cambió ningún pedido real.
+
+API `zain-pedidos` versión 9 ACTIVE, sin código de limpieza temporal, permisos/RLS/Storage privado conservados. Catálogo `originales-mas-yazbek-ia-2026-10-14`. Publicación web en curso; registrar el commit y comprobación de Vercel al cerrar.
+
+Pendientes comerciales: stock/costos, técnica por tejido y aprobación de impresión; tonos de pantalla aproximados, sin equivalencias Pantone oficiales. Las categorías no expresan rankings de ventas o margen. Ads, privacidad, precios y presupuestos no cambiaron.
+
+## Datos verificados del proveedor
+
+| Familia | Referencias y siluetas | Colores publicados: código y nombre | Tallas | Página física PDF |
 |---|---|---|---|---|
 | Polo piqué manga corta | C0550 (Caballero) / D0550 (Dama) | 415 Negro; 414 Marino; 100 Blanco; 102 Gris Jaspe; 421 Royal; 413 Rojo; 420 Jade | C0550: CH–EEG / D0550: CH–EG | 20 |
 | Camisa Oxford manga larga | C0605 (Caballero) / D0605 (Dama) | 700 Blanco; 701 Azul Cielo; 703 Gris; 704 Cobalto; 705 Rosa | C0605: CH–EEG / D0605: CH–EEG | 40 |
@@ -25,4 +33,4 @@ Estado actual: GitHub `fd2863c`, Vercel success, catálogo original activo (6 pr
 | Sudadera con ¼ de cierre | C0703 (Adultos) | 415 Negro; 414 Marino; 2415 Negro Jaspe | C0703: CH–EEG | 31 |
 | Polo ActiviTee manga larga | C1504 (Caballero) / D1504 (Dama) | 415 Negro; 414 Marino; 100 Blanco | C1504: CH–EEG / D1504: CH–EG | 28 |
 
-Datos: `js/config.js` (`catalogoYazbekPendiente`), continuidad fuera de Git. Stock, técnica por tejido, costo y área imprimible a confirmar. Los originales genéricos no se reetiquetan como fabricante Yazbek.
+El PDF completo y las guías de tallas fueron revisados. Las imágenes IA son ilustrativas, no fotografías oficiales. La ficha usa códigos y combinaciones de color/talla verificadas.

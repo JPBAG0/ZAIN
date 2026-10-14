@@ -777,3 +777,24 @@ html.sin-scroll .flotante, .flotante.fuera { opacity: 0; transform: scale(0.8); 
 #lienzo { touch-action: pan-y; }
 #lienzo.sobre-logo { cursor: grab; }
 #lienzo.moviendo { cursor: grabbing; }
+
+/* Nuevas prendas IA: misma presentación y animación del catálogo original. */
+
+.producto__origen { position:absolute; top:12px; left:12px; padding:5px 9px; border-radius:30px; background:var(--papel); color:var(--tinta); font-size:12px; }
+.producto__tono { margin:0; color:var(--tinta-2); font-size:13px; }
+.producto__datos { display:grid; gap:3px; font-size:13px; color:var(--tinta-2); }
+.producto__variante { margin:0; }
+.producto__variante select { width:100%; font-size:16px; }
+.producto__tabla { font-size:13px; border-top:1px solid var(--linea); padding-top:8px; }
+.producto__tabla summary { cursor:pointer; font-weight:600; }
+.producto__tabla table { width:100%; border-collapse:collapse; margin:8px 0; text-align:left; }
+.producto__tabla caption { text-align:left; font-size:12px; padding-bottom:8px; color:var(--tenue); }
+.producto__tabla td, .producto__tabla th { padding:4px 7px; border-bottom:1px solid var(--linea); }
+.producto__tabla small { display:block; line-height:1.5; }
+
+.vista-orientativa { margin:0 12px; padding:8px 10px; border-radius:8px; background:var(--papel); color:var(--tinta-2); font-size:12px; line-height:1.4; }
+
+.vista-orientativa[hidden] { display:none; }
+
+.rejilla__categoria { grid-column:1/-1; margin:24px 0 0; font-size:clamp(1.4rem,3vw,2rem); }
+.rejilla__categoria[hidden] { display:none; }

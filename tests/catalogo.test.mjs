@@ -11,13 +11,15 @@ const catalogo=[...C.productos,...(C.catalogoYazbekPendiente||[])];
 const model=code=>catalogo.find(p=>p.codigoFabricante===code);
 const expected={C0200:['CH','M','G','EG','EEG','EEEG'],D0200:['CH','M','G','EG','EEG'],C0300:['CH','M','G','EG','EEG','EEEG'],D0300:['CH','M','G','EG'],D0550:['CH','M','G','EG'],D1302:['CH','M','G','EG'],D1502:['CH','M','G','EG'],D1504:['CH','M','G','EG'],D0601:['CH','M','G','EG','EEG'],D0604:['CH','M','G','EG','EEG'],D0605:['CH','M','G','EG','EEG'],D0606:['CH','M','G','EG','EEG'],D0607:['CH','M','G','EG','EEG']};
 
-test('originales activos y 14 familias / 25 referencias Yazbek conservadas para incorporar',()=>{
+test('originales activos junto con 14 familias / 25 referencias Yazbek sin personas',()=>{
   const current=catalogo.filter(p=>p.fabricante==='Yazbek');
   assert.equal(current.length,25);assert.equal(new Set(current.map(p=>p.familia)).size,14);
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
   assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
   assert.equal(C.productosHistoricos.length,0);
-  for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.alteracionColor,false);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);assert.match(readFileSync(new URL('../'+p.esquema,import.meta.url),'utf8'),/no fotografía/);}
+  assert.deepEqual(C.categoriasCatalogo,['Playeras','Polos','Camisas','Sudaderas','Chamarras','Gorras','Bolsas']);
+  for (const p of C.productos.filter(p=>p.imagenLimpia)) { assert.match(p.foto,/originales-limpios/);assert.ok(readFileSync(new URL('../'+p.fotoOriginal,import.meta.url)).length>1000); }
+  for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.origen,'IA');assert.equal(p.imagenIA,true);assert.equal(p.imagenFuente.replicaVerificada,false);assert.match(p.foto,/yazbek-ia/);assert.ok(!p.esquema);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);}
 });
 
 test('todas las combinaciones publicadas guardan código, color, material y tallas canónicos',()=>{

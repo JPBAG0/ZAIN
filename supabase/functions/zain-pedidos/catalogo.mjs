@@ -632,9 +632,9 @@ export default {
     {
       "id": "playera",
       "nombre": "Playera cuello redondo",
-      "categoria": "Textil",
+      "categoria": "Playeras",
       "descripcion": "Algodón peinado 180 g. La base de todo uniforme y evento.",
-      "foto": "img/productos/playera.webp",
+      "foto": "img/productos/originales-limpios/playera-v2.webp",
       "colores": [
         "negro",
         "blanco",
@@ -682,14 +682,16 @@ export default {
           "y": 300,
           "max": 10
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/playera.webp",
+      "imagenLimpia": true
     },
     {
       "id": "polo",
       "nombre": "Polo piqué",
-      "categoria": "Textil",
+      "categoria": "Polos",
       "descripcion": "Piqué 220 g con cuello tejido. El uniforme de oficina por excelencia.",
-      "foto": "img/productos/polo.webp",
+      "foto": "img/productos/originales-limpios/polo-v2.webp",
       "colores": [
         "marino",
         "blanco",
@@ -736,14 +738,16 @@ export default {
           "y": 420,
           "max": 24
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/polo.webp",
+      "imagenLimpia": true
     },
     {
       "id": "camisa",
       "nombre": "Camisa oxford",
-      "categoria": "Textil",
+      "categoria": "Camisas",
       "descripcion": "Manga larga, tela oxford. Para atención a clientes y fuerza de ventas.",
-      "foto": "img/productos/camisa.webp",
+      "foto": "img/productos/originales-limpios/camisa-v2.webp",
       "colores": [
         "blanco",
         "marino",
@@ -778,14 +782,16 @@ export default {
           "y": 300,
           "max": 9
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/camisa.webp",
+      "imagenLimpia": true
     },
     {
       "id": "chamarra",
       "nombre": "Chamarra softshell",
-      "categoria": "Textil",
+      "categoria": "Chamarras",
       "descripcion": "Cierre completo, rompevientos y repelente al agua. Para campo y temporada de frío.",
-      "foto": "img/productos/chamarra.webp",
+      "foto": "img/productos/originales-limpios/chamarra-v2.webp",
       "colores": [
         "negro",
         "marino",
@@ -822,14 +828,16 @@ export default {
           "y": 300,
           "max": 10
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/chamarra.webp",
+      "imagenLimpia": true
     },
     {
       "id": "sudadera",
       "nombre": "Sudadera con gorro",
-      "categoria": "Textil",
+      "categoria": "Sudaderas",
       "descripcion": "Felpa perchada 280 g con bolsa canguro. Merch que sí se usa.",
-      "foto": "img/productos/sudadera.webp",
+      "foto": "img/productos/originales-limpios/sudadera-v2.webp",
       "colores": [
         "gris",
         "negro",
@@ -868,14 +876,16 @@ export default {
           "y": 320,
           "max": 10
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/sudadera.webp",
+      "imagenLimpia": true
     },
     {
       "id": "gorra",
       "nombre": "Gorra 6 paneles",
-      "categoria": "Accesorios",
+      "categoria": "Gorras",
       "descripcion": "Frente estructurado y ajuste trasero. El accesorio más pedido para eventos.",
-      "foto": "img/productos/gorra.webp",
+      "foto": "img/productos/originales-limpios/gorra-v2.webp",
       "colores": [
         "arena",
         "negro",
@@ -900,7 +910,9 @@ export default {
           "y": 430,
           "max": 12
         }
-      ]
+      ],
+      "fotoOriginal": "img/productos/gorra.webp",
+      "imagenLimpia": true
     },
     {
       "id": "bolsa-boutique",
@@ -1471,50 +1483,7 @@ export default {
         "pagina": 16
       },
       "piezasBulto": 500
-    }
-  ],
-  "promocionales": [
-    "Termos",
-    "Tazas",
-    "Libretas",
-    "Plumas",
-    "Mandiles",
-    "Chalecos",
-    "Lanyards",
-    "Paraguas"
-  ],
-  "preguntas": [
-    {
-      "p": "¿Cómo solicito una cotización?",
-      "r": "Elige productos, colores, técnica y cantidades, agrégalos a tu pedido y envíalo por WhatsApp. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
     },
-    {
-      "p": "¿Cuál es el pedido mínimo?",
-      "r": "En bolsas el mínimo es de 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200… Para los demás productos confirmamos la cantidad y las condiciones al cotizar."
-    },
-    {
-      "p": "¿Cuánto tarda mi pedido?",
-      "r": "Normalmente de 7 a 12 días hábiles a partir de que apruebas el diseño y se confirma el anticipo. Si tienes fecha de evento, dínosla y la planeamos."
-    },
-    {
-      "p": "¿Qué archivo de logo necesito?",
-      "r": "Lo ideal es vector (AI, PDF, SVG o EPS). Si solo tienes una imagen (PNG o JPG), también sirve: nosotros la preparamos para bordado o impresión."
-    },
-    {
-      "p": "¿El render es exactamente como quedará?",
-      "r": "Es una vista previa para que decidas color, técnica y ubicación. Antes de producir te mandamos una prueba digital con medidas reales para que la apruebes."
-    },
-    {
-      "p": "¿Puedo mezclar tallas y colores?",
-      "r": "Sí. En cada producto indicas cuántas piezas quieres de cada talla, y puedes agregar el mismo producto en otro color como una línea más del pedido."
-    },
-    {
-      "p": "¿Cómo pago?",
-      "r": "Arma tu pedido en la página y envíalo por WhatsApp. Te compartimos una cotización personalizada; cuando la apruebes, coordinamos el anticipo y la producción. Facturamos."
-    }
-  ],
-  "catalogoVersion": "originales-restaurados-2026-10-13",
-  "catalogoYazbekPendiente": [
     {
       "id": "yazbek-c0550",
       "nombre": "Polo piqué manga corta · Caballero (C0550)",
@@ -1529,9 +1498,7 @@ export default {
       "tejido": "Piqué",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0550.webp",
-      "fotoReferenciaColor": "Fucsia · 322",
-      "esquema": "img/productos/yazbek/polo-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0550.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -1579,13 +1546,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.3356,
+      "pxPorCm": 7.4419,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 596,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -1593,7 +1560,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -1608,17 +1575,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 20,
-        "objeto": "20-Im0",
-        "recorte": [
-          0,
-          0,
-          635,
-          922
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0550",
@@ -1634,9 +1598,7 @@ export default {
       "tejido": "Piqué",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0550.webp",
-      "fotoReferenciaColor": "Marrón · 424",
-      "esquema": "img/productos/yazbek/polo-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0550.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -1679,13 +1641,13 @@ export default {
         "ancho": 2.5,
         "largo": 2.5
       },
-      "pxPorCm": 7.1017,
+      "pxPorCm": 7.852,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 590,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -1693,7 +1655,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -1708,17 +1670,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 20,
-        "objeto": "20-Im0",
-        "recorte": [
-          635,
-          0,
-          1283,
-          922
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0605",
@@ -1734,9 +1693,7 @@ export default {
       "tejido": "Oxford",
       "composicion": "75% algodón / 25% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0605.webp",
-      "fotoReferenciaColor": "Gris · 703",
-      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0605.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-700",
@@ -1782,13 +1739,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 7.2398,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 595,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -1803,12 +1760,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 40,
-        "objeto": "40-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0605",
@@ -1824,9 +1783,7 @@ export default {
       "tejido": "Oxford",
       "composicion": "75% algodón / 25% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0605.webp",
-      "fotoReferenciaColor": "Rosa · 705",
-      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0605.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-700",
@@ -1872,13 +1829,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.9418,
+      "pxPorCm": 6.7476,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 579,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -1893,12 +1850,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 40,
-        "objeto": "40-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0200",
@@ -1916,9 +1875,7 @@ export default {
       "composicionColor": {
         "102": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/yazbek/c0200.webp",
-      "fotoReferenciaColor": "Caribe · 220",
-      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0200.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -1971,13 +1928,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.619,
+      "pxPorCm": 8.1885,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 601,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -1985,7 +1942,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -2000,12 +1957,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 6,
-        "objeto": "06-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0200",
@@ -2023,9 +1982,7 @@ export default {
       "composicionColor": {
         "102": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/yazbek/d0200.webp",
-      "fotoReferenciaColor": "Lavanda · 229",
-      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0200.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2073,13 +2030,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 7.2835,
+      "pxPorCm": 7.8803,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 588,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -2087,7 +2044,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -2102,12 +2059,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 6,
-        "objeto": "06-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0300",
@@ -2125,9 +2084,7 @@ export default {
       "composicionColor": {
         "102": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/yazbek/c0300.webp",
-      "fotoReferenciaColor": "Aqua · 231",
-      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0300.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2181,13 +2138,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.619,
+      "pxPorCm": 7.789,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 596,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -2195,7 +2152,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -2210,17 +2167,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 10,
-        "objeto": "10-Im0",
-        "recorte": [
-          280,
-          0,
-          1000,
-          921
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0300",
@@ -2238,9 +2192,7 @@ export default {
       "composicionColor": {
         "102": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/yazbek/d0300.webp",
-      "fotoReferenciaColor": "Coral · 234",
-      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0300.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2284,13 +2236,13 @@ export default {
         "ancho": 2.5,
         "largo": 2.5
       },
-      "pxPorCm": 7.5665,
+      "pxPorCm": 8.3006,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 589,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -2298,7 +2250,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -2313,12 +2265,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
-        "pagina": 10,
-        "objeto": "11-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
+        "pagina": 11,
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0606",
@@ -2334,9 +2288,7 @@ export default {
       "tejido": "Gabardina",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0606.webp",
-      "fotoReferenciaColor": "Azul Francia · 213",
-      "esquema": "img/productos/yazbek/camisa-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0606.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2383,13 +2335,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 7.2932,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 596,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2404,17 +2356,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 41,
-        "objeto": "41-Im0",
-        "recorte": [
-          0,
-          0,
-          635,
-          922
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0606",
@@ -2430,9 +2379,7 @@ export default {
       "tejido": "Gabardina",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0606.webp",
-      "fotoReferenciaColor": "Beige · 200",
-      "esquema": "img/productos/yazbek/camisa-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0606.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2479,13 +2426,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.9418,
+      "pxPorCm": 7.4658,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 588,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2500,17 +2447,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 41,
-        "objeto": "41-Im0",
-        "recorte": [
-          635,
-          0,
-          1283,
-          922
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0607",
@@ -2526,9 +2470,7 @@ export default {
       "tejido": "Gabardina",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0607.webp",
-      "fotoReferenciaColor": "Marino · 414",
-      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0607.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2577,13 +2519,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 6.8124,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 589,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2598,12 +2540,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 42,
-        "objeto": "42-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0607",
@@ -2619,9 +2563,7 @@ export default {
       "tejido": "Gabardina",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0607.webp",
-      "fotoReferenciaColor": "Gris · 426",
-      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0607.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2670,13 +2612,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.9418,
+      "pxPorCm": 6.987,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 582,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2691,12 +2633,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 42,
-        "objeto": "42-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0604",
@@ -2712,9 +2656,7 @@ export default {
       "tejido": "Oxford",
       "composicion": "75% algodón / 25% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0604.webp",
-      "fotoReferenciaColor": "Azul Cielo · 701",
-      "esquema": "img/productos/yazbek/camisa-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0604.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-700",
@@ -2757,13 +2699,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 7.3066,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 596,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2778,17 +2720,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 39,
-        "objeto": "39-Im0",
-        "recorte": [
-          0,
-          0,
-          350,
-          772
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0604",
@@ -2804,9 +2743,7 @@ export default {
       "tejido": "Oxford",
       "composicion": "75% algodón / 25% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0604.webp",
-      "fotoReferenciaColor": "Blanco · 700",
-      "esquema": "img/productos/yazbek/camisa-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0604.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-700",
@@ -2849,13 +2786,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.9418,
+      "pxPorCm": 7.6453,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 590,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -2870,17 +2807,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 39,
-        "objeto": "39-Im0",
-        "recorte": [
-          295,
-          70,
-          640,
-          772
-        ],
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c1502",
@@ -2896,9 +2830,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c1502.webp",
-      "fotoReferenciaColor": "Royal · 421",
-      "esquema": "img/productos/yazbek/polo-recta.svg",
+      "foto": "img/productos/yazbek-ia/c1502.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -2945,13 +2877,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.3356,
+      "pxPorCm": 7.4283,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 595,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -2959,7 +2891,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -2974,12 +2906,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 27,
-        "objeto": "27-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d1502",
@@ -2995,9 +2929,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d1502.webp",
-      "fotoReferenciaColor": "Rojo · 413",
-      "esquema": "img/productos/yazbek/polo-dama.svg",
+      "foto": "img/productos/yazbek-ia/d1502.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3039,13 +2971,13 @@ export default {
         "ancho": 2.5,
         "largo": 2.5
       },
-      "pxPorCm": 7.1017,
+      "pxPorCm": 8.0663,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 592,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3053,7 +2985,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -3068,12 +3000,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 27,
-        "objeto": "27-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c1302",
@@ -3089,9 +3023,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c1302.webp",
-      "fotoReferenciaColor": "Gris · 426",
-      "esquema": "img/productos/yazbek/playera-recta.svg",
+      "foto": "img/productos/yazbek-ia/c1302.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3138,13 +3070,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.619,
+      "pxPorCm": 7.9887,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 598,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3152,7 +3084,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -3167,12 +3099,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 24,
-        "objeto": "24-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d1302",
@@ -3188,9 +3122,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d1302.webp",
-      "fotoReferenciaColor": "Negro · 415",
-      "esquema": "img/productos/yazbek/playera-dama.svg",
+      "foto": "img/productos/yazbek-ia/d1302.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3232,13 +3164,13 @@ export default {
         "ancho": 2.5,
         "largo": 2.5
       },
-      "pxPorCm": 7.3705,
+      "pxPorCm": 7.7521,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 586,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3246,7 +3178,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -3261,12 +3193,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 24,
-        "objeto": "24-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0702",
@@ -3282,9 +3216,7 @@ export default {
       "tejido": "Felpa",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0702.webp",
-      "fotoReferenciaColor": "Negro Jaspe · 2415",
-      "esquema": "img/productos/yazbek/sudadera-cierre-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0702.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3330,13 +3262,13 @@ export default {
         "ancho": 1.9,
         "largo": 3.2
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 11.6745,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 653,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -3351,12 +3283,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 31,
-        "objeto": "31-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0601",
@@ -3372,9 +3306,7 @@ export default {
       "tejido": "Mezclilla",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0601.webp",
-      "fotoReferenciaColor": "Índigo Claro · 652",
-      "esquema": "img/productos/yazbek/camisa-larga-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0601.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-652"
@@ -3416,13 +3348,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.1977,
+      "pxPorCm": 7.1997,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 595,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -3437,12 +3369,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 36,
-        "objeto": "36-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d0601",
@@ -3458,9 +3392,7 @@ export default {
       "tejido": "Mezclilla",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d0601.webp",
-      "fotoReferenciaColor": "Índigo Claro · 652",
-      "esquema": "img/productos/yazbek/camisa-larga-dama.svg",
+      "foto": "img/productos/yazbek-ia/d0601.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-652"
@@ -3502,13 +3434,13 @@ export default {
         "ancho": 1.3,
         "largo": 1.3
       },
-      "pxPorCm": 6.9418,
+      "pxPorCm": 6.9571,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 582,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -3523,12 +3455,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 36,
-        "objeto": "36-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0701",
@@ -3544,9 +3478,7 @@ export default {
       "tejido": "Felpa",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0701.webp",
-      "fotoReferenciaColor": "Arena · 230",
-      "esquema": "img/productos/yazbek/sudadera-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0701.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3593,13 +3525,13 @@ export default {
         "ancho": 1.9,
         "largo": 3.2
       },
-      "pxPorCm": 6.0656,
+      "pxPorCm": 11.648,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 656,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3607,7 +3539,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 390,
           "max": 30,
           "orientativa": true
         }
@@ -3622,12 +3554,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 30,
-        "objeto": "30-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c0703",
@@ -3643,9 +3577,7 @@ export default {
       "tejido": "Felpa",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c0703.webp",
-      "fotoReferenciaColor": "Marino · 414",
-      "esquema": "img/productos/yazbek/sudadera-cuarto-recta.svg",
+      "foto": "img/productos/yazbek-ia/c0703.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3690,13 +3622,13 @@ export default {
         "ancho": 1.9,
         "largo": 3.2
       },
-      "pxPorCm": 6.0656,
+      "pxPorCm": 11.4257,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 653,
+          "y": 330,
           "max": 14,
           "orientativa": true
         }
@@ -3711,12 +3643,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 31,
-        "objeto": "31-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-c1504",
@@ -3732,9 +3666,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/c1504.webp",
-      "fotoReferenciaColor": "Marino · 414",
-      "esquema": "img/productos/yazbek/polo-larga-recta.svg",
+      "foto": "img/productos/yazbek-ia/c1504.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3778,13 +3710,13 @@ export default {
         "ancho": 1.9,
         "largo": 2.5
       },
-      "pxPorCm": 6.3356,
+      "pxPorCm": 7.401,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 595,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3792,7 +3724,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -3807,12 +3739,14 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 28,
-        "objeto": "28-Im1",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     },
     {
       "id": "yazbek-d1504",
@@ -3828,9 +3762,7 @@ export default {
       "tejido": "Mesh",
       "composicion": "100% poliéster",
       "composicionColor": {},
-      "foto": "img/productos/yazbek/d1504.webp",
-      "fotoReferenciaColor": "Blanco · 100",
-      "esquema": "img/productos/yazbek/polo-larga-dama.svg",
+      "foto": "img/productos/yazbek-ia/d1504.webp",
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
@@ -3869,13 +3801,13 @@ export default {
         "ancho": 2.5,
         "largo": 2.5
       },
-      "pxPorCm": 7.1017,
+      "pxPorCm": 7.3316,
       "zonas": [
         {
           "id": "pecho-izq",
           "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 365,
+          "x": 584,
+          "y": 330,
           "max": 14,
           "orientativa": true
         },
@@ -3883,7 +3815,7 @@ export default {
           "id": "centro",
           "nombre": "Frente centrado",
           "x": 500,
-          "y": 430,
+          "y": 420,
           "max": 30,
           "orientativa": true
         }
@@ -3898,13 +3830,66 @@ export default {
         "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
       },
       "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
         "pagina": 28,
-        "objeto": "28-Im0",
-        "recorte": null,
-        "alteracionColor": false
+        "ilustrativa": true,
+        "replicaVerificada": false
       },
-      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada."
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true
     }
   ],
+  "promocionales": [
+    "Termos",
+    "Tazas",
+    "Libretas",
+    "Plumas",
+    "Mandiles",
+    "Chalecos",
+    "Lanyards",
+    "Paraguas"
+  ],
+  "preguntas": [
+    {
+      "p": "¿Cómo solicito una cotización?",
+      "r": "Elige productos, colores, técnica y cantidades, agrégalos a tu pedido y envíalo por WhatsApp. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
+    },
+    {
+      "p": "¿Cuál es el pedido mínimo?",
+      "r": "En bolsas el mínimo es de 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200… Para los demás productos confirmamos la cantidad y las condiciones al cotizar."
+    },
+    {
+      "p": "¿Cuánto tarda mi pedido?",
+      "r": "Normalmente de 7 a 12 días hábiles a partir de que apruebas el diseño y se confirma el anticipo. Si tienes fecha de evento, dínosla y la planeamos."
+    },
+    {
+      "p": "¿Qué archivo de logo necesito?",
+      "r": "Lo ideal es vector (AI, PDF, SVG o EPS). Si solo tienes una imagen (PNG o JPG), también sirve: nosotros la preparamos para bordado o impresión."
+    },
+    {
+      "p": "¿El render es exactamente como quedará?",
+      "r": "Es una vista previa para que decidas color, técnica y ubicación. Antes de producir te mandamos una prueba digital con medidas reales para que la apruebes."
+    },
+    {
+      "p": "¿Puedo mezclar tallas y colores?",
+      "r": "Sí. En cada producto indicas cuántas piezas quieres de cada talla, y puedes agregar el mismo producto en otro color como una línea más del pedido."
+    },
+    {
+      "p": "¿Cómo pago?",
+      "r": "Arma tu pedido en la página y envíalo por WhatsApp. Te compartimos una cotización personalizada; cuando la apruebes, coordinamos el anticipo y la producción. Facturamos."
+    }
+  ],
+  "categoriasCatalogo": [
+    "Playeras",
+    "Polos",
+    "Camisas",
+    "Sudaderas",
+    "Chamarras",
+    "Gorras",
+    "Bolsas"
+  ],
+  "catalogoVersion": "originales-mas-yazbek-ia-2026-10-14",
+  "catalogoYazbekPendiente": [],
   "productosHistoricos": []
 };

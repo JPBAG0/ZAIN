@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sudadera",
+    "original": "img/productos/sudadera.webp",
+    "corregida": "img/productos/originales-limpios/sudadera-v2.webp",
+    "sha256Original": "dd79917ae0c8fce57de93c36ce7e3e9fdd19ccb1d02cdf4d1fa68e010f7ebfcd",
+    "sha256Corregida": "90e107fa4c774a38dd4f726fcc15eb87f8a8cb907b412e91130f92bdb0a46643",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. pullover hoodie with NO drawstrings, one kangaroo pocket, same cuffs/hood/body shape. Target: irregular white punctures and matte fragments at both underarms, especially viewer-right sleeve/torso gap. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  },
+  {
+    "id": "chamarra",
+    "original": "img/productos/chamarra.webp",
+    "corregida": "img/productos/originales-limpios/chamarra-v2.webp",
+    "sha256Original": "df51e22c2cbe6326c50902be1d340f4bf49328c8063348751228d55a91ed3125",
+    "sha256Corregida": "75be852d5450931593332070a824ff0d6a1089842522af4a5227cf416b0e4639",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. fullzip softshell standing collar, no hood, same zipper, same seam lines and proportions. Target: detached pixels/rectangular matte remnants along sleeve-to-body gaps and hem. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  },
+  {
+    "id": "camisa",
+    "original": "img/productos/camisa.webp",
+    "corregida": "img/productos/originales-limpios/camisa-v2.webp",
+    "sha256Original": "41ed455758e2fcd57ed1c05ab5acce7ba3f7fffa896454455d1de2f607742424",
+    "sha256Corregida": "0ec82603e93c8d9813138deeff9411c230707375be4a497ff4497212ca23c589",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. longsleeve button-front shirt with plain pointed collar and no breast pocket, exactly same cuffs and hem. Target: matte remnants between sleeves and torso and outside hem. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  },
+  {
+    "id": "playera",
+    "original": "img/productos/playera.webp",
+    "corregida": "img/productos/originales-limpios/playera-v2.webp",
+    "sha256Original": "d97e4d35fd87e0625023014a3841a526920aea925ee090d18bc881b77feefd8c",
+    "sha256Corregida": "fd28d9cc93a6ac7a5ce0671496e97c3f6ff38f00f9f47cf6767ae777d59205ad",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. shortsleeve roundneck T-shirt, exactly same regular cut, neck band, seams and folds. Target: edge pixel blocks/fringe outside sleeves, shoulders and hem. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  },
+  {
+    "id": "polo",
+    "original": "img/productos/polo.webp",
+    "corregida": "img/productos/originales-limpios/polo-v2.webp",
+    "sha256Original": "76fc5315563363c9a09f513e032bfaee0b2e2e9611e49244b671f68e19801399",
+    "sha256Corregida": "081ccf995fdd5c7736610894764b748963ebf27dd8fe27c157bf426c049de456",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. shortsleeve polo with identical existing placket/button count and collar shape, no pocket. Target: jagged alpha fringe/block artifacts along shoulders, sleeve edges, sides and hem. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  },
+  {
+    "id": "gorra",
+    "original": "img/productos/gorra.webp",
+    "corregida": "img/productos/originales-limpios/gorra-v2.webp",
+    "sha256Original": "288c7d6a5b89379742f0d11ce56551b4954ce2dc6554ad70e15847f275464f75",
+    "sha256Corregida": "93711b692a31023a9dbfb1b203d27e14f15f2ec49c1bcfcaffeb3459c025886b",
+    "herramienta": "image_gen integrada",
+    "prompt": "Precise object edit / background-extraction of the SINGLE attached existing ZAIN product image. This is a surgical cleanup, NOT a redesign. Keep the same product, silhouette, proportions, placement, front view, WHITE neutral fabric, seams, texture, folds, buttons/trims and lighting. Keep the original square framing with ~5% margins. front baseball cap with identical crown and curved bill, seams and top button. Target: jagged fringe/block pixels along crown/bill silhouette. Correct only erroneous cutout/alpha areas: clothing itself must be opaque, no small round transparent holes in fabric, no rectangular clipped chunks; REAL negative space between sleeve and torso must be fully transparent with smooth continuous garment boundaries. Outside the garment: actual alpha0, clean antialias confined to 1-2 pixels, absolutely no detached specks/halo/scraps or shadows. Fill accidental tiny missing fabric with seamlessly matching texture/shading while preserving real sleeve/body separation. Do not add strings, pockets, parts, printed logos, person, skin, hanger, watermark, solid backdrop or checkerboard."
+  }
+]

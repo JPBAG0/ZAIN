@@ -1,0 +1,327 @@
+[
+  {
+    "codigo": "C0550",
+    "archivo": "img/productos/yazbek-ia/c0550.webp",
+    "sha256": "579eaf9d9ad34a31666136c2907297161611f702b3ae5a741978514c09858b25",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 20,
+    "herramienta": "image_gen integrada",
+    "prompt": "Prototype: reconstruct male LEFT C0550 piqué polo from alta-20 and original polo.webp style. White ghost mannequin garment-only transparent; targeted edit clean transparent boundary.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0550",
+    "archivo": "img/productos/yazbek-ia/d0550.webp",
+    "sha256": "0cdbd18215b71783b8922e810e94b11bcc917714db4f7030441a78df1c3422f3",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 20,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female dark burgundy piqué short-sleeve polo, fitted waist, narrow shoulders, shorter slim sleeves, ribbed polo collar and three-button narrow placket, textured225g50/50piqué, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0605",
+    "archivo": "img/productos/yazbek-ia/c0605.webp",
+    "sha256": "b7fe6f0d77ebeb6fa29848b9c7cf017d654aafbe25035129cf85ad539fe947f2",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 40,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male gray Oxford LONG sleeve shirt, straight men's cut, button-down collar tips, one rectangular open chest pocket wearer's LEFT, full button placket, barrel button cuffs,Oxford155g, rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0605",
+    "archivo": "img/productos/yazbek-ia/d0605.webp",
+    "sha256": "c313b0dbcd27f7786ec549121a99bb3828c5a365dad6296c3dddd33bc72ee975",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 40,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female pink Oxford LONG sleeve shirt, feminine shaped waist with vertical front darts, plain pointed collar WITHOUT buttoned tips, NO CHEST POCKET,full button front, barrel cuffs,Oxford155g,rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0200",
+    "archivo": "img/productos/yazbek-ia/c0200.webp",
+    "sha256": "e1f9322e19f370575b9bb857f8a818507c823f2a98661eb25811ffc42cf3fadd",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 6,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male turquoise crew neck T-shirt, relaxed straight adult men's cut, short set-in sleeves, fine ribbed round collar, lightweight smooth cotton jersey 155g, straight double stitched hem.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0200",
+    "archivo": "img/productos/yazbek-ia/d0200.webp",
+    "sha256": "12718e44d3c2ee8d302d9ed72e805099a9766bced3c73d01b6f483d2360632e0",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 6,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female lavender crew neck T-shirt, women's regular cut with only a subtle waist taper (not strongly fitted), shorter short set-in sleeves, fine ribbed round collar, smooth lightweight cotton jersey 155g, hem.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0300",
+    "archivo": "img/productos/yazbek-ia/c0300.webp",
+    "sha256": "1070f9755cfa9238770caebfaca86be87d1d6ee2032fd7867aceed4bf006d733",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 10,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: male Aqua heavy cotton crew neck T-shirt, men's straight relaxed cut, heavier structured 195g cotton jersey drape, short sleeves, wider rib round neck, double stitched hem.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0300",
+    "archivo": "img/productos/yazbek-ia/d0300.webp",
+    "sha256": "788703085797af5ba6100d2ba03200903d98b2ffdd5aaa66bb56c3cee97600e5",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 11,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT female Coral fitted heavy cotton crew neck T-shirt, pronounced feminine shaped waist, fitted shorter short sleeves, ribbed round neck, smooth substantial 195g cotton, hem.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0606",
+    "archivo": "img/productos/yazbek-ia/c0606.webp",
+    "sha256": "b4923f628b5c42c1fed97147167ea7f32aca22879942a85dbb52a2c704de371f",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 41,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male blue Gabardine SHORT sleeve shirt, straight men's cut, button-down collar tips, one rectangular open chest pocket wearer's LEFT, full button front, fine twill160g50/50, rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0606",
+    "archivo": "img/productos/yazbek-ia/d0606.webp",
+    "sha256": "8441490a6e7091c3cc5eedaa47a2a29695e47a31b34732ca2043ea39e1309f63",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 41,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female beige Gabardine SHORT sleeve shirt, feminine shaped waist with front darts, plain pointed collar WITHOUT buttoned tips, NO CHEST POCKET,full button front, fine twill160g50/50,rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0607",
+    "archivo": "img/productos/yazbek-ia/c0607.webp",
+    "sha256": "1d2e867efab43bd1d0be096cfe182b87f9455a6a181a8084a36287bb7440a308",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 42,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male navy Gabardine LONG sleeve shirt, straight men's cut, button-down collar tips, one rectangular open chest pocket wearer's LEFT, full button front, barrel cuffs,fine twill160g, rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0607",
+    "archivo": "img/productos/yazbek-ia/d0607.webp",
+    "sha256": "e9db7a4f44b08fb1d2bbdf957e8a71f0cd1b81ac269c37c51b9b9a1059a43c13",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 42,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female gray Gabardine LONG sleeve shirt, fitted shaped waist front darts, plain pointed collar WITHOUT buttoned collar tips, NO CHEST POCKET,full button placket, barrel cuffs,fine twill160g, rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0604",
+    "archivo": "img/productos/yazbek-ia/c0604.webp",
+    "sha256": "98ccfa043f6718dcb62bebbf281634afd04c04d6b8d5536c2937b345ec0ab5f9",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 39,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male light blue Oxford SHORT sleeve shirt, straight men's cut, button-down collar tips, single open rectangular chest pocket on wearer's LEFT/viewer's right, full button placket, Oxford basketweave155g, rounded shirttail hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0604",
+    "archivo": "img/productos/yazbek-ia/d0604.webp",
+    "sha256": "f2eef978a3919afd81dbbf223b52d42f94809c5f1b0ba9cf0a5a0f0e5d98caa9",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 39,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: female white Oxford SHORT sleeve shirt beside man LEFT half of page, feminine fitted waist with darts, plain pointed collar WITHOUT buttoned collar tips, NO CHEST POCKET, short sleeves, full button front, Oxford155g, shirttail hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C1502",
+    "archivo": "img/productos/yazbek-ia/c1502.webp",
+    "sha256": "b6de370494feda940c19ced9e11a3025237b3b521334e9a2d30281384cc02ded",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 27,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male blue short sleeve Active polo, mens regular straight cut, self fabric soft pointed collar, narrow three-button placket, plain finished sleeve hems,150gpolyester fine mesh, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D1502",
+    "archivo": "img/productos/yazbek-ia/d1502.webp",
+    "sha256": "22e2c9ac5e1b640527ea3eae647f5ef02bf4681437505cbf2ed7c5298bc70157",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 27,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female red short sleeve Active polo, fitted female waist, short slim set-in sleeves, soft pointed self fabric collar, narrow three-button placket,150gpolyester fine mesh, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C1302",
+    "archivo": "img/productos/yazbek-ia/c1302.webp",
+    "sha256": "aa48aeaa416c533fe04bb38f82a2f3015984eb055b3daa2b0d41514701ed17cc",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 24,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male gray crewneck active T-shirt, men's straight sporty cut, short sleeves, bound round neckline, fine breathable150gpolyester mesh. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D1302",
+    "archivo": "img/productos/yazbek-ia/d1302.webp",
+    "sha256": "dbbc0adf87904488242fd781894cbbc5f1ad869d47c68c99de71155e95322fff",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 24,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female black crewneck active T-shirt, fitted shaped waist and short caplike set-in sleeves, round bound neckline, fine150gpolyester mesh. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0702",
+    "archivo": "img/productos/yazbek-ia/c0702.webp",
+    "sha256": "2b835102b8759abb6479dbee67c64d1f2258a722cd7d91b1bb286b2457458da5",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 31,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT adult full-zip hoodie worn by female in dark gray: regular ADULT straight roomy cut, not fitted woman's blouse, full center zipper fully closed, hood with two drawstrings, split kangaroo pockets on both sides zipper, rib knit cuffs and bottom band, long sleeves. Thick 275g50/50cotton polyester fleece smooth outside, substantial volume. FINAL all fabric/trims neutral WHITE; source hue ignored. Entire garment including cuffs and hood visible. Precise alpha edges and no floating fragments.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0601",
+    "archivo": "img/productos/yazbek-ia/c0601.webp",
+    "sha256": "dbfa882e809212f63185c7b547cd8c2331ac741ad1cb0c011a064ad4cc4b692f",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 36,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male indigo denim LONG sleeve shirt, straight men's cut, button-down collar tips, one open rectangular chest pocket wearer's LEFT,full button placket and barrel cuffs, structured heavy255g cotton denim weave,rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0601",
+    "archivo": "img/productos/yazbek-ia/d0601.webp",
+    "sha256": "27ecef687b2aebed9b7fc7365fea3df2455f46fd4a42c5bf27e9766ac98543a0",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 36,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female indigo denim LONG sleeve shirt, fitted female waist front darts, plain pointed collar WITHOUT buttoned tips, NO CHEST POCKET,full button front, barrel cuffs, heavy255g cotton denim texture, rounded hem. Respect pocket/collar/darts distinction rather than copying generic style reference. FINAL OUTPUT: WHITE fabric/buttons/stitching, retain weave and seams; no source blue/pink/gray/indigo hue. Full garment extended including hem, unseen tucked hem reconstructed conservatively. Clean true alpha.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0701",
+    "archivo": "img/productos/yazbek-ia/c0701.webp",
+    "sha256": "8c0c615c0b8768232b58f6461d8bebbfc783ed9869f717bd63eecec6cdff9770",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 30,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT adult pullover hoodie shown on male in arena: regular adult straight roomy shape, full hood lined in same fabric with two drawstrings, one kangaroo pocket, rib knit cuffs and bottom waistband, long set-in sleeves, NO ZIPPER. Thick 275g50/50cotton polyester fleece smooth outside, substantial volume. FINAL all fabric/trims neutral WHITE; source hue ignored. Entire garment including cuffs and hood visible. Precise alpha edges and no floating fragments.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0703",
+    "archivo": "img/productos/yazbek-ia/c0703.webp",
+    "sha256": "e87aa6e903c381a691676bd70861820d84bc6bea8354e63882ca8a0fa7e1a577",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 31,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT adult quarter-zip sweatshirt worn by male navy: regular adult straight cut, standing mock collar, short center zipper ends upper chest, long sleeves simple hems as seen, NO HOOD, NO KANGAROO POCKET, no fullzip, rounded/straight simple bottom hem. Thick 275g50/50cotton polyester fleece smooth outside, substantial volume. FINAL all fabric/trims neutral WHITE; source hue ignored. Entire garment including cuffs and hood visible. Precise alpha edges and no floating fragments.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C1504",
+    "archivo": "img/productos/yazbek-ia/c1504.webp",
+    "sha256": "2e6460204aa8c685ec022e21d9f9edcb94fc6eef397da30f1795d4da83ad2a95",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 28,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: LEFT male navy LONG SLEEVE Active polo, male straight body, long slim sleeves with simple hem (no shirt cuffs), pointed soft collar, three-button narrow placket, fine150gpolyester mesh, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D1504",
+    "archivo": "img/productos/yazbek-ia/d1504.webp",
+    "sha256": "24f0772aa04f1754bd3efbae9343c64480e3fe8a4e746d4dec422c52ddcbb298",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 28,
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female white LONG SLEEVE Active polo, female shaped waist, long fitted sleeves with simple hem, pointed soft collar, three button slim placket, fine150gpolyester mesh, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
+    "imagenIlustrativa": true
+  }
+]
