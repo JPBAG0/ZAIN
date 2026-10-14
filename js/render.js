@@ -19,6 +19,7 @@
         new Promise((ok, mal) => {
           const im = new Image();
           im.decoding = "async";
+          im.crossOrigin = "anonymous";
           im.onload = () => ok(im);
           im.onerror = () => mal(new Error("No se pudo cargar " + src));
           im.src = src;

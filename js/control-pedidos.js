@@ -64,7 +64,7 @@ const itemHTML=(p,i,files)=>{
 };
 async function detalle(id){
  const turn=++detailRevision;selected=null;$('#detalle').innerHTML='<p>Abriendo ficha del pedido…</p>';if(!$('#ficha').open)$('#ficha').showModal();document.documentElement.classList.add('sin-scroll');
- const {pedido:x}=await call('detalle',null,{id});if(turn!==detailRevision||!session)return;selected=x;
+ const {pedido:x}=await call('detalle',null,{id});if(turn!==detailRevision||!session)return;selected=x;$('#detalle').dataset.pedido=x.id;
  const files=x.archivos||[];
  $('#detalle').innerHTML='<div class="control__fichatitulo"><h2>'+esc(x.folio)+'</h2>'+chip(x.estado)+'</div><p class="control__dato">Recibido '+esc(fecha(x.created_at))+' · '+Number(x.total)+' piezas</p>'+(x.archivado_at?'<p class="control__retirado">En papelera desde '+esc(date(x.archivado_at))+'. Restaura el pedido para volver a atenderlo y habilitar su seguimiento.</p>':'')+x.items.map((p,i)=>itemHTML(p,i,files)).join('')+
  (!x.archivado_at?'<form id="editar" class="control__editar"><h3>Continuar el pedido</h3><label>Estado<select id="estadoPedido">'+Object.entries(labels).map(([k,v])=>'<option value="'+k+'"'+(x.estado===k?' selected':'')+'>'+v+'</option>').join('')+'</select></label><label>Notas del equipo<textarea id="notasEquipo" maxlength="5000" placeholder="Cotización, acuerdos y siguiente paso…">'+esc(x.notas_internas)+'</textarea></label><button class="btn btn--azul">Guardar cambios</button><p id="estadoFicha" role="status"></p></form>':'')+
@@ -72,7 +72,7 @@ async function detalle(id){
  status('');
  const history=call('historial',null,{id:x.id}).then(data=>{if(turn!==detailRevision)return;$('#historial').innerHTML=data.historial.length?'<ol>'+data.historial.map(h=>'<li><small>'+esc(fecha(h.created_at))+'</small><b>'+esc(labels[h.estado_anterior]||h.estado_anterior)+' → '+esc(labels[h.estado_nuevo]||h.estado_nuevo)+'</b><p>'+esc(h.notas)+'</p></li>').join('')+'</ol>':'<p class="control__dato">Sin cambios registrados todavía.</p>';}).catch(()=>{if(turn===detailRevision)$('#historial').textContent='No se pudo cargar la actividad. Vuelve a abrir la ficha.';});
  const images=files.filter(f=>f.kind==='render').map(async f=>{try{const data=await call('archivo',{id:x.id,item:f.item,kind:'render'});if(turn!==detailRevision)return;const img=new Image();img.alt='Diseño de '+x.items[f.item].nombre;img.referrerPolicy='no-referrer';img.onload=()=>{if(turn===detailRevision)$('#render-'+f.item)?.replaceChildren(img);};img.onerror=()=>{if(turn===detailRevision)$('#render-'+f.item).textContent='Descarga el render para verlo.';};img.src=data.url;}catch{if(turn===detailRevision)$('#render-'+f.item).textContent='Vista previa no disponible.';}});
- await Promise.all([history,...images]);
+ await Promise.all([history,...images]);if(turn===detailRevision)dispatchEvent(new CustomEvent('zain:pedido-abierto',{detail:x}));
 }
 $('#cerrarDetalle').addEventListener('click',closeDetail);
 $('#ficha').addEventListener('close',()=>{document.documentElement.classList.remove('sin-scroll');detailRevision++;selected=null;history.replaceState(null,'',location.pathname+location.search);});

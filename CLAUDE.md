@@ -1,3 +1,19 @@
+## Decisión vigente: altas de catálogo, renders de Codex y talleres — 14-oct-2026
+
+Juan Pablo autorizó crear productos/categorías desde gestión, reutilizar/subir renders y preparar generación con su sesión de Codex en esta computadora, sin API de imágenes de pago. También pidió accesos separados para talleres por técnica y partida. Estas decisiones prevalecen sobre restricciones históricas que requerían solicitar nuevas altas por chat o editar código.
+
+**Gestión → Catálogo → Nuevo producto / Nueva categoría:** nombre comercial, silueta, descripción/especificaciones, colores HEX y tallas propios, técnicas múltiples, mínimo/incrementos y referencias privadas de compras. SKU nuevo inmutable ZN-NP-000001… generado por servidor; no cambia los SKU existentes. Bolsas nuevas conservan 100 por modelo/color e incrementos de 50. Las categorías aparecen al tener referencias activas. Borrador oculto; imagen revisada y activación manual. Pausar no elimina. Render protegido tras primera publicación; textos, foto secundaria, técnicas y publicación continúan editables.
+
+**Imágenes:** reutilizar solo si coincide el corte; subir render claro cuadrado con transparencia; o fotografía nítida a cola de Codex. La fotografía de catálogo es pública, no usar logos/datos de clientes. Cola local cada 15 minutos, automatización zain-renders-pendientes-en-codex; computadora y Codex abiertos, sujeta a límites de sesión. La IA trabaja en la nube, la computadora coordina. No API de imágenes ni créditos configurados. Salida en revisión, nunca autopublicada: consultar cola → usar render → activar. La primera solicitud real de esta cola sigue pendiente de prueba de generación completa. No prometer réplica exacta sin revisión.
+
+**Gestión → Talleres / /taller-zain:** correo aprobado y cuenta Auth confirmada, una técnica por taller. Taller principal opcional para próximas confirmaciones; asignación manual por selección para pedidos confirmados/en producción. El proveedor recibe únicamente su partida, especificaciones y archivos; no ve otras técnicas, total global, contactos, notas internas ni referencias del distribuidor. Puede marcar Aceptado/En proceso/Listo; no cambia el estado del cliente. Contador de nuevos trabajos dentro de su panel. Notificaciones automáticas por correo/WhatsApp siguen pendientes y no se enviaron mensajes. JP aún no tiene el correo del taller: cero accesos nuevos autorizados.
+
+**Estado comprobado:** 69 pruebas aprobadas; navegador local con fixtures a 390×844 y 1280×800, creación de categoría/producto, técnicas múltiples, render en revisión y sesión del taller. RLS privado y privilegios anon/authenticated revocados en tablas/RPC nuevas; ninguna función nueva security definer. API de talleres y gestión sin login devuelve 401; catálogo público mantiene 39 activas/5 históricas. Migraciones aplicadas y Edge zain-pedidos v15 ACTIVE. Cero nuevos productos, talleres o partidas de prueba en producción. Contraseñas filtradas desactivadas sigue siendo aviso previo de Supabase; no se cambió Auth.
+
+Pendientes externos: correo del amigo del taller y cuenta, primera referencia real a la cola; responsable/domicilio de privacidad y medición Ads continúan con sus pendientes previos; envíos solo planeados.
+
+Detalle: [[Catalogo ZAIN - gestion de publicaciones]] · [[Renders ZAIN - cola local de Codex]] · [[Talleres ZAIN - acceso por partida]] · [[Pedidos ZAIN - panel privado y migracion]] · [[2026-10-14 ZAIN - altas renders locales y talleres]].
+
 ## Decisión vigente: técnicas editables, bolsas unificadas y regreso al inicio — 14-oct-2026
 
 JP eligió **todas las bolsas visibles en “Todos”**. Se muestran las 13 fichas individuales junto a las familias de prendas; los filtros siguen visibles, también en Bolsas, sin una tarjeta intermedia “Ver bolsas”. En “Todos” son 28 fichas (familias agrupadas y bolsas), que representan las 39 referencias activas. #bolsas abre su filtro en el mismo catálogo.

@@ -555,7 +555,7 @@
 
     $("#oPrenda").innerHTML = familias.filter((x) => x.grupo !== "bolsas")
       .map((x) => `<button type="button" class="op op--prenda${(x.familia ? x.familia === p.familia : x.id === E.p) ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.familia ? x.familia === p.familia : x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombreFamilia || x.nombre)}</span></button>`)
-      .join("") + `<button type="button" class="op op--prenda${p.grupo === "bolsas" ? " on" : ""}" data-elegir-bolsas aria-pressed="${p.grupo === "bolsas"}"><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>Bolsas</span></button>`;
+      .join("") + (bolsas.length ? `<button type="button" class="op op--prenda${p.grupo === "bolsas" ? " on" : ""}" data-elegir-bolsas aria-pressed="${p.grupo === "bolsas"}"><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>Bolsas</span></button>` : "");
     $("#modeloBolsaCampo").hidden = p.grupo !== "bolsas";
     $("#modeloBolsa").innerHTML = bolsas.map((x) => `<option value="${esc(x.id)}"${x.id === p.id ? " selected" : ""}>${esc(x.nombre)} · ${esc(x.medidas)}</option>`).join("");
     $("#siluetaCampo").hidden = variantes(p).length < 2;
@@ -744,7 +744,7 @@
 
   $("#oPrenda").addEventListener("click", (e) => {
     if (e.target.closest("[data-elegir-bolsas]")) {
-      const p = pAct().grupo === "bolsas" ? pAct() : prod(grupoBolsas.productoInicial);
+      const p = pAct().grupo === "bolsas" ? pAct() : prod(grupoBolsas.productoInicial) || bolsas[0];
       transicion = true;
       E.dx = E.dy = 0;
       abrirEnTaller({ p: p.id, c: p.colores[0] });

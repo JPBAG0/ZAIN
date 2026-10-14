@@ -185,3 +185,7 @@ img/fotos/          fotos de técnicas y de la sección «Empresas»
 img/zain-logo.svg   logo en vector
 CLAUDE.md           instrucciones para Claude Code
 ```
+
+## Altas de catálogo, renders y talleres
+
+/gestion-zain incluye altas de productos/categorías y acceso de talleres por partida. Los productos nuevos empiezan como borradores y el render requiere revisión. Consultar docs/RENDERS-LOCALES.md y docs/TALLERES.md. /taller-zain tiene sesión separada y muestra únicamente trabajos asignados.

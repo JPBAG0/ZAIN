@@ -18,11 +18,11 @@ createServer(async(req,res)=>{
       res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));return;
     }
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return;}
-    let path=decodeURIComponent(url.pathname);if(path==='/')path='/index.html';if(['/pedidos','/gestion-zain','/mi-pedido'].includes(path))path+='.html';
+    let path=decodeURIComponent(url.pathname);if(path==='/')path='/index.html';if(['/pedidos','/gestion-zain','/mi-pedido','/taller-zain'].includes(path))path+='.html';
     // Sirve exclusivamente la página y sus recursos. Nunca el código del servidor.
-    if(path.includes('\\')||path.split('/').some(x=>x.startsWith('.'))||!/^\/(?:index\.html|pedidos\.html|gestion-zain\.html|mi-pedido\.html|robots\.txt|favicon\.ico|(?:js|css|img)\/[^?]+)$/.test(path)){res.writeHead(404);res.end('No encontrado');return;}
+    if(path.includes('\\')||path.split('/').some(x=>x.startsWith('.'))||!/^\/(?:index\.html|pedidos\.html|gestion-zain\.html|mi-pedido\.html|taller-zain\.html|robots\.txt|favicon\.ico|(?:js|css|img)\/[^?]+)$/.test(path)){res.writeHead(404);res.end('No encontrado');return;}
     const file=await realpath(resolve(root,'.'+path));const realRoot=await realpath(root);
     if(!file.startsWith(realRoot+sep)){res.writeHead(404);res.end();return;}
-    const data=await readFile(file);res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer',...(['pedidos','gestion-zain','mi-pedido'].some(p=>path==='/'+p+'.html')?{'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'}:{})});res.end(req.method==='HEAD'?undefined:data);
+    const data=await readFile(file);res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer',...(['pedidos','gestion-zain','mi-pedido','taller-zain'].some(p=>path==='/'+p+'.html')?{'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'}:{})});res.end(req.method==='HEAD'?undefined:data);
   }catch{res.writeHead(404);res.end('No encontrado');}
 }).listen(port,process.env.HOST||'127.0.0.1',()=>console.log('ZAIN listo en el puerto '+port));

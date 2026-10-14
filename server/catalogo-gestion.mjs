@@ -1,5 +1,6 @@
+import {publicNewProduct} from './catalogo-altas.mjs';
 // Proyección del catálogo; el render, SKU ZAIN, paletas y tallas quedan protegidos.
-export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','foto_id','tecnicas']);
+export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','foto_id','tecnicas','categoria']);
 export function normalizeChanges(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||!Object.keys(input).length)throw Error('Faltan los cambios del modelo.');
  const result={};
@@ -9,7 +10,7 @@ export function normalizeChanges(input){
   if(key==='activo'){if(typeof val!=='boolean')throw Error('Actividad inválida.');result[key]=val;continue;}
   if(key==='gramaje'){if(!Number.isInteger(val)||val<1||val>2000)throw Error('Gramaje inválido.');result[key]=val;continue;}
   if(key==='foto_id'){if(val!==null&&!/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(val))throw Error('Foto inválida.');result[key]=val;continue;}
-  const limits={nombre:120,descripcion:900,especificaciones:2400,tejido:120,composicion:250,medidas:300,disponibilidad:300,proveedor:120,sku_proveedor:120};
+  const limits={nombre:120,categoria:80,descripcion:900,especificaciones:2400,tejido:120,composicion:250,medidas:300,disponibilidad:300,proveedor:120,sku_proveedor:120};
   if(typeof val!=='string'||val.length>limits[key]||/[\x00-\x08\x0b-\x1f\x7f]/.test(val))throw Error('Revisa '+key+'.');
   if(key==='nombre'&&!val.trim())throw Error('El nombre no puede quedar vacío.');
   result[key]=val.trim();
@@ -24,11 +25,12 @@ export function resolveInternal(base,editions){
   if(d.tecnicas!==undefined){p.tecnicas=[...d.tecnicas];p.tecnicasNota='Técnicas disponibles: '+p.tecnicas.map(id=>catalog.tecnicas.find(t=>t.id===id).nombre).join(', ')+'. Acabado y área de impresión se confirman al cotizar.';}
   if(d.activo!==undefined)p.activo=d.activo;
   if(d.nombre!==undefined){p.nombreFamiliaComercial=d.nombre;p.nombreComercial=d.nombre+(p.silueta?' · '+p.silueta:'');}
-  for(const key of ['descripcion','especificaciones','tejido','gramaje','disponibilidad'])if(d[key]!==undefined)p[key]=d[key];
+  for(const key of ['descripcion','especificaciones','tejido','gramaje','disponibilidad','categoria'])if(d[key]!==undefined)p[key]=d[key];
   if(d.composicion!==undefined){if(d.composicion!==p.composicion)p.composicionColor={};p.composicion=d.composicion;}
   if(d.medidas!==undefined&&d.medidas!==p.medidas){p.medidas=d.medidas;p.dimensiones=null;}
-  p.proveedorCompras=d.proveedor??p.fabricante??'';
-  p.skuProveedor=d.sku_proveedor??p.codigoFabricante??'';
+  p.proveedorCompras=d.proveedor??p.proveedorCompras??p.fabricante??'';
+  p.skuProveedor=d.sku_proveedor??p.skuProveedor??p.codigoFabricante??'';
+  if(p.creadoGestion)p.grupo=p.categoria==='Bolsas'?'bolsas':null;
  }
  catalog.productosHistoricos=catalog.productos.filter(p=>p.activo===false);
  return catalog;
@@ -37,13 +39,15 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  const copy=structuredClone(basePublic),bySku=new Map([...copy.productos,...copy.productosHistoricos].map(p=>[p.sku,p]));
  const photoMap=new Map(photos.map(f=>[f.id,f])),all=[];
  for(const p of internal.productos){
-  const pub=bySku.get(p.sku);if(!pub)continue;
+  if(p.creadoGestion&&!p.publicado&&p.activo===false)continue;
+  const pub=bySku.get(p.sku)||(p.creadoGestion?publicNewProduct(p):null);if(!pub)continue;
+  pub.categoria=p.categoria;pub.foto=p.creadoGestion?p.foto:pub.foto;
   pub.tecnicas=[...p.tecnicas];pub.tecnicasNota=p.tecnicasNota||pub.tecnicasNota;
   pub.activo=p.activo!==false;pub.nombre=p.nombreComercial||pub.nombre;pub.nombreFamilia=p.nombreFamiliaComercial||pub.nombreFamilia;
   for(const key of ['descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad'])if(p[key]!==undefined)pub[key]=structuredClone(p[key]);
   // Las claves de composición por color conservan los IDs públicos, no códigos internos.
   if(Object.keys(p.composicionColor||{}).length===0)pub.composicionColor={};
-  else pub.composicionColor=bySku.get(p.sku).composicionColor;
+  else pub.composicionColor=bySku.get(p.sku)?.composicionColor||{};
   if(p.dimensiones===null)pub.dimensiones=null;
   const photo=photoMap.get(p.fotoReferenciaId);
   if(photo&&photo.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(photo.objeto))pub.fotoModelo=storageBase+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto;
@@ -54,7 +58,9 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  copy.muestrasPortada=(basePublic.muestrasPortada||[]).filter(m=>copy.productos.some(p=>p.id===m.p)).map(m=>{const p=copy.productos.find(p=>p.id===m.p);return {...m,t:p.tecnicas.includes(m.t)?m.t:p.tecnicas[0]};});
  if(!copy.muestrasPortada.length&&copy.productos.length){const p=copy.productos[0];copy.muestrasPortada=[{p:p.id,c:p.colores[0],t:p.tecnicas[0],z:p.zonas[0].id,cm:Math.min(9,p.zonas[0].max)}];}
  const bag=copy.productos.find(p=>p.id==='bolsa-expo')||copy.productos.find(p=>p.grupo==='bolsas');
- if(bag)copy.grupos.bolsas.foto=bag.foto;
- return {productos:copy.productos,productosHistoricos:copy.productosHistoricos,categoriasCatalogo:copy.categoriasCatalogo,muestrasPortada:copy.muestrasPortada,grupos:copy.grupos};
+ if(bag){copy.grupos.bolsas.foto=bag.foto;copy.grupos.bolsas.productoInicial=bag.id;}
+ const newIDs=new Set(all.filter(p=>p.creadoGestion).flatMap(p=>p.colores));
+ copy.colores.push(...internal.colores.filter(c=>newIDs.has(c.id)).map(({id,nombre,hex})=>({id,nombre,hex})));
+ return {colores:copy.colores,productos:copy.productos,productosHistoricos:copy.productosHistoricos,categoriasCatalogo:copy.categoriasCatalogo,muestrasPortada:copy.muestrasPortada,grupos:copy.grupos};
 }
 export const stable=x=>JSON.stringify(x,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.keys(v).sort().map(k=>[k,v[k]])):v);

@@ -1,0 +1,11 @@
+# ZAIN — talleres por partida
+Vigente: 14-oct-2026. Acceso /taller-zain; autorización desde Gestión → Talleres.
+
+Un taller puede tener una técnica: Bordado, DTF o Serigrafía. Registrar su nombre y correo autorizado. Crear su cuenta en Supabase Auth con ese mismo correo, sin compartir contraseñas en notas/chat. El correo debe estar confirmado. El alta de un taller no crea una cuenta de Auth ni manda invitaciones. Juan Pablo todavía no tiene el correo del amigo de bordado: se deja cero talleres autorizados.
+
+Puede elegirse un taller principal por técnica para recibir partidas en próximas confirmaciones. No asigna retrospectivamente pedidos existentes. En una ficha confirmada o en producción se puede asignar manualmente cada selección al taller compatible. Un pedido mixto se divide por el índice canónico de sus selecciones. Suspender el acceso lo bloquea inmediatamente en futuras consultas.
+El taller ve únicamente folio, fecha de asignación, SKU ZAIN, nombre comercial, color, talla/cantidad, técnica, ubicación, tamaño/color/Pantone del logo, medidas y sus archivos. No recibe el total global, otras selecciones, notas internas, contactos del cliente ni marca/SKU de compras. Las notas libres del cliente se reservan al equipo porque pueden contener datos personales; el equipo coordina aclaraciones necesarias.
+Puede descargar solo el logo/render correspondientes a su partida y marcar Aceptado, En proceso o Listo con control de versión. Esto no modifica el estado del pedido del cliente. Los enlaces de archivos caducan en 120 segundos. Cancelar o mover el pedido a papelera retira su acceso; reasignarlo a otro taller también lo retira.
+Notificaciones disponibles: contador de trabajos nuevos en la bandeja al entrar o actualizar. Correo/WhatsApp automáticos siguen pendientes, sin proveedor configurado ni mensajes enviados.
+Las tablas son privadas, RLS sin políticas de acceso directo, privilegios revocados a anon/authenticated; API valida JWT con Auth, correo confirmado y lista aprobada del taller, nunca user_metadata. Equipo y taller tienen sesiones separadas. Las rutas no reemplazan permisos.
+Validación: fixtures de pedido mixto, cuentas ajenas, cuenta suspendida, correo no confirmado, índices manipulados, cancelación/papelera y conflictos de versión. Navegador local 390×844 y 1280×800 sin datos reales.

@@ -1,3 +1,7 @@
+# Altas propias — decisión vigente 14-oct-2026
+
+Se pueden crear productos y categorías desde Gestión → Catálogo. Elegir colores, tallas, técnicas y cantidades; referencias de compras privadas. Tres opciones de imagen: reutilizar, subir render transparente o solicitar a Codex local. Cada producto empieza como borrador oculto. Revisar la imagen y activar manualmente; render protegido tras primera publicación. SKU ZN-NP generado por servidor. Ver RENDERS-LOCALES.md y TALLERES.md.
+
 # Catálogo administrable de ZAIN
 
 Actualizado: 14-oct-2026. Esta operación prevalece sobre la reactivación manual descrita en documentación anterior.

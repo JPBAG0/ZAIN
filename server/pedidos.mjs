@@ -2,6 +2,8 @@ import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto
 import { Buffer } from 'node:buffer';
 import C from './config-interno.cjs';
 import PublicC from '../js/config.js';
+import {createWorkshop} from './talleres.mjs';
+import {expandCatalog,normalizeNewProduct,normalCategory} from './catalogo-altas.mjs';
 import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-gestion.mjs';
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -44,6 +46,17 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
         fuente:p.fuente,renderOrientativo:p.renderOrientativo,
         detalleMedidas:'Medidas por talla: ancho plano y largo según la guía Yazbek. No es un área de impresión.',
       });
+    }
+    if(p.creadoGestion){
+      const col=colors.find(c=>c.id===x.colorId&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
+      const zone=p.zonas.find(z=>z.nombre===String(x.zona||'').replace(/ \(posición ajustada\)$/,''));
+      if(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>zone.max)fail(400,'Revisa ubicación y tamaño del logo.');
+      if(p.tallas.length){
+        const counts=x.tallasDetalle;
+        if(!counts||typeof counts!=='object'||Array.isArray(counts)||Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1)||Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma.');
+        item.tallasDetalle=Object.fromEntries(p.tallas.filter(t=>counts[t]).map(t=>[t,counts[t]]));item.tallas=p.tallas.filter(t=>counts[t]).map(t=>t+' '+counts[t]).join(' · ');
+      }
+      Object.assign(item,{silueta:p.silueta,renderOrientativo:true});
     }
     if(snapshot)Object.assign(item,{nombreZain:p.nombreComercial||p.nombre,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??"",proveedor:p.proveedorCompras??p.fabricante??""});
     return item;
@@ -91,21 +104,38 @@ export function createHandler(env={}, fetcher=fetch) {
   };
 
   const catalogEnabled=env.ZAIN_CATALOGO_ENABLED==='true';
-  const catalogRows=()=>sb('/rest/v1/zain_catalogo_ediciones?select=producto_id,cambios,version&limit=200');
-  const catalogPhotos=async rows=>{const ids=[...new Set(rows.map(r=>r.cambios?.foto_id).filter(id=>UUID.test(id||'')))];return ids.length?sb('/rest/v1/zain_catalogo_fotos?id=in.('+ids.join(',')+')&select=id,producto_id,objeto'):[];};
-  const currentCatalog=async()=>resolveInternal(C,catalogEnabled?await catalogRows():[]);
+  const altasEnabled=env.ZAIN_CATALOGO_ALTAS_ENABLED==='true';
+  const paged=async path=>{
+    const out=[];for(let offset=0;offset<5000;offset+=200){const rows=await sb(path+'&limit=200&offset='+offset);out.push(...rows);if(rows.length<200)return out;}
+    fail(503,'El catálogo excede la capacidad de esta vista.');};
+  const catalogRows=()=>altasEnabled?paged('/rest/v1/zain_catalogo_ediciones?select=producto_id,cambios,version&order=producto_id.asc'):sb('/rest/v1/zain_catalogo_ediciones?select=producto_id,cambios,version&limit=200');
+  const catalogPhotos=async(rows,products=[])=>{
+    const ids=[...new Set([...rows.map(r=>r.cambios?.foto_id),...products.map(p=>p.datos.render_id)].filter(id=>UUID.test(id||'')))],out=[];
+    for(let i=0;i<ids.length;i+=100)out.push(...await sb('/rest/v1/zain_catalogo_fotos?id=in.('+ids.slice(i,i+100).join(',')+')&select=id,producto_id,objeto'));return out;};
+  const catalogState=async()=>{
+    const rows=catalogEnabled?await catalogRows():[];
+    const [products,categories]=altasEnabled?await Promise.all([paged('/rest/v1/zain_productos_gestion?select=id,sku,datos,publicado_at&order=id.asc'),paged('/rest/v1/zain_categorias_gestion?select=nombre&order=nombre.asc')]):[[],[]];
+    const photos=await catalogPhotos(rows,products);
+    const expanded=altasEnabled?expandCatalog(C,products,categories,photos,PublicC,base):C;
+    return {rows,products,categories,photos,cat:resolveInternal(expanded,rows)};};
+  const currentCatalog=async()=>(await catalogState()).cat;
+  const knownProduct=async id=>(altasEnabled?(await currentCatalog()).productos:C.productos).find(p=>(p.idPublico||p.id)===id);
   const productInfo=(p,photos=[])=>{
     const original=[...PublicC.productos,...PublicC.productosHistoricos].find(x=>x.sku===p.sku),photo=photos.find(x=>x.id===p.fotoReferenciaId&&x.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(x.objeto));
-    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',fotoRender:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
+    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
   const owner=async body=>{const x=await row(body.id);if(x.archivado_at)fail(410,'Esta solicitud fue retirada. Contacta a ZAIN.');if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
-  const staff=async req=> {
+  const identity=async req=> {
     const token=req.headers.get('authorization')?.match(/^Bearer (.+)$/)?.[1];if(!token)fail(401,'Inicia sesión para consultar los pedidos.');
     const r=await fetcher(base+'/auth/v1/user',{headers:{apikey:publicKey,Authorization:'Bearer '+token},signal:AbortSignal.timeout(10000)});
     const u=await r.json().catch(()=>null);if(!r.ok||!u?.id)fail(401,'Tu sesión terminó. Vuelve a entrar.');
     if(!UUID.test(u.id)||!u.email_confirmed_at||typeof u.email!=='string')fail(403,'Cuenta no autorizada.');
+    return u;
+  };
+  const staff=async req=>{
+    const u=await identity(req);
     const access=await sb('/rest/v1/zain_accesos?email=eq.'+encodeURIComponent(u.email.toLowerCase())+'&activo=eq.true&select=nombre&limit=1');
     if(!access?.length)fail(403,'Esta cuenta no tiene acceso al panel de ZAIN.');
     let users=await sb('/rest/v1/zain_equipo?user_id=eq.'+u.id+'&select=user_id,nombre,activo&limit=1');
@@ -125,7 +155,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(x.archivado_at || !x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
     return x;
   };
-  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:p.nombreZain||product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
+  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:p.sku||product?.sku||'',nombre:p.nombreZain||product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
   const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
     items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
@@ -150,7 +180,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='GET'&&op==='config')return response(200,{activo:ready,...(ready?{supabaseUrl:base,publishableKey:publicKey}:{})});
       if(request.method==='GET'&&op==='catalogo-publico'){
         if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');
-        const rows=catalogEnabled?await catalogRows():[],cat=resolveInternal(C,rows),photos=await catalogPhotos(rows);
+        const {rows,cat,photos}=await catalogState();
         headers['Cache-Control']='no-store';
         return response(200,{catalogo:projectPublic(PublicC,cat,photos,base)});
       }
@@ -208,24 +238,120 @@ export function createHandler(env={}, fetcher=fetch) {
         const b=await jsonBody(request),x=await customer(b);
         return response(200,op==='consulta'?{pedido:customerRow(x)}:await signedFile(x,b));
       }
+      if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){
+        if(!altasEnabled)fail(503,'La cola local todavía no está habilitada.');
+        const b=await jsonBody(request);validateID(b.id);
+        if(!/^[a-f0-9]{64}$/.test(b.ticket||''))fail(403,'Ticket de render no válido.');
+        const jobs=await sb('/rest/v1/zain_render_cola?id=eq.'+b.id+'&select=id,producto_id,estado,worker_hash,worker_at,resultado_foto&limit=1'),job=jobs[0];
+        if(!job||job.estado!=='generando'||!equal(job.worker_hash,sha(b.ticket))||!Number.isFinite(new Date(job.worker_at).getTime())||Date.now()-new Date(job.worker_at).getTime()>2*3600000)fail(403,'Ticket de render no válido.');
+        if(op==='render-local-subida'){
+          if(!Number.isSafeInteger(b.size)||b.size<20||b.size>4*1024*1024||b.type!=='image/webp')fail(400,'Render WEBP inválido.');
+          let photoID=job.resultado_foto;
+          if(!photoID){photoID=randomUUID();const accepted=await sb('/rest/v1/rpc/zain_render_salida_local',{method:'POST',body:JSON.stringify({p_id:b.id,p_hash:sha(b.ticket),p_foto:photoID})});if(!accepted)fail(409,'La solicitud cambió.');}
+          const path=job.producto_id+'/'+photoID+'.webp';
+          const data=await sb('/storage/v1/object/upload/sign/zain-catalogo-fotos/'+path,{method:'POST',body:'{}'});
+          return response(200,{foto_id:photoID,url:storageURL(data.url).href});
+        }
+        if(!job.resultado_foto)fail(409,'Falta subir el render.');
+        const stored=await sb('/storage/v1/object/list/zain-catalogo-fotos',{method:'POST',body:JSON.stringify({prefix:job.producto_id,limit:1000,offset:0})});
+        const f=stored.find(x=>x.name===job.resultado_foto+'.webp');
+        if(!f||f.metadata?.mimetype!=='image/webp'||!Number.isSafeInteger(Number(f.metadata?.size))||Number(f.metadata?.size)<20||Number(f.metadata?.size)>4*1024*1024)fail(409,'La subida todavía no se pudo verificar.');
+        const image=await fetcher(base+'/storage/v1/object/public/zain-catalogo-fotos/'+job.producto_id+'/'+job.resultado_foto+'.webp',{headers:{Range:'bytes=0-19'},signal:AbortSignal.timeout(15000)});
+        if(!image.ok)fail(409,'No se pudo verificar el render.');const reader=image.body.getReader();let prefix=Buffer.alloc(0);while(prefix.length<20){const chunk=await reader.read();if(chunk.done)break;prefix=Buffer.concat([prefix,Buffer.from(chunk.value).subarray(0,20-prefix.length)]);}await reader.cancel();
+        if(prefix.length<20||prefix.toString('ascii',0,4)!=='RIFF'||prefix.toString('ascii',8,12)!=='WEBP'||prefix.readUInt32LE(4)+8!==Number(f.metadata.size))fail(400,'El render no es un archivo WEBP válido.');
+        const done=await sb('/rest/v1/rpc/zain_render_listo_local',{method:'POST',body:JSON.stringify({p_id:b.id,p_hash:sha(b.ticket)})});
+        if(!done)fail(409,'La solicitud cambió.');
+        return response(200,{estado:'revision'});
+      }
+
+      if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
 
+      if(request.method==='GET'&&op==='talleres-lista'){
+        if(env.ZAIN_TALLERES_ENABLED!=='true')return response(200,{talleres:[],habilitado:false});
+        return response(200,{talleres:await sb('/rest/v1/zain_talleres?select=id,email,nombre,tecnica,activo,principal,version&order=nombre.asc&limit=200'),habilitado:true});
+      }
+      if(request.method==='POST'&&op==='talleres-guardar'){
+        if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'Los talleres todavía no están habilitados.');
+        const b=await jsonBody(request);
+        if(b.id)validateID(b.id);
+        const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||typeof b.nombre!=='string'||!b.nombre.trim()||b.nombre.length>120||!['Bordado','DTF','Serigrafía'].includes(b.tecnica)||typeof b.activo!=='boolean'||typeof b.principal!=='boolean'||(b.id&&(!Number.isSafeInteger(b.version)||b.version<0)))fail(400,'Revisa los datos del taller.');
+        const out=await sb('/rest/v1/rpc/zain_guardar_taller',{method:'POST',body:JSON.stringify({p_id:b.id||null,p_version:b.version||0,p_email:email,p_nombre:b.nombre.trim(),p_tecnica:b.tecnica,p_activo:b.activo,p_principal:b.principal,p_actor:user.id})});
+        if(!out)fail(409,'El taller cambió. Actualiza antes de guardar.');return response(200,{taller:out});
+      }
+      if(request.method==='GET'&&op==='talleres-partidas'){
+        if(env.ZAIN_TALLERES_ENABLED!=='true')return response(200,{partidas:[]});
+        const id=validateID(url.searchParams.get('id'));await row(id);
+        return response(200,{partidas:await sb('/rest/v1/zain_partidas_taller?pedido_id=eq.'+id+'&select=id,indice,taller_id,tecnica,estado,version&order=indice.asc')});
+      }
+      if(request.method==='POST'&&op==='talleres-asignar'){
+        if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'Los talleres todavía no están habilitados.');
+        const b=await jsonBody(request);validateID(b.id);validateID(b.taller_id);
+        const x=await row(b.id),ts=await sb('/rest/v1/zain_talleres?id=eq.'+b.taller_id+'&activo=eq.true&select=id,tecnica&limit=1');
+        if(x.archivado_at||!x.guardado_at||!['confirmado','produccion'].includes(x.estado)||!Number.isSafeInteger(b.indice)||!x.items[b.indice]||ts[0]?.tecnica!==x.items[b.indice].tecnica)fail(400,'Confirma el pedido y elige un taller compatible.');
+        const out=await sb('/rest/v1/rpc/zain_asignar_partida',{method:'POST',body:JSON.stringify({p_pedido:b.id,p_indice:b.indice,p_taller:b.taller_id,p_actor:user.id})});return response(200,{asignacion:out});
+      }
+
+
+      if(request.method==='POST'&&op==='categoria-crear'){
+        if(!altasEnabled)fail(503,'Las altas de categorías todavía no están habilitadas.');
+        const b=await jsonBody(request);let name;try{name=normalCategory(b.nombre);}catch(e){fail(400,e.message);}
+        const state=await catalogState(),same=state.cat.categoriasCatalogo.find(n=>n.toLocaleLowerCase('es-MX')===name.toLocaleLowerCase('es-MX'));
+        if(same)return response(200,{nombre:same});
+        const data=await sb('/rest/v1/rpc/zain_crear_categoria',{method:'POST',body:JSON.stringify({p_nombre:name,p_actor:user.id})});
+        return response(200,{nombre:data.nombre});
+      }
+      if(request.method==='POST'&&op==='producto-crear'){
+        if(!altasEnabled)fail(503,'Las altas de productos todavía no están habilitadas.');
+        const b=await jsonBody(request);validateID(b.request_id);
+        const state=await catalogState();let d;try{d=normalizeNewProduct(b,state.cat.categoriasCatalogo,C.productos);}catch(e){fail(400,e.message);}
+        const result=await sb('/rest/v1/rpc/zain_crear_producto',{method:'POST',body:JSON.stringify({p_request:b.request_id,p_datos:d,p_hash:sha(stable(d)),p_actor:user.id})});
+        return response(200,{id:result.id,sku:result.sku});
+      }
+      if(request.method==='POST'&&op==='catalogo-render'){
+        if(!altasEnabled)fail(503,'Las altas todavía no están habilitadas.');
+        const b=await jsonBody(request),p=await knownProduct(b.id);
+        if(!p?.creadoGestion||!UUID.test(b.foto_id||'')||!Number.isSafeInteger(b.version))fail(400,'Referencia de render inválida.');
+        if(p.renderBloqueado)fail(409,'El render se conserva después de la primera publicación.');
+        const data=await sb('/rest/v1/rpc/zain_asignar_render',{method:'POST',body:JSON.stringify({p_producto:b.id,p_foto:b.foto_id,p_version:b.version,p_actor:user.id})});
+        if(!data)fail(409,'Otro miembro cambió el producto. Actualiza antes de continuar.');
+        return response(200,{guardado:true,version:data.version});
+      }
+      if(request.method==='POST'&&op==='render-solicitar'){
+        if(!altasEnabled)fail(503,'Las solicitudes de render todavía no están habilitadas.');
+        const b=await jsonBody(request),p=await knownProduct(b.id);validateID(b.request_id);
+        if(!p?.creadoGestion||!UUID.test(b.foto_id||''))fail(400,'Selecciona un producto nuevo y su fotografía.');
+        if(p.renderBloqueado)fail(409,'Ese producto ya fue publicado; su render está protegido.');
+        const data=await sb('/rest/v1/rpc/zain_solicitar_render',{method:'POST',body:JSON.stringify({p_producto:b.id,p_foto:b.foto_id,p_request:b.request_id,p_actor:user.id})});
+        return response(200,{solicitud:data});
+      }
+      if(request.method==='GET'&&op==='render-estados'){
+        if(!altasEnabled)return response(200,{solicitudes:[]});
+        const selected=url.searchParams.get('id');if(selected&&!await knownProduct(selected))fail(400,'Producto no disponible.');
+        const rows=await sb('/rest/v1/zain_render_cola?select=id,producto_id,estado,created_at,updated_at,error,resultado_foto&order=created_at.desc&limit=200'+(selected?'&producto_id=eq.'+encodeURIComponent(selected):''));
+        const ids=rows.map(x=>x.resultado_foto).filter(id=>UUID.test(id||''));const photos=ids.length?await sb('/rest/v1/zain_catalogo_fotos?id=in.('+ids.join(',')+')&select=id,producto_id,objeto'):[];
+        return response(200,{solicitudes:rows.map(x=>{const f=photos.find(f=>f.id===x.resultado_foto&&f.producto_id===x.producto_id);return {...x,url:x.estado==='revision'&&f&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(f.objeto)?base+'/storage/v1/object/public/zain-catalogo-fotos/'+f.objeto:null};})});
+      }
+
       if(request.method==='GET'&&op==='catalogo-lista'){
-        const rows=catalogEnabled?await catalogRows():[],cat=resolveInternal(C,rows),photos=await catalogPhotos(rows);
-        return response(200,{productos:cat.productos.map(p=>productInfo(p,photos)),editable:catalogEnabled,opcionesTecnicas:C.tecnicas.map(({id,nombre})=>({id,nombre}))});
+        const {rows,cat,photos}=await catalogState();
+        return response(200,{productos:cat.productos.map(p=>productInfo(p,photos)),editable:catalogEnabled,opcionesTecnicas:C.tecnicas.map(({id,nombre})=>({id,nombre})),categorias:cat.categoriasCatalogo,altas:altasEnabled,plantillas:[...PublicC.productos,...PublicC.productosHistoricos].map(p=>({id:p.id,nombre:p.nombre,sku:p.sku,foto:p.foto})),renderLocal:true});
       }
       if(request.method==='POST'&&op==='catalogo-guardar'){
         if(!catalogEnabled)fail(503,'La edición del catálogo todavía no está habilitada.');
-        const b=await jsonBody(request),p=C.productos.find(p=>(p.idPublico||p.id)===b.id);
+        const b=await jsonBody(request),p=await knownProduct(b.id);
         if(!p||!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Referencia de catálogo inválida.');
         let changes;try{changes=normalizeChanges(b.cambios);}catch(e){fail(400,e.message);}
+        if(changes.categoria!==undefined&&!(await currentCatalog()).categoriasCatalogo.includes(changes.categoria))fail(400,'Categoría no disponible.');
+        if(changes.activo===true&&p.creadoGestion&&!p.foto)fail(409,'Prepara y revisa el render antes de publicar.');
         const r=await sb('/rest/v1/rpc/zain_guardar_catalogo',{method:'POST',body:JSON.stringify({p_producto_id:b.id,p_version:b.version,p_cambios:changes,p_actor:user.id})});
         if(!r)fail(409,'Tu compañero modificó este modelo. Recárgalo antes de guardar.');
         return response(200,{guardado:true,version:r.version});
       }
       if(request.method==='POST'&&op==='catalogo-foto'){
         if(!catalogEnabled)fail(503,'La edición del catálogo todavía no está habilitada.');
-        const id=url.searchParams.get('id'),p=C.productos.find(p=>(p.idPublico||p.id)===id);
+        const id=url.searchParams.get('id'),p=await knownProduct(id);
         if(!p||request.headers.get('content-type')!=='image/webp')fail(400,'Usa una foto WEBP del producto.');
         const chunks=[],reader=request.body?.getReader();if(!reader)fail(400,'Falta la foto.');
         let bytes=0;while(true){const v=await reader.read();if(v.done)break;bytes+=v.value.length;if(bytes>4*1024*1024){await reader.cancel();fail(413,'La foto puede pesar hasta 4 MB.');}chunks.push(v.value);}
