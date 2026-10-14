@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/zain.css?v=15" />
+  <link rel="stylesheet" href="css/privacidad.css?v=1" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
     (function () {
@@ -309,6 +310,7 @@
     <div class="pie__datos" id="pieDatos"></div>
     <svg class="pie__marca" id="pieMarca" viewBox="0 0 370 150" fill="currentColor" aria-hidden="true"><path class="letra letra--espejo" d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z" /><path class="letra" fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z" /><path class="letra" d="M227 0H253V150H227Z" /><path class="letra letra--espejo" d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z" /></svg>
     <p class="pie__legal"><span id="anio"></span> ZAIN. Cotizaciones personalizadas según el producto, diseño y cantidad.</p>
+    <div class="privacidad-enlaces"><a href="/privacidad" data-privacidad hidden>Aviso de privacidad</a><button class="btn-texto" type="button" id="medicionCambiar" hidden>Preferencias de medición</button></div>
   </footer>
 
   <!-- ===================== PEDIDO (carrito) ===================== -->
@@ -399,11 +401,18 @@
     </symbol>
   </svg>
 
-  <script src="js/config.js?v=8"></script>
+  <section class="medicion" id="medicionPreferencias" aria-labelledby="medicionTitulo" hidden>
+    <h2 id="medicionTitulo">Tú eliges cómo medimos</h2>
+    <p>Con tu permiso, Google Ads usa cookies para medir qué anuncios generan solicitudes y clics a WhatsApp. Tus logos y el contenido de tu pedido no se envían a Google.</p>
+    <p>Puedes cotizar con cualquiera de las dos opciones y cambiar tu elección desde el pie de página. <a href="/privacidad">Aviso de privacidad</a>.</p>
+    <div class="medicion__acciones"><button class="btn btn--linea" type="button" id="medicionRechazar">Solo necesarias</button><button class="btn btn--tinta" type="button" id="medicionPermitir">Permitir medición</button></div>
+  </section>
+  <script src="js/config.js?v=9"></script>
+  <script src="js/medicion.js?v=1"></script>
   <script src="js/render.js?v=3"></script>
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
-  <script src="js/pedidos.js?v=2"></script>
-  <script src="js/zain.js?v=17"></script>
+  <script src="js/pedidos.js?v=3"></script>
+  <script src="js/zain.js?v=18"></script>
 </body>
 </html>

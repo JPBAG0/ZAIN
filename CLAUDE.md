@@ -2,6 +2,14 @@
 
 # ZAIN — instrucciones para Claude Code
 
+## Privacidad y medición preparada (13-oct-2026)
+
+- `docs/PRIVACIDAD-BORRADOR.md` y su HTML son borradores locales con responsable y domicilio pendientes. La ruta `docs/` sigue bloqueada. No publicar el borrador como aviso definitivo ni activar `privacidadPublicada` hasta completar la página pública `/privacidad`.
+- `medicion.activa=false` y los identificadores Google Ads están vacíos. `js/medicion.js` carga Google solo con consentimiento afirmativo, configuración válida y aviso publicado. Sigue `docs/MEDICION.md`; no activar campañas ni inventar IDs.
+- Solicitud guardada es captación, no venta ni WhatsApp enviado; propuesta principal. Clic WhatsApp es secundaria. No optimizar pujas con ambas como principales. Deduplicar por identificador técnico derivado y contar Una en Ads.
+- No enviar logos, notas, folios, identidad, nombres de archivo ni enlaces de seguimiento a Google. No instalar medición en acceso del equipo o ficha del cliente. La medición nunca bloquea la solicitud si falla.
+- Conservar Vercel Analytics agregado existente; no confundir sus visitas con conversiones de Ads. Los tests de medición usan una etiqueta simulada y no prueban recepción en una cuenta de Ads.
+
 ## Decisión vigente posterior: pedidos privados (13-oct-2026)
 
 - JP aprobó guardar solicitudes, logos originales y renders en un proyecto Supabase dedicado `Zain Pedidos`; los detalles operativos están en `docs/PEDIDOS.md`. Esta decisión reemplaza las instrucciones anteriores de archivos solo locales y Web Share.

@@ -12,6 +12,12 @@
   const ready=api('config').then(x=>{config=x;return x.activo;}).catch(er=>{configError=er;return false;});
   const reintentar=async()=>{config=await api('config');configError=null;return config.activo;};
   const guardarDraft=()=>{try{localStorage.setItem(key,JSON.stringify(draft));}catch{}};
+  const confirmar=async(recibo,items)=>{
+    const piezas=items.reduce((s,x)=>s+x.piezas,0);
+    dispatchEvent(new CustomEvent('zain:solicitud_guardada',{detail:{folio:recibo.folio,piezas}}));
+    try{await window.ZAINMedicion?.solicitud(recibo.id,piezas);}catch{} // La medición nunca bloquea la cotización.
+    return recibo;
+  };
   const enviar=async(items,progreso=()=>{})=> {
     await ready;if(!config.activo)throw new Error('El guardado en la nube todavía no está habilitado.');
     const files=[];
@@ -34,7 +40,7 @@
         progreso('Preparando tu enlace de seguimiento…');
         draft.recibo=await api('finalizar',{id:draft.id,token:draft.token});guardarDraft();
       }
-      return draft.recibo;
+      return confirmar(draft.recibo,items);
     }
     progreso('Guardando tu solicitud…');
     const owner={id:draft.id,token:draft.token};
@@ -50,8 +56,7 @@
       n++;
     }
     const recibo=await api('finalizar',owner);draft.recibo=recibo;guardarDraft();
-    dispatchEvent(new CustomEvent('zain:solicitud_guardada',{detail:{folio:recibo.folio,piezas:items.reduce((s,x)=>s+x.piezas,0)}}));
-    return recibo;
+    return confirmar(recibo,items);
   };
   window.ZAINPedidos={ready,activo:()=>config.activo,error:()=>configError,reintentar,enviar};
 })();

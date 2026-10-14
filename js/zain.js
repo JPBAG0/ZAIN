@@ -1502,6 +1502,7 @@
          <button class="btn btn--wa btn--ancho" type="button" id="compartirPedido" disabled>Preparando archivos…</button>
          <p class="pedido__archivos" id="archivosEstado" role="status"></p>
          <p class="pedido__nota" id="pedidoNota"></p>
+         ${C.privacidadPublicada ? '<p class="pedido__privacidad"><a href="/privacidad" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> · Usamos tu selección y archivos para atender esta cotización.</p>' : ''}
          <details class="pedido__alternativas" id="otrasFormas" hidden>
            <summary>Otra forma de enviar</summary>
            <div>
@@ -1565,6 +1566,7 @@
           $("#archivosEstado").textContent=`Solicitud ${receipt.folio} guardada. Confirma el envío del mensaje en WhatsApp.`;
         }
         dispatchEvent(new CustomEvent('zain:whatsapp_click',{detail:{piezas:snapshot.reduce((s,x)=>s+x.piezas,0)}}));
+        try{await window.ZAINMedicion?.whatsapp('pedido');}catch{} // Tiempo acotado; funciona también si Google está bloqueado.
         // Misma pestaña para evitar popups bloqueados después de subir los archivos.
         location.assign(wa(mensaje));
       }catch(er){

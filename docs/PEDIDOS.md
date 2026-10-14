@@ -41,6 +41,8 @@ Actualizado: 13-oct-2026. La venta y los precios se acuerdan por WhatsApp.
 
 ## Antes de Google Ads
 
+Preparación vigente: `docs/MEDICION.md`, `js/medicion.js`, `docs/PRIVACIDAD-BORRADOR.md`. Google Ads está desactivado; faltan responsable/domicilio del aviso e identificadores reales. El borrador no está disponible como aviso público. Pruebas: `node --test tests/*.test.mjs`, 26 aprobadas al 13-oct-2026.
+
 - Probar móvil y escritorio con un logo real de prueba y confirmar que el equipo pueda descargarlo desde la ficha.
 - Confirmar dominio y un alojamiento que admita uso comercial. Vercel Hobby es personal/no comercial: https://vercel.com/docs/plans/hobby . No se contrató ni cambió un plan de pago.
 - Completar aviso de privacidad del responsable para el almacenamiento de archivos; el texto del botón ya describe qué se guarda. Confirmar datos legales del negocio antes de redactar un aviso definitivo.

@@ -12,6 +12,15 @@
 const config = {
   marca: "ZAIN",
   pedidosApi: "https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos",
+  // Activar solo después de completar el aviso y obtener los IDs de ZAIN.
+  privacidadPublicada: false,
+  medicion: {
+    activa: false,
+    origenes: ["https://zain-amber-sigma.vercel.app"],
+    googleAdsId: "",
+    etiquetaSolicitud: "",
+    etiquetaWhatsApp: "",
+  },
 
   // ✏️ WhatsApp con lada de país, sin espacios ni signos. México: 52 + 10 dígitos.
   //    Ejemplo: "523312345678". Mientras esté vacío, los botones llevan a «Contacto».
