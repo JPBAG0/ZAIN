@@ -66,3 +66,7 @@ Guía: docs/CATALOGO-GESTION.md. Registro completo en el Cerebro de Dropbox.
 
 
 SQL adicional: supabase/catalogo-tecnicas.sql. El render blanco tiene procedencia/hash en docs/IMAGEN-PREMIUM-BLANCA.json.
+
+## Cierre de esta actualización — 14-oct-2026
+
+Función Supabase v14 ACTIVE y migración catalogo_tecnicas_editables_zain aplicada. Publicación base cafcf5c, Vercel success. Técnicas múltiples y reflejo en personalizador probados con datos locales; 59 pruebas aprobadas. El botón para regresar al inicio tiene estilos aislados del control de carga de logos; regreso suave/inmediato y carga de logo sin cambios de distribución comprobados en escritorio y celular. No se cambiaron técnicas de referencias reales para probar.
