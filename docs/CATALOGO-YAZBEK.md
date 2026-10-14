@@ -1,5 +1,10 @@
 # Catálogo ZAIN — prendas Yazbek
 
+## Correccion de JP: conservar originales y agregar prendas IA (13-oct-2026)
+
+JP rechazo sustituir sus modelos existentes por personas y esquemas. Las seis prendas originales y las bolsas se restablecen sin modificar sus imagenes. Las 14 familias Yazbek se incorporaran adicionalmente con mockups IA de prendas solas, blancos y transparentes, aptos para tintado y logo. No presentar un mockup IA como fotografia oficial ni replica exacta verificada. Mientras se generan, el catalogo publico original permanece activo; los datos Yazbek y solicitudes guardadas se conservan. Esta decision posterior prevalece sobre las secciones anteriores.
+
+
 Selección y verificación: 13-oct-2026. Fuente proporcionada por JP: `catalogo.pdf`, **52 páginas físicas**, leídas completas; los números siguientes no son los impresos en el folleto. La edición/año del fabricante no se infiere del nombre del encargo.
 
 ## Decisión comercial

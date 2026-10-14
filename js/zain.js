@@ -12,30 +12,19 @@
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const cm = (n) => (Math.round(n * 10) / 10).toFixed(1) + " cm";
-  const prod = (id) => C.productos.find((p) => p.id === id) || C.productosHistoricos?.find((p) => p.id === id);
-  const familias = C.productos.filter((p, i, all) => !p.familia || all.findIndex(x => x.familia === p.familia) === i);
-  const variantes = (p) => p.familia ? C.productos.filter(x => x.familia === p.familia) : [p];
-  const nombreColor = (c) => c.codigo ? `${c.nombre} · ${c.codigo}` : c.nombre;
-  const tallasPedido = (p, counts) => Object.fromEntries(p.tallas.filter(t => counts[t] > 0).map(t => [t, Number(counts[t])]));
+  const prod = (id) => C.productos.find((p) => p.id === id);
   const color = (id) => C.colores.find((c) => c.id === id);
   const tecnica = (id) => C.tecnicas.find((t) => t.id === id);
   const minimo = (p) => p.minimoPiezas || 0;
   const pasoCantidad = (p) => p.pasoPiezas || 1;
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
   const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
-  const prendaTenida = (p, img, idColor, S, esquema = false) => {
-    if (p.fabricante && !esquema) {
-      const cv = ZR.lienzo(S); cv.getContext("2d").drawImage(img, 0, 0, S, S); return cv;
-    }
-    return ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
-  };
-  const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table><small>Tolerancia: ancho ±${p.tolerancia.ancho} cm; largo ±${p.tolerancia.largo} cm. Fuente: Yazbek, pág. PDF ${p.fuente.tablaTallas}.</small></details>`;
-  const varianteSelector = (p, id, attr = "") => variantes(p).length < 2 ? "" : `<label class="campo producto__variante"><span>Silueta</span><select ${id ? `id="${id}"` : ""} ${attr} aria-label="Silueta de ${esc(p.nombreFamilia)}">${variantes(p).map(x => `<option value="${x.id}"${x.id === p.id ? " selected" : ""}>${x.silueta} · ${x.codigoFabricante}</option>`).join("")}</select></label>`;
+  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
   const medidasTexto = (p) => {
     const d = p.dimensiones;
     return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : "";
   };
-  const fichaProducto = (p, compacto = false) => p.fabricante ? `<div class="producto__datos"><b>${esc(p.fabricante)} · ${esc(p.codigoFabricante)} · ${esc(p.silueta)}</b><span>${esc(p.tejido)} · ${p.gramaje} g/m²</span><span>${esc(p.composicion)}${Object.keys(p.composicionColor).length ? "; Gris Jaspe 102: 90% algodón / 10% poliéster" : ""}</span></div><p class="producto__disponibilidad">${esc(p.disponibilidad)}</p><p class="producto__nota">Foto de referencia: ${esc(p.fotoReferenciaColor)}.${compacto ? "" : " La fotografía conserva su tono original; el color elegido se muestra en el esquema."}</p>${compacto ? "" : `<p class="producto__nota">${esc(p.tecnicasNota)}</p>`}${tablaMedidas(p)}` : p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
+  const fichaProducto = (p) => p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
     <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${minimo(p) ? `<p class="producto__nota">${esc(reglaCantidad(p))}</p>` : ""}${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
   const wa = (texto) => (C.whatsapp ? `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(texto)}` : "#contacto");
   const almacen = {
@@ -153,12 +142,13 @@
      lo acomoda en la prenda más cercana.
      ===================================================================== */
   const MUESTRAS = [
-    { p: "yazbek-c1502", c: "yazbek-421", t: "serigrafia", z: "pecho-izq", cm: 9 },
-    { p: "yazbek-c1302", c: "yazbek-426", t: "serigrafia", z: "centro", cm: 22 },
-    { p: "yazbek-c0605", c: "yazbek-703", t: "bordado", z: "pecho-izq", cm: 9 },
-    { p: "yazbek-c0701", c: "yazbek-230", t: "bordado", z: "centro", cm: 20 },
+    { p: "polo", c: "marino", t: "bordado", z: "pecho-izq", cm: 9 },
+    { p: "playera", c: "negro", t: "serigrafia", z: "centro", cm: 22 },
+    { p: "gorra", c: "negro", t: "bordado", z: "frente", cm: 10, e: 0.66 },
+    { p: "sudadera", c: "oxford", t: "dtf", z: "centro", cm: 20 },
+    { p: "chamarra", c: "botella", t: "bordado", z: "pecho-izq", cm: 9 },
     { p: "bolsa-expo", c: "bolsa-expo-rojo", t: "serigrafia", z: "frente", cm: 15, e: 0.9 },
-    { p: "yazbek-d0607", c: "yazbek-426", t: "bordado", z: "pecho-izq", cm: 8 },
+    { p: "camisa", c: "blanco", t: "bordado", z: "pecho-izq", cm: 8 },
   ].filter((m) => prod(m.p) && color(m.c));
 
   const escena = $("#escena");
@@ -192,7 +182,7 @@
     const zona = p.zonas.find((z) => z.id === pz.m.z) || p.zonas[0];
     const tinta = ZR.luz(ZR.hexARgb(col.hex)) > 0.55 ? "#141416" : "#f4f4f2";
     const k = S / 1000;
-    if (!p.fabricante) ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S });
+    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S });
     // gorras y bolsas llenan su foto: se encogen para que guarden proporción con la ropa
     const e = pz.m.e || 1;
     const d = pz.cv.getContext("2d");
@@ -292,8 +282,8 @@
     const poner = () => {
       $("#fPrenda").textContent = p.nombre;
       $("#fColor").textContent = color(m.c).nombre;
-      $("#fTecnica").textContent = p.fabricante ? "Fotografía del catálogo Yazbek" : `${tecnica(m.t).nombre} · ${z.nombre.toLowerCase()}`;
-      $("#fMedida").textContent = p.fabricante ? "Personaliza tu vista previa" : cm(m.cm);
+      $("#fTecnica").textContent = `${tecnica(m.t).nombre} · ${z.nombre.toLowerCase()}`;
+      $("#fMedida").textContent = cm(m.cm);
       $("#ficha").classList.remove("cambia");
     };
     clearTimeout(tFicha);
@@ -411,7 +401,7 @@
     $("#catalogoGrupo").hidden = !grupo;
     $("#filtros").hidden = !!grupo;
     $("#catTitulo").textContent = grupo ? grupoBolsas.nombre : "Catálogo";
-    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Prendas Yazbek y bolsas de proveedor. Las fotos conservan su color original; elige el tono en cada ficha y personaliza una vista orientativa. Técnicas, disponibilidad y cantidades se confirman al cotizar.";
+    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Arma tu pedido y solicita una cotización por WhatsApp.";
     $$("#rejilla .producto").forEach((art) => {
       const p = prod(art.dataset.id);
       art.hidden = art.dataset.grupo ? !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
@@ -446,15 +436,29 @@
     pintarCatalogo();
   });
 
-  const tarjeta = (p) => `<article class="producto${p.fabricante ? " producto--yazbek" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
-    <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}${p.fabricante ? "; foto de referencia en " + esc(p.fotoReferenciaColor) : ""}" role="img"></canvas>
-      ${p.fabricante ? '<span class="producto__origen">Foto Yazbek</span>' : ""}<button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
-    ${varianteSelector(p, "", "data-variante")}
-    <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div>
-    <p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p>
-    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
-    <div class="producto__pie"><div class="producto__precio"><b>Cotiza por WhatsApp</b></div><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></article>`;
-  $("#rejilla").innerHTML = familias.map(tarjeta).join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
+  $("#rejilla").innerHTML = C.productos
+    .map((p) => {
+      const cols = p.colores.map(color).filter(Boolean);
+      return `<article class="producto" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
+        <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}" role="img"></canvas>
+          <button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+        </div>
+        <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombre)}">
+          ${cols.map((c, i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(c.nombre)}" title="${esc(c.nombre)}"></button>`).join("")}
+        </div>
+        <div class="producto__txt">
+          <h3>${esc(p.nombre)}</h3>
+          <p>${esc(p.descripcion)}</p>
+          ${fichaProducto(p)}
+          <ul class="producto__tec">${p.tecnicas.map((t) => `<li>${esc(tecnica(t)?.nombre)}</li>`).join("")}</ul>
+        </div>
+        <div class="producto__pie">
+          <div class="producto__precio"><b>Cotiza por WhatsApp</b></div>
+          <button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button>
+        </div>
+      </article>`;
+    })
+    .join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
       <div class="producto__foto"><img src="${esc(grupoBolsas.foto)}" alt="Bolsas ecológicas del catálogo" width="1000" height="1000" loading="lazy" /></div>
       <div class="producto__colores"><span>${bolsas.length} modelos</span></div>
       <div class="producto__txt"><h3>${esc(grupoBolsas.nombre)}</h3><p>${esc(grupoBolsas.descripcion)}</p><p class="producto__disponibilidad">Consulta disponibilidad.</p></div>
@@ -463,10 +467,8 @@
 
   const pintarTarjeta = async (art, idColor) => {
     const p = prod(art.dataset.id);
-    art.dataset.color = idColor;
     const cv = $("canvas", art);
     const img = await ZR.cargar(p.foto);
-    if (art.dataset.id !== p.id || art.dataset.color && art.dataset.color !== idColor) return;
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
     g.drawImage(prendaTenida(p, img, idColor, 560), 0, 0);
@@ -476,7 +478,6 @@
       cv.classList.add("cambia");
     }
     $(".producto__foto", art).style.setProperty("--c", color(idColor).hex);
-    $(".producto__tono", art).textContent = "Color elegido: " + nombreColor(color(idColor));
     art.dataset.color = idColor;
     art.classList.add("lista");
   };
@@ -486,7 +487,7 @@
         if (!en.isIntersecting) return;
         if (en.target.dataset.grupo) return;
         ioTarjetas.unobserve(en.target);
-        pintarTarjeta(en.target, en.target.dataset.color || prod(en.target.dataset.id).colores[0]);
+        pintarTarjeta(en.target, prod(en.target.dataset.id).colores[0]);
       }),
     { rootMargin: "300px" },
   );
@@ -513,24 +514,14 @@
       abrirEnTaller({ p: p.id, c: art.dataset.color || p.colores[0] });
     }
   });
-  $("#rejilla").addEventListener("change", (e) => {
-    const sel = e.target.closest("[data-variante]"); if (!sel) return;
-    const art = sel.closest(".producto"), before = prod(art.dataset.id), p = prod(sel.value);
-    if (!p || p.familia !== before.familia) return;
-    const chosen = p.colores.includes(art.dataset.color) ? art.dataset.color : p.colores[0];
-    const holder = document.createElement("div"); holder.innerHTML = tarjeta(p); const next = holder.firstElementChild;
-    ioTarjetas.unobserve(art); art.replaceWith(next); ioTarjetas.observe(next);
-    $$("[data-color]", next).forEach(x => { x.classList.toggle("on", x.dataset.color === chosen); x.setAttribute("aria-checked", x.dataset.color === chosen); });
-    pintarTarjeta(next, chosen); pintarCatalogo();
-  });
   pintarCatalogo();
 
   /* =====================================================================
      PERSONALIZADOR
      ===================================================================== */
   const E = {
-    p: "yazbek-c0550",
-    c: "yazbek-414",
+    p: "polo",
+    c: "marino",
     t: "bordado",
     z: "pecho-izq",
     cm: 9,
@@ -556,9 +547,9 @@
 
   const pAct = () => prod(E.p);
   const zAct = () => pAct().zonas.find((z) => z.id === E.z) || pAct().zonas[0];
-  const maxLogo = (z) => Math.round(z.max * (z.orientativa ? 1 : C.escalaMaxLogo || 1) * 2) / 2;
+  const maxLogo = (z) => Math.round(z.max * (C.escalaMaxLogo || 1) * 2) / 2;
   const nombreTinta = () => E.tinta === "original" ? "Original" : (C.tintasLogo.find((c) => c.hex === E.tinta)?.nombre || "Color personalizado");
-  $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--chico" data-tinta="${c.hex}" aria-pressed="false"><i style="--c:${c.hex}"></i>${esc(nombreColor(c))}</button>`).join("");
+  $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--chico" data-tinta="${c.hex}" aria-pressed="false"><i style="--c:${c.hex}"></i>${esc(c.nombre)}</button>`).join("");
   const sincronizarTinta = () => {
     $$("#oTinta [data-tinta]").forEach((x) => {
       const on = x.dataset.tinta === E.tinta;
@@ -577,25 +568,16 @@
     if (!p.tecnicas.includes(E.t)) E.t = p.tecnicas[0];
     if (!p.zonas.some((z) => z.id === E.z)) E.z = p.zonas[0].id;
 
-    $("#oPrenda").innerHTML = familias.filter((x) => x.grupo !== "bolsas")
-      .map((x) => `<button type="button" class="op op--prenda${(x.familia ? x.familia === p.familia : x.id === E.p) ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.familia ? x.familia === p.familia : x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombreFamilia || x.nombre)}</span></button>`)
+    $("#oPrenda").innerHTML = C.productos.filter((x) => x.grupo !== "bolsas")
+      .map((x) => `<button type="button" class="op op--prenda${x.id === E.p ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombre)}</span></button>`)
       .join("") + `<button type="button" class="op op--prenda${p.grupo === "bolsas" ? " on" : ""}" data-elegir-bolsas aria-pressed="${p.grupo === "bolsas"}"><img src="${esc(grupoBolsas.foto)}" alt="" width="64" height="64" loading="lazy" /><span>Bolsas</span></button>`;
     $("#modeloBolsaCampo").hidden = p.grupo !== "bolsas";
     $("#modeloBolsa").innerHTML = bolsas.map((x) => `<option value="${esc(x.id)}"${x.id === p.id ? " selected" : ""}>${esc(x.nombre)} · ${esc(x.medidas)}</option>`).join("");
-    $("#siluetaCampo").hidden = variantes(p).length < 2;
-    $("#siluetaCampo").innerHTML = varianteSelector(p, "siluetaPrenda");
     $("#productoInfo").innerHTML = fichaProducto(p);
-    $("#vistaOrientativa").hidden = !p.renderOrientativo;
-    $("#fotoReferenciaEditor").hidden = !p.fabricante;
-    if (p.fabricante) {
-      $("#fotoReferenciaEditor img").src = p.foto;
-      $("#fotoReferenciaEditor img").alt = p.nombre + "; fotografía en " + p.fotoReferenciaColor;
-      $("#fotoReferenciaEditor figcaption").textContent = "Foto del modelo · " + p.fotoReferenciaColor;
-    }
     $("#oColor").innerHTML = p.colores
       .map(color)
       .filter(Boolean)
-      .map((c) => `<button type="button" class="punto punto--grande${c.id === E.c ? " on" : ""}" style="--c:${c.hex}" data-c="${c.id}" aria-pressed="${c.id === E.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
+      .map((c) => `<button type="button" class="punto punto--grande${c.id === E.c ? " on" : ""}" style="--c:${c.hex}" data-c="${c.id}" aria-pressed="${c.id === E.c}" aria-label="${esc(c.nombre)}" title="${esc(c.nombre)}"></button>`)
       .join("");
     $("#oTecnica").innerHTML = p.tecnicas
       .map(tecnica)
@@ -617,7 +599,7 @@
       )
       .join("");
     ajustarTamano();
-    $("#vColor").textContent = nombreColor(color(E.c));
+    $("#vColor").textContent = color(E.c).nombre;
   }
 
   function ajustarTamano() {
@@ -712,7 +694,7 @@
       const v = ++renderVersion;
       const p = pAct();
       const z = zAct();
-      const img = await ZR.cargar(p.esquema || p.foto);
+      const img = await ZR.cargar(p.foto);
       const logo = await logoActual();
       if (v !== renderVersion) return;
       if (transicion && lienzo.classList.contains("listo") && !reducido) {
@@ -729,7 +711,7 @@
       }
       transicion = false;
       lg.clearRect(0, 0, 1000, 1000);
-      lg.drawImage(prendaTenida(p, img, E.c, 1000, !!p.esquema), 0, 0);
+      lg.drawImage(prendaTenida(p, img, E.c, 1000), 0, 0);
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
@@ -746,7 +728,7 @@
         if (poco) aviso(E.modo === "imagen" ? "Tu logo casi no se ve sobre este color. Prueba otro «Color del logo»." : "El texto casi no se ve sobre este color. Cambia el color del texto.");
         else if (/casi no se ve/.test(a.textContent)) aviso("");
       }
-      $("#pieTxt").textContent = `${p.renderOrientativo ? "Esquema orientativo · " : ""}${p.nombre} · ${nombreColor(color(E.c))} · ${tecnica(E.t).nombre}`;
+      $("#pieTxt").textContent = `${p.nombre} · ${color(E.c).nombre} · ${tecnica(E.t).nombre}`;
       lienzo.classList.add("listo");
       } catch (er) { errorRender = er; aviso("No se pudo preparar la vista previa. Intenta otra vez.", true); }
       finally { rendersActivos--; }
@@ -782,7 +764,7 @@
     }
     const b = e.target.closest("[data-p]");
     if (!b) return;
-    E.p = b.dataset.p; E.tallas = {}; transicion = true;
+    E.p = b.dataset.p; transicion = true;
     E.dx = E.dy = 0;
     if (E.info) {
       construirOpciones();
@@ -791,14 +773,10 @@
     }
     actualizar();
   });
-  $("#siluetaCampo").addEventListener("change", (e) => {
-    const p = prod(e.target.value); if (!p || p.familia !== pAct().familia) return;
-    E.p = p.id; E.tallas = {}; E.dx = E.dy = 0; transicion = true; actualizar();
-  });
   $("#modeloBolsa").addEventListener("change", (e) => {
     const p = prod(e.target.value);
     if (!p || p.grupo !== "bolsas") return;
-    E.p = p.id; E.c = p.colores[0]; E.tallas = {}; E.dx = E.dy = 0;
+    E.p = p.id; E.c = p.colores[0]; E.dx = E.dy = 0;
     transicion = true;
     actualizar();
   });
@@ -1093,11 +1071,10 @@
     g.fillStyle = "#141416";
     g.font = `600 ${Math.round(S * 0.022)}px Archivo, Arial, sans-serif`;
     g.textBaseline = "alphabetic";
-    g.fillText(`${C.marca} · ${p.nombre} · ${nombreColor(color(E.c))}`, S * 0.05, S * 0.925, S * 0.90);
+    g.fillText(`${C.marca} · ${p.nombre} · ${color(E.c).nombre}`, S * 0.05, S * 0.935);
     g.font = `400 ${Math.round(S * 0.019)}px 'JetBrains Mono', monospace`;
     g.fillStyle = "#4a4a4e";
-    g.fillText(`${tecnica(E.t).nombre} · ${z.nombre} · logo ${cm(E.cm)}${p.renderOrientativo ? " solicitado" : ""}`, S * 0.05, S * 0.957, S * 0.90);
-    if (p.renderOrientativo) { g.font = `500 ${Math.round(S * 0.015)}px Arial, sans-serif`; g.fillText("ESQUEMA ORIENTATIVO · no fotografía ni área de impresión aprobada", S * 0.05, S * 0.985, S * 0.90); }
+    g.fillText(`${tecnica(E.t).nombre} · ${z.nombre} · logo ${cm(E.cm)}`, S * 0.05, S * 0.966);
     return c;
   }
   const descargarCanvas = (c, nombre) =>
@@ -1114,7 +1091,6 @@
 
   // abrir el personalizador con una prenda elegida
   function abrirEnTaller(m) {
-    if (E.p !== m.p) { E.tallas = {}; E.dx = E.dy = 0; }
     E.p = m.p;
     if (m.c) E.c = m.c;
     if (m.t) E.t = m.t;
@@ -1207,30 +1183,25 @@
   const rTallas = () => (prod(R.p).tallas.length ? prod(R.p).tallas : ["Piezas"]);
   const rPiezas = () => rTallas().reduce((a, t) => a + (Number(R.tallas[t]) || 0), 0);
 
-  let rapVersion = 0;
   async function rPintarFoto() {
-    const version = ++rapVersion, chosen = R.c;
     const p = prod(R.p);
     const cv = $("#rapFoto");
     const img = await ZR.cargar(p.foto);
-    if (version !== rapVersion) return;
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
-    g.drawImage(prendaTenida(p, img, chosen, 320), 0, 0);
+    g.drawImage(prendaTenida(p, img, R.c, 320), 0, 0);
   }
 
   function rPintar() {
     const p = prod(R.p);
     $("#rapNombre").textContent = p.nombre;
     $("#rapPrecio").textContent = "Cotización por WhatsApp";
-    $("#rapSilueta").hidden = variantes(p).length < 2;
-    $("#rapSilueta").innerHTML = varianteSelector(p, "rapVariante");
     $("#rapFicha").innerHTML = fichaProducto(p);
-    $("#rapColorTxt").textContent = nombreColor(color(R.c));
+    $("#rapColorTxt").textContent = color(R.c).nombre;
     $("#rapColor").innerHTML = p.colores
       .map(color)
       .filter(Boolean)
-      .map((c) => `<button type="button" class="punto punto--grande${c.id === R.c ? " on" : ""}" style="--c:${c.hex}" data-rc="${c.id}" aria-pressed="${c.id === R.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
+      .map((c) => `<button type="button" class="punto punto--grande${c.id === R.c ? " on" : ""}" style="--c:${c.hex}" data-rc="${c.id}" aria-pressed="${c.id === R.c}" aria-label="${esc(c.nombre)}" title="${esc(c.nombre)}"></button>`)
       .join("");
     $("#rapTecnica").innerHTML = p.tecnicas
       .map(tecnica)
@@ -1295,7 +1266,7 @@
         x.classList.toggle("on", x === c);
         x.setAttribute("aria-pressed", x === c);
       });
-      $("#rapColorTxt").textContent = nombreColor(color(R.c));
+      $("#rapColorTxt").textContent = color(R.c).nombre;
       rPintarFoto();
     }
     if (t || z) {
@@ -1315,14 +1286,6 @@
       $("#rapAviso").textContent = "";
       rTotal();
     }
-  });
-  $("#rapSilueta").addEventListener("change", (e) => {
-    const p = prod(e.target.value), before = prod(R.p); if (!p || p.familia !== before.familia) return;
-    R.p = p.id; R.tallas = {};
-    if (!p.colores.includes(R.c)) R.c = p.colores[0];
-    if (!p.tecnicas.includes(R.t)) R.t = p.tecnicas[0];
-    if (!p.zonas.some(z => z.id === R.z)) R.z = p.zonas[0].id;
-    rPintar(); rPintarFoto();
   });
   $("#rapTallas").addEventListener("input", (e) => {
     const i = e.target.closest("[data-rtalla]");
@@ -1381,8 +1344,6 @@
       medidas: p.medidas || "",
       detalleMedidas: medidasTexto(p),
       color: color(R.c).nombre,
-      colorCodigo: color(R.c).codigo || "",
-      tallasDetalle: tallasPedido(p, R.tallas),
       tecnica: t.nombre,
       zona: p.zonas.find((z) => z.id === R.z).nombre,
       cm: 0,
@@ -1453,9 +1414,6 @@
       medidas: p.medidas || "",
       detalleMedidas: medidasTexto(p),
       color: color(E.c).nombre,
-      colorCodigo: color(E.c).codigo || "",
-      tallasDetalle: tallasPedido(p, E.tallas),
-      renderOrientativo: !!p.renderOrientativo,
       tecnica: t.nombre,
       zona: z.nombre + (E.dx || E.dy ? " (posición ajustada)" : ""),
       cm: E.cm,
@@ -1486,8 +1444,7 @@
 
   function mensajePedido() {
     const lineas = pedido.map((x, i) => {
-      const r = [`${i + 1}) ${x.nombre} — ${x.color}${x.colorCodigo ? " · " + x.colorCodigo : ""}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
-      if (x.renderOrientativo) r.push("   Vista orientativa; medida y acabado por confirmar antes de producir.");
+      const r = [`${i + 1}) ${x.nombre} — ${x.color}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
       if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
       r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
       r.push(`   Logo: ${x.logo}`);
@@ -1529,7 +1486,6 @@
             ${x.pantone ? `<span>Referencia Pantone: ${esc(x.pantone)}</span>` : ""}
             ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
             <span class="renglon__pzs num">${x.piezas} ${x.piezas === 1 ? "pieza" : "piezas"}</span>
-            ${C.productosHistoricos?.some(p => p.id === x.p) ? `<span class="pedido__archivos">Selección del catálogo anterior. Para una solicitud nueva, elige un modelo actual; conserva tu logo y render.</span>` : ""}
             ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : ""}
           </div>
           <div class="renglon__acc">

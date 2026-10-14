@@ -7,20 +7,21 @@ import {createHandler,validateOrder} from '../server/pedidos.mjs';
 const id='12345678-1234-4123-8123-123456789abc',token='a'.repeat(64);
 const body=x=>({id,token,items:[x],files:[]});
 const selection=(p,colorID=p.colores[0])=>({p:p.id,color:C.colores.find(c=>c.id===colorID).nombre,colorCodigo:C.colores.find(c=>c.id===colorID).codigo,tecnica:C.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{M:5},zona:p.zonas[0].nombre,cm:9,tieneLogo:false,tieneRender:false});
-const model=code=>C.productos.find(p=>p.codigoFabricante===code);
+const catalogo=[...C.productos,...(C.catalogoYazbekPendiente||[])];
+const model=code=>catalogo.find(p=>p.codigoFabricante===code);
 const expected={C0200:['CH','M','G','EG','EEG','EEEG'],D0200:['CH','M','G','EG','EEG'],C0300:['CH','M','G','EG','EEG','EEEG'],D0300:['CH','M','G','EG'],D0550:['CH','M','G','EG'],D1302:['CH','M','G','EG'],D1502:['CH','M','G','EG'],D1504:['CH','M','G','EG'],D0601:['CH','M','G','EG','EEG'],D0604:['CH','M','G','EG','EEG'],D0605:['CH','M','G','EG','EEG'],D0606:['CH','M','G','EG','EEG'],D0607:['CH','M','G','EG','EEG']};
 
-test('14 familias / 25 referencias exactas y tablas por silueta, sin gorra o softshell ficticias',()=>{
-  const current=C.productos.filter(p=>p.fabricante==='Yazbek');
+test('originales activos y 14 familias / 25 referencias Yazbek conservadas para incorporar',()=>{
+  const current=catalogo.filter(p=>p.fabricante==='Yazbek');
   assert.equal(current.length,25);assert.equal(new Set(current.map(p=>p.familia)).size,14);
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
-  assert.ok(!C.productos.some(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)));
-  assert.equal(C.productosHistoricos.length,6);
+  assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
+  assert.equal(C.productosHistoricos.length,0);
   for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.alteracionColor,false);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);assert.match(readFileSync(new URL('../'+p.esquema,import.meta.url),'utf8'),/no fotografía/);}
 });
 
 test('todas las combinaciones publicadas guardan código, color, material y tallas canónicos',()=>{
-  for(const p of C.productos.filter(p=>p.fabricante))for(const col of p.colores)for(const talla of p.tallas) {
+  for(const p of catalogo.filter(p=>p.fabricante))for(const col of p.colores)for(const talla of p.tallas) {
     const x={...selection(p,col),tallasDetalle:{[talla]:5},nombre:'nombre inventado',gramaje:9999,composicion:'inventada',silueta:'otra'};
     const got=validateOrder(body(x)).items[0];
     assert.equal(got.codigoFabricante,p.codigoFabricante);assert.equal(got.nombre,p.nombre);assert.equal(got.silueta,p.silueta);assert.equal(got.gramaje,p.gramaje);
@@ -49,27 +50,21 @@ test('bolsas mantienen 13 modelos, 100 por modelo/color e incrementos de 50',()=
   for(const p of bags){assert.equal(p.minimoPiezas,100);assert.equal(p.pasoPiezas,50);const x={p:p.id,color:C.colores.find(c=>c.id===p.colores[0]).nombre,tecnica:'Serigrafía',piezas:100};assert.equal(validateOrder(body(x)).total,100);assert.throws(()=>validateOrder(body({...x,piezas:125})),/cantidades/);}
 });
 
-test('nueva solicitud con IDs retirados se rechaza; no convierte ejemplo en Yazbek',async()=>{
-  const x={p:'polo',color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};
-  assert.throws(()=>validateOrder(body(x)),/cantidades/);
-  const h=createHandler({SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'test-secret',SUPABASE_PUBLISHABLE_KEY:'test-public',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},async()=>Response.json([]));
-  const r=await h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify(body(x))}));
-  assert.equal(r.status,400);assert.match((await r.json()).error,/catálogo anterior/);
-});
+test('originales restablecidos admiten nuevas cotizaciones sin hacerse pasar por Yazbek',()=>{const p=C.productos.find(p=>p.id==='polo');const x={p:p.id,color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};const checked=validateOrder(body(x)).items[0];assert.equal(checked.nombre,'Polo piqué');assert.ok(!('fabricante' in checked));});
 
-test('un folio histórico se reintenta solo con su secreto y contenido iguales',async()=>{
+test('un folio existente se reintenta solo con su secreto y contenido iguales',async()=>{
   const x={p:'polo',color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};
   const checked=validateOrder(body(x),{allowHistoricos:true});let writes=0;
   const old={id,folio:'ZAIN-PRUEBA',token_hash:createHash('sha256').update(token).digest('hex'),items:checked.items,archivos:checked.manifest,total:5,consulta_nonce:'prueba',guardado_at:'2026-10-13T18:00:00Z'};
   const fake=async(url,opts)=>{
-    if(url.includes('/rpc/zain_crear_pedido')){const b=JSON.parse(opts.body);if(JSON.stringify(b.p_items)!==JSON.stringify(old.items))return Response.json({message:'zain_conflict'},{status:409});writes++;return Response.json({folio:old.folio});}
+    if(url.includes('/rpc/zain_crear_pedido')){const b=JSON.parse(opts.body);if(b.p_token_hash!==old.token_hash || JSON.stringify(b.p_items)!==JSON.stringify(old.items))return Response.json({message:'zain_conflict'},{status:409});writes++;return Response.json({folio:old.folio});}
     return Response.json([old]);
   };
   const h=createHandler({SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'test-secret',SUPABASE_PUBLISHABLE_KEY:'test-public',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},fake);
   const req=b=>h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify(b)}));
   assert.equal((await req(body(x))).status,200);assert.equal(writes,1);
   assert.equal((await req(body({...x,piezas:6,tallas:'M 6'}))).status,409);assert.equal(writes,1);
-  assert.equal((await req({...body(x),token:'b'.repeat(64)})).status,403);assert.equal(writes,1);
+  assert.equal((await req({...body(x),token:'b'.repeat(64)})).status,409);assert.equal(writes,1);
   const oldProjection=validateOrder(body(x),{allowHistoricos:true}).items[0];assert.ok(!('fabricante' in oldProjection));assert.equal(oldProjection.nombre,'Polo piqué');
 });
 

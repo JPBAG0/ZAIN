@@ -18,7 +18,7 @@ export function validateOrder(body, { allowHistoricos = false } = {}) {
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
     if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
-    const p = C.productos.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
+    const p = C.productos.find(p=>p.id===x.p) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
     const n = Number(x.piezas);
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
     const colors=p.colores.map(id=>C.colores.find(c=>c.id===id));
