@@ -2,8 +2,17 @@
 (() => {
   'use strict';
   const endpoint=window.ZAIN.pedidosApi||'/api/pedidos',key='zain-solicitud';
-  let config={activo:false},draft=null,configError=null;
+  let config={activo:false},draft=null,configError=null,lastReceipt=null;
   try{draft=JSON.parse(localStorage.getItem(key));}catch{}
+  try{lastReceipt=JSON.parse(localStorage.getItem('zain-ultima-solicitud'));}catch{}
+  const ultimo=()=>{
+    try{const u=new URL(lastReceipt?.url);return u.origin===location.origin&&u.pathname==='/mi-pedido'&&/^#[a-f0-9-]{36}\/[a-f0-9]{64}$/i.test(u.hash)&&/^ZAIN-[A-F0-9]{12}$/.test(lastReceipt.folio)?lastReceipt:null;}catch{return null;}
+  };
+  const terminar=recibo=>{
+    lastReceipt={id:recibo.id,folio:recibo.folio,url:recibo.url};
+    try{localStorage.setItem('zain-ultima-solicitud',JSON.stringify(lastReceipt));}catch{}
+    if(draft?.id===recibo.id){draft=null;try{localStorage.removeItem(key);}catch{}}
+  };
   const api=async(op,body)=> {
     const r=await fetch(endpoint+'?op='+op,{method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});
     const data=await r.json().catch(()=>({error:'No se pudo conectar con ZAIN.'}));
@@ -58,5 +67,5 @@
     const recibo=await api('finalizar',owner);draft.recibo=recibo;guardarDraft();
     return confirmar(recibo,items);
   };
-  window.ZAINPedidos={ready,activo:()=>config.activo,error:()=>configError,reintentar,enviar};
+  window.ZAINPedidos={ready,activo:()=>config.activo,error:()=>configError,reintentar,enviar,terminar,ultimo};
 })();

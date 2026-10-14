@@ -9,6 +9,7 @@ Actualizado: 13-oct-2026. La venta y los precios se acuerdan por WhatsApp.
 - Guardado no significa mensaje enviado, pedido confirmado o pago recibido. Estados: nuevo, contactado, cotizado, confirmado, producción, entregado, cancelado.
 - Cada archivo se sube directamente al bucket privado mediante una URL firmada. La API verifica tamaño y tipo de TODOS los archivos antes de confirmar la solicitud. Las subidas incompletas no aparecen en la lista de trabajo.
 - El folio persiste al reintentar el mismo contenido. Los pedidos y archivos locales se conservan para respaldo. Las alternativas de texto/ZIP son explícitas; ya no se usa el selector de aplicaciones del equipo.
+- Después de confirmar el guardado y pasar a WhatsApp, se retiran del carrito las selecciones enviadas y sus archivos locales. El pedido en Supabase permanece intacto; se conserva el enlace de última solicitud para consultarla al volver. El borrador se cierra para que un pedido posterior tenga folio nuevo. Errores y alternativas sin nube conservan carrito/archivos; selecciones añadidas durante la subida también se conservan. Abrir WhatsApp no confirma envío del mensaje.
 
 ## Acceso y seguridad
 

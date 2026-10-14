@@ -1459,6 +1459,7 @@
 
   let pintado = false;
   function pintarPedido() {
+    const ultimo=P.ultimo();
     const n = pedido.reduce((a, x) => a + x.piezas, 0);
     const cuenta = $("#cuenta");
     cuenta.hidden = !pedido.length;
@@ -1494,7 +1495,7 @@
         </article>`,
           )
           .join("")
-      : `<div class="pedido__vacio"><p>Tu pedido está vacío.</p><a class="btn btn--linea" href="#catalogo" data-cerrar-ir>Ver catálogo</a></div>`;
+      : `<div class="pedido__vacio"><p>Tu pedido está vacío.</p>${ultimo?`<p>Tu última solicitud está guardada.</p><a class="btn-texto" href="${esc(ultimo.url)}">Ver solicitud ${esc(ultimo.folio)}</a>`:''}<a class="btn btn--linea" href="#catalogo" data-cerrar-ir>Ver catálogo</a></div>`;
 
     $("#pedidoPie").innerHTML = pedido.length
       ? `<div class="pedido__total"><span>Cotización personalizada</span><b>Por WhatsApp</b></div>
@@ -1559,23 +1560,33 @@
       try {
         await P.ready;
         if(P.error()) await P.reintentar();
-        let mensaje=texto;
+        let mensaje=texto,receipt=null;
         if(P.activo()) {
-          const receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;});
+          receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;});
           mensaje+=`\n\nFolio: ${receipt.folio}\nConsulta tu pedido: ${receipt.url}`;
           $("#archivosEstado").textContent=`Solicitud ${receipt.folio} guardada. Confirma el envío del mensaje en WhatsApp.`;
         }
         dispatchEvent(new CustomEvent('zain:whatsapp_click',{detail:{piezas:snapshot.reduce((s,x)=>s+x.piezas,0)}}));
         try{await window.ZAINMedicion?.whatsapp('pedido');}catch{} // Tiempo acotado; funciona también si Google está bloqueado.
+        if(receipt&&C.whatsapp){
+          // Solo retira lo que la nube confirmó. Conserva selecciones agregadas durante la carga.
+          const enviados=new Set(snapshot.map(x=>x.id));
+          P.terminar(receipt);
+          pedido=pedido.filter(x=>!enviados.has(x.id));
+          guardarPedido();
+          await A.eliminar([...enviados]);
+        }
         // Misma pestaña para evitar popups bloqueados después de subir los archivos.
         location.assign(wa(mensaje));
       }catch(er){
-        $("#archivosEstado").textContent=er.message||"No se pudo guardar. Tu pedido sigue aquí; reintenta o envía solo el texto desde Otra forma de enviar.";
-        $("#archivosEstado").classList.add("error");
-        $("#otrasFormas").hidden=false; $("#otrasFormas").open=true;
+        const estado=$("#archivosEstado"),alternativas=$("#otrasFormas");
+        if(estado){estado.textContent=er.message||"No se pudo guardar. Tu pedido sigue aquí; reintenta o envía solo el texto desde Otra forma de enviar.";estado.classList.add("error");}
+        else toast("Tu solicitud está guardada. Puedes consultarla desde el carrito vacío.");
+        if(alternativas){alternativas.hidden=false;alternativas.open=true;}
       }finally{
-        compartiendo=false; $("#compartirPedido").disabled=!!erroresCantidad().length;
-        $("#compartirPedido").textContent="Solicitar cotización por WhatsApp";
+        compartiendo=false;
+        const boton=$("#compartirPedido");
+        if(boton){boton.disabled=!!erroresCantidad().length;boton.textContent="Solicitar cotización por WhatsApp";}
         $$("#pedidoItems button, #vaciar").forEach(x=>x.disabled=false);
       }
       return;
