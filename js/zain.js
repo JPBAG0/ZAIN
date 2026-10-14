@@ -12,25 +12,26 @@
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const cm = (n) => (Math.round(n * 10) / 10).toFixed(1) + " cm";
-  const prod = (id) => C.productos.find((p) => p.id === id) || C.productosHistoricos?.find((p) => p.id === id);
+  const compatHash = (s) => { let h = 2166136261; for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return (h >>> 0).toString(16); };
+  const prod = (id) => C.productos.find((p) => p.id === id || p.compatHash === compatHash(id)) || C.productosHistoricos?.find((p) => p.id === id);
   const familias = C.productos.filter((p, i, all) => !p.familia || all.findIndex(x => x.familia === p.familia) === i);
   const variantes = (p) => p.familia ? C.productos.filter(x => x.familia === p.familia) : [p];
-  const nombreColor = (c) => c.codigo ? `${c.nombre} · ${c.codigo}` : c.nombre;
+  const nombreColor = (c) => c.nombre;
   const tallasPedido = (p, counts) => Object.fromEntries(p.tallas.filter(t => counts[t] > 0).map(t => [t, Number(counts[t])]));
-  const color = (id) => C.colores.find((c) => c.id === id);
+  const color = (id) => C.colores.find((c) => c.id === id || c.compatHash === compatHash(id));
   const tecnica = (id) => C.tecnicas.find((t) => t.id === id);
   const minimo = (p) => p.minimoPiezas || 0;
   const pasoCantidad = (p) => p.pasoPiezas || 1;
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
   const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
-  const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table><small>Tolerancia: ancho ±${p.tolerancia.ancho} cm; largo ±${p.tolerancia.largo} cm. Fuente: Yazbek, pág. PDF ${p.fuente.tablaTallas}.</small></details>`;
-  const varianteSelector = (p, id, attr = "") => variantes(p).length < 2 ? "" : `<label class="campo producto__variante"><span>Silueta</span><select ${id ? `id="${id}"` : ""} ${attr} aria-label="Silueta de ${esc(p.nombreFamilia)}">${variantes(p).map(x => `<option value="${x.id}"${x.id === p.id ? " selected" : ""}>${x.silueta} · ${x.codigoFabricante}</option>`).join("")}</select></label>`;
+  const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table><small>Tolerancia: ancho ±${p.tolerancia.ancho} cm; largo ±${p.tolerancia.largo} cm.</small></details>`;
+  const varianteSelector = (p, id, attr = "") => variantes(p).length < 2 ? "" : `<label class="campo producto__variante"><span>Silueta</span><select ${id ? `id="${id}"` : ""} ${attr} aria-label="Silueta de ${esc(p.nombreFamilia)}">${variantes(p).map(x => `<option value="${x.id}"${x.id === p.id ? " selected" : ""}>${x.silueta}</option>`).join("")}</select></label>`;
   const medidasTexto = (p) => {
     const d = p.dimensiones;
     return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : "";
   };
-  const fichaProducto = (p, compacto = false) => p.fabricante ? `<div class="producto__datos"><b>${esc(p.fabricante)} · ${esc(p.codigoFabricante)} · ${esc(p.silueta)}</b><span>${esc(p.tejido)} · ${p.gramaje} g/m²</span><span>${esc(p.composicion)}${Object.keys(p.composicionColor).length ? "; Gris Jaspe 102: 90% algodón / 10% poliéster" : ""}</span></div><p class="producto__disponibilidad">${esc(p.disponibilidad)}</p><p class="producto__nota">Imagen ilustrativa. ${compacto ? "" : "Color y acabado se confirman al cotizar."}</p>${compacto ? "" : `<p class="producto__nota">${esc(p.tecnicasNota)}</p>`}${tablaMedidas(p)}` : p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
+  const fichaProducto = (p, compacto = false) => p.prendaCatalogo ? `<div class="producto__datos"><b>${esc(p.silueta)}</b><span>${esc(p.tejido)} · ${p.gramaje} g/m²</span><span>${esc(p.composicion)}${Object.keys(p.composicionColor).length ? "; Gris Jaspe: 90% algodón / 10% poliéster" : ""}</span></div><p class="producto__disponibilidad">${esc(p.disponibilidad)}</p><p class="producto__nota">Imagen ilustrativa. ${compacto ? "" : "Color y acabado se confirman al cotizar."}</p>${compacto ? "" : `<p class="producto__nota">${esc(p.tecnicasNota)}</p>`}${tablaMedidas(p)}` : p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
     <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${minimo(p) ? `<p class="producto__nota">${esc(reglaCantidad(p))}</p>` : ""}${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
   const wa = (texto) => (C.whatsapp ? `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(texto)}` : "#contacto");
   const almacen = {
@@ -408,7 +409,7 @@
     $("#catalogoGrupo").hidden = !grupo;
     $("#filtros").hidden = !!grupo;
     $("#catTitulo").textContent = grupo ? grupoBolsas.nombre : filtro === "Todo" ? "Catálogo" : filtro;
-    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Conservamos nuestros modelos y sumamos prendas Yazbek para personalizar con tu logo. Consulta disponibilidad.";
+    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
     $$("#rejilla .producto").forEach((art) => {
       const p = prod(art.dataset.id);
       art.hidden = art.dataset.grupo ? !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
@@ -443,13 +444,13 @@
     pintarCatalogo();
   });
 
-  const tarjeta = (p) => `<article class="producto${p.fabricante ? " producto--yazbek" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
+  const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
     <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}" role="img"></canvas>
-      ${p.fabricante ? '<span class="producto__origen">Vista previa</span>' : ""}<button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
+      ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia con modelo" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
     ${varianteSelector(p, "", "data-variante")}
     <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div>
     <p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p>
-    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
+    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><small class="producto__sku">SKU ZAIN: ${esc(p.sku)}</small><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
     <div class="producto__pie"><div class="producto__precio"><b>Cotiza por WhatsApp</b></div><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></article>`;
   $("#rejilla").innerHTML = categorias.slice(1).map(cat => `<h3 class="rejilla__categoria" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3>` + familias.filter(p => p.categoria === cat).map(tarjeta).join("")).join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
       <div class="producto__foto"><img src="${esc(grupoBolsas.foto)}" alt="Bolsas ecológicas del catálogo" width="1000" height="1000" loading="lazy" /></div>
@@ -458,6 +459,14 @@
       <div class="producto__pie"><span>Modelos, medidas y colores</span><button class="btn btn--tinta btn--chico" type="button" data-abrir-bolsas>Ver bolsas</button></div>
     </article>`;
 
+  const mostrarImagen = (art, index) => {
+    const cv = $("canvas", art), photo = $(".producto__modelo", art);
+    if (!photo) return;
+    const second = index === 1;
+    cv.hidden = second; photo.hidden = !second;
+    art.dataset.imagen = second ? "1" : "0";
+    $(".producto__origen", art).textContent = second ? "Foto de referencia · 2 / 2" : "Vista personalizable · 1 / 2";
+  };
   const pintarTarjeta = async (art, idColor) => {
     const p = prod(art.dataset.id);
     art.dataset.color = idColor;
@@ -467,6 +476,7 @@
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
     g.drawImage(prendaTenida(p, img, idColor, 560), 0, 0);
+    mostrarImagen(art, Number(art.dataset.imagen) || 0);
     if (art.classList.contains("lista")) {
       cv.classList.remove("cambia");
       void cv.offsetWidth;
@@ -492,12 +502,15 @@
     if (e.target.closest("[data-abrir-bolsas]")) { abrirBolsas(); return; }
     const art = e.target.closest(".producto");
     if (!art) return;
+    const arrow = e.target.closest("[data-galeria]");
+    if (arrow) { mostrarImagen(art, art.dataset.imagen === "1" ? 0 : 1); return; }
     const punto = e.target.closest(".punto[data-color]");
     if (punto) {
       $$(".punto", art).forEach((x) => {
         x.classList.toggle("on", x === punto);
         x.setAttribute("aria-checked", x === punto);
       });
+      mostrarImagen(art, 0);
       pintarTarjeta(art, punto.dataset.color);
       return;
     }
@@ -682,7 +695,7 @@
     const g = c.getContext("2d");
     g.drawImage(ejemplo, 0, 0);
     g.globalCompositeOperation = "source-in";
-    g.fillStyle = claro ? "#1b1b1d" : "#f4f4f2";
+    g.fillStyle = E.modo === "imagen" && E.tinta !== "original" ? E.tinta : E.modo === "texto" ? E.colorTexto : claro ? "#1b1b1d" : "#f4f4f2";
     g.fillRect(0, 0, c.width, c.height);
     return c;
   }
@@ -1120,7 +1133,12 @@
      ===================================================================== */
   const LLAVE = "zain-pedido";
   const pedidoGuardado = almacen.leer(LLAVE, []);
-  let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => x) : [];
+  let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => {
+    const p=prod(x.p);
+    if (!p) return x;
+    const col=p.colores.map(color).find(c=>c.nombre === x.color.replace(/ · \d+$/, ""));
+    return {...x,p:p.id,nombre:p.nombre,sku:p.sku,...(col ? {color:col.nombre,colorId:col.id,colorCodigo:""} : {})};
+  }) : [];
   let paquete = null, revisionArchivos = 0, compartiendo = false;
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
   const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)));
@@ -1376,7 +1394,9 @@
       medidas: p.medidas || "",
       detalleMedidas: medidasTexto(p),
       color: color(R.c).nombre,
-      colorCodigo: color(R.c).codigo || "",
+      colorId: color(R.c).id,
+      sku: p.sku,
+      colorCodigo: "",
       tallasDetalle: tallasPedido(p, R.tallas),
       tecnica: t.nombre,
       zona: p.zonas.find((z) => z.id === R.z).nombre,
@@ -1448,7 +1468,9 @@
       medidas: p.medidas || "",
       detalleMedidas: medidasTexto(p),
       color: color(E.c).nombre,
-      colorCodigo: color(E.c).codigo || "",
+      colorId: color(E.c).id,
+      sku: p.sku,
+      colorCodigo: "",
       tallasDetalle: tallasPedido(p, E.tallas),
       renderOrientativo: !!p.renderOrientativo,
       tecnica: t.nombre,
@@ -1481,7 +1503,8 @@
 
   function mensajePedido() {
     const lineas = pedido.map((x, i) => {
-      const r = [`${i + 1}) ${x.nombre} — ${x.color}${x.colorCodigo ? " · " + x.colorCodigo : ""}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
+      const r = [`${i + 1}) ${prod(x.p)?.nombre || x.nombre.replace(/ \([CD]\d{4}\)$/, "")} — ${x.color.replace(/ · \d+$/, "")}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
+      if (prod(x.p)?.sku) r.push(`   SKU ZAIN: ${prod(x.p).sku}`);
       if (x.renderOrientativo) r.push("   Vista orientativa; medida y acabado por confirmar antes de producir.");
       if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
       r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);

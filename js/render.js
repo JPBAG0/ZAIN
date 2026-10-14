@@ -53,7 +53,7 @@
     g.drawImage(img, 0, 0, S, S);
     const d = g.getImageData(0, 0, S, S);
     const p = d.data;
-    if ((/\/(?:yazbek-ia|originales-limpios)\//).test(img.src)) {
+    if ((/\/(?:originales-limpios|zain)\//).test(img.src)) {
       for (let i = 3; i < p.length; i += 4) if (p[i] < 16) p[i] = 0;
     }
     // brillo de referencia: el percentil 80 de la tela (así un pliegue oscurece y un brillo aclara)
@@ -91,7 +91,7 @@
     const g = ctx2(c);
     // Las fotos del proveedor ya tienen color: conserva la original al elegirlo.
     // Para las demás variantes (también blanco), aplica el mapa de sombras.
-    if (!hex || (!(/\/(?:yazbek-ia|originales-limpios)\//).test(img.src) && (fotoColor ? hex.toLowerCase() === fotoColor.toLowerCase() : hex.toLowerCase() === "#ffffff"))) {
+    if (!hex || (!(/\/(?:originales-limpios|zain)\//).test(img.src) && (fotoColor ? hex.toLowerCase() === fotoColor.toLowerCase() : hex.toLowerCase() === "#ffffff"))) {
       g.drawImage(img, 0, 0, S, S); // «natural»: la foto tal cual
     } else {
       const { s, alfa } = mapaSombras(img, S);

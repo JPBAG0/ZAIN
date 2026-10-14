@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import C from '../js/config.js';
+import C from '../server/config-interno.cjs';
+import Public from '../js/config.js';
 import {createHandler,validateOrder} from '../server/pedidos.mjs';
 const id='12345678-1234-4123-8123-123456789abc',token='a'.repeat(64);
 const body=x=>({id,token,items:[x],files:[]});
@@ -76,5 +77,27 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
   const h=createHandler({SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'test-secret',SUPABASE_PUBLISHABLE_KEY:'test-public',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},async()=>Response.json([row]));
   const {createHmac}=await import('node:crypto');const read=createHmac('sha256',Buffer.from(hash,'hex')).update('zain:consulta:v1:'+id+':prueba').digest('hex');
   const r=await h(new Request('https://zain.test/api/pedidos?op=consulta',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify({id,token:read})}));
-  const out=await r.json();assert.equal(out.pedido.items[0].codigoFabricante,'D0605');assert.equal(out.pedido.items[0].color,'Rosa · 705');assert.equal(out.pedido.items[0].composicion,'75% algodón / 25% poliéster');assert.ok(!JSON.stringify(out).includes('NO MOSTRAR'));assert.ok(!('fuente' in out.pedido.items[0]));
+  const out=await r.json();assert.ok(!('codigoFabricante' in out.pedido.items[0]));assert.ok(!('fabricante' in out.pedido.items[0]));assert.equal(out.pedido.items[0].sku,p.sku);assert.equal(out.pedido.items[0].color,'Rosa');assert.ok(!/Yazbek|D0605/i.test(JSON.stringify(out)));assert.equal(out.pedido.items[0].composicion,'75% algodón / 25% poliéster');assert.ok(!JSON.stringify(out).includes('NO MOSTRAR'));assert.ok(!('fuente' in out.pedido.items[0]));
+});
+
+test('catálogo público conserva 44 referencias sin marca/códigos del proveedor y 25 fotos extra',()=>{
+ assert.equal(Public.productos.length,44);
+ assert.equal(new Set(Public.productos.map(p=>p.sku)).size,44);
+ assert.ok(!/Yazbek|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
+ assert.equal(Public.productos.filter(p=>p.fotoModelo).length,25);
+ for(const p of Public.productos.filter(p=>p.fotoModelo)){
+  assert.ok(readFileSync(new URL('../'+p.fotoModelo,import.meta.url)).length>1000);
+  assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);
+ }
+});
+test('cada variante/color/talla pública se deriva al modelo interno exacto sin código enviado',()=>{
+ for(const p of Public.productos.filter(p=>p.prendaCatalogo))for(const colorID of p.colores)for(const size of p.tallas){
+  const color=Public.colores.find(c=>c.id===colorID);
+  const item={p:p.id,color:color.nombre,colorId:color.id,tecnica:Public.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{[size]:5},zona:p.zonas[0].nombre,cm:9};
+  const got=validateOrder(body(item)).items[0],internal=C.productos.find(v=>v.idPublico===p.id);
+  assert.equal(got.codigoFabricante,internal.codigoFabricante);
+  assert.equal(got.composicion,internal.composicionColor[got.colorCodigo]||internal.composicion);
+  const foreign=Public.colores.find(c=>!p.colores.includes(c.id) && c.id.startsWith('zain-color-'));
+  if(foreign)assert.throws(()=>validateOrder(body({...item,colorId:foreign.id,colorCodigo:''})),/color/);
+ }
 });

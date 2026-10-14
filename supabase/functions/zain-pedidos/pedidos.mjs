@@ -18,7 +18,7 @@ export function validateOrder(body, { allowHistoricos = false } = {}) {
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
     if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
-    const p = C.productos.find(p=>p.id===x.p) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
+    const p = C.productos.find(p=>p.id===x.p || p.idPublico===x.p) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
     const n = Number(x.piezas);
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
     const colors=p.colores.map(id=>C.colores.find(c=>c.id===id));
@@ -26,7 +26,7 @@ export function validateOrder(body, { allowHistoricos = false } = {}) {
     if (!p.tecnicas.map(id=>C.tecnicas.find(t=>t.id===id)?.nombre).includes(x.tecnica)) fail(400,'Técnica inválida.');
     const item={ indice:i,p:p.id,nombre:p.nombre,color:x.color,tecnica:x.tecnica,piezas:n,medidas:p.medidas||'',detalleMedidas:text(x.detalleMedidas,500),zona:text(x.zona,120),cm:Number.isFinite(x.cm)?Math.max(0,Math.min(200,x.cm)):0,tallas:text(x.tallas,500),tallasEtq:text(x.tallasEtq,80),logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender };
     if(p.fabricante) {
-      const col=colors.find(c=>c?.codigo===x.colorCodigo && c.nombre===x.color);
+      const col=colors.find(c=>(c?.codigo===x.colorCodigo || c?.idPublico===x.colorId) && c.nombre===x.color);
       if(!col)fail(400,'Código de color inválido para este modelo.');
       const counts=x.tallasDetalle;
       if(!counts || typeof counts!=='object' || Array.isArray(counts) || !Object.keys(counts).length || Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1||v>9999) || Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma para la silueta elegida.');
@@ -111,8 +111,9 @@ export function createHandler(env={}, fetcher=fetch) {
     if(!x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
     return x;
   };
+  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
   const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
-    items:x.items.map(p=>Object.fromEntries(['indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','codigoFabricante','fabricante','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
+    items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
   const signedFile=async(x,b)=>{
     if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
@@ -122,7 +123,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
     return {url:signed.href,name:f.name,type:f.type};
   };
-  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return rest;};
+  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(p=>({...p,sku:C.productos.find(v=>v.id===p.p || v.idPublico===p.p)?.sku||''}))};};
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});

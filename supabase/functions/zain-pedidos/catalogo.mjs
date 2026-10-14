@@ -438,7 +438,8 @@ export default {
       "codigo": "415",
       "hex": "#292829",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-071"
     },
     {
       "id": "yazbek-414",
@@ -446,7 +447,8 @@ export default {
       "codigo": "414",
       "hex": "#242d3f",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-072"
     },
     {
       "id": "yazbek-100",
@@ -454,7 +456,8 @@ export default {
       "codigo": "100",
       "hex": "#ebebeb",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-073"
     },
     {
       "id": "yazbek-102",
@@ -462,7 +465,8 @@ export default {
       "codigo": "102",
       "hex": "#c7c6c6",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-074"
     },
     {
       "id": "yazbek-421",
@@ -470,7 +474,8 @@ export default {
       "codigo": "421",
       "hex": "#263c76",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-075"
     },
     {
       "id": "yazbek-413",
@@ -478,7 +483,8 @@ export default {
       "codigo": "413",
       "hex": "#a82b27",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-076"
     },
     {
       "id": "yazbek-420",
@@ -486,7 +492,8 @@ export default {
       "codigo": "420",
       "hex": "#296d46",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-077"
     },
     {
       "id": "yazbek-426",
@@ -494,7 +501,8 @@ export default {
       "codigo": "426",
       "hex": "#494949",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-078"
     },
     {
       "id": "yazbek-700",
@@ -502,7 +510,8 @@ export default {
       "codigo": "700",
       "hex": "#f0f0f1",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-079"
     },
     {
       "id": "yazbek-701",
@@ -510,7 +519,8 @@ export default {
       "codigo": "701",
       "hex": "#b1c8da",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-080"
     },
     {
       "id": "yazbek-703",
@@ -518,7 +528,8 @@ export default {
       "codigo": "703",
       "hex": "#9fa1ae",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-081"
     },
     {
       "id": "yazbek-704",
@@ -526,7 +537,8 @@ export default {
       "codigo": "704",
       "hex": "#7789bb",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-082"
     },
     {
       "id": "yazbek-705",
@@ -534,7 +546,8 @@ export default {
       "codigo": "705",
       "hex": "#f0d0df",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-083"
     },
     {
       "id": "yazbek-200",
@@ -542,7 +555,8 @@ export default {
       "codigo": "200",
       "hex": "#aaa588",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-084"
     },
     {
       "id": "yazbek-213",
@@ -550,7 +564,8 @@ export default {
       "codigo": "213",
       "hex": "#3063a5",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-085"
     },
     {
       "id": "yazbek-425",
@@ -558,7 +573,8 @@ export default {
       "codigo": "425",
       "hex": "#4c0f14",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-086"
     },
     {
       "id": "yazbek-652",
@@ -566,7 +582,8 @@ export default {
       "codigo": "652",
       "hex": "#425677",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-087"
     },
     {
       "id": "yazbek-230",
@@ -574,7 +591,8 @@ export default {
       "codigo": "230",
       "hex": "#eddab9",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-088"
     },
     {
       "id": "yazbek-427",
@@ -582,7 +600,8 @@ export default {
       "codigo": "427",
       "hex": "#353a26",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-089"
     },
     {
       "id": "yazbek-2415",
@@ -590,7 +609,8 @@ export default {
       "codigo": "2415",
       "hex": "#474c4f",
       "fabricante": "Yazbek",
-      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone."
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-090"
     }
   ],
   "tecnicas": [
@@ -684,7 +704,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/playera.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-PL-001",
+      "idPublico": "playera"
     },
     {
       "id": "polo",
@@ -740,7 +762,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/polo.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-PO-001",
+      "idPublico": "polo"
     },
     {
       "id": "camisa",
@@ -784,7 +808,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/camisa.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-CM-001",
+      "idPublico": "camisa"
     },
     {
       "id": "chamarra",
@@ -830,7 +856,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/chamarra.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-CH-001",
+      "idPublico": "chamarra"
     },
     {
       "id": "sudadera",
@@ -878,7 +906,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/sudadera.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-SU-001",
+      "idPublico": "sudadera"
     },
     {
       "id": "gorra",
@@ -912,7 +942,9 @@ export default {
         }
       ],
       "fotoOriginal": "img/productos/gorra.webp",
-      "imagenLimpia": true
+      "imagenLimpia": true,
+      "sku": "ZN-GO-001",
+      "idPublico": "gorra"
     },
     {
       "id": "bolsa-boutique",
@@ -956,7 +988,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 3
       },
-      "piezasBulto": 500
+      "piezasBulto": 500,
+      "sku": "ZN-BO-001",
+      "idPublico": "bolsa-boutique"
     },
     {
       "id": "bolsa-sobre-chico",
@@ -1002,7 +1036,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 4
       },
-      "piezasBulto": 500
+      "piezasBulto": 500,
+      "sku": "ZN-BO-002",
+      "idPublico": "bolsa-sobre-chico"
     },
     {
       "id": "bolsa-sobre-grande",
@@ -1045,7 +1081,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 5
       },
-      "piezasBulto": 500
+      "piezasBulto": 500,
+      "sku": "ZN-BO-003",
+      "idPublico": "bolsa-sobre-grande"
     },
     {
       "id": "bolsa-regalo",
@@ -1090,7 +1128,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 6
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-004",
+      "idPublico": "bolsa-regalo"
     },
     {
       "id": "bolsa-expo",
@@ -1132,7 +1172,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 7
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-005",
+      "idPublico": "bolsa-expo"
     },
     {
       "id": "bolsa-zapatera",
@@ -1177,7 +1219,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 8
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-006",
+      "idPublico": "bolsa-zapatera"
     },
     {
       "id": "bolsa-market",
@@ -1232,7 +1276,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 9
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-007",
+      "idPublico": "bolsa-market"
     },
     {
       "id": "bolsa-restaurant",
@@ -1275,7 +1321,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 11
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-008",
+      "idPublico": "bolsa-restaurant"
     },
     {
       "id": "bolsa-colombia",
@@ -1319,7 +1367,9 @@ export default {
         "pagina": 12
       },
       "piezasBulto": 500,
-      "aplicacionesNota": "También sublimable en beige y azul cielo; consulta esta opción al cotizar."
+      "aplicacionesNota": "También sublimable en beige y azul cielo; consulta esta opción al cotizar.",
+      "sku": "ZN-BO-009",
+      "idPublico": "bolsa-colombia"
     },
     {
       "id": "bolsa-manta",
@@ -1360,7 +1410,9 @@ export default {
         "pagina": 13
       },
       "piezasBulto": 500,
-      "aplicacionesNota": "El catálogo indica que es sublimable en color beige; consulta esta opción al cotizar."
+      "aplicacionesNota": "El catálogo indica que es sublimable en color beige; consulta esta opción al cotizar.",
+      "sku": "ZN-BO-010",
+      "idPublico": "bolsa-manta"
     },
     {
       "id": "bolsa-mezclilla",
@@ -1401,7 +1453,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 14
       },
-      "piezasBulto": 1000
+      "piezasBulto": 1000,
+      "sku": "ZN-BO-011",
+      "idPublico": "bolsa-mezclilla"
     },
     {
       "id": "bolsa-morral",
@@ -1441,7 +1495,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 15
       },
-      "piezasBulto": 500
+      "piezasBulto": 500,
+      "sku": "ZN-BO-012",
+      "idPublico": "bolsa-morral"
     },
     {
       "id": "bolsa-jumbo",
@@ -1482,7 +1538,9 @@ export default {
         "catalogo": "Bolsas ecológicas · Colección 2026",
         "pagina": 16
       },
-      "piezasBulto": 500
+      "piezasBulto": 500,
+      "sku": "ZN-BO-013",
+      "idPublico": "bolsa-jumbo"
     },
     {
       "id": "yazbek-c0550",
@@ -1582,7 +1640,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-002",
+      "idPublico": "zn-po-002"
     },
     {
       "id": "yazbek-d0550",
@@ -1677,7 +1737,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-003",
+      "idPublico": "zn-po-003"
     },
     {
       "id": "yazbek-c0605",
@@ -1767,7 +1829,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-002",
+      "idPublico": "zn-cm-002"
     },
     {
       "id": "yazbek-d0605",
@@ -1857,7 +1921,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-003",
+      "idPublico": "zn-cm-003"
     },
     {
       "id": "yazbek-c0200",
@@ -1964,7 +2030,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-002",
+      "idPublico": "zn-pl-002"
     },
     {
       "id": "yazbek-d0200",
@@ -2066,7 +2134,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-003",
+      "idPublico": "zn-pl-003"
     },
     {
       "id": "yazbek-c0300",
@@ -2174,7 +2244,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-004",
+      "idPublico": "zn-pl-004"
     },
     {
       "id": "yazbek-d0300",
@@ -2272,7 +2344,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-005",
+      "idPublico": "zn-pl-005"
     },
     {
       "id": "yazbek-c0606",
@@ -2363,7 +2437,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-004",
+      "idPublico": "zn-cm-004"
     },
     {
       "id": "yazbek-d0606",
@@ -2454,7 +2530,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-005",
+      "idPublico": "zn-cm-005"
     },
     {
       "id": "yazbek-c0607",
@@ -2547,7 +2625,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-006",
+      "idPublico": "zn-cm-006"
     },
     {
       "id": "yazbek-d0607",
@@ -2640,7 +2720,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-007",
+      "idPublico": "zn-cm-007"
     },
     {
       "id": "yazbek-c0604",
@@ -2727,7 +2809,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-008",
+      "idPublico": "zn-cm-008"
     },
     {
       "id": "yazbek-d0604",
@@ -2814,7 +2898,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-009",
+      "idPublico": "zn-cm-009"
     },
     {
       "id": "yazbek-c1502",
@@ -2913,7 +2999,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-004",
+      "idPublico": "zn-po-004"
     },
     {
       "id": "yazbek-d1502",
@@ -3007,7 +3095,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-005",
+      "idPublico": "zn-po-005"
     },
     {
       "id": "yazbek-c1302",
@@ -3106,7 +3196,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-006",
+      "idPublico": "zn-pl-006"
     },
     {
       "id": "yazbek-d1302",
@@ -3200,7 +3292,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PL-007",
+      "idPublico": "zn-pl-007"
     },
     {
       "id": "yazbek-c0702",
@@ -3290,7 +3384,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-SU-002",
+      "idPublico": "zn-su-002"
     },
     {
       "id": "yazbek-c0601",
@@ -3376,7 +3472,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-010",
+      "idPublico": "zn-cm-010"
     },
     {
       "id": "yazbek-d0601",
@@ -3462,7 +3560,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-CM-011",
+      "idPublico": "zn-cm-011"
     },
     {
       "id": "yazbek-c0701",
@@ -3561,7 +3661,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-SU-003",
+      "idPublico": "zn-su-003"
     },
     {
       "id": "yazbek-c0703",
@@ -3650,7 +3752,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-SU-004",
+      "idPublico": "zn-su-004"
     },
     {
       "id": "yazbek-c1504",
@@ -3746,7 +3850,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-006",
+      "idPublico": "zn-po-006"
     },
     {
       "id": "yazbek-d1504",
@@ -3837,7 +3943,9 @@ export default {
         "replicaVerificada": false
       },
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
-      "imagenIA": true
+      "imagenIA": true,
+      "sku": "ZN-PO-007",
+      "idPublico": "zn-po-007"
     }
   ],
   "promocionales": [

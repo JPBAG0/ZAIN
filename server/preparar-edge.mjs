@@ -1,9 +1,9 @@
 // Genera el adaptador Supabase desde el mismo servidor y catálogo de Node.
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-import C from '../js/config.js';
+import C from './config-interno.cjs';
 const folder=new URL('../supabase/functions/zain-pedidos/',import.meta.url);
 await mkdir(folder,{recursive:true});
-const source=(await readFile(new URL('./pedidos.mjs',import.meta.url),'utf8')).replace("import C from '../js/config.js';","import C from './catalogo.mjs';");
+const source=(await readFile(new URL('./pedidos.mjs',import.meta.url),'utf8')).replace("import C from './config-interno.cjs';","import C from './catalogo.mjs';");
 await writeFile(new URL('pedidos.mjs',folder),source);
 await writeFile(new URL('catalogo.mjs',folder),'export default '+JSON.stringify(C,null,2)+';\n');
 await writeFile(new URL('index.ts',folder),`import {createHandler} from './pedidos.mjs';
