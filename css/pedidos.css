@@ -66,3 +66,10 @@
 .control__subirfoto{font-size:12px;padding:10px}.control__fotocatalogo img{max-height:260px}
 }
 .control .control__publicar{display:flex;align-items:center;gap:10px}
+
+.control__tecnicaseditor{grid-column:1/-1;border:0;padding:0;margin:0}
+.control__tecnicaseditor legend{font-size:15px;font-weight:600;margin-bottom:12px}.control__tecnicaseditor p{font-size:13px;color:#727480;line-height:1.5}
+.control__elegirtecnicas{display:flex;flex-wrap:wrap;gap:10px}
+.control__elegirtecnicas button{background:#fff;color:#111;border:1px solid #c9cbd2;border-radius:12px;padding:13px 22px;min-height:46px;font:600 15px Archivo,sans-serif;cursor:pointer}
+.control__elegirtecnicas button.on{background:#111;color:#fff;border-color:#111}
+.control__tecnicaslista{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.control__tecnicaslista span{font-size:12px;background:#f0f1f5;padding:5px 9px;border-radius:7px}

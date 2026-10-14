@@ -17,7 +17,7 @@ for(const p of copy.productos){
     p.compatHash=legacyHash(p.id);p.id=p.idPublico;
     if(!families.has(p.familia))families.set(p.familia,'zain-familia-'+(++count));
     p.familia=families.get(p.familia);
-    const target='img/productos/zain/'+p.sku.toLowerCase()+'-render.webp';
+    const target='img/productos/zain/'+p.sku.toLowerCase()+'-render'+(p.versionRender?'-v'+p.versionRender:'')+'.webp';
     await copyFile(new URL('../'+p.foto,import.meta.url),new URL('../'+target,import.meta.url));
     p.foto=target;
     const photo='img/productos/zain/'+p.sku.toLowerCase()+'-modelo.webp';

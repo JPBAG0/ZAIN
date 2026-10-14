@@ -2192,7 +2192,8 @@ module.exports = {
       "composicionColor": {
         "102": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/yazbek-ia/c0300.webp",
+      "foto": "img/productos/yazbek-ia/c0300-blanco-2026-10-14.webp",
+      "versionRender": 2,
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",

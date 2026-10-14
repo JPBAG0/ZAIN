@@ -101,3 +101,27 @@ test('folios anteriores se reintentan con contenido original y secreto correcto'
  const s=setup({existing:row,editions:[{producto_id:'bolsa-expo',cambios:{activo:false}}]});
  assert.equal((await s.request('crear',body)).status,200);assert.equal((await s.request('crear',{...body,token:'b'.repeat(64)})).status,403);assert.ok(!s.calls.some(x=>x.url.includes('/rpc/zain_crear_pedido')));
 });
+
+test('técnicas editables: una o varias, sin IDs desconocidos ni duplicados',()=>{
+ assert.deepEqual(normalizeChanges({tecnicas:['bordado','dtf','serigrafia']}),{tecnicas:['bordado','dtf','serigrafia']});
+ for(const value of [[],null,'dtf',['láser'],['dtf','dtf'],['dtf','bordado','serigrafia','otra']])assert.throws(()=>normalizeChanges({tecnicas:value}),/técnica/);
+});
+test('técnicas cambiadas se reflejan en catálogo y portada con una opción válida',()=>{
+ const first=PublicC.muestrasPortada[0],base=PublicC.productos.find(p=>p.id===first.p);
+ const cat=resolveInternal(C,[{producto_id:first.p,cambios:{tecnicas:['dtf']}}]),pub=projectPublic(PublicC,cat,[],'https://project.supabase.co');
+ const changed=pub.productos.find(p=>p.id===first.p);assert.deepEqual(changed.tecnicas,['dtf']);assert.equal(pub.muestrasPortada[0].t,'dtf');
+ assert.ok(changed.tecnicasNota.includes('DTF'));assert.equal(changed.foto,base.foto);assert.deepEqual(PublicC.productos.find(p=>p.id===first.p).tecnicas,base.tecnicas);
+});
+test('servidor acepta la técnica asignada y rechaza la desactivada sin guardar',async()=>{
+ const s=setup({editions:[{producto_id:'bolsa-expo',cambios:{tecnicas:['dtf']}}]});
+ assert.equal((await s.request('crear',body)).status,400);assert.ok(!s.calls.some(x=>x.url.includes('/rpc/zain_crear_pedido')));
+ const fresh={...body,items:[{...item,tecnica:'DTF'}]};assert.equal((await s.request('crear',fresh)).status,200);assert.equal(s.saved.row.items[0].tecnica,'DTF');
+ s.editions[0].cambios.tecnicas=['serigrafia'];assert.equal((await s.request('crear',fresh)).status,200);assert.equal(s.saved.row.items[0].tecnica,'DTF');
+});
+test('editar técnicas exige equipo y usa control de versión existente',async()=>{
+ const changes={id:'bolsa-expo',version:0,cambios:{tecnicas:['bordado','dtf']}};
+ const s=setup();assert.equal((await s.request('catalogo-guardar',changes)).status,401);
+ assert.equal((await s.request('catalogo-guardar',{...changes,cambios:{tecnicas:[]}},true)).status,400);
+ assert.equal((await s.request('catalogo-guardar',changes,true)).status,200);
+ const rpc=s.calls.find(x=>x.url.includes('/rpc/zain_guardar_catalogo'));assert.deepEqual(JSON.parse(rpc.opts.body).p_cambios.tecnicas,['bordado','dtf']);
+});

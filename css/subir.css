@@ -1,0 +1,8 @@
+.subir{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:39;display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid #111;border-radius:50%;background:#111;color:#fff;box-shadow:0 8px 24px #0002;cursor:pointer;touch-action:manipulation;animation:subir-aparece 200ms cubic-bezier(.16,1,.3,1);transition:transform 160ms cubic-bezier(.16,1,.3,1)}
+.subir--con-whatsapp{bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+.subir svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.subir[hidden]{display:none}.subir:focus-visible{outline:3px solid #303cff;outline-offset:4px}.subir:active{transform:scale(.94)}
+html.sin-scroll .subir,body:has(dialog[open]) .subir{visibility:hidden;pointer-events:none}
+@keyframes subir-aparece{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){.subir:hover{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.subir{animation:none;transition:none}}

@@ -10,7 +10,7 @@ Entrar a /gestion-zain y elegir **Catálogo**. El panel incluye las 44 referenci
 - **Editar** permite cambiar nombre comercial, descripción, especificaciones adicionales, disponibilidad, tejido, composición, gramaje, medidas, proveedor y SKU del proveedor. Los textos públicos no deben contener referencias privadas que se quiera mantener internas.
 - **Cambiar foto** prepara una segunda imagen de referencia JPG/PNG/WEBP (entrada hasta 20 MB y 40 megapíxeles), la convierte a WEBP hasta 1600 px sin metadatos y la sube al bucket de fotos del catálogo. Solo se vincula a la publicación al pulsar **Guardar y publicar**. Las fotos del catálogo son públicas; no subir datos personales ni logos de clientes aquí.
 - **Usar foto original** restaura la fotografía base al guardar. Si ese modelo no tenía segunda foto, vuelve a quedar con su render solamente.
-- El render de personalización, SKU ZAIN, tallas, paletas, técnicas y mínimos permanecen protegidos. No se editan desde esta pantalla. La composición editada aplica a todos los colores; las medidas editadas sustituyen el texto y dimensiones anteriores.
+- El render de personalización, SKU ZAIN, tallas, paletas y mínimos permanecen protegidos. No se editan desde esta pantalla. La composición editada aplica a todos los colores; las medidas editadas sustituyen el texto y dimensiones anteriores.
 - Cambios simultáneos se controlan por versión. Si otro miembro guardó antes, cerrar el borrador y actualizar antes de reintentar; no se sobrescribe silenciosamente.
 
 ## Referencias de compras y pedidos
@@ -49,3 +49,20 @@ La creación de referencias nuevas, modificar renders/tallas/colores, guías de 
 ## Publicación comprobada — 14-oct-2026
 
 Implementación 3eed969; publicación web 776bdc7 en claude/zain-website-deploy-d85pzy, Vercel success. Función Supabase v13 ACTIVE. URL pública comprobada: 39 referencias activas y 5 ocultas, 6 muestras de portada; sin SKU al frente de tarjetas y con SKU en la ficha de personalización. Panel publicado con pestaña Catálogo/editor, área privada oculta sin sesión; endpoint privado 401 y fuente de servidor 404. Navegador de producción sin errores ni desbordamiento en 1280×800 y 390×844. Ediciones, foto y palomita probadas con datos ficticios locales; no se modificaron publicaciones/pedidos reales para verificar. Las tablas de edición/fotos permanecían sin registros al cierre de las pruebas.
+
+## Decisión vigente: técnicas editables, bolsas unificadas y regreso al inicio — 14-oct-2026
+
+JP eligió **todas las bolsas visibles en “Todos”**. Se muestran las 13 fichas individuales junto a las familias de prendas; los filtros siguen visibles, también en Bolsas, sin una tarjeta intermedia “Ver bolsas”. En “Todos” son 28 fichas (familias agrupadas y bolsas), que representan las 39 referencias activas. #bolsas abre su filtro en el mismo catálogo.
+
+Botón circular **Volver arriba** en la tienda y en /gestion-zain, visible después de bajar aproximadamente una pantalla. En tienda queda encima de WhatsApp, con espacio; se oculta bajo carrito/diálogos. Desplazamiento suave o inmediato con movimiento reducido; etiqueta accesible y foco al encabezado.
+
+Playera premium de caballero ZN-PL-004: el render base turquesa se corrigió a blanco neutro con image_gen integrada, preservando corte/costuras/pliegues y transparencia. Original intacto; nuevo archivo versionado y WEBP lossless. No se sustituyeron otras prendas ni fotos secundarias. Tinte/color elegidos por cliente siguen funcionando.
+
+Gestión → Catálogo → Editar ahora incluye botones múltiples **Bordado / Serigrafía / DTF**. Activos: negro con texto blanco. Guardar y publicar aplica las técnicas a esa referencia/silueta. Al menos una técnica; selección y variantes no cambian solas. El cliente ve las asignadas en la ficha y editor; servidor rechaza una desactivada para pedidos nuevos. Solicitudes previas conservan su técnica y reintentos autorizados. Esta decisión reemplaza proteger las técnicas como campo fijo.
+
+Migración catalogo_tecnicas_editables_zain aplicada: mismos permisos privados, versión/bloqueo e historial; solo tres IDs permitidos, sin duplicados ni lista vacía. 59 pruebas aprobadas; pruebas locales con datos ficticios de selección múltiple, desactivación, reflejo en cliente, regreso al inicio y 390×844/1280×800, sin desbordamiento. No se cambiaron técnicas de productos reales para probar ni se enviaron mensajes.
+
+Guía: docs/CATALOGO-GESTION.md. Registro completo en el Cerebro de Dropbox.
+
+
+SQL adicional: supabase/catalogo-tecnicas.sql. El render blanco tiene procedencia/hash en docs/IMAGEN-PREMIUM-BLANCA.json.

@@ -1,10 +1,11 @@
 // Proyección del catálogo; el render, SKU ZAIN, paletas y tallas quedan protegidos.
-export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','foto_id']);
+export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','foto_id','tecnicas']);
 export function normalizeChanges(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||!Object.keys(input).length)throw Error('Faltan los cambios del modelo.');
  const result={};
  for(const [key,val] of Object.entries(input)){
   if(!editable.has(key))throw Error('Ese campo está protegido: '+key);
+  if(key==='tecnicas'){if(!Array.isArray(val)||val.length<1||val.length>3||new Set(val).size!==val.length||val.some(t=>!['bordado','serigrafia','dtf'].includes(t)))throw Error('Selecciona al menos una técnica válida.');result[key]=[...val];continue;}
   if(key==='activo'){if(typeof val!=='boolean')throw Error('Actividad inválida.');result[key]=val;continue;}
   if(key==='gramaje'){if(!Number.isInteger(val)||val<1||val>2000)throw Error('Gramaje inválido.');result[key]=val;continue;}
   if(key==='foto_id'){if(val!==null&&!/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(val))throw Error('Foto inválida.');result[key]=val;continue;}
@@ -20,6 +21,7 @@ export function resolveInternal(base,editions){
  for(const p of catalog.productos){
   const row=map.get(p.idPublico||p.id),d=row?.cambios||{};
   p.versionCatalogo=row?.version||0;p.fotoReferenciaId=d.foto_id||null;
+  if(d.tecnicas!==undefined){p.tecnicas=[...d.tecnicas];p.tecnicasNota='Técnicas disponibles: '+p.tecnicas.map(id=>catalog.tecnicas.find(t=>t.id===id).nombre).join(', ')+'. Acabado y área de impresión se confirman al cotizar.';}
   if(d.activo!==undefined)p.activo=d.activo;
   if(d.nombre!==undefined){p.nombreFamiliaComercial=d.nombre;p.nombreComercial=d.nombre+(p.silueta?' · '+p.silueta:'');}
   for(const key of ['descripcion','especificaciones','tejido','gramaje','disponibilidad'])if(d[key]!==undefined)p[key]=d[key];
@@ -36,6 +38,7 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  const photoMap=new Map(photos.map(f=>[f.id,f])),all=[];
  for(const p of internal.productos){
   const pub=bySku.get(p.sku);if(!pub)continue;
+  pub.tecnicas=[...p.tecnicas];pub.tecnicasNota=p.tecnicasNota||pub.tecnicasNota;
   pub.activo=p.activo!==false;pub.nombre=p.nombreComercial||pub.nombre;pub.nombreFamilia=p.nombreFamiliaComercial||pub.nombreFamilia;
   for(const key of ['descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad'])if(p[key]!==undefined)pub[key]=structuredClone(p[key]);
   // Las claves de composición por color conservan los IDs públicos, no códigos internos.
@@ -48,7 +51,7 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  }
  copy.productos=all.filter(p=>p.activo);copy.productosHistoricos=all.filter(p=>!p.activo);
  copy.categoriasCatalogo=internal.categoriasCatalogo.filter(cat=>copy.productos.some(p=>p.categoria===cat));
- copy.muestrasPortada=(basePublic.muestrasPortada||[]).filter(m=>copy.productos.some(p=>p.id===m.p));
+ copy.muestrasPortada=(basePublic.muestrasPortada||[]).filter(m=>copy.productos.some(p=>p.id===m.p)).map(m=>{const p=copy.productos.find(p=>p.id===m.p);return {...m,t:p.tecnicas.includes(m.t)?m.t:p.tecnicas[0]};});
  if(!copy.muestrasPortada.length&&copy.productos.length){const p=copy.productos[0];copy.muestrasPortada=[{p:p.id,c:p.colores[0],t:p.tecnicas[0],z:p.zonas[0].id,cm:Math.min(9,p.zonas[0].max)}];}
  const bag=copy.productos.find(p=>p.id==='bolsa-expo')||copy.productos.find(p=>p.grupo==='bolsas');
  if(bag)copy.grupos.bolsas.foto=bag.foto;

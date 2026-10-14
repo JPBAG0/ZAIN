@@ -1709,7 +1709,8 @@
       "composicionColor": {
         "zain-color-074": "90% algodón / 10% poliéster"
       },
-      "foto": "img/productos/zain/zn-pl-004-render.webp",
+      "foto": "img/productos/zain/zn-pl-004-render-v2.webp",
+      "versionRender": 2,
       "renderOrientativo": true,
       "colores": [
         "zain-color-071",

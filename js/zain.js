@@ -391,55 +391,28 @@
      CATÁLOGO
      ===================================================================== */
   const categorias = ["Todo", ...C.categoriasCatalogo];
-  let filtro = "Todo";
-  let grupo = location.hash === "#bolsas" ? "bolsas" : null;
-  const bolsas = C.productos.filter((p) => p.grupo === "bolsas");
+  let filtro = location.hash === "#bolsas" ? "Bolsas" : "Todo";
+  const bolsas = C.productos.filter(p=>p.grupo==="bolsas");
   const grupoBolsas = C.grupos.bolsas;
-  const abrirBolsas = () => {
-    grupo = "bolsas";
-    if (location.hash !== "#bolsas") location.hash = "bolsas";
-    pintarCatalogo();
-    $("#catalogo").scrollIntoView({ behavior: reducido ? "auto" : "smooth" });
-    $("#catTitulo").focus({ preventScroll: true });
-  };
   function pintarCatalogo() {
-    $$("#rejilla [data-categoria-titulo]").forEach(h => { h.hidden = !!grupo || filtro !== "Todo"; });
-    $("#catalogoGrupo").hidden = !grupo;
-    $("#filtros").hidden = !!grupo;
-    $("#catTitulo").textContent = grupo ? grupoBolsas.nombre : filtro === "Todo" ? "Catálogo" : filtro;
-    $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
-    $$("#rejilla .producto").forEach((art) => {
-      const p = prod(art.dataset.id);
-      art.hidden = art.dataset.grupo ? !bolsas.length || !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
-        : grupo ? p.grupo !== grupo : p.grupo === "bolsas" || (filtro !== "Todo" && filtro !== p.categoria);
-    });
+    $$("#rejilla [data-categoria-titulo]").forEach(h=>h.hidden=filtro!=="Todo");
+    $("#catTitulo").textContent=filtro==="Todo"?"Catálogo":filtro;
+    $("#catDescripcion").textContent=filtro==="Bolsas"?grupoBolsas.aviso:"Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
+    $$("#rejilla .producto").forEach(art=>art.hidden=filtro!=="Todo"&&art.dataset.cat!==filtro);
+    $$(".filtro").forEach(x=>{x.classList.toggle("on",x.dataset.cat===filtro);x.setAttribute("aria-selected",String(x.dataset.cat===filtro));});
   }
-  $("#volverCatalogo").addEventListener("click", () => {
-    grupo = null;
-    filtro = "Todo";
-    location.hash = "catalogo";
-    $$(".filtro").forEach((x) => { x.classList.toggle("on", x.dataset.cat === filtro); x.setAttribute("aria-selected", x.dataset.cat === filtro); });
-    pintarCatalogo();
-    $("[data-abrir-bolsas]").focus({ preventScroll: true });
+  const abrirBolsas=()=>{
+    filtro="Bolsas";history.replaceState(null,"","#bolsas");pintarCatalogo();
+    $("#catalogo").scrollIntoView({behavior:reducido?"auto":"smooth"});$("#catTitulo").focus({preventScroll:true});
+  };
+  addEventListener("hashchange",()=>{
+    if(location.hash==="#bolsas"){filtro="Bolsas";pintarCatalogo();$("#catalogo").scrollIntoView({behavior:reducido?"auto":"smooth"});}
+    else if(location.hash==="#catalogo"){filtro="Todo";pintarCatalogo();}
   });
-  addEventListener("hashchange", () => {
-    grupo = location.hash === "#bolsas" ? "bolsas" : null;
-    pintarCatalogo();
-    if (grupo) $("#catalogo").scrollIntoView({ behavior: reducido ? "auto" : "smooth" });
-  });
-  $("#filtros").innerHTML = categorias
-    .map((c) => `<button type="button" role="tab" class="filtro${c === filtro ? " on" : ""}" aria-selected="${c === filtro}" data-cat="${esc(c)}">${esc(c === "Todo" ? "Todos" : c)}</button>`)
-    .join("");
-  $("#filtros").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-cat]");
-    if (!b) return;
-    if (b.dataset.cat === "Bolsas") { abrirBolsas(); return; }
-    filtro = b.dataset.cat;
-    $$(".filtro").forEach((x) => {
-      x.classList.toggle("on", x === b);
-      x.setAttribute("aria-selected", x === b);
-    });
-    pintarCatalogo();
+  $("#filtros").innerHTML=categorias.map(c=>'<button type="button" role="tab" class="filtro'+(c===filtro?' on':'')+'" aria-selected="'+(c===filtro)+'" data-cat="'+esc(c)+'">'+esc(c==="Todo"?"Todos":c)+'</button>').join("");
+  $("#filtros").addEventListener("click",e=>{
+    const b=e.target.closest("[data-cat]");if(!b)return;
+    filtro=b.dataset.cat;history.replaceState(null,"",filtro==="Bolsas"?"#bolsas":"#catalogo");pintarCatalogo();
   });
 
   const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
@@ -450,12 +423,7 @@
     <p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p>
     <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
     <div class="producto__pie"><div class="producto__precio"><b>Cotiza por WhatsApp</b></div><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></article>`;
-  $("#rejilla").innerHTML = categorias.slice(1).map(cat => `<h3 class="rejilla__categoria" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3>` + familias.filter(p => p.categoria === cat).map(tarjeta).join("")).join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
-      <div class="producto__foto"><img src="${esc(grupoBolsas.foto)}" alt="Bolsas ecológicas del catálogo" width="1000" height="1000" loading="lazy" /></div>
-      <div class="producto__colores"><span>${bolsas.length} modelos</span></div>
-      <div class="producto__txt"><h3>${esc(grupoBolsas.nombre)}</h3><p>${esc(grupoBolsas.descripcion)}</p><p class="producto__disponibilidad">Consulta disponibilidad.</p></div>
-      <div class="producto__pie"><span>Modelos, medidas y colores</span><button class="btn btn--tinta btn--chico" type="button" data-abrir-bolsas>Ver bolsas</button></div>
-    </article>`;
+  $("#rejilla").innerHTML = categorias.slice(1).map(cat => `<h3 class="rejilla__categoria" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3>` + familias.filter(p => p.categoria === cat).map(tarjeta).join("")).join("");
 
   const mostrarImagen = (art, index) => {
     const cv = $("canvas", art), photo = $(".producto__modelo", art);

@@ -96,7 +96,7 @@ export function createHandler(env={}, fetcher=fetch) {
   const currentCatalog=async()=>resolveInternal(C,catalogEnabled?await catalogRows():[]);
   const productInfo=(p,photos=[])=>{
     const original=[...PublicC.productos,...PublicC.productosHistoricos].find(x=>x.sku===p.sku),photo=photos.find(x=>x.id===p.fotoReferenciaId&&x.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(x.objeto));
-    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',fotoRender:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
+    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',fotoRender:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
@@ -212,7 +212,7 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(request.method==='GET'&&op==='catalogo-lista'){
         const rows=catalogEnabled?await catalogRows():[],cat=resolveInternal(C,rows),photos=await catalogPhotos(rows);
-        return response(200,{productos:cat.productos.map(p=>productInfo(p,photos)),editable:catalogEnabled});
+        return response(200,{productos:cat.productos.map(p=>productInfo(p,photos)),editable:catalogEnabled,opcionesTecnicas:C.tecnicas.map(({id,nombre})=>({id,nombre}))});
       }
       if(request.method==='POST'&&op==='catalogo-guardar'){
         if(!catalogEnabled)fail(503,'La edición del catálogo todavía no está habilitada.');
