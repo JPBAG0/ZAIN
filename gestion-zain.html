@@ -1,29 +1,34 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
-  <title>Pedidos · ZAIN</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/zain.css?v=15"><link rel="stylesheet" href="css/pedidos.css?v=2">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<title>Gestión · ZAIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/zain.css?v=19"><link rel="stylesheet" href="css/pedidos.css?v=3">
 </head>
 <body class="control">
-  <header class="control__cab"><a href="/" aria-label="Volver a ZAIN">ZAIN <span>Pedidos</span></a><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></header>
-  <main>
-    <section class="control__login" id="acceso">
-      <span class="control__etq">SOLO EQUIPO ZAIN</span><h1>Todo el pedido,<br>en un lugar.</h1>
-      <p>Consulta las solicitudes, los renders y los logos originales de tus clientes.</p>
-      <form id="login"><label>Correo<input id="correo" type="email" autocomplete="username" required maxlength="254"></label><label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label><button class="btn btn--azul btn--ancho" id="entrar" disabled>Preparando acceso…</button></form>
-    </section>
-    <p id="estadoPanel" class="control__estado" role="status" aria-live="polite"></p>
-    <section id="trabajo" hidden>
-      <div class="control__titulo"><div><span class="control__etq" id="equipo"></span><h1>Solicitudes</h1></div><button type="button" class="btn btn--linea" id="recargar">Actualizar</button></div>
-      <p>Una solicitud guardada todavía no es un pedido confirmado ni pagado.</p>
-      <form id="filtros" class="control__filtros"><label>Buscar folio<input id="buscar" type="search" placeholder="ZAIN-…" maxlength="50"></label><label>Estado<select id="estadoFiltro"><option value="">Todos</option></select></label><button class="btn btn--linea">Buscar</button></form>
-      <div class="control__grid"><div><div id="lista"></div><nav class="control__paginas" aria-label="Páginas de solicitudes"><button type="button" class="btn-texto" id="anterior">Anterior</button><span id="pagina"></span><button type="button" class="btn-texto" id="siguiente">Siguiente</button></nav></div><section id="detalle" class="control__detalle" aria-label="Ficha de solicitud"><p>Elige una solicitud para ver sus archivos y detalles.</p></section></div>
-    </section>
-  </main>
-  <script src="js/config.js?v=14"></script><script src="js/control-pedidos.js?v=5"></script>
-</body>
-</html>
+<header class="control__cab"><a href="/" aria-label="Volver al catálogo ZAIN"><b>ZAIN</b><span>Gestión de pedidos</span></a><div class="control__usuario"><span id="equipo"></span><a href="/" class="control__catalogo">Ver catálogo ↗</a><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></div></header>
+<main>
+<section class="control__login" id="acceso">
+<div class="control__bienvenida"><div class="control__marca">ZAIN</div><h1>Del primer logo<br>a la entrega.</h1><p>Un espacio para cotizar, coordinar la producción y dar seguimiento a cada pedido.</p><div class="control__flujo"><span>Solicitud</span><i></i><span>Producción</span><i></i><span>Entrega</span></div></div>
+<div class="control__loginform"><h2>Entrar al equipo</h2><p>Usa tu cuenta autorizada de ZAIN.</p><form id="login"><label>Correo<input id="correo" type="email" autocomplete="username" required maxlength="254" placeholder="tu@correo.com"></label><label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label><button class="btn btn--azul btn--ancho" id="entrar" disabled>Preparando acceso…</button></form></div>
+</section>
+<p id="estadoPanel" class="control__estado" role="status" aria-live="polite"></p>
+<section id="trabajo" hidden>
+<div class="control__titulo"><div><h1>Tu operación, al día.</h1><p id="fechaPanel">Pedidos y próximos pasos del equipo.</p></div><button type="button" class="btn btn--linea" id="recargar">↻ Actualizar</button></div>
+<div id="resumen" class="control__resumen" aria-label="Resumen de pedidos"></div>
+<div class="control__bandeja">
+<div class="control__bandejacab"><div><h2>Bandeja de pedidos</h2><p>Abre una solicitud para revisar el diseño y continuar.</p></div><div class="control__vistas" role="group" aria-label="Vista de pedidos"><button type="button" id="activos" class="on" aria-pressed="true">Activos</button><button type="button" id="papelera" aria-pressed="false">Papelera <span id="cuentaPapelera">0</span></button></div></div>
+<form id="filtros" class="control__filtros"><label class="control__buscar"><span>Buscar folio</span><input id="buscar" type="search" placeholder="Buscar ZAIN-…" maxlength="50"></label><label><span>Estado</span><select id="estadoFiltro"><option value="">Todos los estados</option></select></label><label><span>Periodo</span><select id="periodo"><option value="">Todos los pedidos</option><option value="semana">Esta semana</option></select></label><button class="btn btn--azul">Filtrar</button></form>
+<div id="lista" class="control__lista" aria-live="polite"></div>
+<nav class="control__paginas" aria-label="Páginas de pedidos"><span id="pagina"></span><div><button type="button" class="btn-texto" id="anterior">← Anterior</button><button type="button" class="btn-texto" id="siguiente">Siguiente →</button></div></nav>
+</div>
+<p class="control__aclaracion">Las tarjetas cuentan solicitudes y su estado actual. Confirmado todavía no significa cobrado.</p>
+</section>
+</main>
+<dialog id="ficha" class="control__ficha"><header class="control__fichacab"><span>Detalle del pedido</span><button type="button" id="cerrarDetalle" aria-label="Cerrar detalle">✕</button></header><section id="detalle" class="control__detalle" aria-label="Ficha de pedido"></section></dialog>
+<dialog id="confirmacion" class="control__confirmacion"><form id="confirmarEliminar"><h2>Mover a papelera</h2><p id="textoEliminar"></p><p>El pedido y sus archivos se conservan. Puedes restaurarlo desde Papelera.</p><label>Escribe el folio para confirmar<input id="folioEliminar" autocomplete="off" required></label><p id="errorEliminar" role="status"></p><div class="control__confirmarbotones"><button type="button" id="cancelarEliminar" class="btn btn--linea">Conservar pedido</button><button type="submit" class="btn control__btnpeligro" id="confirmarMover">Mover a papelera</button></div></form></dialog>
+<script src="js/config.js?v=15"></script><script src="js/control-pedidos.js?v=6"></script>
+</body></html>

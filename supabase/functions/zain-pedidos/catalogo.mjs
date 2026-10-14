@@ -706,7 +706,8 @@ export default {
       "fotoOriginal": "img/productos/playera.webp",
       "imagenLimpia": true,
       "sku": "ZN-PL-001",
-      "idPublico": "playera"
+      "idPublico": "playera",
+      "activo": false
     },
     {
       "id": "polo",
@@ -764,7 +765,8 @@ export default {
       "fotoOriginal": "img/productos/polo.webp",
       "imagenLimpia": true,
       "sku": "ZN-PO-001",
-      "idPublico": "polo"
+      "idPublico": "polo",
+      "activo": false
     },
     {
       "id": "camisa",
@@ -810,7 +812,8 @@ export default {
       "fotoOriginal": "img/productos/camisa.webp",
       "imagenLimpia": true,
       "sku": "ZN-CM-001",
-      "idPublico": "camisa"
+      "idPublico": "camisa",
+      "activo": false
     },
     {
       "id": "chamarra",
@@ -858,7 +861,8 @@ export default {
       "fotoOriginal": "img/productos/chamarra.webp",
       "imagenLimpia": true,
       "sku": "ZN-CH-001",
-      "idPublico": "chamarra"
+      "idPublico": "chamarra",
+      "activo": false
     },
     {
       "id": "sudadera",
@@ -908,7 +912,8 @@ export default {
       "fotoOriginal": "img/productos/sudadera.webp",
       "imagenLimpia": true,
       "sku": "ZN-SU-001",
-      "idPublico": "sudadera"
+      "idPublico": "sudadera",
+      "activo": false
     },
     {
       "id": "gorra",
@@ -944,7 +949,8 @@ export default {
       "fotoOriginal": "img/productos/gorra.webp",
       "imagenLimpia": true,
       "sku": "ZN-GO-001",
-      "idPublico": "gorra"
+      "idPublico": "gorra",
+      "activo": true
     },
     {
       "id": "bolsa-boutique",
@@ -990,7 +996,8 @@ export default {
       },
       "piezasBulto": 500,
       "sku": "ZN-BO-001",
-      "idPublico": "bolsa-boutique"
+      "idPublico": "bolsa-boutique",
+      "activo": true
     },
     {
       "id": "bolsa-sobre-chico",
@@ -1038,7 +1045,8 @@ export default {
       },
       "piezasBulto": 500,
       "sku": "ZN-BO-002",
-      "idPublico": "bolsa-sobre-chico"
+      "idPublico": "bolsa-sobre-chico",
+      "activo": true
     },
     {
       "id": "bolsa-sobre-grande",
@@ -1083,7 +1091,8 @@ export default {
       },
       "piezasBulto": 500,
       "sku": "ZN-BO-003",
-      "idPublico": "bolsa-sobre-grande"
+      "idPublico": "bolsa-sobre-grande",
+      "activo": true
     },
     {
       "id": "bolsa-regalo",
@@ -1130,7 +1139,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-004",
-      "idPublico": "bolsa-regalo"
+      "idPublico": "bolsa-regalo",
+      "activo": true
     },
     {
       "id": "bolsa-expo",
@@ -1174,7 +1184,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-005",
-      "idPublico": "bolsa-expo"
+      "idPublico": "bolsa-expo",
+      "activo": true
     },
     {
       "id": "bolsa-zapatera",
@@ -1221,7 +1232,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-006",
-      "idPublico": "bolsa-zapatera"
+      "idPublico": "bolsa-zapatera",
+      "activo": true
     },
     {
       "id": "bolsa-market",
@@ -1278,7 +1290,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-007",
-      "idPublico": "bolsa-market"
+      "idPublico": "bolsa-market",
+      "activo": true
     },
     {
       "id": "bolsa-restaurant",
@@ -1323,7 +1336,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-008",
-      "idPublico": "bolsa-restaurant"
+      "idPublico": "bolsa-restaurant",
+      "activo": true
     },
     {
       "id": "bolsa-colombia",
@@ -1369,7 +1383,8 @@ export default {
       "piezasBulto": 500,
       "aplicacionesNota": "También sublimable en beige y azul cielo; consulta esta opción al cotizar.",
       "sku": "ZN-BO-009",
-      "idPublico": "bolsa-colombia"
+      "idPublico": "bolsa-colombia",
+      "activo": true
     },
     {
       "id": "bolsa-manta",
@@ -1412,7 +1427,8 @@ export default {
       "piezasBulto": 500,
       "aplicacionesNota": "El catálogo indica que es sublimable en color beige; consulta esta opción al cotizar.",
       "sku": "ZN-BO-010",
-      "idPublico": "bolsa-manta"
+      "idPublico": "bolsa-manta",
+      "activo": true
     },
     {
       "id": "bolsa-mezclilla",
@@ -1455,7 +1471,8 @@ export default {
       },
       "piezasBulto": 1000,
       "sku": "ZN-BO-011",
-      "idPublico": "bolsa-mezclilla"
+      "idPublico": "bolsa-mezclilla",
+      "activo": true
     },
     {
       "id": "bolsa-morral",
@@ -1497,7 +1514,8 @@ export default {
       },
       "piezasBulto": 500,
       "sku": "ZN-BO-012",
-      "idPublico": "bolsa-morral"
+      "idPublico": "bolsa-morral",
+      "activo": true
     },
     {
       "id": "bolsa-jumbo",
@@ -1540,7 +1558,8 @@ export default {
       },
       "piezasBulto": 500,
       "sku": "ZN-BO-013",
-      "idPublico": "bolsa-jumbo"
+      "idPublico": "bolsa-jumbo",
+      "activo": true
     },
     {
       "id": "yazbek-c0550",
@@ -1642,7 +1661,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-002",
-      "idPublico": "zn-po-002"
+      "idPublico": "zn-po-002",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo clásico",
+      "nombreComercial": "Polo clásico · Caballero"
     },
     {
       "id": "yazbek-d0550",
@@ -1739,7 +1761,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-003",
-      "idPublico": "zn-po-003"
+      "idPublico": "zn-po-003",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo clásico",
+      "nombreComercial": "Polo clásico · Dama"
     },
     {
       "id": "yazbek-c0605",
@@ -1831,7 +1856,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-002",
-      "idPublico": "zn-cm-002"
+      "idPublico": "zn-cm-002",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa ejecutiva manga larga",
+      "nombreComercial": "Camisa ejecutiva manga larga · Caballero"
     },
     {
       "id": "yazbek-d0605",
@@ -1923,7 +1951,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-003",
-      "idPublico": "zn-cm-003"
+      "idPublico": "zn-cm-003",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa ejecutiva manga larga",
+      "nombreComercial": "Camisa ejecutiva manga larga · Dama"
     },
     {
       "id": "yazbek-c0200",
@@ -2032,7 +2063,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-002",
-      "idPublico": "zn-pl-002"
+      "idPublico": "zn-pl-002",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera esencial",
+      "nombreComercial": "Playera esencial · Caballero"
     },
     {
       "id": "yazbek-d0200",
@@ -2136,7 +2170,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-003",
-      "idPublico": "zn-pl-003"
+      "idPublico": "zn-pl-003",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera esencial",
+      "nombreComercial": "Playera esencial · Dama"
     },
     {
       "id": "yazbek-c0300",
@@ -2246,7 +2283,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-004",
-      "idPublico": "zn-pl-004"
+      "idPublico": "zn-pl-004",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera premium",
+      "nombreComercial": "Playera premium · Caballero"
     },
     {
       "id": "yazbek-d0300",
@@ -2346,7 +2386,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-005",
-      "idPublico": "zn-pl-005"
+      "idPublico": "zn-pl-005",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera premium",
+      "nombreComercial": "Playera premium · Dama"
     },
     {
       "id": "yazbek-c0606",
@@ -2439,7 +2482,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-004",
-      "idPublico": "zn-cm-004"
+      "idPublico": "zn-cm-004",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa de trabajo manga corta",
+      "nombreComercial": "Camisa de trabajo manga corta · Caballero"
     },
     {
       "id": "yazbek-d0606",
@@ -2532,7 +2578,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-005",
-      "idPublico": "zn-cm-005"
+      "idPublico": "zn-cm-005",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa de trabajo manga corta",
+      "nombreComercial": "Camisa de trabajo manga corta · Dama"
     },
     {
       "id": "yazbek-c0607",
@@ -2627,7 +2676,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-006",
-      "idPublico": "zn-cm-006"
+      "idPublico": "zn-cm-006",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa de trabajo manga larga",
+      "nombreComercial": "Camisa de trabajo manga larga · Caballero"
     },
     {
       "id": "yazbek-d0607",
@@ -2722,7 +2774,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-007",
-      "idPublico": "zn-cm-007"
+      "idPublico": "zn-cm-007",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa de trabajo manga larga",
+      "nombreComercial": "Camisa de trabajo manga larga · Dama"
     },
     {
       "id": "yazbek-c0604",
@@ -2811,7 +2866,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-008",
-      "idPublico": "zn-cm-008"
+      "idPublico": "zn-cm-008",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa ejecutiva manga corta",
+      "nombreComercial": "Camisa ejecutiva manga corta · Caballero"
     },
     {
       "id": "yazbek-d0604",
@@ -2900,7 +2958,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-009",
-      "idPublico": "zn-cm-009"
+      "idPublico": "zn-cm-009",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa ejecutiva manga corta",
+      "nombreComercial": "Camisa ejecutiva manga corta · Dama"
     },
     {
       "id": "yazbek-c1502",
@@ -3001,7 +3062,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-004",
-      "idPublico": "zn-po-004"
+      "idPublico": "zn-po-004",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo ligero",
+      "nombreComercial": "Polo ligero · Caballero"
     },
     {
       "id": "yazbek-d1502",
@@ -3097,7 +3161,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-005",
-      "idPublico": "zn-po-005"
+      "idPublico": "zn-po-005",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo ligero",
+      "nombreComercial": "Polo ligero · Dama"
     },
     {
       "id": "yazbek-c1302",
@@ -3198,7 +3265,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-006",
-      "idPublico": "zn-pl-006"
+      "idPublico": "zn-pl-006",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera deportiva",
+      "nombreComercial": "Playera deportiva · Caballero"
     },
     {
       "id": "yazbek-d1302",
@@ -3294,7 +3364,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PL-007",
-      "idPublico": "zn-pl-007"
+      "idPublico": "zn-pl-007",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera deportiva",
+      "nombreComercial": "Playera deportiva · Dama"
     },
     {
       "id": "yazbek-c0702",
@@ -3386,7 +3459,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-SU-002",
-      "idPublico": "zn-su-002"
+      "idPublico": "zn-su-002",
+      "activo": true,
+      "nombreFamiliaComercial": "Sudadera con cierre",
+      "nombreComercial": "Sudadera con cierre · Adultos"
     },
     {
       "id": "yazbek-c0601",
@@ -3474,7 +3550,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-010",
-      "idPublico": "zn-cm-010"
+      "idPublico": "zn-cm-010",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa denim",
+      "nombreComercial": "Camisa denim · Caballero"
     },
     {
       "id": "yazbek-d0601",
@@ -3562,7 +3641,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-CM-011",
-      "idPublico": "zn-cm-011"
+      "idPublico": "zn-cm-011",
+      "activo": true,
+      "nombreFamiliaComercial": "Camisa denim",
+      "nombreComercial": "Camisa denim · Dama"
     },
     {
       "id": "yazbek-c0701",
@@ -3663,7 +3745,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-SU-003",
-      "idPublico": "zn-su-003"
+      "idPublico": "zn-su-003",
+      "activo": true,
+      "nombreFamiliaComercial": "Sudadera canguro",
+      "nombreComercial": "Sudadera canguro · Adultos"
     },
     {
       "id": "yazbek-c0703",
@@ -3754,7 +3839,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-SU-004",
-      "idPublico": "zn-su-004"
+      "idPublico": "zn-su-004",
+      "activo": true,
+      "nombreFamiliaComercial": "Sudadera cuello alto",
+      "nombreComercial": "Sudadera cuello alto · Adultos"
     },
     {
       "id": "yazbek-c1504",
@@ -3852,7 +3940,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-006",
-      "idPublico": "zn-po-006"
+      "idPublico": "zn-po-006",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo ligero manga larga",
+      "nombreComercial": "Polo ligero manga larga · Caballero"
     },
     {
       "id": "yazbek-d1504",
@@ -3945,7 +4036,10 @@ export default {
       "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
       "imagenIA": true,
       "sku": "ZN-PO-007",
-      "idPublico": "zn-po-007"
+      "idPublico": "zn-po-007",
+      "activo": true,
+      "nombreFamiliaComercial": "Polo ligero manga larga",
+      "nombreComercial": "Polo ligero manga larga · Dama"
     }
   ],
   "promocionales": [
@@ -3999,5 +4093,318 @@ export default {
   ],
   "catalogoVersion": "originales-mas-yazbek-ia-2026-10-14",
   "catalogoYazbekPendiente": [],
-  "productosHistoricos": []
+  "productosHistoricos": [
+    {
+      "id": "playera",
+      "nombre": "Playera cuello redondo",
+      "categoria": "Playeras",
+      "descripcion": "Algodón peinado 180 g. La base de todo uniforme y evento.",
+      "foto": "img/productos/originales-limpios/playera-v2.webp",
+      "colores": [
+        "negro",
+        "blanco",
+        "marino",
+        "rey",
+        "gris",
+        "oxford",
+        "rojo",
+        "vino",
+        "botella",
+        "arena"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf",
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 10.4,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 640,
+          "y": 300,
+          "max": 10
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 360,
+          "max": 28
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 360,
+          "y": 300,
+          "max": 10
+        }
+      ],
+      "fotoOriginal": "img/productos/playera.webp",
+      "imagenLimpia": true,
+      "sku": "ZN-PL-001",
+      "idPublico": "playera",
+      "activo": false
+    },
+    {
+      "id": "polo",
+      "nombre": "Polo piqué",
+      "categoria": "Polos",
+      "descripcion": "Piqué 220 g con cuello tejido. El uniforme de oficina por excelencia.",
+      "foto": "img/productos/originales-limpios/polo-v2.webp",
+      "colores": [
+        "marino",
+        "blanco",
+        "negro",
+        "rey",
+        "gris",
+        "rojo",
+        "vino",
+        "botella",
+        "arena"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf",
+        "serigrafia"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 10,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 640,
+          "y": 330,
+          "max": 10
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 360,
+          "y": 330,
+          "max": 10
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 420,
+          "max": 24
+        }
+      ],
+      "fotoOriginal": "img/productos/polo.webp",
+      "imagenLimpia": true,
+      "sku": "ZN-PO-001",
+      "idPublico": "polo",
+      "activo": false
+    },
+    {
+      "id": "camisa",
+      "nombre": "Camisa oxford",
+      "categoria": "Camisas",
+      "descripcion": "Manga larga, tela oxford. Para atención a clientes y fuerza de ventas.",
+      "foto": "img/productos/originales-limpios/camisa-v2.webp",
+      "colores": [
+        "blanco",
+        "marino",
+        "rey",
+        "gris",
+        "negro",
+        "arena"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 615,
+          "y": 300,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 385,
+          "y": 300,
+          "max": 9
+        }
+      ],
+      "fotoOriginal": "img/productos/camisa.webp",
+      "imagenLimpia": true,
+      "sku": "ZN-CM-001",
+      "idPublico": "camisa",
+      "activo": false
+    },
+    {
+      "id": "chamarra",
+      "nombre": "Chamarra softshell",
+      "categoria": "Chamarras",
+      "descripcion": "Cierre completo, rompevientos y repelente al agua. Para campo y temporada de frío.",
+      "foto": "img/productos/originales-limpios/chamarra-v2.webp",
+      "colores": [
+        "negro",
+        "marino",
+        "oxford",
+        "rojo",
+        "botella",
+        "olivo",
+        "blanco"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 615,
+          "y": 300,
+          "max": 10
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 385,
+          "y": 300,
+          "max": 10
+        }
+      ],
+      "fotoOriginal": "img/productos/chamarra.webp",
+      "imagenLimpia": true,
+      "sku": "ZN-CH-001",
+      "idPublico": "chamarra",
+      "activo": false
+    },
+    {
+      "id": "sudadera",
+      "nombre": "Sudadera con gorro",
+      "categoria": "Sudaderas",
+      "descripcion": "Felpa perchada 280 g con bolsa canguro. Merch que sí se usa.",
+      "foto": "img/productos/originales-limpios/sudadera-v2.webp",
+      "colores": [
+        "gris",
+        "negro",
+        "oxford",
+        "marino",
+        "vino",
+        "botella",
+        "arena",
+        "blanco"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf",
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 390,
+          "max": 26
+        },
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 320,
+          "max": 10
+        }
+      ],
+      "fotoOriginal": "img/productos/sudadera.webp",
+      "imagenLimpia": true,
+      "sku": "ZN-SU-001",
+      "idPublico": "sudadera",
+      "activo": false
+    }
+  ],
+  "muestrasPortada": [
+    {
+      "p": "yazbek-c0550",
+      "c": "yazbek-414",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 9
+    },
+    {
+      "p": "yazbek-c0300",
+      "c": "yazbek-415",
+      "t": "serigrafia",
+      "z": "centro",
+      "cm": 22
+    },
+    {
+      "p": "gorra",
+      "c": "negro",
+      "t": "bordado",
+      "z": "frente",
+      "cm": 10,
+      "e": 0.66
+    },
+    {
+      "p": "yazbek-c0701",
+      "c": "yazbek-102",
+      "t": "serigrafia",
+      "z": "centro",
+      "cm": 20
+    },
+    {
+      "p": "bolsa-expo",
+      "c": "bolsa-expo-rojo",
+      "t": "serigrafia",
+      "z": "frente",
+      "cm": 15,
+      "e": 0.9
+    },
+    {
+      "p": "yazbek-c0605",
+      "c": "yazbek-700",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 8
+    }
+  ]
 };

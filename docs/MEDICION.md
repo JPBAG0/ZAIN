@@ -27,7 +27,7 @@ La elección local dura como máximo 180 días. Se puede retirar en el pie; se b
 
 1. Completar `docs/PRIVACIDAD-BORRADOR.md` con responsable/domicilio y la operación real; crear la página pública `/privacidad` y enlazarla antes de activar medición. El borrador NO es un aviso definitivo publicado.
 2. En la cuenta de Google Ads de ZAIN, crear las dos acciones web, revisar objetivos y obtener **ID de etiqueta AW-…** y **etiqueta de cada conversión**. No hace falta compartir contraseñas.
-3. En `js/config.js`, completar `medicion.googleAdsId`, `etiquetaSolicitud`, `etiquetaWhatsApp`; añadir dominio definitivo a `origenes`, luego `medicion.activa=true` y `privacidadPublicada=true`. No utilizar valores de prueba en producción. Subir versiones del recurso en todas las páginas que lo cargan.
+3. En `server/config-interno.cjs`, completar `medicion.googleAdsId`, `etiquetaSolicitud`, `etiquetaWhatsApp`; añadir dominio definitivo a `origenes`, luego `medicion.activa=true` y `privacidadPublicada=true`. No utilizar valores de prueba en producción. Subir versiones del recurso en todas las páginas que lo cargan.
 4. Antes de gastar: verificar con Tag Assistant rechazo sin etiqueta, aceptación con etiqueta, solicitud real con archivos, retorno/reintento sin duplicados y clic de WhatsApp como acción secundaria. Los bloqueadores, falta de consentimiento y problemas de red pueden reducir conversiones observadas.
 5. Revisar informes de Google Ads y conteos reales del panel; mantener pruebas canceladas como NO COTIZAR y no generar pruebas de conversión con etiquetas reales fuera del procedimiento acordado.
 
@@ -38,3 +38,6 @@ La elección local dura como máximo 180 días. Se puede retirar en el pie; se b
 Falta confirmar titular/responsable y domicilio del aviso, calendario de conservación, IDs de ZAIN, dominio/hosting comercial y validación de recepción en Tag Assistant/Ads. La infraestructura de pedidos y la campaña son asuntos distintos; ninguna campaña se ha lanzado.
 
 Fuentes: [modo básico de consentimiento](https://developers.google.com/tag-platform/security/concepts/consent-mode), [API de Google tag](https://developers.google.com/tag-platform/gtagjs/reference), [identificador para evitar duplicados](https://support.google.com/google-ads/answer/6386790?hl=es), [acciones principales/secundarias](https://support.google.com/google-ads/answer/11461796?hl=es).
+
+
+Desde 14-oct: js/config.js se genera desde server/config-interno.cjs; regenerar el catálogo público y la función Edge después de actualizar configuración.

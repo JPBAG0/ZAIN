@@ -17,7 +17,7 @@ test('originales activos junto con 14 familias / 25 referencias Yazbek sin perso
   assert.equal(current.length,25);assert.equal(new Set(current.map(p=>p.familia)).size,14);
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
   assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
-  assert.equal(C.productosHistoricos.length,0);
+  assert.equal(C.productosHistoricos.length,5);assert.ok(C.productos.find(p=>p.id==="gorra").activo);
   assert.deepEqual(C.categoriasCatalogo,['Playeras','Polos','Camisas','Sudaderas','Chamarras','Gorras','Bolsas']);
   for (const p of C.productos.filter(p=>p.imagenLimpia)) { assert.match(p.foto,/originales-limpios/);assert.ok(readFileSync(new URL('../'+p.fotoOriginal,import.meta.url)).length>1000); }
   for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.origen,'IA');assert.equal(p.imagenIA,true);assert.equal(p.imagenFuente.replicaVerificada,false);assert.match(p.foto,/yazbek-ia/);assert.ok(!p.esquema);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);}
@@ -53,7 +53,7 @@ test('bolsas mantienen 13 modelos, 100 por modelo/color e incrementos de 50',()=
   for(const p of bags){assert.equal(p.minimoPiezas,100);assert.equal(p.pasoPiezas,50);const x={p:p.id,color:C.colores.find(c=>c.id===p.colores[0]).nombre,tecnica:'Serigrafía',piezas:100};assert.equal(validateOrder(body(x)).total,100);assert.throws(()=>validateOrder(body({...x,piezas:125})),/cantidades/);}
 });
 
-test('originales restablecidos admiten nuevas cotizaciones sin hacerse pasar por Yazbek',()=>{const p=C.productos.find(p=>p.id==='polo');const x={p:p.id,color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};const checked=validateOrder(body(x)).items[0];assert.equal(checked.nombre,'Polo piqué');assert.ok(!('fabricante' in checked));});
+test('originales ocultos se conservan para solicitudes anteriores pero rechazan altas nuevas',()=>{const p=C.productos.find(p=>p.id==='polo');const x={p:p.id,color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};assert.throws(()=>validateOrder(body(x)),/cantidades/);const checked=validateOrder(body(x),{allowHistoricos:true}).items[0];assert.equal(checked.nombre,'Polo piqué');assert.ok(!('fabricante' in checked));});
 
 test('un folio existente se reintenta solo con su secreto y contenido iguales',async()=>{
   const x={p:'polo',color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};
@@ -67,7 +67,7 @@ test('un folio existente se reintenta solo con su secreto y contenido iguales',a
   const req=b=>h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify(b)}));
   assert.equal((await req(body(x))).status,200);assert.equal(writes,1);
   assert.equal((await req(body({...x,piezas:6,tallas:'M 6'}))).status,409);assert.equal(writes,1);
-  assert.equal((await req({...body(x),token:'b'.repeat(64)})).status,409);assert.equal(writes,1);
+  assert.equal((await req({...body(x),token:'b'.repeat(64)})).status,403);assert.equal(writes,1);
   const oldProjection=validateOrder(body(x),{allowHistoricos:true}).items[0];assert.ok(!('fabricante' in oldProjection));assert.equal(oldProjection.nombre,'Polo piqué');
 });
 
@@ -80,10 +80,10 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
   const out=await r.json();assert.ok(!('codigoFabricante' in out.pedido.items[0]));assert.ok(!('fabricante' in out.pedido.items[0]));assert.equal(out.pedido.items[0].sku,p.sku);assert.equal(out.pedido.items[0].color,'Rosa');assert.ok(!/Yazbek|D0605/i.test(JSON.stringify(out)));assert.equal(out.pedido.items[0].composicion,'75% algodón / 25% poliéster');assert.ok(!JSON.stringify(out).includes('NO MOSTRAR'));assert.ok(!('fuente' in out.pedido.items[0]));
 });
 
-test('catálogo público conserva 44 referencias sin marca/códigos del proveedor y 25 fotos extra',()=>{
- assert.equal(Public.productos.length,44);
- assert.equal(new Set(Public.productos.map(p=>p.sku)).size,44);
- assert.ok(!/Yazbek|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
+test('catálogo público tiene 39 referencias activas, 5 ocultas y 25 fotos adicionales',()=>{
+ assert.equal(Public.productos.length,39);assert.equal(Public.productosHistoricos.length,5);
+ assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,44);
+ assert.ok(!/Yazbek|ActiviTee|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
  assert.equal(Public.productos.filter(p=>p.fotoModelo).length,25);
  for(const p of Public.productos.filter(p=>p.fotoModelo)){
   assert.ok(readFileSync(new URL('../'+p.fotoModelo,import.meta.url)).length>1000);
@@ -100,4 +100,17 @@ test('cada variante/color/talla pública se deriva al modelo interno exacto sin 
   const foreign=Public.colores.find(c=>!p.colores.includes(c.id) && c.id.startsWith('zain-color-'));
   if(foreign)assert.throws(()=>validateOrder(body({...item,colorId:foreign.id,colorCodigo:''})),/color/);
  }
+});
+
+test('portada usa solo modelos actuales y cada muestra tiene color y técnica disponibles',()=>{
+ assert.equal(Public.muestrasPortada.length,6);
+ for(const m of Public.muestrasPortada){const p=Public.productos.find(p=>p.id===m.p);assert.ok(p);assert.notEqual(p.activo,false);assert.ok(p.colores.includes(m.c));assert.ok(p.tecnicas.includes(m.t));}
+ assert.ok(!Public.productos.some(p=>['playera','polo','camisa','chamarra','sudadera'].includes(p.id)));
+ assert.ok(Public.productos.some(p=>p.id==='gorra'));
+});
+test('modelos ocultos y folios anteriores requieren secreto para reintento, sin alta anónima',async()=>{
+ const x={p:'polo',color:'Azul marino',tecnica:'Bordado',piezas:5,tallas:'M 5',cm:9,zona:'Pecho izquierdo'};
+ const h=createHandler({SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'test-secret',SUPABASE_PUBLISHABLE_KEY:'test-public',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},async()=>Response.json([]));
+ const r=await h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify(body(x))}));
+ assert.equal(r.status,400);
 });

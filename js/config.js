@@ -611,257 +611,6 @@
   },
   "productos": [
     {
-      "id": "playera",
-      "nombre": "Playera cuello redondo",
-      "categoria": "Playeras",
-      "descripcion": "Algodón peinado 180 g. La base de todo uniforme y evento.",
-      "foto": "img/productos/originales-limpios/playera-v2.webp",
-      "colores": [
-        "negro",
-        "blanco",
-        "marino",
-        "rey",
-        "gris",
-        "oxford",
-        "rojo",
-        "vino",
-        "botella",
-        "arena"
-      ],
-      "tecnicas": [
-        "serigrafia",
-        "dtf",
-        "bordado"
-      ],
-      "tallas": [
-        "CH",
-        "M",
-        "G",
-        "XG",
-        "2XG"
-      ],
-      "pxPorCm": 10.4,
-      "zonas": [
-        {
-          "id": "pecho-izq",
-          "nombre": "Pecho izquierdo",
-          "x": 640,
-          "y": 300,
-          "max": 10
-        },
-        {
-          "id": "centro",
-          "nombre": "Centro del pecho",
-          "x": 500,
-          "y": 360,
-          "max": 28
-        },
-        {
-          "id": "pecho-der",
-          "nombre": "Pecho derecho",
-          "x": 360,
-          "y": 300,
-          "max": 10
-        }
-      ],
-      "imagenLimpia": true,
-      "sku": "ZN-PL-001"
-    },
-    {
-      "id": "polo",
-      "nombre": "Polo piqué",
-      "categoria": "Polos",
-      "descripcion": "Piqué 220 g con cuello tejido. El uniforme de oficina por excelencia.",
-      "foto": "img/productos/originales-limpios/polo-v2.webp",
-      "colores": [
-        "marino",
-        "blanco",
-        "negro",
-        "rey",
-        "gris",
-        "rojo",
-        "vino",
-        "botella",
-        "arena"
-      ],
-      "tecnicas": [
-        "bordado",
-        "dtf",
-        "serigrafia"
-      ],
-      "tallas": [
-        "CH",
-        "M",
-        "G",
-        "XG",
-        "2XG"
-      ],
-      "pxPorCm": 10,
-      "zonas": [
-        {
-          "id": "pecho-izq",
-          "nombre": "Pecho izquierdo",
-          "x": 640,
-          "y": 330,
-          "max": 10
-        },
-        {
-          "id": "pecho-der",
-          "nombre": "Pecho derecho",
-          "x": 360,
-          "y": 330,
-          "max": 10
-        },
-        {
-          "id": "centro",
-          "nombre": "Centro del pecho",
-          "x": 500,
-          "y": 420,
-          "max": 24
-        }
-      ],
-      "imagenLimpia": true,
-      "sku": "ZN-PO-001"
-    },
-    {
-      "id": "camisa",
-      "nombre": "Camisa oxford",
-      "categoria": "Camisas",
-      "descripcion": "Manga larga, tela oxford. Para atención a clientes y fuerza de ventas.",
-      "foto": "img/productos/originales-limpios/camisa-v2.webp",
-      "colores": [
-        "blanco",
-        "marino",
-        "rey",
-        "gris",
-        "negro",
-        "arena"
-      ],
-      "tecnicas": [
-        "bordado"
-      ],
-      "tallas": [
-        "CH",
-        "M",
-        "G",
-        "XG",
-        "2XG"
-      ],
-      "pxPorCm": 7.7,
-      "zonas": [
-        {
-          "id": "pecho-izq",
-          "nombre": "Pecho izquierdo",
-          "x": 615,
-          "y": 300,
-          "max": 9
-        },
-        {
-          "id": "pecho-der",
-          "nombre": "Pecho derecho",
-          "x": 385,
-          "y": 300,
-          "max": 9
-        }
-      ],
-      "imagenLimpia": true,
-      "sku": "ZN-CM-001"
-    },
-    {
-      "id": "chamarra",
-      "nombre": "Chamarra softshell",
-      "categoria": "Chamarras",
-      "descripcion": "Cierre completo, rompevientos y repelente al agua. Para campo y temporada de frío.",
-      "foto": "img/productos/originales-limpios/chamarra-v2.webp",
-      "colores": [
-        "negro",
-        "marino",
-        "oxford",
-        "rojo",
-        "botella",
-        "olivo",
-        "blanco"
-      ],
-      "tecnicas": [
-        "bordado",
-        "dtf"
-      ],
-      "tallas": [
-        "CH",
-        "M",
-        "G",
-        "XG",
-        "2XG"
-      ],
-      "pxPorCm": 7.7,
-      "zonas": [
-        {
-          "id": "pecho-izq",
-          "nombre": "Pecho izquierdo",
-          "x": 615,
-          "y": 300,
-          "max": 10
-        },
-        {
-          "id": "pecho-der",
-          "nombre": "Pecho derecho",
-          "x": 385,
-          "y": 300,
-          "max": 10
-        }
-      ],
-      "imagenLimpia": true,
-      "sku": "ZN-CH-001"
-    },
-    {
-      "id": "sudadera",
-      "nombre": "Sudadera con gorro",
-      "categoria": "Sudaderas",
-      "descripcion": "Felpa perchada 280 g con bolsa canguro. Merch que sí se usa.",
-      "foto": "img/productos/originales-limpios/sudadera-v2.webp",
-      "colores": [
-        "gris",
-        "negro",
-        "oxford",
-        "marino",
-        "vino",
-        "botella",
-        "arena",
-        "blanco"
-      ],
-      "tecnicas": [
-        "serigrafia",
-        "dtf",
-        "bordado"
-      ],
-      "tallas": [
-        "CH",
-        "M",
-        "G",
-        "XG",
-        "2XG"
-      ],
-      "pxPorCm": 7.7,
-      "zonas": [
-        {
-          "id": "centro",
-          "nombre": "Centro del pecho",
-          "x": 500,
-          "y": 390,
-          "max": 26
-        },
-        {
-          "id": "pecho-izq",
-          "nombre": "Pecho izquierdo",
-          "x": 610,
-          "y": 320,
-          "max": 10
-        }
-      ],
-      "imagenLimpia": true,
-      "sku": "ZN-SU-001"
-    },
-    {
       "id": "gorra",
       "nombre": "Gorra 6 paneles",
       "categoria": "Gorras",
@@ -893,7 +642,8 @@
         }
       ],
       "imagenLimpia": true,
-      "sku": "ZN-GO-001"
+      "sku": "ZN-GO-001",
+      "activo": true
     },
     {
       "id": "bolsa-boutique",
@@ -934,7 +684,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
-      "sku": "ZN-BO-001"
+      "sku": "ZN-BO-001",
+      "activo": true
     },
     {
       "id": "bolsa-sobre-chico",
@@ -977,7 +728,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
-      "sku": "ZN-BO-002"
+      "sku": "ZN-BO-002",
+      "activo": true
     },
     {
       "id": "bolsa-sobre-grande",
@@ -1017,7 +769,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
-      "sku": "ZN-BO-003"
+      "sku": "ZN-BO-003",
+      "activo": true
     },
     {
       "id": "bolsa-regalo",
@@ -1059,7 +812,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-004"
+      "sku": "ZN-BO-004",
+      "activo": true
     },
     {
       "id": "bolsa-expo",
@@ -1098,7 +852,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-005"
+      "sku": "ZN-BO-005",
+      "activo": true
     },
     {
       "id": "bolsa-zapatera",
@@ -1140,7 +895,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-006"
+      "sku": "ZN-BO-006",
+      "activo": true
     },
     {
       "id": "bolsa-market",
@@ -1192,7 +948,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-007"
+      "sku": "ZN-BO-007",
+      "activo": true
     },
     {
       "id": "bolsa-restaurant",
@@ -1232,7 +989,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-008"
+      "sku": "ZN-BO-008",
+      "activo": true
     },
     {
       "id": "bolsa-colombia",
@@ -1273,7 +1031,8 @@
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
       "aplicacionesNota": "También sublimable en beige y azul cielo; consulta esta opción al cotizar.",
-      "sku": "ZN-BO-009"
+      "sku": "ZN-BO-009",
+      "activo": true
     },
     {
       "id": "bolsa-manta",
@@ -1311,7 +1070,8 @@
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
       "aplicacionesNota": "El catálogo indica que es sublimable en color beige; consulta esta opción al cotizar.",
-      "sku": "ZN-BO-010"
+      "sku": "ZN-BO-010",
+      "activo": true
     },
     {
       "id": "bolsa-mezclilla",
@@ -1349,7 +1109,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 1000,
-      "sku": "ZN-BO-011"
+      "sku": "ZN-BO-011",
+      "activo": true
     },
     {
       "id": "bolsa-morral",
@@ -1386,7 +1147,8 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
-      "sku": "ZN-BO-012"
+      "sku": "ZN-BO-012",
+      "activo": true
     },
     {
       "id": "bolsa-jumbo",
@@ -1424,12 +1186,13 @@
       ],
       "disponibilidad": "Consulta disponibilidad de modelo y color.",
       "piezasBulto": 500,
-      "sku": "ZN-BO-013"
+      "sku": "ZN-BO-013",
+      "activo": true
     },
     {
       "id": "zn-po-002",
-      "nombre": "Polo piqué manga corta · Caballero",
-      "nombreFamilia": "Polo piqué manga corta",
+      "nombre": "Polo clásico · Caballero",
+      "nombreFamilia": "Polo clásico",
       "familia": "zain-familia-1",
       "silueta": "Caballero",
       "categoria": "Polos",
@@ -1508,14 +1271,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-002",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "9927f26d",
       "fotoModelo": "img/productos/zain/zn-po-002-modelo.webp"
     },
     {
       "id": "zn-po-003",
-      "nombre": "Polo piqué manga corta · Dama",
-      "nombreFamilia": "Polo piqué manga corta",
+      "nombre": "Polo clásico · Dama",
+      "nombreFamilia": "Polo clásico",
       "familia": "zain-familia-1",
       "silueta": "Dama",
       "categoria": "Polos",
@@ -1589,14 +1353,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-003",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "ddccd478",
       "fotoModelo": "img/productos/zain/zn-po-003-modelo.webp"
     },
     {
       "id": "zn-cm-002",
-      "nombre": "Camisa Oxford manga larga · Caballero",
-      "nombreFamilia": "Camisa Oxford manga larga",
+      "nombre": "Camisa ejecutiva manga larga · Caballero",
+      "nombreFamilia": "Camisa ejecutiva manga larga",
       "familia": "zain-familia-2",
       "silueta": "Caballero",
       "categoria": "Camisas",
@@ -1665,14 +1430,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-002",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "5b1efa1a",
       "fotoModelo": "img/productos/zain/zn-cm-002-modelo.webp"
     },
     {
       "id": "zn-cm-003",
-      "nombre": "Camisa Oxford manga larga · Dama",
-      "nombreFamilia": "Camisa Oxford manga larga",
+      "nombre": "Camisa ejecutiva manga larga · Dama",
+      "nombreFamilia": "Camisa ejecutiva manga larga",
       "familia": "zain-familia-2",
       "silueta": "Dama",
       "categoria": "Camisas",
@@ -1741,14 +1507,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-003",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "1d13014b",
       "fotoModelo": "img/productos/zain/zn-cm-003-modelo.webp"
     },
     {
       "id": "zn-pl-002",
-      "nombre": "Playera básica 155 g · Caballero",
-      "nombreFamilia": "Playera básica 155 g",
+      "nombre": "Playera esencial · Caballero",
+      "nombreFamilia": "Playera esencial",
       "familia": "zain-familia-3",
       "silueta": "Caballero",
       "categoria": "Playeras",
@@ -1834,14 +1601,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-002",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "936a756d",
       "fotoModelo": "img/productos/zain/zn-pl-002-modelo.webp"
     },
     {
       "id": "zn-pl-003",
-      "nombre": "Playera básica 155 g · Dama",
-      "nombreFamilia": "Playera básica 155 g",
+      "nombre": "Playera esencial · Dama",
+      "nombreFamilia": "Playera esencial",
       "familia": "zain-familia-3",
       "silueta": "Dama",
       "categoria": "Playeras",
@@ -1922,14 +1690,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-003",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "e38a5178",
       "fotoModelo": "img/productos/zain/zn-pl-003-modelo.webp"
     },
     {
       "id": "zn-pl-004",
-      "nombre": "Playera peso completo 195 g · Caballero",
-      "nombreFamilia": "Playera peso completo 195 g",
+      "nombre": "Playera premium · Caballero",
+      "nombreFamilia": "Playera premium",
       "familia": "zain-familia-4",
       "silueta": "Caballero",
       "categoria": "Playeras",
@@ -2016,14 +1785,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-004",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "14d30f42",
       "fotoModelo": "img/productos/zain/zn-pl-004-modelo.webp"
     },
     {
       "id": "zn-pl-005",
-      "nombre": "Playera peso completo 195 g · Dama",
-      "nombreFamilia": "Playera peso completo 195 g",
+      "nombre": "Playera premium · Dama",
+      "nombreFamilia": "Playera premium",
       "familia": "zain-familia-4",
       "silueta": "Dama",
       "categoria": "Playeras",
@@ -2100,14 +1870,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-005",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "435eb9c3",
       "fotoModelo": "img/productos/zain/zn-pl-005-modelo.webp"
     },
     {
       "id": "zn-cm-004",
-      "nombre": "Camisa gabardina manga corta · Caballero",
-      "nombreFamilia": "Camisa gabardina manga corta",
+      "nombre": "Camisa de trabajo manga corta · Caballero",
+      "nombreFamilia": "Camisa de trabajo manga corta",
       "familia": "zain-familia-5",
       "silueta": "Caballero",
       "categoria": "Camisas",
@@ -2177,14 +1948,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-004",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "5a1ef887",
       "fotoModelo": "img/productos/zain/zn-cm-004-modelo.webp"
     },
     {
       "id": "zn-cm-005",
-      "nombre": "Camisa gabardina manga corta · Dama",
-      "nombreFamilia": "Camisa gabardina manga corta",
+      "nombre": "Camisa de trabajo manga corta · Dama",
+      "nombreFamilia": "Camisa de trabajo manga corta",
       "familia": "zain-familia-5",
       "silueta": "Dama",
       "categoria": "Camisas",
@@ -2254,14 +2026,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-005",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "1e1302de",
       "fotoModelo": "img/productos/zain/zn-cm-005-modelo.webp"
     },
     {
       "id": "zn-cm-006",
-      "nombre": "Camisa gabardina manga larga · Caballero",
-      "nombreFamilia": "Camisa gabardina manga larga",
+      "nombre": "Camisa de trabajo manga larga · Caballero",
+      "nombreFamilia": "Camisa de trabajo manga larga",
       "familia": "zain-familia-6",
       "silueta": "Caballero",
       "categoria": "Camisas",
@@ -2333,14 +2106,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-006",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "591ef6f4",
       "fotoModelo": "img/productos/zain/zn-cm-006-modelo.webp"
     },
     {
       "id": "zn-cm-007",
-      "nombre": "Camisa gabardina manga larga · Dama",
-      "nombreFamilia": "Camisa gabardina manga larga",
+      "nombre": "Camisa de trabajo manga larga · Dama",
+      "nombreFamilia": "Camisa de trabajo manga larga",
       "familia": "zain-familia-6",
       "silueta": "Dama",
       "categoria": "Camisas",
@@ -2412,14 +2186,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-007",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "1f130471",
       "fotoModelo": "img/productos/zain/zn-cm-007-modelo.webp"
     },
     {
       "id": "zn-cm-008",
-      "nombre": "Camisa Oxford manga corta · Caballero",
-      "nombreFamilia": "Camisa Oxford manga corta",
+      "nombre": "Camisa ejecutiva manga corta · Caballero",
+      "nombreFamilia": "Camisa ejecutiva manga corta",
       "familia": "zain-familia-7",
       "silueta": "Caballero",
       "categoria": "Camisas",
@@ -2485,14 +2260,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-008",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "5c1efbad",
       "fotoModelo": "img/productos/zain/zn-cm-008-modelo.webp"
     },
     {
       "id": "zn-cm-009",
-      "nombre": "Camisa Oxford manga corta · Dama",
-      "nombreFamilia": "Camisa Oxford manga corta",
+      "nombre": "Camisa ejecutiva manga corta · Dama",
+      "nombreFamilia": "Camisa ejecutiva manga corta",
       "familia": "zain-familia-7",
       "silueta": "Dama",
       "categoria": "Camisas",
@@ -2558,14 +2334,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-009",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "1c12ffb8",
       "fotoModelo": "img/productos/zain/zn-cm-009-modelo.webp"
     },
     {
       "id": "zn-po-004",
-      "nombre": "Polo ActiviTee manga corta · Caballero",
-      "nombreFamilia": "Polo ActiviTee manga corta",
+      "nombre": "Polo ligero · Caballero",
+      "nombreFamilia": "Polo ligero",
       "familia": "zain-familia-8",
       "silueta": "Caballero",
       "categoria": "Polos",
@@ -2643,14 +2420,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-004",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "3b176c77",
       "fotoModelo": "img/productos/zain/zn-po-004-modelo.webp"
     },
     {
       "id": "zn-po-005",
-      "nombre": "Polo ActiviTee manga corta · Dama",
-      "nombreFamilia": "Polo ActiviTee manga corta",
+      "nombre": "Polo ligero · Dama",
+      "nombreFamilia": "Polo ligero",
       "familia": "zain-familia-8",
       "silueta": "Dama",
       "categoria": "Polos",
@@ -2723,14 +2501,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-005",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "bd19c56e",
       "fotoModelo": "img/productos/zain/zn-po-005-modelo.webp"
     },
     {
       "id": "zn-pl-006",
-      "nombre": "Playera ActiviTee manga corta · Caballero",
-      "nombreFamilia": "Playera ActiviTee manga corta",
+      "nombre": "Playera deportiva · Caballero",
+      "nombreFamilia": "Playera deportiva",
       "familia": "zain-familia-9",
       "silueta": "Caballero",
       "categoria": "Playeras",
@@ -2808,14 +2587,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-006",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "25602441",
       "fotoModelo": "img/productos/zain/zn-pl-006-modelo.webp"
     },
     {
       "id": "zn-pl-007",
-      "nombre": "Playera ActiviTee manga corta · Dama",
-      "nombreFamilia": "Playera ActiviTee manga corta",
+      "nombre": "Playera deportiva · Dama",
+      "nombreFamilia": "Playera deportiva",
       "familia": "zain-familia-9",
       "silueta": "Dama",
       "categoria": "Playeras",
@@ -2888,14 +2668,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PL-007",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "d193d924",
       "fotoModelo": "img/productos/zain/zn-pl-007-modelo.webp"
     },
     {
       "id": "zn-su-002",
-      "nombre": "Sudadera con capucha y cierre · Adultos",
-      "nombreFamilia": "Sudadera con capucha y cierre",
+      "nombre": "Sudadera con cierre · Adultos",
+      "nombreFamilia": "Sudadera con cierre",
       "familia": "zain-familia-10",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
@@ -2964,14 +2745,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-SU-002",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "d7878c10",
       "fotoModelo": "img/productos/zain/zn-su-002-modelo.webp"
     },
     {
       "id": "zn-cm-010",
-      "nombre": "Camisa mezclilla manga larga · Caballero",
-      "nombreFamilia": "Camisa mezclilla manga larga",
+      "nombre": "Camisa denim · Caballero",
+      "nombreFamilia": "Camisa denim",
       "familia": "zain-familia-11",
       "silueta": "Caballero",
       "categoria": "Camisas",
@@ -3036,14 +2818,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-010",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "571ef3ce",
       "fotoModelo": "img/productos/zain/zn-cm-010-modelo.webp"
     },
     {
       "id": "zn-cm-011",
-      "nombre": "Camisa mezclilla manga larga · Dama",
-      "nombreFamilia": "Camisa mezclilla manga larga",
+      "nombre": "Camisa denim · Dama",
+      "nombreFamilia": "Camisa denim",
       "familia": "zain-familia-11",
       "silueta": "Dama",
       "categoria": "Camisas",
@@ -3108,14 +2891,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-CM-011",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "21130797",
       "fotoModelo": "img/productos/zain/zn-cm-011-modelo.webp"
     },
     {
       "id": "zn-su-003",
-      "nombre": "Sudadera con capucha y cangurera · Adultos",
-      "nombreFamilia": "Sudadera con capucha y cangurera",
+      "nombre": "Sudadera canguro · Adultos",
+      "nombreFamilia": "Sudadera canguro",
       "familia": "zain-familia-12",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
@@ -3193,14 +2977,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-SU-003",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "da8790c9",
       "fotoModelo": "img/productos/zain/zn-su-003-modelo.webp"
     },
     {
       "id": "zn-su-004",
-      "nombre": "Sudadera con ¼ de cierre · Adultos",
-      "nombreFamilia": "Sudadera con ¼ de cierre",
+      "nombre": "Sudadera cuello alto · Adultos",
+      "nombreFamilia": "Sudadera cuello alto",
       "familia": "zain-familia-13",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
@@ -3268,14 +3053,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-SU-004",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "d8878da3",
       "fotoModelo": "img/productos/zain/zn-su-004-modelo.webp"
     },
     {
       "id": "zn-po-006",
-      "nombre": "Polo ActiviTee manga larga · Caballero",
-      "nombreFamilia": "Polo ActiviTee manga larga",
+      "nombre": "Polo ligero manga larga · Caballero",
+      "nombreFamilia": "Polo ligero manga larga",
       "familia": "zain-familia-14",
       "silueta": "Caballero",
       "categoria": "Polos",
@@ -3350,14 +3136,15 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-006",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "39176951",
       "fotoModelo": "img/productos/zain/zn-po-006-modelo.webp"
     },
     {
       "id": "zn-po-007",
-      "nombre": "Polo ActiviTee manga larga · Dama",
-      "nombreFamilia": "Polo ActiviTee manga larga",
+      "nombre": "Polo ligero manga larga · Dama",
+      "nombreFamilia": "Polo ligero manga larga",
       "familia": "zain-familia-14",
       "silueta": "Dama",
       "categoria": "Polos",
@@ -3427,6 +3214,7 @@
       "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
       "imagenIA": true,
       "sku": "ZN-PO-007",
+      "activo": true,
       "prendaCatalogo": true,
       "compatHash": "bf19c894",
       "fotoModelo": "img/productos/zain/zn-po-007-modelo.webp"
@@ -3477,11 +3265,313 @@
     "Polos",
     "Camisas",
     "Sudaderas",
-    "Chamarras",
     "Gorras",
     "Bolsas"
   ],
-  "catalogoVersion": "zain-sku-galeria-2026-10-14",
-  "productosHistoricos": []
+  "catalogoVersion": "zain-catalogo-activo-panel-2026-10-14",
+  "productosHistoricos": [
+    {
+      "id": "playera",
+      "nombre": "Playera cuello redondo",
+      "categoria": "Playeras",
+      "descripcion": "Algodón peinado 180 g. La base de todo uniforme y evento.",
+      "foto": "img/productos/originales-limpios/playera-v2.webp",
+      "colores": [
+        "negro",
+        "blanco",
+        "marino",
+        "rey",
+        "gris",
+        "oxford",
+        "rojo",
+        "vino",
+        "botella",
+        "arena"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf",
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 10.4,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 640,
+          "y": 300,
+          "max": 10
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 360,
+          "max": 28
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 360,
+          "y": 300,
+          "max": 10
+        }
+      ],
+      "imagenLimpia": true,
+      "sku": "ZN-PL-001",
+      "activo": false
+    },
+    {
+      "id": "polo",
+      "nombre": "Polo piqué",
+      "categoria": "Polos",
+      "descripcion": "Piqué 220 g con cuello tejido. El uniforme de oficina por excelencia.",
+      "foto": "img/productos/originales-limpios/polo-v2.webp",
+      "colores": [
+        "marino",
+        "blanco",
+        "negro",
+        "rey",
+        "gris",
+        "rojo",
+        "vino",
+        "botella",
+        "arena"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf",
+        "serigrafia"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 10,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 640,
+          "y": 330,
+          "max": 10
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 360,
+          "y": 330,
+          "max": 10
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 420,
+          "max": 24
+        }
+      ],
+      "imagenLimpia": true,
+      "sku": "ZN-PO-001",
+      "activo": false
+    },
+    {
+      "id": "camisa",
+      "nombre": "Camisa oxford",
+      "categoria": "Camisas",
+      "descripcion": "Manga larga, tela oxford. Para atención a clientes y fuerza de ventas.",
+      "foto": "img/productos/originales-limpios/camisa-v2.webp",
+      "colores": [
+        "blanco",
+        "marino",
+        "rey",
+        "gris",
+        "negro",
+        "arena"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 615,
+          "y": 300,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 385,
+          "y": 300,
+          "max": 9
+        }
+      ],
+      "imagenLimpia": true,
+      "sku": "ZN-CM-001",
+      "activo": false
+    },
+    {
+      "id": "chamarra",
+      "nombre": "Chamarra softshell",
+      "categoria": "Chamarras",
+      "descripcion": "Cierre completo, rompevientos y repelente al agua. Para campo y temporada de frío.",
+      "foto": "img/productos/originales-limpios/chamarra-v2.webp",
+      "colores": [
+        "negro",
+        "marino",
+        "oxford",
+        "rojo",
+        "botella",
+        "olivo",
+        "blanco"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 615,
+          "y": 300,
+          "max": 10
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 385,
+          "y": 300,
+          "max": 10
+        }
+      ],
+      "imagenLimpia": true,
+      "sku": "ZN-CH-001",
+      "activo": false
+    },
+    {
+      "id": "sudadera",
+      "nombre": "Sudadera con gorro",
+      "categoria": "Sudaderas",
+      "descripcion": "Felpa perchada 280 g con bolsa canguro. Merch que sí se usa.",
+      "foto": "img/productos/originales-limpios/sudadera-v2.webp",
+      "colores": [
+        "gris",
+        "negro",
+        "oxford",
+        "marino",
+        "vino",
+        "botella",
+        "arena",
+        "blanco"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf",
+        "bordado"
+      ],
+      "tallas": [
+        "CH",
+        "M",
+        "G",
+        "XG",
+        "2XG"
+      ],
+      "pxPorCm": 7.7,
+      "zonas": [
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 390,
+          "max": 26
+        },
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 610,
+          "y": 320,
+          "max": 10
+        }
+      ],
+      "imagenLimpia": true,
+      "sku": "ZN-SU-001",
+      "activo": false
+    }
+  ],
+  "muestrasPortada": [
+    {
+      "p": "zn-po-002",
+      "c": "zain-color-072",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 9
+    },
+    {
+      "p": "zn-pl-004",
+      "c": "zain-color-071",
+      "t": "serigrafia",
+      "z": "centro",
+      "cm": 22
+    },
+    {
+      "p": "gorra",
+      "c": "negro",
+      "t": "bordado",
+      "z": "frente",
+      "cm": 10,
+      "e": 0.66
+    },
+    {
+      "p": "zn-su-003",
+      "c": "zain-color-074",
+      "t": "serigrafia",
+      "z": "centro",
+      "cm": 20
+    },
+    {
+      "p": "bolsa-expo",
+      "c": "bolsa-expo-rojo",
+      "t": "serigrafia",
+      "z": "frente",
+      "cm": 15,
+      "e": 0.9
+    },
+    {
+      "p": "zn-cm-002",
+      "c": "zain-color-079",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 8
+    }
+  ]
 };
 if(typeof module!=="undefined" && module.exports)module.exports=config;else window.ZAIN=config;})();

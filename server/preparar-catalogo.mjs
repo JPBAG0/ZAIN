@@ -9,7 +9,8 @@ const families=new Map();let count=0;
 await mkdir(new URL('../img/productos/zain/',import.meta.url),{recursive:true});
 copy.colores=copy.colores.map(c=>{if(c.fabricante){c.compatHash=legacyHash(c.id);c.id=c.idPublico;}delete c.idPublico;delete c.fabricante;delete c.codigo;return c;});
 for(const p of copy.productos){
-  p.nombre=p.nombre.replace(/ \([CD]\d{4}\)$/,'');
+  p.nombre=p.nombreComercial || p.nombre.replace(/ \([CD]\d{4}\)$/,'');
+  p.nombreFamilia=p.nombreFamiliaComercial || p.nombreFamilia;
   p.colores=p.colores.map(x=>colorIDs.get(x));
   if(p.fabricante){
     p.prendaCatalogo=true;
@@ -26,11 +27,14 @@ for(const p of copy.productos){
     for(const [code,value] of Object.entries(p.composicionColor||{})){const c=C.colores.find(x=>x.fabricante===p.fabricante&&x.codigo===code);if(c)compositions[colorIDs.get(c.id)]=value;}
     p.composicionColor=compositions;
   }
-  for(const key of ['idPublico','fabricante','codigoFabricante','fuente','imagenFuente','escalaNota','fotoOriginal'])delete p[key];
+  for(const key of ['idPublico','fabricante','codigoFabricante','fuente','imagenFuente','escalaNota','fotoOriginal','nombreComercial','nombreFamiliaComercial'])delete p[key];
 }
-copy.catalogoVersion='zain-sku-galeria-2026-10-14';
+copy.catalogoVersion='zain-catalogo-activo-panel-2026-10-14';
 delete copy.catalogoYazbekPendiente;
-copy.productosHistoricos=[];
+copy.productosHistoricos=copy.productos.filter(p=>p.activo===false);
+copy.productos=copy.productos.filter(p=>p.activo!==false);
+copy.categoriasCatalogo=copy.categoriasCatalogo.filter(cat=>copy.productos.some(p=>p.categoria===cat));
+copy.muestrasPortada=C.muestrasPortada.map(m=>({...m,p:C.productos.find(p=>p.id===m.p).idPublico,c:colorIDs.get(m.c)}));
 const json=JSON.stringify(copy,null,2);
 if(/yazbek|\b[CD]\d{4}\b/i.test(json))throw Error('La configuración pública conserva referencias del proveedor.');
 await writeFile(new URL('../js/config.js',import.meta.url),'// Catálogo público generado; editar server/config-interno.cjs.\n(() => { const config = '+json+';\nif(typeof module!=="undefined" && module.exports)module.exports=config;else window.ZAIN=config;})();\n');

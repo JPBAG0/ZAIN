@@ -18,7 +18,7 @@ export function validateOrder(body, { allowHistoricos = false } = {}) {
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
     if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
-    const p = C.productos.find(p=>p.id===x.p || p.idPublico===x.p) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
+    const p = C.productos.find(p=>(p.id===x.p || p.idPublico===x.p) && (p.activo!==false || allowHistoricos)) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
     const n = Number(x.piezas);
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
     const colors=p.colores.map(id=>C.colores.find(c=>c.id===id));
@@ -86,7 +86,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return body;
   };
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
-  const owner=async body=>{const x=await row(body.id);if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
+  const owner=async body=>{const x=await row(body.id);if(x.archivado_at)fail(410,'Esta solicitud fue retirada. Contacta a ZAIN.');if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
   const staff=async req=> {
     const token=req.headers.get('authorization')?.match(/^Bearer (.+)$/)?.[1];if(!token)fail(401,'Inicia sesión para consultar los pedidos.');
     const r=await fetcher(base+'/auth/v1/user',{headers:{apikey:publicKey,Authorization:'Bearer '+token},signal:AbortSignal.timeout(10000)});
@@ -108,10 +108,10 @@ export function createHandler(env={}, fetcher=fetch) {
     validateID(b.id);
     if(!/^[a-f0-9]{64}$/.test(b.token||''))fail(404,'Enlace de seguimiento no válido.');
     const x=await row(b.id);
-    if(!x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
+    if(x.archivado_at || !x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
     return x;
   };
-  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
+  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
   const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
     items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
@@ -123,7 +123,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
     return {url:signed.href,name:f.name,type:f.type};
   };
-  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(p=>({...p,sku:C.productos.find(v=>v.id===p.p || v.idPublico===p.p)?.sku||''}))};};
+  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:product?.sku||''};})};};
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -173,15 +173,33 @@ export function createHandler(env={}, fetcher=fetch) {
       const user=await staff(request);
       if(request.method==='POST'&&op==='enlace') {
         const b=await jsonBody(request),x=await row(b.id);
-        if(!x.guardado_at)fail(409,'Esta solicitud todavía no terminó de subir sus archivos.');
+        if(x.archivado_at || !x.guardado_at)fail(409,'Esta solicitud fue retirada o todavía no terminó de subir sus archivos.');
         return response(200,receipt(x));
       }
+      if(request.method==='GET'&&op==='resumen')return response(200,{resumen:await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'}),equipo:user});
       if(request.method==='GET'&&op==='lista') {
         const offset=Math.max(0,Math.min(100000,Number(url.searchParams.get('offset'))||0));
         const state=url.searchParams.get('estado');if(state&&!STATES.includes(state))fail(400,'Estado inválido.');
         const q=text(url.searchParams.get('q'),50).replace(/[^a-zA-Z0-9-]/g,'');
-        const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&select=id,folio,created_at,guardado_at,estado,total,notas_internas,version&order=created_at.desc&limit=50&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':''));
-        return response(200,{pedidos:rows,equipo:user});
+        const trash=url.searchParams.get('papelera')==='true';
+        let dateFilter='';
+        if(url.searchParams.get('periodo')==='semana'){const summary=await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'});dateFilter='&created_at=gte.'+encodeURIComponent(summary.semana_desde);}
+        const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at='+(trash?'not.is.null':'is.null')+'&select=id,folio,created_at,guardado_at,archivado_at,estado,total,version,items&order='+(trash?'archivado_at.desc,':'')+'created_at.desc,id.desc&limit=21&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':'')+dateFilter);
+        const items=rows.slice(0,20).map(({items,...x})=>({...x,selecciones:items.length,resumen:items.slice(0,2).map(p=>C.productos.find(v=>v.id===p.p || v.idPublico===p.p)?.nombreComercial||p.nombre).join(' / ')}));
+        return response(200,{pedidos:items,siguiente:rows.length>20,equipo:user});
+      }
+      if(request.method==='POST'&&op==='archivar'){
+        const b=await jsonBody(request);validateID(b.id);
+        if(!Number.isSafeInteger(b.version)||b.version<0||typeof b.archivar!=='boolean')fail(400,'Revisa la solicitud que quieres retirar o restaurar.');
+        const x=await row(b.id);
+        if(b.archivar&&b.folio!==x.folio)fail(400,'Escribe el folio completo para moverlo a la papelera.');
+        const result=await sb('/rest/v1/rpc/zain_archivar_pedido',{method:'POST',body:JSON.stringify({p_id:b.id,p_version:b.version,p_archivar:b.archivar,p_actor:user.id})});
+        if(!result)fail(409,'Tu compañero modificó este pedido. Recarga antes de continuar.');
+        return response(200,{pedido:publicRow(result)});
+      }
+      if(request.method==='GET'&&op==='historial'){
+        const id=validateID(url.searchParams.get('id'));
+        return response(200,{historial:await sb('/rest/v1/zain_historial?pedido_id=eq.'+id+'&select=id,created_at,estado_anterior,estado_nuevo,notas&order=created_at.desc,id.desc&limit=100')});
       }
       const id=request.method==='GET'?url.searchParams.get('id'):null;
       if(request.method==='GET'&&op==='detalle')return response(200,{pedido:publicRow(await row(id))});

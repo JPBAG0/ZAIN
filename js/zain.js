@@ -148,15 +148,7 @@
      operación. Arrastrar mueve el arco bajo el dedo; al soltar, un resorte
      lo acomoda en la prenda más cercana.
      ===================================================================== */
-  const MUESTRAS = [
-    { p: "polo", c: "marino", t: "bordado", z: "pecho-izq", cm: 9 },
-    { p: "playera", c: "negro", t: "serigrafia", z: "centro", cm: 22 },
-    { p: "gorra", c: "negro", t: "bordado", z: "frente", cm: 10, e: 0.66 },
-    { p: "sudadera", c: "oxford", t: "dtf", z: "centro", cm: 20 },
-    { p: "chamarra", c: "botella", t: "bordado", z: "pecho-izq", cm: 9 },
-    { p: "bolsa-expo", c: "bolsa-expo-rojo", t: "serigrafia", z: "frente", cm: 15, e: 0.9 },
-    { p: "camisa", c: "blanco", t: "bordado", z: "pecho-izq", cm: 8 },
-  ].filter((m) => prod(m.p) && color(m.c));
+  const MUESTRAS = C.muestrasPortada.filter(m => prod(m.p)?.activo !== false && color(m.c));
 
   const escena = $("#escena");
   const N = MUESTRAS.length;
@@ -539,8 +531,8 @@
      PERSONALIZADOR
      ===================================================================== */
   const E = {
-    p: "polo",
-    c: "marino",
+    p: MUESTRAS[0].p,
+    c: MUESTRAS[0].c,
     t: "bordado",
     z: "pecho-izq",
     cm: 9,
