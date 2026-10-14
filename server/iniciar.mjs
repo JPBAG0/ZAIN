@@ -11,8 +11,8 @@ createServer(async(req,res)=>{
   try {
     const url=new URL(req.url,'http://localhost:'+port);
     if(url.pathname==='/api/pedidos') {
-      const parts=[];let bytes=0;
-      for await(const chunk of req){bytes+=chunk.length;if(bytes>128*1024){res.writeHead(413);res.end('Solicitud demasiado grande');return;}parts.push(chunk);}
+      const parts=[];let bytes=0;const bodyLimit=req.headers['content-type']==='image/webp'?4*1024*1024:128*1024;
+      for await(const chunk of req){bytes+=chunk.length;if(bytes>bodyLimit){res.writeHead(413);res.end('Solicitud demasiado grande');return;}parts.push(chunk);}
       const body=Buffer.concat(parts);
       const r=await handler(new Request(url,{method:req.method,headers:req.headers,...(body.length?{body}:{} )}));
       res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));return;

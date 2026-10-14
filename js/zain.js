@@ -2,8 +2,9 @@
    ZAIN — lógica de la página (portada, catálogo, personalizador y pedido)
    Los datos (productos, colores, WhatsApp…) viven en js/config.js.
    ============================================================================ */
-(() => {
+(async () => {
   "use strict";
+  await window.ZAINCatalogoListo;
   const C = window.ZAIN;
   const A = window.ZAINArchivos;
   const P = window.ZAINPedidos;
@@ -13,7 +14,7 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const cm = (n) => (Math.round(n * 10) / 10).toFixed(1) + " cm";
   const compatHash = (s) => { let h = 2166136261; for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return (h >>> 0).toString(16); };
-  const prod = (id) => C.productos.find((p) => p.id === id || p.compatHash === compatHash(id)) || C.productosHistoricos?.find((p) => p.id === id);
+  const prod = (id) => C.productos.find((p) => p.id === id || p.compatHash === compatHash(id)) || C.productosHistoricos?.find((p) => p.id === id || p.compatHash === compatHash(id));
   const familias = C.productos.filter((p, i, all) => !p.familia || all.findIndex(x => x.familia === p.familia) === i);
   const variantes = (p) => p.familia ? C.productos.filter(x => x.familia === p.familia) : [p];
   const nombreColor = (c) => c.nombre;
@@ -29,10 +30,10 @@
   const varianteSelector = (p, id, attr = "") => variantes(p).length < 2 ? "" : `<label class="campo producto__variante"><span>Silueta</span><select ${id ? `id="${id}"` : ""} ${attr} aria-label="Silueta de ${esc(p.nombreFamilia)}">${variantes(p).map(x => `<option value="${x.id}"${x.id === p.id ? " selected" : ""}>${x.silueta}</option>`).join("")}</select></label>`;
   const medidasTexto = (p) => {
     const d = p.dimensiones;
-    return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : "";
+    return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : p.medidas || "";
   };
-  const fichaProducto = (p, compacto = false) => p.prendaCatalogo ? `<div class="producto__datos"><b>${esc(p.silueta)}</b><span>${esc(p.tejido)} · ${p.gramaje} g/m²</span><span>${esc(p.composicion)}${Object.keys(p.composicionColor).length ? "; Gris Jaspe: 90% algodón / 10% poliéster" : ""}</span></div><p class="producto__disponibilidad">${esc(p.disponibilidad)}</p><p class="producto__nota">Imagen ilustrativa. ${compacto ? "" : "Color y acabado se confirman al cotizar."}</p>${compacto ? "" : `<p class="producto__nota">${esc(p.tecnicasNota)}</p>`}${tablaMedidas(p)}` : p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
-    <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${minimo(p) ? `<p class="producto__nota">${esc(reglaCantidad(p))}</p>` : ""}${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "";
+  const fichaProducto = (p, compacto = false) => (compacto ? "" : "<p class=\"producto__nota\">SKU ZAIN: " + esc(p.sku) + "</p>") + (p.especificaciones ? "<p class=\"producto__nota\">" + esc(p.especificaciones) + "</p>" : "") + (p.prendaCatalogo ? `<div class="producto__datos"><b>${esc(p.silueta)}</b><span>${esc(p.tejido)} · ${p.gramaje} g/m²</span><span>${esc(p.composicion)}${Object.keys(p.composicionColor).length ? "; Gris Jaspe: 90% algodón / 10% poliéster" : ""}</span></div><p class="producto__disponibilidad">${esc(p.disponibilidad)}</p><p class="producto__nota">Imagen ilustrativa. ${compacto ? "" : "Color y acabado se confirman al cotizar."}</p>${compacto ? "" : `<p class="producto__nota">${esc(p.tecnicasNota)}</p>`}${tablaMedidas(p)}` : p.medidas ? `<div class="producto__medidas"><b class="num">${esc(p.medidas)}</b><small>${esc(medidasTexto(p))}</small></div>
+    <p class="producto__disponibilidad">${esc(p.disponibilidad)}</p>${minimo(p) ? `<p class="producto__nota">${esc(reglaCantidad(p))}</p>` : ""}${p.aplicacionesNota ? `<p class="producto__nota">${esc(p.aplicacionesNota)}</p>` : ""}` : "");
   const wa = (texto) => (C.whatsapp ? `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(texto)}` : "#contacto");
   const almacen = {
     leer(k, d) {
@@ -148,6 +149,11 @@
      operación. Arrastrar mueve el arco bajo el dedo; al soltar, un resorte
      lo acomoda en la prenda más cercana.
      ===================================================================== */
+  if (!C.productos.length) {
+    $("#catTitulo").textContent="Catálogo";
+    $("#catDescripcion").textContent=C.catalogoNoDisponible?"No pudimos actualizar el catálogo. Intenta recargar o escríbenos para consultar disponibilidad.":"Estamos actualizando la disponibilidad. Escríbenos para cotizar.";
+    $("#rejilla").replaceChildren();$("#personaliza").hidden=true;$("#escena").hidden=true;return;
+  }
   const MUESTRAS = C.muestrasPortada.filter(m => prod(m.p)?.activo !== false && color(m.c));
 
   const escena = $("#escena");
@@ -404,7 +410,7 @@
     $("#catDescripcion").textContent = grupo ? grupoBolsas.aviso : "Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
     $$("#rejilla .producto").forEach((art) => {
       const p = prod(art.dataset.id);
-      art.hidden = art.dataset.grupo ? !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
+      art.hidden = art.dataset.grupo ? !bolsas.length || !!grupo || (filtro !== "Todo" && filtro !== art.dataset.cat)
         : grupo ? p.grupo !== grupo : p.grupo === "bolsas" || (filtro !== "Todo" && filtro !== p.categoria);
     });
   }
@@ -438,11 +444,11 @@
 
   const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
     <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}" role="img"></canvas>
-      ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia con modelo" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
+      ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
     ${varianteSelector(p, "", "data-variante")}
     <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div>
     <p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p>
-    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><small class="producto__sku">SKU ZAIN: ${esc(p.sku)}</small><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
+    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
     <div class="producto__pie"><div class="producto__precio"><b>Cotiza por WhatsApp</b></div><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></article>`;
   $("#rejilla").innerHTML = categorias.slice(1).map(cat => `<h3 class="rejilla__categoria" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3>` + familias.filter(p => p.categoria === cat).map(tarjeta).join("")).join("") + `<article class="producto producto--grupo" data-grupo="bolsas" data-cat="Bolsas">
       <div class="producto__foto"><img src="${esc(grupoBolsas.foto)}" alt="Bolsas ecológicas del catálogo" width="1000" height="1000" loading="lazy" /></div>
@@ -533,9 +539,9 @@
   const E = {
     p: MUESTRAS[0].p,
     c: MUESTRAS[0].c,
-    t: "bordado",
-    z: "pecho-izq",
-    cm: 9,
+    t: MUESTRAS[0].t,
+    z: MUESTRAS[0].z,
+    cm: MUESTRAS[0].cm,
     modo: "imagen",
     logo: null, // canvas del logo subido
     logoNombre: "",

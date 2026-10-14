@@ -1,0 +1,59 @@
+(() => {
+'use strict';
+const $=s=>document.querySelector(s), esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let rows=[],loaded=false,epoch=0,selected=null,dirty=false,photoChange=undefined,busy=false,uploading=false,allowed=false;
+const status=(s,error=false)=>{$('#estadoCatalogo').textContent=s;$('#estadoCatalogo').classList.toggle('error',error);};
+const field=(key,label,type='text',max=300)=>'<label>'+label+'<input name="'+key+'" type="'+type+'" maxlength="'+max+'"></label>';
+document.body.insertAdjacentHTML('beforeend','<dialog id="editorCatalogo" class="control__editorcatalogo"><header class="control__fichacab"><span>Editar publicación</span><button type="button" id="cerrarCatalogo" aria-label="Cerrar editor">✕</button></header><form id="formCatalogo"><div class="control__editorcab"><h2 id="tituloCatalogo"></h2><p id="skuCatalogo" class="control__dato"></p><label class="control__publicar"><input name="activo" type="checkbox">Visible para clientes</label></div><div class="control__fotoseditor"><div><img id="renderCatalogo" alt="Render protegido"><b>Render del personalizador</b><small>Se conserva para mantener los colores y el logo.</small></div><div><img id="fotoCatalogo" alt="Foto secundaria del producto"><b>Foto de referencia</b><label class="btn btn--linea control__subirfoto">Cambiar foto<input id="archivoCatalogo" type="file" accept="image/jpeg,image/png,image/webp"></label><button type="button" id="fotoOriginal" class="btn-texto">Usar foto original</button><small>JPG, PNG o WEBP. Guarda para publicar el cambio.</small></div></div><div class="control__camposedicion">'+field('nombre','Nombre de la familia','text',120)+field('disponibilidad','Aviso de disponibilidad','text',300)+'<label class="control__ancho">Descripción<textarea name="descripcion" maxlength="900" rows="3"></textarea></label><label class="control__ancho">Especificaciones adicionales<textarea name="especificaciones" maxlength="2400" rows="4"></textarea></label>'+field('tejido','Tejido','text',120)+field('gramaje','Gramaje (g/m²)','number')+field('composicion','Composición','text',250)+field('medidas','Medidas','text',300)+'<p class="control__ancho control__dato">La composición se aplica a todos los colores si la cambias. Las tallas, paletas y cantidades mínimas conservan sus valores.</p><div class="control__internotitulo control__ancho"><h3>Para compras · solo equipo ZAIN</h3><p>Estas referencias se guardan en los pedidos nuevos y no se muestran al cliente.</p></div>'+field('proveedor','Proveedor','text',120)+field('sku_proveedor','SKU del proveedor','text',120)+'</div><footer class="control__guardar"><p id="mensajeEditor" role="status" aria-live="polite"></p><div><button type="button" class="btn btn--linea" id="cancelarCatalogo">Cerrar</button><button type="submit" class="btn btn--azul" id="guardarCatalogo">Guardar y publicar</button></div></footer></form></dialog>');
+$('#seccionCatalogo').insertAdjacentHTML('afterbegin','<p id="estadoCatalogo" role="status" class="control__estado"></p>');
+const dialog=$('#editorCatalogo'), form=$('#formCatalogo');
+form.elements.gramaje.min='1';form.elements.gramaje.max='2000';form.elements.gramaje.step='1';
+function tab(catalogue){$('#seccionPedidos').hidden=catalogue;$('#seccionCatalogo').hidden=!catalogue;for(const [id,on] of [['verCatalogo',catalogue],['verPedidos',!catalogue]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}if(catalogue){history.replaceState(null,'','#catalogo');if(!loaded)load().catch(error);}else history.replaceState(null,'',location.pathname+location.search);}
+function error(e){status(e.message||'No se pudo actualizar el catálogo.',true);if(e.auth)$('#salir').click();}
+function paint(){
+ const q=$('#buscarCatalogo').value.toLocaleLowerCase('es-MX').trim(),filter=$('#filtrarCatalogo').value;
+ const visible=rows.filter(p=>(!filter||(filter==='activo')===p.activo)&&[p.nombre,p.sku,p.skuProveedor,p.proveedor,p.silueta].join(' ').toLocaleLowerCase('es-MX').includes(q));
+ $('#listaCatalogo').innerHTML=visible.map(p=>'<article class="control__publicacion'+(!p.activo?' control__publicacion--oculta':'')+'"><div class="control__fotocatalogo"><img src="'+esc(p.fotoRender)+'" alt="'+esc(p.nombre)+'" loading="lazy"><span class="control__estadopublicacion">'+(p.activo?'Publicada':'Oculta')+'</span></div><div class="control__textocatalogo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.silueta||p.categoria||'Producto')+'</p><dl><dt>SKU ZAIN</dt><dd>'+esc(p.sku)+'</dd><dt>Proveedor</dt><dd>'+esc(p.proveedor||'Por registrar')+'</dd><dt>SKU proveedor</dt><dd>'+esc(p.skuProveedor||'Por registrar')+'</dd></dl><div class="control__accionescatalogo"><label><input type="checkbox" data-visible="'+esc(p.id)+'" '+(p.activo?'checked ':'')+(!allowed?'disabled':'')+'> Visible</label><button type="button" class="btn btn--linea" data-editar="'+esc(p.id)+'">Editar</button></div></div></article>').join('')||'<div class="control__vacio"><h3>No hay modelos con estos filtros</h3><p>Prueba otro nombre o SKU.</p></div>';
+}
+async function load(message=''){const turn=epoch;status('Cargando publicaciones…');const data=await window.ZAINEquipo.call('catalogo-lista');if(turn!==epoch||$('#trabajo').hidden)return;rows=data.productos;allowed=data.editable;loaded=true;paint();status(message||rows.filter(p=>p.activo).length+' referencias activas · '+rows.filter(p=>!p.activo).length+' ocultas');}
+function setImage(img,src){img.hidden=!src;img.removeAttribute('src');if(src)img.src=src;}
+function open(id){selected=rows.find(p=>p.id===id);if(!selected)return;dirty=false;photoChange=undefined;$('#mensajeEditor').textContent='';$('#tituloCatalogo').textContent=selected.nombre;$('#skuCatalogo').textContent='SKU ZAIN: '+selected.sku+(selected.silueta?' · '+selected.silueta:'');for(const name of ['nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor'])form.elements[name].value=selected[name]??'';form.elements.sku_proveedor.value=selected.skuProveedor;form.elements.activo.checked=selected.activo;$('#archivoCatalogo').value='';setImage($('#renderCatalogo'),selected.fotoRender);setImage($('#fotoCatalogo'),selected.fotoModelo);$('#fotoOriginal').disabled=!selected.fotoModelo;$('#guardarCatalogo').disabled=!allowed;dialog.showModal();}
+function close(force=false){if(!force&&(busy||uploading)){ $('#mensajeEditor').textContent='Espera a que termine el guardado o la foto.';return;}if(!force&&dirty&&!confirm('¿Cerrar sin guardar los cambios de esta publicación?'))return;dialog.close();selected=null;dirty=false;photoChange=undefined;}
+$('#verCatalogo').addEventListener('click',()=>tab(true));$('#verPedidos').addEventListener('click',()=>tab(false));
+$('#recargarCatalogo').addEventListener('click',()=>load().catch(error));$('#buscarCatalogo').addEventListener('input',paint);$('#filtrarCatalogo').addEventListener('change',paint);
+for(const id of ['cerrarCatalogo','cancelarCatalogo'])$('#'+id).addEventListener('click',()=>close());
+dialog.addEventListener('cancel',e=>{e.preventDefault();close();});dialog.addEventListener('close',()=>{selected=null;dirty=false;photoChange=undefined;});
+form.addEventListener('input',()=>dirty=true);
+$('#listaCatalogo').addEventListener('click',e=>{const b=e.target.closest('[data-editar]');if(b)open(b.dataset.editar);});
+$('#listaCatalogo').addEventListener('change',async e=>{
+ const c=e.target.closest('[data-visible]');if(!c)return;const p=rows.find(p=>p.id===c.dataset.visible),turn=epoch;c.disabled=true;
+ try{await window.ZAINEquipo.call('catalogo-guardar',{id:p.id,version:p.version,cambios:{activo:c.checked}});if(turn===epoch)await load(c.checked?'Publicación activada.':'Publicación oculta. Se conserva el modelo.');}
+ catch(er){if(turn===epoch){c.checked=p.activo;error(er);}}finally{if(turn===epoch)c.disabled=false;}
+});
+$('#archivoCatalogo').addEventListener('change',async e=>{
+ const file=e.target.files[0],p=selected,turn=epoch;if(!file||!p)return;uploading=true;$('#guardarCatalogo').disabled=true;$('#mensajeEditor').textContent='Preparando foto de referencia…';let bitmap;
+ try{
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>20*1024*1024)throw Error('Usa una foto JPG, PNG o WEBP de hasta 20 MB.');
+  bitmap=await createImageBitmap(file);if(bitmap.width*bitmap.height>40000000)throw Error('La foto es demasiado grande. Usa una versión de hasta 40 megapíxeles.');
+  const ratio=Math.min(1,1600/Math.max(bitmap.width,bitmap.height)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(bitmap.width*ratio));canvas.height=Math.max(1,Math.round(bitmap.height*ratio));canvas.getContext('2d').drawImage(bitmap,0,0,canvas.width,canvas.height);
+  const blob=await new Promise(r=>canvas.toBlob(r,'image/webp',.88));if(!blob||blob.type!=='image/webp'||blob.size>4*1024*1024)throw Error('No se pudo preparar esta foto. Prueba otra imagen.');
+  const data=await window.ZAINEquipo.upload(p.id,blob);if(turn!==epoch||selected!==p)return;photoChange=data.foto_id;dirty=true;setImage($('#fotoCatalogo'),data.url);$('#mensajeEditor').textContent='Foto lista. Guarda para publicarla.';$('#fotoOriginal').disabled=false;
+ }catch(er){if(turn===epoch&&selected===p){$('#mensajeEditor').textContent=er.message;if(er.auth)error(er);}}finally{bitmap?.close();if(turn===epoch&&selected===p){uploading=false;$('#guardarCatalogo').disabled=!allowed;}}
+});
+$('#fotoOriginal').addEventListener('click',()=>{photoChange=null;dirty=true;setImage($('#fotoCatalogo'),'');$('#mensajeEditor').textContent='Al guardar se recuperará la foto original del catálogo.';});
+form.addEventListener('submit',async e=>{
+ e.preventDefault();const p=selected,turn=epoch;if(!p||busy||uploading||!allowed)return;
+ const changes={};
+ for(const name of ['nombre','descripcion','especificaciones','tejido','composicion','medidas','disponibilidad','proveedor']){const value=form.elements[name].value.trim();if(value!==(p[name]??''))changes[name]=value;}
+ const supplier=form.elements.sku_proveedor.value.trim();if(supplier!==p.skuProveedor)changes.sku_proveedor=supplier;
+ const g=form.elements.gramaje.value;if(g!==String(p.gramaje??'')){if(!g){$('#mensajeEditor').textContent='Indica el gramaje o conserva el dato original.';return;}changes.gramaje=Number(g);}
+ if(form.elements.activo.checked!==p.activo)changes.activo=form.elements.activo.checked;
+ if(photoChange!==undefined)changes.foto_id=photoChange;
+ if(!Object.keys(changes).length){$('#mensajeEditor').textContent='No hay cambios por guardar.';return;}
+ busy=true;$('#guardarCatalogo').disabled=true;$('#mensajeEditor').textContent='Guardando publicación…';
+ try{await window.ZAINEquipo.call('catalogo-guardar',{id:p.id,version:p.version,cambios:changes});if(turn!==epoch)return;dirty=false;close(true);await load('Cambios publicados. Los pedidos anteriores conservan su selección.');}
+ catch(er){if(turn===epoch&&selected===p){$('#mensajeEditor').textContent=er.message;if(er.auth)error(er);}}finally{if(turn===epoch){busy=false;$('#guardarCatalogo').disabled=!allowed;}}
+});
+addEventListener('zain:equipo-listo',()=>{if(location.hash==='#catalogo')tab(true);});
+addEventListener('zain:equipo-salio',()=>{epoch++;rows=[];loaded=false;busy=false;uploading=false;allowed=false;close(true);$('#listaCatalogo').replaceChildren();status('');$('#buscarCatalogo').value='';tab(false);});
+})();

@@ -1,6 +1,8 @@
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import C from './catalogo.mjs';
+import PublicC from './publico.mjs';
+import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-gestion.mjs';
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const TYPES = { 'image/png':'png', 'image/jpeg':'jpg', 'image/webp':'webp', 'image/svg+xml':'svg', 'application/pdf':'pdf' };
@@ -12,7 +14,8 @@ const equal = (a,b) => typeof a === 'string' && typeof b === 'string' && a.lengt
 const validateID = id => { if (!UUID.test(id || '')) fail(400,'Folio inválido.'); return id; };
 const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(403,'No se pudo verificar esta solicitud.'); return sha(token); };
 
-export function validateOrder(body, { allowHistoricos = false } = {}) {
+export function validateOrder(body, { allowHistoricos = false, catalogo = C, snapshot = false } = {}) {
+  const C=catalogo;
   if (!body || typeof body!=='object' || Array.isArray(body)) fail(400,'Falta el pedido.');
   validateID(body.id); validateToken(body.token);
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
@@ -42,6 +45,7 @@ export function validateOrder(body, { allowHistoricos = false } = {}) {
         detalleMedidas:'Medidas por talla: ancho plano y largo según la guía Yazbek. No es un área de impresión.',
       });
     }
+    if(snapshot)Object.assign(item,{nombreZain:p.nombreComercial||p.nombre,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??"",proveedor:p.proveedorCompras??p.fabricante??""});
     return item;
   });
   const files = body.files || [];
@@ -85,6 +89,16 @@ export function createHandler(env={}, fetcher=fetch) {
     if(!r.ok){const message=String(body?.message||'');if(message.includes('zain_rate'))fail(429,'Demasiadas solicitudes. Intenta más tarde.');if(message.includes('zain_capacity'))fail(503,'El guardado de archivos está temporalmente ocupado. Contacta a ZAIN por WhatsApp.');if(message.includes('zain_conflict'))fail(409,'Esta solicitud ya existe con otros datos.');fail(502,'No se pudo guardar o consultar el pedido. Intenta de nuevo.');}
     return body;
   };
+
+  const catalogEnabled=env.ZAIN_CATALOGO_ENABLED==='true';
+  const catalogRows=()=>sb('/rest/v1/zain_catalogo_ediciones?select=producto_id,cambios,version&limit=200');
+  const catalogPhotos=async rows=>{const ids=[...new Set(rows.map(r=>r.cambios?.foto_id).filter(id=>UUID.test(id||'')))];return ids.length?sb('/rest/v1/zain_catalogo_fotos?id=in.('+ids.join(',')+')&select=id,producto_id,objeto'):[];};
+  const currentCatalog=async()=>resolveInternal(C,catalogEnabled?await catalogRows():[]);
+  const productInfo=(p,photos=[])=>{
+    const original=[...PublicC.productos,...PublicC.productosHistoricos].find(x=>x.sku===p.sku),photo=photos.find(x=>x.id===p.fotoReferenciaId&&x.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(x.objeto));
+    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',fotoRender:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
+  };
+
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
   const owner=async body=>{const x=await row(body.id);if(x.archivado_at)fail(410,'Esta solicitud fue retirada. Contacta a ZAIN.');if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
   const staff=async req=> {
@@ -111,7 +125,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(x.archivado_at || !x.guardado_at || !equal(readToken(x),b.token))fail(404,'Enlace de seguimiento no válido.');
     return x;
   };
-  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
+  const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:product?.sku||'',nombre:p.nombreZain||product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
   const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
     items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
@@ -123,7 +137,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
     return {url:signed.href,name:f.name,type:f.type};
   };
-  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:product?.sku||''};})};};
+  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -134,17 +148,41 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='OPTIONS'){headers['Access-Control-Allow-Methods']='GET, POST, OPTIONS';headers['Access-Control-Allow-Headers']='Content-Type, Authorization';return new Response(null,{status:204,headers});}
       const url=new URL(request.url),op=url.searchParams.get('op')||'config';
       if(request.method==='GET'&&op==='config')return response(200,{activo:ready,...(ready?{supabaseUrl:base,publishableKey:publicKey}:{})});
+      if(request.method==='GET'&&op==='catalogo-publico'){
+        if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');
+        const rows=catalogEnabled?await catalogRows():[],cat=resolveInternal(C,rows),photos=await catalogPhotos(rows);
+        headers['Cache-Control']='no-store';
+        return response(200,{catalogo:projectPublic(PublicC,cat,photos,base)});
+      }
       if(!ready)fail(503,'El guardado de pedidos todavía no está habilitado.');
       if(request.method==='POST'&&['crear','subidas','finalizar'].includes(op)) {
         const body=await jsonBody(request);
         if(op==='crear') {
+
+          let catalog=C,existing=null,requestHash=null;
+          if(catalogEnabled){
+            validateID(body.id);validateToken(body.token);
+            requestHash=sha(stable({items:body.items,files:body.files||[]}));
+            try{existing=await owner(body);}catch(e){if(e.status!==404)throw e;}
+            if(existing){
+              if(existing.items?.[0]?.pedido_hash){
+                if(existing.items[0].pedido_hash!==requestHash)fail(409,'Esta solicitud ya existe con otros datos.');
+                return response(200,{id:body.id,folio:existing.folio});
+              }
+              const old=validateOrder(body,{allowHistoricos:true});
+              if(stable(old.items)!==stable(existing.items)||stable(old.manifest)!==stable(existing.archivos))fail(409,'Esta solicitud ya existe con otros datos.');
+              return response(200,{id:body.id,folio:existing.folio});
+            }
+            catalog=await currentCatalog();
+          }
           // El catálogo retirado solo puede reintentarse en un folio ya registrado
           // y con su secreto de carga. La RPC conserva la igualdad del contenido.
           const historical=Array.isArray(body.items)&&body.items.some(x=>C.productosHistoricos?.some(p=>p.id===x?.p));
           if(historical) {
             try{await owner(body);}catch(e){if(e.status===404)fail(400,'Esta selección pertenece al catálogo anterior. Elige una referencia del catálogo actual; tus archivos siguen guardados.');throw e;}
           }
-          const x=validateOrder(body,{allowHistoricos:historical});
+          const x=validateOrder(body,{allowHistoricos:historical,catalogo:catalog,snapshot:catalogEnabled});
+          if(requestHash)for(const item of x.items)item.pedido_hash=requestHash;
           const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
           const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');
           const result=await sb('/rest/v1/rpc/zain_crear_pedido',{method:'POST',body:JSON.stringify({p_id:body.id,p_token_hash:validateToken(body.token),p_items:x.items,p_archivos:x.manifest,p_total:x.total,p_bytes:x.bytes,p_capacity:Math.min(Number(env.ZAIN_CAPACITY_MB)||800,100000)*1024*1024,p_client:client})});
@@ -171,6 +209,35 @@ export function createHandler(env={}, fetcher=fetch) {
         return response(200,op==='consulta'?{pedido:customerRow(x)}:await signedFile(x,b));
       }
       const user=await staff(request);
+
+      if(request.method==='GET'&&op==='catalogo-lista'){
+        const rows=catalogEnabled?await catalogRows():[],cat=resolveInternal(C,rows),photos=await catalogPhotos(rows);
+        return response(200,{productos:cat.productos.map(p=>productInfo(p,photos)),editable:catalogEnabled});
+      }
+      if(request.method==='POST'&&op==='catalogo-guardar'){
+        if(!catalogEnabled)fail(503,'La edición del catálogo todavía no está habilitada.');
+        const b=await jsonBody(request),p=C.productos.find(p=>(p.idPublico||p.id)===b.id);
+        if(!p||!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Referencia de catálogo inválida.');
+        let changes;try{changes=normalizeChanges(b.cambios);}catch(e){fail(400,e.message);}
+        const r=await sb('/rest/v1/rpc/zain_guardar_catalogo',{method:'POST',body:JSON.stringify({p_producto_id:b.id,p_version:b.version,p_cambios:changes,p_actor:user.id})});
+        if(!r)fail(409,'Tu compañero modificó este modelo. Recárgalo antes de guardar.');
+        return response(200,{guardado:true,version:r.version});
+      }
+      if(request.method==='POST'&&op==='catalogo-foto'){
+        if(!catalogEnabled)fail(503,'La edición del catálogo todavía no está habilitada.');
+        const id=url.searchParams.get('id'),p=C.productos.find(p=>(p.idPublico||p.id)===id);
+        if(!p||request.headers.get('content-type')!=='image/webp')fail(400,'Usa una foto WEBP del producto.');
+        const chunks=[],reader=request.body?.getReader();if(!reader)fail(400,'Falta la foto.');
+        let bytes=0;while(true){const v=await reader.read();if(v.done)break;bytes+=v.value.length;if(bytes>4*1024*1024){await reader.cancel();fail(413,'La foto puede pesar hasta 4 MB.');}chunks.push(v.value);}
+        const data=Buffer.concat(chunks);
+        if(data.length<20||data.toString('ascii',0,4)!=='RIFF'||data.toString('ascii',8,12)!=='WEBP'||data.readUInt32LE(4)+8!==data.length)fail(400,'La foto WEBP no es válida.');
+        const photoID=randomUUID(),path=id+'/'+photoID+'.webp';
+        const r=await fetcher(base+'/storage/v1/object/zain-catalogo-fotos/'+path,{method:'POST',headers:{...serviceHeaders,'Content-Type':'image/webp','x-upsert':'false'},body:data,signal:AbortSignal.timeout(30000)});
+        if(!r.ok)fail(502,'No se pudo guardar la foto. Intenta de nuevo.');
+        await sb('/rest/v1/zain_catalogo_fotos',{method:'POST',body:JSON.stringify({id:photoID,producto_id:id,objeto:path,creada_by:user.id})});
+        return response(200,{foto_id:photoID,url:base+'/storage/v1/object/public/zain-catalogo-fotos/'+path});
+      }
+
       if(request.method==='POST'&&op==='enlace') {
         const b=await jsonBody(request),x=await row(b.id);
         if(x.archivado_at || !x.guardado_at)fail(409,'Esta solicitud fue retirada o todavía no terminó de subir sus archivos.');

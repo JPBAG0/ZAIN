@@ -1,3 +1,7 @@
+## Operación vigente: catálogo administrable — 14-oct-2026
+
+En /gestion-zain → Catálogo el equipo activa/oculta referencias, edita información y foto secundaria y conserva ambos SKU para compras. Render y SKU ZAIN protegidos. Ediciones en Supabase sobre la fuente base; pedidos previos conservados. 55 pruebas aprobadas y Edge v13 ACTIVE. Guía: [docs/CATALOGO-GESTION.md](docs/CATALOGO-GESTION.md). Esta operación prevalece sobre la reactivación manual de secciones históricas.
+
 ## Decisión vigente: gestión visual, papelera y catálogo activo — 14-oct-2026
 
 JP pidió reorganizar el panel, ocultar cinco productos iniciales sin eliminarlos, mantener la gorra y cambiar nombres que identificaban al proveedor. Originales desactivados: playera, polo, camisa, chamarra y sudadera. Sus datos, imágenes, SKU y pedidos existentes se conservan; nuevas solicitudes no los admiten. Reactivar cambiando activo=true en server/config-interno.cjs y regenerando catálogo público y Edge. No reasignar SKU.
