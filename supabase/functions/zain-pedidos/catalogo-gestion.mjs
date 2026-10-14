@@ -55,4 +55,3 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  return {productos:copy.productos,productosHistoricos:copy.productosHistoricos,categoriasCatalogo:copy.categoriasCatalogo,muestrasPortada:copy.muestrasPortada,grupos:copy.grupos};
 }
 export const stable=x=>JSON.stringify(x,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.keys(v).sort().map(k=>[k,v[k]])):v);
-

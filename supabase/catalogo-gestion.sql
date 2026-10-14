@@ -30,4 +30,3 @@ grant execute on function public.zain_guardar_catalogo(text,integer,jsonb,uuid) 
 insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('zain-catalogo-fotos','zain-catalogo-fotos',true,4194304,array['image/webp']);
 create policy zain_catalogo_solo_api on storage.objects as restrictive for all to anon,authenticated using(bucket_id<>'zain-catalogo-fotos') with check(bucket_id<>'zain-catalogo-fotos');
 commit;
-
