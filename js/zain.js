@@ -1136,7 +1136,7 @@
   let pedido = Array.isArray(pedidoGuardado) ? pedidoGuardado.filter((x) => x && typeof x === "object").map(({ unit, ...x }) => {
     const p=prod(x.p);
     if (!p) return x;
-    const col=p.colores.map(color).find(c=>c.nombre === x.color.replace(/ · \d+$/, ""));
+    const col=p.colores.map(color).find(c=>c.nombre === String(x.color || "").replace(/ · \d+$/, ""));
     return {...x,p:p.id,nombre:p.nombre,sku:p.sku,...(col ? {color:col.nombre,colorId:col.id,colorCodigo:""} : {})};
   }) : [];
   let paquete = null, revisionArchivos = 0, compartiendo = false;
