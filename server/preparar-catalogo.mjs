@@ -29,12 +29,12 @@ for(const p of copy.productos){
   }
   for(const key of ['idPublico','fabricante','codigoFabricante','fuente','imagenFuente','escalaNota','fotoOriginal','nombreComercial','nombreFamiliaComercial'])delete p[key];
 }
-copy.catalogoVersion='zain-catalogo-activo-panel-2026-10-14';
+copy.catalogoVersion='zain-catalogo-empresarial-2026-10-15';
 delete copy.catalogoYazbekPendiente;
 copy.productosHistoricos=copy.productos.filter(p=>p.activo===false);
 copy.productos=copy.productos.filter(p=>p.activo!==false);
 copy.categoriasCatalogo=copy.categoriasCatalogo.filter(cat=>copy.productos.some(p=>p.categoria===cat));
-copy.muestrasPortada=C.muestrasPortada.map(m=>({...m,p:C.productos.find(p=>p.id===m.p).idPublico,c:colorIDs.get(m.c)}));
+copy.muestrasPortada=C.muestrasPortada.map(m=>({...m,p:C.productos.find(p=>p.id===m.p).idPublico,c:colorIDs.get(m.c)})).filter(m=>copy.productos.some(p=>p.id===m.p));
 const json=JSON.stringify(copy,null,2);
 if(/yazbek|\b[CD]\d{4}\b/i.test(json))throw Error('La configuración pública conserva referencias del proveedor.');
 await writeFile(new URL('../js/config.js',import.meta.url),'// Catálogo público generado; editar server/config-interno.cjs.\n(() => { const config = '+json+';\nif(typeof module!=="undefined" && module.exports)module.exports=config;else window.ZAIN=config;})();\n');

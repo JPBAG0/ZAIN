@@ -25,7 +25,7 @@
   const pasoCantidad = (p) => p.pasoPiezas || 1;
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
   const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
-  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
+  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
   const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table>${p.tolerancia?`<small>Tolerancia: ancho ±${esc(p.tolerancia.ancho)} cm; largo ±${esc(p.tolerancia.largo)} cm.</small>`:""}</details>`;
   const varianteSelector = (p, id, attr = "") => {
     const opciones = variantes(p);

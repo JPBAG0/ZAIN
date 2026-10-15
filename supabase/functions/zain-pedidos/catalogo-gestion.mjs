@@ -55,7 +55,7 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  }
  copy.productos=all.filter(p=>p.activo);copy.productosHistoricos=all.filter(p=>!p.activo);
  copy.categoriasCatalogo=internal.categoriasCatalogo.filter(cat=>copy.productos.some(p=>p.categoria===cat));
- copy.muestrasPortada=(basePublic.muestrasPortada||[]).filter(m=>copy.productos.some(p=>p.id===m.p)).map(m=>{const p=copy.productos.find(p=>p.id===m.p);return {...m,t:p.tecnicas.includes(m.t)?m.t:p.tecnicas[0]};});
+ copy.muestrasPortada=(internal.muestrasPortada||[]).map(m=>{const p=internal.productos.find(p=>p.id===m.p||p.idPublico===m.p),pub=p&&bySku.get(p.sku),col=internal.colores.find(c=>c.id===m.c);return {...m,p:pub?.id,c:col?.idPublico||col?.id};}).filter(m=>copy.productos.some(p=>p.id===m.p&&p.colores.includes(m.c))).map(m=>{const p=copy.productos.find(p=>p.id===m.p);return {...m,t:p.tecnicas.includes(m.t)?m.t:p.tecnicas[0]};});
  if(!copy.muestrasPortada.length&&copy.productos.length){const p=copy.productos[0];copy.muestrasPortada=[{p:p.id,c:p.colores[0],t:p.tecnicas[0],z:p.zonas[0].id,cm:Math.min(9,p.zonas[0].max)}];}
  const bag=copy.productos.find(p=>p.id==='bolsa-expo')||copy.productos.find(p=>p.grupo==='bolsas');
  if(bag){copy.grupos.bolsas.foto=bag.foto;copy.grupos.bolsas.productoInicial=bag.id;}

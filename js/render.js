@@ -85,8 +85,8 @@
 
   /* --- prenda del color elegido --- */
   const tenidas = new Map();
-  function tenir(img, hex, S = 1000, fotoColor = null) {
-    const k = img.src + "|" + hex + "|" + S + "|" + fotoColor;
+  function tenir(img, hex, S = 1000, fotoColor = null, acabados = null) {
+    const k = img.src + "|" + hex + "|" + S + "|" + fotoColor + "|" + JSON.stringify(acabados);
     if (tenidas.has(k)) return tenidas.get(k);
     const c = lienzo(S);
     const g = ctx2(c);
@@ -105,6 +105,10 @@
       for (let i = 0, j = 0; i < o.length; i += 4, j++) {
         const al = a[i + 3];
         if (!al) continue;
+        const x=(j%S)*1000/S,y=Math.floor(j/S)*1000/S;
+        const spread=Math.max(a[i],a[i+1],a[i+2])-Math.min(a[i],a[i+1],a[i+2]);
+        const fixed=acabados?.acentos&&spread>35 || acabados?.reflectivos?.some(r=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h&&spread<15&&a[i]<200);
+        if(fixed){o[i]=a[i];o[i+1]=a[i+1];o[i+2]=a[i+2];o[i+3]=al;continue;}
         const f = s[j];
         // sombra: multiplica (más marcada en colores oscuros); luz: sube un poco hacia blanco
         const somb = Math.max(0, 1 - (1 - Math.min(f, 1)) * (1 + oscuro * 1.6));

@@ -17,3 +17,5 @@
 
 /* Costos por talla: filtros conservan los campos y sus importes sin guardar. */
 .cot-costosfiltros{display:flex;align-items:end;flex-wrap:wrap;gap:16px}.cot-costosfiltros>label:first-child{flex:2 1 220px}.cot-costosfiltros>label{flex:1 1 150px}.cot-costosfiltros>p{flex-basis:100%}.cot-costosfiltros select{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid var(--linea,#d6d6d2);border-radius:10px;background:white;min-height:48px}.cot-bandas{min-width:0}.cot-bandas summary{cursor:pointer;font-weight:600;padding:12px 0}.cot-bandas label{display:grid;gap:6px;margin:12px 0}.cot-bandas small{font-weight:400;color:#616168}.cot-bandas input{width:100%}.cot-costostabla tr[hidden]{display:none}.cot-costopendiente .cot-bandas input:placeholder-shown{border-color:#a62b34;color:#a62b34}
+
+.cot-bandas[hidden],[data-cot-prendaunitaria][hidden]{display:none}

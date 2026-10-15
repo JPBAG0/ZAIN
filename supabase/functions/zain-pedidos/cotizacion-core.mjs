@@ -15,17 +15,17 @@ export const decimalTarifa=s=>decimalPreciso(s,4);
 const TECNICAS=['Bordado','Serigrafía','DTF'];
 export const pesos=n=>n===null?'Pendiente':new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(n/100);
 const equivalente=r=>Math.floor(entero(r,0,100000)*10000/(10000+r));
-export function inicial(){return {metodo:'margen_bruto',costeo:'area_tallas_v2',activo:false,rangos:[{desde:1,hasta:14,margen:4000},{desde:15,hasta:49,margen:3500},{desde:50,hasta:99,margen:3000},{desde:100,hasta:null,margen:2500}],prendas:[],tecnicas:TECNICAS.map(tecnica=>({tecnica,tarifaCm2:null,preparacion:0})),costos:[]};}
+export function inicial(){return {metodo:'margen_bruto',costeo:'area_tallas_volumen_v3',activo:false,rangos:[{desde:1,hasta:14,margen:4000},{desde:15,hasta:49,margen:3500},{desde:50,hasta:99,margen:3000},{desde:100,hasta:null,margen:2500}],prendas:[],tecnicas:TECNICAS.map(tecnica=>({tecnica,tarifaCm2:null,preparacion:0})),costos:[]};}
 function bandasPrecio(value=[]){
  if(!Array.isArray(value)||value.length>100)error('Revisa los costos por talla.');
  const result=value.map(b=>{
   if(!b||!Array.isArray(b.tallas)||!b.tallas.length||b.tallas.length>18||!Array.isArray(b.colores)||b.colores.length>30)error('Revisa tallas y colores de los costos.');
   const tallas=b.tallas.map(t=>texto(t,12)),colores=b.colores.map(t=>texto(t,50));
   if(tallas.some(t=>!t)||colores.some(t=>!t)||new Set(tallas).size!==tallas.length||new Set(colores).size!==colores.length)error('No repitas tallas o colores en el costo.');
-  return {tallas,colores,costo:b.costo===null?null:entero(b.costo)};
+  const desdePiezas=entero(b.desdePiezas??1,1,9999),hastaPiezas=b.hastaPiezas==null?null:entero(b.hastaPiezas,desdePiezas,9999);return {tallas,colores,costo:b.costo===null?null:entero(b.costo),...(b.desdePiezas!==undefined||b.hastaPiezas!==undefined?{desdePiezas,hastaPiezas}:{})};
  });
  for(let i=0;i<result.length;i++)for(let j=i+1;j<result.length;j++){
-  const a=result[i],b=result[j];if(a.tallas.some(t=>b.tallas.includes(t))&&(!a.colores.length||!b.colores.length||a.colores.some(c=>b.colores.includes(c))))error('Los costos por talla y color se traslapan.');
+  const a=result[i],b=result[j];if((a.desdePiezas??1)<=(b.hastaPiezas??9999)&&(b.desdePiezas??1)<=(a.hastaPiezas??9999)&&a.tallas.some(t=>b.tallas.includes(t))&&(!a.colores.length||!b.colores.length||a.colores.some(c=>b.colores.includes(c))))error('Los costos por talla y color se traslapan.');
  }
  return result;
 }
@@ -34,7 +34,7 @@ function costoPorTallas(p,bandas){
  if(!counts||typeof counts!=='object'||Array.isArray(counts)||!Object.keys(counts).length)return {total:null,detalle:[]};
  let piezas=0,total=0,pendiente=false;const detalle=[];
  for(const [talla,n] of Object.entries(counts)){
-  entero(n,1,9999);piezas+=n;const b=bandas.find(b=>b.tallas.includes(talla)&&(!b.colores.length||b.colores.includes(String(p.color||'').replace(/ · \d+$/,''))));
+  entero(n,1,9999);piezas+=n;const b=bandas.find(b=>p.piezas>=(b.desdePiezas??1)&&(b.hastaPiezas==null||p.piezas<=b.hastaPiezas)&&b.tallas.includes(talla)&&(!b.colores.length||b.colores.includes(String(p.color||'').replace(/ · \d+$/,''))));
   const costo=b?.costo??null,importe=costo===null?null:entero(costo*n);if(importe===null)pendiente=true;else total=entero(total+importe);
   detalle.push({talla,piezas:n,costo,importe});
  }
@@ -58,7 +58,7 @@ export function configurar(input){
   return {sku,tecnica,prenda:p.prenda===null?null:entero(p.prenda),aplicacion:p.aplicacion===null?null:entero(p.aplicacion),otros:entero(p.otros),preparacion:entero(p.preparacion)};
  });
  if(input.metodo!=='margen_bruto')error('El método de cálculo es margen bruto.');
- if(input.costeo!==undefined&&!['area_cm2_v1','area_tallas_v2'].includes(input.costeo))error('Revisa el método de costeo.');
+ if(input.costeo!==undefined&&!['area_cm2_v1','area_tallas_v2','area_tallas_volumen_v3'].includes(input.costeo))error('Revisa el método de costeo.');
  const productos=input.prendas??[];
  if(!Array.isArray(productos)||productos.length>1000)error('Revisa los costos de prendas.');
  const skus=new Set(),prendas=productos.map(p=>{
@@ -69,7 +69,7 @@ export function configurar(input){
  const tasas=input.tecnicas??inicial().tecnicas;
  if(!Array.isArray(tasas)||tasas.length!==TECNICAS.length||new Set(tasas.map(t=>t.tecnica)).size!==TECNICAS.length||tasas.some(t=>!TECNICAS.includes(t.tecnica)))error('Define una tarifa para cada técnica.');
  const tecnicas=TECNICAS.map(nombre=>{const t=tasas.find(t=>t.tecnica===nombre);return {tecnica:nombre,tarifaCm2:t.tarifaCm2===null?null:entero(t.tarifaCm2),preparacion:entero(t.preparacion)};});
- return {metodo:'margen_bruto',costeo:'area_tallas_v2',activo:input.activo,rangos,prendas,tecnicas,costos};
+ return {metodo:'margen_bruto',costeo:'area_tallas_volumen_v3',activo:input.activo,rangos,prendas,tecnicas,costos};
 }
 function comercial(p,i){return {indice:i,sku:texto(p.sku,60),nombre:texto(p.nombreZain||p.nombre,150),color:texto(p.color,100).replace(/ · \d+$/,''),tecnica:texto(p.tecnica,50),piezas:entero(p.piezas,1,9999),tallas:texto(p.tallas,500),zona:texto(p.zona,120),cm:Number.isFinite(p.cm)?p.cm:0};}
 export function generar(items,cfg){
@@ -115,10 +115,10 @@ export function calcular(items,input){
  const impuestos=subtotal===null||impuesto===null?null:proporcion(subtotal,impuesto),total=impuestos===null?null:suma([subtotal,impuestos]);
  const costo=cifrasPendientes?null:suma([...partidas.map(p=>p.costo),costoEnvio]),utilidad=subtotal===null||costo===null?null:subtotal-costo;
  const vigencia=texto(input.vigencia,10);if(vigencia&&(!/^\d{4}-\d{2}-\d{2}$/.test(vigencia)||new Date(vigencia+'T12:00:00Z').toISOString().slice(0,10)!==vigencia))error('Revisa la fecha de vigencia.');
- return {schema:4,metodo:'margen_bruto',moneda:'MXN',partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
+ return {schema:5,metodo:'margen_bruto',moneda:'MXN',partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
 }
 const enteroNullable=n=>n===null?null:entero(n);
-export function entrada(q){return {...q,schema:4,metodo:'margen_bruto',partidas:q.partidas.map(p=>({...p,modo:q.schema<3?'fijo':p.modo,modoPrenda:p.modoPrenda??'unitario',bandas:p.bandas||[],ancho:p.ancho??null,alto:p.alto??null,tarifaCm2:p.tarifaCm2??null,margenObjetivo:p.margenObjetivo??equivalente(p.recargo),precio:q.schema===1?(p.precioManual??p.precio):p.precioManual}))};}
+export function entrada(q){return {...q,schema:5,metodo:'margen_bruto',partidas:q.partidas.map(p=>({...p,modo:q.schema<3?'fijo':p.modo,modoPrenda:p.modoPrenda??'unitario',bandas:p.bandas||[],ancho:p.ancho??null,alto:p.alto??null,tarifaCm2:p.tarifaCm2??null,margenObjetivo:p.margenObjetivo??equivalente(p.recargo),precio:q.schema===1?(p.precioManual??p.precio):p.precioManual}))};}
 export function paraCliente(q){
  if(!q.preparada)error('Completa costos, precios e impuesto antes de publicar.');
  return {schema:1,moneda:'MXN',destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,

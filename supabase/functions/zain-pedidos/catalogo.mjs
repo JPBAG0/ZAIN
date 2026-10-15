@@ -611,6 +611,356 @@ export default {
       "fabricante": "Yazbek",
       "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
       "idPublico": "zain-color-090"
+    },
+    {
+      "id": "zn-po-008-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-008-c02",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-008-c03",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-008-c04",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-008-c05",
+      "nombre": "Gris jaspe",
+      "hex": "#b9bdbb"
+    },
+    {
+      "id": "zn-po-008-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-008-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-po-009-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-009-c02",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-009-c03",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-009-c04",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-009-c05",
+      "nombre": "Gris jaspe",
+      "hex": "#b9bdbb"
+    },
+    {
+      "id": "zn-po-009-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-009-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-po-010-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-010-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-010-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-010-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-010-c05",
+      "nombre": "Gris Oxford",
+      "hex": "#9ba5a6"
+    },
+    {
+      "id": "zn-po-010-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-010-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-po-011-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-011-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-011-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-011-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-011-c05",
+      "nombre": "Gris Oxford",
+      "hex": "#9ba5a6"
+    },
+    {
+      "id": "zn-po-011-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-011-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-pl-008-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-pl-008-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-pl-008-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-pl-008-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-pl-008-c05",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-pl-008-c06",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-pl-009-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-pl-009-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-pl-009-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-pl-009-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-pl-009-c05",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-pl-009-c06",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-cm-012-c01",
+      "nombre": "Blanco Oxford",
+      "hex": "#eeeae3"
+    },
+    {
+      "id": "zn-cm-012-c02",
+      "nombre": "Rosa Oxford",
+      "hex": "#dfc5cd"
+    },
+    {
+      "id": "zn-cm-012-c03",
+      "nombre": "Azul marino Oxford",
+      "hex": "#344963"
+    },
+    {
+      "id": "zn-cm-012-c04",
+      "nombre": "Negro Oxford",
+      "hex": "#3c3f43"
+    },
+    {
+      "id": "zn-cm-013-c01",
+      "nombre": "Blanco Oxford",
+      "hex": "#eeeae3"
+    },
+    {
+      "id": "zn-cm-013-c02",
+      "nombre": "Rosa Oxford",
+      "hex": "#dfc5cd"
+    },
+    {
+      "id": "zn-cm-013-c03",
+      "nombre": "Azul marino Oxford",
+      "hex": "#344963"
+    },
+    {
+      "id": "zn-cm-013-c04",
+      "nombre": "Negro Oxford",
+      "hex": "#3c3f43"
+    },
+    {
+      "id": "zn-cm-014-c01",
+      "nombre": "Blanco Oxford",
+      "hex": "#eeeae3"
+    },
+    {
+      "id": "zn-cm-014-c02",
+      "nombre": "Rosa Oxford",
+      "hex": "#dfc5cd"
+    },
+    {
+      "id": "zn-cm-014-c03",
+      "nombre": "Azul marino Oxford",
+      "hex": "#344963"
+    },
+    {
+      "id": "zn-cm-014-c04",
+      "nombre": "Negro Oxford",
+      "hex": "#3c3f43"
+    },
+    {
+      "id": "zn-cm-015-c01",
+      "nombre": "Blanco Oxford",
+      "hex": "#eeeae3"
+    },
+    {
+      "id": "zn-cm-015-c02",
+      "nombre": "Rosa Oxford",
+      "hex": "#dfc5cd"
+    },
+    {
+      "id": "zn-cm-015-c03",
+      "nombre": "Azul marino Oxford",
+      "hex": "#344963"
+    },
+    {
+      "id": "zn-cm-015-c04",
+      "nombre": "Negro Oxford",
+      "hex": "#3c3f43"
+    },
+    {
+      "id": "zn-ce-001-c01",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-ce-001-c02",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-ce-001-c03",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-ce-001-c04",
+      "nombre": "Verde bosque",
+      "hex": "#254537"
+    },
+    {
+      "id": "zn-ch-002-c01",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-ch-002-c02",
+      "nombre": "Gris plata",
+      "hex": "#aeb1b3"
+    },
+    {
+      "id": "zn-ch-002-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-ch-002-c04",
+      "nombre": "Caqui",
+      "hex": "#b2a28d"
+    },
+    {
+      "id": "zn-ch-003-c01",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-ch-003-c02",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-ch-003-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-ch-003-c04",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-ch-003-c05",
+      "nombre": "Verde cactus",
+      "hex": "#276148"
+    },
+    {
+      "id": "zn-ch-003-c06",
+      "nombre": "Azul cobalto",
+      "hex": "#4c677c"
     }
   ],
   "tecnicas": [
@@ -4041,6 +4391,1282 @@ export default {
       "activo": true,
       "nombreFamiliaComercial": "Polo ligero manga larga",
       "nombreComercial": "Polo ligero manga larga · Dama"
+    },
+    {
+      "id": "zn-po-008",
+      "idPublico": "zn-po-008",
+      "sku": "ZN-PO-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo corporativo",
+      "nombreComercial": "Polo corporativo · Caballero",
+      "nombreFamilia": "Polo corporativo",
+      "nombreFamiliaComercial": "Polo corporativo",
+      "familia": "zain-2026-polo-corporativo",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo de manga corta en mezcla de algodón y poliéster para uniformar a tu equipo.",
+      "especificaciones": "Refuerzo en hombros. Tapacostura. Doble pespunte en bajos y sisa. 3 Botones al tono de la tela. Construcción tubular. Cuello y puños tejidos.",
+      "tejido": "Piqué Pre-encogido",
+      "composicion": "50% Algodón - 50% Poliéster",
+      "composicionColor": {
+        "zn-po-008-c05": "90% Algodón - 10% Poliéster"
+      },
+      "foto": "img/productos/zain/zn-po-008-render.webp",
+      "colores": [
+        "zn-po-008-c01",
+        "zn-po-008-c02",
+        "zn-po-008-c03",
+        "zn-po-008-c04",
+        "zn-po-008-c05",
+        "zn-po-008-c06",
+        "zn-po-008-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.035,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 230,
+      "tablaTallas": {
+        "S": {
+          "ancho": 45.72,
+          "largo": 72.39
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 74.93
+        },
+        "L": {
+          "ancho": 55.88,
+          "largo": 77.47
+        },
+        "XL": {
+          "ancho": 60.96,
+          "largo": 80.01
+        },
+        "2XL": {
+          "ancho": 66.04,
+          "largo": 82.55
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-po-008-modelo.webp"
+    },
+    {
+      "id": "zn-po-009",
+      "idPublico": "zn-po-009",
+      "sku": "ZN-PO-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo corporativo",
+      "nombreComercial": "Polo corporativo · Dama",
+      "nombreFamilia": "Polo corporativo",
+      "nombreFamiliaComercial": "Polo corporativo",
+      "familia": "zain-2026-polo-corporativo",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo de manga corta y corte silueteado en mezcla de algodón y poliéster.",
+      "especificaciones": "Refuerzo en hombros. Tapacostura. Doble pespunte en bajos y sisa. 4 Botones al tono de la tela. Cuello tejido. Aberturas laterales.",
+      "tejido": "Piqué Pre-encogido",
+      "composicion": "50% Algodón - 50% Poliéster",
+      "composicionColor": {
+        "zn-po-009-c05": "90% Algodón - 10% Poliéster"
+      },
+      "foto": "img/productos/zain/zn-po-009-render.webp",
+      "colores": [
+        "zn-po-009-c01",
+        "zn-po-009-c02",
+        "zn-po-009-c03",
+        "zn-po-009-c04",
+        "zn-po-009-c05",
+        "zn-po-009-c06",
+        "zn-po-009-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.902,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 230,
+      "tablaTallas": {
+        "S": {
+          "ancho": 43.18,
+          "largo": 60.96
+        },
+        "M": {
+          "ancho": 45.72,
+          "largo": 63.5
+        },
+        "L": {
+          "ancho": 48.26,
+          "largo": 66.04
+        },
+        "XL": {
+          "ancho": 50.8,
+          "largo": 68.58
+        },
+        "2XL": {
+          "ancho": 53.34,
+          "largo": 71.12
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-po-009-modelo.webp"
+    },
+    {
+      "id": "zn-po-010",
+      "idPublico": "zn-po-010",
+      "sku": "ZN-PO-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo de piqué deportivo",
+      "nombreComercial": "Polo de piqué deportivo · Caballero",
+      "nombreFamilia": "Polo de piqué deportivo",
+      "nombreFamiliaComercial": "Polo de piqué deportivo",
+      "familia": "zain-2026-polo-deportivo",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo de manga corta en piqué de poliéster, con corte recto.",
+      "especificaciones": "Cerrado de costados. Triple pespunte en bajos y hombros. Cuello y puños tejidos. Tapacostura a contraste. Presillas a contraste. 3 Botones al tono de la tela.",
+      "tejido": "Piqué",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-010-render.webp",
+      "colores": [
+        "zn-po-010-c01",
+        "zn-po-010-c02",
+        "zn-po-010-c03",
+        "zn-po-010-c04",
+        "zn-po-010-c05",
+        "zn-po-010-c06",
+        "zn-po-010-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.489,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 200,
+      "tablaTallas": {
+        "S": {
+          "ancho": 46.99,
+          "largo": 72.39
+        },
+        "M": {
+          "ancho": 52.07,
+          "largo": 74.93
+        },
+        "L": {
+          "ancho": 57.15,
+          "largo": 77.47
+        },
+        "XL": {
+          "ancho": 62.23,
+          "largo": 80.01
+        },
+        "2XL": {
+          "ancho": 67.31,
+          "largo": 82.55
+        },
+        "3XL": {
+          "ancho": 72.39,
+          "largo": 85.09
+        },
+        "4XL": {
+          "ancho": 77.47,
+          "largo": 87.63
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-po-010-modelo.webp"
+    },
+    {
+      "id": "zn-po-011",
+      "idPublico": "zn-po-011",
+      "sku": "ZN-PO-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo de piqué deportivo",
+      "nombreComercial": "Polo de piqué deportivo · Dama",
+      "nombreFamilia": "Polo de piqué deportivo",
+      "nombreFamiliaComercial": "Polo de piqué deportivo",
+      "familia": "zain-2026-polo-deportivo",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo de manga corta en piqué de poliéster, con corte silueteado.",
+      "especificaciones": "Cerrado de costados. Triple pespunte en bajos y hombros. Cuello y puños tejidos. Tapacostura a contraste. Presillas a contraste. 4 Botones al tono de la tela.",
+      "tejido": "Piqué",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-011-render.webp",
+      "colores": [
+        "zn-po-011-c01",
+        "zn-po-011-c02",
+        "zn-po-011-c03",
+        "zn-po-011-c04",
+        "zn-po-011-c05",
+        "zn-po-011-c06",
+        "zn-po-011-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.023,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 200,
+      "tablaTallas": {
+        "S": {
+          "ancho": 44.45,
+          "largo": 60.96
+        },
+        "M": {
+          "ancho": 46.99,
+          "largo": 63.5
+        },
+        "L": {
+          "ancho": 49.53,
+          "largo": 66.04
+        },
+        "XL": {
+          "ancho": 52.07,
+          "largo": 68.58
+        },
+        "2XL": {
+          "ancho": 54.61,
+          "largo": 71.12
+        },
+        "3XL": {
+          "ancho": 57.15,
+          "largo": 73.66
+        },
+        "4XL": {
+          "ancho": 59.69,
+          "largo": 76.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-po-011-modelo.webp"
+    },
+    {
+      "id": "zn-pl-008",
+      "idPublico": "zn-pl-008",
+      "sku": "ZN-PL-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Playera deportiva de malla",
+      "nombreComercial": "Playera deportiva de malla · Caballero",
+      "nombreFamilia": "Playera deportiva de malla",
+      "nombreFamiliaComercial": "Playera deportiva de malla",
+      "familia": "zain-2026-playera-deportiva",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera deportiva de cuello redondo en malla de poliéster y corte recto.",
+      "especificaciones": "Cuello redondo. Cerrado de costados. Tapacostura a contraste. Doble pespunte en cuello. Etiqueta desprendible. Barra reflectiva en mangas. Los detalles reflectivos no se ofrecen como equipo de protección certificado.",
+      "tejido": "Mesh",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-008-render.webp",
+      "colores": [
+        "zn-pl-008-c01",
+        "zn-pl-008-c02",
+        "zn-pl-008-c03",
+        "zn-pl-008-c04",
+        "zn-pl-008-c05",
+        "zn-pl-008-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Serigrafía, DTF. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.878,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 24
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 150,
+      "tablaTallas": {
+        "S": {
+          "ancho": 45.72,
+          "largo": 68.58
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 71.12
+        },
+        "L": {
+          "ancho": 55.88,
+          "largo": 73.66
+        },
+        "XL": {
+          "ancho": 60.96,
+          "largo": 76.2
+        },
+        "2XL": {
+          "ancho": 66.04,
+          "largo": 78.74
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-pl-008-modelo.webp",
+      "acabadosFijos": {
+        "reflectivos": [
+          {
+            "x": 90,
+            "y": 375,
+            "w": 90,
+            "h": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "zn-pl-009",
+      "idPublico": "zn-pl-009",
+      "sku": "ZN-PL-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Playera deportiva de malla",
+      "nombreComercial": "Playera deportiva de malla · Dama",
+      "nombreFamilia": "Playera deportiva de malla",
+      "nombreFamiliaComercial": "Playera deportiva de malla",
+      "familia": "zain-2026-playera-deportiva",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Playera deportiva de cuello redondo en malla de poliéster y corte silueteado.",
+      "especificaciones": "Cuello redondo. Cerrado de costados. Tapacostura a contraste. Doble pespunte en cuello. Etiqueta desprendible. Barra reflectiva en mangas. Los detalles reflectivos no se ofrecen como equipo de protección certificado.",
+      "tejido": "Mesh",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-009-render.webp",
+      "colores": [
+        "zn-pl-009-c01",
+        "zn-pl-009-c02",
+        "zn-pl-009-c03",
+        "zn-pl-009-c04",
+        "zn-pl-009-c05",
+        "zn-pl-009-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Serigrafía, DTF. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.066,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 24
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 150,
+      "tablaTallas": {
+        "S": {
+          "ancho": 41.91,
+          "largo": 60.96
+        },
+        "M": {
+          "ancho": 44.45,
+          "largo": 63.5
+        },
+        "L": {
+          "ancho": 46.99,
+          "largo": 66.04
+        },
+        "XL": {
+          "ancho": 49.53,
+          "largo": 68.58
+        },
+        "2XL": {
+          "ancho": 52.07,
+          "largo": 71.12
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-pl-009-modelo.webp",
+      "acabadosFijos": {
+        "reflectivos": [
+          {
+            "x": 100,
+            "y": 275,
+            "w": 90,
+            "h": 60
+          },
+          {
+            "x": 825,
+            "y": 275,
+            "w": 85,
+            "h": 60
+          }
+        ]
+      }
+    },
+    {
+      "id": "zn-cm-012",
+      "idPublico": "zn-cm-012",
+      "sku": "ZN-CM-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa Oxford manga corta",
+      "nombreComercial": "Camisa Oxford manga corta · Caballero",
+      "nombreFamilia": "Camisa Oxford manga corta",
+      "nombreFamiliaComercial": "Camisa Oxford manga corta",
+      "familia": "zain-2026-oxford-corta",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa Oxford de manga corta, corte regular y bolsillo frontal.",
+      "especificaciones": "Pinzas en espalda. Botón down en cuello. Bolsa frontal. Contraste en bata y pie de cuello.",
+      "tejido": "Oxford",
+      "composicion": "60% Algodón - 40% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-012-render.webp",
+      "colores": [
+        "zn-cm-012-c01",
+        "zn-cm-012-c02",
+        "zn-cm-012-c03",
+        "zn-cm-012-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.785,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 155,
+      "tablaTallas": {
+        "S": {
+          "ancho": 53.34,
+          "largo": 73.66
+        },
+        "M": {
+          "ancho": 55.88,
+          "largo": 76.2
+        },
+        "L": {
+          "ancho": 58.42,
+          "largo": 78.74
+        },
+        "XL": {
+          "ancho": 60.96,
+          "largo": 81.28
+        },
+        "2XL": {
+          "ancho": 66.04,
+          "largo": 83.82
+        },
+        "3XL": {
+          "ancho": 71.12,
+          "largo": 83.82
+        },
+        "4XL": {
+          "ancho": 76.2,
+          "largo": 83.82
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-cm-012-modelo.webp",
+      "acabadosFijos": {
+        "acentos": true
+      }
+    },
+    {
+      "id": "zn-cm-013",
+      "idPublico": "zn-cm-013",
+      "sku": "ZN-CM-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa Oxford manga corta",
+      "nombreComercial": "Camisa Oxford manga corta · Dama",
+      "nombreFamilia": "Camisa Oxford manga corta",
+      "nombreFamiliaComercial": "Camisa Oxford manga corta",
+      "familia": "zain-2026-oxford-corta",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Camisa Oxford de manga corta y corte silueteado.",
+      "especificaciones": "Pinzas en espalda. Contraste en bata y pie de cuello.",
+      "tejido": "Oxford",
+      "composicion": "60% Algodón - 40% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-013-render.webp",
+      "colores": [
+        "zn-cm-013-c01",
+        "zn-cm-013-c02",
+        "zn-cm-013-c03",
+        "zn-cm-013-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 6.991,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 155,
+      "tablaTallas": {
+        "S": {
+          "ancho": 48.26,
+          "largo": 62.23
+        },
+        "M": {
+          "ancho": 52.07,
+          "largo": 64.77
+        },
+        "L": {
+          "ancho": 55.88,
+          "largo": 67.31
+        },
+        "XL": {
+          "ancho": 59.69,
+          "largo": 69.85
+        },
+        "2XL": {
+          "ancho": 63.5,
+          "largo": 72.39
+        },
+        "3XL": {
+          "ancho": 67.31,
+          "largo": 74.93
+        },
+        "4XL": {
+          "ancho": 71.12,
+          "largo": 77.47
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "acabadosFijos": {
+        "acentos": true
+      }
+    },
+    {
+      "id": "zn-cm-014",
+      "idPublico": "zn-cm-014",
+      "sku": "ZN-CM-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa Oxford manga larga",
+      "nombreComercial": "Camisa Oxford manga larga · Caballero",
+      "nombreFamilia": "Camisa Oxford manga larga",
+      "nombreFamiliaComercial": "Camisa Oxford manga larga",
+      "familia": "zain-2026-oxford-larga",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa Oxford de manga larga, corte regular y bolsillo frontal.",
+      "especificaciones": "Pinzas en espalda. Botón down en cuello. Bolsa frontal. Contraste en bata y pie de cuello. Contraste en aletilla de manga y puño interior. Pinzas en puño.",
+      "tejido": "Oxford",
+      "composicion": "60% Algodón - 40% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-014-render.webp",
+      "colores": [
+        "zn-cm-014-c01",
+        "zn-cm-014-c02",
+        "zn-cm-014-c03",
+        "zn-cm-014-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.713,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 155,
+      "tablaTallas": {
+        "S": {
+          "ancho": 53.34,
+          "largo": 73.66
+        },
+        "M": {
+          "ancho": 55.88,
+          "largo": 76.2
+        },
+        "L": {
+          "ancho": 58.42,
+          "largo": 78.74
+        },
+        "XL": {
+          "ancho": 60.96,
+          "largo": 81.28
+        },
+        "2XL": {
+          "ancho": 66.04,
+          "largo": 83.82
+        },
+        "3XL": {
+          "ancho": 71.12,
+          "largo": 83.82
+        },
+        "4XL": {
+          "ancho": 76.2,
+          "largo": 83.82
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "acabadosFijos": {
+        "acentos": true
+      }
+    },
+    {
+      "id": "zn-cm-015",
+      "idPublico": "zn-cm-015",
+      "sku": "ZN-CM-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa Oxford manga larga",
+      "nombreComercial": "Camisa Oxford manga larga · Dama",
+      "nombreFamilia": "Camisa Oxford manga larga",
+      "nombreFamiliaComercial": "Camisa Oxford manga larga",
+      "familia": "zain-2026-oxford-larga",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Camisa Oxford de manga larga y corte silueteado.",
+      "especificaciones": "Pinzas en espalda. Contraste en bata y pie de cuello. Contraste en aletilla de manga y puño interior. Pinzas en puño.",
+      "tejido": "Oxford",
+      "composicion": "60% Algodón - 40% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-015-render.webp",
+      "colores": [
+        "zn-cm-015-c01",
+        "zn-cm-015-c02",
+        "zn-cm-015-c03",
+        "zn-cm-015-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 6.645,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 155,
+      "tablaTallas": {
+        "S": {
+          "ancho": 48.26,
+          "largo": 62.23
+        },
+        "M": {
+          "ancho": 52.07,
+          "largo": 64.77
+        },
+        "L": {
+          "ancho": 55.88,
+          "largo": 67.31
+        },
+        "XL": {
+          "ancho": 59.69,
+          "largo": 69.85
+        },
+        "2XL": {
+          "ancho": 63.5,
+          "largo": 72.39
+        },
+        "3XL": {
+          "ancho": 67.31,
+          "largo": 74.93
+        },
+        "4XL": {
+          "ancho": 71.12,
+          "largo": 77.47
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-cm-015-modelo.webp",
+      "acabadosFijos": {
+        "acentos": true
+      }
+    },
+    {
+      "id": "zn-ce-001",
+      "idPublico": "zn-ce-001",
+      "sku": "ZN-CE-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Chaleco softshell",
+      "nombreComercial": "Chaleco softshell · Unisex",
+      "nombreFamilia": "Chaleco softshell",
+      "nombreFamiliaComercial": "Chaleco softshell",
+      "familia": "zain-2026-chaleco",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "Chaleco softshell de corte unisex, con cierre frontal y bolsillos laterales con cierre.",
+      "especificaciones": "Bolsillos laterales con cierre. Bies a contraste.",
+      "tejido": "Softshell",
+      "composicion": "100% Poliéster Tricapa",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ce-001-render.webp",
+      "colores": [
+        "zn-ce-001-c01",
+        "zn-ce-001-c02",
+        "zn-ce-001-c03",
+        "zn-ce-001-c04"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 310,
+      "tablaTallas": {
+        "XS": {
+          "ancho": 48,
+          "largo": 65
+        },
+        "S": {
+          "ancho": 53,
+          "largo": 67
+        },
+        "M": {
+          "ancho": 56,
+          "largo": 70
+        },
+        "L": {
+          "ancho": 58,
+          "largo": 72
+        },
+        "XL": {
+          "ancho": 61,
+          "largo": 75
+        },
+        "2XL": {
+          "ancho": 64,
+          "largo": 77
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-ce-001-modelo.webp",
+      "acabadosFijos": {
+        "acentos": true
+      }
+    },
+    {
+      "id": "zn-ch-002",
+      "idPublico": "zn-ch-002",
+      "sku": "ZN-CH-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Chamarra de oficina",
+      "nombreComercial": "Chamarra de oficina · Unisex",
+      "nombreFamilia": "Chamarra de oficina",
+      "nombreFamiliaComercial": "Chamarra de oficina",
+      "familia": "zain-2026-chamarra-oficina",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Chamarra unisex con cierre completo y bolsillos frontales individuales.",
+      "especificaciones": "Corte regular. Cierre completo. Bolsillos frontales individuales.",
+      "tejido": "Fleece",
+      "composicion": "90% poliéster y 10% elastano.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-002-render.webp",
+      "colores": [
+        "zn-ch-002-c01",
+        "zn-ch-002-c02",
+        "zn-ch-002-c03",
+        "zn-ch-002-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía, DTF. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "fotoModelo": "img/productos/zain/zn-ch-002-modelo.webp"
+    },
+    {
+      "id": "zn-ch-003",
+      "idPublico": "zn-ch-003",
+      "sku": "ZN-CH-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Rompevientos con capucha",
+      "nombreComercial": "Rompevientos con capucha · Unisex",
+      "nombreFamilia": "Rompevientos con capucha",
+      "nombreFamiliaComercial": "Rompevientos con capucha",
+      "familia": "zain-2026-rompevientos",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Rompevientos unisex con capucha, cierre completo y bolsillos frontales individuales.",
+      "especificaciones": "Corte regular. Cierre completo. Bolsillos frontales individuales.",
+      "tejido": "Poliéster",
+      "composicion": "100% poliéster.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-003-render.webp",
+      "colores": [
+        "zn-ch-003-c01",
+        "zn-ch-003-c02",
+        "zn-ch-003-c03",
+        "zn-ch-003-c04",
+        "zn-ch-003-c05",
+        "zn-ch-003-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, DTF. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.389,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "fotoModelo": "img/productos/zain/zn-ch-003-modelo.webp"
     }
   ],
   "promocionales": [
@@ -4088,6 +5714,7 @@ export default {
     "Polos",
     "Camisas",
     "Sudaderas",
+    "Chalecos",
     "Chamarras",
     "Gorras",
     "Bolsas"
@@ -4364,11 +5991,11 @@ export default {
   ],
   "muestrasPortada": [
     {
-      "p": "yazbek-c0550",
-      "c": "yazbek-414",
+      "p": "zn-po-008",
+      "c": "zn-po-008-c04",
       "t": "bordado",
       "z": "pecho-izq",
-      "cm": 9
+      "cm": 8
     },
     {
       "p": "yazbek-c0300",
@@ -4378,19 +6005,25 @@ export default {
       "cm": 22
     },
     {
-      "p": "gorra",
-      "c": "negro",
+      "p": "zn-cm-014",
+      "c": "zn-cm-014-c01",
       "t": "bordado",
-      "z": "frente",
-      "cm": 10,
-      "e": 0.66
+      "z": "pecho-izq",
+      "cm": 8
     },
     {
-      "p": "yazbek-c0701",
-      "c": "yazbek-102",
-      "t": "serigrafia",
-      "z": "centro",
-      "cm": 20
+      "p": "zn-ce-001",
+      "c": "zn-ce-001-c01",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 8
+    },
+    {
+      "p": "zn-ch-002",
+      "c": "zn-ch-002-c01",
+      "t": "bordado",
+      "z": "pecho-izq",
+      "cm": 8
     },
     {
       "p": "bolsa-expo",
@@ -4399,13 +6032,6 @@ export default {
       "z": "frente",
       "cm": 15,
       "e": 0.9
-    },
-    {
-      "p": "yazbek-c0605",
-      "c": "yazbek-700",
-      "t": "bordado",
-      "z": "pecho-izq",
-      "cm": 8
     }
   ]
 };
