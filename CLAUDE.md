@@ -1,3 +1,9 @@
+## Decisión vigente de JP: prenda y técnica por cm² — 15-oct-2026
+
+Costos privados separados: prenda/otros por SKU y tarifa MXN/cm²/preparación por Bordado, Serigrafía y DTF. Gestión → Costos y cotizador. Dentro del pedido, confirmar ancho y alto del rectángulo de cobro; solo se dispone del ancho solicitado, no inventar altura ni suponer cuadrado. Tarifa de hasta cuatro decimales (0.0050). Aplicación por pieza = ancho × alto × tarifa, redondeada a centavos; costo completo más preparación se divide entre1−margen bruto. Cliente: una sola partida con prenda + personalización incluidas, sin área/tarifas/costos internos. No asumir que un taller factura siempre por superficie; importe fijo revisado disponible por pedido.
+
+Configuración nueva area_cm2_v1 y borrador schema3; adaptación al leer sin migración masiva. Guardados/publicaciones históricos no cambian; anteriores conservan aplicación fija hasta revisión explícita. Las pestañas antiguas deben recargar para guardar. Automático sigue desactivado, costos/tarifas reales vacíos. 97 pruebas y flujo visual con fixtures, sin crear pedidos ni costos reales. Ver docs/COTIZACIONES.md. La propuesta visual PDF v2 continúa pendiente de revisión, no se integra por esta modificación de costos.
+
 ## Corrección vigente de JP: margen bruto — 15-oct-2026
 
 JP reemplazó expresamente el recargo por margen bruto sobre venta. Fórmula: precio = costo / (1 − margen). $100 de costo con40% da$166.67; con30% da$142.86 antes de impuestos. Rangos propuestos40/35/30/25%, editables y sin costos reales. Margen100% inválido. Descuentos bajan el margen final visible. NO reinterpretar recargo50% como margen50% ni recalcular cotizaciones publicadas. Configuración anterior se convierte a equivalente y exige revisión; borradores anteriores conservan precio manual. Ver docs/COTIZACIONES.md y supabase/cotizaciones-margen.sql.

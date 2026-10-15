@@ -4,7 +4,7 @@ export function createQuotes({sb,row,fail,commercialItem}){
  const get=async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=*&limit=1'))[0]||null;
  const ensure=async x=>{
   const old=await get(x.id);if(old)return old;
-  const cfg=await config(),borrador=generar(x.items.map(commercialItem),{...cfg.datos,costos:cfg.datos.activo?cfg.datos.costos:[]});
+  const cfg=await config(),borrador=generar(x.items.map(commercialItem),cfg.datos.activo?cfg.datos:{...cfg.datos,costos:[],prendas:[],tecnicas:inicial().tecnicas});
   const result=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:0,p_modo:'iniciar',p_borrador:borrador,p_publicada:null,p_actor:null})});
   return result||get(x.id);
  };
@@ -13,8 +13,10 @@ export function createQuotes({sb,row,fail,commercialItem}){
    if(op==='precios-config'&&request.method==='GET')return {config:await config()};
    if(op==='precios-guardar'&&request.method==='POST'){
     const b=await jsonBody(request);if(!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Versión inválida.');
+    if(b.datos?.costeo!=='area_cm2_v1')fail(409,'El cotizador ahora separa prendas y tarifas por cm². Recarga la página antes de guardar.');
     let datos;try{datos=configurar(b.datos);}catch(e){fail(400,e.message);}
     const cat=await currentCatalog();for(const c of datos.costos){const p=[...cat.productos,...cat.productosHistoricos||[]].find(p=>p.sku===c.sku);if(!p||!cat.tecnicas.some(t=>t.nombre===c.tecnica&&p.tecnicas.includes(t.id)))fail(400,'Elige un SKU y técnica válidos.');}
+    for(const c of datos.prendas)if(![...cat.productos,...cat.productosHistoricos||[]].some(p=>p.sku===c.sku))fail(400,'Elige un SKU válido para el costo de prenda.');
     const out=await sb('/rest/v1/rpc/zain_precios_guardar',{method:'POST',body:JSON.stringify({p_version:b.version,p_datos:datos,p_actor:user.id})});
     if(!out)fail(409,'Tu compañero cambió los costos. Actualiza antes de guardar.');return {config:out};
    }
@@ -25,7 +27,7 @@ export function createQuotes({sb,row,fail,commercialItem}){
    if(!Number.isSafeInteger(b.version)||b.version<1)fail(400,'Versión inválida.');
    const old=await get(x.id);if(!old||old.version!==b.version)fail(409,'La cotización cambió. Vuelve a abrirla antes de guardar.');
    let draft=old.borrador,published=null,modo='guardar';
-   if(op==='cotizacion-guardar'&&b.borrador?.schema===1)fail(409,'El cotizador ahora usa margen bruto. Recarga la página antes de guardar.');
+   if(op==='cotizacion-guardar'&&b.borrador?.schema!==3)fail(409,'El cotizador ahora separa prendas y tarifas por cm². Recarga la página antes de guardar.');
    try{
     if(op==='cotizacion-guardar')draft=calcular(x.items.map(commercialItem),b.borrador);
     if(op==='cotizacion-recalcular')draft=generar(x.items.map(commercialItem),(await config()).datos);
