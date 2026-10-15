@@ -48,7 +48,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
         detalleMedidas:'Medidas por talla: ancho plano y largo según la guía Yazbek. No es un área de impresión.',
       });
     }
-    if(p.creadoGestion){
+    if(p.creadoGestion||p.catalogo2026){
       const col=colors.find(c=>c.id===x.colorId&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
       const zone=p.zonas.find(z=>z.nombre===String(x.zona||'').replace(/ \(posición ajustada\)$/,''));
       if(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>zone.max)fail(400,'Revisa ubicación y tamaño del logo.');
