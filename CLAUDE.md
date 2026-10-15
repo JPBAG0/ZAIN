@@ -1,3 +1,9 @@
+## Decisión vigente de JP: nuevo proveedor y archivo previo — 15-oct-2026
+
+JP confirmó que todos los pedidos anteriores eran pruebas y autorizó retirarlos. Se archivaron reversiblemente:10 en Papelera,0 activos al verificar. Catálogo reducido a Playera premium Caballero/Dama (ZN-PL-004/005) y13 bolsas:15 referencias activas;29 ocultas (24 desactivadas ahora y5 previas). Gorra incluida entre las archivadas por la aclaración posterior de conservar solo premium/bolsas. Restauración desde Catálogo→Ocultas y Pedidos→Papelera. No borrar originales/SKU/archivos ni reactivar en masa al regenerar. Las ediciones privadas de Supabase prevalecen sobre la disponibilidad base del código.
+
+Pendiente recibir2PDF de catálogo y2de precios de dos marcas del proveedor nuevo. Autorizado análisis profundo de la gama para uniformes empresariales, nuevos renders fieles al corte y costos reales importados por talla/rango, manteniendo referencias de proveedor privadas y SKU ZAIN nuevos sin reciclar los archivados. Ningún archivo nuevo recibido todavía; no inventar marcas, cifras, impuestos o stock. El costo por talla aún no está implementado; el cotizador actual tiene costo de prenda por SKU. Conservar margen bruto y proyección comercial combinada. Detalle: docs/MIGRACION-NUEVO-PROVEEDOR.md; decisión y evidencia en Cerebro.
+
 ## Decisión vigente de JP: siluetas visuales y tabla completa de costos — 15-oct-2026
 
 Caballero/Dama usa un selector de dos opciones visibles con selección negra/texto blanco y confirmación, compartido en catálogo, personalizador y agregado rápido. Radios nativos por grupo, foco restaurado al reconstruir, teclado/foco/reduced motion; mismas variantes, fotos, colores y tallas. Ver docs/SELECTOR-SILUETAS.md.
