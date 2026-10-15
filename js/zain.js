@@ -27,7 +27,14 @@
   const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null);
   const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table><small>Tolerancia: ancho ±${p.tolerancia.ancho} cm; largo ±${p.tolerancia.largo} cm.</small></details>`;
-  const varianteSelector = (p, id, attr = "") => variantes(p).length < 2 ? "" : `<label class="campo producto__variante"><span>Silueta</span><select ${id ? `id="${id}"` : ""} ${attr} aria-label="Silueta de ${esc(p.nombreFamilia)}">${variantes(p).map(x => `<option value="${x.id}"${x.id === p.id ? " selected" : ""}>${x.silueta}</option>`).join("")}</select></label>`;
+  const varianteSelector = (p, id, attr = "") => {
+    const opciones = variantes(p);
+    if (opciones.length < 2) return "";
+    const grupo = id || "silueta-catalogo-" + p.familia;
+    return `<fieldset class="siluetas producto__variante" ${id ? `id="${esc(id)}"` : ""} aria-label="Silueta de ${esc(p.nombreFamilia || p.nombre)}"><legend>Silueta</legend><div class="siluetas__opciones">${opciones.map(x => `<label class="siluetas__opcion"><input class="siluetas__radio" type="radio" name="${esc(grupo)}" value="${esc(x.id)}" ${attr}${x.id === p.id ? " checked" : ""}><span class="siluetas__boton"><span>${esc(x.silueta)}</span><span class="siluetas__marca" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m4 8 2.5 2.5L12 5"/></svg></span></span></label>`).join("")}</div></fieldset>`;
+  };
+  // Los controles se reconstruyen al cambiar de prenda; conservar el foco permite seguir con flechas.
+  const enfocarSilueta = (contenedor, id) => $$(".siluetas__radio", contenedor).find(x => x.value === id)?.focus({ preventScroll: true });
   const medidasTexto = (p) => {
     const d = p.dimensiones;
     return d ? [`Largo de la base: ${d.largoBase} cm`, `Altura: ${d.altura} cm`, d.fuelle && `Fuelle: ${d.fuelle} cm`, d.alturaConAsas && `Altura con asas: ${d.alturaConAsas} cm`].filter(Boolean).join(" · ") : p.medidas || "";
@@ -497,7 +504,7 @@
     const holder = document.createElement("div"); holder.innerHTML = tarjeta(p); const next = holder.firstElementChild;
     ioTarjetas.unobserve(art); art.replaceWith(next); ioTarjetas.observe(next);
     $$("[data-color]", next).forEach(x => { x.classList.toggle("on", x.dataset.color === chosen); x.setAttribute("aria-checked", x.dataset.color === chosen); });
-    pintarTarjeta(next, chosen); pintarCatalogo();
+    pintarTarjeta(next, chosen); pintarCatalogo(); enfocarSilueta(next, p.id);
   });
   pintarCatalogo();
 
@@ -763,7 +770,7 @@
   });
   $("#siluetaCampo").addEventListener("change", (e) => {
     const p = prod(e.target.value); if (!p || p.familia !== pAct().familia) return;
-    E.p = p.id; E.tallas = {}; E.dx = E.dy = 0; transicion = true; actualizar();
+    E.p = p.id; E.tallas = {}; E.dx = E.dy = 0; transicion = true; actualizar(); enfocarSilueta($("#siluetaCampo"), p.id);
   });
   $("#modeloBolsa").addEventListener("change", (e) => {
     const p = prod(e.target.value);
@@ -1301,7 +1308,7 @@
     if (!p.colores.includes(R.c)) R.c = p.colores[0];
     if (!p.tecnicas.includes(R.t)) R.t = p.tecnicas[0];
     if (!p.zonas.some(z => z.id === R.z)) R.z = p.zonas[0].id;
-    rPintar(); rPintarFoto();
+    rPintar(); rPintarFoto(); enfocarSilueta($("#rapSilueta"), p.id);
   });
   $("#rapTallas").addEventListener("input", (e) => {
     const i = e.target.closest("[data-rtalla]");

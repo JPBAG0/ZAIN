@@ -1,3 +1,9 @@
+## Decisión vigente de JP: siluetas visuales y tabla completa de costos — 15-oct-2026
+
+Caballero/Dama usa un selector de dos opciones visibles con selección negra/texto blanco y confirmación, compartido en catálogo, personalizador y agregado rápido. Radios nativos por grupo, foco restaurado al reconstruir, teclado/foco/reduced motion; mismas variantes, fotos, colores y tallas. Ver docs/SELECTOR-SILUETAS.md.
+
+Gestión → Costos y cotizador muestra todas las prendas con miniatura del render, nombre y silueta (incluidas ocultas). Sin selector/agregado individual; productos nuevos se incorporan al cargar/actualizar. Nombre/estado/campo de costo pendiente en rojo,0 explícito válido. Búsqueda y Solo pendientes conservan importes. No persistir filas nuevas totalmente vacías para evitar migrar automáticamente las aplicaciones fijas históricas. Costos previos/cotizaciones/publicaciones conservados. Ver docs/COTIZACIONES.md. Sin cambios de base, usuarios, precios reales o renders originales.
+
 ## Decisión vigente de JP: prenda y técnica por cm² — 15-oct-2026
 
 Costos privados separados: prenda/otros por SKU y tarifa MXN/cm²/preparación por Bordado, Serigrafía y DTF. Gestión → Costos y cotizador. Dentro del pedido, confirmar ancho y alto del rectángulo de cobro; solo se dispone del ancho solicitado, no inventar altura ni suponer cuadrado. Tarifa de hasta cuatro decimales (0.0050). Aplicación por pieza = ancho × alto × tarifa, redondeada a centavos; costo completo más preparación se divide entre1−margen bruto. Cliente: una sola partida con prenda + personalización incluidas, sin área/tarifas/costos internos. No asumir que un taller factura siempre por superficie; importe fijo revisado disponible por pedido.
