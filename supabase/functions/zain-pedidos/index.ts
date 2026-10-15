@@ -7,6 +7,7 @@ Deno.serve(createHandler({
   ZAIN_CATALOGO_ENABLED:'true',
   ZAIN_CATALOGO_ALTAS_ENABLED:'true',
   ZAIN_TALLERES_ENABLED:'true',
+  ZAIN_COTIZACIONES_ENABLED:'true',
   ZAIN_SITE_URL:'https://zain-amber-sigma.vercel.app',
   ZAIN_ALLOWED_ORIGINS:'http://localhost:8085,http://127.0.0.1:8085,http://localhost:8086,http://127.0.0.1:8086',
   ZAIN_CAPACITY_MB:'800'

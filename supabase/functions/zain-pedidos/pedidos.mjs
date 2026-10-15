@@ -3,6 +3,7 @@ import { Buffer } from 'node:buffer';
 import C from './catalogo.mjs';
 import PublicC from './publico.mjs';
 import {createWorkshop} from './talleres.mjs';
+import {createQuotes} from './cotizaciones.mjs';
 import {expandCatalog,normalizeNewProduct,normalCategory} from './catalogo-altas.mjs';
 import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-gestion.mjs';
 
@@ -105,6 +106,7 @@ export function createHandler(env={}, fetcher=fetch) {
 
   const catalogEnabled=env.ZAIN_CATALOGO_ENABLED==='true';
   const altasEnabled=env.ZAIN_CATALOGO_ALTAS_ENABLED==='true';
+  const quotesEnabled=env.ZAIN_COTIZACIONES_ENABLED==='true';
   const paged=async path=>{
     const out=[];for(let offset=0;offset<5000;offset+=200){const rows=await sb(path+'&limit=200&offset='+offset);out.push(...rows);if(rows.length<200)return out;}
     fail(503,'El catálogo excede la capacidad de esta vista.');};
@@ -168,6 +170,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return {url:signed.href,name:f.name,type:f.type};
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
+  const quotes=createQuotes({sb,row,fail,commercialItem});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -232,11 +235,12 @@ export function createHandler(env={}, fetcher=fetch) {
           for(const f of x.archivos){const s=stored.find(s=>s.name===f.path.split('/')[1]);if(!s||Number(s.metadata?.size)!==f.size||s.metadata?.mimetype!==f.type)fail(409,'Todavía faltan archivos por subir. Reintenta para completar la solicitud.');}
           await sb('/rest/v1/zain_pedidos?id=eq.'+x.id+'&guardado_at=is.null',{method:'PATCH',body:JSON.stringify({guardado_at:new Date().toISOString()})});
         }
+        if(quotesEnabled){try{await quotes.ensure(x);}catch{console.warn('ZAIN: borrador pendiente; se reintentará desde gestión.');}}
         return response(200,receipt(x));
       }
       if(request.method==='POST'&&['consulta','archivo-consulta'].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
-        return response(200,op==='consulta'?{pedido:customerRow(x)}:await signedFile(x,b));
+        return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id)}:{})}}:await signedFile(x,b));
       }
       if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){
         if(!altasEnabled)fail(503,'La cola local todavía no está habilitada.');
@@ -266,6 +270,10 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(/^(precios-|cotizacion)/.test(op)){
+        if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
+        return response(200,await quotes.handle(request,url,op,user,jsonBody,currentCatalog));
+      }
 
       if(request.method==='GET'&&op==='talleres-lista'){
         if(env.ZAIN_TALLERES_ENABLED!=='true')return response(200,{talleres:[],habilitado:false});

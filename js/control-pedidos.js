@@ -81,6 +81,7 @@ $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
 $('#login').addEventListener('submit',async e=>{e.preventDefault();$('#entrar').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;}});
 $('#filtros').addEventListener('submit',e=>{e.preventDefault();offset=0;cargar().catch(failed);});
 $('#recargar').addEventListener('click',()=>cargar().catch(failed));
+addEventListener('zain:cotizacion-publicada',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 $('#anterior').addEventListener('click',()=>{offset=Math.max(0,offset-20);cargar().catch(failed);});
 $('#siguiente').addEventListener('click',()=>{offset+=20;cargar().catch(failed);});
 $('#activos').addEventListener('click',()=>{trash=false;offset=0;vistas();cargar().catch(failed);});

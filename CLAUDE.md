@@ -1,3 +1,11 @@
+## Decisión vigente: cotizador privado y cotizaciones revisadas — 15-oct-2026
+
+JP autorizó costos privados, rangos editables por partida y borrador revisable antes de publicar al cliente en /mi-pedido. Guía: docs/COTIZACIONES.md. La configuración inicial tiene costos vacíos y aplicación automática desactivada; 50/45/40/35% son recargos ilustrativos sobre costo y NO precios aprobados ni márgenes. No inventar costos ni convertir desconocidos en cero. Impuesto se define expresamente al revisar; no existe tasa fiscal predeterminada.
+
+Gestión → Costos y cotizador configura SKU/técnica, costos de prenda/aplicación/otros/preparación y rangos. Cada pedido permite costos y precios manuales, descuento, envío, vigencia y condiciones. Guardar borrador conserva la última revisión publicada; publicar requiere revisión manual del equipo. Publicar no significa pago, aceptación del cliente o producción. Cliente y talleres nunca reciben costos/recargos/utilidad/referencias del distribuidor. Rehacer conserva publicación hasta volver a revisar; retirar conserva historial.
+
+Motor en centavos/puntos base, control de versiones y transacciones con bloqueo; tablas/RPC privadas solo service_role tras autorización del equipo. Servidor portable ZAIN_COTIZACIONES_ENABLED=true; generar Edge con server/preparar-edge.mjs. Membrete con logo existente y opción Imprimir/Guardar PDF en navegador. No se envían notificaciones automáticas y no se crean pedidos o costos reales para probar.
+
 ## Decisión vigente: altas de catálogo, renders de Codex y talleres — 14-oct-2026
 
 Juan Pablo autorizó crear productos/categorías desde gestión, reutilizar/subir renders y preparar generación con su sesión de Codex en esta computadora, sin API de imágenes de pago. También pidió accesos separados para talleres por técnica y partida. Estas decisiones prevalecen sobre restricciones históricas que requerían solicitar nuevas altas por chat o editar código.
