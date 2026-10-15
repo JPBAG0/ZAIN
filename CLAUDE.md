@@ -1,3 +1,9 @@
+## Corrección vigente de JP: margen bruto — 15-oct-2026
+
+JP reemplazó expresamente el recargo por margen bruto sobre venta. Fórmula: precio = costo / (1 − margen). $100 de costo con40% da$166.67; con30% da$142.86 antes de impuestos. Rangos propuestos40/35/30/25%, editables y sin costos reales. Margen100% inválido. Descuentos bajan el margen final visible. NO reinterpretar recargo50% como margen50% ni recalcular cotizaciones publicadas. Configuración anterior se convierte a equivalente y exige revisión; borradores anteriores conservan precio manual. Ver docs/COTIZACIONES.md y supabase/cotizaciones-margen.sql.
+
+JP también pidió una propuesta de diseño más trabajada para el membrete. La propuesta visual v2 es un PDF independiente con renders del catálogo y datos ficticios; pendiente de aprobar/adaptar al membrete dinámico. No confundir el cambio de fórmula publicado con la aprobación del diseño propuesto.
+
 ## Decisión vigente: cotizador privado y cotizaciones revisadas — 15-oct-2026
 
 JP autorizó costos privados, rangos editables por partida y borrador revisable antes de publicar al cliente en /mi-pedido. Guía: docs/COTIZACIONES.md. La configuración inicial tiene costos vacíos y aplicación automática desactivada; 50/45/40/35% son recargos ilustrativos sobre costo y NO precios aprobados ni márgenes. No inventar costos ni convertir desconocidos en cero. Impuesto se define expresamente al revisar; no existe tasa fiscal predeterminada.

@@ -1,10 +1,10 @@
 # Cotizador privado y cotización del cliente
 
-Vigente: 15-oct-2026. Autorizado por Juan Pablo: costos y precios internos, rangos editables, borrador automático para revisión, membrete ZAIN y publicación manual en Mi pedido. No se cargaron costos reales ni se aprobaron porcentajes comerciales definitivos.
+Vigente: 15-oct-2026. Decisión posterior de JP: usar margen bruto sobre venta; reemplaza el cálculo inicial por recargo. Autorizado por Juan Pablo: costos y precios internos, rangos editables, borrador automático para revisión, membrete ZAIN y publicación manual en Mi pedido. No se cargaron costos reales ni se aprobaron porcentajes comerciales definitivos. Márgenes válidos: 0% a 99.99%; 100% se rechaza. Costos de $100: precio $166.67 para 40%, $142.86 para 30%, antes de impuestos. Los descuentos y precios manuales cambian el margen final mostrado.
 
 ## Uso
 
-1. Entrar a `/gestion-zain` → **Costos y cotizador**. Definir rangos contiguos desde 1 hasta un último rango sin límite. La propuesta inicial 1–14: 50%, 15–49: 45%, 50–99: 40%, 100+: 35% es editable; son **recargos sobre costo**, no margen ni descuentos sucesivos. La aplicación automática empieza desactivada.
+1. Entrar a `/gestion-zain` → **Costos y cotizador**. Definir rangos contiguos desde 1 hasta un último rango sin límite. La propuesta inicial 1–14: 40%, 15–49: 35%, 50–99: 30%, 100+: 25% es editable; son **márgenes brutos objetivo sobre la venta**, no recargos sobre costo ni descuentos sucesivos. Continúan siendo una propuesta editable, no tarifas confirmadas. La aplicación automática empieza desactivada.
 2. Agregar costos por SKU ZAIN/técnica. Prenda y aplicación vacíos significan desconocidos; cero es un costo explícito. Otros por pieza y preparación única admiten cero. Costos reales deben incluir compra, maquila, flete de entrada, empaque, operación y merma según corresponda; captura esos conceptos en Otros o preparación y revisa cada diseño. Las referencias del proveedor permanecen privadas. Guardar no cambia cotizaciones existentes.
 3. Activar el uso automático solo después de confirmar los costos. Al finalizar una nueva solicitud se intenta crear su borrador privado. Si falla esa preparación, la solicitud y el paso a WhatsApp se conservan y el panel reintenta al abrir el pedido. Solicitudes anteriores generan borrador al abrirlo. No se asegura que el cliente haya enviado su mensaje de WhatsApp.
 4. Abrir un pedido, completar costos pendientes, impuesto y condiciones; ajustar precio unitario manual o descuento por partida. Precio manual vacío conserva el cálculo. El impuesto no tiene una tasa fiscal predeterminada: el equipo elige expresamente una tasa o 0. La interfaz no determina obligaciones fiscales.
@@ -15,11 +15,11 @@ Vigente: 15-oct-2026. Autorizado por Juan Pablo: costos y precios internos, rang
 
 - Rangos por **partida**, sin acumular productos, diseños, colores o técnicas diferentes ni cambiar mínimos del catálogo.
 - Costo partida = piezas × (prenda + aplicación + otros) + preparación única.
-- Precio sugerido unitario = costo partida × (1 + recargo) / piezas, redondeado hacia arriba al centavo. La preparación ya queda distribuida; no se cobra dos veces. Precio manual sustituye el sugerido.
+- Precio sugerido unitario = costo partida / (1 − margen objetivo) / piezas, redondeado hacia arriba al centavo. La preparación ya queda distribuida; no se cobra dos veces. Precio manual sustituye el sugerido.
 - Bruto = precio unitario × cantidad. Descuento adicional se calcula sobre ese bruto. Subtotal = partidas netas + envío cobrado. Impuesto sobre ese subtotal; total = subtotal + impuesto.
 - Utilidad estimada = subtotal antes de impuesto − costos capturados, incluyendo costo interno de envío. Margen bruto = utilidad / subtotal. No es utilidad neta; gastos omitidos no se inventan. Si se trabaja con costos que incluyen impuestos, deben normalizarlos antes de capturar para no mezclar bases.
 - Enteros en centavos y puntos base; productos porcentuales con BigInt y redondeo a centavo. Se rechazan NaN, negativos, desbordes, índices/cantidades manipulados, descuentos >100% y rangos con huecos/traslapes. Costos pendientes o impuesto sin definir bloquean publicación. Una utilidad negativa se advierte; la revisión comercial sigue a cargo del equipo.
-- Al bajar el recargo por volumen, el total de un rango puede ser menor que el de una cantidad cercana del anterior. La interfaz lo avisa. Definir umbrales con costos y capacidad reales, sin prometer un porcentaje estándar de la industria.
+- Al bajar el margen objetivo por volumen, el total de un rango puede ser menor que el de una cantidad cercana del anterior. La interfaz lo avisa. Definir umbrales con costos y capacidad reales, sin prometer un porcentaje estándar de la industria.
 
 ## Privacidad, versiones y estados
 
@@ -35,10 +35,14 @@ El membrete es HTML accesible y adaptable con el logo vectorial existente, Archi
 
 - Motor compartido: `js/cotizacion-core.js`; servidor `server/cotizaciones.mjs`, integración `server/pedidos.mjs`.
 - Gestión: `js/control-cotizaciones.js`; cliente: `js/cotizacion-cliente.js`; membrete/impresión `js/cotizacion-vista.js`; estilos `css/cotizaciones.css`.
-- Migración aditiva `supabase/cotizaciones.sql`; no toca productos o pedidos existentes al instalarse, ni elimina archivos. Configuración inicial desactivada y sin costos.
+- Migraciones aditivas `supabase/cotizaciones.sql` y `supabase/cotizaciones-margen.sql`; no toca productos o pedidos existentes al instalarse, ni elimina archivos. Configuración inicial desactivada y sin costos.
 - Servidor portable: `ZAIN_COTIZACIONES_ENABLED=true`, junto a configuración existente. Generar Edge con `node server/preparar-edge.mjs`; publica los módulos generados y la web juntos. Un push no sustituye desplegar la función Supabase.
-- Verificación: `node --test tests/*.test.mjs` (81 pruebas), incluidos centavos, preparación, descuento, tasa, datos faltantes, privacidad, versiones y revisión publicada conservada. Navegador aislado con fixtures locales: login → costos → borrador → membrete → publicar → cliente → impresión PDF; 1280×900 y 390×844, sin errores JS/desbordamiento. No se crearon pedidos ni costos reales para probar.
+- Verificación: `node --test tests/*.test.mjs` (85 pruebas), incluidos centavos, preparación, descuento, tasa, datos faltantes, privacidad, versiones y revisión publicada conservada. Navegador aislado con fixtures locales: login → costos → borrador → membrete → publicar → cliente → impresión PDF; 1280×900 y 390×844, sin errores JS/desbordamiento. No se crearon pedidos ni costos reales para probar.
 
 Pendiente de negocio: costos confirmados, rangos definitivos, impuesto aplicable, vigencia, condiciones comerciales y criterios de bordado/DTF/serigrafía por diseño. No activar publicidad por el solo hecho de instalar el cotizador.
 
 Referencias para distinguir recargo y margen y comprobar que descuentos de volumen varían por producto (no tarifas para ZAIN): [QuickBooks](https://quickbooks.intuit.com/r/growing-a-business/markups-and-margins/), [Printful](https://help.printful.com/hc/en-us/articles/360014009700-Are-there-any-discounts-for-bulk-orders).
+
+## Compatibilidad de la decisión posterior
+
+Las publicaciones existentes no se recalculan. Las configuraciones de recargo anteriores se convierten a un margen equivalente y quedan pendientes de revisión con aplicación automática desactivada. Solo la configuración inicial intacta sin costos recibe los rangos propuestos 40/35/30/25. Los borradores schema1 conservan el precio anterior como manual al abrirse/guardarse; dejarlo vacío solicita el cálculo nuevo. El historial y los documentos publicados permanecen intactos. Schema2 identifica margen_bruto; margenObjetivo es privado y el margen final corresponde a utilidad/subtotal después del descuento.

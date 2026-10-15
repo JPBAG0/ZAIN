@@ -10,10 +10,30 @@ const listo=()=>{const q=generar(items,cfg());return calcular(items,{...entrada(
 test('decimal conserva centavos y rechaza negativos, NaN, exponentes y exceso de precisión',()=>{assert.equal(decimal('1.15'),115);assert.equal(decimal('0'),0);for(const n of ['NaN','-1','1.111','1e3','Infinity',''])assert.throws(()=>decimal(n));});
 test('los rangos cubren cantidades sin traslapes ni huecos; cero piezas no es rango comercial',()=>{for(const rangos of [[{desde:0,hasta:null,recargo:5000}],[{desde:1,hasta:10,recargo:5000},{desde:10,hasta:null,recargo:4500}],[{desde:1,hasta:10,recargo:5000},{desde:12,hasta:null,recargo:4500}],[{desde:1,hasta:10,recargo:5000}]])assert.throws(()=>configurar({...cfg(),rangos}));});
 test('costos desconocidos nunca se vuelven cero y un precio manual no permite publicarlos',()=>{const q=generar(items,inicial());assert.equal(q.costo,null);assert.equal(q.total,null);assert.equal(q.preparada,false);assert.throws(()=>paraCliente(q));const manual=calcular(items,{...entrada(q),impuesto:0,partidas:[{...entrada(q).partidas[0],precio:15000}]});assert.equal(manual.preparada,false);assert.equal(manual.costo,null);});
-test('preparación se reparte y recargo no se confunde con margen; tasas calculadas sobre totales',()=>{const q=listo();assert.equal(q.costo,1160000);assert.equal(q.partidas[0].precio,15660);assert.equal(q.subtotal,1566000);assert.equal(q.impuestos,250560);assert.equal(q.total,1816560);assert.equal(q.utilidad,406000);assert.equal(q.margen,2593);});
-test('cambio de rango se aplica por partida sin sumar diseños, técnicas o productos',()=>{const x=[{...items[0],piezas:14},{...items[0],piezas:15}];const q=generar(x,cfg());assert.equal(q.partidas[0].recargo,5000);assert.equal(q.partidas[1].recargo,4500);});
+test('preparación se reparte y margen bruto se calcula sobre venta; tasas calculadas sobre totales',()=>{const q=listo();assert.equal(q.costo,1160000);assert.equal(q.partidas[0].precio,15467);assert.equal(q.subtotal,1546700);assert.equal(q.impuestos,247472);assert.equal(q.total,1794172);assert.equal(q.utilidad,386700);assert.equal(q.margen,2500);});
+test('cambio de rango se aplica por partida sin sumar diseños, técnicas o productos',()=>{const x=[{...items[0],piezas:14},{...items[0],piezas:15}];const q=generar(x,cfg());assert.equal(q.partidas[0].margenObjetivo,4000);assert.equal(q.partidas[1].margenObjetivo,3500);});
+test('margen bruto de 40% divide por 0.6; 30% divide por 0.7; cero vende al costo',()=>{
+ for(const [margen,esperado] of [[4000,16667],[3000,14286],[0,10000]]){
+  const config={...cfg(),rangos:[{desde:1,hasta:null,margen}],costos:[{...cfg().costos[0],prenda:10000,aplicacion:0,otros:0,preparacion:0}]};
+  const q=generar([{...items[0],piezas:1}],config);assert.equal(q.partidas[0].precio,esperado);
+ }
+});
+test('margen 100%, negativo, NaN o fuera de rango se rechaza sin divisiones por cero',()=>{
+ for(const margen of [10000,10001,-1,NaN,Infinity,'4000'])assert.throws(()=>configurar({...cfg(),rangos:[{desde:1,hasta:null,margen}]}));
+ const q=listo();assert.throws(()=>calcular(items,{...entrada(q),partidas:[{...entrada(q).partidas[0],margenObjetivo:10000}]}));
+});
+test('un descuento adicional reduce el margen final sobre la venta sin cambiar el objetivo',()=>{
+ const c={...cfg(),rangos:[{desde:1,hasta:null,margen:4000}],costos:[{...cfg().costos[0],prenda:6000,aplicacion:0,otros:0,preparacion:0}]};
+ const q=generar([{...items[0],piezas:10}],c),v=entrada(q);v.partidas[0].descuento=1000;v.impuesto=0;
+ const result=calcular([{...items[0],piezas:10}],v);assert.equal(result.margen,3333);assert.equal(result.partidas[0].margenObjetivo,4000);assert.equal(result.total,90000);
+});
+test('configuración histórica se convierte y exige revisión; borrador anterior conserva precio exacto',()=>{
+ const old=configurar({activo:true,rangos:[{desde:1,hasta:null,recargo:5000}],costos:cfg().costos});assert.equal(old.activo,false);assert.equal(old.rangos[0].margen,3333);
+ const legacy={...listo(),schema:1,partidas:[{...listo().partidas[0],recargo:5000,margenObjetivo:undefined,precio:17400,precioManual:null}]};
+ const migrated=calcular(items,entrada(legacy));assert.equal(migrated.partidas[0].precio,17400);assert.equal(migrated.partidas[0].precioManual,17400);assert.equal(migrated.partidas[0].margenObjetivo,3333);
+});
 test('descuentos, precio manual, flete, impuesto cero y redondeo medio centavo',()=>{const q=listo(),v=entrada(q);v.partidas[0].precio=15001;v.partidas[0].descuento=500;v.envio=15000;v.costoEnvio=10000;v.impuesto=0;const r=calcular(items,v);assert.equal(r.partidas[0].bruto,1500100);assert.equal(r.partidas[0].rebaja,75005);assert.equal(r.subtotal,1440095);assert.equal(r.total,1440095);assert.equal(r.costo,1170000);const x=calcular([{...items[0],piezas:1}],{...v,partidas:[{...v.partidas[0],precio:1,descuento:5000}]});assert.equal(x.partidas[0].rebaja,1);});
-test('no se confía en importes, piezas ni campos de compras enviados por el navegador',()=>{const q=listo(),v={...entrada(q),total:1,costo:0,partidas:[{...entrada(q).partidas[0],piezas:999,skuProveedor:'SECRETO',importe:1}]};const r=calcular(items,v);assert.equal(r.partidas[0].piezas,100);assert.equal(r.total,q.total);const pub=paraCliente(r);for(const k of ['costo','prenda','aplicacion','preparacion','recargo','margen','utilidad','skuProveedor','fabricante'])assert.ok(!JSON.stringify(pub).includes('"'+k+'"'),k);});
+test('no se confía en importes, piezas ni campos de compras enviados por el navegador',()=>{const q=listo(),v={...entrada(q),total:1,costo:0,partidas:[{...entrada(q).partidas[0],piezas:999,skuProveedor:'SECRETO',importe:1}]};const r=calcular(items,v);assert.equal(r.partidas[0].piezas,100);assert.equal(r.total,q.total);const pub=paraCliente(r);for(const k of ['costo','prenda','aplicacion','preparacion','recargo','margen','utilidad','margenObjetivo','skuProveedor','fabricante'])assert.ok(!JSON.stringify(pub).includes('"'+k+'"'),k);});
 test('no se aceptan montos negativos, descuentos mayores a 100%, índices alterados o desborde',()=>{const q=listo();for(const diff of [{precio:-1},{descuento:10001},{indice:2},{precio:Number.MAX_SAFE_INTEGER}])assert.throws(()=>calcular(items,{...entrada(q),partidas:[{...entrada(q).partidas[0],...diff}]}));});
 function fixture({member=true,archived=false,conflict=false,quote=null}={}){
  const calls=[],row={id,folio:'ZAIN-FICTICIO',created_at:'2026-10-15',guardado_at:'2026-10-15',archivado_at:archived?'2026-10-15':null,estado:'nuevo',version:1,token_hash:createHash('sha256').update('a'.repeat(64)).digest('hex'),consulta_nonce:'nonce',total:100,items,archivos:[]};

@@ -1,6 +1,6 @@
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from '../js/cotizacion-core.js';
 export function createQuotes({sb,row,fail,commercialItem}){
- const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]||{version:0,datos:inicial()};};
+ const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]?{...r[0],datos:configurar(r[0].datos)}:{version:0,datos:inicial()};};
  const get=async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=*&limit=1'))[0]||null;
  const ensure=async x=>{
   const old=await get(x.id);if(old)return old;
@@ -25,6 +25,7 @@ export function createQuotes({sb,row,fail,commercialItem}){
    if(!Number.isSafeInteger(b.version)||b.version<1)fail(400,'Versión inválida.');
    const old=await get(x.id);if(!old||old.version!==b.version)fail(409,'La cotización cambió. Vuelve a abrirla antes de guardar.');
    let draft=old.borrador,published=null,modo='guardar';
+   if(op==='cotizacion-guardar'&&b.borrador?.schema===1)fail(409,'El cotizador ahora usa margen bruto. Recarga la página antes de guardar.');
    try{
     if(op==='cotizacion-guardar')draft=calcular(x.items.map(commercialItem),b.borrador);
     if(op==='cotizacion-recalcular')draft=generar(x.items.map(commercialItem),(await config()).datos);
