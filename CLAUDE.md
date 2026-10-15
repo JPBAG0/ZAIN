@@ -1,3 +1,7 @@
+## Corrección vigente: tamaño de logo al enviar — 15-oct-2026
+
+El personalizador ampliaba el máximo de las zonas no orientativas con escalaMaxLogo (1.3) y redondeaba a medio centímetro; la validación del servidor seguía usando zone.max. Esto bloqueaba un logo de11.5cm en pecho/chaleco cuya zona base era9cm. Se igualó la validación al máximo real del editor, incluyendo zonas orientativas sin multiplicar otra vez. Se conserva el tamaño solicitado y la posición ajustada; no se reduce el logo al enviarlo ni se cambia el carrito. Permanecen las validaciones de producto/color/técnica/tallas/cantidad, zona existente y medida finita dentro del rango ofrecido. Diseño y medidas finales requieren revisión del equipo. Sin cambios de precios, datos guardados, permisos, renders ni pedidos reales de prueba.
+
 ## Entrega vigente: catálogo empresarial 2026 — 15-oct-2026
 
 Esta entrega sustituye los estados históricos de fuentes pendientes y renders bloqueados. Juan Pablo autorizó expresamente limpiar la transparencia después de generar las prendas. Se conservan los originales y se eliminan residuos externos y huecos espurios del alpha, sin redibujar cortes ni suavizar la tela.

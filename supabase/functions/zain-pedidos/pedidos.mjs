@@ -19,6 +19,7 @@ const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(4
 
 export function validateOrder(body, { allowHistoricos = false, catalogo = C, snapshot = false } = {}) {
   const C=catalogo;
+  const maxLogo = z => Math.round(z.max * (z.orientativa ? 1 : C.escalaMaxLogo || 1) * 2) / 2;
   if (!body || typeof body!=='object' || Array.isArray(body)) fail(400,'Falta el pedido.');
   validateID(body.id); validateToken(body.token);
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
@@ -37,7 +38,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
       const counts=x.tallasDetalle;
       if(!counts || typeof counts!=='object' || Array.isArray(counts) || !Object.keys(counts).length || Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1||v>9999) || Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma para la silueta elegida.');
       const zone=p.zonas.find(z=>z.nombre===(typeof x.zona==='string'?x.zona.replace(/ \(posición ajustada\)$/,''):''));
-      if(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>zone.max)fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
+      if(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>maxLogo(zone))fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
       Object.assign(item,{
         codigoFabricante:p.codigoFabricante,fabricante:p.fabricante,silueta:p.silueta,
         color:col.nombre+' · '+col.codigo,colorCodigo:col.codigo,
@@ -51,7 +52,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
     if(p.creadoGestion||p.catalogo2026){
       const col=colors.find(c=>c.id===x.colorId&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
       const zone=p.zonas.find(z=>z.nombre===String(x.zona||'').replace(/ \(posición ajustada\)$/,''));
-      if(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>zone.max)fail(400,'Revisa ubicación y tamaño del logo.');
+      if(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>maxLogo(zone))fail(400,'Revisa ubicación y tamaño del logo.');
       if(p.tallas.length){
         const counts=x.tallasDetalle;
         if(!counts||typeof counts!=='object'||Array.isArray(counts)||Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1)||Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma.');
