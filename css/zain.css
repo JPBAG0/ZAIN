@@ -1013,3 +1013,5 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 .pedido__cliente input:focus { border-color: var(--tinta); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--cobalto) 22%, transparent); }
 .pedido__cliente input[aria-invalid="true"] { border-color: var(--error); }
 .pedido__cliente #clienteAviso:empty { display: none; }
+.catalogo__respaldo { margin:0 0 16px;padding:12px 14px;border-radius:10px;background:#fff4cc;border:1px solid #d7b353;font-size:14px;line-height:1.5; }
+.catalogo__respaldo[hidden] { display:none; }

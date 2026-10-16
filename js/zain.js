@@ -173,6 +173,7 @@
     $("#catDescripcion").textContent=C.catalogoNoDisponible?"No pudimos actualizar el catálogo. Intenta recargar o escríbenos para consultar disponibilidad.":"Estamos actualizando la disponibilidad. Escríbenos para cotizar.";
     $("#rejilla").replaceChildren();$("#personaliza").hidden=true;$("#escena").hidden=true;return;
   }
+  if (C.catalogoRespaldo) $("#catRespaldo").hidden = false;
   const MUESTRAS = C.muestrasPortada.filter(m => prod(m.p)?.activo !== false && color(m.c));
 
   const escena = $("#escena");

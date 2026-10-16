@@ -321,3 +321,7 @@ Página estática (HTML + CSS + JavaScript sin frameworks) de **ZAIN**: uniforme
 ## Publicar
 
 Es un sitio estático: sirve cualquier hosting (cPanel `public_html`, Netlify, Vercel, Nginx). El README explica cada opción y la configuración de Nginx con HTTPS. Antes de publicar, confirma con el dueño que `whatsapp` en `config.js` ya tiene su número real.
+
+## Catálogo de respaldo (16-oct-2026)
+- Si la API del catálogo falla, `js/catalogo-cargar.js` usa la copia más reciente entre la última buena del navegador (`localStorage` `zain-catalogo-respaldo`) y `js/catalogo-respaldo.json`, y muestra `#catRespaldo`.
+- Después de cambiar productos en Gestión, regenerar el respaldo con `node server/respaldo-catalogo.mjs` y publicar. El script revisa que las fotos existan en el sitio.
