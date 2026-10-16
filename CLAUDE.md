@@ -1,3 +1,15 @@
+## Vigente: aceptación de cotización y pagos verificados — 16-oct-2026
+
+Mi pedido muestra primero la tarjeta negra de seguimiento y después la cotización. El cliente acepta expresamente una revisión publicada y vigente desde su enlace autorizado. Se conserva la revisión y el documento comercial aceptado en un registro privado; aceptar cambia el pedido a Aceptada · Anticipo pendiente, sin registrar dinero ni iniciar producción. Una revisión nueva requiere aceptación nueva.
+
+Los borradores nuevos proponen 50% de anticipo y 50% antes del envío. En Entrega y condiciones se puede cambiar el porcentaje y las instrucciones; el membrete, impresión y PDF muestran los mismos términos publicados. Las cotizaciones anteriores sin términos no reciben condiciones retroactivas: definirlas y publicar una revisión nueva. Guardar borrador sigue privado, publicar sigue explícito.
+
+Gestión → pedido → Aceptación y pagos muestra revisión aceptada, anticipo acordado, pagos verificados y saldo. Registrar pago recibido requiere comprobarlo en la cuenta y marcarlo expresamente; importes en centavos, solicitud idempotente y suma sin exceder saldo. Al cubrir el anticipo pasa a Confirmado y se activa el reparto a talleres existente; producción continúa como actualización del equipo. Entregado requiere saldo cubierto para pedidos del nuevo flujo. Referencias de pago permanecen privadas. No hay cobro automático ni envío automático de mensajes.
+
+Supabase: confirmacion-cotizaciones.sql añade estado aceptado, dos registros privados con RLS, funciones SECURITY INVOKER solo para service_role, proyección comercial de términos y bloqueo consistente pedido→cotización. Historial permite actor nulo exclusivamente para no atribuir la aceptación del enlace a un miembro del equipo; las rutas de equipo conservan autorización. Revisiones con pagos o pedidos confirmados/en producción/entregados no se pueden retirar o reemplazar mediante publicación. Borrador privado editable sin alterar lo que vio el cliente. Registros y pruebas no crean ni alteran pedidos reales.
+
+Validación: pruebas unitarias de consentimiento, autorización, revisión, centavos, proyección comercial e idempotencia; recorrido con fixtures en Chromium y WebKit móvil, PDF real con términos, actualización de revisión y anticipo. No se afirma prueba en iPhone físico ni pago bancario real.
+
 ## Vigente: imágenes móviles y PDF directo — 16-oct-2026
 
 JP reportó renders ausentes en celular y pidió Imprimir y Descargar PDF separados. Gestión y Mi pedido ahora obtienen los renders autorizados como Blob, validan/decodean la imagen y renuevan el enlace una vez si falla. La carga de la ficha espera la imagen real, no solo el enlace firmado. No guardar URLs firmadas en disco o logs. Las URLs de memoria se liberan al cerrar/sustituir la ficha o salir. Mi pedido no reinicia las imágenes al regresar inmediatamente de PDF/impresión; actualización al volver solo tras60segundos. Los errores se indican con reintento, sin presentar el modelo sin logo como diseño del cliente.

@@ -1,3 +1,4 @@
+import {pagosIniciales,normalizarPagos} from './cotizacion-pagos.js';
 import {medidasLogo} from './logo-medidas.js';
 // Dinero en centavos; porcentajes en puntos base (100 = 1%). Compartido por servidor y vista previa.
 const MAX=100000000000;
@@ -80,7 +81,7 @@ export function generar(items,cfg){
   // Los costos anteriores siguen por pieza hasta que el equipo migre ese SKU expresamente.
   const fijo=!!cp&&!prenda,medidas=medidasLogo(p.cm,p.logoGeometria);
   return {indice:i,modo:fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho:medidas?.ancho??(Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null),alto:medidas?.alto??null,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0};
- }),destinatario:'',condiciones:'',plazo:'Por acordar con ZAIN.',vigencia:'',impuesto:null,envio:0,costoEnvio:0});
+ }),pagos:pagosIniciales(),destinatario:'',condiciones:'',plazo:'Por acordar con ZAIN.',vigencia:'',impuesto:null,envio:0,costoEnvio:0});
 }
 export function calcular(items,input){
  if(!Array.isArray(items)||!items.length||items.length>20||!Array.isArray(input?.partidas)||input.partidas.length!==items.length)error('Las partidas deben coincidir con el pedido.');
@@ -116,12 +117,12 @@ export function calcular(items,input){
  const impuestos=subtotal===null||impuesto===null?null:proporcion(subtotal,impuesto),total=impuestos===null?null:suma([subtotal,impuestos]);
  const costo=cifrasPendientes?null:suma([...partidas.map(p=>p.costo),costoEnvio]),utilidad=subtotal===null||costo===null?null:subtotal-costo;
  const vigencia=texto(input.vigencia,10);if(vigencia&&(!/^\d{4}-\d{2}-\d{2}$/.test(vigencia)||new Date(vigencia+'T12:00:00Z').toISOString().slice(0,10)!==vigencia))error('Revisa la fecha de vigencia.');
- return {schema:5,metodo:'margen_bruto',moneda:'MXN',partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
+ return {schema:5,metodo:'margen_bruto',moneda:'MXN',pagos:normalizarPagos(input.pagos),partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
 }
 const enteroNullable=n=>n===null?null:entero(n);
 export function entrada(q){return {...q,schema:5,metodo:'margen_bruto',partidas:q.partidas.map(p=>({...p,modo:q.schema<3?'fijo':p.modo,modoPrenda:p.modoPrenda??'unitario',bandas:p.bandas||[],ancho:p.ancho??null,alto:p.alto??null,tarifaCm2:p.tarifaCm2??null,margenObjetivo:p.margenObjetivo??equivalente(p.recargo),precio:q.schema===1?(p.precioManual??p.precio):p.precioManual}))};}
 export function paraCliente(q){
  if(!q.preparada)error('Completa costos, precios e impuesto antes de publicar.');
- return {schema:1,moneda:'MXN',destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
+ return {schema:1,moneda:'MXN',pagos:normalizarPagos(q.pagos),destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
  partidas:q.partidas.map(p=>Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])))};
 }

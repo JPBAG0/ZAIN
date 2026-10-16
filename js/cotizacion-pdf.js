@@ -1,12 +1,13 @@
-import {pesos} from './cotizacion-core.js?v=6';
-import {logo,fecha,imagenDe} from './cotizacion-vista.js?v=5';
+import {terminosPago,anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
+import {pesos} from './cotizacion-core.js?v=8';
+import {logo,fecha,imagenDe} from './cotizacion-vista.js?v=6';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
 export function datosPDF(q){
- const keys=['destinatario','publicada_at','revision','vigencia','plazo','condiciones','bruto','descuento','envio','subtotal','impuesto','impuestos','total'];
+ const keys=['pagos','destinatario','publicada_at','revision','vigencia','plazo','condiciones','bruto','descuento','envio','subtotal','impuesto','impuestos','total'];
  const pkeys=['indice','sku','nombre','color','tecnica','zona','cm','piezas','tallas','precio','descuento','importe'];
- return {...Object.fromEntries(keys.map(k=>[k,q[k]])),partidas:q.partidas.map(p=>Object.fromEntries(pkeys.map(k=>[k,p[k]])))};
+ return {...Object.fromEntries(keys.map(k=>[k,q[k]])),pagos:normalizarPagos(q.pagos),partidas:q.partidas.map(p=>Object.fromEntries(pkeys.map(k=>[k,p[k]])))};
 }
 const texto=v=>String(v??'').normalize('NFC').replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').replace(/\u202f|\u00a0/g,' ');
 const numero=v=>v==null?'Pendiente':pesos(v).replace(/\u00a0/g,' ');
@@ -19,7 +20,7 @@ async function jpeg(src,max=900){
 export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=false,imagenes={}}={}){
  if(!Array.isArray(cotizacion.partidas)||!cotizacion.partidas.length||cotizacion.partidas.length>20)throw Error('No hay una cotización válida para descargar.');
  if(Object.values(imagenes).some(v=>v?.pendiente||v?.error))throw Error('Espera a que carguen todos los diseños. Si alguno falló, pulsa Actualizar para reintentar.');
- const q=datosPDF(cotizacion),jsPDF=await cargarBiblioteca(),doc=new jsPDF({unit:'mm',format:'a4',compress:true,putOnlyUsedFonts:true});
+ const q=datosPDF(cotizacion);if(q.pagos)q.condiciones=[terminosPago(q.pagos),'Anticipo: '+numero(anticipoDe(q.total,q.pagos)),q.condiciones].filter(Boolean).join('\n');const jsPDF=await cargarBiblioteca(),doc=new jsPDF({unit:'mm',format:'a4',compress:true,putOnlyUsedFonts:true});
  doc.setProperties({title:'Cotización ZAIN '+folio,subject:borrador?'Borrador privado':'Cotización revisada',author:'ZAIN',creator:'ZAIN'});
  const azul=[48,53,255],tinta=[20,23,29],tenue=[98,109,125],linea=[220,225,232],papel=[239,242,246];
  const m=14,right=196,width=182,bottom=278;let y=14;

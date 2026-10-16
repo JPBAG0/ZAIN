@@ -1,3 +1,4 @@
+import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {normalizarGeometria} from '../js/logo-medidas.js';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
@@ -10,7 +11,7 @@ import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const TYPES = { 'image/png':'png', 'image/jpeg':'jpg', 'image/webp':'webp', 'image/svg+xml':'svg', 'application/pdf':'pdf' };
-const STATES = ['nuevo', 'contactado', 'cotizado', 'confirmado', 'produccion', 'entregado', 'cancelado'];
+const STATES = ['nuevo', 'contactado', 'cotizado', 'aceptado', 'confirmado', 'produccion', 'entregado', 'cancelado'];
 const fail = (status, message) => { const e = new Error(message); e.status = status; throw e; };
 const sha = x => createHash('sha256').update(x).digest('hex');
 const text = (v, max=1000) => typeof v === 'string' ? v.replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').slice(0,max) : '';
@@ -179,6 +180,7 @@ export function createHandler(env={}, fetcher=fetch) {
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   const quotes=createQuotes({sb,row,fail,commercialItem});
+  const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -246,9 +248,10 @@ export function createHandler(env={}, fetcher=fetch) {
         if(quotesEnabled){try{await quotes.ensure(x);}catch{console.warn('ZAIN: borrador pendiente; se reintentará desde gestión.');}}
         return response(200,receipt(x));
       }
-      if(request.method==='POST'&&['consulta','archivo-consulta'].includes(op)) {
+      if(request.method==='POST'&&['consulta','archivo-consulta',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
-        return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id)}:{})}}:await signedFile(x,b));
+        if(op==='cotizacion-aceptar')return response(200,await seguimiento.aceptar(x,b));
+        return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id),...(seguimientoEnabled?{seguimiento:await seguimiento.leer(x.id)}:{})}:{})}}:await signedFile(x,b));
       }
       if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){
         if(!altasEnabled)fail(503,'La cola local todavía no está habilitada.');
@@ -278,6 +281,8 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
+      if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
       if(/^(precios-|cotizacion)/.test(op)){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
         return response(200,await quotes.handle(request,url,op,user,jsonBody,currentCatalog));

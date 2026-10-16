@@ -2,7 +2,7 @@
 'use strict';
 const $=s=>document.querySelector(s),api=window.ZAIN.pedidosApi||'/api/pedidos';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const labels={nuevo:'Por revisar',contactado:'Contactado',cotizado:'Cotizado',confirmado:'Confirmado',produccion:'En producción',entregado:'Entregado',cancelado:'Cancelado'};
+const labels={nuevo:'Por revisar',contactado:'Contactado',cotizado:'Cotizado',aceptado:'Aceptada · Anticipo pendiente',confirmado:'Confirmado',produccion:'En producción',entregado:'Entregado',cancelado:'Cancelado'};
 const date=x=>new Date(x).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});
 const fecha=x=>new Date(x).toLocaleString('es-MX',{timeZone:'America/Mexico_City'});
 const chip=x=>'<span class="control__estadochip control__estadochip--'+(labels[x]?x:'nuevo')+'">'+esc(labels[x]||x)+'</span>';
@@ -45,7 +45,7 @@ function paintSummary(s){
  ['En producción',s.produccion,'Trabajo en curso','produccion']];
  $('#resumen').innerHTML=cards.map(x=>'<button type="button" class="control__tarjeta" data-resumen="'+x[3]+'"><span>'+x[0]+'</span><strong>'+Number(x[1]||0).toLocaleString('es-MX')+'</strong><small>'+x[2]+'</small></button>').join('');
  $('#cuentaPapelera').textContent=s.papelera||0;
- $('#fechaPanel').textContent=date(new Date())+' · '+Number(s.activos||0)+' solicitudes activas · '+Number(s.entregados||0)+' entregadas';
+ $('#fechaPanel').textContent=date(new Date())+' · '+Number(s.activos||0)+' solicitudes activas · '+Number(s.entregados||0)+' entregadas · '+Number(s.anticipos_pendientes||0)+' anticipos pendientes';
 }
 async function cargar(message=''){
  const turn=++revision;status('Actualizando pedidos…');
@@ -84,6 +84,7 @@ $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
 $('#login').addEventListener('submit',async e=>{e.preventDefault();$('#entrar').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;}});
 $('#filtros').addEventListener('submit',e=>{e.preventDefault();offset=0;cargar().catch(failed);});
 $('#recargar').addEventListener('click',()=>cargar().catch(failed));
+addEventListener('zain:pago-registrado',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 addEventListener('zain:cotizacion-publicada',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 $('#anterior').addEventListener('click',()=>{offset=Math.max(0,offset-20);cargar().catch(failed);});
 $('#siguiente').addEventListener('click',()=>{offset+=20;cargar().catch(failed);});

@@ -5,8 +5,8 @@
   const liberar=()=>{dispatchEvent(new CustomEvent('zain:imagenes-liberar'));for(const r of recursos.splice(0))r.liberar();};
   const $=s=>document.querySelector(s),endpoint=window.ZAIN.pedidosApi||'/api/pedidos';
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const labels={nuevo:'Solicitud recibida',contactado:'En contacto',cotizado:'Cotización enviada',confirmado:'Pedido confirmado',produccion:'En producción',entregado:'Entregado',cancelado:'Cancelado'};
-  const descriptions={nuevo:'Recibimos tu selección y sus archivos. Falta confirmar disponibilidad, cotización y fecha de entrega con ZAIN.',contactado:'El equipo está revisando los detalles contigo por WhatsApp.',cotizado:'Consulta en WhatsApp los precios, condiciones y tiempos de tu cotización.',confirmado:'Tu pedido está confirmado. Consulta los detalles acordados con ZAIN por WhatsApp.',produccion:'Estamos trabajando en tu pedido.',entregado:'Tu pedido figura como entregado. Gracias por elegir ZAIN.',cancelado:'Esta solicitud está cancelada. Puedes comunicarte con ZAIN si necesitas retomarla.'};
+  const labels={nuevo:'Solicitud recibida',contactado:'En contacto',cotizado:'Cotización publicada',aceptado:'Cotización aceptada · Anticipo pendiente',confirmado:'Pedido confirmado',produccion:'En producción',entregado:'Entregado',cancelado:'Cancelado'};
+  const descriptions={nuevo:'Recibimos tu selección y sus archivos. Falta confirmar disponibilidad, cotización y fecha de entrega con ZAIN.',aceptado:'Recibimos tu aceptación. Coordina el anticipo con ZAIN; el equipo registrará el pago después de verificarlo.',contactado:'El equipo está revisando los detalles contigo por WhatsApp.',cotizado:'Consulta en WhatsApp los precios, condiciones y tiempos de tu cotización.',confirmado:'Tu pedido está confirmado. Consulta los detalles acordados con ZAIN por WhatsApp.',produccion:'Estamos trabajando en tu pedido.',entregado:'Tu pedido figura como entregado. Gracias por elegir ZAIN.',cancelado:'Esta solicitud está cancelada. Puedes comunicarte con ZAIN si necesitas retomarla.'};
   const match=location.hash.match(/^#([a-f0-9-]{36})\/([a-f0-9]{64})$/i);
   let access=match?{id:match[1],token:match[2].toLowerCase()}:null,busy=false,generation=0;
   async function call(op,extra={}) {
@@ -28,6 +28,7 @@
       }));
     }catch(er){$('#mensaje').textContent=er.message;$('#actualizar').hidden=false;}finally{busy=false;$('#actualizar').disabled=false;}
   }
+  window.ZAINSeguimiento={aceptar:async revision=>{await call('cotizacion-aceptar',{revision,acepto:true});await cargar();}};
   $('#actualizar').addEventListener('click',cargar);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden&&Date.now()-ultimaCarga>60000)cargar();});
   $('#pedido').addEventListener('click',async e=>{
