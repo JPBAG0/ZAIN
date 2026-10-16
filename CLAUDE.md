@@ -1,3 +1,9 @@
+## Vigente: catálogo visual con detalles plegados — 15-oct-2026
+
+JP pidió menos texto en tarjetas y aprovechar el ancho en escritorio cuando hay pocas prendas. Se conserva la imagen, nombre, silueta, colores, técnicas y Personalizar; descripción, SKU, especificaciones, composición, disponibilidad y guía de tallas se consultan en Ver detalles. Las fichas completas del personalizador se conservan. Cambiar Caballero/Dama conserva abierto el detalle si se estaba consultando.
+
+La rejilla se divide por categoría y cada grupo usa solo las columnas ocupadas: dos fichas reparten el ancho; una ficha toma disposición horizontal en escritorio. El catálogo usa hasta1600px de ancho, con márgenes; celular continúa en una columna. Lienzos de tarjeta840px y ajuste de proporciones sin estirar las prendas. Filtros, referencias de hombre/mujer, fotografías, colores, bolsas, pedido y personalizador conservados. No se cambian productos, precios, disponibilidad ni backend.
+
 ## Vigente: cotizador compacto y controles sin estirar — 15-oct-2026
 
 JP reportó selectores gigantes junto a las bandas y exceso de campos. Se corrige la alineación vertical de controles; cada prenda muestra imagen, cantidad/tallas, costo resumido, medidas del logo, margen, descuento y precio por pieza/importe. Costos faltantes de prenda/tarifa e impuesto se piden directamente. El resto queda en Ajustar costos y medidas y Entrega y condiciones. Las bandas aplicables al color/cantidad/tallas actuales aparecen primero y los demás tramos quedan plegados, conservando todos sus valores al guardar. Consulta separada del costo de las tallas solicitadas.

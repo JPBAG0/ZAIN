@@ -407,6 +407,7 @@
     $("#catTitulo").textContent=filtro==="Todo"?"Catálogo":filtro;
     $("#catDescripcion").textContent=filtro==="Bolsas"?grupoBolsas.aviso:"Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
     $$("#rejilla .producto").forEach(art=>art.hidden=filtro!=="Todo"&&art.dataset.cat!==filtro);
+    $$("#rejilla [data-categoria-grupo]").forEach(grupo=>grupo.hidden=filtro!=="Todo"&&grupo.dataset.categoriaGrupo!==filtro);
     $$(".filtro").forEach(x=>{x.classList.toggle("on",x.dataset.cat===filtro);x.setAttribute("aria-selected",String(x.dataset.cat===filtro));});
   }
   const abrirBolsas=()=>{
@@ -424,14 +425,16 @@
   });
 
   const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
-    <div class="producto__foto"><canvas width="560" height="560" aria-label="${esc(p.nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}" role="img"></canvas>
+    <div class="producto__foto"><canvas width="840" height="840" aria-label="${esc(p.nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}" role="img"></canvas>
       ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
+    <div class="producto__contenido"><div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3></div>
     ${varianteSelector(p, "", "data-variante")}
-    <div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div>
-    <p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p>
-    <div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3><p>${esc(p.descripcion)}</p>${fichaProducto(p, true)}<ul class="producto__tec">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul></div>
-    <div class="producto__pie"><div class="producto__precio"><b>Cotiza por WhatsApp</b></div><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></article>`;
-  $("#rejilla").innerHTML = categorias.slice(1).map(cat => `<h3 class="rejilla__categoria" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3>` + familias.filter(p => p.categoria === cat).map(tarjeta).join("")).join("");
+    <div class="producto__paleta"><div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div><p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p></div>
+    <ul class="producto__tec" aria-label="Técnicas disponibles">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul>
+    <details class="producto__detalles"><summary><span class="producto__ver">Ver detalles</span><span class="producto__ocultar">Ocultar detalles</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></summary><div class="producto__ficha"><p>${esc(p.descripcion)}</p>${fichaProducto(p)}</div></details>
+    <div class="producto__pie"><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></div></article>`;
+  $("#rejilla").innerHTML = categorias.slice(1).map((cat,i) => {const prendas=familias.filter(p=>p.categoria===cat);return prendas.length?`<section class="rejilla__grupo" data-categoria-grupo="${esc(cat)}"><h3 class="rejilla__categoria" id="categoria-${i}" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3><div class="rejilla__productos" data-cantidad="${prendas.length}">${prendas.map(tarjeta).join("")}</div></section>`:'';}).join("");
+
 
   const mostrarImagen = (art, index) => {
     const cv = $("canvas", art), photo = $(".producto__modelo", art);
@@ -449,7 +452,7 @@
     if (art.dataset.id !== p.id || art.dataset.color && art.dataset.color !== idColor) return;
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
-    g.drawImage(prendaTenida(p, img, idColor, 560), 0, 0);
+    g.drawImage(prendaTenida(p, img, idColor, cv.width), 0, 0);
     mostrarImagen(art, Number(art.dataset.imagen) || 0);
     if (art.classList.contains("lista")) {
       cv.classList.remove("cambia");
@@ -501,9 +504,11 @@
     const sel = e.target.closest("[data-variante]"); if (!sel) return;
     const art = sel.closest(".producto"), before = prod(art.dataset.id), p = prod(sel.value);
     if (!p || p.familia !== before.familia) return;
+    const detallesAbiertos = $(".producto__detalles", art)?.open;
     const chosen = p.colores.includes(art.dataset.color) ? art.dataset.color : p.colores[0];
     const holder = document.createElement("div"); holder.innerHTML = tarjeta(p); const next = holder.firstElementChild;
     ioTarjetas.unobserve(art); art.replaceWith(next); ioTarjetas.observe(next);
+    $(".producto__detalles", next).open = !!detallesAbiertos;
     $$("[data-color]", next).forEach(x => { x.classList.toggle("on", x.dataset.color === chosen); x.setAttribute("aria-checked", x.dataset.color === chosen); });
     pintarTarjeta(next, chosen); pintarCatalogo(); enfocarSilueta(next, p.id);
   });
