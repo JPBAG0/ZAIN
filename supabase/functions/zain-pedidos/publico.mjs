@@ -5,6 +5,7 @@ export default {
   "medicion": {
     "activa": false,
     "origenes": [
+      "https://zain.com.mx",
       "https://zain-amber-sigma.vercel.app"
     ],
     "googleAdsId": "",

@@ -3,7 +3,7 @@ import {pesos} from './cotizacion-core.js';
 export const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const logo='<svg viewBox="0 0 370 150" role="img" aria-label="ZAIN"><path d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z"/><path fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z"/><path d="M227 0H253V150H227Z"/><path d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z"/></svg>';
 export const fecha=(value,soloFecha=false)=>{if(!value)return 'Por acordar';const d=new Date(soloFecha?value+'T12:00:00Z':value);return Number.isNaN(d.valueOf())?'Por acordar':d.toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});};
-function imagenValida(src){if(typeof src!=='string'||!src)return '';if(/^data:image\/png;base64,[A-Za-z0-9+/]+=*$/.test(src))return src;try{const u=new URL(src,globalThis.location?.href||'https://zain-amber-sigma.vercel.app/');return ['https:','http:','blob:'].includes(u.protocol)?u.href:'';}catch{return '';}}
+function imagenValida(src){if(typeof src!=='string'||!src)return '';if(/^data:image\/png;base64,[A-Za-z0-9+/]+=*$/.test(src))return src;try{const u=new URL(src,globalThis.location?.href||'https://zain.com.mx/');return ['https:','http:','blob:'].includes(u.protocol)?u.href:'';}catch{return '';}}
 export function imagenDe(p,imagenes){
  if(imagenes?.[p.indice]?.pendiente||imagenes?.[p.indice]?.error)return null;
  const custom=imagenes?.[p.indice],src=imagenValida(custom?.src);if(src)return {src,referencia:!!custom.referencia};

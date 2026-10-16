@@ -97,7 +97,7 @@ export function createHandler(env={}, fetcher=fetch) {
   const base=(env.SUPABASE_URL||'').replace(/\/$/,'');
   const key=env.SUPABASE_SECRET_KEY||env.SUPABASE_SERVICE_ROLE_KEY||'';
   const publicKey=env.SUPABASE_PUBLISHABLE_KEY||env.SUPABASE_ANON_KEY||'';
-  const site=(env.ZAIN_SITE_URL||'https://zain-amber-sigma.vercel.app').replace(/\/$/,'');
+  const site=(env.ZAIN_SITE_URL||'https://zain.com.mx').replace(/\/$/,'');
   const origins=new Set([new URL(site).origin,...(env.ZAIN_ALLOWED_ORIGINS||'').split(',').map(x=>x.trim()).filter(Boolean)]);
   const ready=env.ZAIN_PEDIDOS_ENABLED==='true' && /^https:\/\//.test(base) && !!key && !!publicKey;
   const bucket='zain-pedidos';

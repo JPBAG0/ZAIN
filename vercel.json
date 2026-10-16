@@ -6,6 +6,19 @@
   },
   "routes": [
     {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "zain-amber-sigma.vercel.app"
+        }
+      ],
+      "status": 308,
+      "headers": {
+        "Location": "https://zain.com.mx/$1"
+      }
+    },
+    {
       "src": "/taller-zain(?:\\.html)?",
       "dest": "/taller-zain.html",
       "headers": {
