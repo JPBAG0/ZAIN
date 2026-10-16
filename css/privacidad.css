@@ -15,3 +15,6 @@
 .privacidad-enlaces { display:flex;gap:20px;flex-wrap:wrap;align-items:center;font-size:13px; }
 .pedido__privacidad { font-size:12px;text-align:center; }
 @media(max-width:500px){.medicion{left:12px;right:12px;bottom:12px;padding:20px}.medicion__acciones{flex-direction:column}.privacidad{padding:28px 20px 60px}}
+.privacidad__fecha { color:#5b6270;font-size:14px;margin-top:-8px; }
+.privacidad p { margin:0 0 14px; }
+.privacidad li { margin-bottom:6px; }

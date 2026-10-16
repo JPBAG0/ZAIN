@@ -1,6 +1,6 @@
 # Aviso de privacidad de ZAIN
 
-**BORRADOR DEL 13 DE OCTUBRE DE 2026. Falta confirmar identidad y domicilio del responsable; este archivo no se publica como aviso definitivo.**
+**Publicado el 16 de octubre de 2026 como `privacidad.html` (ruta `/privacidad`); esa es la versión vigente. Este borrador queda como historial.**
 
 ## Responsable y contacto
 

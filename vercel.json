@@ -19,6 +19,10 @@
       }
     },
     {
+      "src": "/privacidad(?:\\.html)?",
+      "dest": "/privacidad.html"
+    },
+    {
       "src": "/taller-zain(?:\\.html)?",
       "dest": "/taller-zain.html",
       "headers": {
