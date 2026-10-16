@@ -52,3 +52,8 @@
 @media(max-width:420px){#cotPedido .cot-edicion-bandas,.cot-otros-tramos[open]{grid-template-columns:1fr}.cot-edicion{grid-template-columns:1fr}.cot-producto-cab{gap:10px}.cot-ajustes-contenido{padding:12px}}
 
 .cot-producto-cab.cot-sinfoto{grid-template-columns:minmax(0,1fr) auto}
+/* aviso al cliente cuando su cotización ya está publicada (16-oct-2026) */
+.cot-avisar{display:grid;gap:8px;margin-top:12px;padding:14px;border:1px solid #11823f40;border-radius:12px;background:#11823f0d}
+.cot-avisar[hidden]{display:none}
+.cot-avisar .btn--wa{justify-content:center;text-decoration:none}
+.cot-avisar a[aria-disabled="true"]{opacity:.55;pointer-events:none}

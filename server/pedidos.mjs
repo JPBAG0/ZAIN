@@ -137,6 +137,17 @@ export function createHandler(env={}, fetcher=fetch) {
     return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
+  // Nombre/empresa y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
+  const clienteSolicitud=c=>{
+    if(!c||typeof c!=='object'||Array.isArray(c))return null;
+    const nombre=typeof c.nombre==='string'?c.nombre.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,120):'';
+    const fecha=typeof c.fecha==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(c.fecha)&&!Number.isNaN(Date.parse(c.fecha+'T12:00:00Z'))?c.fecha:'';
+    return nombre.length>=2?{nombre,...(fecha?{fecha}:{})}:null;
+  };
+  const guardarCliente=async(id,c)=>{
+    const x=clienteSolicitud(c);if(!x)return;
+    try{await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&guardado_at=is.null',{method:'PATCH',body:JSON.stringify({cliente:x})});}catch{console.warn('ZAIN: no se guardaron los datos de contacto de la solicitud.');}
+  };
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
   const owner=async body=>{const x=await row(body.id);if(x.archivado_at)fail(410,'Esta solicitud fue retirada. Contacta a ZAIN.');if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
   const identity=async req=> {
@@ -212,6 +223,7 @@ export function createHandler(env={}, fetcher=fetch) {
             if(existing){
               if(existing.items?.[0]?.pedido_hash){
                 if(existing.items[0].pedido_hash!==requestHash)fail(409,'Esta solicitud ya existe con otros datos.');
+                await guardarCliente(body.id,body.cliente);
                 return response(200,{id:body.id,folio:existing.folio});
               }
               const old=validateOrder(body,{allowHistoricos:true});
@@ -231,6 +243,7 @@ export function createHandler(env={}, fetcher=fetch) {
           const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
           const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');
           const result=await sb('/rest/v1/rpc/zain_crear_pedido',{method:'POST',body:JSON.stringify({p_id:body.id,p_token_hash:validateToken(body.token),p_items:x.items,p_archivos:x.manifest,p_total:x.total,p_bytes:x.bytes,p_capacity:Math.min(Number(env.ZAIN_CAPACITY_MB)||800,100000)*1024*1024,p_client:client})});
+          await guardarCliente(body.id,body.cliente);
           return response(200,{id:body.id,folio:result.folio});
         }
         const x=await owner(body);

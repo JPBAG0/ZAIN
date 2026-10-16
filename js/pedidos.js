@@ -27,7 +27,7 @@
     try{await window.ZAINMedicion?.solicitud(recibo.id,piezas);}catch{} // La medición nunca bloquea la cotización.
     return recibo;
   };
-  const enviar=async(items,progreso=()=>{})=> {
+  const enviar=async(items,progreso=()=>{},cliente=null)=> {
     await ready;if(!config.activo)throw new Error('El guardado en la nube todavía no está habilitado.');
     const files=[];
     for(let i=0;i<items.length;i++) {
@@ -53,7 +53,8 @@
     }
     progreso('Guardando tu solicitud…');
     const owner={id:draft.id,token:draft.token};
-    await api('crear',{...owner,items:cleanItems,files:manifest});
+    // Nombre y fecha deseada viajan aparte: no cambian la huella de la solicitud.
+    await api('crear',{...owner,items:cleanItems,files:manifest,...(cliente?.nombre?{cliente}:{})});
     const signed=await api('subidas',owner);let n=0;
     for(const f of signed.files) {
       const local=files.find(x=>x.item===f.item&&x.kind===f.kind);if(!local)throw new Error('Falta un archivo. Tu pedido sigue guardado aquí.');

@@ -65,11 +65,22 @@ function estadoPublicacion(q){
  const vigente=!!quote.publicada&&q.preparada&&Object.entries(paraCliente(q)).every(([k,v])=>JSON.stringify(v)===JSON.stringify(quote.publicada[k]));
  paso.textContent=quoteBusy?'Procesando. Espera a que termine.':quoteDirty?'Cambios sin guardar. Guarda el borrador antes de publicar.':!q.preparada?'Borrador privado. Completa los datos pendientes indicados arriba para poder publicar.':pedido.estado==='cancelado'?'Pedido cancelado. No se puede publicar su cotización.':vigente?'Cotización publicada · Revisión '+quote.publicada.revision+' visible en Mi pedido.':quote.publicada?'Borrador guardado con cambios. Pulsa Publicar para sustituir la revisión que ve el cliente.':'Borrador guardado · Listo para publicar. El cliente todavía no ve una cotización.';
  b.disabled=quoteBusy||quoteDirty||!q.preparada||pedido.estado==='cancelado';
+ const aviso=$('#cotAvisoCliente');if(aviso)aviso.hidden=!quote.publicada||pedido.estado==='cancelado';
+}
+// Aviso al cliente: abre WhatsApp con el mensaje listo; el equipo elige el chat y confirma el envío.
+const avisoHTML='<div class="cot-avisar" id="cotAvisoCliente" hidden><p class="cot-ayuda">Avísale al cliente que su cotización ya está en Mi pedido.</p><div class="cot-acciones"><a class="btn btn--wa" id="cotAvisar" href="#" target="_blank" rel="noopener" aria-disabled="true">Avisar al cliente por WhatsApp</a><button type="button" class="btn btn--linea" id="cotCopiarAviso" disabled>Copiar mensaje</button></div><p class="cot-ayuda" id="cotAvisoEstado" role="status">Preparando enlace…</p></div>';
+let avisoTexto='';
+const mensajeAviso=(x,url)=>{const nombre=(x.cliente?.nombre||'').trim();return (nombre?'Hola '+nombre+', ':'Hola, ')+'tu cotización de ZAIN ya está lista ✅\n\n★ Folio '+x.folio+'\nRevísala y acéptala aquí:\n'+url+'\n\nCualquier duda, por aquí te ayudamos.';};
+async function prepararAviso(){
+ const turn=quoteEpoch,x=pedido,box=$('#cotAvisoCliente');if(!box||!x)return;avisoTexto='';
+ try{const r=await call('enlace',{id:x.id});if(turn!==quoteEpoch||pedido!==x||!$('#cotAvisar'))return;avisoTexto=mensajeAviso(x,r.url);const a=$('#cotAvisar');a.href='https://wa.me/?text='+encodeURIComponent(avisoTexto);a.removeAttribute('aria-disabled');$('#cotCopiarAviso').disabled=false;$('#cotAvisoEstado').textContent='Se abre WhatsApp: elige el chat del cliente y confirma el envío.';}
+ catch(er){if(turn===quoteEpoch&&$('#cotAvisoEstado'))$('#cotAvisoEstado').textContent=er.message;}
 }
 function pintarCot(){
  const q=calcular(pedido.items,entrada(quote.borrador));quote={...quote,borrador:q};
  $('#cotPedido').innerHTML=editorCotizacion(q,{version:quote.version,publicada:quote.publicada,imagenes:imagenesCot(),productos:[...(window.ZAIN?.productos||[]),...(window.ZAIN?.productosHistoricos||[])]});
- quoteDirty=false;vista();actualizarMedidas();for(let i=0;i<pedido.items.length;i++)if(normalizarGeometria(pedido.items[i].logoGeometria))aplicarMedida(i);
+ $('#cotPaso')?.insertAdjacentHTML('afterend',avisoHTML);
+ quoteDirty=false;vista();actualizarMedidas();void prepararAviso();for(let i=0;i<pedido.items.length;i++)if(normalizarGeometria(pedido.items[i].logoGeometria))aplicarMedida(i);
 }
 addEventListener('zain:pedido-abierto',async e=>{const x=e.detail,turn=++quoteEpoch;pedido=x;geometriaPedido.clear();quote=null;quoteDirty=false;void prepararImagenes({partidas:x.items.map((p,indice)=>({...p,indice}))},imagenesCot());if(x.archivado_at)return;$('#detalle').insertAdjacentHTML('beforeend','<section id="cotPedido" class="cot-panel"><h2>Cotización</h2><p>Cargando borrador privado…</p></section>');try{const r=await call('cotizacion',null,{id:x.id});if(turn!==quoteEpoch||$('#detalle').dataset.pedido!==x.id)return;quote=r.cotizacion;pintarCot();void cargarMedidasAnteriores(turn);}catch(er){if(turn===quoteEpoch&&$('#cotPedido'))$('#cotPedido').textContent=er.message;}});
 $('#ficha').addEventListener('close',()=>{quoteEpoch++;quote=null;pedido=null;quoteDirty=false;});
@@ -122,3 +133,8 @@ function pendientesCotizacion(q){
  for(const p of q.partidas){const campos=[];if(p.costoPrendas===null)campos.push('costo de prenda');if(p.modo==='area'){if(p.ancho===null||p.alto===null)campos.push('medidas del logo');if(p.tarifaCm2===null)campos.push('tarifa de '+p.tecnica);}else if(p.aplicacion===null)campos.push('costo de personalización');if(campos.length)faltan.push(p.nombre+': '+campos.join(', '));}
  if(q.impuesto===null)faltan.push('Indica el impuesto o 0 si no aplica');return 'Pendiente para cotizar: '+faltan.join('. ')+'.';
 }
+$('#detalle').addEventListener('click',async e=>{
+ const a=e.target.closest('#cotAvisar');if(a&&a.getAttribute('aria-disabled')==='true'){e.preventDefault();return;}
+ if(!e.target.closest('#cotCopiarAviso')||!avisoTexto)return;
+ try{await navigator.clipboard.writeText(avisoTexto);$('#cotAvisoEstado').textContent='Mensaje copiado. Pégalo en el chat del cliente.';}catch{$('#cotAvisoEstado').textContent='No se pudo copiar; usa el botón de WhatsApp.';}
+});

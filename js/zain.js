@@ -1227,6 +1227,15 @@
     return {...x,p:p.id,nombre:p.nombre,sku:p.sku,...(col ? {color:col.nombre,colorId:col.id,colorCodigo:""} : {})};
   }) : [];
   let paquete = null, revisionArchivos = 0, compartiendo = false;
+  // nombre y fecha deseada: se recuerdan en este teléfono para el siguiente pedido
+  const LLAVE_CLIENTE = "zain-cliente";
+  const clienteGuardado = almacen.leer(LLAVE_CLIENTE, {});
+  const cliente = {
+    nombre: typeof clienteGuardado?.nombre === "string" ? clienteGuardado.nombre.slice(0, 120) : "",
+    fecha: typeof clienteGuardado?.fecha === "string" && /^\d{4}-\d{2}-\d{2}$/.test(clienteGuardado.fecha) ? clienteGuardado.fecha : "",
+  };
+  const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+  const errorCliente = () => cliente.nombre.trim().length < 2 ? "nombre" : cliente.fecha && cliente.fecha < hoyISO() ? "fecha" : "";
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
   const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)));
   function estadoArchivos() {
@@ -1248,7 +1257,7 @@
     if (paquete.faltan.length) estado.textContent += " Faltan archivos de pedidos guardados anteriormente; vuelve a agregarlos con su logo.";
     else if (pedido.some((x) => x.archivosTemporales)) estado.textContent += " Descarga el paquete antes de cerrar esta pestaña: no pudimos guardar los archivos en este equipo.";
     $("#pedidoNota").textContent = P.activo()
-      ? "Guardaremos tu solicitud y sus archivos para que ZAIN pueda cotizarla. Después se abrirá directamente nuestro WhatsApp; confirma allí el envío del mensaje."
+      ? "Guardamos tu solicitud con tus archivos y se abre el WhatsApp de ZAIN: solo confirma el envío."
       : conArchivos ? "Se abrirá directamente el WhatsApp de ZAIN con el texto. El guardado de imágenes todavía no está habilitado: puedes descargar los archivos en Otra forma de enviar y adjuntarlos al chat."
       : "Se abrirá directamente WhatsApp con el detalle de tu pedido.";
   }
@@ -1591,21 +1600,30 @@
     finally { guardandoEditor = false; $("#agregar").disabled = false; campos.forEach((f) => { f.disabled = false; }); }
   });
 
-  function mensajePedido() {
-    const lineas = pedido.map((x, i) => {
-      const r = [`${i + 1}) ${prod(x.p)?.nombre || x.nombre.replace(/ \([CD]\d{4}\)$/, "")} — ${x.color.replace(/ · \d+$/, "")}`, `   ${x.tecnica} · ${x.zona}${x.cm ? ` · logo de ${cm(x.cm)}` : ""}`];
-      if (prod(x.p)?.sku) r.push(`   SKU ZAIN: ${prod(x.p).sku}`);
-      if (x.renderOrientativo) r.push("   Vista orientativa; medida y acabado por confirmar antes de producir.");
-      if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
-      r.push(`   ${x.tallas ? `${x.tallasEtq || "Tallas"}: ${x.tallas} (${x.piezas} pzas)` : `${x.piezas} pzas`}`);
-      r.push(`   Logo: ${x.logo}`);
-      if (x.colorLogo) r.push(`   Color del logo: ${x.colorLogo}`);
-      if (x.pantone) r.push(`   Referencia Pantone: ${x.pantone} (confirmar al cotizar)`);
-      if (x.notas) r.push(`   Notas: ${x.notas}`);
+  // Solo símbolos del plano básico de Unicode: los emojis de 4 bytes llegan rotos a WhatsApp de escritorio vía wa.me.
+  const fechaLarga = (iso) => { const d = new Date(iso + "T12:00:00"); return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString("es-MX", { day: "numeric", month: "long" }); };
+  function mensajePedido(recibo = null, items = pedido) {
+    const nombreDe = (x) => prod(x.p)?.nombre || x.nombre.replace(/ \([CD]\d{4}\)$/, "");
+    const lineas = items.map((x) => {
+      const r = [`▸ *${nombreDe(x)}* · ${x.color.replace(/ · \d+$/, "")}`];
+      r.push(`   ${x.piezas} pzas${x.tallas ? ` (${x.tallas})` : ""} · ${x.tecnica}, ${x.zona.toLowerCase()}${x.cm ? ` ${cm(x.cm)}` : ""}`);
+      if (!recibo) {
+        // sin folio el equipo no ve la ficha: se manda el detalle completo
+        if (prod(x.p)?.sku) r.push(`   SKU ZAIN: ${prod(x.p).sku}`);
+        if (x.medidas) r.push(`   Medidas: ${x.detalleMedidas || x.medidas}`);
+        r.push(`   Logo: ${x.logo}${x.colorLogo ? ` · ${x.colorLogo}` : ""}`);
+        if (x.pantone) r.push(`   Pantone de referencia: ${x.pantone}`);
+        if (x.notas) r.push(`   Notas: ${x.notas}`);
+      }
       return r.join("\n");
     });
-    const pzs = pedido.reduce((a, x) => a + x.piezas, 0);
-    return `Hola ${C.marca}, quiero cotizar este pedido:\n\n${lineas.join("\n\n")}\n\nCantidad total: ${pzs} piezas\n\n¿Me ayudan con la cotización y fecha de entrega?`;
+    const pzs = items.reduce((a, x) => a + x.piezas, 0);
+    const saludo = cliente.nombre ? `Hola ${C.marca}, soy *${cliente.nombre}*. Quiero cotizar:` : `Hola ${C.marca}, quiero cotizar:`;
+    const pie = [`✅ *Total: ${pzs} piezas*`];
+    if (cliente.fecha) pie.push(`✎ Lo necesito para el ${fechaLarga(cliente.fecha)}`);
+    if (recibo) pie.push(`★ Folio ${recibo.folio}`, `Mi pedido: ${recibo.url}`);
+    else pie.push("¿Me ayudan con la cotización?");
+    return [saludo, lineas.join("\n"), pie.join("\n")].join("\n\n");
   }
 
   let pintado = false;
@@ -1652,6 +1670,11 @@
     $("#pedidoPie").innerHTML = pedido.length
       ? `<div class="pedido__total"><span>Cotización personalizada</span><b>Por WhatsApp</b></div>
          <div class="pedido__piezas num">${n} piezas</div>
+         <div class="pedido__cliente">
+           <label class="campo"><span>Tu nombre o empresa</span><input type="text" id="clienteNombre" maxlength="120" autocomplete="name" enterkeyhint="done" required value="${esc(cliente.nombre)}" aria-describedby="clienteAviso" /></label>
+           <label class="campo"><span>¿Para cuándo lo necesitas? <small>Opcional</small></span><input type="date" id="clienteFecha" min="${hoyISO()}" value="${esc(cliente.fecha)}" aria-describedby="clienteAviso" /></label>
+           <p class="pedido__archivos" id="clienteAviso" role="status"></p>
+         </div>
          <button class="btn btn--wa btn--ancho" type="button" id="compartirPedido" disabled>Preparando archivos…</button>
          <p class="pedido__archivos" id="archivosEstado" role="status"></p>
          <p class="pedido__nota" id="pedidoNota"></p>
@@ -1696,8 +1719,29 @@
     if (e.target.closest("[data-cerrar-ir]")) cerrarPedido();
   });
   P.ready.then(()=>estadoArchivos());
+  $("#pedidoPie").addEventListener("input", (e) => {
+    if (e.target.id !== "clienteNombre" && e.target.id !== "clienteFecha") return;
+    if (e.target.id === "clienteNombre") cliente.nombre = e.target.value.slice(0, 120);
+    else cliente.fecha = /^\d{4}-\d{2}-\d{2}$/.test(e.target.value) ? e.target.value : "";
+    almacen.guardar(LLAVE_CLIENTE, cliente);
+    e.target.removeAttribute("aria-invalid");
+    $("#clienteAviso").textContent = "";
+    const enlace = $("#enviar");
+    if (enlace && !erroresCantidad().length) enlace.href = wa(mensajePedido());
+  });
+  const revisarCliente = () => {
+    const falta = errorCliente();
+    if (!falta) return true;
+    const campo = $(falta === "nombre" ? "#clienteNombre" : "#clienteFecha"), aviso = $("#clienteAviso");
+    aviso.textContent = falta === "nombre" ? "Escribe tu nombre o el de tu empresa para saber a quién cotizamos." : "Elige una fecha a partir de hoy, o deja el campo vacío.";
+    aviso.classList.add("error");
+    campo.setAttribute("aria-invalid", "true");
+    campo.focus();
+    return false;
+  };
   $("#pedidoPie").addEventListener("click", async (e) => {
     if (e.target.closest("#enviar") && (compartiendo || erroresCantidad().length)) { e.preventDefault(); estadoArchivos(); return; }
+    if (e.target.closest("#enviar, #compartirPedido") && !revisarCliente()) { e.preventDefault(); return; }
     if (e.target.closest("#compartirPedido, #descargarPaquete")) {
       if (!paquete || compartiendo || erroresCantidad().length) return;
       if (e.target.closest("#descargarPaquete")) {
@@ -1705,7 +1749,7 @@
         $("#archivosEstado").textContent = "Paquete descargado. Adjunta pedido-zain.zip en el chat de ZAIN.";
         return;
       }
-      const snapshot=pedido.map(x=>({...x})), texto=paquete.texto;
+      const snapshot=pedido.map(x=>({...x})), texto=mensajePedido(null,snapshot), datosCliente={nombre:cliente.nombre.trim(),fecha:cliente.fecha};
       compartiendo=true; estadoArchivos();
       // Evita cambiar selecciones durante la subida y conserva el folio al reintentar.
       $$("#pedidoItems button, #vaciar").forEach(x=>x.disabled=true);
@@ -1714,8 +1758,8 @@
         if(P.error()) await P.reintentar();
         let mensaje=texto,receipt=null;
         if(P.activo()) {
-          receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;});
-          mensaje+=`\n\nFolio: ${receipt.folio}\nConsulta tu pedido: ${receipt.url}`;
+          receipt=await P.enviar(snapshot,txt=>{$("#archivosEstado").textContent=txt;},datosCliente);
+          mensaje=mensajePedido(receipt,snapshot);
           $("#archivosEstado").textContent=`Solicitud ${receipt.folio} guardada. Confirma el envío del mensaje en WhatsApp.`;
         }
         dispatchEvent(new CustomEvent('zain:whatsapp_click',{detail:{piezas:snapshot.reduce((s,x)=>s+x.piezas,0)}}));
