@@ -1,3 +1,9 @@
+## Vigente: cotizador compacto y controles sin estirar — 15-oct-2026
+
+JP reportó selectores gigantes junto a las bandas y exceso de campos. Se corrige la alineación vertical de controles; cada prenda muestra imagen, cantidad/tallas, costo resumido, medidas del logo, margen, descuento y precio por pieza/importe. Costos faltantes de prenda/tarifa e impuesto se piden directamente. El resto queda en Ajustar costos y medidas y Entrega y condiciones. Las bandas aplicables al color/cantidad/tallas actuales aparecen primero y los demás tramos quedan plegados, conservando todos sus valores al guardar. Consulta separada del costo de las tallas solicitadas.
+
+Se conserva el motor de margen, área, redondeos y bandas, así como ancho/alto automáticos y revisión/publicación manual. Ajustes avanzados mantienen precio especial, preparación, otros costos y modalidad fija. No se modifican cotizaciones guardadas ni configuración de costos por rediseñar la vista. Sin cambios de servidor, base, permisos, precios o catálogo. Este bloque sustituye la captura extensa anterior, que queda como descripción histórica.
+
 ## Vigente: alto automático del logo — 15-oct-2026
 
 JP pidió calcular el alto sin captura manual obligatoria. El personalizador guarda la proporción del logo ya preparado y el ancho efectivo del diseño, incluyendo el límite vertical de la zona. El borrador nuevo propone ancho y alto a dos decimales: alto = ancho × altoPx / anchoPx. No se requiere vectorizar ni API de IA. El equipo puede corregir medidas; cambiar alto manualmente detiene el seguimiento automático del ancho. «Calcular alto del logo» permite recuperarlo.

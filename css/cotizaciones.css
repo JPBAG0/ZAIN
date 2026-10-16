@@ -19,3 +19,36 @@
 .cot-costosfiltros{display:flex;align-items:end;flex-wrap:wrap;gap:16px}.cot-costosfiltros>label:first-child{flex:2 1 220px}.cot-costosfiltros>label{flex:1 1 150px}.cot-costosfiltros>p{flex-basis:100%}.cot-costosfiltros select{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid var(--linea,#d6d6d2);border-radius:10px;background:white;min-height:48px}.cot-bandas{min-width:0}.cot-bandas summary{cursor:pointer;font-weight:600;padding:12px 0}.cot-bandas label{display:grid;gap:6px;margin:12px 0}.cot-bandas small{font-weight:400;color:#616168}.cot-bandas input{width:100%}.cot-costostabla tr[hidden]{display:none}.cot-costopendiente .cot-bandas input:placeholder-shown{border-color:#a62b34;color:#a62b34}
 
 .cot-bandas[hidden],[data-cot-prendaunitaria][hidden]{display:none}
+
+/* Cotizar por prenda: información lista, captura corta y ajustes progresivos. */
+#cotPedido .cot-grid,#cotPedido .cot-edicion,#cotPedido .cot-rapida{align-items:start}
+#cotPedido label{align-content:start;align-items:start;align-self:start;line-height:1.4}
+#cotPedido input,#cotPedido select{height:46px;min-height:46px;max-height:46px;align-self:start;line-height:1.3}
+#cotPedido [hidden]{display:none!important}
+.cot-editor{margin-top:24px;min-width:0}
+.cot-datos-cliente{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.6fr);gap:18px;margin-bottom:28px;align-items:start}
+.cot-producto{padding:24px 0;min-width:0}
+.cot-producto-cab{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center}
+.cot-producto-foto{width:76px;height:90px;object-fit:contain;border:1px solid #e4e7ed;border-radius:8px;background:white;padding:4px}
+.cot-producto-titulo{min-width:0}.cot-producto-titulo h4{font-size:18px;line-height:1.35;letter-spacing:-.35px;margin:0 0 6px;overflow-wrap:anywhere}
+.cot-producto-titulo p{font-size:13px;color:#4a576b;margin:0 0 5px;line-height:1.5}.cot-producto-titulo small{font-size:12px;color:#687487;line-height:1.4;display:block}
+.cot-precio-pieza{text-align:right;display:grid;gap:4px}.cot-precio-pieza span{font-size:12px;color:#536077}.cot-precio-pieza strong{font-size:27px;letter-spacing:-1px;font-variant-numeric:tabular-nums;color:#161b29;line-height:1.2}.cot-precio-pieza small{font-size:11px;color:#637086}
+.cot-costos-resumidos{display:flex;gap:12px 24px;flex-wrap:wrap;padding:13px 0;margin:14px 0 4px;color:#627085;font-size:12px;line-height:1.6;border-top:1px solid #edf0f4;border-bottom:1px solid #edf0f4}
+.cot-costos-resumidos span{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.cot-costos-resumidos b{color:#273449;font-weight:600;font-variant-numeric:tabular-nums}
+.cot-rapida{display:grid;grid-template-columns:repeat(2,minmax(100px,140px)) minmax(0,1fr);gap:16px;margin:18px 0;align-items:start}
+.cot-rapida .cot-dato-pendiente{grid-column:span 1}.cot-total-partida{margin-left:auto;text-align:right;align-self:center;display:grid;gap:5px;grid-column:-2/-1}.cot-total-partida span{font-size:12px;color:#536077}.cot-total-partida strong{font-size:21px;letter-spacing:-.5px;font-variant-numeric:tabular-nums;color:#292fda}
+.cot-dato-pendiente label{color:#9c352b}.cot-dato-pendiente input:placeholder-shown{border-color:#b95c4f;background:#fffaf8}
+.cot-desglose summary,.cot-otros-tramos summary{cursor:pointer;color:#536077;font-size:12px;padding:8px 0}.cot-desglose table{width:100%;max-width:530px;border-collapse:collapse;font-size:12px;margin:8px 0 16px}.cot-desglose th,.cot-desglose td{padding:8px;text-align:right;border-bottom:1px solid #e8ecf1;font-variant-numeric:tabular-nums}.cot-desglose th:first-child{text-align:left}.cot-desglose thead th{font-weight:500;color:#637086;font-size:11px}
+.cot-ajustes{margin:12px 0 0;min-width:0}.cot-ajustes>summary{cursor:pointer;font-size:13px;font-weight:600;padding:12px 0;color:#303e53;line-height:1.5}.cot-ajustes>summary span{font-weight:400;color:#798291;margin-left:12px;font-size:12px}.cot-ajustes[open]>summary{color:#3035d9}.cot-ajustes-contenido{padding:18px;background:#f5f7fa;border:1px solid #e1e6ee;border-radius:8px;min-width:0}
+.cot-edicion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 18px;min-width:0}.cot-edicion:last-child{margin-bottom:0}.cot-edicion>.cot-ancho,.cot-edicion>.cot-ayuda{grid-column:1/-1}.cot-edicion .cot-ayuda{font-size:12px;margin:0}.cot-edicion textarea{min-height:72px}
+#cotPedido .cot-edicion-bandas{border:0;padding:0;margin:0 0 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;min-width:0}
+.cot-edicion-bandas legend{font-size:13px;font-weight:600;color:#34415a;padding:0;margin:0 0 8px}.cot-edicion-bandas label{margin:0}.cot-banda-fila{min-width:0}.cot-banda-fila>small{display:block;font-size:11px;line-height:1.5;margin-top:6px;color:#6a7586;overflow-wrap:anywhere}.cot-otros-tramos{grid-column:1/-1}.cot-otros-tramos[open]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}.cot-otros-tramos summary{grid-column:1/-1}
+#cotPedido .cot-calculo{font-size:12px;padding:10px 12px;margin:14px 0 18px;font-weight:500}.cot-entrega{border-top:1px solid #dce2eb;padding-top:10px}.cot-entrega>.cot-ajustes-contenido{margin:0}
+.cot-acciones{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid #dce2eb;padding-top:20px}.cot-acciones .btn{font-size:13px;padding:13px 16px;min-height:44px}.cot-acciones #cotPublicar{margin-left:auto}.cot-mas{font-size:12px;margin-top:12px;color:#627085}.cot-mas>summary{cursor:pointer;padding:8px 0}.cot-mas .cot-botones{margin-top:6px}
+@media(max-width:700px){
+ .cot-producto-cab{grid-template-columns:auto minmax(0,1fr);gap:12px}.cot-producto-foto{width:58px;height:72px}.cot-producto-titulo h4{font-size:16px}.cot-precio-pieza{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;text-align:left;gap:8px 12px;padding-top:6px}.cot-precio-pieza strong{font-size:24px}.cot-precio-pieza small{flex-basis:100%;margin-top:-4px}.cot-datos-cliente{grid-template-columns:1fr;gap:14px;margin-bottom:20px}
+ .cot-rapida{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.cot-total-partida{grid-column:1/-1;margin-left:0;display:flex;justify-content:space-between;align-items:baseline;text-align:left;padding-top:6px}.cot-costos-resumidos{gap:7px 18px}.cot-costos-resumidos span{gap:6px}.cot-ajustes>summary span{display:block;margin:4px 0 0 15px}.cot-ajustes-contenido{padding:14px}.cot-edicion{gap:14px}.cot-acciones .btn{flex:1 1 120px}.cot-acciones #cotPublicar{flex-basis:100%;margin-left:0}.cot-producto{padding:20px 0}
+}
+@media(max-width:420px){#cotPedido .cot-edicion-bandas,.cot-otros-tramos[open]{grid-template-columns:1fr}.cot-edicion{grid-template-columns:1fr}.cot-producto-cab{gap:10px}.cot-ajustes-contenido{padding:12px}}
+
+.cot-producto-cab.cot-sinfoto{grid-template-columns:minmax(0,1fr) auto}
