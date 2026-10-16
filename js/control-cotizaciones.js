@@ -1,10 +1,10 @@
 import './control-confirmacion.js?v=1';
 import {ordenarCostos} from './control-costos-vista.js?v=1';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=7';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=8';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
-import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=9';
+import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=10';
 import {esc,documento,imprimir} from './cotizacion-vista.js?v=6';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;

@@ -127,3 +127,8 @@ test('actualizar costos conserva cambios de la revisión y usa control de versi�
  const pricing=areaCfg(),f=fixture({pricing}),first=await(await f.call('cotizacion&id='+id)).json();const v=entrada(first.cotizacion.borrador);v.partidas[0].alto=500;v.partidas[0].precio=18000;v.partidas[0].descuento=300;pricing.tecnicas[1].tarifaCm2=2000000;
  const result=await f.call('cotizacion-costos',{id,version:1,borrador:v});assert.equal(result.status,200);const r=await result.json();assert.equal(r.cotizacion.borrador.partidas[0].tarifaCm2,2000000);assert.equal(r.cotizacion.borrador.partidas[0].precioManual,18000);assert.equal(r.cotizacion.borrador.partidas[0].descuento,300);assert.equal((await f.call('cotizacion-costos',{id,version:1,borrador:v})).status,409);
 });
+test('el costo por área sube al siguiente centavo: 40 cm² × $0.025862 = $1.03448 → $1.04',()=>{
+ const {pedido,q}=areaLista(),v=entrada(q);Object.assign(v.partidas[0],{ancho:1000,alto:400,tarifaCm2:decimalTarifa('0.025862')});
+ assert.equal(calcular(pedido,v).partidas[0].aplicacion,104);
+ Object.assign(v.partidas[0],{ancho:1000,alto:1000,tarifaCm2:decimalTarifa('0.02')});assert.equal(calcular(pedido,v).partidas[0].aplicacion,200);
+});

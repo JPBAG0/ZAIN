@@ -95,8 +95,8 @@ export function calcular(items,input){
   if(!['area','fijo'].includes(modo))error('Elige costo por área o importe fijo.');
   const medida=n=>n==null?null:entero(n,1,20000),ancho=medida(v.ancho),alto=medida(v.alto),tarifaCm2=v.tarifaCm2==null?null:entero(v.tarifaCm2);
   const area=ancho===null||alto===null?null:ancho*alto;
-  // Área en 1/10000 cm² × tarifa en 1/1000000 MXN; redondear una sola vez a centavos por pieza.
-  const calculada=area===null||tarifaCm2===null?null:entero(Number((BigInt(area)*BigInt(tarifaCm2)+50000000n)/100000000n));
+  // Área en 1/10000 cm² × tarifa en 1/1000000 MXN; redondear una sola vez hacia arriba al centavo por pieza.
+  const calculada=area===null||tarifaCm2===null?null:entero(Number((BigInt(area)*BigInt(tarifaCm2)+99999999n)/100000000n));
   const baseAplicacion=v.aplicacion===null?null:v.aplicacion;
   const prenda=v.prenda===null?null:entero(v.prenda),aplicacion=modo==='area'?calculada:enteroNullable(baseAplicacion),otros=entero(v.otros),preparacion=entero(v.preparacion),margenObjetivo=entero(v.margenObjetivo,0,9999),descuento=entero(v.descuento,0,10000);
   const modoPrenda=v.modoPrenda??'unitario';if(!['unitario','tallas'].includes(modoPrenda))error('Revisa el costeo de la prenda.');
