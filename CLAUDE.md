@@ -1,3 +1,7 @@
+## Vigente: categoría pública Chamarras y sudaderas — 15-oct-2026
+
+JP pidió juntar ambas categorías en una sola. El cargador del catálogo público unifica Chamarras y Sudaderas en «Chamarras y sudaderas», con un solo filtro y un solo grupo; conserva los productos, variantes, fotografías y disponibilidad recibidos del servidor. Es agrupación de navegación pública; las clasificaciones originales del panel de gestión/costos y la base permanecen disponibles sin reescribir registros. Sin cambios de cotizaciones, pedidos, precios o backend. Se aplica también a futuras referencias que lleguen de cualquiera de las dos categorías.
+
 ## Vigente: catálogo visual con detalles plegados — 15-oct-2026
 
 JP pidió menos texto en tarjetas y aprovechar el ancho en escritorio cuando hay pocas prendas. Se conserva la imagen, nombre, silueta, colores, técnicas y Personalizar; descripción, SKU, especificaciones, composición, disponibilidad y guía de tallas se consultan en Ver detalles. Las fichas completas del personalizador se conservan. Cambiar Caballero/Dama conserva abierto el detalle si se estaba consultando.
