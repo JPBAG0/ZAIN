@@ -1,3 +1,4 @@
+import {createGastos} from './gastos.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {normalizarGeometria} from '../js/logo-medidas.js';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
@@ -180,6 +181,7 @@ export function createHandler(env={}, fetcher=fetch) {
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   const quotes=createQuotes({sb,row,fail,commercialItem});
+  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
@@ -281,6 +283,11 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(gastosEnabled&&op==='gastos'&&request.method==='GET')return response(200,{finanzas:await gastos.leer(validateID(url.searchParams.get('id')))});
+      if(gastosEnabled&&op==='gastos-guardar'&&request.method==='POST')return response(200,{finanzas:await gastos.guardar(await jsonBody(request),user)});
+      if(gastosEnabled&&op==='gastos-comprobante'&&request.method==='POST')return response(200,await gastos.subir(request,url,user));
+      if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
+
       if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
       if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
       if(/^(precios-|cotizacion)/.test(op)){
@@ -396,6 +403,10 @@ export function createHandler(env={}, fetcher=fetch) {
         const state=url.searchParams.get('estado');if(state&&!STATES.includes(state))fail(400,'Estado inválido.');
         const q=text(url.searchParams.get('q'),50).replace(/[^a-zA-Z0-9-]/g,'');
         const trash=url.searchParams.get('papelera')==='true';
+        if(gastosEnabled){
+          const out=await gastos.panel({p_estado:state||'',p_q:q,p_papelera:trash,p_semana:url.searchParams.get('periodo')==='semana',p_offset:Math.floor(offset)});
+          return response(200,{...out,equipo:user,pedidos:out.pedidos.map(({items,...x})=>({...x,selecciones:items.length,resumen:items.slice(0,2).map(p=>p.nombreZain||p.nombre).join(' / ')}))});
+        }
         let dateFilter='';
         if(url.searchParams.get('periodo')==='semana'){const summary=await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'});dateFilter='&created_at=gte.'+encodeURIComponent(summary.semana_desde);}
         const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at='+(trash?'not.is.null':'is.null')+'&select=id,folio,created_at,guardado_at,archivado_at,estado,total,version,items&order='+(trash?'archivado_at.desc,':'')+'created_at.desc,id.desc&limit=21&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':'')+dateFilter);

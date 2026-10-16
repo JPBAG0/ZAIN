@@ -25,14 +25,17 @@ async function call(op,body,extra={},retry=true){
  if(r.status===401&&retry&&session?.refresh_token){if(!refreshing)refreshing=auth({refresh_token:session.refresh_token},'refresh_token').finally(()=>refreshing=null);await refreshing;return call(op,body,extra,false);}
  const data=await r.json();if(!r.ok){const e=new Error(data.error||'No se pudo consultar el pedido.');e.auth=r.status===401||r.status===403;throw e;}return data;
 }
-window.ZAINEquipo={call,upload:async(id,blob)=>{
+window.ZAINEquipo={call,uploadGasto:async(id,archivo,blob)=>{
+ const send=()=>fetch(api+'?op=gastos-comprobante&id='+encodeURIComponent(id)+'&archivo='+encodeURIComponent(archivo),{method:'POST',headers:{Authorization:'Bearer '+session.access_token,'Content-Type':blob.type},body:blob,signal:AbortSignal.timeout(45000)});
+ let r=await send();if(r.status===401&&session?.refresh_token){await auth({refresh_token:session.refresh_token},'refresh_token');r=await send();}const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo guardar el comprobante.');return d;
+},upload:async(id,blob)=>{
  const send=()=>fetch(api+'?op=catalogo-foto&id='+encodeURIComponent(id),{method:'POST',headers:{Authorization:'Bearer '+session.access_token,'Content-Type':'image/webp'},body:blob,signal:AbortSignal.timeout(45000)});
  let r=await send();if(r.status===401&&session?.refresh_token){await auth({refresh_token:session.refresh_token},'refresh_token');r=await send();}
  const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo subir la foto.');return d;
 }};
 
 function closeDetail(){liberarRenders();detailRevision++;selected=null;if($('#ficha').open)$('#ficha').close();history.replaceState(null,'',location.pathname+location.search);}
-function salir(){authEpoch++;revision++;closeDetail();if($('#confirmacion').open)$('#confirmacion').close();session=null;try{sessionStorage.removeItem('zain-equipo');}catch{}$('#trabajo').hidden=true;$('#acceso').hidden=false;$('#salir').hidden=true;$('#equipo').textContent='';$('#lista').replaceChildren();$('#resumen').replaceChildren();$('#detalle').replaceChildren();dispatchEvent(new CustomEvent('zain:equipo-salio'));}
+function salir(){authEpoch++;revision++;closeDetail();if($('#confirmacion').open)$('#confirmacion').close();session=null;try{sessionStorage.removeItem('zain-equipo');}catch{}$('#trabajo').hidden=true;$('#acceso').hidden=false;$('#salir').hidden=true;$('#equipo').textContent='';$('#lista').replaceChildren();$('#resumen').replaceChildren();$('#resumenFinanciero')?.replaceChildren();$('#detalle').replaceChildren();dispatchEvent(new CustomEvent('zain:equipo-salio'));}
 const failed=er=>{if(er.auth)salir();status(er.message||'No se pudo conectar. Prueba Actualizar.',true);};
 function vistas(){
  $('#activos').classList.toggle('on',!trash);$('#activos').setAttribute('aria-pressed',String(!trash));
@@ -56,7 +59,12 @@ async function cargar(message=''){
  if(entering)window.scrollTo({top:0,behavior:'auto'});
  $('#equipo').textContent=list.equipo.nombre||'Equipo ZAIN';
  paintSummary(stats.resumen);vistas();
- $('#lista').innerHTML=list.pedidos.length?'<table><thead><tr><th scope="col">Pedido</th><th scope="col">Selección</th><th scope="col">Recibido</th><th scope="col">Cantidad</th><th scope="col">Estado</th></tr></thead><tbody>'+list.pedidos.map(x=>'<tr class="control__fila" data-id="'+esc(x.id)+'"><td><button type="button" class="control__folio" aria-label="Abrir pedido '+esc(x.folio)+'">'+esc(x.folio)+'</button><small>Ver ficha completa</small></td><td><span class="control__descripcion">'+esc(x.resumen||'Selección personalizada')+'</span><small>'+Number(x.selecciones||1)+' selección'+(x.selecciones===1?'':'es')+'</small></td><td>'+esc(date(x.created_at))+'<small>'+esc(new Date(x.created_at).toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit',timeZone:'America/Mexico_City'}))+'</small></td><td class="control__piezas">'+Number(x.total)+' piezas</td><td>'+chip(x.estado)+'</td></tr>').join('')+'</tbody></table>':'<div class="control__vacio"><h3>'+(trash?'La papelera está vacía':'No hay pedidos con estos filtros')+'</h3><p>'+(trash?'Los pedidos que retires aparecerán aquí para restaurarlos.':'Cambia los filtros o espera una nueva solicitud del catálogo.')+'</p></div>';
+ const money=n=>n==null?'Pendiente':new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(n/100);
+ let resumenFin=$('#resumenFinanciero');if(!resumenFin){resumenFin=document.createElement('section');resumenFin.id='resumenFinanciero';resumenFin.className='finanzas-bandeja';$('#lista').before(resumenFin);}
+ resumenFin.hidden=!list.finanzas;
+ if(list.finanzas){const f=list.finanzas;resumenFin.innerHTML='<h3>Resumen de los pedidos filtrados</h3><div class="gastos-cifras"><div><small>Venta sin impuesto</small><strong>'+money(f.venta)+'</strong></div><div><small>Costo + gastos</small><strong>'+money(f.costo)+'</strong></div><div><small>Utilidad '+(f.provisionales?'provisional':'del cierre')+'</small><strong class="'+(f.utilidad<0?'gastos-negativo':'')+'">'+money(f.utilidad)+'</strong></div></div><p>'+Number(f.cotizados)+(f.cotizados===1?' cotización · ':' cotizaciones · ')+Number(f.provisionales)+' sin cierre'+(f.pendientes?' · '+Number(f.pendientes)+' con costo pendiente':'')+'. Incluye todas las páginas; excluye cancelados y solicitudes sin cotización.</p>';}
+ const cifra=(f,k,label)=>'<td data-finanza="'+label+'"><b class="'+(k==='utilidad'&&f?.[k]<0?'gastos-negativo':'')+'">'+(f?.venta==null?'—':money(f?.[k]))+'</b>'+ (k==='costo'&&f?.provisional?'<small>Base prevista + extras</small>':k==='utilidad'&&f?.venta!=null?'<small>'+(f.provisional?'Provisional':'Cierre revisado')+'</small>':'')+'</td>';
+ $('#lista').innerHTML=list.pedidos.length?'<table><thead><tr><th scope="col">Pedido</th><th scope="col">Selección</th><th scope="col">Costo + gastos</th><th scope="col">Venta sin impuesto</th><th scope="col">Utilidad</th><th scope="col">Estado</th></tr></thead><tbody>'+list.pedidos.map(x=>'<tr class="control__fila" data-id="'+esc(x.id)+'"><td><button type="button" class="control__folio" aria-label="Abrir pedido '+esc(x.folio)+'">'+esc(x.folio)+'</button><small>'+esc(date(x.created_at))+'</small></td><td><span class="control__descripcion">'+esc(x.resumen||'Selección personalizada')+'</span><small>'+Number(x.total)+' piezas · '+Number(x.selecciones||1)+(x.selecciones===1?' selección':' selecciones')+'</small></td>'+cifra(x.finanzas,'costo','Costo + gastos')+cifra(x.finanzas,'venta','Venta sin impuesto')+cifra(x.finanzas,'utilidad','Utilidad')+'<td>'+chip(x.estado)+'</td></tr>').join('')+'</tbody></table>':'<div class="control__vacio"><h3>'+(trash?'La papelera está vacía':'No hay pedidos con estos filtros')+'</h3><p>Cambia los filtros para consultar otros pedidos.</p></div>';
  $('#anterior').disabled=!offset;$('#siguiente').disabled=!list.siguiente;
  $('#pagina').textContent='Página '+(offset/20+1)+(list.pedidos.length?' · '+list.pedidos.length+' pedidos':'');
  status(message);dispatchEvent(new CustomEvent('zain:equipo-listo'));
@@ -84,6 +92,7 @@ $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
 $('#login').addEventListener('submit',async e=>{e.preventDefault();$('#entrar').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;}});
 $('#filtros').addEventListener('submit',e=>{e.preventDefault();offset=0;cargar().catch(failed);});
 $('#recargar').addEventListener('click',()=>cargar().catch(failed));
+addEventListener('zain:gastos-guardados',()=>cargar().catch(failed));
 addEventListener('zain:pago-registrado',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 addEventListener('zain:cotizacion-publicada',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 $('#anterior').addEventListener('click',()=>{offset=Math.max(0,offset-20);cargar().catch(failed);});
