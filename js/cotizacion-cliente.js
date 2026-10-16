@@ -1,5 +1,5 @@
 import {prepararImagenes} from './cotizacion-imagen.js?v=1';
-import {documento,imprimir,actualizarImagenes} from './cotizacion-vista.js?v=3';
+import {documento,imprimir,actualizarImagenes} from './cotizacion-vista.js?v=4';
 let pedidoActual=null,cotizacionActual=null,imagenesActual={},revisionImagenes=0;
 addEventListener('zain:consulta-cliente',e=>{
  const x=e.detail,q=x.cotizacion,pedido=document.querySelector('#pedido');

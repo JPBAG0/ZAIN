@@ -1,5 +1,5 @@
 import {pesos} from './cotizacion-core.js?v=6';
-import {esc} from './cotizacion-vista.js?v=3';
+import {esc} from './cotizacion-vista.js?v=4';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 const rate=(p,i)=>`<label>Costo de ${esc(p.tecnica)} / cm²<input name="tarifa-q${i}" type="number" min="0" step="0.0001" inputmode="decimal" value="${p.tarifaCm2==null?'':(p.tarifaCm2/10000).toFixed(4)}" placeholder="Tarifa pendiente"></label>`;

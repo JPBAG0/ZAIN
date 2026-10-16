@@ -1,9 +1,9 @@
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=1';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=2';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=1';
 import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=6';
-import {esc,documento,imprimir} from './cotizacion-vista.js?v=3';
+import {esc,documento,imprimir} from './cotizacion-vista.js?v=4';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;
 const geometriaPedido=new Map();
