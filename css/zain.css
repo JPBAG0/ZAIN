@@ -870,3 +870,134 @@ html.sin-scroll .flotante, .flotante.fuera { opacity: 0; transform: scale(0.8); 
  .producto__contenido .producto__pie .btn{width:100%;justify-content:center}
  .rejilla__grupo .rejilla__categoria{margin-bottom:20px}
 }
+
+/* ---------------------------------------------------------------- flotantes fuera del personalizador */
+html.en-taller .volver-arriba { visibility: hidden; pointer-events: none; }
+
+/* ---------------------------------------------------------------- catálogo compacto (16-oct-2026)
+   La rejilla muestra tarjetas cortas (foto, nombre, siluetas y colores); al tocarlas
+   se abre la hoja con la ficha completa. Celular 2 columnas, tableta 3, escritorio 4. */
+.filtros {
+  position: sticky; top: 0; z-index: 20;
+  flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  margin-inline: calc(var(--gutter) * -1); padding: 10px var(--gutter);
+  background: color-mix(in srgb, var(--algodon) 96%, transparent);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  transition: top 380ms var(--sale);
+}
+.filtros::-webkit-scrollbar { display: none; }
+.filtro { flex: none; }
+html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
+
+.rejilla__productos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
+@media (min-width: 720px) { .rejilla__productos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 20px; } }
+@media (min-width: 1080px) { .rejilla__productos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 44px 24px; } }
+@media (max-width: 600px) { .rejilla__productos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.mini { position: relative; display: flex; flex-direction: column; gap: 10px; min-width: 0; cursor: pointer; }
+.mini[hidden] { display: none !important; }
+.mini__foto { position: relative; aspect-ratio: 1; border-radius: var(--radio); background: var(--mesa); overflow: hidden; }
+.mini__foto canvas { display: block; width: 100%; height: 100%; padding: 6%; opacity: 0; transition: opacity 400ms var(--sale), transform 600ms var(--sale); }
+.mini.lista .mini__foto canvas { opacity: 1; }
+.mini__txt { display: grid; gap: 5px; min-width: 0; }
+.mini__nombre { margin: 0; font-size: clamp(15px, 1.25vw, 18px); font-weight: 700; font-stretch: 105%; line-height: 1.25; letter-spacing: -0.005em; }
+.mini__abrir { padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; touch-action: manipulation; }
+/* toda la tarjeta abre la hoja; el «+» queda por encima */
+.mini__abrir::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--radio); }
+.mini__abrir:focus-visible { outline: none; }
+.mini:has(.mini__abrir:focus-visible) .mini__foto { outline: 3px solid var(--cobalto); outline-offset: 3px; }
+.mini__sub { margin: 0; font-size: 13px; line-height: 1.35; color: var(--tenue); }
+.mini__puntos { display: flex; align-items: center; gap: 4px; min-height: 14px; }
+.mini__puntos i { width: 14px; height: 14px; border-radius: 50%; background: var(--c); border: 1px solid rgba(17, 17, 19, 0.2); }
+.mini__puntos span { margin-left: 3px; font-size: 12px; color: var(--tenue); }
+.mini__mas {
+  position: absolute; top: 8px; right: 8px; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px;
+  border: 0; border-radius: 50%; background: var(--tinta); color: #fff; box-shadow: 0 4px 14px rgb(0 0 0 / 0.18);
+  touch-action: manipulation; transition: transform 200ms var(--sale), background-color 200ms;
+}
+.mini__mas .ico { width: 20px; height: 20px; stroke-width: 2.4; }
+.mini__mas:active { transform: scale(0.9); }
+.mini__mas:focus-visible { outline: 3px solid var(--cobalto); outline-offset: 3px; }
+@media (max-width: 600px) { .mini__mas { top: 6px; right: 6px; width: 40px; height: 40px; } }
+@media (hover: hover) and (pointer: fine) {
+  .mini:hover .mini__foto canvas { transform: scale(1.04); }
+  .mini__mas:hover { background: var(--cobalto); transform: scale(1.06); }
+  .mini:hover .mini__nombre { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+}
+
+/* hoja de producto: misma capa lateral que el pedido, un poco más ancha */
+.hoja__caja { width: min(560px, 100%); grid-template-rows: auto 1fr; }
+.hoja__cuerpo { padding: 0 20px; }
+.hoja .producto { display: flex; flex-direction: column; gap: 18px; padding-top: 16px; }
+.hoja .producto__foto canvas { object-fit: contain; }
+.hoja .producto__mas { display: none; }
+.hoja .producto__contenido { gap: 14px; }
+.hoja .producto__txt h3 { font-size: 22px; }
+.hoja .punto { width: 34px; height: 34px; }
+.hoja .producto__colores { gap: 8px; }
+.hoja .producto__pie {
+  position: sticky; bottom: 0; z-index: 3;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 10px;
+  margin: 4px -20px 0; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+  background: var(--papel); border-top: 1px solid var(--tinta);
+}
+.hoja .producto__pie .btn { width: 100%; min-height: 48px; justify-content: center; padding: 0 12px; }
+@media (prefers-reduced-motion: reduce) { .filtros { transition: none; } .mini__foto canvas, .mini__mas { transition: none; } }
+/* en tableta y escritorio las categorías fluyen en una sola rejilla; la categoría va como etiqueta de cada tarjeta */
+.mini__cat { display: none; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tenue); }
+@media (min-width: 720px) {
+  #rejilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 20px; }
+  .rejilla__grupo, .rejilla__productos { display: contents; }
+  .rejilla__grupo .rejilla__categoria { display: none; }
+  .mini__cat { display: block; }
+}
+@media (min-width: 1080px) { #rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 24px; } }
+
+/* ---------------------------------------------------------------- personalizador compacto (16-oct-2026) */
+/* colores del logo como muestras redondas; el nombre va en aria-label y title */
+.op--tinta { display: grid; place-items: center; width: 40px; height: 40px; min-height: 40px; padding: 0; border-radius: 50%; }
+.op--tinta i { width: 26px; height: 26px; border-radius: 50%; background: var(--c); border: 1px solid rgba(17, 17, 19, 0.25); }
+.op--tinta.on { background: var(--papel); border-color: var(--tinta); box-shadow: 0 0 0 2px var(--tinta); }
+#oTinta { gap: 6px; }
+/* opciones avanzadas plegadas */
+.mas-opciones { margin-top: 10px; border-top: 1px solid var(--linea); }
+.mas-opciones > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px;
+  font-size: 13px; font-weight: 600; color: var(--tinta-2); cursor: pointer; list-style: none;
+}
+.mas-opciones > summary::-webkit-details-marker { display: none; }
+.mas-opciones > summary::after { content: "+"; font-size: 20px; font-weight: 400; line-height: 1; }
+.mas-opciones[open] > summary::after { content: "−"; }
+.mas-opciones > summary:focus-visible { outline: 2px solid var(--cobalto); outline-offset: 2px; border-radius: 4px; }
+.mas-opciones .fila, .mas-opciones .pantone-logo { margin-top: 0; padding-bottom: 12px; }
+.pantone-logo { margin-top: 0; }
+@media (hover: none) { .solo-raton { display: none; } }
+
+/* celular y tableta: la vista previa se queda fija arriba mientras se eligen las opciones */
+@media (max-width: 900px) {
+  .taller__lienzo {
+    position: sticky; top: 0; z-index: 6;
+    box-shadow: 0 14px 24px -20px rgba(17, 17, 19, 0.55);
+    transition: top 380ms var(--sale);
+  }
+  html:has(.barra:not(.oculta)) .taller__lienzo { top: var(--barra); }
+  .taller__lienzo canvas { display: block; width: min(100%, 34svh); margin-inline: auto; }
+  .taller__fantasma { left: calc((100% - min(100%, 34svh)) / 2); width: min(100%, 34svh); }
+  .taller__regla { left: 10px; top: 10px; padding: 4px 8px; font-size: 12px; }
+  .mover { right: 10px; top: 10px; grid-template-columns: repeat(3, 32px); grid-template-rows: repeat(3, 32px); }
+  .taller__pie { padding: 6px 10px 8px; font-size: 12px; }
+  #pieTxt { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .taller__pie .btn-mini { flex: none; }
+  .vista-orientativa { margin: 0 10px; padding: 5px 8px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .taller__lienzo { transition: none; } }
+#productoInfo .mas-opciones { margin-top: 6px; }
+#productoInfo .mas-opciones > *:last-child { padding-bottom: 10px; }
+@media (max-width: 900px) {
+  /* dentro del personalizador la barra superior se esconde para dejar espacio a la vista previa */
+  html.en-taller .barra { transform: translateY(-100%); }
+  html.en-taller body .taller .taller__lienzo { top: 0; }
+  .taller__lienzo { margin-inline: calc(var(--gutter) * -1); border-radius: 0; }
+  .taller__lienzo canvas, .taller__fantasma { width: min(100%, 31svh); }
+  .taller__fantasma { left: calc((100% - min(100%, 31svh)) / 2); }
+}

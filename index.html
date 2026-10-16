@@ -4,16 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>ZAIN — Uniformes y artículos promocionales con tu logo</title>
-  <meta name="description" content="Playeras, polos, camisas, chamarras, gorras y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
+  <meta name="description" content="Playeras, polos, camisas, chamarras, chalecos y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
   <meta name="theme-color" content="#f3f3f1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="ZAIN" />
+  <meta property="og:url" content="https://zain-amber-sigma.vercel.app/" />
   <meta property="og:title" content="ZAIN — Tu logo en todo lo que usa tu equipo" />
   <meta property="og:description" content="Uniformes y promocionales con bordado, serigrafía y DTF. Render al instante y pedido por WhatsApp." />
-  <meta property="og:image" content="img/fotos/hero.webp" />
+  <!-- WhatsApp y Facebook solo leen la imagen con dirección completa; JPG 1200×630 -->
+  <meta property="og:image" content="https://zain-amber-sigma.vercel.app/img/fotos/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ZAIN: playera, polo y camisa con logo bordado y estampado" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=21" />
+  <link rel="stylesheet" href="css/zain.css?v=25" />
   <link rel="stylesheet" href="css/privacidad.css?v=1" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
@@ -71,7 +81,7 @@
           <span class="linea"><span>en todo lo que</span></span>
           <span class="linea"><span>usa tu equipo.</span></span>
         </h1>
-        <p class="portada__lede">Playeras, polos, camisas, chamarras, gorras y bolsas con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
+        <p class="portada__lede"><span id="ledeProductos">Playeras, polos, camisas, chamarras, chalecos y bolsas</span> con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
         <div class="portada__acciones">
           <a class="btn btn--tinta" href="#personaliza">Personalizar ahora</a>
           <a class="btn btn--linea" href="#catalogo">Ver catálogo</a>
@@ -172,7 +182,7 @@
               <label class="subir" id="subir">
                 <input type="file" id="archivo" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
                 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg>
-                <span id="subirTxt"><b>Elige tu logo</b> o arrástralo aquí · PNG, JPG o SVG</span>
+                <span id="subirTxt"><b>Elige tu logo</b><span class="solo-raton"> o arrástralo aquí</span> · PNG, JPG o SVG</span>
               </label>
               <div class="analisis" id="analisis" hidden aria-live="polite"></div>
               <label class="interruptor">
@@ -182,12 +192,15 @@
               <div class="tinta-logo">
                 <span>Color del logo</span>
                 <div class="opciones" id="oTinta"></div>
-                <div class="fila">
-                  <label class="campo campo--color"><span>Elegir otro color</span><input type="color" id="colorLogo" value="#141416" /></label>
-                  <label class="campo"><span>Código HEX</span><input type="text" id="hexLogo" value="#141416" maxlength="7" spellcheck="false" autocomplete="off" aria-describedby="hexLogoAviso" /></label>
-                </div>
-                <small id="hexLogoAviso" role="status"></small>
                 <span id="tintaActual">Color original del archivo</span>
+                <details class="mas-opciones" id="otroColor">
+                  <summary>Otro color (selector o código HEX)</summary>
+                  <div class="fila">
+                    <label class="campo campo--color"><span>Elegir otro color</span><input type="color" id="colorLogo" value="#141416" /></label>
+                    <label class="campo"><span>Código HEX</span><input type="text" id="hexLogo" value="#141416" maxlength="7" spellcheck="false" autocomplete="off" aria-describedby="hexLogoAviso" /></label>
+                  </div>
+                  <small id="hexLogoAviso" role="status"></small>
+                </details>
               </div>
             </div>
             <div class="modo" data-modo="texto" hidden>
@@ -210,11 +223,14 @@
                 </label>
               </div>
             </div>
-            <label class="campo pantone-logo">
-              <span>Referencia Pantone (opcional)</span>
-              <input type="text" id="pantoneLogo" maxlength="50" placeholder="Ej. 186 C" autocomplete="off" aria-describedby="pantoneNota" />
-              <small id="pantoneNota">Para producción. La vista previa usa el color seleccionado o HEX; confirmamos el Pantone al cotizar.</small>
-            </label>
+            <details class="mas-opciones" id="pantoneDetalle">
+              <summary>Referencia Pantone (opcional)</summary>
+              <label class="campo pantone-logo">
+                <span>Código Pantone</span>
+                <input type="text" id="pantoneLogo" maxlength="50" placeholder="Ej. 186 C" autocomplete="off" aria-describedby="pantoneNota" />
+                <small id="pantoneNota">Para producción. La vista previa usa el color seleccionado o HEX; confirmamos el Pantone al cotizar.</small>
+              </label>
+            </details>
           </fieldset>
 
           <fieldset class="paso">
@@ -333,6 +349,20 @@
     </aside>
   </div>
 
+  <!-- ===================== HOJA DE PRODUCTO (al tocar una tarjeta del catálogo) ===================== -->
+  <div class="pedido hoja" id="hoja" aria-hidden="true">
+    <div class="pedido__fondo" data-cerrar></div>
+    <div class="pedido__caja hoja__caja" role="dialog" aria-modal="true" aria-labelledby="hojaTitulo">
+      <header class="pedido__cabeza">
+        <h2 id="hojaTitulo">Producto</h2>
+        <button class="pedido__x" type="button" data-cerrar aria-label="Cerrar producto">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </header>
+      <div class="pedido__items hoja__cuerpo" id="hojaCuerpo"></div>
+    </div>
+  </div>
+
   <!-- ===================== AGREGAR RÁPIDO (botón «+» del catálogo) ===================== -->
   <div class="pedido rapido" id="rapido" aria-hidden="true">
     <div class="pedido__fondo" data-cerrar></div>
@@ -420,7 +450,7 @@
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=4"></script>
-  <script src="js/zain.js?v=33"></script>
+  <script src="js/zain.js?v=37"></script>
 <script src="js/subir.js?v=3"></script>
 </body>
 </html>

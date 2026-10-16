@@ -25,7 +25,12 @@
   const minimo = (p) => p.minimoPiezas || 0;
   const pasoCantidad = (p) => p.pasoPiezas || 1;
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
-  const reglaCantidad = (p) => minimo(p) ? `Mínimo ${minimo(p)} piezas por modelo y color, en incrementos de ${pasoCantidad(p)}.` : "Cantidad y condiciones a confirmar al cotizar.";
+  const reglaCantidad = (p) => {
+    const min = minimo(p), paso = pasoCantidad(p);
+    if (!min) return "Cantidad y condiciones a confirmar al cotizar.";
+    if (min <= 1 && paso <= 1) return "Desde 1 pieza por modelo y color.";
+    return `Mínimo ${min} ${min === 1 ? "pieza" : "piezas"} por modelo y color${paso > 1 ? `, en incrementos de ${paso}` : ""}.`;
+  };
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
   const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table>${p.tolerancia?`<small>Tolerancia: ancho ±${esc(p.tolerancia.ancho)} cm; largo ±${esc(p.tolerancia.largo)} cm.</small>`:""}</details>`;
   const varianteSelector = (p, id, attr = "") => {
@@ -81,6 +86,12 @@
     .map(([a, b]) => `<li><span>${esc(a)}</span><b>${esc(b)}</b></li>`)
     .join("");
   $("#pEntrega").textContent = C.diasEntrega;
+  // la portada nombra solo lo que hoy está en el catálogo (se activa y oculta desde Gestión)
+  const productosLede = (C.categoriasCatalogo || []).flatMap((c) => String(c).toLocaleLowerCase("es-MX").split(/\s+y\s+/));
+  if (productosLede.length > 1) {
+    const lista = productosLede.slice(0, -1).join(", ") + " y " + productosLede.at(-1);
+    $("#ledeProductos").textContent = lista.charAt(0).toLocaleUpperCase("es-MX") + lista.slice(1);
+  }
   $("#anio").textContent = "© " + new Date().getFullYear();
 
   $("#preguntasLista").innerHTML = C.preguntas
@@ -406,7 +417,7 @@
     $$("#rejilla [data-categoria-titulo]").forEach(h=>h.hidden=filtro!=="Todo");
     $("#catTitulo").textContent=filtro==="Todo"?"Catálogo":filtro;
     $("#catDescripcion").textContent=filtro==="Bolsas"?grupoBolsas.aviso:"Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
-    $$("#rejilla .producto").forEach(art=>art.hidden=filtro!=="Todo"&&art.dataset.cat!==filtro);
+    $$("#rejilla .mini").forEach(art=>art.hidden=filtro!=="Todo"&&art.dataset.cat!==filtro);
     $$("#rejilla [data-categoria-grupo]").forEach(grupo=>grupo.hidden=filtro!=="Todo"&&grupo.dataset.categoriaGrupo!==filtro);
     $$(".filtro").forEach(x=>{x.classList.toggle("on",x.dataset.cat===filtro);x.setAttribute("aria-selected",String(x.dataset.cat===filtro));});
   }
@@ -422,9 +433,25 @@
   $("#filtros").addEventListener("click",e=>{
     const b=e.target.closest("[data-cat]");if(!b)return;
     filtro=b.dataset.cat;history.replaceState(null,"",filtro==="Bolsas"?"#bolsas":"#catalogo");pintarCatalogo();
+    // con los filtros fijos arriba, al cambiar de categoría se vuelve al inicio de la rejilla
+    const rej=$("#rejilla").getBoundingClientRect(), alto=$("#filtros").getBoundingClientRect().bottom;
+    if(rej.top<alto) scrollTo({top:scrollY+rej.top-alto-12,behavior:reducido?"auto":"smooth"});
+    const barraF=$("#filtros");barraF.scrollTo({left:b.offsetLeft-(barraF.clientWidth-b.offsetWidth)/2,behavior:reducido?"auto":"smooth"});
   });
 
-  const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}"${p.grupo ? " hidden" : ""}>
+  // tarjeta compacta de la rejilla: foto, nombre, siluetas y colores; lo demás vive en la hoja de detalle
+  const mini = (p) => {
+    const nombre = p.nombreFamilia || p.nombre, v = variantes(p), n = p.colores.length;
+    const sub = [v.length > 1 ? v.map((x) => x.silueta).join(" y ") : "", `${n} ${n === 1 ? "color" : "colores"}`].filter(Boolean).join(" · ");
+    return `<article class="mini" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}" data-color="${esc(p.colores[0])}">
+    <div class="mini__foto"><canvas width="560" height="560" role="img" aria-label="${esc(nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}"></canvas></div>
+    <div class="mini__txt"><span class="mini__cat">${esc(p.categoria)}</span><h4 class="mini__nombre"><button type="button" class="mini__abrir" data-ver aria-haspopup="dialog">${esc(nombre)}</button></h4>
+    <p class="mini__sub">${esc(sub)}</p>
+    <div class="mini__puntos" aria-hidden="true">${p.colores.slice(0, 6).map(color).map((c) => `<i style="--c:${c.hex}"></i>`).join("")}${n > 6 ? `<span>+${n - 6}</span>` : ""}</div></div>
+    <button type="button" class="mini__mas" data-agregar aria-label="Agregar ${esc(nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  </article>`;
+  };
+  const tarjeta = (p) => `<article class="producto${p.prendaCatalogo ? " producto--catalogo" : ""}" data-id="${esc(p.id)}" data-cat="${esc(p.categoria)}">
     <div class="producto__foto"><canvas width="840" height="840" aria-label="${esc(p.nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}" role="img"></canvas>
       ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
     <div class="producto__contenido"><div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3></div>
@@ -432,8 +459,8 @@
     <div class="producto__paleta"><div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div><p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p></div>
     <ul class="producto__tec" aria-label="Técnicas disponibles">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul>
     <details class="producto__detalles"><summary><span class="producto__ver">Ver detalles</span><span class="producto__ocultar">Ocultar detalles</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></summary><div class="producto__ficha"><p>${esc(p.descripcion)}</p>${fichaProducto(p)}</div></details>
-    <div class="producto__pie"><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar</button></div></div></article>`;
-  $("#rejilla").innerHTML = categorias.slice(1).map((cat,i) => {const prendas=familias.filter(p=>p.categoria===cat);return prendas.length?`<section class="rejilla__grupo" data-categoria-grupo="${esc(cat)}"><h3 class="rejilla__categoria" id="categoria-${i}" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3><div class="rejilla__productos" data-cantidad="${prendas.length}">${prendas.map(tarjeta).join("")}</div></section>`:'';}).join("");
+    <div class="producto__pie"><button type="button" class="btn btn--linea btn--chico" data-agregar>Agregar rápido</button><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar con tu logo</button></div></div></article>`;
+  $("#rejilla").innerHTML = categorias.slice(1).map((cat,i) => {const prendas=familias.filter(p=>p.categoria===cat);return prendas.length?`<section class="rejilla__grupo" data-categoria-grupo="${esc(cat)}"><h3 class="rejilla__categoria" id="categoria-${i}" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3><div class="rejilla__productos" data-cantidad="${prendas.length}">${prendas.map(mini).join("")}</div></section>`:'';}).join("");
 
 
   const mostrarImagen = (art, index) => {
@@ -464,19 +491,88 @@
     art.dataset.color = idColor;
     art.classList.add("lista");
   };
+  const pintarMini = async (art) => {
+    const p = prod(art.dataset.id), idColor = art.dataset.color || p.colores[0];
+    const img = await ZR.cargar(p.foto);
+    if (art.dataset.id !== p.id || art.dataset.color !== idColor) return;
+    const cv = $("canvas", art), g = cv.getContext("2d");
+    g.clearRect(0, 0, cv.width, cv.height);
+    g.drawImage(prendaTenida(p, img, idColor, cv.width), 0, 0);
+    art.classList.add("lista");
+  };
   const ioTarjetas = new IntersectionObserver(
     (ents) =>
       ents.forEach((en) => {
         if (!en.isIntersecting) return;
-        if (en.target.dataset.grupo) return;
         ioTarjetas.unobserve(en.target);
-        pintarTarjeta(en.target, en.target.dataset.color || prod(en.target.dataset.id).colores[0]);
+        pintarMini(en.target);
       }),
     { rootMargin: "300px" },
   );
-  $$(".producto[data-id]").forEach((a) => ioTarjetas.observe(a));
+  $$("#rejilla .mini").forEach((a) => ioTarjetas.observe(a));
+
+  /* hoja de detalle: la ficha completa del producto (silueta, colores, técnicas y especificaciones) */
+  const hojaEl = $("#hoja"), hojaCuerpo = $("#hojaCuerpo");
+  let hojaMini = null, hojaHistoria = false, alVolverHoja = null;
+  function abrirHoja(m) {
+    const p = prod(m.dataset.id);
+    const holder = document.createElement("div"); holder.innerHTML = tarjeta(p);
+    const art = holder.firstElementChild, elegido = m.dataset.color || p.colores[0];
+    hojaCuerpo.replaceChildren(art);
+    $$(".punto[data-color]", art).forEach((x) => { x.classList.toggle("on", x.dataset.color === elegido); x.setAttribute("aria-checked", x.dataset.color === elegido); });
+    pintarTarjeta(art, elegido);
+    $("#hojaTitulo").textContent = p.categoria;
+    hojaMini = m;
+    hojaEl.classList.add("abierto");
+    hojaEl.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("sin-scroll");
+    hojaCuerpo.scrollTop = 0;
+    // el botón «atrás» del celular cierra la hoja en vez de salir de la página
+    // sin restaurar scroll: regresar en el historial no debe mover el catálogo
+    try { history.scrollRestoration = "manual"; history.pushState({ zainHoja: 1 }, ""); hojaHistoria = true; } catch { hojaHistoria = false; }
+    setTimeout(() => $(".pedido__x", hojaEl).focus(), 50);
+  }
+  // la compacta adopta la silueta y el color que se eligieron en la hoja
+  const sincronizarMini = () => {
+    const art = $(".producto", hojaCuerpo);
+    if (!hojaMini || !art || !art.dataset.color) return;
+    if (hojaMini.dataset.id === art.dataset.id && hojaMini.dataset.color === art.dataset.color) return;
+    hojaMini.dataset.id = art.dataset.id; hojaMini.dataset.color = art.dataset.color;
+    pintarMini(hojaMini);
+  };
+  // la promesa espera a que el navegador regrese en el historial antes de mover la página
+  function cerrarHoja({ foco = true } = {}) {
+    if (!hojaEl.classList.contains("abierto")) return Promise.resolve();
+    sincronizarMini();
+    hojaEl.classList.remove("abierto");
+    hojaEl.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("sin-scroll");
+    if (foco) $("[data-ver]", hojaMini)?.focus({ preventScroll: true });
+    setTimeout(() => { try { history.scrollRestoration = "auto"; } catch {} }, 500);
+    if (!hojaHistoria) return Promise.resolve();
+    hojaHistoria = false;
+    return new Promise((listo) => {
+      const fin = () => { clearTimeout(t); alVolverHoja = null; requestAnimationFrame(() => listo()); };
+      const t = setTimeout(fin, 400);
+      alVolverHoja = fin;
+      history.back();
+    });
+  }
+  addEventListener("popstate", () => {
+    if (alVolverHoja) { alVolverHoja(); return; }
+    if (hojaEl.classList.contains("abierto")) { hojaHistoria = false; cerrarHoja(); }
+  });
+  $$("[data-cerrar]", hojaEl).forEach((x) => x.addEventListener("click", () => cerrarHoja()));
+  addEventListener("keydown", (e) => e.key === "Escape" && hojaEl.classList.contains("abierto") && cerrarHoja());
+
   $("#rejilla").addEventListener("click", (e) => {
     if (e.target.closest("[data-abrir-bolsas]")) { abrirBolsas(); return; }
+    const m = e.target.closest(".mini");
+    if (!m) return;
+    if (e.target.closest("[data-agregar]")) { abrirRapido(m); return; }
+    abrirHoja(m);
+  });
+  hojaCuerpo.addEventListener("click", async (e) => {
     const art = e.target.closest(".producto");
     if (!art) return;
     const arrow = e.target.closest("[data-galeria]");
@@ -492,25 +588,27 @@
       return;
     }
     if (e.target.closest("[data-agregar]")) {
+      await cerrarHoja();
       abrirRapido(art);
       return;
     }
     if (e.target.closest("[data-personalizar]")) {
-      const p = prod(art.dataset.id);
-      abrirEnTaller({ p: p.id, c: art.dataset.color || p.colores[0] });
+      const p = prod(art.dataset.id), c = art.dataset.color || p.colores[0];
+      await cerrarHoja({ foco: false });
+      abrirEnTaller({ p: p.id, c });
     }
   });
-  $("#rejilla").addEventListener("change", (e) => {
+  hojaCuerpo.addEventListener("change", (e) => {
     const sel = e.target.closest("[data-variante]"); if (!sel) return;
     const art = sel.closest(".producto"), before = prod(art.dataset.id), p = prod(sel.value);
     if (!p || p.familia !== before.familia) return;
     const detallesAbiertos = $(".producto__detalles", art)?.open;
     const chosen = p.colores.includes(art.dataset.color) ? art.dataset.color : p.colores[0];
     const holder = document.createElement("div"); holder.innerHTML = tarjeta(p); const next = holder.firstElementChild;
-    ioTarjetas.unobserve(art); art.replaceWith(next); ioTarjetas.observe(next);
+    art.replaceWith(next);
     $(".producto__detalles", next).open = !!detallesAbiertos;
     $$("[data-color]", next).forEach(x => { x.classList.toggle("on", x.dataset.color === chosen); x.setAttribute("aria-checked", x.dataset.color === chosen); });
-    pintarTarjeta(next, chosen); pintarCatalogo(); enfocarSilueta(next, p.id);
+    pintarTarjeta(next, chosen); enfocarSilueta(next, p.id);
   });
   pintarCatalogo();
 
@@ -547,7 +645,7 @@
   const zAct = () => pAct().zonas.find((z) => z.id === E.z) || pAct().zonas[0];
   const maxLogo = (z) => Math.round(z.max * (z.orientativa ? 1 : C.escalaMaxLogo || 1) * 2) / 2;
   const nombreTinta = () => E.tinta === "original" ? "Original" : (C.tintasLogo.find((c) => c.hex === E.tinta)?.nombre || "Color personalizado");
-  $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--chico" data-tinta="${c.hex}" aria-pressed="false"><i style="--c:${c.hex}"></i>${esc(nombreColor(c))}</button>`).join("");
+  $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--tinta" data-tinta="${c.hex}" aria-pressed="false" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"><i style="--c:${c.hex}"></i></button>`).join("");
   const sincronizarTinta = () => {
     $$("#oTinta [data-tinta]").forEach((x) => {
       const on = x.dataset.tinta === E.tinta;
@@ -573,7 +671,9 @@
     $("#modeloBolsa").innerHTML = bolsas.map((x) => `<option value="${esc(x.id)}"${x.id === p.id ? " selected" : ""}>${esc(x.nombre)} · ${esc(x.medidas)}</option>`).join("");
     $("#siluetaCampo").hidden = variantes(p).length < 2;
     $("#siluetaCampo").innerHTML = varianteSelector(p, "siluetaPrenda");
-    $("#productoInfo").innerHTML = fichaProducto(p);
+    // la ficha técnica va plegada para que el editor no se alargue; conserva si estaba abierta
+    const fichaAbierta = $("#productoInfo .mas-opciones")?.open;
+    $("#productoInfo").innerHTML = `<details class="mas-opciones"${fichaAbierta ? " open" : ""}><summary>Detalles de la prenda</summary>${fichaProducto(p)}</details>`;
     $("#vistaOrientativa").hidden = !p.renderOrientativo;
     $("#oColor").innerHTML = p.colores
       .map(color)
@@ -945,7 +1045,7 @@
       $("#subir").classList.add("con-logo");
       aviso("");
     } catch (er) {
-      $("#subirTxt").innerHTML = `<b>Elige tu logo</b> o arrástralo aquí · PNG, JPG o SVG`;
+      $("#subirTxt").innerHTML = `<b>Elige tu logo</b><span class="solo-raton"> o arrástralo aquí</span> · PNG, JPG o SVG`;
       aviso(er.message, true);
     } finally {
       $("#subir").classList.remove("analizando");
@@ -1428,7 +1528,7 @@
       return;
     }
     if (!cantidadValida(pAct(), E.piezas)) return aviso(reglaCantidad(pAct()), true);
-    if (E.modo === "imagen" && !$("#hexLogo").checkValidity()) { $("#hexLogo").focus(); return aviso("Revisa el código HEX del logo.", true); }
+    if (E.modo === "imagen" && !$("#hexLogo").checkValidity()) { $("#otroColor").open = true; $("#hexLogo").focus(); return aviso("Revisa el código HEX del logo.", true); }
     guardandoEditor = true;
     $("#agregar").disabled = true;
     const campos = $$("#panel fieldset");
@@ -1651,8 +1751,11 @@
     if (e.target.closest("#enviar") && !C.whatsapp) cerrarPedido();
   });
 
-  // el botón flotante de WhatsApp se esconde en el personalizador (ahí manda la barra de «Agregar»)
-  new IntersectionObserver(([en]) => $("#flotante").classList.toggle("fuera", en.isIntersecting), { rootMargin: "-30% 0px -30% 0px" }).observe($(".taller"));
+  // los botones flotantes (WhatsApp y volver arriba) se esconden en el personalizador: ahí manda la barra de «Agregar»
+  new IntersectionObserver(([en]) => {
+    $("#flotante").classList.toggle("fuera", en.isIntersecting);
+    document.documentElement.classList.toggle("en-taller", en.isIntersecting);
+  }, { rootMargin: "-30% 0px -30% 0px" }).observe($(".taller"));
 
   /* =====================================================================
      ANIMACIONES (solo si <html> tiene .anim; ver el <script> del <head>)
@@ -1691,7 +1794,7 @@
   marcar(".seccion__cabeza h2, .empresas h2, .pie__cta h2", "mascara");
   marcar(".seccion__cabeza p", "sube");
   marcar(".filtros, .promos, .taller__lienzo, .taller__panel, .pie__datos, .pie__cta .btn", "sube");
-  marcar(".producto", "sube", 4);
+  marcar(".mini", "sube", 4);
   marcar(".tecnica figure, .empresas__foto", "foto");
   $$(".tecnica--serigrafia figure").forEach((f) => window.ZainTrama?.montar(f));
   marcar(".tecnica__txt > *", "sube", 3);
