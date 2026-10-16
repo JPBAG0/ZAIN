@@ -2,7 +2,7 @@ import {documento,imprimir,actualizarImagenes} from './cotizacion-vista.js?v=2';
 let pedidoActual=null,cotizacionActual=null,imagenesActual={};
 addEventListener('zain:consulta-cliente',e=>{
  const x=e.detail,q=x.cotizacion,pedido=document.querySelector('#pedido');
- pedidoActual=x.id;cotizacionActual=q;imagenesActual={};
+ pedidoActual=x.folio;cotizacionActual=q;imagenesActual={};
  document.querySelector('#cotizacionCliente')?.remove();
  const section=document.createElement('section');section.id='cotizacionCliente';section.className='cot-area';section.setAttribute('aria-label','Tu cotización');
  if(!q){section.innerHTML='<h2>Tu cotización</h2><p class="cot-ayuda">ZAIN está preparando los precios y condiciones. Tu cotización aparecerá aquí cuando el equipo la revise y publique.</p>';}
@@ -10,5 +10,5 @@ addEventListener('zain:consulta-cliente',e=>{
  pedido.prepend(section);
 });
 // Reutiliza únicamente el render ya autorizado y cargado para este pedido.
-addEventListener('zain:render-cliente',e=>{const d=e.detail;if(d.pedidoId!==pedidoActual||!cotizacionActual||!cotizacionActual.partidas.some(p=>p.indice===d.indice))return;imagenesActual[d.indice]={src:d.src,referencia:false};const root=document.querySelector('#cotizacionCliente');if(root)actualizarImagenes(root,cotizacionActual,imagenesActual);});
-await import('./mi-pedido.js?v=5');
+addEventListener('zain:render-cliente',e=>{const d=e.detail;if(d.folio!==pedidoActual||!cotizacionActual||!cotizacionActual.partidas.some(p=>p.indice===d.indice))return;imagenesActual[d.indice]={src:d.src,referencia:false};const root=document.querySelector('#cotizacionCliente');if(root)actualizarImagenes(root,cotizacionActual,imagenesActual);});
+await import('./mi-pedido.js?v=6');
