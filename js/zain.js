@@ -1058,7 +1058,13 @@
   }
   ["#texto", "#letra", "#colorTexto"].forEach((s) => $(s).addEventListener("input", rehacerTexto));
 
-  // render final (para descargar y para el pedido): fondo, prenda y ficha técnica
+  // Diseño comercial: prenda y logo exactos del editor, con alpha y sin ficha.
+  function renderDiseno(S) {
+    const c = ZR.lienzo(S, S);
+    c.getContext("2d").drawImage(lienzo, 0, 0, S, S);
+    return c;
+  }
+  // Descarga técnica: conserva fondo y ficha; no se usa como imagen del membrete.
   function renderFinal(S) {
     const c = ZR.lienzo(S, S);
     const g = c.getContext("2d");
@@ -1432,7 +1438,7 @@
       E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${nombreTinta()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
     const tieneRender = !!(E.modo === "imagen" ? E.logo : E.texto.trim());
     const original = E.modo === "imagen" && E.logo ? archivoActual : null;
-    const render = tieneRender ? await new Promise((ok) => renderFinal(1200).toBlob(ok, "image/png")) : null;
+    const render = tieneRender ? await new Promise((ok) => renderDiseno(1200).toBlob(ok, "image/png")) : null;
     if (tieneRender && !render) throw new Error("No se pudo guardar el render. Intenta otra vez.");
     const item = {
       id: crypto.randomUUID(),
