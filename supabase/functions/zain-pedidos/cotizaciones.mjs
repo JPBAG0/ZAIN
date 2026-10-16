@@ -9,7 +9,7 @@ export function createQuotes({sb,row,fail,commercialItem}){
   const result=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:0,p_modo:'iniciar',p_borrador:borrador,p_publicada:null,p_actor:null})});
   return result||get(x.id);
  };
- return {ensure,publicada:async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=publicada&limit=1'))[0]?.publicada||null,
+ return {ensure,get,publicada:async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=publicada&limit=1'))[0]?.publicada||null,
   handle:async(request,url,op,user,jsonBody,currentCatalog)=>{
    if(op==='precios-config'&&request.method==='GET')return {config:await config()};
    if(op==='precios-guardar'&&request.method==='POST'){

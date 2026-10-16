@@ -109,3 +109,23 @@ test('equipo puede recuperar enlace de pedidos existentes sin exponer permiso de
   assert.deepEqual(a,b);assert.equal(a.folio,row.folio);assert.ok(a.url.endsWith(consultaToken(row)));assert.ok(!a.url.endsWith(token));
   const privateRow=await(await request('detalle&id='+id,null,'Bearer valid-user')).json();assert.equal(privateRow.pedido.folio,row.folio);for(const field of ['consulta_nonce','token_hash'])assert.ok(!JSON.stringify(privateRow).includes(field));
 });
+test('guarda nombre y fecha del cliente sin bloquear la solicitud',async()=>{
+  const {request,calls}=setup();
+  const r=await request('crear',{id,token,items:[item],files,cliente:{nombre:'  Taller\n Ejemplo  SA ',fecha:'2026-11-20',extra:'no'}});
+  assert.equal(r.status,200);
+  const patch=calls.find(x=>x.opts.method==='PATCH'&&x.url.includes('/zain_pedidos?'));
+  assert.ok(patch.url.includes('guardado_at=is.null'));
+  assert.deepEqual(JSON.parse(patch.opts.body),{cliente:{nombre:'Taller Ejemplo SA',fecha:'2026-11-20'}});
+});
+test('sin nombre válido no escribe datos del cliente',async()=>{
+  for(const cliente of [undefined,{nombre:'A'},{nombre:42},['x']]){
+    const {request,calls}=setup();
+    assert.equal((await request('crear',{id,token,items:[item],files,cliente})).status,200);
+    assert.ok(!calls.some(x=>x.opts.method==='PATCH'));
+  }
+});
+test('una fecha inválida se descarta y conserva el nombre',async()=>{
+  const {request,calls}=setup();
+  await request('crear',{id,token,items:[item],files,cliente:{nombre:'Ana',fecha:'mañana'}});
+  assert.deepEqual(JSON.parse(calls.find(x=>x.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana'}});
+});

@@ -1,3 +1,5 @@
+import {createGastos} from './gastos.mjs';
+import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {normalizarGeometria} from './logo-medidas.mjs';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
@@ -10,7 +12,7 @@ import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const TYPES = { 'image/png':'png', 'image/jpeg':'jpg', 'image/webp':'webp', 'image/svg+xml':'svg', 'application/pdf':'pdf' };
-const STATES = ['nuevo', 'contactado', 'cotizado', 'confirmado', 'produccion', 'entregado', 'cancelado'];
+const STATES = ['nuevo', 'contactado', 'cotizado', 'aceptado', 'confirmado', 'produccion', 'entregado', 'cancelado'];
 const fail = (status, message) => { const e = new Error(message); e.status = status; throw e; };
 const sha = x => createHash('sha256').update(x).digest('hex');
 const text = (v, max=1000) => typeof v === 'string' ? v.replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').slice(0,max) : '';
@@ -135,6 +137,17 @@ export function createHandler(env={}, fetcher=fetch) {
     return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
+  // Nombre/empresa y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
+  const clienteSolicitud=c=>{
+    if(!c||typeof c!=='object'||Array.isArray(c))return null;
+    const nombre=typeof c.nombre==='string'?c.nombre.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,120):'';
+    const fecha=typeof c.fecha==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(c.fecha)&&!Number.isNaN(Date.parse(c.fecha+'T12:00:00Z'))?c.fecha:'';
+    return nombre.length>=2?{nombre,...(fecha?{fecha}:{})}:null;
+  };
+  const guardarCliente=async(id,c)=>{
+    const x=clienteSolicitud(c);if(!x)return;
+    try{await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&guardado_at=is.null',{method:'PATCH',body:JSON.stringify({cliente:x})});}catch{console.warn('ZAIN: no se guardaron los datos de contacto de la solicitud.');}
+  };
   const row=async(id)=>{validateID(id);const rows=await sb('/rest/v1/zain_pedidos?id=eq.'+id+'&select=*&limit=1');if(!rows?.[0])fail(404,'Solicitud no encontrada.');return rows[0];};
   const owner=async body=>{const x=await row(body.id);if(x.archivado_at)fail(410,'Esta solicitud fue retirada. Contacta a ZAIN.');if(!equal(x.token_hash,validateToken(body.token)))fail(403,'No se pudo verificar esta solicitud.');return x;};
   const identity=async req=> {
@@ -179,6 +192,8 @@ export function createHandler(env={}, fetcher=fetch) {
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   const quotes=createQuotes({sb,row,fail,commercialItem});
+  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher});
+  const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -208,6 +223,7 @@ export function createHandler(env={}, fetcher=fetch) {
             if(existing){
               if(existing.items?.[0]?.pedido_hash){
                 if(existing.items[0].pedido_hash!==requestHash)fail(409,'Esta solicitud ya existe con otros datos.');
+                await guardarCliente(body.id,body.cliente);
                 return response(200,{id:body.id,folio:existing.folio});
               }
               const old=validateOrder(body,{allowHistoricos:true});
@@ -227,6 +243,7 @@ export function createHandler(env={}, fetcher=fetch) {
           const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
           const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');
           const result=await sb('/rest/v1/rpc/zain_crear_pedido',{method:'POST',body:JSON.stringify({p_id:body.id,p_token_hash:validateToken(body.token),p_items:x.items,p_archivos:x.manifest,p_total:x.total,p_bytes:x.bytes,p_capacity:Math.min(Number(env.ZAIN_CAPACITY_MB)||800,100000)*1024*1024,p_client:client})});
+          await guardarCliente(body.id,body.cliente);
           return response(200,{id:body.id,folio:result.folio});
         }
         const x=await owner(body);
@@ -246,9 +263,10 @@ export function createHandler(env={}, fetcher=fetch) {
         if(quotesEnabled){try{await quotes.ensure(x);}catch{console.warn('ZAIN: borrador pendiente; se reintentará desde gestión.');}}
         return response(200,receipt(x));
       }
-      if(request.method==='POST'&&['consulta','archivo-consulta'].includes(op)) {
+      if(request.method==='POST'&&['consulta','archivo-consulta',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
-        return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id)}:{})}}:await signedFile(x,b));
+        if(op==='cotizacion-aceptar')return response(200,await seguimiento.aceptar(x,b));
+        return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id),...(seguimientoEnabled?{seguimiento:await seguimiento.leer(x.id)}:{})}:{})}}:await signedFile(x,b));
       }
       if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){
         if(!altasEnabled)fail(503,'La cola local todavía no está habilitada.');
@@ -278,6 +296,13 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(gastosEnabled&&op==='gastos'&&request.method==='GET')return response(200,{finanzas:await gastos.leer(validateID(url.searchParams.get('id')))});
+      if(gastosEnabled&&op==='gastos-guardar'&&request.method==='POST')return response(200,{finanzas:await gastos.guardar(await jsonBody(request),user)});
+      if(gastosEnabled&&op==='gastos-comprobante'&&request.method==='POST')return response(200,await gastos.subir(request,url,user));
+      if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
+
+      if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
+      if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
       if(/^(precios-|cotizacion)/.test(op)){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
         return response(200,await quotes.handle(request,url,op,user,jsonBody,currentCatalog));
@@ -391,6 +416,10 @@ export function createHandler(env={}, fetcher=fetch) {
         const state=url.searchParams.get('estado');if(state&&!STATES.includes(state))fail(400,'Estado inválido.');
         const q=text(url.searchParams.get('q'),50).replace(/[^a-zA-Z0-9-]/g,'');
         const trash=url.searchParams.get('papelera')==='true';
+        if(gastosEnabled){
+          const out=await gastos.panel({p_estado:state||'',p_q:q,p_papelera:trash,p_semana:url.searchParams.get('periodo')==='semana',p_offset:Math.floor(offset)});
+          return response(200,{...out,equipo:user,pedidos:out.pedidos.map(({items,...x})=>({...x,selecciones:items.length,resumen:items.slice(0,2).map(p=>p.nombreZain||p.nombre).join(' / ')}))});
+        }
         let dateFilter='';
         if(url.searchParams.get('periodo')==='semana'){const summary=await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'});dateFilter='&created_at=gte.'+encodeURIComponent(summary.semana_desde);}
         const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at='+(trash?'not.is.null':'is.null')+'&select=id,folio,created_at,guardado_at,archivado_at,estado,total,version,items&order='+(trash?'archivado_at.desc,':'')+'created_at.desc,id.desc&limit=21&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':'')+dateFilter);
