@@ -56,4 +56,6 @@
 .cot-avisar{display:grid;gap:8px;margin-top:12px;padding:14px;border:1px solid #11823f40;border-radius:12px;background:#11823f0d}
 .cot-avisar[hidden]{display:none}
 .cot-avisar .btn--wa{justify-content:center;text-decoration:none}
+.cot-avisar .btn{white-space:normal;text-align:center;line-height:1.25}
+@media (max-width:560px){.cot-avisar .cot-acciones .btn{flex:1 1 100%}}
 .cot-avisar a[aria-disabled="true"]{opacity:.55;pointer-events:none}

@@ -68,7 +68,7 @@ function estadoPublicacion(q){
  const aviso=$('#cotAvisoCliente');if(aviso)aviso.hidden=!quote.publicada||pedido.estado==='cancelado';
 }
 // Aviso al cliente: abre WhatsApp con el mensaje listo; el equipo elige el chat y confirma el envío.
-const avisoHTML='<div class="cot-avisar" id="cotAvisoCliente" hidden><p class="cot-ayuda">Avísale al cliente que su cotización ya está en Mi pedido.</p><div class="cot-acciones"><a class="btn btn--wa" id="cotAvisar" href="#" target="_blank" rel="noopener" aria-disabled="true">Avisar al cliente por WhatsApp</a><button type="button" class="btn btn--linea" id="cotCopiarAviso" disabled>Copiar mensaje</button></div><p class="cot-ayuda" id="cotAvisoEstado" role="status">Preparando enlace…</p></div>';
+const avisoHTML='<div class="cot-avisar" id="cotAvisoCliente" hidden><p class="cot-ayuda">Avísale al cliente que su cotización ya está en Mi pedido.</p><div class="cot-acciones"><a class="btn btn--wa" id="cotAvisar" href="#" target="_blank" rel="noopener" aria-disabled="true">Avisar por WhatsApp</a><button type="button" class="btn btn--linea" id="cotCopiarAviso" disabled>Copiar mensaje</button></div><p class="cot-ayuda" id="cotAvisoEstado" role="status">Preparando enlace…</p></div>';
 let avisoTexto='';
 const mensajeAviso=(x,url)=>{const nombre=(x.cliente?.nombre||'').trim();return (nombre?'Hola '+nombre+', ':'Hola, ')+'tu cotización de ZAIN ya está lista ✅\n\n★ Folio '+x.folio+'\nRevísala y acéptala aquí:\n'+url+'\n\nCualquier duda, por aquí te ayudamos.';};
 async function prepararAviso(){
