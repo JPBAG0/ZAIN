@@ -6,6 +6,9 @@ const labels={nuevo:'Por revisar',contactado:'Contactado',cotizado:'Cotizado',co
 const date=x=>new Date(x).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});
 const fecha=x=>new Date(x).toLocaleString('es-MX',{timeZone:'America/Mexico_City'});
 const chip=x=>'<span class="control__estadochip control__estadochip--'+(labels[x]?x:'nuevo')+'">'+esc(labels[x]||x)+'</span>';
+const imagenesModulo=import('./pedido-imagen.js?v=1'),recursosRender=[];
+const liberarRenders=()=>{dispatchEvent(new CustomEvent('zain:imagenes-liberar'));for(const r of recursosRender.splice(0))r.liberar();};
+addEventListener('zain:equipo-salio',liberarRenders);
 let config,session=null,offset=0,selected=null,refreshing=null,trash=false,revision=0,detailRevision=0,deleteTarget=null,authEpoch=0;
 try{session=JSON.parse(sessionStorage.getItem('zain-equipo'));}catch{}
 const status=(txt,error=false)=>{$('#estadoPanel').textContent=txt;$('#estadoPanel').classList.toggle('error',error);};
@@ -28,7 +31,7 @@ window.ZAINEquipo={call,upload:async(id,blob)=>{
  const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo subir la foto.');return d;
 }};
 
-function closeDetail(){detailRevision++;selected=null;if($('#ficha').open)$('#ficha').close();history.replaceState(null,'',location.pathname+location.search);}
+function closeDetail(){liberarRenders();detailRevision++;selected=null;if($('#ficha').open)$('#ficha').close();history.replaceState(null,'',location.pathname+location.search);}
 function salir(){authEpoch++;revision++;closeDetail();if($('#confirmacion').open)$('#confirmacion').close();session=null;try{sessionStorage.removeItem('zain-equipo');}catch{}$('#trabajo').hidden=true;$('#acceso').hidden=false;$('#salir').hidden=true;$('#equipo').textContent='';$('#lista').replaceChildren();$('#resumen').replaceChildren();$('#detalle').replaceChildren();dispatchEvent(new CustomEvent('zain:equipo-salio'));}
 const failed=er=>{if(er.auth)salir();status(er.message||'No se pudo conectar. Prueba Actualizar.',true);};
 function vistas(){
@@ -65,17 +68,17 @@ const itemHTML=(p,i,files)=>{
 async function detalle(id){
  const turn=++detailRevision;selected=null;$('#detalle').innerHTML='<p>Abriendo ficha del pedido…</p>';if(!$('#ficha').open)$('#ficha').showModal();document.documentElement.classList.add('sin-scroll');
  const {pedido:x}=await call('detalle',null,{id});if(turn!==detailRevision||!session)return;selected=x;$('#detalle').dataset.pedido=x.id;
- const files=x.archivos||[];
+ liberarRenders();const files=x.archivos||[];
  $('#detalle').innerHTML='<div class="control__fichatitulo"><h2>'+esc(x.folio)+'</h2>'+chip(x.estado)+'</div><p class="control__dato">Recibido '+esc(fecha(x.created_at))+' · '+Number(x.total)+' piezas</p>'+(x.archivado_at?'<p class="control__retirado">En papelera desde '+esc(date(x.archivado_at))+'. Restaura el pedido para volver a atenderlo y habilitar su seguimiento.</p>':'')+x.items.map((p,i)=>itemHTML(p,i,files)).join('')+
  (!x.archivado_at?'<form id="editar" class="control__editar"><h3>Continuar el pedido</h3><label>Estado<select id="estadoPedido">'+Object.entries(labels).map(([k,v])=>'<option value="'+k+'"'+(x.estado===k?' selected':'')+'>'+v+'</option>').join('')+'</select></label><label>Notas del equipo<textarea id="notasEquipo" maxlength="5000" placeholder="Cotización, acuerdos y siguiente paso…">'+esc(x.notas_internas)+'</textarea></label><button class="btn btn--azul">Guardar estado y notas</button><p class="control__dato">La cotización se guarda y publica por separado, en su apartado de abajo.</p><p id="estadoFicha" role="status"></p></form>':'')+
  '<div class="control__acciones">'+(!x.archivado_at?'<button type="button" class="btn btn--linea" id="enlaceCliente">Copiar enlace del cliente</button>':'')+'<button type="button" class="btn btn--linea" id="exportarFicha">Exportar ficha</button><button type="button" class="btn '+(x.archivado_at?'btn--azul':'control__btnpeligro')+'" id="'+(x.archivado_at?'restaurar':'eliminar')+'">'+(x.archivado_at?'Restaurar pedido':'Eliminar pedido')+'</button></div><input id="urlCliente" aria-label="Enlace del cliente" readonly hidden><p id="estadoEnlace" role="status"></p><section class="control__historial"><h3>Actividad del pedido</h3><div id="historial">Cargando actividad…</div></section>';
  status('');
  const history=call('historial',null,{id:x.id}).then(data=>{if(turn!==detailRevision)return;$('#historial').innerHTML=data.historial.length?'<ol>'+data.historial.map(h=>'<li><small>'+esc(fecha(h.created_at))+'</small><b>'+esc(labels[h.estado_anterior]||h.estado_anterior)+' → '+esc(labels[h.estado_nuevo]||h.estado_nuevo)+'</b><p>'+esc(h.notas)+'</p></li>').join('')+'</ol>':'<p class="control__dato">Sin cambios registrados todavía.</p>';}).catch(()=>{if(turn===detailRevision)$('#historial').textContent='No se pudo cargar la actividad. Vuelve a abrir la ficha.';});
- const images=files.filter(f=>f.kind==='render').map(async f=>{try{const data=await call('archivo',{id:x.id,item:f.item,kind:'render'});if(turn!==detailRevision)return;const img=new Image();img.alt='Diseño de '+x.items[f.item].nombre;img.referrerPolicy='no-referrer';img.onload=()=>{if(turn===detailRevision)$('#render-'+f.item)?.replaceChildren(img);};img.onerror=()=>{if(turn===detailRevision)$('#render-'+f.item).textContent='Descarga el render para verlo.';};img.src=data.url;}catch{if(turn===detailRevision)$('#render-'+f.item).textContent='Vista previa no disponible.';}});
+ const images=files.filter(f=>f.kind==='render').map(async f=>{try{const {cargarRender}=await imagenesModulo,recurso=await cargarRender(()=>call('archivo',{id:x.id,item:f.item,kind:'render'}));if(turn!==detailRevision){recurso.liberar();return;}recursosRender.push(recurso);recurso.imagen.alt='Diseño de '+x.items[f.item].nombre;$('#render-'+f.item)?.replaceChildren(recurso.imagen);}catch{if(turn===detailRevision)$('#render-'+f.item).textContent='No se pudo cargar el diseño. Vuelve a abrir el pedido para reintentar.';}});
  await Promise.all([history,...images]);if(turn===detailRevision)dispatchEvent(new CustomEvent('zain:pedido-abierto',{detail:x}));
 }
 $('#cerrarDetalle').addEventListener('click',closeDetail);
-$('#ficha').addEventListener('close',()=>{document.documentElement.classList.remove('sin-scroll');detailRevision++;selected=null;history.replaceState(null,'',location.pathname+location.search);});
+$('#ficha').addEventListener('close',()=>{liberarRenders();document.documentElement.classList.remove('sin-scroll');detailRevision++;selected=null;history.replaceState(null,'',location.pathname+location.search);});
 $('#ficha').addEventListener('click',e=>{if(e.target===$('#ficha')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDetail();}});
 $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
 $('#login').addEventListener('submit',async e=>{e.preventDefault();$('#entrar').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;}});

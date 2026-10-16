@@ -1,15 +1,15 @@
 import {pesos} from './cotizacion-core.js';
 export const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const logo='<svg viewBox="0 0 370 150" role="img" aria-label="ZAIN"><path d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z"/><path fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z"/><path d="M227 0H253V150H227Z"/><path d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z"/></svg>';
-const fecha=(value,soloFecha=false)=>{if(!value)return 'Por acordar';const d=new Date(soloFecha?value+'T12:00:00Z':value);return Number.isNaN(d.valueOf())?'Por acordar':d.toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});};
+export const logo='<svg viewBox="0 0 370 150" role="img" aria-label="ZAIN"><path d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z"/><path fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z"/><path d="M227 0H253V150H227Z"/><path d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z"/></svg>';
+export const fecha=(value,soloFecha=false)=>{if(!value)return 'Por acordar';const d=new Date(soloFecha?value+'T12:00:00Z':value);return Number.isNaN(d.valueOf())?'Por acordar':d.toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});};
 function imagenValida(src){if(typeof src!=='string'||!src)return '';if(/^data:image\/png;base64,[A-Za-z0-9+/]+=*$/.test(src))return src;try{const u=new URL(src,globalThis.location?.href||'https://zain-amber-sigma.vercel.app/');return ['https:','http:','blob:'].includes(u.protocol)?u.href:'';}catch{return '';}}
-function imagenDe(p,imagenes){
- if(imagenes?.[p.indice]?.pendiente)return null;
+export function imagenDe(p,imagenes){
+ if(imagenes?.[p.indice]?.pendiente||imagenes?.[p.indice]?.error)return null;
  const custom=imagenes?.[p.indice],src=imagenValida(custom?.src);if(src)return {src,referencia:!!custom.referencia};
  const c=globalThis.window?.ZAIN,product=[...(c?.productos||[]),...(c?.productosHistoricos||[])].find(x=>x.sku===p.sku);
  const fallback=imagenValida(product?.foto);return fallback?{src:fallback,referencia:true}:null;
 }
-function contenidoImagen(p,imagenes){const v=imagenDe(p,imagenes);return v?`<img src="${esc(v.src)}" alt="${esc((v.referencia?'Referencia del modelo: ':'Diseño solicitado: ')+p.nombre)}" referrerpolicy="no-referrer" decoding="async"><figcaption>${v.referencia?'Referencia del modelo':'Diseño solicitado'}</figcaption>`:imagenes?.[p.indice]?.pendiente?'<span class="cot-sinimagen">Preparando diseño…</span>':'<span class="cot-sinimagen">Vista previa<br>por confirmar</span>';}
+function contenidoImagen(p,imagenes){const v=imagenDe(p,imagenes);return v?`<img src="${esc(v.src)}" alt="${esc((v.referencia?'Referencia del modelo: ':'Diseño solicitado: ')+p.nombre)}" referrerpolicy="no-referrer" decoding="async"><figcaption>${v.referencia?'Referencia del modelo':'Diseño solicitado'}</figcaption>`:imagenes?.[p.indice]?.pendiente?'<span class="cot-sinimagen">Preparando diseño…</span>':imagenes?.[p.indice]?.error?'<span class="cot-sinimagen">Diseño no disponible.<br>Actualiza para reintentar.</span>':'<span class="cot-sinimagen">Vista previa<br>por confirmar</span>';}
 const imagen=(p,imagenes,clase)=>`<figure class="${clase}" data-cot-imagen="${Number(p.indice)}">${contenidoImagen(p,imagenes)}</figure>`;
 export function actualizarImagenes(root,q,imagenes){for(const el of root.querySelectorAll('[data-cot-imagen]')){const p=q.partidas.find(p=>String(p.indice)===el.dataset.cotImagen);if(p)el.innerHTML=contenidoImagen(p,imagenes);}}
 export function documento(q,{folio=q.folio||'',borrador=false,imagenes={}}={}){
@@ -25,10 +25,10 @@ export function documento(q,{folio=q.folio||'',borrador=false,imagenes={}}={}){
  <footer class="cot-pie"><div>${correo?`<strong>${esc(correo)}</strong>`:''}${whatsapp?`<span>WhatsApp +${esc(whatsapp)}</span>`:''}</div><div><strong>Tu logo. Tu equipo. ZAIN.</strong><span>Renders orientativos; diseño final por confirmar.</span></div></footer></article>`;
 }
 export function imprimir(q,options){
- const w=window.open('about:blank','_blank');if(!w)throw Error('Permite abrir la vista de impresión para guardar tu PDF.');
+ const w=window.open('about:blank','_blank');if(!w)throw Error('Permite abrir la vista de impresión.');
  const styles=['css/cotizaciones.css?v=7','css/cotizacion-documento.css?v=3'].map(path=>'<link rel="stylesheet" href="'+esc(new URL(path,location.href).href)+'">').join('');
  const script='<script>window.opener=null;addEventListener("load",()=>URL.revokeObjectURL(location.href),{once:true});document.getElementById("imprimir").addEventListener("click",async e=>{const b=e.currentTarget;b.disabled=true;await Promise.all([...document.images].map(img=>img.decode().catch(()=>{})));await document.fonts.ready;b.disabled=false;window.print();});</script>';
- const html='<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cotización ZAIN</title><link rel="icon" type="image/svg+xml" href="'+esc(new URL('/img/favicon.svg',location.href).href)+'">'+styles+'</head><body class="cot-impresion"><div class="cot-imprimir-barra"><button id="imprimir">Imprimir o guardar PDF</button><p>En el destino de impresión elige Guardar como PDF.</p></div>'+documento(q,options)+script+'</body></html>';
+ const html='<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cotización ZAIN</title><link rel="icon" type="image/svg+xml" href="'+esc(new URL('/img/favicon.svg',location.href).href)+'">'+styles+'</head><body class="cot-impresion"><div class="cot-imprimir-barra"><button id="imprimir">Imprimir</button><p>Para descargar el archivo directamente, vuelve a la cotización y pulsa Descargar PDF.</p></div>'+documento(q,options)+script+'</body></html>';
  const url=URL.createObjectURL(new Blob([html],{type:'text/html'}));
  w.location.replace(url);
  return w;
