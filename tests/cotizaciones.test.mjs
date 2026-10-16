@@ -95,9 +95,9 @@ test('pestañas anteriores no pueden borrar tarifas o guardar el esquema de cost
  assert.equal((await f.call('precios-guardar',{version:0,datos:{...cfg(),costeo:undefined}})).status,409);
  assert.equal((await f.call('cotizacion-guardar',{id,version:1,borrador:{...entrada(listo()),schema:2}})).status,409);
 });
-test('automático desactivado no incorpora costos de prendas ni tarifas al crear borradores',async()=>{
+test('abrir para revisión carga costos guardados aunque preparación automática esté desactivada',async()=>{
  const f=fixture({pricing:{...areaCfg(),activo:false}}),r=await(await f.call('cotizacion&id='+id)).json(),p=r.cotizacion.borrador.partidas[0];
- assert.equal(p.prenda,null);assert.equal(p.tarifaCm2,null);assert.equal(p.preparacion,0);assert.equal(p.modo,'area');
+ assert.equal(p.prenda,10000);assert.equal(p.tarifaCm2,200);assert.equal(p.preparacion,1000);assert.equal(p.modo,'area');
 });
 test('guardar y publicar área en servidor conserva solo el precio combinado en consulta de cliente',async()=>{
  const f=fixture({quote:{version:1,borrador:generar(items,areaCfg()),publicada:null}}),draft=entrada(generar(items,areaCfg()));draft.partidas[0].alto=500;draft.impuesto=0;
@@ -106,4 +106,17 @@ test('guardar y publicar área en servidor conserva solo el precio combinado en 
  const response=await(await f.call('consulta',{id,token:f.token},false)).json(),p=response.pedido.cotizacion.partidas;
  assert.equal(p.length,1);assert.equal(p[0].precio,saved.cotizacion.borrador.partidas[0].precio);
  for(const k of ['tarifaCm2','ancho','alto','area','prenda','aplicacion','margenObjetivo'])assert.ok(!JSON.stringify(response).includes('"'+k+'"'),k);
+});
+
+test('abrir borrador histórico sincroniza tarifas una vez y mantiene la publicación del cliente',async()=>{
+ const pricing=areaCfg();pricing.activo=false;pricing.tecnicas[1].tarifaCm2=20000;
+ const old=generar(items,inicial()),draft=entrada(old);draft.partidas[0].alto=500;draft.partidas[0].precio=19000;draft.partidas[0].descuento=500;
+ const publicada={...paraCliente(listo()),revision:1},f=fixture({pricing,quote:{version:1,borrador:calcular(items,draft),publicada}});
+ const first=await(await f.call('cotizacion&id='+id)).json();assert.equal(first.cotizacion.version,2);assert.equal(first.cotizacion.borrador.partidas[0].tarifaCm2,20000);assert.equal(first.cotizacion.borrador.partidas[0].alto,500);assert.equal(first.cotizacion.borrador.partidas[0].precioManual,19000);
+ const second=await(await f.call('cotizacion&id='+id)).json();assert.equal(second.cotizacion.version,2);assert.deepEqual(second.cotizacion.publicada,publicada);
+ const client=await(await f.call('consulta',{id,token:f.token},false)).json();assert.equal(client.pedido.cotizacion.total,publicada.total);assert.ok(!JSON.stringify(client).includes('origenCostos'));
+});
+test('actualizar costos conserva cambios de la revisión y usa control de versión',async()=>{
+ const pricing=areaCfg(),f=fixture({pricing}),first=await(await f.call('cotizacion&id='+id)).json();const v=entrada(first.cotizacion.borrador);v.partidas[0].alto=500;v.partidas[0].precio=18000;v.partidas[0].descuento=300;pricing.tecnicas[1].tarifaCm2=20000;
+ const result=await f.call('cotizacion-costos',{id,version:1,borrador:v});assert.equal(result.status,200);const r=await result.json();assert.equal(r.cotizacion.borrador.partidas[0].tarifaCm2,20000);assert.equal(r.cotizacion.borrador.partidas[0].precioManual,18000);assert.equal(r.cotizacion.borrador.partidas[0].descuento,300);assert.equal((await f.call('cotizacion-costos',{id,version:1,borrador:v})).status,409);
 });

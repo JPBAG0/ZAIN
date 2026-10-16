@@ -1,3 +1,11 @@
+## Vigente: Gestión móvil y costos vinculados — 15-oct-2026
+
+JP pidió trabajar Gestión principalmente desde celular y que las tarifas guardadas se carguen sin repetirlas en cada partida. Al abrir una cotización se consultan los costos actuales incluso con preparación automática de solicitudes desactivada. Borradores vinculados siguen los costos del panel mientras el equipo no los sustituya por un valor propio. Se registran valores de origen en JSON privado del borrador; los cambios manuales se reconocen comparando contra ese origen. Precios especiales, descuentos, impuesto, entrega y medidas revisadas se conservan. Actualizar costos permite revisar la configuración más reciente sin rehacer la cotización completa. La publicación del cliente nunca cambia automáticamente.
+
+Borradores históricos sin origen recuperan tarifas de área y costos por talla/pedientes; se conservan costos unitarios o fijos ya revisados y otros gastos distintos de cero. Configuración de costos y sus valores no se modifican al instalar esto. GET privado usa guardado con control de versión solo cuando cambia el borrador; no se actualizan pedidos en lote ni se leen pedidos reales para probar.
+
+Vista móvil de Gestión: paneles plegables de Técnicas/Prendas/Rangos; rangos en una sola fila de tres entradas y botón de quitar, ayuda breve y guardado accesible. Modal de pedido ocupa pantalla, controles legibles y navegación ajustada. No cambiar la portada ya aprobada.
+
 ## Vigente: cotizador compacto y controles sin estirar — 15-oct-2026
 
 JP reportó selectores gigantes junto a las bandas y exceso de campos. Se corrige la alineación vertical de controles; cada prenda muestra imagen, cantidad/tallas, costo resumido, medidas del logo, margen, descuento y precio por pieza/importe. Costos faltantes de prenda/tarifa e impuesto se piden directamente. El resto queda en Ajustar costos y medidas y Entrega y condiciones. Las bandas aplicables al color/cantidad/tallas actuales aparecen primero y los demás tramos quedan plegados, conservando todos sus valores al guardar. Consulta separada del costo de las tallas solicitadas.

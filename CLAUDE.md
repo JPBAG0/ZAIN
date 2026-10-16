@@ -1,3 +1,11 @@
+## Vigente: Gestión móvil y costos vinculados — 15-oct-2026
+
+JP pidió trabajar Gestión principalmente desde celular y que las tarifas guardadas se carguen sin repetirlas en cada partida. Al abrir una cotización se consultan los costos actuales incluso con preparación automática de solicitudes desactivada. Borradores vinculados siguen los costos del panel mientras el equipo no los sustituya por un valor propio. Se registran valores de origen en JSON privado del borrador; los cambios manuales se reconocen comparando contra ese origen. Precios especiales, descuentos, impuesto, entrega y medidas revisadas se conservan. Actualizar costos permite revisar la configuración más reciente sin rehacer la cotización completa. La publicación del cliente nunca cambia automáticamente.
+
+Borradores históricos sin origen recuperan tarifas de área y costos por talla/pedientes; se conservan costos unitarios o fijos ya revisados y otros gastos distintos de cero. Configuración de costos y sus valores no se modifican al instalar esto. GET privado usa guardado con control de versión solo cuando cambia el borrador; no se actualizan pedidos en lote ni se leen pedidos reales para probar.
+
+Vista móvil de Gestión: paneles plegables de Técnicas/Prendas/Rangos; rangos en una sola fila de tres entradas y botón de quitar, ayuda breve y guardado accesible. Modal de pedido ocupa pantalla, controles legibles y navegación ajustada. No cambiar la portada ya aprobada.
+
 ## Vigente: categoría pública Chamarras y sudaderas — 15-oct-2026
 
 JP pidió juntar ambas categorías en una sola. El cargador del catálogo público unifica Chamarras y Sudaderas en «Chamarras y sudaderas», con un solo filtro y un solo grupo; conserva los productos, variantes, fotografías y disponibilidad recibidos del servidor. Es agrupación de navegación pública; las clasificaciones originales del panel de gestión/costos y la base permanecen disponibles sin reescribir registros. Sin cambios de cotizaciones, pedidos, precios o backend. Se aplica también a futuras referencias que lleguen de cualquiera de las dos categorías.
