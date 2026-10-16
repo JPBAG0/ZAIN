@@ -6,7 +6,7 @@ import {validateOrder} from '../server/pedidos.mjs';
 import C from '../server/config-interno.cjs';
 const geometry={anchoPx:1000,altoPx:400,anchoCm:10};
 const item={sku:'TEST',nombre:'Prenda',tecnica:'DTF',piezas:10,color:'Negro',cm:10,logoGeometria:geometry};
-const cfg={...inicial(),activo:true,prendas:[{sku:'TEST',prenda:10000,otros:0}],tecnicas:inicial().tecnicas.map(t=>({...t,tarifaCm2:50}))};
+const cfg={...inicial(),activo:true,prendas:[{sku:'TEST',prenda:10000,otros:0}],tecnicas:inicial().tecnicas.map(t=>({...t,tarifaCm2:5000}))};
 test('proporción horizontal, cuadrada y vertical calcula alto con el ancho efectivo',()=>{
  assert.deepEqual(medidasLogo(10,geometry),{ancho:1000,alto:400});
  assert.deepEqual(medidasLogo(10,{anchoPx:500,altoPx:500,anchoCm:10}),{ancho:1000,alto:1000});

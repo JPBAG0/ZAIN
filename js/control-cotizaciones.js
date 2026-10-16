@@ -1,18 +1,18 @@
 import './control-confirmacion.js?v=1';
 import {ordenarCostos} from './control-costos-vista.js?v=1';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=6';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=7';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
-import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=8';
+import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=9';
 import {esc,documento,imprimir} from './cotizacion-vista.js?v=6';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;
 const geometriaPedido=new Map();
 const val=n=>n===null?'':(n/100).toFixed(2);
 const tramo=b=>b.desdePiezas!==undefined?' · '+b.desdePiezas+'–'+(b.hastaPiezas??'más')+' piezas por partida':'';
-const tarifa=n=>n===null?'':(n/10000).toFixed(4);
-const tarifaCampo=(name,label,value)=>`<label>${label}<input name="${name}" type="number" min="0" step="0.0001" inputmode="decimal" value="${esc(tarifa(value))}" placeholder="Pendiente"></label>`;
+const tarifa=n=>n===null?'':(n/1000000).toFixed(6).replace(/(\.\d{2,}?)0+$/,'$1');
+const tarifaCampo=(name,label,value)=>`<label>${label}<input name="${name}" type="number" min="0" step="0.000001" inputmode="decimal" value="${esc(tarifa(value))}" placeholder="Pendiente"></label>`;
 const leerTarifa=(fd,n)=>fd.get(n)===''?null:decimalTarifa(fd.get(n));
 const campo=(name,label,value,type='number',extra='')=>`<label>${label}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 const dinero=(fd,n,nullable=false)=>{const v=fd.get(n)??'';return v===''&&nullable?null:decimal(v===''?'0':v);};
@@ -28,7 +28,7 @@ function pintar(){
  ordenarCostos($('#formPrecios'),abiertos);filtrarPrendas(true);
 }
 function leerConfig(){
- const fd=new FormData($('#formPrecios'));return {metodo:'margen_bruto',costeo:'area_tallas_volumen_v3',activo:fd.has('activo'),rangos:config.datos.rangos.map((r,i)=>({desde:Number(fd.get('desde-'+i)),hasta:fd.get('hasta-'+i)===''?null:Number(fd.get('hasta-'+i)),margen:decimal(fd.get('margen-'+i))})),prendas:filasPrendas().map((p,i)=>({...p,sku:p.sku,prenda:p.bandas?.length?null:dinero(fd,'prenda-s'+i,true),otros:dinero(fd,'otros-s'+i),...(p.bandas?.length?{bandas:p.bandas.map((b,j)=>({...b,costo:dinero(fd,'banda-s'+i+'-'+j,true)}))}:{})})).filter(p=>p.prenda!==null||p.otros!==0||config.datos.prendas.some(old=>old.sku===p.sku)),tecnicas:config.datos.tecnicas.map((t,i)=>({tecnica:t.tecnica,tarifaCm2:leerTarifa(fd,'tarifa-'+i),preparacion:dinero(fd,'preparacion-t'+i)})),costos:config.datos.costos.map((p,i)=>({...p,prenda:dinero(fd,'prenda-'+i,true),aplicacion:dinero(fd,'aplicacion-'+i,true),otros:dinero(fd,'otros-'+i),preparacion:dinero(fd,'preparacion-'+i)}))};
+ const fd=new FormData($('#formPrecios'));return {metodo:'margen_bruto',costeo:'area_tallas_volumen_v4',activo:fd.has('activo'),rangos:config.datos.rangos.map((r,i)=>({desde:Number(fd.get('desde-'+i)),hasta:fd.get('hasta-'+i)===''?null:Number(fd.get('hasta-'+i)),margen:decimal(fd.get('margen-'+i))})),prendas:filasPrendas().map((p,i)=>({...p,sku:p.sku,prenda:p.bandas?.length?null:dinero(fd,'prenda-s'+i,true),otros:dinero(fd,'otros-s'+i),...(p.bandas?.length?{bandas:p.bandas.map((b,j)=>({...b,costo:dinero(fd,'banda-s'+i+'-'+j,true)}))}:{})})).filter(p=>p.prenda!==null||p.otros!==0||config.datos.prendas.some(old=>old.sku===p.sku)),tecnicas:config.datos.tecnicas.map((t,i)=>({tecnica:t.tecnica,tarifaCm2:leerTarifa(fd,'tarifa-'+i),preparacion:dinero(fd,'preparacion-t'+i)})),costos:config.datos.costos.map((p,i)=>({...p,prenda:dinero(fd,'prenda-'+i,true),aplicacion:dinero(fd,'aplicacion-'+i,true),otros:dinero(fd,'otros-'+i),preparacion:dinero(fd,'preparacion-'+i)}))};
 }
 async function cargar(){const turn=epoch;estado('Consultando costos privados…');try{const [c,cat]=await Promise.all([call('precios-config'),call('catalogo-lista')]);if(turn!==epoch)return;config={...c.config,datos:configurar(c.config.datos)};catalogo=cat.productos||cat.catalogo||[];dirty=false;pintar();estado('Costos guardados · versión '+config.version);}catch(e){if(turn===epoch)estado(e.message);}}
 const nav=$('.control__secciones');

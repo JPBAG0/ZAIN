@@ -1,4 +1,4 @@
-import {pesos} from './cotizacion-core.js?v=8';
+import {pesos} from './cotizacion-core.js?v=9';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
 import {documento,imprimir,actualizarImagenes} from './cotizacion-vista.js?v=6';
 let pedidoActual=null,cotizacionActual=null,imagenesActual={},revisionImagenes=0;

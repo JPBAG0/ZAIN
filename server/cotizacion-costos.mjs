@@ -1,13 +1,16 @@
-import {generar,calcular,entrada} from '../js/cotizacion-core.js';
+import {generar,calcular,entrada,tarifaLegada} from '../js/cotizacion-core.js';
 const campos=['modo','modoPrenda','bandas','prenda','tarifaCm2','aplicacion','otros','preparacion','margenObjetivo'];
 const igual=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+// Borradores anteriores al esquema 6 guardan la tarifa en diezmilésimas; su origen se compara en millonésimas.
+const escalar=p=>p&&p.tarifaCm2!=null?{...p,tarifaCm2:tarifaLegada(p.tarifaCm2)}:p;
+export function origenDe(b){const o=b?.origenCostos;return !o||b.schema>=6?o:{...o,partidas:(o.partidas||[]).map(escalar)};}
 export function vincularCostos(q,version,base=q){
  return {...q,origenCostos:{version,partidas:base.partidas.map(p=>Object.fromEntries(['sku','tecnica',...campos].map(k=>[k,structuredClone(p[k])])) )}};
 }
 export function sincronizarCostos(items,guardado,config){
- const actual=generar(items,config.datos),input=entrada(guardado),origen=guardado.origenCostos;
+ const actual=generar(items,config.datos),input=entrada(guardado),origen=origenDe(guardado),previas=guardado.schema>=6?guardado.partidas:guardado.partidas.map(escalar);
  for(let i=0;i<input.partidas.length;i++){
-  const v=input.partidas[i],antes=guardado.partidas[i],nuevo=actual.partidas[i],base=origen?.partidas?.[i];
+  const v=input.partidas[i],antes=previas[i],nuevo=actual.partidas[i],base=origen?.partidas?.[i];
   if(base&&base.sku===nuevo.sku&&base.tecnica===nuevo.tecnica){
    for(const k of campos){
     if(k==='aplicacion'&&v.modo==='fijo'&&base.modo!=='fijo')continue;

@@ -1,4 +1,4 @@
-import {vincularCostos,sincronizarCostos} from './cotizacion-costos.mjs';
+import {vincularCostos,sincronizarCostos,origenDe} from './cotizacion-costos.mjs';
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from '../js/cotizacion-core.js';
 export function createQuotes({sb,row,fail,commercialItem}){
  const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]?{...r[0],datos:configurar(r[0].datos)}:{version:0,datos:inicial()};};
@@ -14,7 +14,7 @@ export function createQuotes({sb,row,fail,commercialItem}){
    if(op==='precios-config'&&request.method==='GET')return {config:await config()};
    if(op==='precios-guardar'&&request.method==='POST'){
     const b=await jsonBody(request);if(!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Versión inválida.');
-    if(b.datos?.costeo!=='area_tallas_volumen_v3')fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
+    if(b.datos?.costeo!=='area_tallas_volumen_v4')fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
     let datos;try{datos=configurar(b.datos);}catch(e){fail(400,e.message);}
     const cat=await currentCatalog();for(const c of datos.costos){const p=[...cat.productos,...cat.productosHistoricos||[]].find(p=>p.sku===c.sku);if(!p||!cat.tecnicas.some(t=>t.nombre===c.tecnica&&p.tecnicas.includes(t.id)))fail(400,'Elige un SKU y técnica válidos.');}
     for(const c of datos.prendas)if(![...cat.productos,...cat.productosHistoricos||[]].some(p=>p.sku===c.sku))fail(400,'Elige un SKU válido para el costo de prenda.');
@@ -34,18 +34,18 @@ export function createQuotes({sb,row,fail,commercialItem}){
    if(!Number.isSafeInteger(b.version)||b.version<1)fail(400,'Versión inválida.');
    const old=await get(x.id);if(!old||old.version!==b.version)fail(409,'La cotización cambió. Vuelve a abrirla antes de guardar.');
    let draft=old.borrador,published=null,modo='guardar';
-   if(['cotizacion-guardar','cotizacion-costos'].includes(op)&&b.borrador?.schema!==5)fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
+   if(['cotizacion-guardar','cotizacion-costos'].includes(op)&&b.borrador?.schema!==6)fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
    try{
     if(['cotizacion-guardar','cotizacion-costos'].includes(op)){
      draft=calcular(x.items.map(commercialItem),b.borrador);
-     if(old.borrador.origenCostos)draft.origenCostos=old.borrador.origenCostos;
+     if(old.borrador.origenCostos)draft.origenCostos=origenDe(old.borrador);
      else {const cfg=await config();draft=vincularCostos(draft,cfg.version,generar(x.items.map(commercialItem),cfg.datos));}
      if(op==='cotizacion-costos')draft=sincronizarCostos(x.items.map(commercialItem),draft,await config());
     }
     if(op==='cotizacion-recalcular'){const cfg=await config();draft=vincularCostos(generar(x.items.map(commercialItem),cfg.datos),cfg.version);}
     if(op==='cotizacion-publicar'){
      if(['cancelado'].includes(x.estado))fail(409,'No publiques una cotización de un pedido cancelado.');
-     draft=calcular(x.items.map(commercialItem),entrada(old.borrador));if(old.borrador.origenCostos)draft.origenCostos=old.borrador.origenCostos;published=paraCliente(draft);modo='publicar';
+     draft=calcular(x.items.map(commercialItem),entrada(old.borrador));if(old.borrador.origenCostos)draft.origenCostos=origenDe(old.borrador);published=paraCliente(draft);modo='publicar';
     }
     if(op==='cotizacion-retirar')modo='retirar';
    }catch(e){if(e.status)throw e;fail(400,e.message);}

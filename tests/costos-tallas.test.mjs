@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {inicial,configurar,generar,entrada,calcular,paraCliente} from '../js/cotizacion-core.js';
 const bandas=[{tallas:['CH','M','G'],colores:['Blanco'],costo:7001},{tallas:['CH','M','G'],colores:['Azul marino'],costo:8002},{tallas:['EG'],colores:[],costo:9003}];
 const item={sku:'ZN-PL-099',nombreZain:'Playera de prueba',color:'Blanco',tecnica:'DTF',piezas:3,tallasDetalle:{M:2,EG:1},tallas:'M 2 · EG 1',cm:10};
-const cfg=()=>({...inicial(),activo:true,rangos:[{desde:1,hasta:null,margen:4000}],prendas:[{sku:item.sku,prenda:null,otros:10,bandas:structuredClone(bandas),fuente:'Lista privada de ejemplo'}],tecnicas:inicial().tecnicas.map(t=>({...t,tarifaCm2:50,preparacion:101}))});
+const cfg=()=>({...inicial(),activo:true,rangos:[{desde:1,hasta:null,margen:4000}],prendas:[{sku:item.sku,prenda:null,otros:10,bandas:structuredClone(bandas),fuente:'Lista privada de ejemplo'}],tecnicas:inicial().tecnicas.map(t=>({...t,tarifaCm2:5000,preparacion:101}))});
 function listo(x=item,c=cfg()){const input=entrada(generar([x],c));input.impuesto=0;input.partidas[0].alto=500;return calcular([x],input);}
 test('sumar cada talla con su costo exacto evita redondear el promedio antes de multiplicar',()=>{
  const q=listo(),p=q.partidas[0];assert.equal(p.costoPrendas,23005);assert.equal(p.aplicacion,25);assert.equal(p.costo,23211);assert.equal(p.sugerido,12895);assert.equal(q.subtotal,38685);assert.equal(p.detalleCostosTalla[1].importe,9003);

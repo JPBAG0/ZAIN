@@ -12,9 +12,16 @@ function areaLista(tecnica='DTF'){
  const pedido=[{...items[0],tecnica,piezas:10,cm:10}],q=generar(pedido,areaCfg()),v=entrada(q);v.partidas[0].alto=500;v.impuesto=0;
  return {pedido,q:calcular(pedido,v)};
 }
-test('tarifa por cm² admite cuatro decimales sin perder valores subcentavo',()=>{
- assert.equal(decimalTarifa('0.005'),50);assert.equal(decimalTarifa('0.0001'),1);assert.equal(decimalTarifa('1.2345'),12345);
- for(const v of ['0.00001','-0.1','1e2','NaN',''])assert.throws(()=>decimalTarifa(v));
+test('tarifa por cm² admite seis decimales sin perder valores subcentavo',()=>{
+ assert.equal(decimalTarifa('0.005'),5000);assert.equal(decimalTarifa('0.000001'),1);assert.equal(decimalTarifa('1.2345'),1234500);assert.equal(decimalTarifa('.025862'.replace(/^\./,'0.')),25862);
+ for(const v of ['0.0000001','-0.1','1e2','NaN',''])assert.throws(()=>decimalTarifa(v));
+});
+test('tarifas guardadas antes en diezmilésimas se leen ×100 sin cambiar el costo',()=>{
+ const c=areaCfg(),legacy={...c,costeo:'area_tallas_volumen_v3',tecnicas:c.tecnicas.map(t=>({...t,tarifaCm2:300}))};
+ assert.deepEqual(configurar(legacy).tecnicas.map(t=>t.tarifaCm2),[30000,30000,30000]);assert.equal(configurar(configurar(legacy)).tecnicas[0].tarifaCm2,30000);
+ const {pedido,q}=areaLista(),viejo={...q,schema:5,partidas:q.partidas.map(p=>({...p,tarifaCm2:p.tarifaCm2/100}))};
+ const v=entrada(viejo);assert.equal(v.partidas[0].tarifaCm2,q.partidas[0].tarifaCm2);assert.equal(entrada(v).partidas[0].tarifaCm2,q.partidas[0].tarifaCm2);
+ assert.equal(calcular(pedido,v).partidas[0].aplicacion,q.partidas[0].aplicacion);
 });
 test('las tres técnicas comparten costo de prenda pero tienen tarifas propias',()=>{
  const c=areaCfg();c.tecnicas[0].tarifaCm2=10;c.tecnicas[1].tarifaCm2=20;c.tecnicas[2].tarifaCm2=50;
@@ -29,7 +36,7 @@ test('ancho conocido no supone un cuadrado; faltan altura o tarifa y se bloquea 
  for(const diff of [{alto:null},{tarifaCm2:null},{prenda:null}]){const {q:base,pedido:ps}=areaLista(),v=entrada(base);Object.assign(v.partidas[0],diff,{precio:99999});const pending=calcular(ps,v);assert.equal(pending.preparada,false);assert.throws(()=>paraCliente(pending));}
 });
 test('área y aplicación recibidas no se confían: recalcula y redondea una vez a centavos',()=>{
- const {pedido,q}=areaLista(),v=entrada(q);Object.assign(v.partidas[0],{ancho:101,alto:101,tarifaCm2:50,area:1,aplicacion:99999});const p=calcular(pedido,v).partidas[0];assert.equal(p.area,10201);assert.equal(p.aplicacion,1);
+ const {pedido,q}=areaLista(),v=entrada(q);Object.assign(v.partidas[0],{ancho:101,alto:101,tarifaCm2:5000,area:1,aplicacion:99999});const p=calcular(pedido,v).partidas[0];assert.equal(p.area,10201);assert.equal(p.aplicacion,1);
  for(const diff of [{ancho:0},{alto:-1},{ancho:20001},{alto:NaN},{tarifaCm2:1.5},{modo:'inventado'},{tarifaCm2:Number.MAX_SAFE_INTEGER}])assert.throws(()=>calcular(pedido,{...v,partidas:[{...v.partidas[0],...diff}]}));
 });
 test('cero en tarifa es explícito y se distingue de costo desconocido',()=>{
@@ -97,7 +104,7 @@ test('pestañas anteriores no pueden borrar tarifas o guardar el esquema de cost
 });
 test('abrir para revisión carga costos guardados aunque preparación automática esté desactivada',async()=>{
  const f=fixture({pricing:{...areaCfg(),activo:false}}),r=await(await f.call('cotizacion&id='+id)).json(),p=r.cotizacion.borrador.partidas[0];
- assert.equal(p.prenda,10000);assert.equal(p.tarifaCm2,200);assert.equal(p.preparacion,1000);assert.equal(p.modo,'area');
+ assert.equal(p.prenda,10000);assert.equal(p.tarifaCm2,20000);assert.equal(p.preparacion,1000);assert.equal(p.modo,'area');
 });
 test('guardar y publicar área en servidor conserva solo el precio combinado en consulta de cliente',async()=>{
  const f=fixture({quote:{version:1,borrador:generar(items,areaCfg()),publicada:null}}),draft=entrada(generar(items,areaCfg()));draft.partidas[0].alto=500;draft.impuesto=0;
@@ -109,14 +116,14 @@ test('guardar y publicar área en servidor conserva solo el precio combinado en 
 });
 
 test('abrir borrador histórico sincroniza tarifas una vez y mantiene la publicación del cliente',async()=>{
- const pricing=areaCfg();pricing.activo=false;pricing.tecnicas[1].tarifaCm2=20000;
+ const pricing=areaCfg();pricing.activo=false;pricing.tecnicas[1].tarifaCm2=2000000;
  const old=generar(items,inicial()),draft=entrada(old);draft.partidas[0].alto=500;draft.partidas[0].precio=19000;draft.partidas[0].descuento=500;
  const publicada={...paraCliente(listo()),revision:1},f=fixture({pricing,quote:{version:1,borrador:calcular(items,draft),publicada}});
- const first=await(await f.call('cotizacion&id='+id)).json();assert.equal(first.cotizacion.version,2);assert.equal(first.cotizacion.borrador.partidas[0].tarifaCm2,20000);assert.equal(first.cotizacion.borrador.partidas[0].alto,500);assert.equal(first.cotizacion.borrador.partidas[0].precioManual,19000);
+ const first=await(await f.call('cotizacion&id='+id)).json();assert.equal(first.cotizacion.version,2);assert.equal(first.cotizacion.borrador.partidas[0].tarifaCm2,2000000);assert.equal(first.cotizacion.borrador.partidas[0].alto,500);assert.equal(first.cotizacion.borrador.partidas[0].precioManual,19000);
  const second=await(await f.call('cotizacion&id='+id)).json();assert.equal(second.cotizacion.version,2);assert.deepEqual(second.cotizacion.publicada,publicada);
  const client=await(await f.call('consulta',{id,token:f.token},false)).json();assert.equal(client.pedido.cotizacion.total,publicada.total);assert.ok(!JSON.stringify(client).includes('origenCostos'));
 });
 test('actualizar costos conserva cambios de la revisión y usa control de versión',async()=>{
- const pricing=areaCfg(),f=fixture({pricing}),first=await(await f.call('cotizacion&id='+id)).json();const v=entrada(first.cotizacion.borrador);v.partidas[0].alto=500;v.partidas[0].precio=18000;v.partidas[0].descuento=300;pricing.tecnicas[1].tarifaCm2=20000;
- const result=await f.call('cotizacion-costos',{id,version:1,borrador:v});assert.equal(result.status,200);const r=await result.json();assert.equal(r.cotizacion.borrador.partidas[0].tarifaCm2,20000);assert.equal(r.cotizacion.borrador.partidas[0].precioManual,18000);assert.equal(r.cotizacion.borrador.partidas[0].descuento,300);assert.equal((await f.call('cotizacion-costos',{id,version:1,borrador:v})).status,409);
+ const pricing=areaCfg(),f=fixture({pricing}),first=await(await f.call('cotizacion&id='+id)).json();const v=entrada(first.cotizacion.borrador);v.partidas[0].alto=500;v.partidas[0].precio=18000;v.partidas[0].descuento=300;pricing.tecnicas[1].tarifaCm2=2000000;
+ const result=await f.call('cotizacion-costos',{id,version:1,borrador:v});assert.equal(result.status,200);const r=await result.json();assert.equal(r.cotizacion.borrador.partidas[0].tarifaCm2,2000000);assert.equal(r.cotizacion.borrador.partidas[0].precioManual,18000);assert.equal(r.cotizacion.borrador.partidas[0].descuento,300);assert.equal((await f.call('cotizacion-costos',{id,version:1,borrador:v})).status,409);
 });

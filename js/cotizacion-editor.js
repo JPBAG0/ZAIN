@@ -1,8 +1,8 @@
-import {pesos} from './cotizacion-core.js?v=8';
+import {pesos} from './cotizacion-core.js?v=9';
 import {esc} from './cotizacion-vista.js?v=6';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
-const rate=(p,i)=>`<label>Costo de ${esc(p.tecnica)} / cm²<input name="tarifa-q${i}" type="number" min="0" step="0.0001" inputmode="decimal" value="${p.tarifaCm2==null?'':(p.tarifaCm2/10000).toFixed(4)}" placeholder="Tarifa pendiente"></label>`;
+const rate=(p,i)=>`<label>Costo de ${esc(p.tecnica)} / cm²<input name="tarifa-q${i}" type="number" min="0" step="0.000001" inputmode="decimal" value="${p.tarifaCm2==null?'':(p.tarifaCm2/1000000).toFixed(6).replace(/(\.\d{2,}?)0+$/,'$1')}" placeholder="Tarifa pendiente"></label>`;
 function imagen(src){if(typeof src!=='string'||!src.trim())return '';try{const u=new URL(src,globalThis.location?.href||'https://zain.test');return u.protocol==='https:'||u.origin===globalThis.location?.origin?esc(u.href):'';}catch{return '';}}
 const detalleTallas=p=>p.detalleCostosTalla?.length?`<details class="cot-desglose"><summary>Ver costo de las tallas solicitadas</summary><table><thead><tr><th>Talla</th><th>Piezas</th><th>Costo / pieza</th><th>Importe</th></tr></thead><tbody>${p.detalleCostosTalla.map(d=>`<tr><th>${esc(d.talla)}</th><td>${d.piezas}</td><td>${esc(pesos(d.costo))}</td><td>${esc(pesos(d.importe))}</td></tr>`).join('')}</tbody></table></details>`:'';
 function bandas(p,i){

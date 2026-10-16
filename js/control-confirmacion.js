@@ -1,4 +1,4 @@
-import {pesos,decimal} from './cotizacion-core.js?v=8';
+import {pesos,decimal} from './cotizacion-core.js?v=9';
 import {esc} from './cotizacion-vista.js?v=6';
 let epoca=0;
 addEventListener('zain:pedido-abierto',async e=>{
