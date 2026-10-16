@@ -1,3 +1,11 @@
+## Publicación autorizada: membrete de cotización v2 — 15-oct-2026
+
+JP aprobó expresamente la propuesta visual y pidió publicarla. Se integra el membrete v2 dinámico en Gestión→Ver membrete, Mi pedido e Imprimir/Guardar PDF. Logo ZAIN, bloque de prendas, datos de emisión/vigencia, selección con miniaturas, condiciones y total cobalto, siguiendo la propuesta aprobada. Las imágenes son los renders ya autorizados/cargados del pedido; cuando faltan se usa la foto pública del SKU identificada como Referencia del modelo, o un marcador sin inventar otra prenda. No se copian nombres/importes/fechas/IVA de la demostración: datos reales del borrador o última revisión publicada. Sin costo, margen, proveedor, bandas o tarifas internos.
+
+Diseño compartido con CSS separado, móvil375/390px, encabezados de tabla repetidos y filas indivisibles en impresión A4. Ejemplo de2partidas en1hoja y20partidas en3hojas comprobados. Ventana de impresión como documento local Blob, opener=null, URL revocada al cargar; el botón espera imágenes/fuentes antes de imprimir. No conserva el documento en servidor ni publica automáticamente una cotización. Guardar borrador y revisar/publicar siguen siendo acciones separadas; cotizaciones guardadas conservan sus cifras. Se actualizan versiones de recursos en ambas páginas. Backend Edge21, datos, precios, permisos y pedidos sin cambios.
+
+Validación visual con fixtures locales de gestión/cliente/publicación manual e impresión; renders originales de ejemplo, importes exactos, fechas CDMX, estados pendientes y ausencia de datos internos. Pruebas de escapado/URLs de imagen seguras. Sin pedidos o mensajes reales. Esta aprobación reemplaza las notas históricas que mantenían la propuesta v2 pendiente de aprobación e integración. Publicación final registrada en Cerebro.
+
 ## Entrega vigente: catálogo empresarial 2026 — 15-oct-2026
 
 Esta entrega sustituye los estados históricos de fuentes pendientes y renders bloqueados. Juan Pablo autorizó expresamente limpiar la transparencia después de generar las prendas. Se conservan los originales y se eliminan residuos externos y huecos espurios del alpha, sin redibujar cortes ni suavizar la tela.
