@@ -5,6 +5,7 @@
 (async () => {
   "use strict";
   await window.ZAINCatalogoListo;
+  const {normalizarGeometria} = await import("./logo-medidas.js?v=1");
   const C = window.ZAIN;
   const A = window.ZAINArchivos;
   const P = window.ZAINPedidos;
@@ -716,6 +717,8 @@
         const ly = z.y + E.dy * p.pxPorCm;
         ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000 });
         const alto = (ancho * logo.height) / logo.width;
+        $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
+        $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
         caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
         const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
         const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(color(E.c).hex))) < 0.2;
@@ -1438,6 +1441,8 @@
       E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${nombreTinta()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
     const tieneRender = !!(E.modo === "imagen" ? E.logo : E.texto.trim());
     const original = E.modo === "imagen" && E.logo ? archivoActual : null;
+    const logoPreparado = tieneRender ? await logoActual() : null;
+    const logoGeometria = logoPreparado && caja ? normalizarGeometria({anchoPx:logoPreparado.width,altoPx:logoPreparado.height,anchoCm:Math.round((caja.x1-caja.x0)/p.pxPorCm*100)/100}) : null;
     const render = tieneRender ? await new Promise((ok) => renderDiseno(1200).toBlob(ok, "image/png")) : null;
     if (tieneRender && !render) throw new Error("No se pudo guardar el render. Intenta otra vez.");
     const item = {
@@ -1455,6 +1460,7 @@
       tecnica: t.nombre,
       zona: z.nombre + (E.dx || E.dy ? " (posición ajustada)" : ""),
       cm: E.cm,
+      ...(logoGeometria ? {logoGeometria} : {}),
       tallas: p.tallas.length ? desglose.join(" · ") : "",
       tallasEtq: p.tallasNombre || "Tallas",
       piezas: E.piezas,

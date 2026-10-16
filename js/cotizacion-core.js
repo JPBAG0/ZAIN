@@ -1,3 +1,4 @@
+import {medidasLogo} from './logo-medidas.js';
 // Dinero en centavos; porcentajes en puntos base (100 = 1%). Compartido por servidor y vista previa.
 const MAX=100000000000;
 const error=m=>{throw new Error(m);};
@@ -77,8 +78,8 @@ export function generar(items,cfg){
  return calcular(items,{partidas:items.map((p,i)=>{
   const cp=c.costos.find(v=>v.sku===p.sku&&v.tecnica===p.tecnica),prenda=c.prendas.find(v=>v.sku===p.sku),t=c.tecnicas.find(t=>t.tecnica===p.tecnica),r=c.rangos.find(r=>p.piezas>=r.desde&&(r.hasta===null||p.piezas<=r.hasta));
   // Los costos anteriores siguen por pieza hasta que el equipo migre ese SKU expresamente.
-  const fijo=!!cp&&!prenda;
-  return {indice:i,modo:fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho:Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null,alto:null,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0};
+  const fijo=!!cp&&!prenda,medidas=medidasLogo(p.cm,p.logoGeometria);
+  return {indice:i,modo:fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho:medidas?.ancho??(Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null),alto:medidas?.alto??null,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0};
  }),destinatario:'',condiciones:'',plazo:'Por acordar con ZAIN.',vigencia:'',impuesto:null,envio:0,costoEnvio:0});
 }
 export function calcular(items,input){

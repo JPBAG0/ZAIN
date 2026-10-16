@@ -1,3 +1,4 @@
+import {normalizarGeometria} from './logo-medidas.mjs';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import C from './catalogo.mjs';
@@ -32,6 +33,11 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
     if (!colors.some(c=>c?.nombre===x.color)) fail(400,'Color de producto inválido.');
     if (!p.tecnicas.map(id=>C.tecnicas.find(t=>t.id===id)?.nombre).includes(x.tecnica)) fail(400,'Técnica inválida.');
     const item={ indice:i,p:p.id,nombre:p.nombre,color:x.color,tecnica:x.tecnica,piezas:n,medidas:p.medidas||'',detalleMedidas:text(x.detalleMedidas,500),zona:text(x.zona,120),cm:Number.isFinite(x.cm)?Math.max(0,Math.min(200,x.cm)):0,tallas:text(x.tallas,500),tallasEtq:text(x.tallasEtq,80),logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender };
+    if(x.logoGeometria!=null){
+      const geometria=normalizarGeometria(x.logoGeometria);
+      if(!geometria||!item.tieneRender||item.cm<=0||geometria.anchoCm>item.cm+0.01)fail(400,'Revisa las medidas del diseño del logo.');
+      item.logoGeometria=geometria;
+    }
     if(p.fabricante) {
       const col=colors.find(c=>(c?.codigo===x.colorCodigo || c?.idPublico===x.colorId) && c.nombre===x.color);
       if(!col)fail(400,'Código de color inválido para este modelo.');

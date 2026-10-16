@@ -5,11 +5,12 @@ import PublicC from '../js/config.js';
 const folder=new URL('../supabase/functions/zain-pedidos/',import.meta.url);
 await mkdir(folder,{recursive:true});
 const source=(await readFile(new URL('./pedidos.mjs',import.meta.url),'utf8')).replace("import C from './config-interno.cjs';","import C from './catalogo.mjs';");
-await writeFile(new URL('pedidos.mjs',folder),source.replace("import PublicC from '../js/config.js';","import PublicC from './publico.mjs';"));
+await writeFile(new URL('pedidos.mjs',folder),source.replace("import PublicC from '../js/config.js';","import PublicC from './publico.mjs';").replace("'../js/logo-medidas.js'","'./logo-medidas.mjs'"));
 await writeFile(new URL('publico.mjs',folder),'export default '+JSON.stringify(PublicC,null,2)+';\n');
 await writeFile(new URL('catalogo-gestion.mjs',folder),await readFile(new URL('./catalogo-gestion.mjs',import.meta.url),'utf8'));
 for(const name of ['catalogo-altas.mjs','talleres.mjs','cotizaciones.mjs'])await writeFile(new URL(name,folder),(await readFile(new URL('./'+name,import.meta.url),'utf8')).replace("'../js/cotizacion-core.js'","'./cotizacion-core.mjs'"));
-await writeFile(new URL('cotizacion-core.mjs',folder),await readFile(new URL('../js/cotizacion-core.js',import.meta.url),'utf8'));
+await writeFile(new URL('cotizacion-core.mjs',folder),(await readFile(new URL('../js/cotizacion-core.js',import.meta.url),'utf8')).replace("'./logo-medidas.js'","'./logo-medidas.mjs'"));
+await writeFile(new URL('logo-medidas.mjs',folder),await readFile(new URL('../js/logo-medidas.js',import.meta.url),'utf8'));
 await writeFile(new URL('catalogo.mjs',folder),'export default '+JSON.stringify(C,null,2)+';\n');
 await writeFile(new URL('index.ts',folder),`import {createHandler} from './pedidos.mjs';
 Deno.serve(createHandler({

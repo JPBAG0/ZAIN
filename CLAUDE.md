@@ -1,3 +1,9 @@
+## Vigente: alto automático del logo — 15-oct-2026
+
+JP pidió calcular el alto sin captura manual obligatoria. El personalizador guarda la proporción del logo ya preparado y el ancho efectivo del diseño, incluyendo el límite vertical de la zona. El borrador nuevo propone ancho y alto a dos decimales: alto = ancho × altoPx / anchoPx. No se requiere vectorizar ni API de IA. El equipo puede corregir medidas; cambiar alto manualmente detiene el seguimiento automático del ancho. «Calcular alto del logo» permite recuperarlo.
+
+Pedidos anteriores sin geometría: se intenta estimar desde el logo raster original autorizado usando el mismo limpiador del personalizador; únicamente completa altos vacíos en el borrador abierto y requiere guardar/revisar. PDF, SVG histórico, logo ausente o ilegible conservan captura manual, sin inventar un cuadrado. Medidas estimadas sujetas a revisión antes de producción; no son área de tinta ni puntadas. Cotizaciones publicadas, costos y archivos guardados no se reescriben. Esta sección sustituye el requisito histórico de confirmar siempre la altura a mano.
+
 ## Ajuste aprobado: diseños sin ficha y todas las selecciones — 15-oct-2026
 
 JP pidió quitar «Tu equipo, con identidad» y el párrafo de técnicas del membrete para usar todo el ancho en los diseños del cliente. Se reemplaza el hero promocional por una galería de todas las partidas (hasta20), con imagen, nombre, color y cantidad. Sin límite de2selecciones. Miniaturas sobre fondo blanco/transparente y sin mix-blend-mode que oscurezca la imagen. Móvil2columnas; impresión hasta4columnas con saltos entre productos.
