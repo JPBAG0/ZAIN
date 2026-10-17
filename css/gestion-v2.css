@@ -184,3 +184,6 @@
  .pedido-card__finanzas{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:8px}
  .bandeja-finanzas{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+.ficha-pasos{grid-template-columns:repeat(7,minmax(0,1fr))}
+.ficha-siguiente--cerrado{display:grid;cursor:default;background:#e4f1e9;border-color:#bfe0cc}
+.ficha-siguiente--cerrado small{color:#267663}

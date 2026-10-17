@@ -6,8 +6,8 @@ const labels={nuevo:'Por revisar',contactado:'Contactado',cotizado:'Cotizado',ac
 const date=x=>new Date(x).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});
 const fecha=x=>new Date(x).toLocaleString('es-MX',{timeZone:'America/Mexico_City'});
 const chip=x=>'<span class="control__estadochip control__estadochip--'+(labels[x]?x:'nuevo')+'">'+esc(labels[x]||x)+'</span>';
-const PASOS=[['nuevo','Solicitud'],['cotizado','Cotización'],['aceptado','Aceptada'],['confirmado','Anticipo'],['produccion','Producción'],['entregado','Entregado']];
-const ORDEN={nuevo:0,contactado:0,cotizado:1,aceptado:2,confirmado:3,produccion:4,entregado:5};
+const PASOS=[['nuevo','Solicitud'],['cotizado','Cotización'],['aceptado','Aceptada'],['confirmado','Anticipo'],['produccion','Producción'],['entregado','Entregado'],['cerrado','Cerrado']];
+const ORDEN={nuevo:0,contactado:0,cotizado:1,aceptado:2,confirmado:3,produccion:4,entregado:6};
 const SIGUIENTE={nuevo:['Escribe el precio y publica la cotización','cotizacion'],contactado:['Escribe el precio y publica la cotización','cotizacion'],cotizado:['Espera la aceptación o regístrala si el cliente aceptó por WhatsApp','cobro'],aceptado:['Registra el anticipo cuando lo recibas','cobro'],confirmado:['Asigna el taller y pasa el pedido a producción','resumen'],produccion:['Cuando lo entregues, márcalo como entregado','resumen'],entregado:['Registra los gastos y cierra el pedido','gastos']};
 const AVANZAR={confirmado:['produccion','Pasar a producción'],produccion:['entregado','Marcar como entregado']};
 const PESTANAS=[['resumen','Pedido'],['cotizacion','Cotización'],['cobro','Cobro'],['gastos','Gastos']];
@@ -15,7 +15,7 @@ const pestanaGuardada=new Map();
 function pasosHTML(x){
  if(x.estado==='cancelado')return '<div class="ficha-siguiente ficha-siguiente--cancelado">Pedido cancelado.</div>';
  const n=ORDEN[x.estado]??0,[texto,destino]=SIGUIENTE[x.estado]||SIGUIENTE.nuevo;
- return '<ol class="ficha-pasos" aria-label="Avance del pedido">'+PASOS.map(([k,t],i)=>'<li class="'+(i<n||x.estado==='entregado'?'hecho':i===n?'actual':'')+'"><span>'+(i<n||x.estado==='entregado'?'✓':i+1)+'</span>'+t+'</li>').join('')+'</ol><button type="button" class="ficha-siguiente" data-ir="'+destino+'"><small>Siguiente paso</small><b>'+esc(texto)+'</b><i aria-hidden="true">→</i></button>';
+ return '<ol class="ficha-pasos" aria-label="Avance del pedido">'+PASOS.map(([k,t],i)=>'<li data-paso="'+k+'" class="'+(i<n?'hecho':i===n?'actual':'')+'"><span>'+(i<n?'✓':i+1)+'</span>'+t+'</li>').join('')+'</ol><button type="button" class="ficha-siguiente" data-ir="'+destino+'"><small>Siguiente paso</small><b>'+esc(texto)+'</b><i aria-hidden="true">→</i></button>';
 }
 function verPestana(nombre){
  const d=$('#detalle');d.dataset.ver=nombre;if(selected)pestanaGuardada.set(selected.id,nombre);
@@ -120,6 +120,8 @@ $('#recargar').addEventListener('click',()=>cargar().catch(failed));
 addEventListener('zain:gastos-guardados',()=>cargar().catch(failed));
 addEventListener('zain:pago-registrado',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 addEventListener('zain:ver-pestana',e=>verPestana(e.detail));
+// La pestaña Gastos avisa si el pedido ya tiene cierre revisado: completar el último paso y quitar el aviso de cerrar.
+addEventListener('zain:pedido-finanzas',e=>{const {id,cerrado,utilidad}=e.detail;if(!selected||selected.id!==id||!cerrado)return;const paso=$('#detalle [data-paso="cerrado"]');if(paso){paso.className='hecho';paso.querySelector('span').textContent='✓';}const box=$('#detalle .ficha-siguiente');if(box)box.outerHTML='<div class="ficha-siguiente ficha-siguiente--cerrado"><small>Pedido cerrado</small><b>✓ Cierre revisado'+(utilidad==null?'':' · utilidad final '+new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(utilidad/100))+'</b></div>';});
 addEventListener('zain:cotizacion-publicada',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 $('#anterior').addEventListener('click',()=>{offset=Math.max(0,offset-20);cargar().catch(failed);});
 $('#siguiente').addEventListener('click',()=>{offset+=20;cargar().catch(failed);});
