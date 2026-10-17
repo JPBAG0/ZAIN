@@ -40,69 +40,69 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  const unidades=q.partidas.reduce((n,p)=>n+p.piezas,0),pagos=q.pagos,pct=pagos?pagos.anticipo/100:null,anticipo=pagos?anticipoDe(q.total,pagos):null;
  const impuestoTxt=q.impuesto==null?'Impuesto por definir':q.impuesto===0?'Sin IVA · MXN':'Impuesto incluido · MXN';
  // Portada
- fondo();doc.setFillColor(...tinta);doc.rect(0,0,210,78,'F');
- doc.addImage(logoBlanco.src,'JPEG',m,13,34,13.8,'marca-blanca');etq('Uniformes · Bordado · Serigrafía · DTF',m,32,gris);
- etq('Cotización',right,15,gris,'right');label(folio,right,21,10,true,blanco,'right',true);
- const estado=(borrador?'Borrador privado':q.revision?'Revisión '+q.revision:'Cotización revisada').toUpperCase();font(6.5,false,blanco,true);const ew=doc.getTextWidth(estado)+6;doc.setDrawColor(70,70,76);doc.setFillColor(34,34,38);doc.roundedRect(right-ew,24.5,ew,5.6,2.8,2.8,'FD');label(estado,right-ew/2,28.3,6.5,false,blanco,'center',true);
- doc.setDrawColor(52,52,58);doc.setLineWidth(.25);doc.line(m,38,right,38);
- label('Tu pedido,',m,51,26,true,blanco);label('listo para producir.',m,62,26,true,lila);
- const para=lines('Preparada para '+(q.destinatario||'Tu equipo')+' · '+unidades.toLocaleString('es-MX')+(unidades===1?' pieza':' piezas')+' en '+q.partidas.length+(q.partidas.length===1?' selección':' selecciones'),118,8.5);label(para[0],m,70.5,8.5,false,[201,201,207]);
- etq('Total',right,50,gris,'right');label(numero(q.total),right,61,21,true,blanco,'right');label(impuestoTxt,right,67,7.5,false,gris,'right');
- cinta(78);
+ fondo();doc.setFillColor(...tinta);doc.rect(0,0,210,64,'F');
+ doc.addImage(logoBlanco.src,'JPEG',m,10,29,11.8,'marca-blanca');etq('Uniformes · Bordado · Serigrafía · DTF',m,26,gris);
+ etq('Cotización',right,12,gris,'right');label(folio,right,17.5,10,true,blanco,'right',true);
+ const estado=(borrador?'Borrador privado':q.revision?'Revisión '+q.revision:'Cotización revisada').toUpperCase();font(6.5,false,blanco,true);const ew=doc.getTextWidth(estado)+6;doc.setDrawColor(70,70,76);doc.setFillColor(34,34,38);doc.roundedRect(right-ew,20.5,ew,5.6,2.8,2.8,'FD');label(estado,right-ew/2,24.3,6.5,false,blanco,'center',true);
+ doc.setDrawColor(52,52,58);doc.setLineWidth(.25);doc.line(m,31,right,31);
+ label('Tu pedido,',m,41.5,21,true,blanco);label('listo para producir.',m,50.5,21,true,lila);
+ const para=lines('Preparada para '+(q.destinatario||'Tu equipo')+' · '+unidades.toLocaleString('es-MX')+(unidades===1?' pieza':' piezas')+' en '+q.partidas.length+(q.partidas.length===1?' selección':' selecciones'),118,8.5);label(para[0],m,58,8.5,false,[201,201,207]);
+ etq('Total',right,41,gris,'right');label(numero(q.total),right,50.5,19,true,blanco,'right');label(impuestoTxt,right,56.5,7.5,false,gris,'right');
+ cinta(64);
  // Datos rápidos
- y=80;const celdas=[['Emisión',borrador||!q.publicada_at?'Pendiente de publicación':fecha(q.publicada_at)],['Válida hasta',fecha(q.vigencia,true)],['Entrega',q.plazo||'Por acordar'],['Anticipo',pct===null?'Por acordar':pct+'% para iniciar']];
- const cw=width/4+3.5;let alto=0;const valores=celdas.map(([,v])=>lines(v,cw-8,8.5,true).slice(0,2));alto=Math.max(...valores.map(v=>v.length))*3.8+12;
- celdas.forEach(([k],i)=>{const x=i*(210/4);if(i)doc.setDrawColor(...linea),doc.line(x,y,x,y+alto);etq(k,x+(i?5:m),y+6);valores[i].forEach((l,j)=>label(l,x+(i?5:m),y+11+j*3.8,8.5,true));});
- y+=alto;doc.setDrawColor(...linea);doc.line(0,y,210,y);y+=10;
+ y=65.6;const celdas=[['Emisión',borrador||!q.publicada_at?'Pendiente de publicación':fecha(q.publicada_at)],['Válida hasta',fecha(q.vigencia,true)],['Entrega',q.plazo||'Por acordar'],['Anticipo',pct===null?'Por acordar':pct+'% para iniciar']];
+ const cw=width/4+3.5;let alto=0;const valores=celdas.map(([,v])=>lines(v,cw-8,8.5,true).slice(0,2));alto=Math.max(...valores.map(v=>v.length))*3.8+10;
+ celdas.forEach(([k],i)=>{const x=i*(210/4);if(i)doc.setDrawColor(...linea),doc.line(x,y,x,y+alto);etq(k,x+(i?5:m),y+6);valores[i].forEach((l,j)=>label(l,x+(i?5:m),y+10.5+j*3.8,8.5,true));});
+ y+=alto;doc.setDrawColor(...linea);doc.line(0,y,210,y);y+=8;
  // Partidas
- label('Tu selección',m,y,13,true);etq('Precios por pieza · personalización incluida',right,y,tenue,'right');y+=6;
+ label('Tu selección',m,y,11.5,true);etq('Precios por pieza · personalización incluida',right,y,tenue,'right');y+=4.5;
  const assets=new Map();
  for(const p of q.partidas){const image=imagenDe(p,imagenes);if(image){const key=image.src;let asset=assets.get(key);if(!asset){asset={...await jpeg(key,900,'#e7e7e3'),alias:'diseno-'+assets.size};assets.set(key,asset);}p.imagen={...asset,referencia:image.referencia};}}
- const fw=46,ix=m+fw+6,iw=right-ix-5;
+ const fw=36,ix=m+fw+6,iw=right-ix-5;
  q.partidas.forEach((p,i)=>{
-  const nombre=lines(p.nombre,iw,11,true),sub=lines(p.color||'',iw,8),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,8):[];
-  const h=Math.max(48,10+nombre.length*4.6+sub.length*3.6+8+(tallas?11:0)+tallasTxt.length*3.6+12);
-  espacio(h+4);
+  const nombre=lines(p.nombre,iw,10,true),sub=lines(p.color||'',iw,7.5),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,7.5):[];
+  const h=Math.max(36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11);
+  espacio(h+3);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
-  if(p.imagen){const a=p.imagen,bw=fw-8,bh=h-16,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+4+(bw-a.w*k)/2,y+6+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
-  etq(p.imagen?.referencia?'Referencia del modelo':p.imagen?'Diseño solicitado':'',m+3,y+h-3,tenue);
+  if(p.imagen){const a=p.imagen,bw=fw-6,bh=h-14,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+3+(bw-a.w*k)/2,y+5.5+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
+  font(5.5,false,tenue,true);label((p.imagen?.referencia?'Referencia del modelo':p.imagen?'Diseño solicitado':'').toUpperCase(),m+2.5,y+h-2.5,5.5,false,tenue,'left',true);
   doc.setFillColor(...tinta);doc.roundedRect(m+3,y+3,8,5,1.2,1.2,'F');label(String(i+1).padStart(2,'0'),m+7,y+6.6,7,true,blanco,'center',true);
-  let yy=y+8;for(const l of nombre){label(l,ix,yy,11,true);yy+=4.6;}for(const l of sub){label(l,ix,yy,8,false,tenue);yy+=3.6;}yy+=1.5;
-  let cx=ix;for(const c of chips){font(6.8,false,tinta2,true);const w=doc.getTextWidth(c)+4;if(cx+w>ix+iw){cx=ix;yy+=6;}caja(cx,yy-3.6,w,5,algodon,linea,1);label(c,cx+2,yy,6.8,false,tinta2,'left',true);cx+=w+1.8;}yy+=6;
-  if(tallas){let tx=ix;for(const [t,n] of tallas){if(tx+11>ix+iw){break;}caja(tx,yy-2.5,10,9,blanco,linea,1.5);label(t,tx+5,yy+.6,5.8,false,tenue,'center',true);label(n,tx+5,yy+4.9,8.5,true,tinta,'center');tx+=11.5;}yy+=11;}
-  for(const l of tallasTxt){label(l,ix,yy,8,false,tinta2);yy+=3.6;}
-  const cy=y+h-6.5;punteada(ix,cy-5.5,ix+iw);
+  let yy=y+7;for(const l of nombre){label(l,ix,yy,10,true);yy+=4.2;}for(const l of sub){label(l,ix,yy,7.5,false,tenue);yy+=3.3;}yy+=1.5;
+  let cx=ix;for(const c of chips){font(6.3,false,tinta2,true);const w=doc.getTextWidth(c)+3.6;if(cx+w>ix+iw){cx=ix;yy+=5.5;}caja(cx,yy-3.3,w,4.6,algodon,linea,1);label(c,cx+1.8,yy,6.3,false,tinta2,'left',true);cx+=w+1.6;}yy+=5.5;
+  if(tallas){let tx=ix;for(const [t,n] of tallas){if(tx+11>ix+iw){break;}caja(tx,yy-2.5,10,9,blanco,linea,1.5);label(t,tx+5,yy+.6,5.8,false,tenue,'center',true);label(n,tx+5,yy+4.9,8.5,true,tinta,'center');tx+=11.5;}yy+=10.5;}
+  for(const l of tallasTxt){label(l,ix,yy,7.5,false,tinta2);yy+=3.3;}
+  const cy=y+h-5.5;punteada(ix,cy-4.5,ix+iw);
   font(8,false,tenue,true);let ox=ix;const parte=(t,c,b=false)=>{label(t,ox,cy,8,b,c,'left',true);font(8,b,c,true);ox+=doc.getTextWidth(t);};
   parte(String(p.piezas),tinta,true);parte(p.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(p.precio),tinta,true);if(p.descuento)parte('  - '+p.descuento/100+'%',cobaltoTxt);
-  label(numero(p.importe),ix+iw,cy+.5,12.5,true,tinta,'right');
-  y+=h+4;
+  label(numero(p.importe),ix+iw,cy+.5,11.5,true,tinta,'right');
+  y+=h+3;
  });
  // Resumen y pago
  const filas=[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
- const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7.5).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7.5);
- const bh=Math.max(14+filas.length*6+18,pagos?52+instr.length*3.4:24);
- y+=2;espacio(bh+4);const bw=(width-5)/2,x2=m+bw+5;
- caja(m,y,bw,bh);label('Resumen',m+6,y+9,10,true);let fy=y+17;
- for(const [k,v,d] of filas){label(k,m+6,fy,8.5,false,d?cobaltoTxt:tinta);label(d?'-'+numero(-v):numero(v),m+bw-6,fy,8.5,true,d?cobaltoTxt:tinta,'right');fy+=6;}
- doc.setFillColor(...cobalto);doc.roundedRect(m+6,fy-1,bw-12,13,2,2,'F');etq('Total',m+10,fy+6.8,blanco);label(numero(q.total),m+bw-10,fy+7.6,14,true,blanco,'right');
- caja(x2,y,bw,bh);label('Cómo se paga',x2+6,y+9,10,true);
- if(pagos){const by=y+14;doc.setFillColor(...mesa);doc.roundedRect(x2+6,by,bw-12,3.5,1.75,1.75,'F');doc.setFillColor(...tinta);const pw=(bw-12)*Math.max(0,Math.min(100,pct))/100;if(pw>0)doc.roundedRect(x2+6,by,pw,3.5,1.75,1.75,'F');
-  const py=by+7,pbw=(bw-15)/2;doc.setFillColor(...tinta);doc.roundedRect(x2+6,py,pbw,21,2,2,'F');doc.setFillColor(...algodon);doc.roundedRect(x2+9+pbw,py,pbw,21,2,2,'F');
-  etq('Anticipo '+pct+'%',x2+9,py+5.5,gris);label(numero(anticipo),x2+9,py+12.5,11.5,true,blanco);label('Para programar la producción',x2+9,py+17.5,6.5,false,[201,201,207]);
-  etq('Saldo '+Math.round((100-pct)*100)/100+'%',x2+12+pbw,py+5.5);label(q.total==null?'Pendiente':numero(q.total-anticipo),x2+12+pbw,py+12.5,11.5,true);label('Antes del envío',x2+12+pbw,py+17.5,6.5,false,tenue);
-  let iy=py+27;for(const l of instr){label(l,x2+6,iy,7.5,false,tenue);iy+=3.4;}
- }else{let iy=y+17;for(const l of instr){label(l,x2+6,iy,8,false,tenue);iy+=3.6;}}
- y+=bh+12;
+ const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7);
+ const bh=Math.max(12+filas.length*4.8+14,pagos?39+instr.length*3.1:22);
+ y+=1;espacio(bh+3);const bw=(width-5)/2,x2=m+bw+5;
+ caja(m,y,bw,bh);label('Resumen',m+5,y+7.5,9.5,true);let fy=y+14;
+ for(const [k,v,d] of filas){label(k,m+5,fy,8,false,d?cobaltoTxt:tinta);label(d?'-'+numero(-v):numero(v),m+bw-5,fy,8,true,d?cobaltoTxt:tinta,'right');fy+=4.8;}
+ doc.setFillColor(...cobalto);doc.roundedRect(m+5,fy-1.5,bw-10,10,2,2,'F');etq('Total',m+9,fy+4.8,blanco);label(numero(q.total),m+bw-9,fy+5.5,12.5,true,blanco,'right');
+ caja(x2,y,bw,bh);label('Cómo se paga',x2+5,y+7.5,9.5,true);
+ if(pagos){const by=y+11;doc.setFillColor(...mesa);doc.roundedRect(x2+5,by,bw-10,3,1.5,1.5,'F');doc.setFillColor(...tinta);const pw=(bw-10)*Math.max(0,Math.min(100,pct))/100;if(pw>0)doc.roundedRect(x2+5,by,pw,3,1.5,1.5,'F');
+  const py=by+5.5,pbw=(bw-13)/2;doc.setFillColor(...tinta);doc.roundedRect(x2+5,py,pbw,17,2,2,'F');doc.setFillColor(...algodon);doc.roundedRect(x2+8+pbw,py,pbw,17,2,2,'F');
+  etq('Anticipo '+pct+'%',x2+8,py+4.8,gris);label(numero(anticipo),x2+8,py+10.5,10.5,true,blanco);label('Para programar la producción',x2+8,py+14.5,6,false,[201,201,207]);
+  etq('Saldo '+Math.round((100-pct)*100)/100+'%',x2+11+pbw,py+4.8);label(q.total==null?'Pendiente':numero(q.total-anticipo),x2+11+pbw,py+10.5,10.5,true);label('Antes del envío',x2+11+pbw,py+14.5,6,false,tenue);
+  let iy=py+22;for(const l of instr){label(l,x2+5,iy,7,false,tenue);iy+=3.1;}
+ }else{let iy=y+14;for(const l of instr){label(l,x2+5,iy,7.5,false,tenue);iy+=3.3;}}
+ y+=bh+8;
  // Cómo seguimos
  const pasos=[['Acepta en línea','Desde tu enlace de Mi pedido.'],['Anticipo',pagos?'Con el '+pct+'% programamos tu producción.':'Acordamos contigo el anticipo.'],['Producción','Inicia al confirmar tu anticipo.'],['Entrega',q.plazo||'Plazo y destino por confirmar con ZAIN.']];
- const pw=width/4,desc=pasos.map(([,d])=>lines(d,pw-6,7.5).slice(0,4));espacio(24+Math.max(...desc.map(d=>d.length))*3.4);
- label('Cómo seguimos',m,y,13,true);y+=9;punteada(m+4,y,right-6,tinta);
- pasos.forEach(([t],i)=>{const x=m+i*pw;doc.setDrawColor(...(i?tinta:cobalto));doc.setFillColor(...(i?papel:cobalto));doc.setLineWidth(.5);doc.circle(x+4,y,3.6,'FD');label(String(i+1),x+4,y+1.2,7.5,true,i?tinta:blanco,'center',true);label(t,x,y+9,9,true);desc[i].forEach((l,j)=>label(l,x,y+13.5+j*3.4,7.5,false,tenue));});
- y+=16+Math.max(...desc.map(d=>d.length))*3.4+1;
+ const pw=width/4,desc=pasos.map(([,d])=>lines(d,pw-6,7).slice(0,4));espacio(19+Math.max(...desc.map(d=>d.length))*3.1);
+ label('Cómo seguimos',m,y,11.5,true);y+=7;punteada(m+4,y,right-6,tinta);
+ pasos.forEach(([t],i)=>{const x=m+i*pw;doc.setDrawColor(...(i?tinta:cobalto));doc.setFillColor(...(i?papel:cobalto));doc.setLineWidth(.5);doc.circle(x+3.5,y,3,'FD');label(String(i+1),x+3.5,y+1.1,7,true,i?tinta:blanco,'center',true);label(t,x,y+7.5,8.5,true);desc[i].forEach((l,j)=>label(l,x,y+11.5+j*3.1,7,false,tenue));});
+ y+=13.5+Math.max(...desc.map(d=>d.length))*3.1+1;
  // Condiciones y notas
  if(q.condiciones){const c=lines(q.condiciones,width-12,8);espacio(14+Math.min(c.length,6)*3.8);doc.setFillColor(...algodon);doc.rect(m,y,width,10+c.length*3.8,'F');doc.setFillColor(...tinta);doc.rect(m,y,.9,10+c.length*3.8,'F');label('Condiciones de tu cotización',m+5,y+6,8.5,true);let cy=y+11;for(const l of c){if(cy>bottom){siguiente();cy=y;}label(l,m+5,cy,8,false,tinta2);cy+=3.8;}y=cy+5;}
  const notas=['Renders orientativos; diseño final por confirmar.','La aceptación de la cotización no registra un pago.','Precios por pieza con personalización incluida.','Esta cotización no es un comprobante fiscal.'];
- if(y+5>279.5)siguiente();notas.forEach((n,i)=>label('— '+n,m+(i%2)*(width/2),y+Math.floor(i/2)*5,7.5,false,tenue));
+ if(y+5>279.5)siguiente();notas.forEach((n,i)=>label('— '+n,m+(i%2)*(width/2),y+Math.floor(i/2)*4.2,7,false,tenue));
  // Pie en cada página. Los datos de contacto son configuración pública, no datos de compras.
  const C=globalThis.window?.ZAIN||{},ig=String(C.instagram||'').match(/instagram\.com\/([A-Za-z0-9._]+)/)?.[1];
  const contacto=[C.correo,C.whatsapp?'WhatsApp +'+String(C.whatsapp).replace(/\D/g,''):'',ig?'@'+ig:'',C.ciudad].filter(Boolean).join('   ');
