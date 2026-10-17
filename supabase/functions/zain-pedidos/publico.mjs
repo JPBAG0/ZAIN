@@ -1,7 +1,7 @@
 export default {
   "marca": "ZAIN",
   "pedidosApi": "https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos",
-  "privacidadPublicada": false,
+  "privacidadPublicada": true,
   "medicion": {
     "activa": false,
     "origenes": [

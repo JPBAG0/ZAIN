@@ -5,7 +5,7 @@ export function ordenarCostos(form,estado={}){
  originales.forEach((section,i)=>{
   const [id,titulo,nota]=definiciones[i],d=document.createElement('details'),summary=document.createElement('summary');d.className='cot-panel cot-config-grupo';d.dataset.configGrupo=id;d.id='costos-'+id;d.open=estado[id]??id!=='rangos';summary.innerHTML='<h2>'+titulo+'</h2><span>'+nota+'</span>';section.querySelector('h2')?.remove();d.append(summary);const body=document.createElement('div');body.className='cot-config-cuerpo';while(section.firstChild)body.append(section.firstChild);d.append(body);section.replaceWith(d);paneles[id]=d;
  });
- for(const id of ['rangos','prendas','tecnicas'])form.prepend(paneles[id]);
+ for(const id of ['rangos','tecnicas','prendas'])form.prepend(paneles[id]);
  paneles.rangos.querySelector('.cot-tablewrap').classList.add('cot-rangos-tabla');
  paneles.rangos.querySelectorAll('[data-quitar-rango]').forEach(b=>b.innerHTML='<span aria-hidden="true">×</span>');
  const explicaciones=paneles.rangos.querySelectorAll('.cot-ayuda');if(explicaciones[0])explicaciones[0].textContent='Define el margen bruto para cada cantidad. Precio = costo ÷ (1 − margen).';

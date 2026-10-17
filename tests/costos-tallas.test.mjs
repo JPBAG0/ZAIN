@@ -12,9 +12,10 @@ test('la misma talla aplica la banda de color correspondiente y una talla grande
  assert.equal(listo({...item,color:'Azul marino'}).partidas[0].costoPrendas,25007);
  assert.equal(listo({...item,color:'Azul marino · 123'}).partidas[0].costoPrendas,25007);
 });
-test('talla, color o detalle faltantes dejan el costo pendiente aunque se escriba precio manual',()=>{
+test('talla, color o detalle faltantes dejan el costo pendiente; el precio manual permite publicar sin inventar costos',()=>{
  for(const x of [{...item,tallasDetalle:undefined},{...item,tallasDetalle:{}},{...item,tallasDetalle:{M:2,'2EG':1}},{...item,color:'Rojo'}]){
-  const q=listo(x),v=entrada(q);v.partidas[0].precio=99999;const r=calcular([x],v);assert.equal(r.costo,null);assert.equal(r.preparada,false);assert.throws(()=>paraCliente(r));
+  const q=listo(x),v=entrada(q);v.partidas[0].precio=99999;const r=calcular([x],v);assert.equal(r.costo,null);assert.equal(r.utilidad,null);assert.equal(r.preparada,true);assert.equal(paraCliente(r).partidas[0].precio,99999);
+  v.partidas[0].precio=null;assert.equal(calcular([x],v).preparada,false);
  }
 });
 test('cantidades por talla alteradas, fraccionarias o con distinta suma no calculan',()=>{

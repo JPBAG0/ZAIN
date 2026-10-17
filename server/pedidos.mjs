@@ -302,6 +302,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
 
       if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
+      if(seguimientoEnabled&&op==='cotizacion-aceptar-equipo'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.aceptarEquipo(x,b,user));}
       if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
       if(/^(precios-|cotizacion)/.test(op)){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
@@ -418,12 +419,14 @@ export function createHandler(env={}, fetcher=fetch) {
         const trash=url.searchParams.get('papelera')==='true';
         if(gastosEnabled){
           const out=await gastos.panel({p_estado:state||'',p_q:q,p_papelera:trash,p_semana:url.searchParams.get('periodo')==='semana',p_offset:Math.floor(offset)});
-          return response(200,{...out,equipo:user,pedidos:out.pedidos.map(({items,...x})=>({...x,selecciones:items.length,resumen:items.slice(0,2).map(p=>p.nombreZain||p.nombre).join(' / ')}))});
+          // Nombre del cliente para reconocer el pedido sin abrirlo; solo el nombre, nunca otros datos.
+          const ids=out.pedidos.map(p=>p.id).filter(id=>/^[0-9a-f-]{36}$/i.test(id)),nombres=new Map(ids.length?(await sb('/rest/v1/zain_pedidos?id=in.('+ids.join(',')+')&select=id,cliente')).map(r=>[r.id,text(r.cliente?.nombre||'',120)]):[]);
+          return response(200,{...out,equipo:user,pedidos:out.pedidos.map(({items,...x})=>({...x,cliente:nombres.get(x.id)||'',selecciones:items.length,resumen:items.slice(0,2).map(p=>p.nombreZain||p.nombre).join(' / ')}))});
         }
         let dateFilter='';
         if(url.searchParams.get('periodo')==='semana'){const summary=await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'});dateFilter='&created_at=gte.'+encodeURIComponent(summary.semana_desde);}
-        const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at='+(trash?'not.is.null':'is.null')+'&select=id,folio,created_at,guardado_at,archivado_at,estado,total,version,items&order='+(trash?'archivado_at.desc,':'')+'created_at.desc,id.desc&limit=21&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':'')+dateFilter);
-        const items=rows.slice(0,20).map(({items,...x})=>({...x,selecciones:items.length,resumen:items.slice(0,2).map(p=>C.productos.find(v=>v.id===p.p || v.idPublico===p.p)?.nombreComercial||p.nombre).join(' / ')}));
+        const rows=await sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at='+(trash?'not.is.null':'is.null')+'&select=id,folio,created_at,guardado_at,archivado_at,estado,total,version,items,cliente&order='+(trash?'archivado_at.desc,':'')+'created_at.desc,id.desc&limit=21&offset='+Math.floor(offset)+(state?'&estado=eq.'+state:'')+(q?'&folio=ilike.*'+q+'*':'')+dateFilter);
+        const items=rows.slice(0,20).map(({items,cliente,...x})=>({...x,cliente:text(cliente?.nombre||'',120),selecciones:items.length,resumen:items.slice(0,2).map(p=>C.productos.find(v=>v.id===p.p || v.idPublico===p.p)?.nombreComercial||p.nombre).join(' / ')}));
         return response(200,{pedidos:items,siguiente:rows.length>20,equipo:user});
       }
       if(request.method==='POST'&&op==='archivar'){

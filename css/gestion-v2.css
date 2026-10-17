@@ -1,0 +1,171 @@
+/* Gestión v2 (17-oct-2026): ficha por pestañas, cotización con precio directo, cobro y bandeja compacta. Celular primero. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.control__estadochip--aceptado{color:#8a5a00;background:#fdf0cf}
+
+/* Bandeja */
+.bandeja-filtros{display:grid!important;grid-template-columns:1fr;gap:10px!important}
+.bandeja-filtros .control__buscar input{width:100%}
+.bandeja-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.bandeja-chips::-webkit-scrollbar{display:none}
+.bandeja-chips button{flex:0 0 auto;min-height:38px;padding:8px 13px;border:1px solid #d5dbe6;border-radius:999px;background:#fff;color:#33405a;font:600 13px Archivo,Arial,sans-serif;cursor:pointer}
+.bandeja-chips button.on{background:#182034;border-color:#182034;color:#fff}
+.control__lista{display:grid;gap:0}
+.pedido-card{display:grid;gap:5px;width:100%;text-align:left;padding:15px 18px;border:0;border-top:1px solid #e3e7ef;background:#fff;color:#182034;font:14px Archivo,Arial,sans-serif;cursor:pointer}
+.pedido-card:focus-visible{outline:2px solid #3035ff;outline-offset:-2px}
+.pedido-card__cab{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pedido-card__cab b{font-size:16px;overflow-wrap:anywhere}
+.pedido-card__dato{font-size:12px;color:#68758b}
+.pedido-card__desc{font-size:13px;color:#3b4760}
+.pedido-card__cifras{font-size:13px;color:#33405a}
+.pedido-card__cifras--vacio{color:#8a94a6;font-size:12px}
+@media(hover:hover) and (pointer:fine){.pedido-card:hover{background:#f6f8fc}.bandeja-chips button:hover{border-color:#182034}}
+.finanzas-bandeja{padding:0 18px 12px}
+.bandeja-finanzas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:#f1f4fa;border-radius:12px;padding:12px}
+.bandeja-finanzas div{display:grid;gap:3px;min-width:0}.bandeja-finanzas small{font-size:11px;color:#5d6880}.bandeja-finanzas strong{font-size:16px;overflow-wrap:anywhere}
+.finanzas-bandeja p{font-size:12px;color:#68758b;margin:8px 0 0}
+
+/* Ficha del pedido: cabecera fija con avance y pestañas */
+.ficha-cab{margin:0 0 4px}
+.ficha-cab .control__fichatitulo{margin-bottom:4px}
+.ficha-cab>.control__dato{margin:0 0 12px}
+.ficha-pasos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;list-style:none;margin:0 0 10px;padding:0;counter-reset:none}
+.ficha-pasos li{display:grid;justify-items:center;gap:4px;font-size:10px;color:#8a94a6;text-align:center;line-height:1.2;position:relative}
+.ficha-pasos li span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#e6eaf2;color:#68758b;font-size:11px;font-weight:700}
+.ficha-pasos li.hecho{color:#267663}.ficha-pasos li.hecho span{background:#267663;color:#fff}
+.ficha-pasos li.actual{color:#182034;font-weight:700}.ficha-pasos li.actual span{background:#3035ff;color:#fff;box-shadow:0 0 0 4px #3035ff22}
+.ficha-siguiente{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 10px;width:100%;text-align:left;padding:12px 14px;margin:0 0 10px;border:1px solid #c9cffd;background:#eef0ff;border-radius:12px;color:#182034;font:14px Archivo,Arial,sans-serif;cursor:pointer}
+.ficha-siguiente small{grid-column:1;font-size:11px;color:#4b52c9;text-transform:uppercase;letter-spacing:.4px;font-weight:700}
+.ficha-siguiente b{grid-column:1;font-size:14px;line-height:1.35}
+.ficha-siguiente i{grid-row:1/3;grid-column:2;font-style:normal;font-size:20px;color:#3035ff}
+.ficha-siguiente--cancelado{display:block;cursor:default;background:#f6edf0;border-color:#ecd5dd;color:#986476}
+.ficha-pestanas{position:sticky;top:64px;z-index:4;box-shadow:0 6px 12px -8px #1a254033;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:#e6eaf2;border-radius:11px;padding:3px;margin-bottom:6px}
+.ficha-pestanas button{min-height:40px;border:0;border-radius:9px;background:transparent;color:#4a5670;font:600 13px Archivo,Arial,sans-serif;cursor:pointer}
+.ficha-pestanas button.on{background:#fff;color:#182034;box-shadow:0 1px 3px #1a254022}
+.ficha-pestanas button:focus-visible,.ficha-siguiente:focus-visible{outline:2px solid #3035ff;outline-offset:2px}
+#detalle[data-ver]:not([data-ver=resumen]) .ficha-resumen,#detalle[data-ver]:not([data-ver=resumen]) #asignarTalleres,
+#detalle[data-ver]:not([data-ver=cotizacion]) #cotPedido,
+#detalle[data-ver]:not([data-ver=cobro]) #seguimientoComercial,
+#detalle[data-ver]:not([data-ver=gastos]) #gastosPedido{display:none}
+#detalle>.cot-panel{margin-top:0}
+
+/* Cotización */
+.cot-cabecera{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.cot-cabecera h2{margin:0}
+.cot-pasos-guia{display:flex;gap:6px;flex-wrap:wrap;list-style:none;padding:0;margin:0 0 6px;counter-reset:paso}
+.cot-pasos-guia li{counter-increment:paso;font-size:12px;color:#5d6880;background:#f1f4fa;border-radius:999px;padding:5px 10px}
+.cot-pasos-guia li:before{content:counter(paso) " · ";font-weight:700;color:#3035ff}
+.cot-precio-principal{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;margin:14px 0 6px}
+.cot-precio-campo{font-size:13px!important}
+.cot-precio-entrada{display:flex;align-items:center;border:2px solid #3035ff;border-radius:12px;background:#fff;padding:0 12px;min-height:54px}
+.cot-precio-entrada b{font-size:22px;color:#5d6880;margin-right:4px}
+.cot-panel .cot-precio-entrada input{border:0;padding:8px 0;font-size:24px;font-weight:700;height:auto!important;max-height:none!important;min-height:0!important;background:transparent}
+.cot-panel .cot-precio-entrada input:focus-visible{outline:0}
+.cot-precio-entrada:focus-within{box-shadow:0 0 0 4px #3035ff26}
+.cot-panel .cot-precio-principal .cot-total-partida{grid-column:2;display:grid;justify-items:end;gap:2px;padding:0 0 8px;margin:0;text-align:right}
+.cot-precio-principal .cot-total-partida span{font-size:12px;color:#5d6880}
+.cot-panel .cot-precio-principal .cot-total-partida strong{font-size:19px;white-space:nowrap;color:#182034}
+.cot-sugerencia{font-size:13px;line-height:1.5;color:#5d6880;margin:0 0 10px}
+.cot-impuesto{border:0;padding:16px 0 4px;margin:0;border-top:1px solid #dde3eb}
+.cot-impuesto legend{font-size:15px;font-weight:700;padding:0;margin-bottom:10px}
+.cot-chips{display:flex;gap:8px;flex-wrap:wrap}
+.cot-chip{display:block!important;cursor:pointer}
+.cot-chip input{position:absolute;opacity:0;width:1px;height:1px}
+.cot-chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #cbd2dc;border-radius:999px;background:#fff;font-size:15px;font-weight:600;color:#33405a}
+.cot-chip input:checked+span{background:#182034;border-color:#182034;color:#fff}
+.cot-chip input:focus-visible+span{outline:2px solid #3035ff;outline-offset:2px}
+[data-impuesto-otro]{margin-top:10px;max-width:220px}
+.cot-chip-btn{min-height:40px;padding:0 14px;border:1px solid #c9cffd;border-radius:999px;background:#eef0ff;color:#2a30b8;font:600 13px Archivo,Arial,sans-serif;cursor:pointer}
+.cot-totales-editor{display:grid;gap:10px;margin:16px 0}
+.cot-total-cliente{display:grid;gap:4px;background:#182034;color:#fff;border-radius:14px;padding:16px 18px}
+.cot-total-cliente small{font-size:12px;color:#c9cfdd}
+.cot-total-cliente strong{font-size:30px;letter-spacing:-.6px}
+.cot-total-cliente span{font-size:12px;color:#c9cfdd}
+.cot-interno{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#5d6880;padding:0 4px}
+.cot-interno b{color:#182034}
+.cot-paso{font-size:14px;line-height:1.5;color:#5d6880;margin:12px 0 8px}
+.cot-paso--listo{color:#267663;font-weight:600}
+.cot-editor .cot-acciones{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cot-editor .cot-acciones #cotPublicar{grid-column:1/-1;min-height:52px;font-size:16px}
+.cot-editor .cot-acciones .btn{justify-content:center}
+.cot-ajustes>summary span[data-utilidad-partida]{font-weight:500}
+
+/* Cobro */
+.cobro-cifras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 16px}
+.cobro-cifras div{display:grid;gap:3px;background:#f1f4fa;border-radius:12px;padding:12px}
+.cobro-cifras small{font-size:12px;color:#5d6880}.cobro-cifras strong{font-size:19px}
+.cobro-saldo{background:#fff4dc!important}.cobro-saldo--cero{background:#e4f1e9!important}
+.cobro-paso{border-top:1px solid #dde3eb;padding-top:14px;margin-top:14px}
+.cobro-paso h3{font-size:16px;margin:0 0 6px}
+.cobro-form{display:grid;gap:12px;margin-top:10px}
+.cobro-form .btn{justify-content:center;min-height:48px}
+.cobro-listo{background:#e4f1e9;color:#267663;font-weight:700;border-radius:12px;padding:14px}
+
+@media(min-width:701px){
+ .bandeja-filtros{grid-template-columns:minmax(220px,320px) 1fr;align-items:center}
+ .cobro-cifras{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .cot-editor .cot-acciones{grid-template-columns:auto auto auto;justify-content:start}
+ .cot-editor .cot-acciones #cotPublicar{grid-column:auto;order:3}
+}
+@media(max-width:700px){
+ .control .control__resumen{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+ .control .control__tarjeta{padding:10px 8px;gap:2px;min-height:0}
+ .control .control__tarjeta>span{font-size:10.5px;line-height:1.2}
+ .control .control__tarjeta strong{font-size:22px}
+ .control .control__tarjeta small{display:none}
+ .control .control__titulo h1{font-size:22px}
+ .control .ficha-pestanas{top:58px}
+ .control .ficha-cab .control__fichatitulo h2{font-size:21px}
+ .ficha-pasos li{font-size:9px}
+ .control .finanzas-bandeja{padding:0 12px 10px}
+ .control .pedido-card{padding:14px 12px}
+ .control .bandeja-filtros{padding:0 12px 12px}
+ .control .cot-precio-entrada input{height:auto;max-height:none;min-height:0}
+}
+
+/* Catálogo: búsqueda arriba, filtros plegados */
+.catalogo-filtros{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+.catalogo-mas>summary,.taller-nuevo>summary{cursor:pointer;font-weight:700;font-size:14px;color:#33405a;min-height:44px;display:flex;align-items:center}
+.catalogo-mas__campos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-top:6px}
+.taller-nuevo{margin-top:18px}
+.costos-aviso{background:#eef0ff;border:1px solid #c9cffd;color:#2a3170!important;border-radius:12px;padding:12px 14px}
+
+@media(max-width:700px){
+ .catalogo-mas__campos{grid-template-columns:1fr}
+ .control .control__catalogogrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .control .control__publicacion{border-radius:12px}
+ .control .control__textocatalogo{padding:10px}
+ .control .control__textocatalogo h3{font-size:14px;line-height:1.25}
+ .control .control__textocatalogo>p{font-size:11px;margin:2px 0 6px}
+ .control .control__textocatalogo dl{display:none}
+ .control .control__tecnicaslista span{font-size:10px;padding:3px 6px}
+ .control .control__accionescatalogo{display:grid;gap:6px}
+ .control .control__accionescatalogo .btn{min-height:40px;padding:8px}
+ .control .control__estadopublicacion{font-size:10px;padding:4px 8px}
+ /* Costos de prendas: una fila compacta por modelo */
+ .control .cot-costostabla table{min-width:0}
+ .control .cot-costostabla thead{display:none}
+ .control .cot-costostabla tr{display:grid;grid-template-columns:minmax(0,1fr) 96px 80px;gap:8px;align-items:end;padding:10px 0;border-top:1px solid #e5e8ef}
+ .control .cot-costostabla td{display:block;border:0;padding:0}
+ .control .cot-costostabla td:first-child{grid-column:1}
+ .control .cot-costostabla td[data-label]:before{content:attr(data-label);display:block;font-size:10px;color:#68758b;margin-bottom:3px}
+ .control .cot-costostabla .cot-prenda{display:flex;gap:8px;align-items:center}
+ .control .cot-costostabla .cot-prenda__foto{width:44px;height:44px;flex:0 0 44px;font-size:8px}
+ .control .cot-costostabla .cot-prenda small{display:none}
+ .control .cot-costostabla .cot-prenda__nombre{font-size:13px;line-height:1.25}
+ .control .cot-costostabla .cot-prenda__estado{font-size:10px}
+ .control .cot-costostabla input{height:40px;min-height:40px;padding:8px}
+ .control .cot-costostabla td:has(details){grid-column:1/-1}
+}
+.ficha-resumen .control__acciones #eliminar{background:#fff;color:#a8293d;border:1px solid #e6c3cb;min-height:44px}
+.ficha-avanzar{width:100%;justify-content:center;min-height:50px;margin:0 0 14px;font-size:16px}
+#gastosPedido .gastos-cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#gastosPedido .gastos-cifras div{display:grid;gap:3px;background:#f1f4fa;border-radius:12px;padding:10px;min-width:0}
+#gastosPedido .gastos-cifras small{font-size:11px;color:#5d6880}
+#gastosPedido .gastos-cifras strong{font-size:16px;overflow-wrap:anywhere}
+/* Costos opcionales: "sin costo" es informativo, no un error */
+.cot-costopendiente .cot-prenda__nombre{color:#182034!important}
+.cot-costopendiente .cot-prenda__estado{color:#8a94a6!important}
+.cot-costopendiente [data-precio-prenda]{border-color:#cbd2dc!important;background:#fff!important}
+.cot-costopendiente [data-precio-prenda]::placeholder,.cot-costopendiente .cot-bandas input:placeholder-shown{color:#8a94a6!important;border-color:#cbd2dc!important}
+.cot-ajuste-rapido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 6px;max-width:420px}
+.cot-sugerencia [data-usar-sugerido]{font-size:13px;min-height:32px}

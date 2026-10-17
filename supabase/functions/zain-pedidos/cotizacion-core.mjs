@@ -109,23 +109,24 @@ export function calcular(items,input){
   const divisor=BigInt(base.piezas)*BigInt(10000-margenObjetivo);
   const sugerido=costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
   const precio=v.precio===null?sugerido:entero(v.precio);
-  if(costo===null||precio===null)pendiente=true;
+  // Publicar exige precio por pieza; los costos son opcionales y solo sirven para conocer la utilidad.
+  if(precio===null)pendiente=true;
   const bruto=precio===null?null:entero(precio*base.piezas),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
   return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
  });
  const impuesto=input.impuesto===null?null:entero(input.impuesto,0,10000),envio=entero(input.envio),costoEnvio=entero(input.costoEnvio);
  if(impuesto===null)pendiente=true;
- const cifrasPendientes=partidas.some(p=>p.importe===null||p.costo===null);
- const bruto=cifrasPendientes?null:suma(partidas.map(p=>p.bruto)),descuento=cifrasPendientes?null:suma(partidas.map(p=>p.rebaja)),subtotal=cifrasPendientes?null:suma([bruto-descuento,envio]);
+ const preciosPendientes=partidas.some(p=>p.importe===null),costosPendientes=partidas.some(p=>p.costo===null);
+ const bruto=preciosPendientes?null:suma(partidas.map(p=>p.bruto)),descuento=preciosPendientes?null:suma(partidas.map(p=>p.rebaja)),subtotal=preciosPendientes?null:suma([bruto-descuento,envio]);
  const impuestos=subtotal===null||impuesto===null?null:proporcion(subtotal,impuesto),total=impuestos===null?null:suma([subtotal,impuestos]);
- const costo=cifrasPendientes?null:suma([...partidas.map(p=>p.costo),costoEnvio]),utilidad=subtotal===null||costo===null?null:subtotal-costo;
+ const costo=costosPendientes?null:suma([...partidas.map(p=>p.costo),costoEnvio]),utilidad=subtotal===null||costo===null?null:subtotal-costo;
  const vigencia=texto(input.vigencia,10);if(vigencia&&(!/^\d{4}-\d{2}-\d{2}$/.test(vigencia)||new Date(vigencia+'T12:00:00Z').toISOString().slice(0,10)!==vigencia))error('Revisa la fecha de vigencia.');
- return {schema:6,metodo:'margen_bruto',moneda:'MXN',pagos:normalizarPagos(input.pagos),partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
+ return {schema:6,metodo:'margen_bruto',moneda:'MXN',pagos:normalizarPagos(input.pagos),partidas,destinatario:texto(input.destinatario,180),condiciones:texto(input.condiciones,3000),plazo:texto(input.plazo,700),vigencia,impuesto,envio,costoEnvio,bruto,descuento,subtotal,impuestos,total,costo,utilidad,margen:subtotal&&utilidad!==null?Math.round(utilidad/subtotal*10000):null,preparada:!pendiente};
 }
 const enteroNullable=n=>n===null?null:entero(n);
 export function entrada(q){return {...q,schema:6,metodo:'margen_bruto',partidas:q.partidas.map(p=>({...p,modo:q.schema<3?'fijo':p.modo,modoPrenda:p.modoPrenda??'unitario',bandas:p.bandas||[],ancho:p.ancho??null,alto:p.alto??null,tarifaCm2:q.schema<6?tarifaLegada(p.tarifaCm2??null):p.tarifaCm2??null,margenObjetivo:p.margenObjetivo??equivalente(p.recargo),precio:q.schema===1?(p.precioManual??p.precio):p.precioManual}))};}
 export function paraCliente(q){
- if(!q.preparada)error('Completa costos, precios e impuesto antes de publicar.');
+ if(!q.preparada)error('Escribe el precio por pieza de cada partida y elige el impuesto antes de publicar.');
  return {schema:1,moneda:'MXN',pagos:normalizarPagos(q.pagos),destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
  partidas:q.partidas.map(p=>Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])))};
 }
