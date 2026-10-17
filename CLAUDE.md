@@ -1,6 +1,6 @@
 ## Vigente: editar gastos, guía de cierre y dashboard v2 — 17-oct-2026
 
-Gastos del pedido: modo `editar` en `zain_finanzas_operar` (solo gastos vigentes; versión anterior en `zain_finanzas_eventos.antes`; no permite bajar/mover lo ya reembolsado) y en generales (`generales-editar`, versión previa en `anterior`). Tipo de gasto en botones: «Material del pedido» (grupo base) / «Gasto extra». Guía de cierre con checklist (entregado, cobrado, material real si hubo costo cotizado). Finanzas: filtro por mes con comparación vs mes anterior, KPIs por cobrar y entregados (RPC con `por_cobrar`, `entregados`), gráfica con eje y detalle al pasar/tocar. Migraciones `gastos-editar.sql` y `finanzas-dashboard-v2.sql` aplicadas.
+Gastos del pedido: modo `editar` en `zain_finanzas_operar` (solo gastos vigentes; versión anterior en `zain_finanzas_eventos.antes`; no permite bajar/mover lo ya reembolsado) y en generales (`generales-editar` vía RPC `zain_general_editar`: historial de solo agregar `zain_general_ediciones` y bloqueo optimista por `editado_at`). Tipo de gasto en botones: «Material del pedido» (grupo base) / «Gasto extra». Guía de cierre con checklist (entregado, cobrado, material real si hubo costo cotizado). Finanzas: filtro por mes con comparación vs mes anterior, KPIs por cobrar y entregados (RPC con `por_cobrar`, `entregados`), gráfica con eje y detalle al pasar/tocar. Migraciones `gastos-editar.sql` y `finanzas-dashboard-v2.sql` aplicadas.
 
 ## Vigente: Finanzas — dashboard y movimientos generales — 17-oct-2026
 

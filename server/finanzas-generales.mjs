@@ -44,13 +44,14 @@ export function createGenerales({sb,fail,base,serviceHeaders,fetcher}){
    return leer(Number(v.fecha.slice(0,4)));
   },
   editar:async(b,user)=>{
-   // Corrige un movimiento vigente conservando la versión anterior en "anterior".
+   // Corrige un movimiento vigente; la versión previa va al historial zain_general_ediciones.
    if(!UUID.test(b?.id||''))fail(400,'Movimiento inválido.');
    const m=(await sb('/rest/v1/zain_movimientos_generales?id=eq.'+b.id+'&select='+campos+',actor&limit=1'))[0];if(!m)fail(404,'Movimiento no encontrado.');if(m.anulado_at)fail(409,'Ese movimiento está anulado.');
    const v=validarGeneral({...b,request:b.id,tipo:m.tipo,...(m.tipo==='reembolso'?{verificado:true}:{})},fail);
    if(v.comprobante&&v.comprobante!==m.comprobante){const a=await sb('/rest/v1/zain_general_archivos?id=eq.'+v.comprobante+'&actor=eq.'+user.id+'&select=id&limit=1');if(!a.length)fail(400,'Vuelve a adjuntar el comprobante.');}
-   const {actor,...previo}=m;
-   await sb('/rest/v1/zain_movimientos_generales?id=eq.'+b.id+'&anulado_at=is.null',{method:'PATCH',headers:{Prefer:'return=minimal'},body:JSON.stringify({categoria:v.categoria,persona:v.persona,concepto:v.concepto,importe:v.importe,iva_recuperable:v.iva_recuperable,fecha:v.fecha,comprobante:v.comprobante||m.comprobante,editado_at:new Date().toISOString(),editado_por:user.id,anterior:previo})});
+   // Edición atómica: guarda la versión previa en un historial de solo agregar y no pisa cambios concurrentes.
+   const ok=await sb('/rest/v1/rpc/zain_general_editar',{method:'POST',body:JSON.stringify({p_id:b.id,p_editado_at:m.editado_at??null,p_datos:{categoria:v.categoria,persona:v.persona,concepto:v.concepto,importe:v.importe,iva_recuperable:v.iva_recuperable,fecha:v.fecha,comprobante:v.comprobante},p_actor:user.id})});
+   if(ok!==true)fail(409,'Alguien cambió este movimiento. Actualiza antes de editar.');
    return leer(Number(v.fecha.slice(0,4)));
   },
   anular:async(b,user)=>{
