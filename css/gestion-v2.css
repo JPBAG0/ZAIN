@@ -169,3 +169,7 @@
 .cot-costopendiente [data-precio-prenda]::placeholder,.cot-costopendiente .cot-bandas input:placeholder-shown{color:#8a94a6!important;border-color:#cbd2dc!important}
 .cot-ajuste-rapido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 6px;max-width:420px}
 .cot-sugerencia [data-usar-sugerido]{font-size:13px;min-height:32px}
+.cot-costo-editable{display:grid;gap:3px;min-width:0}
+.cot-panel-ref{font-size:11.5px;color:#68758b;line-height:1.35}
+.cot-panel-ref [data-modificado]{color:#8a5a00;font-weight:600}
+.cot-panel-ref .btn-texto{font-size:11.5px;min-height:28px;padding:0 2px}
