@@ -71,6 +71,22 @@
       "status": 404
     },
     {
+      "src": "/sw-gestion\\.js",
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Content-Type": "text/javascript; charset=utf-8"
+      },
+      "continue": true
+    },
+    {
+      "src": "/gestion\\.webmanifest",
+      "headers": {
+        "Content-Type": "application/manifest+json; charset=utf-8",
+        "Cache-Control": "no-cache"
+      },
+      "continue": true
+    },
+    {
       "handle": "filesystem"
     }
   ]

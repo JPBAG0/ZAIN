@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/cotizacion-documento.css?v=3"><link rel="stylesheet" href="css/cotizacion-v3.css?v=1">
 <link rel="stylesheet" href="css/gestion-movil.css?v=1">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1">
+<link rel="manifest" href="/gestion.webmanifest"><meta name="theme-color" content="#111113">
 <meta name="apple-mobile-web-app-title" content="ZAIN Gestión">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -22,6 +23,7 @@
 <link rel="stylesheet" href="css/gastos.css?v=1"><link rel="stylesheet" href="css/gastos-v2.css?v=1">
 <link rel="stylesheet" href="css/gestion-v2.css?v=4">
 <link rel="stylesheet" href="css/finanzas.css?v=2">
+<link rel="stylesheet" href="css/avisos.css?v=1">
 </head>
 <body class="control">
 <header class="control__cab"><a href="/" aria-label="Volver al catálogo ZAIN"><b>ZAIN</b><span>Pedidos y catálogo</span></a><div class="control__usuario"><span id="equipo"></span><a href="/" class="control__catalogo">Ver catálogo ↗</a><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></div></header>
@@ -34,6 +36,7 @@
 <section id="trabajo" hidden>
 <nav class="control__secciones" aria-label="Gestión"><button type="button" id="verPedidos" class="on" aria-pressed="true">Pedidos</button><button type="button" id="verCatalogo" aria-pressed="false">Catálogo</button></nav>
 <div id="seccionPedidos"><div class="control__titulo"><div><h1>Hoy en ZAIN</h1><p id="fechaPanel">Pedidos y próximos pasos del equipo.</p></div><button type="button" class="btn btn--linea" id="recargar">↻ Actualizar</button></div>
+<div id="avisos" class="control__avisos" hidden aria-live="polite"></div>
 <div id="resumen" class="control__resumen" aria-label="Resumen de pedidos"></div>
 <div class="control__bandeja">
 <div class="control__bandejacab"><div><h2>Pedidos</h2><p>Toca un pedido para cotizarlo, cobrarlo o darle seguimiento.</p></div><div class="control__vistas" role="group" aria-label="Vista de pedidos"><button type="button" id="activos" class="on" aria-pressed="true">Activos</button><button type="button" id="papelera" aria-pressed="false">Papelera <span id="cuentaPapelera">0</span></button></div></div>
@@ -52,5 +55,6 @@
 <script type="module" src="js/control-cotizaciones.js?v=28"></script>
 <script type="module" src="js/control-gastos.js?v=3"></script>
 <script type="module" src="js/control-finanzas.js?v=2"></script>
+<script type="module" src="js/control-avisos.js?v=1"></script>
 <script src="js/subir.js?v=3"></script>
 </body></html>

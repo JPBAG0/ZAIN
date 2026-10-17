@@ -1,0 +1,5 @@
+.control__avisos{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #e3e3df;border-radius:14px;padding:12px 14px;margin:0 0 18px}
+.control__avisos b{font-size:14px;display:block}.control__avisos p{font-size:12px;color:#66666c;margin:2px 0 0;line-height:1.4}
+.control__avisos[data-estado=activo]{border-color:#bfe3cc;background:#f3fbf6}.control__avisos[data-estado=bloqueado]{border-color:#f0d2c8}
+.control__avisosbotones{display:flex;align-items:center;gap:10px}.control__avisosbotones .btn{min-height:44px;padding:10px 16px}.control__avisosbotones .btn-texto{min-height:44px}
+@media (max-width:600px){.control__avisos>div:first-child{flex:1 1 100%}.control__avisosbotones{width:100%}.control__avisosbotones .btn{flex:1}}

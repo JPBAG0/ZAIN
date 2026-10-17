@@ -1,6 +1,7 @@
 import {createGastos} from './gastos.mjs';
 import {createGenerales} from './finanzas-generales.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
+import {createAvisos} from './avisos.mjs';
 import {normalizarGeometria} from './logo-medidas.mjs';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
@@ -195,6 +196,9 @@ export function createHandler(env={}, fetcher=fetch) {
   const quotes=createQuotes({sb,row,fail,commercialItem});
   const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
+  // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
+  const avisosEnabled=env.ZAIN_AVISOS_ENABLED==='true',avisos=createAvisos({sb,fail,fetcher});
+  const fondo=p=>{if(globalThis.EdgeRuntime?.waitUntil){globalThis.EdgeRuntime.waitUntil(p);return;}return p;};
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -259,14 +263,16 @@ export function createHandler(env={}, fetcher=fetch) {
         if(!x.guardado_at) {
           const stored=await sb('/storage/v1/object/list/'+bucket,{method:'POST',body:JSON.stringify({prefix:x.id,limit:100,offset:0,sortBy:{column:'name',order:'asc'}})});
           for(const f of x.archivos){const s=stored.find(s=>s.name===f.path.split('/')[1]);if(!s||Number(s.metadata?.size)!==f.size||s.metadata?.mimetype!==f.type)fail(409,'Todavía faltan archivos por subir. Reintenta para completar la solicitud.');}
-          await sb('/rest/v1/zain_pedidos?id=eq.'+x.id+'&guardado_at=is.null',{method:'PATCH',body:JSON.stringify({guardado_at:new Date().toISOString()})});
+          const marcado=await sb('/rest/v1/zain_pedidos?id=eq.'+x.id+'&guardado_at=is.null',{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify({guardado_at:new Date().toISOString()})});
+          // Solo quien marcó la solicitud como guardada avisa: los reintentos no duplican el aviso.
+          if(avisosEnabled&&Array.isArray(marcado)&&marcado.length)await fondo(avisos.solicitud(marcado[0]));
         }
         if(quotesEnabled){try{await quotes.ensure(x);}catch{console.warn('ZAIN: borrador pendiente; se reintentará desde gestión.');}}
         return response(200,receipt(x));
       }
       if(request.method==='POST'&&['consulta','archivo-consulta',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
-        if(op==='cotizacion-aceptar')return response(200,await seguimiento.aceptar(x,b));
+        if(op==='cotizacion-aceptar'){const out=await seguimiento.aceptar(x,b);if(avisosEnabled&&x.estado!=='aceptado')await fondo(avisos.aceptada(x));return response(200,out);}
         return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id),...(seguimientoEnabled?{seguimiento:await seguimiento.leer(x.id)}:{})}:{})}}:await signedFile(x,b));
       }
       if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){
@@ -297,6 +303,10 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(avisosEnabled&&op==='avisos-clave'&&request.method==='GET')return response(200,await avisos.clave());
+      if(avisosEnabled&&op==='avisos-suscribir'&&request.method==='POST')return response(200,await avisos.suscribir(user,await jsonBody(request)));
+      if(avisosEnabled&&op==='avisos-quitar'&&request.method==='POST')return response(200,await avisos.quitar(user,await jsonBody(request)));
+      if(avisosEnabled&&op==='avisos-probar'&&request.method==='POST')return response(200,await avisos.probar(user));
       if(gastosEnabled&&op==='gastos'&&request.method==='GET')return response(200,{finanzas:await gastos.leer(validateID(url.searchParams.get('id')))});
       if(gastosEnabled&&op==='gastos-guardar'&&request.method==='POST')return response(200,{finanzas:await gastos.guardar(await jsonBody(request),user)});
       if(gastosEnabled&&op==='gastos-comprobante'&&request.method==='POST')return response(200,await gastos.subir(request,url,user));

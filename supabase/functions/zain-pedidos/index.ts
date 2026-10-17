@@ -10,6 +10,7 @@ Deno.serve(createHandler({
   ZAIN_COTIZACIONES_ENABLED:'true',
   ZAIN_CONFIRMACION_ENABLED:'true',
   ZAIN_GASTOS_ENABLED:'true',
+  ZAIN_AVISOS_ENABLED:'true',
   ZAIN_SITE_URL:'https://zain.com.mx',
   ZAIN_ALLOWED_ORIGINS:'https://www.zain.com.mx,https://zain-amber-sigma.vercel.app,http://localhost:8085,http://127.0.0.1:8085,http://localhost:8086,http://127.0.0.1:8086',
   ZAIN_CAPACITY_MB:'800'
