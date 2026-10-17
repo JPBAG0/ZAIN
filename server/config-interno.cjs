@@ -9,9 +9,9 @@ module.exports = {
       "https://zain.com.mx",
       "https://zain-amber-sigma.vercel.app"
     ],
-    "googleAdsId": "AW-18511926536",
-    "etiquetaSolicitud": "-S1oCOL-jqAdEIiqlvtE",
-    "etiquetaWhatsApp": "jq-RCOX-jqAdEIiqlvtE"
+    "googleAdsId": "AW-18438312158",
+    "etiquetaSolicitud": "R0WHCIfxk6AdEN6hidhE",
+    "etiquetaWhatsApp": "kQHRCIrxk6AdEN6hidhE"
   },
   "whatsapp": "525662923967",
   "correo": "atencion.zain@gmail.com",

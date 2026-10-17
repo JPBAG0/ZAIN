@@ -1,6 +1,6 @@
 # ZAIN: medición para Google Ads
 
-Preparado el 13-oct-2026. **Activado el 17-oct-2026** en la cuenta de Google Ads de ZAIN (695-604-7497, etiqueta AW-18511926536): "Solicitud de cotización" es acción principal (objetivo Formulario de clientes potenciales) y "Clic a WhatsApp" es secundaria (objetivo Contacto); ambas cuentan Una, valor fijo MXN 1, sin conversiones avanzadas. Aviso de privacidad actualizado ese día. Pendiente: confirmar recepción en Ads/Tag Assistant con una solicitud real.
+Preparado el 13-oct-2026. **Activado el 17-oct-2026** en la cuenta de Google Ads de JP (538-348-6598, la misma de SEASA, etiqueta AW-18438312158; la cuenta 695-604-7497 de ZAIN quedó sin uso por bloqueo de verificación de identidad): "ZAIN - Solicitud de cotización" es acción principal (objetivo Formulario de clientes potenciales, NO predeterminado de la cuenta para no mezclarse con SEASA) y "ZAIN - Clic a WhatsApp" es secundaria (objetivo Contacto); ambas cuentan Una, valor fijo MXN 1, el sitio no envía datos de usuario (las conversiones avanzadas de esa cuenta se administran en la etiqueta de Google y no se tocaron para no afectar a SEASA). Aviso de privacidad actualizado ese día. Pendiente: confirmar recepción en Ads/Tag Assistant con una solicitud real.
 
 ## Qué mide
 
