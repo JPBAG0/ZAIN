@@ -106,8 +106,12 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  // Pie en cada página. Los datos de contacto son configuración pública, no datos de compras.
  const C=globalThis.window?.ZAIN||{},ig=String(C.instagram||'').match(/instagram\.com\/([A-Za-z0-9._]+)/)?.[1];
  const contacto=[C.correo,C.whatsapp?'WhatsApp +'+String(C.whatsapp).replace(/\D/g,''):'',ig?'@'+ig:'',C.ciudad].filter(Boolean).join('   ');
+ const wa=String(C.whatsapp||'').replace(/\D/g,''),enlace=/^\d{8,15}$/.test(wa)?'https://wa.me/'+wa+'?text='+encodeURIComponent('Hola ZAIN, quiero revisar mi cotización. Folio: '+folio):'',verde=[17,130,63],bw2=33;
  const paginas=doc.getNumberOfPages();
- for(let i=1;i<=paginas;i++){doc.setPage(i);doc.setFillColor(...algodon);doc.rect(0,282,210,15,'F');doc.setDrawColor(...linea);doc.setLineWidth(.25);doc.line(0,282,210,282);if(contacto)label(contacto,m,290.5,7,false,tinta2,'left',true);label(i+' / '+paginas,right,290.5,7,false,tenue,'right',true);}
+ // Botón "Hablar con ZAIN" igual que la vista HTML; en el PDF es un enlace a WhatsApp.
+ for(let i=1;i<=paginas;i++){doc.setPage(i);doc.setFillColor(...algodon);doc.rect(0,282,210,15,'F');doc.setDrawColor(...linea);doc.setLineWidth(.25);doc.line(0,282,210,282);if(contacto)label(contacto,m,290.5,7,false,tinta2,'left',true);
+  const px=enlace?right-bw2-4:right;label(i+' / '+paginas,px,290.5,7,false,tenue,'right',true);
+  if(enlace){doc.setFillColor(...verde);doc.roundedRect(right-bw2,285,bw2,9,4.5,4.5,'F');label('Hablar con ZAIN',right-bw2/2,290.6,8.5,true,blanco,'center');doc.link(right-bw2,285,bw2,9,{url:enlace});}}
  return doc.output('blob');
 }
 export async function descargarPDF(q,options={}){
