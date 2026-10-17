@@ -11,11 +11,26 @@ export function datosPDF(q){
 }
 const texto=v=>String(v??'').normalize('NFC').replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').replace(/\u202f|\u00a0/g,' ');
 const numero=v=>v==null?'Pendiente':pesos(v).replace(/\u00a0/g,' ');
-async function jpeg(src,max=900,fondo='#fff'){
+// Caja del contenido: ignora márgenes transparentes o del color de las esquinas. Null si no hay nada que recortar.
+function contenido(ctx,w,h){
+ const d=ctx.getImageData(0,0,w,h).data,px=i=>[d[i],d[i+1],d[i+2],d[i+3]],esq=px(0),opaco=[0,(w-1)*4,(h-1)*w*4,(h*w-1)*4].every(i=>d[i+3]>250);
+ const vacio=i=>d[i+3]<16||opaco&&Math.abs(d[i]-esq[0])+Math.abs(d[i+1]-esq[1])+Math.abs(d[i+2]-esq[2])<24;
+ let x0=w,y0=h,x1=-1,y1=-1;for(let y=0;y<h;y++)for(let x=0;x<w;x++)if(!vacio((y*w+x)*4)){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y;}
+ if(x1<0)return null;const pad=Math.round(Math.max(x1-x0,y1-y0)*.04);x0=Math.max(0,x0-pad);y0=Math.max(0,y0-pad);x1=Math.min(w-1,x1+pad);y1=Math.min(h-1,y1+pad);
+ return x1-x0+1<w*.97||y1-y0+1<h*.97?{x:x0,y:y0,w:x1-x0+1,h:y1-y0+1}:null;
+}
+async function jpeg(src,max=900,fondo='#fff',recortar=false){
  const img=new Image();img.crossOrigin='anonymous';img.referrerPolicy='no-referrer';
  await new Promise((ok,mal)=>{const timer=setTimeout(()=>fin(Error('No se pudo cargar un diseño para el PDF. Actualiza e inténtalo de nuevo.')),15000);function fin(e){clearTimeout(timer);img.onload=img.onerror=null;e?mal(e):ok();}img.onload=()=>fin();img.onerror=()=>fin(Error('No se pudo cargar un diseño para el PDF. Actualiza e inténtalo de nuevo.'));img.src=src;});
  const escala=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(img.naturalWidth*escala));c.height=Math.max(1,Math.round(img.naturalHeight*escala));
- try{const ctx=c.getContext('2d');ctx.fillStyle=fondo;ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(img,0,0,c.width,c.height);return {src:c.toDataURL('image/jpeg',.92),w:c.width,h:c.height};}finally{c.width=c.height=0;img.removeAttribute('src');}
+ const t=recortar?document.createElement('canvas'):null;
+ try{
+  let caja=null;if(t){t.width=c.width;t.height=c.height;const tx=t.getContext('2d',{willReadFrequently:true});tx.drawImage(img,0,0,t.width,t.height);try{caja=contenido(tx,t.width,t.height);}catch{caja=null;}}
+  if(caja){c.width=caja.w;c.height=caja.h;}
+  const ctx=c.getContext('2d');ctx.fillStyle=fondo;ctx.fillRect(0,0,c.width,c.height);
+  if(caja)ctx.drawImage(t,caja.x,caja.y,caja.w,caja.h,0,0,caja.w,caja.h);else ctx.drawImage(img,0,0,c.width,c.height);
+  return {src:c.toDataURL('image/jpeg',.92),w:c.width,h:c.height};
+ }finally{c.width=c.height=0;if(t)t.width=t.height=0;img.removeAttribute('src');}
 }
 // Membrete v3: mismo diseño que la vista HTML (portada oscura, tarjetas por partida, pago y pasos).
 export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=false,imagenes={}}={}){
@@ -57,14 +72,14 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  // Partidas
  label('Tu selección',m,y,11.5,true);etq('Precios por pieza · personalización incluida',right,y,tenue,'right');y+=4.5;
  const assets=new Map();
- for(const p of q.partidas){const image=imagenDe(p,imagenes);if(image){const key=image.src;let asset=assets.get(key);if(!asset){asset={...await jpeg(key,900,'#e7e7e3'),alias:'diseno-'+assets.size};assets.set(key,asset);}p.imagen={...asset,referencia:image.referencia};}}
+ for(const p of q.partidas){const image=imagenDe(p,imagenes);if(image){const key=image.src;let asset=assets.get(key);if(!asset){asset={...await jpeg(key,900,'#e7e7e3',true),alias:'diseno-'+assets.size};assets.set(key,asset);}p.imagen={...asset,referencia:image.referencia};}}
  const fw=36,ix=m+fw+6,iw=right-ix-5;
  q.partidas.forEach((p,i)=>{
   const nombre=lines(p.nombre,iw,10,true),sub=lines(p.color||'',iw,7.5),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,7.5):[];
   const h=Math.max(36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11);
   espacio(h+3);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
-  if(p.imagen){const a=p.imagen,bw=fw-6,bh=h-14,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+3+(bw-a.w*k)/2,y+5.5+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
+  if(p.imagen){const a=p.imagen,bw=fw-5,bh=h-11.5,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+2.5+(bw-a.w*k)/2,y+4.5+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
   font(5.5,false,tenue,true);label((p.imagen?.referencia?'Referencia del modelo':p.imagen?'Diseño solicitado':'').toUpperCase(),m+2.5,y+h-2.5,5.5,false,tenue,'left',true);
   doc.setFillColor(...tinta);doc.roundedRect(m+3,y+3,8,5,1.2,1.2,'F');label(String(i+1).padStart(2,'0'),m+7,y+6.6,7,true,blanco,'center',true);
   let yy=y+7;for(const l of nombre){label(l,ix,yy,10,true);yy+=4.2;}for(const l of sub){label(l,ix,yy,7.5,false,tenue);yy+=3.3;}yy+=1.5;
