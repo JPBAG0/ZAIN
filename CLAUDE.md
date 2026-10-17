@@ -1,3 +1,11 @@
+## Vigente: bolsas con costos por cantidad y rangos editables — 17-oct-2026
+
+JP confirmó compra de bolsas a precio de mayoreo desde 100 piezas y autorizó rangos internos: 1–49 menudeo, 50–99 medio mayoreo provisional, 100+ mayoreo. No son umbrales documentados del proveedor. El mínimo comercial de 100 por modelo/color sigue vigente. Lista original y costos solo en archivo privado de proveedores/Supabase, fuera de Git público; IVA incluido conservado tal como aparece, sin deducir una tasa. No añadir Metálica al catálogo.
+
+Bandas privadas sin tallas (`tallas: []`) aplican al modelo completo y seleccionan costo por cantidad de la partida/color. El desglose ausente en prendas con bandas de talla específicas conserva costo pendiente. Gestión → Costos → modelo → Costos por cantidad permite editar costo, Desde y Hasta de cada tramo; último Hasta vacío = sin límite. Validación de enteros, límites y traslapes antes de guardar, control de versión existente. Márgenes por volumen se configuran aparte; no confundir con rangos de compra. Cada cotización admite costo unitario revisado y conserva publicación manual.
+
+Sin migración SQL ni cambios de permisos. Cotizaciones publicadas e historial conservados; al abrir o traer costos actualizados se aplica la sincronización vigente de borradores. Pruebas con tarifas ficticias: cortes 49/50/99/100, no sumar partidas, pendientes/cero, rechazo de solapes, actualización privada y proyección comercial sin costos.
+
 ## Vigente: editar gastos, guía de cierre y dashboard v2 — 17-oct-2026
 
 Gastos del pedido: modo `editar` en `zain_finanzas_operar` (solo gastos vigentes; versión anterior en `zain_finanzas_eventos.antes`; no permite bajar/mover lo ya reembolsado) y en generales (`generales-editar` vía RPC `zain_general_editar`: historial de solo agregar `zain_general_ediciones` y bloqueo optimista por `editado_at`). Tipo de gasto en botones: «Material del pedido» (grupo base) / «Gasto extra». Guía de cierre con checklist (entregado, cobrado, material real si hubo costo cotizado). Finanzas: filtro por mes con comparación vs mes anterior, KPIs por cobrar y entregados (RPC con `por_cobrar`, `entregados`), gráfica con eje y detalle al pasar/tocar. Migraciones `gastos-editar.sql` y `finanzas-dashboard-v2.sql` aplicadas.

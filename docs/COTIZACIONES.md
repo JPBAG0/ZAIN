@@ -1,3 +1,11 @@
+## Vigente: bolsas con costos por cantidad y rangos editables — 17-oct-2026
+
+JP confirmó compra de bolsas a precio de mayoreo desde 100 piezas y autorizó rangos internos: 1–49 menudeo, 50–99 medio mayoreo provisional, 100+ mayoreo. No son umbrales documentados del proveedor. El mínimo comercial de 100 por modelo/color sigue vigente. Lista original y costos solo en archivo privado de proveedores/Supabase, fuera de Git público; IVA incluido conservado tal como aparece, sin deducir una tasa. No añadir Metálica al catálogo.
+
+Bandas privadas sin tallas (`tallas: []`) aplican al modelo completo y seleccionan costo por cantidad de la partida/color. El desglose ausente en prendas con bandas de talla específicas conserva costo pendiente. Gestión → Costos → modelo → Costos por cantidad permite editar costo, Desde y Hasta de cada tramo; último Hasta vacío = sin límite. Validación de enteros, límites y traslapes antes de guardar, control de versión existente. Márgenes por volumen se configuran aparte; no confundir con rangos de compra. Cada cotización admite costo unitario revisado y conserva publicación manual.
+
+Sin migración SQL ni cambios de permisos. Cotizaciones publicadas e historial conservados; al abrir o traer costos actualizados se aplica la sincronización vigente de borradores. Pruebas con tarifas ficticias: cortes 49/50/99/100, no sumar partidas, pendientes/cero, rechazo de solapes, actualización privada y proyección comercial sin costos.
+
 ## Vigente: gastos privados, cierre y resumen financiero — 16-oct-2026
 
 JP aprobó Gastos y cierre dentro de cada pedido y pidió Costo + gastos, Venta sin impuesto y Utilidad provisional en la bandeja. Resumen del servidor con los mismos filtros, todas las páginas y agregación completa; excluye cancelados y solicitudes sin cotización. Datos incompletos muestran Pendiente, nunca cero inventado. Antes del cierre, costo = mayor entre costo base de la revisión publicada y costo base real registrado + gastos adicionales. Al cerrar: únicamente costos reales. El costo publicado se recupera del historial exacto, sin depender de cambios al borrador o tarifas actuales.

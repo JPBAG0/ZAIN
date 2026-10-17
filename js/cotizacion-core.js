@@ -23,22 +23,29 @@ export function inicial(){return {metodo:'margen_bruto',costeo:'area_tallas_volu
 function bandasPrecio(value=[]){
  if(!Array.isArray(value)||value.length>100)error('Revisa los costos por talla.');
  const result=value.map(b=>{
-  if(!b||!Array.isArray(b.tallas)||!b.tallas.length||b.tallas.length>18||!Array.isArray(b.colores)||b.colores.length>30)error('Revisa tallas y colores de los costos.');
+  if(!b||!Array.isArray(b.tallas)||b.tallas.length>18||!Array.isArray(b.colores)||b.colores.length>30)error('Revisa tallas y colores de los costos.');
   const tallas=b.tallas.map(t=>texto(t,12)),colores=b.colores.map(t=>texto(t,50));
   if(tallas.some(t=>!t)||colores.some(t=>!t)||new Set(tallas).size!==tallas.length||new Set(colores).size!==colores.length)error('No repitas tallas o colores en el costo.');
   const desdePiezas=entero(b.desdePiezas??1,1,9999),hastaPiezas=b.hastaPiezas==null?null:entero(b.hastaPiezas,desdePiezas,9999);return {tallas,colores,costo:b.costo===null?null:entero(b.costo),...(b.desdePiezas!==undefined||b.hastaPiezas!==undefined?{desdePiezas,hastaPiezas}:{})};
  });
  for(let i=0;i<result.length;i++)for(let j=i+1;j<result.length;j++){
-  const a=result[i],b=result[j];if((a.desdePiezas??1)<=(b.hastaPiezas??9999)&&(b.desdePiezas??1)<=(a.hastaPiezas??9999)&&a.tallas.some(t=>b.tallas.includes(t))&&(!a.colores.length||!b.colores.length||a.colores.some(c=>b.colores.includes(c))))error('Los costos por talla y color se traslapan.');
+  const a=result[i],b=result[j];if((a.desdePiezas??1)<=(b.hastaPiezas??9999)&&(b.desdePiezas??1)<=(a.hastaPiezas??9999)&&(!a.tallas.length||!b.tallas.length||a.tallas.some(t=>b.tallas.includes(t)))&&(!a.colores.length||!b.colores.length||a.colores.some(c=>b.colores.includes(c))))error('Los costos por talla y color se traslapan.');
  }
  return result;
 }
 function costoPorTallas(p,bandas){
+ // Una banda sin tallas aplica al modelo completo (por ejemplo, bolsas).
+ const sinTallas=!p.tallasDetalle||typeof p.tallasDetalle==='object'&&!Array.isArray(p.tallasDetalle)&&!Object.keys(p.tallasDetalle).length;
+ if(sinTallas){
+  const b=bandas.find(b=>!b.tallas.length&&p.piezas>=(b.desdePiezas??1)&&(b.hastaPiezas==null||p.piezas<=b.hastaPiezas)&&(!b.colores.length||b.colores.includes(String(p.color||'').replace(/ · \d+$/,''))));
+  const costo=b?.costo??null,importe=costo===null?null:entero(costo*p.piezas);
+  return {total:importe,detalle:b?[{talla:'Sin talla',piezas:p.piezas,costo,importe}]:[]};
+ }
  const counts=p.tallasDetalle;
  if(!counts||typeof counts!=='object'||Array.isArray(counts)||!Object.keys(counts).length)return {total:null,detalle:[]};
  let piezas=0,total=0,pendiente=false;const detalle=[];
  for(const [talla,n] of Object.entries(counts)){
-  entero(n,1,9999);piezas+=n;const b=bandas.find(b=>p.piezas>=(b.desdePiezas??1)&&(b.hastaPiezas==null||p.piezas<=b.hastaPiezas)&&b.tallas.includes(talla)&&(!b.colores.length||b.colores.includes(String(p.color||'').replace(/ · \d+$/,''))));
+  entero(n,1,9999);piezas+=n;const b=bandas.find(b=>p.piezas>=(b.desdePiezas??1)&&(b.hastaPiezas==null||p.piezas<=b.hastaPiezas)&&(!b.tallas.length||b.tallas.includes(talla))&&(!b.colores.length||b.colores.includes(String(p.color||'').replace(/ · \d+$/,''))));
   const costo=b?.costo??null,importe=costo===null?null:entero(costo*n);if(importe===null)pendiente=true;else total=entero(total+importe);
   detalle.push({talla,piezas:n,costo,importe});
  }
