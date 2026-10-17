@@ -4,14 +4,14 @@ module.exports = {
   "pedidosApi": "https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos",
   "privacidadPublicada": true,
   "medicion": {
-    "activa": false,
+    "activa": true,
     "origenes": [
       "https://zain.com.mx",
       "https://zain-amber-sigma.vercel.app"
     ],
-    "googleAdsId": "",
-    "etiquetaSolicitud": "",
-    "etiquetaWhatsApp": ""
+    "googleAdsId": "AW-18511926536",
+    "etiquetaSolicitud": "-S1oCOL-jqAdEIiqlvtE",
+    "etiquetaWhatsApp": "jq-RCOX-jqAdEIiqlvtE"
   },
   "whatsapp": "525662923967",
   "correo": "atencion.zain@gmail.com",
