@@ -41,7 +41,10 @@ async function call(op,body,extra={},retry=true){
  if(r.status===401&&retry&&session?.refresh_token){if(!refreshing)refreshing=auth({refresh_token:session.refresh_token},'refresh_token').finally(()=>refreshing=null);await refreshing;return call(op,body,extra,false);}
  const data=await r.json();if(!r.ok){const e=new Error(data.error||'No se pudo consultar el pedido.');e.auth=r.status===401||r.status===403;throw e;}return data;
 }
-window.ZAINEquipo={call,uploadGasto:async(id,archivo,blob)=>{
+window.ZAINEquipo={call,uploadGeneral:async(archivo,blob)=>{
+ const send=()=>fetch(api+'?op=generales-comprobante&archivo='+encodeURIComponent(archivo),{method:'POST',headers:{Authorization:'Bearer '+session.access_token,'Content-Type':blob.type},body:blob,signal:AbortSignal.timeout(45000)});
+ let r=await send();if(r.status===401&&session?.refresh_token){await auth({refresh_token:session.refresh_token},'refresh_token');r=await send();}const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo guardar el comprobante.');return d;
+},uploadGasto:async(id,archivo,blob)=>{
  const send=()=>fetch(api+'?op=gastos-comprobante&id='+encodeURIComponent(id)+'&archivo='+encodeURIComponent(archivo),{method:'POST',headers:{Authorization:'Bearer '+session.access_token,'Content-Type':blob.type},body:blob,signal:AbortSignal.timeout(45000)});
  let r=await send();if(r.status===401&&session?.refresh_token){await auth({refresh_token:session.refresh_token},'refresh_token');r=await send();}const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo guardar el comprobante.');return d;
 },upload:async(id,blob)=>{

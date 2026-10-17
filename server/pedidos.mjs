@@ -1,4 +1,5 @@
 import {createGastos} from './gastos.mjs';
+import {createGenerales} from './finanzas-generales.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {normalizarGeometria} from '../js/logo-medidas.js';
 import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
@@ -192,7 +193,7 @@ export function createHandler(env={}, fetcher=fetch) {
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   const quotes=createQuotes({sb,row,fail,commercialItem});
-  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher});
+  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
@@ -300,6 +301,11 @@ export function createHandler(env={}, fetcher=fetch) {
       if(gastosEnabled&&op==='gastos-guardar'&&request.method==='POST')return response(200,{finanzas:await gastos.guardar(await jsonBody(request),user)});
       if(gastosEnabled&&op==='gastos-comprobante'&&request.method==='POST')return response(200,await gastos.subir(request,url,user));
       if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
+      if(gastosEnabled&&op==='generales'&&request.method==='GET')return response(200,await generales.leer(Number(url.searchParams.get('anio'))));
+      if(gastosEnabled&&op==='generales-guardar'&&request.method==='POST')return response(200,await generales.guardar(await jsonBody(request),user));
+      if(gastosEnabled&&op==='generales-anular'&&request.method==='POST')return response(200,await generales.anular(await jsonBody(request),user));
+      if(gastosEnabled&&op==='generales-comprobante'&&request.method==='POST')return response(200,await generales.subir(request,url,user));
+      if(gastosEnabled&&op==='generales-archivo'&&request.method==='POST')return response(200,await generales.archivo(await jsonBody(request)));
 
       if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
       if(seguimientoEnabled&&op==='cotizacion-aceptar-equipo'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.aceptarEquipo(x,b,user));}

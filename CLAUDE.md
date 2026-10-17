@@ -1,3 +1,7 @@
+## Vigente: Finanzas — dashboard y movimientos generales — 17-oct-2026
+
+Pestaña Finanzas (`js/control-finanzas.js`, `css/finanzas.css`): KPIs del año (ventas de pedidos aceptados en adelante, costo de pedidos, gastos generales, utilidad neta y margen), utilidad neta por mes con tabla, gastos por categoría, reparto 50/50 JP/García (informativo) y por devolver a cada quien (pedidos + generales). Movimientos generales no ligados a un pedido: gasto, ingreso o reembolso, categorías en `server/finanzas-generales.mjs` (gastos con Flete; ingresos con "Aportación de capital", que NO cuenta como utilidad). Ops `generales`, `generales-guardar` (idempotente por request), `generales-anular` (motivo, conserva registro), `generales-comprobante` (bucket privado, prefijo `generales/`), `generales-archivo` (firma 120 s). Migración `supabase/finanzas-generales.sql`: tablas `zain_movimientos_generales` y `zain_general_archivos` con RLS sin políticas y solo service_role; RPC `zain_finanzas_dashboard(anio)` security invoker. Pedidos por mes de solicitud.
+
 ## Vigente: cifras por pedido en la bandeja — 17-oct-2026
 
 Cada tarjeta muestra Venta · Material · Gastos · Utilidad · Margen bruto (desde `finanzas` de `zain_finanzas_panel`; material = real al cerrar, si no el mayor entre cotizado y registrado). Migración `supabase/finanzas-costo-real.sql` (aplicada): cotizaciones publicadas sin costos usan el material real registrado (gastos 'base') para la utilidad provisional; sin material sigue "Sin capturar". Mismas columnas y permisos de la vista.

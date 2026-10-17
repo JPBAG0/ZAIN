@@ -1,0 +1,55 @@
+/* Finanzas (17-oct-2026): dashboard anual y movimientos generales. Celular primero. */
+.fin-anio select{min-height:44px;border:1px solid #cbd2dc;border-radius:10px;padding:8px 12px;font:600 15px Archivo,Arial,sans-serif;background:#fff}
+.fin-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.fin-kpis>div{display:grid;gap:3px;background:#fff;border:1px solid #d9dfe7;border-radius:14px;padding:14px;min-width:0}
+.fin-kpis small{font-size:12px;color:#5d6880}
+.fin-kpis strong{font-size:22px;letter-spacing:-.4px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.fin-kpis span{font-size:11.5px;color:#68758b}
+.fin-kpis .fin-kpi-neta{background:#182034;border-color:#182034;color:#fff}
+.fin-kpis .fin-kpi-neta small,.fin-kpis .fin-kpi-neta span{color:#c9cfdd}
+.fin-kpis .fin-kpi-neta.fin-negativa{background:#7a1d24;border-color:#7a1d24}
+.fin-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;align-items:start}
+.fin-grid>.cot-panel{margin:0}
+.fin-grid>.cot-panel:last-child{grid-column:1/-1}
+.fin-grid h2{font-size:18px;margin:0 0 4px}.fin-grid h3{font-size:15px;margin:16px 0 8px}
+.fin-barras{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;height:170px;margin:12px 0 4px;padding-bottom:2px;border-bottom:1px solid #d9dfe7}
+.fin-barra{display:grid;grid-template-rows:1fr auto;height:100%;gap:4px;min-width:0}
+.fin-barra__area{display:flex;align-items:flex-end;justify-content:center;height:100%}
+.fin-barra i{display:block;width:min(70%,22px);background:#2a3bff;border-radius:4px 4px 0 0;min-height:2px}
+.fin-barra i.neg{background:#b3261e}
+.fin-barra small{font-size:10px;color:#68758b;text-align:center}
+@media(hover:hover) and (pointer:fine){.fin-barra:hover i{filter:brightness(1.25)}}
+.fin-tabla summary{cursor:pointer;font-size:13px;font-weight:600;min-height:40px;display:flex;align-items:center}
+.fin-cats{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:12px}
+.fin-cats li div{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:4px}
+.fin-cats li b{font-variant-numeric:tabular-nums}
+.fin-cats li i{display:block;height:8px;border-radius:4px;background:#2a3bff}
+.fin-reparto{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fin-reparto>div{display:grid;gap:3px;background:#f1f4fa;border-radius:12px;padding:12px;min-width:0}
+.fin-reparto small{font-size:12px;color:#5d6880}.fin-reparto strong{font-size:19px;font-variant-numeric:tabular-nums}.fin-reparto span{font-size:11px;color:#68758b}
+.fin-registrar{margin:16px 0}
+.fin-registrar>summary{cursor:pointer;font-weight:700;font-size:16px;min-height:44px;display:flex;align-items:center;color:#2a30b8}
+.fin-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:10px}
+.fin-ancho{grid-column:1/-1}
+.fin-form .btn{justify-content:center;min-height:48px}
+.fin-tipo{border:0;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;grid-column:1/-1}
+.fin-movs{margin-top:0}
+.fin-movscab{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.fin-movscab h2{margin:0;font-size:18px}
+.fin-mov{border-top:1px solid #e3e7ef;padding:12px 0}
+.fin-mov>div:first-child{display:flex;justify-content:space-between;gap:12px}
+.fin-mov strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fin-mov .fin-ingreso{color:#267663}
+.fin-mov p{font-size:12.5px;color:#5d6880;margin:4px 0}
+.fin-anular{display:grid;gap:8px;margin-top:8px}
+@media(max-width:700px){
+ .control .control__secciones{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .control .control__secciones button{font-size:11.5px;padding:10px 2px}
+ .fin-kpis{grid-template-columns:1fr 1fr;gap:8px}
+ .fin-kpis strong{font-size:18px}
+ .fin-grid{grid-template-columns:1fr}
+ .fin-barras{height:140px;gap:2px}
+ .fin-barra small{font-size:9px}
+ .fin-form{grid-template-columns:1fr}
+}
+.fin-barra i.cero{background:#d9dfe7}
