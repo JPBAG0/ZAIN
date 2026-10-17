@@ -16,13 +16,14 @@ function bandas(p,i){
 }
 // Precio por pieza primero: es lo único obligatorio. Costos, margen y medidas son opcionales y solo calculan una sugerencia y la utilidad.
 const pct=n=>(n/100).toLocaleString('es-MX',{maximumFractionDigits:2})+'%';
-const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'Sin costos capturados: escribe el precio que acordaste.')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
+const falta=p=>p.costoPrendas===null?'el costo de la prenda':p.modo!=='area'?'el costo de '+p.tecnica+' por pieza':p.ancho===null||p.alto===null?'la medida del logo':'la tarifa de '+p.tecnica+' por cm²';
+const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'No se puede calcular: falta '+falta(p)+' en «Costos de esta partida». Mientras, escribe el precio que acordaste.')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
 const utilidadPartida=p=>p.costo===null||p.importe===null?'Opcional · para ver tu utilidad':'Costo '+pesos(p.costo)+' · Utilidad '+pesos(p.importe-p.costo);
 function partida(p,i,src,origen){
  const foto=imagen(src),costoPrenda=costo('prenda-q'+i,'Costo de prenda / pieza',p.prenda,origen,'prenda','placeholder="Opcional"');
  return `<section class="cot-partida cot-producto" id="cot-partida-${i}">
  <header class="cot-producto-cab ${foto?'':'cot-sinfoto'}">${foto?`<img class="cot-producto-foto" src="${foto}" alt="Diseño de ${esc(p.nombre)}" referrerpolicy="no-referrer" width="76" height="90">`:''}<div class="cot-producto-titulo"><h4>${esc(p.nombre)}</h4><p>${esc(p.color)} · ${esc(p.tecnica)} · <b>${p.piezas} piezas</b></p><small>${esc(p.tallas||'Sin desglose de tallas')} · ${esc(p.sku)}</small></div></header>
- <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}"></span></label><div class="cot-total-partida"><span>${p.piezas} piezas</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
+ <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}" ${p.sugerido!==null?'data-calculado':''}></span></label><div class="cot-total-partida"><span>${p.piezas} piezas</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
  <div class="cot-ajuste-rapido">${field('descuento-q'+i,'Descuento %',val(p.descuento),'number','max="100"')}${field('margen-q'+i,'Margen objetivo %',val(p.margenObjetivo),'number','max="99.99"')}</div>
  <p class="cot-sugerencia"><span data-sugerencia>${esc(sugerencia(p))}</span> <button type="button" class="btn-texto" data-usar-sugerido="${i}" ${p.precioManual!==null&&p.sugerido!==null?'':'hidden'}>Usar precio sugerido</button></p>
  <details class="cot-ajustes" data-ajustes-partida><summary>Costos de esta partida · editables <span data-utilidad-partida>${esc(utilidadPartida(p))}</span></summary><div class="cot-ajustes-contenido">
@@ -54,7 +55,7 @@ export function editorCotizacion(q,{version,publicada,imagenes={},productos=[]}=
 export function actualizarPartida(box,p){
  const set=(selector,value)=>{const el=box.querySelector(selector);if(el)el.textContent=value;};
  set('[data-total-partida]',pesos(p.importe));set('[data-sugerencia]',sugerencia(p));set('[data-utilidad-partida]',utilidadPartida(p));set('[data-resumen-prenda]',pesos(p.costoPrendas));set('[data-resumen-tecnica]',pesos(p.aplicacion));set('[data-resumen-logo]',p.ancho!==null&&p.alto!==null?val(p.ancho)+' × '+val(p.alto)+' cm':'Medidas pendientes');
- const precio=box.querySelector('[name^="precio-q"]');if(precio)precio.placeholder=p.sugerido!==null?val(p.sugerido):'0.00';
+ const precio=box.querySelector('[name^="precio-q"]');if(precio){precio.placeholder=p.sugerido!==null?val(p.sugerido):'0.00';precio.toggleAttribute('data-calculado',p.sugerido!==null);}
  const usar=box.querySelector('[data-usar-sugerido]');if(usar)usar.hidden=!(p.precioManual!==null&&p.sugerido!==null);
  const d=box.querySelector('[data-desglose-tallas]'),abierto=d.querySelector('details')?.open;d.innerHTML=detalleTallas(p);if(abierto&&d.querySelector('details'))d.querySelector('details').open=true;
 }

@@ -60,6 +60,8 @@
 .cot-precio-entrada b{font-size:22px;color:#5d6880;margin-right:4px}
 .cot-panel .cot-precio-entrada input{border:0;padding:8px 0;font-size:24px;font-weight:700;height:auto!important;max-height:none!important;min-height:0!important;background:transparent}
 .cot-panel .cot-precio-entrada input:focus-visible{outline:0}
+/* Precio calculado con el margen: se ve como valor real hasta que el equipo escriba uno propio. */
+.cot-panel .cot-precio-entrada input[data-calculado]::placeholder{color:#1d2433;opacity:1}
 .cot-precio-entrada:focus-within{box-shadow:0 0 0 4px #3035ff26}
 .cot-panel .cot-precio-principal .cot-total-partida{grid-column:2;display:grid;justify-items:end;gap:2px;padding:0 0 8px;margin:0;text-align:right}
 .cot-precio-principal .cot-total-partida span{font-size:12px;color:#5d6880}

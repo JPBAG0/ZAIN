@@ -1,6 +1,6 @@
 import './control-confirmacion.js?v=2';
 import {ordenarCostos} from './control-costos-vista.js?v=2';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=12';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=13';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
