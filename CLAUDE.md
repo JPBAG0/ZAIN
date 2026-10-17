@@ -1,3 +1,7 @@
+## Vigente: cifras por pedido en la bandeja — 17-oct-2026
+
+Cada tarjeta muestra Venta · Material · Gastos · Utilidad · Margen bruto (desde `finanzas` de `zain_finanzas_panel`; material = real al cerrar, si no el mayor entre cotizado y registrado). Migración `supabase/finanzas-costo-real.sql` (aplicada): cotizaciones publicadas sin costos usan el material real registrado (gastos 'base') para la utilidad provisional; sin material sigue "Sin capturar". Mismas columnas y permisos de la vista.
+
 ## Vigente: membrete de cotización v3 — 17-oct-2026
 
 JP aprobó la propuesta v3 "tal cual" y pidió publicarla. `documento()` en `js/cotizacion-vista.js` (Gestión → Ver PDF, Mi pedido, imprimir) y `crearPDF()` en `js/cotizacion-pdf.js` (Descargar PDF, jsPDF) usan el mismo diseño: portada oscura con total, datos (emisión, vigencia, plazo, anticipo), tarjetas por partida con foto/chips/tallas (`tallasDe` solo si el texto se puede leer; si no, texto tal cual), resumen con total cobalto, pago anticipo/saldo con barra, "Cómo seguimos", condiciones y notas. Estilos en `css/cotizacion-v3.css`. Los textos de la propuesta que eran promesas no confirmadas (foto de muestra, paquetería, "1 tinta") se reemplazaron por datos reales de la cotización (plazo, términos e instrucciones de pago, condiciones). En jsPDF usar solo caracteres WinAnsi (sin "−" U+2212). El v2 (`cotizacion-documento.css`) queda como histórico.
