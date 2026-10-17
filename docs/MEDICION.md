@@ -1,6 +1,6 @@
 # ZAIN: medición para Google Ads
 
-Preparado el 13-oct-2026. **Google Ads desactivado: faltan el ID AW, las etiquetas de conversión y el aviso definitivo. No se creó ni se activó una campaña.**
+Preparado el 13-oct-2026. **Activado el 17-oct-2026** en la cuenta de Google Ads de ZAIN (695-604-7497, etiqueta AW-18511926536): "Solicitud de cotización" es acción principal (objetivo Formulario de clientes potenciales) y "Clic a WhatsApp" es secundaria (objetivo Contacto); ambas cuentan Una, valor fijo MXN 1, sin conversiones avanzadas. Aviso de privacidad actualizado ese día. Pendiente: confirmar recepción en Ads/Tag Assistant con una solicitud real.
 
 ## Qué mide
 
