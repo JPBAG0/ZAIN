@@ -59,8 +59,11 @@ export function createAvisos({sb,fail,fetcher=fetch}){
  // Nunca lanza: un aviso fallido no debe tumbar la solicitud del cliente.
  async function enviar(aviso,{usuario}={}){
   try{
-   const subs=await sb('/rest/v1/zain_push?select=endpoint,p256dh,auth'+(usuario?'&user_id=eq.'+usuario:'')+'&limit=50');
-   if(!subs?.length)return 0;
+   // Solo personas con acceso vigente: equipo activo y correo activo en zain_accesos.
+   const filas=await sb('/rest/v1/zain_push?select=endpoint,p256dh,auth,email,zain_equipo!inner(activo)&zain_equipo.activo=eq.true'+(usuario?'&user_id=eq.'+usuario:'')+'&limit=50');
+   if(!filas?.length)return 0;
+   const vigentes=new Set((await sb('/rest/v1/zain_accesos?activo=eq.true&select=email&limit=200')).map(a=>a.email));
+   const subs=filas.filter(s=>vigentes.has(s.email));if(!subs.length)return 0;
    const k=await llaves();let ok=0;
    for(const s of subs){try{if(await enviarA(s,aviso,k))ok++;}catch{console.warn('ZAIN: aviso push no entregado.');}}
    return ok;
@@ -68,7 +71,7 @@ export function createAvisos({sb,fail,fetcher=fetch}){
  }
  return {
   clave:async()=>({publica:(await llaves()).publica}),
-  suscribir:async(user,b)=>{const s=validar(b);await sb('/rest/v1/zain_push?on_conflict=endpoint',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify({...s,user_id:user.id,actualizado:new Date().toISOString()})});return {activo:true};},
+  suscribir:async(user,b)=>{const s=validar(b);await sb('/rest/v1/zain_push?on_conflict=endpoint',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify({...s,user_id:user.id,email:user.email,actualizado:new Date().toISOString()})});return {activo:true};},
   quitar:async(user,b)=>{const endpoint=b?.endpoint;if(typeof endpoint!=='string'||endpoint.length>1000)fail(400,'Suscripción inválida.');await sb('/rest/v1/zain_push?endpoint=eq.'+encodeURIComponent(endpoint)+'&user_id=eq.'+user.id,{method:'DELETE'});return {activo:false};},
   probar:async user=>({enviados:await enviar({title:'ZAIN · avisos activos',body:'Así te llegará cada solicitud nueva y cada cotización aceptada.',url:'/gestion-zain',tag:'prueba'},{usuario:user.id})}),
   enviar,

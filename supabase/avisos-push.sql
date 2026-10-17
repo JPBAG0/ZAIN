@@ -7,6 +7,7 @@ create table if not exists public.zain_push (
   p256dh text not null check (length(p256dh) between 80 and 100),
   auth text not null check (length(auth) between 16 and 32),
   dispositivo text not null default '' check (length(dispositivo)<=80),
+  email text not null default '' check (email=lower(email)),
   creado timestamptz not null default now(),
   actualizado timestamptz not null default now()
 );

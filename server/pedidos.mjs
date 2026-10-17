@@ -165,7 +165,7 @@ export function createHandler(env={}, fetcher=fetch) {
     if(!access?.length)fail(403,'Esta cuenta no tiene acceso al panel de ZAIN.');
     let users=await sb('/rest/v1/zain_equipo?user_id=eq.'+u.id+'&select=user_id,nombre,activo&limit=1');
     if(!users.length){await sb('/rest/v1/zain_equipo?on_conflict=user_id',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates'},body:JSON.stringify({user_id:u.id,nombre:access[0].nombre})});users=await sb('/rest/v1/zain_equipo?user_id=eq.'+u.id+'&select=user_id,nombre,activo&limit=1');}
-    if(!users[0]?.activo)fail(403,'Esta cuenta no tiene acceso al panel de ZAIN.');return {id:u.id,nombre:users[0].nombre};
+    if(!users[0]?.activo)fail(403,'Esta cuenta no tiene acceso al panel de ZAIN.');return {id:u.id,nombre:users[0].nombre,email:u.email.toLowerCase()};
   };
   // Capacidad de consulta independiente del token que autoriza las cargas.
   const readToken=x=>{
@@ -272,7 +272,8 @@ export function createHandler(env={}, fetcher=fetch) {
       }
       if(request.method==='POST'&&['consulta','archivo-consulta',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
-        if(op==='cotizacion-aceptar'){const out=await seguimiento.aceptar(x,b);if(avisosEnabled&&x.estado!=='aceptado')await fondo(avisos.aceptada(x));return response(200,out);}
+        if(op==='cotizacion-aceptar'){const out=await seguimiento.aceptar(x,b);// Solo avisa si la cotización pasó a aceptada ahora; reaceptar en estados posteriores no repite el aviso.
+          if(avisosEnabled&&['nuevo','contactado','cotizado'].includes(x.estado))await fondo(avisos.aceptada(x));return response(200,out);}
         return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id),...(seguimientoEnabled?{seguimiento:await seguimiento.leer(x.id)}:{})}:{})}}:await signedFile(x,b));
       }
       if(request.method==='POST'&&['render-local-subida','render-local-finalizar'].includes(op)){

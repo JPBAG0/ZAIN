@@ -38,11 +38,12 @@ test('el aviso cifrado se descifra igual que en el celular',async()=>{
 });
 
 test('llaves VAPID se crean una vez, firma válida y suscripciones vencidas se borran',async()=>{
- const n=await navegador(),db={llaves:null,push:[{endpoint:'https://web.push.apple.com/abc',...n.keys}]},enviados=[];
+ const n=await navegador(),db={llaves:null,push:[{endpoint:'https://web.push.apple.com/abc',...n.keys,email:'equipo@zain.test'},{endpoint:'https://web.push.apple.com/revocado',...n.keys,email:'ex@zain.test'}]},enviados=[];
  const sb=async(path,o={})=>{
   if(path.startsWith('/rest/v1/zain_push_llaves?id=eq.1'))return db.llaves?[db.llaves]:[];
   if(path.startsWith('/rest/v1/zain_push_llaves?on_conflict')){db.llaves??=JSON.parse(o.body);return null;}
-  if(path.startsWith('/rest/v1/zain_push?select'))return db.push;
+  if(path.startsWith('/rest/v1/zain_push?select')){assert.match(path,/zain_equipo\.activo=eq\.true/);return db.push;}
+  if(path.startsWith('/rest/v1/zain_accesos?activo=eq.true'))return [{email:'equipo@zain.test'}];
   if(o.method==='DELETE'){db.push=db.push.filter(s=>!path.includes(encodeURIComponent(s.endpoint)));return null;}
   throw Error('Ruta inesperada '+path);
  };
@@ -55,7 +56,8 @@ test('llaves VAPID se crean una vez, firma válida y suscripciones vencidas se b
  assert.equal(o.headers['Content-Encoding'],'aes128gcm');await verificarVapid(o.headers.Authorization,publica,url);
  const aviso=JSON.parse(await n.descifrar(o.body));
  assert.equal(aviso.title,'Nueva solicitud ZAIN-1');assert.equal(aviso.body,'ZurichTec · 600 piezas · Bolsa y 1 más');assert.equal(aviso.url,'/gestion-zain#x');
- estado=410;assert.equal(await avisos.aceptada({id:'x',folio:'ZAIN-1'}),0);assert.equal(db.push.length,0);
+ assert.equal(enviados.length,1,'el acceso revocado no recibe avisos');
+ estado=410;assert.equal(await avisos.aceptada({id:'x',folio:'ZAIN-1'}),0);assert.deepEqual(db.push.map(s=>s.endpoint),['https://web.push.apple.com/revocado']);
  assert.equal((await avisos.clave()).publica,publica);
 });
 
@@ -79,7 +81,8 @@ test('finalizar avisa una sola vez y la API de avisos exige sesión',async()=>{
   if(url.includes('/zain_pedidos?'))return Response.json([fila]);
   if(url.includes('/object/list/'))return Response.json([]);
   if(url.includes('/zain_push_llaves?id=eq.1'))return Response.json([llaves]);
-  if(url.includes('/zain_push?select'))return Response.json([{endpoint:'https://web.push.apple.com/abc',...n.keys}]);
+  if(url.includes('/zain_push?select'))return Response.json([{endpoint:'https://web.push.apple.com/abc',...n.keys,email:'equipo@zain.test'}]);
+  if(url.includes('/zain_accesos?activo=eq.true'))return Response.json([{email:'equipo@zain.test'}]);
   if(url.includes('/auth/v1/user'))return Response.json({error:'sin sesión'},{status:401});
   throw Error('Ruta inesperada '+url);
  };
