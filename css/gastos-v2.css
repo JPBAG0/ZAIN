@@ -1,0 +1,18 @@
+/* Gastos del pedido v2 (17-oct-2026): 5 cifras, guía de cierre, tipo de gasto en botones, editar. */
+#gastosPedido .gastos-cifras--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.gastos-cierre-guia{border:1px solid #d9dfe7;border-radius:14px;padding:14px 16px;margin:12px 0;background:#fffaf0}
+.gastos-cierre-guia--listo{background:#eef8f2;border-color:#bfe0cc}
+.gastos-cierre-guia h3{font-size:16px;margin:0 0 8px}
+.gastos-cierre-guia ul{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:8px}
+.gastos-cierre-guia li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start;font-size:14px}
+.gastos-cierre-guia li span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;font-weight:700;font-size:12px}
+.gastos-cierre-guia li.ok span{background:#267663;color:#fff}
+.gastos-cierre-guia li.falta span{background:#f3c96b;color:#5a3b00}
+.gastos-cierre-guia li small{display:block;color:#5d6880;font-size:12.5px;line-height:1.45;margin-top:2px}
+.gastos-cierre-guia form{display:grid;gap:10px}
+.gastos-cierre-guia .btn{justify-content:center;min-height:48px}
+.gastos-grupo{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.gastos-grupo legend{font-size:13px;font-weight:600;margin-bottom:6px;padding:0}
+.gastos-grupo small{flex-basis:100%;font-size:12px;color:#68758b}
+.gastos-tipo{font-weight:600}.gastos-tipo--base{color:#2a30b8}.gastos-tipo--extra{color:#8a5a00}
+@media(max-width:700px){#gastosPedido .gastos-cifras--5{grid-template-columns:repeat(3,minmax(0,1fr))}}

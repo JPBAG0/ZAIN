@@ -24,7 +24,7 @@ export function validarGeneral(b,fail){
  return {id:b.request,tipo:b.tipo,categoria:b.categoria,persona:b.persona,concepto:b.concepto.replace(/[\x00-\x1f\x7f]/g,' ').trim(),importe:b.importe,iva_recuperable:iva,fecha:b.fecha,comprobante:b.comprobante||null};
 }
 export function createGenerales({sb,fail,base,serviceHeaders,fetcher}){
- const campos='id,tipo,categoria,persona,concepto,importe,iva_recuperable,fecha,comprobante,created_at,anulado_at,motivo';
+ const campos='id,tipo,categoria,persona,concepto,importe,iva_recuperable,fecha,comprobante,created_at,anulado_at,motivo,editado_at';
  const leer=async anio=>{
   if(!Number.isSafeInteger(anio)||anio<2020||anio>2100)fail(400,'Año inválido.');
   const [dashboard,movimientos]=await Promise.all([
@@ -41,6 +41,16 @@ export function createGenerales({sb,fail,base,serviceHeaders,fetcher}){
    const prev=await sb('/rest/v1/zain_movimientos_generales?id=eq.'+v.id+'&select=id,importe,tipo,actor&limit=1');
    if(prev.length){if(prev[0].importe!==v.importe||prev[0].tipo!==v.tipo||prev[0].actor!==user.id)fail(409,'Esa solicitud ya se registró con otros datos.');}
    else await sb('/rest/v1/zain_movimientos_generales',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify({...v,actor:user.id})});
+   return leer(Number(v.fecha.slice(0,4)));
+  },
+  editar:async(b,user)=>{
+   // Corrige un movimiento vigente conservando la versión anterior en "anterior".
+   if(!UUID.test(b?.id||''))fail(400,'Movimiento inválido.');
+   const m=(await sb('/rest/v1/zain_movimientos_generales?id=eq.'+b.id+'&select='+campos+',actor&limit=1'))[0];if(!m)fail(404,'Movimiento no encontrado.');if(m.anulado_at)fail(409,'Ese movimiento está anulado.');
+   const v=validarGeneral({...b,request:b.id,tipo:m.tipo,...(m.tipo==='reembolso'?{verificado:true}:{})},fail);
+   if(v.comprobante&&v.comprobante!==m.comprobante){const a=await sb('/rest/v1/zain_general_archivos?id=eq.'+v.comprobante+'&actor=eq.'+user.id+'&select=id&limit=1');if(!a.length)fail(400,'Vuelve a adjuntar el comprobante.');}
+   const {actor,...previo}=m;
+   await sb('/rest/v1/zain_movimientos_generales?id=eq.'+b.id+'&anulado_at=is.null',{method:'PATCH',headers:{Prefer:'return=minimal'},body:JSON.stringify({categoria:v.categoria,persona:v.persona,concepto:v.concepto,importe:v.importe,iva_recuperable:v.iva_recuperable,fecha:v.fecha,comprobante:v.comprobante||m.comprobante,editado_at:new Date().toISOString(),editado_por:user.id,anterior:previo})});
    return leer(Number(v.fecha.slice(0,4)));
   },
   anular:async(b,user)=>{

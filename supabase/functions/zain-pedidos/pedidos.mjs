@@ -303,6 +303,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
       if(gastosEnabled&&op==='generales'&&request.method==='GET')return response(200,await generales.leer(Number(url.searchParams.get('anio'))));
       if(gastosEnabled&&op==='generales-guardar'&&request.method==='POST')return response(200,await generales.guardar(await jsonBody(request),user));
+      if(gastosEnabled&&op==='generales-editar'&&request.method==='POST')return response(200,await generales.editar(await jsonBody(request),user));
       if(gastosEnabled&&op==='generales-anular'&&request.method==='POST')return response(200,await generales.anular(await jsonBody(request),user));
       if(gastosEnabled&&op==='generales-comprobante'&&request.method==='POST')return response(200,await generales.subir(request,url,user));
       if(gastosEnabled&&op==='generales-archivo'&&request.method==='POST')return response(200,await generales.archivo(await jsonBody(request)));
