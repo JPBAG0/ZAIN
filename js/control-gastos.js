@@ -1,5 +1,5 @@
 import {pesos,decimal} from './cotizacion-core.js?v=11';
-import {esc} from './cotizacion-vista.js?v=7';
+import {esc} from './cotizacion-vista.js?v=8';
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_City'}),valor=n=>(n/100).toFixed(2);
 let epoca=0,root,pedido,finanzas,ocupado=false;
 const api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);

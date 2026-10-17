@@ -1,6 +1,6 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
 import {pesos} from './cotizacion-core.js?v=11';
-import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=7';
+import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=8';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
@@ -60,7 +60,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  for(const p of q.partidas){const image=imagenDe(p,imagenes);if(image){const key=image.src;let asset=assets.get(key);if(!asset){asset={...await jpeg(key,900,'#e7e7e3'),alias:'diseno-'+assets.size};assets.set(key,asset);}p.imagen={...asset,referencia:image.referencia};}}
  const fw=46,ix=m+fw+6,iw=right-ix-5;
  q.partidas.forEach((p,i)=>{
-  const nombre=lines(p.nombre,iw,11,true),sub=lines([p.color,p.zona].filter(Boolean).join(' · '),iw,8),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,8):[];
+  const nombre=lines(p.nombre,iw,11,true),sub=lines(p.color||'',iw,8),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,8):[];
   const h=Math.max(48,10+nombre.length*4.6+sub.length*3.6+8+(tallas?11:0)+tallasTxt.length*3.6+12);
   espacio(h+4);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
@@ -98,11 +98,11 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  const pw=width/4,desc=pasos.map(([,d])=>lines(d,pw-6,7.5).slice(0,4));espacio(24+Math.max(...desc.map(d=>d.length))*3.4);
  label('Cómo seguimos',m,y,13,true);y+=9;punteada(m+4,y,right-6,tinta);
  pasos.forEach(([t],i)=>{const x=m+i*pw;doc.setDrawColor(...(i?tinta:cobalto));doc.setFillColor(...(i?papel:cobalto));doc.setLineWidth(.5);doc.circle(x+4,y,3.6,'FD');label(String(i+1),x+4,y+1.2,7.5,true,i?tinta:blanco,'center',true);label(t,x,y+9,9,true);desc[i].forEach((l,j)=>label(l,x,y+13.5+j*3.4,7.5,false,tenue));});
- y+=16+Math.max(...desc.map(d=>d.length))*3.4+4;
+ y+=16+Math.max(...desc.map(d=>d.length))*3.4+1;
  // Condiciones y notas
  if(q.condiciones){const c=lines(q.condiciones,width-12,8);espacio(14+Math.min(c.length,6)*3.8);doc.setFillColor(...algodon);doc.rect(m,y,width,10+c.length*3.8,'F');doc.setFillColor(...tinta);doc.rect(m,y,.9,10+c.length*3.8,'F');label('Condiciones de tu cotización',m+5,y+6,8.5,true);let cy=y+11;for(const l of c){if(cy>bottom){siguiente();cy=y;}label(l,m+5,cy,8,false,tinta2);cy+=3.8;}y=cy+5;}
  const notas=['Renders orientativos; diseño final por confirmar.','La aceptación de la cotización no registra un pago.','Precios por pieza con personalización incluida.','Esta cotización no es un comprobante fiscal.'];
- espacio(14);notas.forEach((n,i)=>label('— '+n,m+(i%2)*(width/2),y+Math.floor(i/2)*5,7.5,false,tenue));
+ if(y+5>279.5)siguiente();notas.forEach((n,i)=>label('— '+n,m+(i%2)*(width/2),y+Math.floor(i/2)*5,7.5,false,tenue));
  // Pie en cada página. Los datos de contacto son configuración pública, no datos de compras.
  const C=globalThis.window?.ZAIN||{},ig=String(C.instagram||'').match(/instagram\.com\/([A-Za-z0-9._]+)/)?.[1];
  const contacto=[C.correo,C.whatsapp?'WhatsApp +'+String(C.whatsapp).replace(/\D/g,''):'',ig?'@'+ig:'',C.ciudad].filter(Boolean).join('   ');
