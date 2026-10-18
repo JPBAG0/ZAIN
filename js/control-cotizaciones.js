@@ -1,10 +1,10 @@
 import './control-confirmacion.js?v=2';
 import {ordenarCostos} from './control-costos-vista.js?v=2';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=13';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=14';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
-import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=12';
+import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=13';
 import {esc,documento,imprimir} from './cotizacion-vista.js?v=8';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;
@@ -123,7 +123,9 @@ function actualizarMedidas(){
  info.textContent=geo?'Alto estimado con la proporción del logo. Puedes corregirlo antes de guardar.':'Sin proporción guardada. Intentaremos medir el logo original si es compatible; mientras tanto puedes capturar el alto.';});
 }
 function aplicarMedida(i,forzar=false){
- const box=$('#cot-partida-'+i),a=box?.querySelector('[name="ancho-q'+i+'"]'),h=box?.querySelector('[name="alto-q'+i+'"]'),g=geometriaPedido.get(i);if(!a||!h||!g||(!forzar&&h.value!==''))return;
+ const box=$('#cot-partida-'+i),a=box?.querySelector('[name="ancho-q'+i+'"]'),h=box?.querySelector('[name="alto-q'+i+'"]'),g=geometriaPedido.get(i);if(!a||!h||(!forzar&&h.value!==''&&h.dataset.automatico!=='true'))return;
+ // Sin proporción del logo, el alto supuesto cuadrado sigue al ancho.
+ if(!g){if(forzar&&h.dataset.automatico==='true'&&a.value!==''){h.value=a.value;quoteDirty=true;vista();}return;}
  const m=medidasLogo(Number(a.value),{...g,anchoCm:Number(a.value)});if(!m)return;h.value=val(m.alto);h.dataset.automatico='true';quoteDirty=true;vista();$('#cotMensaje').textContent='Alto estimado del logo. Revisa y guarda el borrador antes de publicar.';
 }
 function ajustarMedida(input){

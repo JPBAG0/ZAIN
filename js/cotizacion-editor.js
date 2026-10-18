@@ -1,4 +1,4 @@
-import {pesos} from './cotizacion-core.js?v=12';
+import {pesos} from './cotizacion-core.js?v=13';
 import {esc} from './cotizacion-vista.js?v=8';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
@@ -34,7 +34,7 @@ function partida(p,i,src,origen){
  <div class="cot-edicion">${p.bandas.length?`<label>Costo de prenda<select name="modoPrenda-q${i}"><option value="tallas" ${p.modoPrenda==='tallas'?'selected':''}>Según rangos del modelo</option><option value="unitario" ${p.modoPrenda==='unitario'?'selected':''}>Costo unitario</option></select></label>`:''}<div data-cot-prendaunitaria ${p.modoPrenda==='tallas'?'hidden':''}>${costoPrenda}</div><label>Costo de ${esc(p.tecnica)}<select name="modo-q${i}"><option value="fijo" ${p.modo==='fijo'?'selected':''}>Fijo por pieza</option><option value="area" ${p.modo==='area'?'selected':''}>Por área del logo (cm²)</option></select></label></div>
  ${p.bandas.length?bandas(p,i):''}
  <div data-cot-fijo ${p.modo==='fijo'?'':'hidden'}>${costo('aplicacion-q'+i,'Costo de '+p.tecnica+' / pieza',p.aplicacion,origen?.modo==='fijo'?origen:null,'aplicacion','placeholder="Opcional"')}</div>
- <div class="cot-edicion cot-medidas" data-cot-area ${p.modo==='area'?'':'hidden'}>${field('ancho-q'+i,'Ancho del logo (cm)',val(p.ancho),'number','max="200"')}${field('alto-q'+i,'Alto del logo (cm)',val(p.alto),'number','max="200"')}${rate(p,i)}<p class="cot-ayuda"><span data-medidas-info>Alto estimado con la proporción del logo.</span> <button type="button" data-calcular-alto="${i}" class="btn-texto">Calcular alto del logo</button></p></div>
+ <div class="cot-edicion cot-medidas" data-cot-area ${p.modo==='area'?'':'hidden'}>${field('ancho-q'+i,'Ancho del logo (cm)',val(p.ancho),'number','max="200"')}${field('alto-q'+i,'Alto del logo (cm)',val(p.alto),'number','max="200"'+(p.alto!==null&&p.alto===p.ancho?' data-automatico="true"':''))}${rate(p,i)}<p class="cot-ayuda"><span data-medidas-info>Alto estimado con la proporción del logo; sin ella se supone cuadrado.</span> <button type="button" data-calcular-alto="${i}" class="btn-texto">Calcular alto del logo</button></p></div>
  <p class="cot-calculo" data-cot-calculo></p>
  <div class="cot-edicion">${costo('otros-q'+i,'Otros o imprevistos / pieza',p.otros,origen,'otros')}${costo('preparacion-q'+i,'Preparación o imprevisto (una vez)',p.preparacion,origen,'preparacion')}</div>
  </div></details></section>`;

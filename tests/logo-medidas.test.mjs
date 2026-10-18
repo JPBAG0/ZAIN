@@ -19,7 +19,7 @@ test('redondea una sola vez a centésimas y no inventa medidas inválidas',()=>{
 });
 test('borrador nuevo usa la proporción y calcula área y técnica; histórico sigue pendiente',()=>{
  const q=generar([item],cfg);assert.equal(q.partidas[0].ancho,1000);assert.equal(q.partidas[0].alto,400);assert.equal(q.partidas[0].aplicacion,20);
- assert.equal(generar([{...item,logoGeometria:undefined}],cfg).partidas[0].alto,null);
+ assert.equal(generar([{...item,logoGeometria:undefined}],cfg).partidas[0].alto,1000,'sin proporción se supone cuadrado');
  assert.equal(generar([{...item,cm:0}],cfg).partidas[0].alto,null);
 });
 test('la revisión manual prevalece, publicaciones solo incluyen los datos comerciales',()=>{

@@ -31,8 +31,8 @@ test('las tres técnicas comparten costo de prenda pero tienen tarifas propias',
 test('área rectangular, aplicación por pieza, preparación única y margen sobre costo completo',()=>{
  for(const t of ['DTF','Bordado','Serigrafía']){const {q}=areaLista(t),p=q.partidas[0];assert.equal(p.ancho,1000);assert.equal(p.alto,500);assert.equal(p.area,500000);assert.equal(p.aplicacion,100);assert.equal(p.costoUnitario,10100);assert.equal(p.costo,102000);assert.equal(p.precio,17000);assert.equal(q.total,170000);assert.equal(q.margen,4000);}
 });
-test('ancho conocido no supone un cuadrado; sin altura o tarifa solo se publica con precio por pieza',()=>{
- const pedido=[{...items[0],tecnica:'DTF'}],q=generar(pedido,areaCfg());assert.equal(q.partidas[0].ancho,1400);assert.equal(q.partidas[0].alto,null);assert.equal(q.partidas[0].aplicacion,null);assert.equal(q.preparada,false);
+test('ancho conocido sin proporción se supone cuadrado; sin altura o tarifa solo se publica con precio por pieza',()=>{
+ const pedido=[{...items[0],tecnica:'DTF'}],q=generar(pedido,areaCfg());assert.equal(q.partidas[0].ancho,1400);assert.equal(q.partidas[0].alto,1400);assert.notEqual(q.partidas[0].aplicacion,null);
  for(const diff of [{alto:null},{tarifaCm2:null},{prenda:null}]){const {q:base,pedido:ps}=areaLista(),v=entrada(base);Object.assign(v.partidas[0],diff);const pending=calcular(ps,v);assert.equal(pending.preparada,false);assert.throws(()=>paraCliente(pending));v.partidas[0].precio=99999;const directo=calcular(ps,v);assert.equal(directo.preparada,true);assert.equal(directo.costo,null);assert.equal(directo.utilidad,null);assert.equal(directo.subtotal,99999*ps[0].piezas);assert.ok(!('costo' in paraCliente(directo)));}
 });
 test('área y aplicación recibidas no se confían: recalcula y redondea una vez a centavos',()=>{
