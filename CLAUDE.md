@@ -1,6 +1,6 @@
 ## Vigente: medición de Google Ads activa por defecto — 18-oct-2026
 
-JP autorizó quitar el banner de consentimiento y ajustar el aviso. `js/medicion.js` carga Google Ads desde la entrada (consentimiento tácito, LFPDPPP, con aviso publicado); solo una oposición guardada («No permitir», 180 días) lo apaga. El banner ya no aparece solo: «Preferencias de medición» en el pie lo abre con No permitir / Permitir. `privacidad.html` versión 18-oct describe la medición salvo oposición. Lo demás sigue igual: solo catálogo público y orígenes aprobados, sin personalización ni datos de contacto, deduplicación por `transaction_id`. Reemplaza la regla del 13-oct de cargar solo tras elección afirmativa.
+JP autorizó quitar el banner de consentimiento y ajustar el aviso. `js/medicion.js` carga Google Ads desde la entrada (consentimiento tácito, LFPDPPP, con aviso publicado); solo una oposición guardada («No permitir») lo apaga; la oposición no vence ni se pierde al cambiar de versión. El banner ya no aparece solo: «Preferencias de medición» en el pie lo abre con No permitir / Permitir. `privacidad.html` versión 18-oct describe la medición salvo oposición. Lo demás sigue igual: solo catálogo público y orígenes aprobados, sin personalización ni datos de contacto, deduplicación por `transaction_id`. Reemplaza la regla del 13-oct de cargar solo tras elección afirmativa.
 
 ## Vigente: bolsas con costos por cantidad y rangos editables — 17-oct-2026
 

@@ -69,8 +69,8 @@
   window.ZAINMedicion={solicitud,whatsapp,activa:()=>usable&&permitted};
   document.querySelectorAll('[data-privacidad]').forEach(x=>x.hidden=!C.privacidadPublicada);
   if(!usable||(!solicitationLabel&&!whatsappLabel))return;
-  // Medición activa por defecto (consentimiento tácito con aviso publicado); solo una oposición guardada la apaga.
-  try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.version===version&&typeof saved.allow==='boolean'&&Date.now()-saved.fecha<180*86400000&&saved.fecha<=Date.now())choice=saved.allow;}catch{}
+  // Medición activa por defecto (consentimiento tácito con aviso publicado); una oposición guardada la apaga y no vence.
+  try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.allow===false)choice=false;else if(saved?.version===version&&saved.allow===true)choice=true;}catch{}
   permitted=choice!==false;
   $('#medicionCambiar').hidden=false;
   $('#medicionPreferencias').hidden=true;

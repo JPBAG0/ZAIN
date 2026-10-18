@@ -46,6 +46,6 @@ test('bloqueador o etiqueta sin respuesta no detiene la navegación: espera acot
 test('retirar permiso guarda rechazo y conserva carrito/archivos; nuevas conversiones quedan bloqueadas',async()=>{
   const a=setup({saved:consent(true)});a.storage.set('zain-pedido','carrito');a.el('#medicionRechazar').handlers.click();assert.equal(a.reloads(),1);assert.equal(a.storage.get('zain-pedido'),'carrito');assert.equal(JSON.parse(a.storage.get('zain-consentimiento-medicion')).allow,false);assert.equal(await a.api.solicitud(id,100),false);
 });
-test('oposiciones vencidas o con versión vieja vuelven a la medición por defecto',()=>{
-  for(const saved of [{version:0,allow:false,fecha:Date.now()},{version:1,allow:false,fecha:Date.now()-181*86400000}]){const a=setup({saved});assert.equal(a.scripts.length,1);assert.equal(a.el('#medicionPreferencias').hidden,true);}
+test('una oposición vieja o de otra versión sigue apagando la medición',()=>{
+  for(const saved of [{version:0,allow:false,fecha:Date.now()},{version:1,allow:false,fecha:Date.now()-400*86400000}]){const a=setup({saved});assert.equal(a.scripts.length,0);assert.equal(a.el('#medicionPreferencias').hidden,true);}
 });
