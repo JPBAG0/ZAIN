@@ -26,10 +26,8 @@ lim as (
          (p_corte::timestamp at time zone 'America/Mexico_City') as corte
 ),
 base as (
-  -- Prueba: nota con NO COTIZAR/prueba, o mandada a la papelera sin haberse cotizado nunca.
-  select p.*, (coalesce(p.notas_internas, '') ~* '(no cotizar|prueba)'
-    or (p.archivado_at is not null and not exists (
-      select 1 from public.zain_cotizaciones_historial h where h.pedido_id = p.id and h.modo = 'publicar'))) as es_prueba
+  -- No cuenta: nota con NO COTIZAR/prueba, o en la papelera (igual que Finanzas de Gestión ZAIN).
+  select p.*, (coalesce(p.notas_internas, '') ~* '(no cotizar|prueba)' or p.archivado_at is not null) as es_prueba
   from public.zain_pedidos p, lim
   where p.guardado_at is not null and p.created_at >= lim.corte
 ),
@@ -111,6 +109,6 @@ select jsonb_build_object(
   'excluidos_como_prueba', (select count(*) from base where es_prueba)
 );
 $$;
-comment on function public.zain_embudo(date, date, date) is 'Embudo agregado para el analista diario. Pruebas: antes del corte, con NO COTIZAR/prueba en la nota interna o en la papelera sin cotizar.';
+comment on function public.zain_embudo(date, date, date) is 'Embudo agregado para el analista diario. No cuenta: antes del corte, con NO COTIZAR/prueba en la nota interna o en la papelera.';
 revoke all on function public.zain_embudo(date, date, date) from public, anon, authenticated;
 grant execute on function public.zain_embudo(date, date, date) to service_role;
