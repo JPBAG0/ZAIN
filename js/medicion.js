@@ -1,17 +1,16 @@
-/* Google Ads: solo el catálogo público, activa salvo oposición y con datos mínimos.
+/* Google Ads: solo el catálogo público, siempre activa y con datos mínimos.
    Las solicitudes y el chat funcionan aunque la etiqueta no cargue. */
 (() => {
   'use strict';
-  const C=window.ZAIN,config=C.medicion||{},key='zain-consentimiento-medicion',version=1;
+  const C=window.ZAIN,config=C.medicion||{};
   const usable=C.privacidadPublicada===true&&config.activa===true&&/^AW-\d{6,20}$/.test(config.googleAdsId||'')
     &&Array.isArray(config.origenes)&&config.origenes.includes(location.origin)&&['/','/index.html'].includes(location.pathname);
   const label=x=>/^[a-zA-Z0-9_-]{5,100}$/.test(x||'')?x:null;
   const solicitationLabel=label(config.etiquetaSolicitud),whatsappLabel=label(config.etiquetaWhatsApp);
-  let permitted=false,loaded=false,choice=null,lastClick=0;
+  let permitted=false,loaded=false,lastClick=0;
   const sent=new Set(),pending=new Map();
   const defaults={ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'};
   const $=s=>document.querySelector(s);
-  const save=allow=>{try{localStorage.setItem(key,JSON.stringify({version,allow,fecha:Date.now()}));}catch{}};
   const cleanLocation=()=>{
     const u=new URL(location.href);u.hash='';
     for(const k of [...u.searchParams.keys()])if(!['gclid','gbraid','wbraid','gad_source'].includes(k))u.searchParams.delete(k);
@@ -28,16 +27,6 @@
     window.gtag('js',new Date());
     window.gtag('config',config.googleAdsId,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,page_location:cleanLocation(),page_referrer:referrer()});
     const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+config.googleAdsId;document.head.appendChild(script);
-  }
-  function choose(allow) {
-    permitted=allow;choice=allow;save(allow);$('#medicionPreferencias').hidden=true;
-    if(allow)load();
-    else if(loaded){
-      window.gtag('consent','update',defaults);
-      // No toca carrito, archivos, autenticación ni otros datos necesarios.
-      for(const entry of document.cookie.split(';')){const name=entry.trim().split('=')[0];if(!/^_(?:gcl|gac|ga)(?:_|$)/.test(name))continue;for(const domain of ['',location.hostname,'.'+location.hostname])document.cookie=name+'=; Max-Age=0; Path=/'+(domain?'; Domain='+domain:'');}
-      location.reload();
-    }
   }
   function conversion(target,params={}) {
     if(!usable||!permitted||!target)return Promise.resolve(false);
@@ -69,14 +58,8 @@
   window.ZAINMedicion={solicitud,whatsapp,activa:()=>usable&&permitted};
   document.querySelectorAll('[data-privacidad]').forEach(x=>x.hidden=!C.privacidadPublicada);
   if(!usable||(!solicitationLabel&&!whatsappLabel))return;
-  // Medición activa por defecto (consentimiento tácito con aviso publicado); una oposición guardada la apaga y no vence.
-  try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.allow===false)choice=false;else if(saved?.version===version&&saved.allow===true)choice=true;}catch{}
-  permitted=choice!==false;
-  $('#medicionCambiar').hidden=false;
-  $('#medicionPreferencias').hidden=true;
-  $('#medicionPermitir').addEventListener('click',()=>choose(true));
-  $('#medicionRechazar').addEventListener('click',()=>choose(false));
-  $('#medicionCambiar').addEventListener('click',()=>{$('#medicionPreferencias').hidden=false;$('#medicionRechazar').focus();});
+  // Siempre activa, como SEASA (consentimiento tácito con aviso publicado); la oposición se atiende por correo.
+  permitted=true;
   document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;try{const u=new URL(a.href,location.href);if(u.protocol==='https:'&&u.hostname==='wa.me'&&u.pathname==='/'+C.whatsapp)whatsapp('contacto').catch(()=>{});}catch{}},true);
   load();
 })();
