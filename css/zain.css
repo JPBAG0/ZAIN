@@ -162,6 +162,9 @@ p { margin: 0; }
 .portada__lede { max-width: 46ch; font-size: clamp(16px, 1.25vw, 18px); color: var(--tinta-2); }
 .portada__lede strong { color: var(--tinta); font-weight: 650; }
 .portada__acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+.portada__lugar { font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); margin-bottom: -14px; }
+.portada__nota { font-size: 14px; color: var(--tenue); margin-top: -12px; }
+.portada__nota:empty { display: none; }
 
 .portada__escena {
   grid-column: 2; grid-row: 1 / span 2;

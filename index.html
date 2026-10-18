@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>ZAIN — Uniformes y artículos promocionales con tu logo</title>
-  <meta name="description" content="Playeras, polos, camisas, chamarras, chalecos y bolsas con tu logo en bordado, serigrafía o DTF. Arma tu pedido, ve el render al momento y cotiza por WhatsApp." />
+  <meta name="description" content="Uniformes con tu logo, hechos en nuestro taller de Guadalajara: playeras, polos, camisas, chamarras y bolsas con bordado, serigrafía o DTF. Cotiza por WhatsApp." />
   <meta name="theme-color" content="#f3f3f1" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=27" />
+  <link rel="stylesheet" href="css/zain.css?v=28" />
   <link rel="stylesheet" href="css/privacidad.css?v=3" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
@@ -77,16 +77,22 @@
     <!-- ===================== PORTADA ===================== -->
     <section class="portada" id="inicio" aria-labelledby="titulo">
       <div class="portada__texto">
+        <p class="portada__lugar">Taller en Guadalajara, Jalisco</p>
         <h1 id="titulo" class="portada__titulo">
-          <span class="linea"><span>Tu logo</span></span>
-          <span class="linea"><span>en todo lo que</span></span>
-          <span class="linea"><span>usa tu equipo.</span></span>
+          <span class="linea"><span>Uniformes</span></span>
+          <span class="linea"><span>con el logo de</span></span>
+          <span class="linea"><span>tu empresa.</span></span>
         </h1>
-        <p class="portada__lede"><span id="ledeProductos">Playeras, polos, camisas, chamarras, chalecos y bolsas</span> con <strong>bordado, serigrafía o DTF</strong>. Arma tu pedido, ve el render al momento y cotízalo por WhatsApp.</p>
+        <p class="portada__lede"><span id="ledeProductos">Playeras, polos, camisas, chamarras, chalecos y bolsas</span> con <strong>bordado, serigrafía o DTF</strong>. Mándanos tu logo y cuántas piezas necesitas: te cotizamos por WhatsApp.</p>
         <div class="portada__acciones">
-          <a class="btn btn--tinta" href="#personaliza">Personalizar ahora</a>
-          <a class="btn btn--linea" href="#catalogo">Ver catálogo</a>
+          <!-- enlace directo a wa.me: js/medicion.js lo cuenta como «Clic a WhatsApp» -->
+          <a class="btn btn--wa" id="ctaPortada" href="https://wa.me/525662923967?text=Hola%20ZAIN%2C%20quiero%20cotizar%20uniformes%20con%20mi%20logo." target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1Z" /><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-.9-.8.8a4 4 0 0 1-2.5-2.5l.8-.8-.9-1.8L9 9.5Z" /></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn btn--linea" href="#personaliza">Personalizar con mi logo</a>
         </div>
+        <p class="portada__nota" id="portadaNota"></p>
       </div>
 
       <div class="portada__escena" id="escena" aria-label="Prendas de muestra. Arrastra para ver más.">
@@ -304,7 +310,7 @@
         <h2 id="empTitulo">Para empresas que cuidan su imagen</h2>
         <ul class="empresas__usos">
           <li><b>Uniformes corporativos</b><span>Oficina, piso de venta, planta y campo.</span></li>
-          <li><b>Kits de bienvenida</b><span>Playera, gorra, bolsa y termo con tu marca.</span></li>
+          <li><b>Kits de bienvenida</b><span>Playeras, sudaderas y bolsas con tu marca para tu equipo nuevo.</span></li>
           <li><b>Eventos y ferias</b><span>Merch para stands, congresos y activaciones.</span></li>
           <li><b>Equipos y escuelas</b><span>Generaciones, torneos y clubes.</span></li>
         </ul>
@@ -439,14 +445,14 @@
     </symbol>
   </svg>
 
-  <script src="js/config.js?v=21"></script>
+  <script src="js/config.js?v=22"></script>
   <script src="js/catalogo-cargar.js?v=3"></script>
   <script src="js/medicion.js?v=4"></script>
   <script src="js/render.js?v=6"></script>
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=5"></script>
-  <script src="js/zain.js?v=39"></script>
+  <script src="js/zain.js?v=40"></script>
 <script src="js/subir.js?v=3"></script>
 </body>
 </html>

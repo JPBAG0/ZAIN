@@ -79,7 +79,7 @@
   /* ---------------------------------------------------------------- datos */
   $("#datos").innerHTML = [
     ["Técnicas", "Bordado · Serigrafía · DTF"],
-    ["Pedidos", "Mínimos según producto"],
+    ["Pedidos", C.minimoTexto || "Se confirman al cotizar"],
     ["Entrega", C.diasEntrega],
     ["Render", "Al instante, aquí mismo"],
   ]
@@ -136,6 +136,11 @@
     C.instagram && `<div><span>Instagram</span><a href="${esc(C.instagram)}" target="_blank" rel="noopener">Síguenos</a></div>`,
   ];
   $("#pieDatos").innerHTML = piezaDatos.filter(Boolean).join("");
+  // botón principal de la portada: quien llega de un anuncio solo quiere preguntar precio
+  const ctaPortada = $("#ctaPortada");
+  if (C.whatsapp) ctaPortada.href = wa(`Hola ${C.marca}, quiero cotizar uniformes con mi logo.`);
+  else { ctaPortada.removeAttribute("target"); ctaPortada.href = "#contacto"; }
+  if (C.minimoTexto) $("#portadaNota").textContent = C.minimoTexto + " · Entrega en " + C.diasEntrega + ".";
   ["#ctaPie", "#flotante", "#ctaEmpresas"].forEach((s) => {
     const a = $(s);
     a.href = wa(saludo);

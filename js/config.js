@@ -19,6 +19,7 @@
   "instagram": "https://instagram.com/thezainlab",
   "horario": "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
   "minimoPiezas": null,
+  "minimoTexto": "Prendas desde 1 pieza · bolsas desde 100",
   "diasEntrega": "7 a 12 días hábiles",
   "tintasLogo": [
     {
@@ -3585,11 +3586,11 @@
   "preguntas": [
     {
       "p": "¿Cómo solicito una cotización?",
-      "r": "Elige productos, colores, técnica y cantidades, agrégalos a tu pedido y envíalo por WhatsApp. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
+      "r": "Lo más rápido: escríbenos por WhatsApp con tu logo, la prenda y cuántas piezas necesitas. Si prefieres, arma aquí tu pedido con colores, técnica y tallas y envíalo desde la página. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
     },
     {
       "p": "¿Cuál es el pedido mínimo?",
-      "r": "En bolsas el mínimo es de 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200… Para los demás productos confirmamos la cantidad y las condiciones al cotizar."
+      "r": "Prendas: desde 1 pieza por modelo y color, y puedes mezclar tallas. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
     },
     {
       "p": "¿Cuánto tarda mi pedido?",
