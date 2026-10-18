@@ -19,8 +19,23 @@ module.exports = {
   "instagram": "https://instagram.com/thezainlab",
   "horario": "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
   "minimoPiezas": null,
-  "minimoModelo": 12,
-  "minimoTexto": "Mínimo 12 piezas por modelo · bolsas desde 100",
+  "minimoPedido": 12,
+  "minimoTexto": "Pedido mínimo: 12 piezas · bolsas desde 100",
+  "preciosDesde": [
+    {
+      "categoria": "Playeras",
+      "precio": 130
+    },
+    {
+      "categoria": "Polos",
+      "precio": 165
+    },
+    {
+      "categoria": "Camisas",
+      "precio": 394
+    }
+  ],
+  "preciosLeyenda": "Precio por pieza con tu logo, en pedidos de 50 piezas o más, más IVA. Cambia según modelo, color, talla, técnica, tamaño del logo y cantidad.",
   "diasEntrega": "7 a 12 días hábiles",
   "tintasLogo": [
     {
@@ -5690,7 +5705,11 @@ module.exports = {
     },
     {
       "p": "¿Cuál es el pedido mínimo?",
-      "r": "Prendas: 12 piezas por modelo, y puedes mezclar tallas, colores y Caballero/Dama. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
+      "r": "Prendas: 12 piezas por pedido, y puedes mezclar modelos, tallas, colores y Caballero/Dama. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
+    },
+    {
+      "p": "¿Cuánto cuesta?",
+      "r": "Playeras desde $130, polos desde $165 y camisas desde $394 por pieza, con tu logo, en pedidos de 50 piezas o más, más IVA. El precio final depende del modelo, color, talla, técnica, tamaño del logo y cantidad; te lo confirmamos en la cotización."
     },
     {
       "p": "¿Cuánto tarda mi pedido?",

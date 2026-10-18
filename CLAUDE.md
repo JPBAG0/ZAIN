@@ -1,4 +1,12 @@
-## Vigente: portada para anuncios, mínimo 12 por modelo y bolsas agrupadas — 18-oct-2026
+## Vigente: portada para anuncios, mínimo 12 por pedido, precios desde y bolsas agrupadas — 18-oct-2026
+
+JP autorizó (18-oct): la portada dice «Taller en Guadalajara» y «Uniformes con el logo de tu empresa»; el botón principal es «Cotizar por WhatsApp» (`#ctaPortada`, enlace wa.me que `js/medicion.js` cuenta como clic a WhatsApp) y personalizar es secundario.
+
+**Mínimo de prendas: 12 piezas por pedido** (`minimoPedido`), sumando modelos, tallas y colores (Yazbek pide 12 en la playera premium; el otro proveedor vende desde 1, por eso es general y no por modelo). Bolsas siguen en 100 por modelo y color. Un solo texto `minimoTexto` en portada, franja de datos, personalizador y preguntas. Se valida solo en el carrito del sitio (`faltanPedido` en `js/zain.js`): bloquea el envío y dice cuántas faltan. El Edge `zain-pedidos` sigue aceptando desde 1 por renglón (no se redesplegó).
+
+**Precios «desde»** (`preciosDesde`, `preciosLeyenda`, se muestran solo para categorías activas): costo más bajo de la categoría en `zain_precios_config` (IVA incluido, color/talla más barata) + logo de 8×8 cm con la técnica más barata del modelo (serigrafía con $200 de preparación ÷ 50, DTF o bordado) ÷ (1 − 30%), redondeado hacia arriba. 30% = margen del rango 50–99 del cotizador, por eso la leyenda dice «en pedidos de 50 piezas o más, más IVA». 18-oct: Playeras $130 (malla + DTF), Polos $165 (corporativo + serigrafía), Camisas $394 (Oxford corta + serigrafía). Si cambian costos o tarifas, recalcular; no mencionar el modelo.
+
+En «Todos» las bolsas se agrupan: solo la principal (`grupos.bolsas.productoInicial`) y la tarjeta `.mini-grupo` «+N modelos más» que abre el filtro Bolsas; reemplaza la regla del 14/16-oct de mostrar las 13 en «Todos». No se anuncian envíos nacionales hasta que JP lo confirme.
 
 JP autorizó (18-oct): la portada dice «Taller en Guadalajara» y «Uniformes con el logo de tu empresa»; el botón principal es «Cotizar por WhatsApp» (`#ctaPortada`, enlace wa.me que `js/medicion.js` cuenta como clic a WhatsApp) y personalizar es secundario. **Mínimo de prendas: 12 piezas por modelo** (`minimoModelo` en config), sumando tallas, colores y Caballero/Dama (misma `familia`); bolsas siguen en 100 por modelo y color. Un solo texto `minimoTexto` en portada, franja de datos y preguntas. Se valida solo en el carrito del sitio (`faltanModelo` en `js/zain.js`): bloquea el envío y dice cuántas faltan. El Edge `zain-pedidos` sigue aceptando desde 1 por renglón (no se redesplegó); el equipo revisa cada solicitud. En «Todos» las bolsas se agrupan: solo la principal (`grupos.bolsas.productoInicial`) y la tarjeta `.mini-grupo` «+N modelos más» que abre el filtro Bolsas; reemplaza la regla del 14/16-oct de mostrar las 13 en «Todos». Sin precios publicados (el repo es público). No se anuncian envíos nacionales hasta que JP lo confirme.
 
@@ -322,7 +330,7 @@ JP rechazo sustituir sus modelos existentes por personas y esquemas. Las seis pr
 
 ## Bolsas: catálogo confirmado el 13-oct-2026
 
-- Decisión posterior de JP: mínimo 100 por cada modelo y color, en incrementos de 50. Validar en ambos formularios y en pedidos antiguos antes de compartir. Prendas: ver «mínimo de 12 por modelo» (18-oct), que reemplaza el pendiente anterior.
+- Decisión posterior de JP: mínimo 100 por cada modelo y color, en incrementos de 50. Validar en ambos formularios y en pedidos antiguos antes de compartir. Prendas: ver «mínimo 12 por pedido» (18-oct), que reemplaza el pendiente anterior.
 - «Bolsas» en el editor carga Expo directamente y muestra un selector de modelo en el mismo editor. La tarjeta y la muestra de portada también usan Expo. No mostrar la lista «También manejamos» hasta que JP confirme esos productos.
 - El logo admite 15 colores y HEX. El Pantone es referencia para cotización; JP confirmó que no tiene tabla de equivalencias. No convertir Pantone automáticamente ni presentar un HEX como equivalencia oficial.
 - `escalaMaxLogo` amplía 30% el espacio de vista previa, sin prometer un área de impresión. Mantener el aviso de confirmación de medidas.

@@ -28,7 +28,7 @@
   const reglaCantidad = (p) => {
     const min = minimo(p), paso = pasoCantidad(p);
     if (!min) return "Cantidad y condiciones a confirmar al cotizar.";
-    if (min <= 1 && paso <= 1) return C.minimoModelo > 1 ? `Mínimo ${C.minimoModelo} piezas por modelo; puedes mezclar tallas, colores y Caballero/Dama.` : "Desde 1 pieza por modelo y color.";
+    if (min <= 1 && paso <= 1) return C.minimoPedido > 1 ? `Pedido mínimo de ${C.minimoPedido} piezas en total; puedes mezclar modelos, tallas y colores.` : "Desde 1 pieza por modelo y color.";
     return `Mínimo ${min} ${min === 1 ? "pieza" : "piezas"} por modelo y color${paso > 1 ? `, en incrementos de ${paso}` : ""}.`;
   };
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
@@ -141,6 +141,12 @@
   if (C.whatsapp) ctaPortada.href = wa(`Hola ${C.marca}, quiero cotizar uniformes con mi logo.`);
   else { ctaPortada.removeAttribute("target"); ctaPortada.href = "#contacto"; }
   if (C.minimoTexto) $("#portadaNota").textContent = C.minimoTexto + " · Entrega en " + C.diasEntrega + ".";
+  // precios «desde» por categoría (calculados con costos y margen; ver CLAUDE.md)
+  const precios = (C.preciosDesde || []).filter((x) => x.precio > 0 && (C.categoriasCatalogo || []).includes(x.categoria));
+  if (precios.length) {
+    $("#preciosDesde").innerHTML = `<ul>${precios.map((x) => `<li><span>${esc(x.categoria)} desde</span><b class="num">$${x.precio.toLocaleString("es-MX")}</b></li>`).join("")}</ul><p>${esc(C.preciosLeyenda || "")}</p>`;
+    $("#preciosDesde").hidden = false;
+  }
   ["#ctaPie", "#flotante", "#ctaEmpresas"].forEach((s) => {
     const a = $(s);
     a.href = wa(saludo);
@@ -1249,15 +1255,14 @@
   const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const errorCliente = () => cliente.nombre.trim().length < 2 ? "nombre" : cliente.fecha && cliente.fecha < hoyISO() ? "fecha" : "";
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
-  // prendas: el mínimo es por modelo (Caballero y Dama son el mismo), sumando todas sus tallas y colores
-  const claveModelo = (p) => p.familia || p.id;
-  const faltanModelo = (x) => {
-    const p = datosItem(x);
-    if (!(C.minimoModelo > 1) || !p.id || minimo(p) > 1) return 0;
-    const total = pedido.filter((y) => { const q = prod(y.p); return q && claveModelo(q) === claveModelo(p); }).reduce((s, y) => s + (Number(y.piezas) || 0), 0);
-    return Math.max(0, C.minimoModelo - total);
+  // prendas: mínimo general por pedido, sumando todos los modelos, tallas y colores (las bolsas llevan su propio mínimo)
+  const esPrenda = (x) => { const p = datosItem(x); return !!p.id && minimo(p) <= 1; };
+  const faltanPedido = () => {
+    if (!(C.minimoPedido > 1)) return 0;
+    const prendas = pedido.filter(esPrenda);
+    return prendas.length ? Math.max(0, C.minimoPedido - prendas.reduce((s, y) => s + (Number(y.piezas) || 0), 0)) : 0;
   };
-  const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)) || faltanModelo(x) > 0);
+  const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)) || (esPrenda(x) && faltanPedido() > 0));
   function estadoArchivos() {
     const boton = $("#compartirPedido"), estado = $("#archivosEstado");
     if (!boton || !estado) return;
@@ -1676,7 +1681,7 @@
             ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
             <span class="renglon__pzs num">${x.piezas} ${x.piezas === 1 ? "pieza" : "piezas"}</span>
             ${C.productosHistoricos?.some(p => p.id === x.p) ? `<span class="pedido__archivos">Selección del catálogo anterior. Para una solicitud nueva, elige un modelo actual; conserva tu logo y render.</span>` : ""}
-            ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : faltanModelo(x) ? `<span class="pedido__archivos error">El mínimo es de ${C.minimoModelo} piezas por modelo. Agrega ${faltanModelo(x)} más de este modelo, en cualquier talla o color.</span>` : ""}
+            ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : esPrenda(x) && faltanPedido() && x === pedido.filter(esPrenda).at(-1) ? `<span class="pedido__archivos error">El pedido mínimo es de ${C.minimoPedido} piezas. Te ${faltanPedido() === 1 ? "falta 1" : `faltan ${faltanPedido()}`}: puedes mezclar modelos, tallas y colores.</span>` : ""}
           </div>
           <div class="renglon__acc">
             ${x.mini ? `<button type="button" class="btn-icono" data-bajar="${i}" aria-label="Descargar render de ${esc(x.nombre)}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>` : ""}
