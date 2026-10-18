@@ -1,4 +1,4 @@
-/* Google Ads: solo el catálogo público, consentimiento previo y datos mínimos.
+/* Google Ads: solo el catálogo público, activa salvo oposición y con datos mínimos.
    Las solicitudes y el chat funcionan aunque la etiqueta no cargue. */
 (() => {
   'use strict';
@@ -69,9 +69,11 @@
   window.ZAINMedicion={solicitud,whatsapp,activa:()=>usable&&permitted};
   document.querySelectorAll('[data-privacidad]').forEach(x=>x.hidden=!C.privacidadPublicada);
   if(!usable||(!solicitationLabel&&!whatsappLabel))return;
-  try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.version===version&&typeof saved.allow==='boolean'&&Date.now()-saved.fecha<180*86400000&&saved.fecha<=Date.now()){choice=saved.allow;permitted=choice;}}catch{}
+  // Medición activa por defecto (consentimiento tácito con aviso publicado); solo una oposición guardada la apaga.
+  try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.version===version&&typeof saved.allow==='boolean'&&Date.now()-saved.fecha<180*86400000&&saved.fecha<=Date.now())choice=saved.allow;}catch{}
+  permitted=choice!==false;
   $('#medicionCambiar').hidden=false;
-  $('#medicionPreferencias').hidden=choice!==null;
+  $('#medicionPreferencias').hidden=true;
   $('#medicionPermitir').addEventListener('click',()=>choose(true));
   $('#medicionRechazar').addEventListener('click',()=>choose(false));
   $('#medicionCambiar').addEventListener('click',()=>{$('#medicionPreferencias').hidden=false;$('#medicionRechazar').focus();});

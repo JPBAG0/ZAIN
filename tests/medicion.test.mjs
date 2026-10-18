@@ -15,14 +15,20 @@ function setup({saved=null,path='/',active=true,published=true,tag='AW-123456789
 }
 const consent=allow=>({version:1,allow,fecha:Date.now()});
 const conversions=a=>a.events.filter(x=>x[0]==='event');
-test('sin elección, rechazo o almacenamiento bloqueado no carga Google ni envía conversiones',async()=>{
-  for(const opts of [{},{saved:consent(false)},{storageFails:true}]){const a=setup(opts);assert.equal(await a.api.solicitud(id,100),false);assert.equal(await a.api.whatsapp(),false);assert.equal(a.scripts.length,0);assert.equal(a.events.length,0);}
+test('sin elección o con almacenamiento bloqueado mide desde la entrada y no muestra banner',async()=>{
+  for(const opts of [{},{storageFails:true}]){const a=setup(opts);assert.equal(a.scripts.length,1);assert.equal(a.el('#medicionPreferencias').hidden,true);assert.equal(a.el('#medicionCambiar').hidden,false);assert.equal(await a.api.solicitud(id,100),true);assert.equal(await a.api.whatsapp(),true);assert.equal(conversions(a).length,2);}
+});
+test('una oposición guardada no carga Google ni envía conversiones',async()=>{
+  const a=setup({saved:consent(false)});assert.equal(await a.api.solicitud(id,100),false);assert.equal(await a.api.whatsapp(),false);assert.equal(a.scripts.length,0);assert.equal(a.events.length,0);assert.equal(a.el('#medicionPreferencias').hidden,true);
 });
 test('configuración incompleta, desactivada y páginas privadas no miden incluso con elección guardada',async()=>{
   for(const opts of [{active:false},{published:false},{tag:'AW-invalido'},{path:'/gestion-zain'},{path:'/mi-pedido'},{path:'/pedidos'}]){const a=setup({...opts,saved:consent(true)});await a.api.solicitud(id,100);assert.equal(a.scripts.length,0);assert.equal(conversions(a).length,0);}
 });
-test('al permitir comunica denied antes de granted, con personalización siempre desactivada',()=>{
-  const a=setup();a.el('#medicionPermitir').handlers.click();assert.equal(a.scripts.length,1);assert.deepEqual(Array.from(a.events[0].slice(0,2)),['consent','default']);assert.equal(a.events[0][2].ad_storage,'denied');const update=a.events.find(x=>x[0]==='consent'&&x[1]==='update');assert.equal(update[2].ad_storage,'granted');assert.equal(update[2].ad_personalization,'denied');assert.equal(a.el('#medicionPreferencias').hidden,true);
+test('al cargar comunica denied antes de granted, con personalización siempre desactivada',()=>{
+  const a=setup();assert.equal(a.scripts.length,1);assert.deepEqual(Array.from(a.events[0].slice(0,2)),['consent','default']);assert.equal(a.events[0][2].ad_storage,'denied');const update=a.events.find(x=>x[0]==='consent'&&x[1]==='update');assert.equal(update[2].ad_storage,'granted');assert.equal(update[2].ad_personalization,'denied');
+});
+test('quien se opuso puede volver a permitir desde el pie de página',()=>{
+  const a=setup({saved:consent(false)});assert.equal(a.scripts.length,0);a.el('#medicionPermitir').handlers.click();assert.equal(a.scripts.length,1);assert.equal(JSON.parse(a.storage.get('zain-consentimiento-medicion')).allow,true);assert.equal(a.el('#medicionPreferencias').hidden,true);
 });
 test('misma solicitud y llamadas concurrentes emiten una sola conversión sin identidad ni contenido',async()=>{
   const a=setup({saved:consent(true)});await Promise.all([a.api.solicitud(id,100),a.api.solicitud(id,100)]);await a.api.solicitud(id,100);const c=conversions(a);assert.equal(c.length,1);assert.equal(c[0][2].send_to,'AW-123456789/prueba_sol');assert.match(c[0][2].transaction_id,/^[a-f0-9]{64}$/);assert.equal(c[0][2].piezas,100);
@@ -40,6 +46,6 @@ test('bloqueador o etiqueta sin respuesta no detiene la navegación: espera acot
 test('retirar permiso guarda rechazo y conserva carrito/archivos; nuevas conversiones quedan bloqueadas',async()=>{
   const a=setup({saved:consent(true)});a.storage.set('zain-pedido','carrito');a.el('#medicionRechazar').handlers.click();assert.equal(a.reloads(),1);assert.equal(a.storage.get('zain-pedido'),'carrito');assert.equal(JSON.parse(a.storage.get('zain-consentimiento-medicion')).allow,false);assert.equal(await a.api.solicitud(id,100),false);
 });
-test('elecciones vencidas o con versión vieja requieren nueva elección',()=>{
-  for(const saved of [{version:0,allow:true,fecha:Date.now()},{version:1,allow:true,fecha:Date.now()-181*86400000}]){const a=setup({saved});assert.equal(a.scripts.length,0);assert.equal(a.el('#medicionPreferencias').hidden,false);}
+test('oposiciones vencidas o con versión vieja vuelven a la medición por defecto',()=>{
+  for(const saved of [{version:0,allow:false,fecha:Date.now()},{version:1,allow:false,fecha:Date.now()-181*86400000}]){const a=setup({saved});assert.equal(a.scripts.length,1);assert.equal(a.el('#medicionPreferencias').hidden,true);}
 });
