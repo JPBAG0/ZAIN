@@ -3614,7 +3614,7 @@
     },
     {
       "p": "¿Hacen envíos?",
-      "r": "Sí, enviamos a todo México desde nuestro taller en Guadalajara. El costo y la paquetería dependen del destino y del tamaño del pedido; te los confirmamos en la cotización."
+      "r": "Sí, enviamos a todo México. El costo y la paquetería dependen del destino y del tamaño del pedido; te los confirmamos en la cotización."
     },
     {
       "p": "¿Cuánto tarda mi pedido?",
