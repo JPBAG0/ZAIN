@@ -3613,6 +3613,10 @@
       "r": "Playeras desde $130, polos desde $165 y camisas desde $394 por pieza, con tu logo, en pedidos de 50 piezas o más, más IVA. El precio final depende del modelo, color, talla, técnica, tamaño del logo y cantidad; te lo confirmamos en la cotización."
     },
     {
+      "p": "¿Hacen envíos?",
+      "r": "Sí, enviamos a todo México desde nuestro taller en Guadalajara. El costo y la paquetería dependen del destino y del tamaño del pedido; te los confirmamos en la cotización."
+    },
+    {
       "p": "¿Cuánto tarda mi pedido?",
       "r": "Normalmente de 7 a 12 días hábiles a partir de que apruebas el diseño y se confirma el anticipo. Si tienes fecha de evento, dínosla y la planeamos."
     },
