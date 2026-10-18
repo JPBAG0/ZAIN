@@ -404,9 +404,11 @@ p { margin: 0; }
 .campo--color input { width: 100%; height: 48px; padding: 4px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); }
 .fila { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
 
-.deslizador { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; margin-top: 16px; font-size: 14px; font-weight: 600; }
-.deslizador input { width: 100%; min-width: 0; accent-color: var(--tinta); height: 28px; }
-.deslizador output { min-width: 64px; text-align: right; font-size: 14px; }
+/* la medida va arriba y la barra ocupa todo el ancho: con el texto largo de la medida la barra se aplastaba a 4 px en celular */
+.deslizador { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "etiqueta medida" "barra barra"; align-items: center; gap: 4px 14px; margin-top: 16px; font-size: 14px; font-weight: 600; }
+.deslizador > span { grid-area: etiqueta; }
+.deslizador input { grid-area: barra; width: 100%; min-width: 0; accent-color: var(--tinta); height: 44px; margin: 0; }
+.deslizador output { grid-area: medida; min-width: 64px; text-align: right; font-size: 13px; line-height: 1.35; }
 
 .tallas { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
 .talla { display: grid; grid-template-rows: 1fr auto; gap: 6px; padding: 10px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); font-size: 13px; font-weight: 700; }
@@ -423,6 +425,8 @@ p { margin: 0; }
   border-top: 1px solid var(--tinta); background: var(--algodon);
 }
 .taller__total > div { display: grid; line-height: 1.25; min-width: 0; }
+/* el botón nunca se encoge: el texto del mínimo es el que se acomoda en varias líneas */
+.taller__total > .btn { flex: none; white-space: nowrap; }
 .taller__totalEtq { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tenue); }
 .taller__total strong { font-size: 24px; font-weight: 600; }
 .taller__total small { font-size: 12px; color: var(--tenue); overflow-wrap: anywhere; }

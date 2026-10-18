@@ -27,8 +27,8 @@
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
   const reglaCantidad = (p) => {
     const min = minimo(p), paso = pasoCantidad(p);
-    if (!min) return "Cantidad y condiciones a confirmar al cotizar.";
-    if (min <= 1 && paso <= 1) return C.minimoPedido > 1 ? `Pedido mínimo de ${C.minimoPedido} piezas en total; puedes mezclar modelos, tallas y colores.` : "Desde 1 pieza por modelo y color.";
+    if (!min) return C.minimoPedido > 1 ? `Mínimo ${C.minimoPedido} piezas por pedido; mezcla modelos, tallas y colores.` : "Cantidad y condiciones a confirmar al cotizar.";
+    if (min <= 1 && paso <= 1) return C.minimoPedido > 1 ? `Mínimo ${C.minimoPedido} piezas por pedido; mezcla modelos, tallas y colores.` : "Desde 1 pieza por modelo y color.";
     return `Mínimo ${min} ${min === 1 ? "pieza" : "piezas"} por modelo y color${paso > 1 ? `, en incrementos de ${paso}` : ""}.`;
   };
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
