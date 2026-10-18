@@ -28,7 +28,7 @@
   const reglaCantidad = (p) => {
     const min = minimo(p), paso = pasoCantidad(p);
     if (!min) return "Cantidad y condiciones a confirmar al cotizar.";
-    if (min <= 1 && paso <= 1) return "Desde 1 pieza por modelo y color.";
+    if (min <= 1 && paso <= 1) return C.minimoModelo > 1 ? `Mínimo ${C.minimoModelo} piezas por modelo; puedes mezclar tallas, colores y Caballero/Dama.` : "Desde 1 pieza por modelo y color.";
     return `Mínimo ${min} ${min === 1 ? "pieza" : "piezas"} por modelo y color${paso > 1 ? `, en incrementos de ${paso}` : ""}.`;
   };
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
@@ -423,7 +423,9 @@
     $$("#rejilla [data-categoria-titulo]").forEach(h=>h.hidden=filtro!=="Todo");
     $("#catTitulo").textContent=filtro==="Todo"?"Catálogo":filtro;
     $("#catDescripcion").textContent=filtro==="Bolsas"?grupoBolsas.aviso:"Elige tus productos, colores y cantidades. Personaliza tu selección con tu logo. Consulta disponibilidad.";
-    $$("#rejilla .mini").forEach(art=>art.hidden=filtro!=="Todo"&&art.dataset.cat!==filtro);
+    // en «Todos» las bolsas se agrupan: solo la principal y la tarjeta para ver los demás modelos
+    $$("#rejilla .mini").forEach(art=>art.hidden=filtro!=="Todo"?art.dataset.cat!==filtro:art.hasAttribute("data-bolsa-extra"));
+    $$("#rejilla [data-abrir-bolsas]").forEach(b=>b.hidden=filtro!=="Todo");
     $$("#rejilla [data-categoria-grupo]").forEach(grupo=>grupo.hidden=filtro!=="Todo"&&grupo.dataset.categoriaGrupo!==filtro);
     $$(".filtro").forEach(x=>{x.classList.toggle("on",x.dataset.cat===filtro);x.setAttribute("aria-selected",String(x.dataset.cat===filtro));});
   }
@@ -466,7 +468,11 @@
     <ul class="producto__tec" aria-label="Técnicas disponibles">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul>
     <details class="producto__detalles"><summary><span class="producto__ver">Ver detalles</span><span class="producto__ocultar">Ocultar detalles</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></summary><div class="producto__ficha"><p>${esc(p.descripcion)}</p>${fichaProducto(p)}</div></details>
     <div class="producto__pie"><button type="button" class="btn btn--linea btn--chico" data-agregar>Agregar rápido</button><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar con tu logo</button></div></div></article>`;
-  $("#rejilla").innerHTML = categorias.slice(1).map((cat,i) => {const prendas=familias.filter(p=>p.categoria===cat);return prendas.length?`<section class="rejilla__grupo" data-categoria-grupo="${esc(cat)}"><h3 class="rejilla__categoria" id="categoria-${i}" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3><div class="rejilla__productos" data-cantidad="${prendas.length}">${prendas.map(mini).join("")}</div></section>`:'';}).join("");
+  const principalBolsas = familias.find((p) => p.id === grupoBolsas?.productoInicial) || familias.find((p) => p.grupo === "bolsas");
+  const extrasBolsas = familias.filter((p) => p.grupo === "bolsas" && p !== principalBolsas).length;
+  const miniGrupo = (p) => p.grupo === "bolsas" && p !== principalBolsas ? mini(p).replace("<article ", "<article data-bolsa-extra ") : mini(p);
+  const verBolsas = extrasBolsas ? `<button type="button" class="mini-grupo" data-abrir-bolsas><span class="mini-grupo__n num">+${extrasBolsas}</span><span class="mini-grupo__txt">modelos más</span><span class="mini-grupo__ver">Ver todas las bolsas</span></button>` : "";
+  $("#rejilla").innerHTML = categorias.slice(1).map((cat,i) => {const prendas=familias.filter(p=>p.categoria===cat);return prendas.length?`<section class="rejilla__grupo" data-categoria-grupo="${esc(cat)}"><h3 class="rejilla__categoria" id="categoria-${i}" data-categoria-titulo="${esc(cat)}">${esc(cat)}</h3><div class="rejilla__productos" data-cantidad="${prendas.length}">${prendas.map(miniGrupo).join("")}${prendas.includes(principalBolsas) ? verBolsas : ""}</div></section>`:'';}).join("");
 
 
   const mostrarImagen = (art, index) => {
@@ -1243,7 +1249,15 @@
   const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const errorCliente = () => cliente.nombre.trim().length < 2 ? "nombre" : cliente.fecha && cliente.fecha < hoyISO() ? "fecha" : "";
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
-  const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)));
+  // prendas: el mínimo es por modelo (Caballero y Dama son el mismo), sumando todas sus tallas y colores
+  const claveModelo = (p) => p.familia || p.id;
+  const faltanModelo = (x) => {
+    const p = datosItem(x);
+    if (!(C.minimoModelo > 1) || !p.id || minimo(p) > 1) return 0;
+    const total = pedido.filter((y) => { const q = prod(y.p); return q && claveModelo(q) === claveModelo(p); }).reduce((s, y) => s + (Number(y.piezas) || 0), 0);
+    return Math.max(0, C.minimoModelo - total);
+  };
+  const erroresCantidad = () => pedido.filter((x) => !cantidadValida(datosItem(x), Number(x.piezas)) || faltanModelo(x) > 0);
   function estadoArchivos() {
     const boton = $("#compartirPedido"), estado = $("#archivosEstado");
     if (!boton || !estado) return;
@@ -1662,7 +1676,7 @@
             ${x.notas ? `<span>Notas: ${esc(x.notas)}</span>` : ""}
             <span class="renglon__pzs num">${x.piezas} ${x.piezas === 1 ? "pieza" : "piezas"}</span>
             ${C.productosHistoricos?.some(p => p.id === x.p) ? `<span class="pedido__archivos">Selección del catálogo anterior. Para una solicitud nueva, elige un modelo actual; conserva tu logo y render.</span>` : ""}
-            ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : ""}
+            ${!cantidadValida(datosItem(x), Number(x.piezas)) ? `<span class="pedido__archivos error">${esc(reglaCantidad(datosItem(x)))}</span><button type="button" class="btn-texto" data-ajustar="${i}">Ajustar cantidad</button>` : faltanModelo(x) ? `<span class="pedido__archivos error">El mínimo es de ${C.minimoModelo} piezas por modelo. Agrega ${faltanModelo(x)} más de este modelo, en cualquier talla o color.</span>` : ""}
           </div>
           <div class="renglon__acc">
             ${x.mini ? `<button type="button" class="btn-icono" data-bajar="${i}" aria-label="Descargar render de ${esc(x.nombre)}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>` : ""}

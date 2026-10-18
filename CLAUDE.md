@@ -1,3 +1,7 @@
+## Vigente: portada para anuncios, mínimo 12 por modelo y bolsas agrupadas — 18-oct-2026
+
+JP autorizó (18-oct): la portada dice «Taller en Guadalajara» y «Uniformes con el logo de tu empresa»; el botón principal es «Cotizar por WhatsApp» (`#ctaPortada`, enlace wa.me que `js/medicion.js` cuenta como clic a WhatsApp) y personalizar es secundario. **Mínimo de prendas: 12 piezas por modelo** (`minimoModelo` en config), sumando tallas, colores y Caballero/Dama (misma `familia`); bolsas siguen en 100 por modelo y color. Un solo texto `minimoTexto` en portada, franja de datos y preguntas. Se valida solo en el carrito del sitio (`faltanModelo` en `js/zain.js`): bloquea el envío y dice cuántas faltan. El Edge `zain-pedidos` sigue aceptando desde 1 por renglón (no se redesplegó); el equipo revisa cada solicitud. En «Todos» las bolsas se agrupan: solo la principal (`grupos.bolsas.productoInicial`) y la tarjeta `.mini-grupo` «+N modelos más» que abre el filtro Bolsas; reemplaza la regla del 14/16-oct de mostrar las 13 en «Todos». Sin precios publicados (el repo es público). No se anuncian envíos nacionales hasta que JP lo confirme.
+
 ## Vigente: lectura del embudo para el analista del corporativo — 18-oct-2026
 
 `supabase/embudo-analista.sql` (aplicada): tabla privada `zain_analistas` (solo huellas SHA-256 de tokens, sin políticas; `service_role` solo SELECT) y RPC `zain_embudo(desde, hasta, corte='2026-10-16')`, ejecutable solo por `service_role`. Devuelve agregados en MXN (los importes de la base están en centavos) y folios: solicitudes, cotizaciones publicadas, aceptadas, confirmados, entregados, cobrado, `por_dia`, pendientes `ahora` y `seguimiento_48h`. No cuentan (corregido 18-oct): antes del corte, nota con NO COTIZAR/prueba, o cualquier pedido en la papelera, igual que Finanzas. Edge `zain-embudo` (`supabase/functions/zain-embudo`, verify_jwt off, token Bearer propio) la expone. Lector y token en `Dropbox/Proyectos-IA/Aplicaciones/corporativo-bots/zain-embudo/` (fuera de Git). Sin nombres, artículos, archivos ni notas.
@@ -318,7 +322,7 @@ JP rechazo sustituir sus modelos existentes por personas y esquemas. Las seis pr
 
 ## Bolsas: catálogo confirmado el 13-oct-2026
 
-- Decisión posterior de JP: mínimo 100 por cada modelo y color, en incrementos de 50. Validar en ambos formularios y en pedidos antiguos antes de compartir. Los demás mínimos siguen pendientes; no anunciar un mínimo general de 12.
+- Decisión posterior de JP: mínimo 100 por cada modelo y color, en incrementos de 50. Validar en ambos formularios y en pedidos antiguos antes de compartir. Prendas: ver «mínimo de 12 por modelo» (18-oct), que reemplaza el pendiente anterior.
 - «Bolsas» en el editor carga Expo directamente y muestra un selector de modelo en el mismo editor. La tarjeta y la muestra de portada también usan Expo. No mostrar la lista «También manejamos» hasta que JP confirme esos productos.
 - El logo admite 15 colores y HEX. El Pantone es referencia para cotización; JP confirmó que no tiene tabla de equivalencias. No convertir Pantone automáticamente ni presentar un HEX como equivalencia oficial.
 - `escalaMaxLogo` amplía 30% el espacio de vista previa, sin prometer un área de impresión. Mantener el aviso de confirmación de medidas.

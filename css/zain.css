@@ -899,6 +899,18 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 
 .mini { position: relative; display: flex; flex-direction: column; gap: 10px; min-width: 0; cursor: pointer; }
 .mini[hidden] { display: none !important; }
+/* «Todos» muestra una bolsa y esta tarjeta para abrir el resto */
+.mini-grupo {
+  display: grid; align-content: center; justify-items: start; gap: 8px; aspect-ratio: 1; padding: 18px;
+  border: 1.5px dashed var(--linea); border-radius: var(--radio); background: transparent; color: var(--tinta);
+  font: inherit; text-align: left; cursor: pointer; touch-action: manipulation;
+}
+.mini-grupo[hidden] { display: none !important; }
+.mini-grupo__n { font-size: clamp(28px, 3vw, 40px); font-weight: 820; line-height: 1; }
+.mini-grupo__txt { font-size: 15px; font-weight: 650; line-height: 1.3; }
+.mini-grupo__ver { font-size: 14px; color: var(--cobalto); text-decoration: underline; text-underline-offset: 0.2em; }
+.mini-grupo:focus-visible { outline: 3px solid var(--cobalto); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .mini-grupo:hover { border-color: var(--tinta); } }
 .mini__foto { position: relative; aspect-ratio: 1; border-radius: var(--radio); background: var(--mesa); overflow: hidden; }
 .mini__foto canvas { display: block; width: 100%; height: 100%; padding: 6%; opacity: 0; transition: opacity 400ms var(--sale), transform 600ms var(--sale); }
 .mini.lista .mini__foto canvas { opacity: 1; }
