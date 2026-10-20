@@ -125,8 +125,10 @@ function actualizarMedidas(){
 function aplicarMedida(i,forzar=false){
  const box=$('#cot-partida-'+i),a=box?.querySelector('[name="ancho-q'+i+'"]'),h=box?.querySelector('[name="alto-q'+i+'"]'),g=geometriaPedido.get(i);if(!a||!h||(!forzar&&h.value!==''&&h.dataset.automatico!=='true'))return;
  // Sin proporción del logo, el alto supuesto cuadrado sigue al ancho.
- if(!g){if(forzar&&h.dataset.automatico==='true'&&a.value!==''){h.value=a.value;quoteDirty=true;vista();}return;}
- const m=medidasLogo(Number(a.value),{...g,anchoCm:Number(a.value)});if(!m)return;h.value=val(m.alto);h.dataset.automatico='true';quoteDirty=true;vista();$('#cotMensaje').textContent='Alto estimado del logo. Revisa y guarda el borrador antes de publicar.';
+ if(!g){if(forzar&&h.dataset.automatico==='true'&&a.value!==''&&h.value!==a.value){h.value=a.value;quoteDirty=true;vista();}return;}
+ const m=medidasLogo(Number(a.value),{...g,anchoCm:Number(a.value)});if(!m)return;h.dataset.automatico='true';
+ // Solo hay cambio si el alto estimado es distinto: si no, Publicar guardaría sin fin.
+ if(h.value===val(m.alto))return;h.value=val(m.alto);quoteDirty=true;vista();$('#cotMensaje').textContent='Alto estimado del logo. Revisa y guarda el borrador antes de publicar.';
 }
 function ajustarMedida(input){
  const m=input.name?.match(/^(ancho|alto)-q(\d+)$/);if(!m)return;const i=Number(m[2]);if(m[1]==='alto'){input.dataset.automatico='false';return;}
