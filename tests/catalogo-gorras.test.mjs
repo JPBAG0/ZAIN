@@ -33,6 +33,9 @@ test('trucker: cada combinación tiene foto propia y muestra de dos tonos; las d
  for(const sku of ['ZN-GO-004','ZN-GO-006']){
   const p=prod(sku);assert.deepEqual(Object.keys(p.fotosColor),p.colores);
   for(const f of Object.values(p.fotosColor))assert.ok(existsSync(new URL('../'+f,import.meta.url)),f);
+  // el lateral va sobre la malla: color de malla para el contraste del logo y trama atenuada
+  const lat=p.zonas.find(z=>z.id==='lateral');assert.equal(lat.superficie,'malla');assert.ok(lat.textura<1);
+  for(const id of p.colores)assert.match(color(id).hexMalla,/^#[0-9a-f]{6}$/);
  }
  assert.equal(prod('ZN-GO-004').colores.length,4);assert.equal(prod('ZN-GO-006').colores.length,6);
  for(const sku of ['ZN-GO-002','ZN-GO-003','ZN-GO-005','ZN-GO-007']){const p=prod(sku);assert.ok(!p.fotosColor);assert.ok(p.colores.every(id=>!color(id).hex2));}

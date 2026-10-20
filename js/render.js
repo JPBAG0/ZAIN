@@ -584,7 +584,8 @@
     if (x1 > x0 && y1 > y0) {
       const d = g.getImageData(x0, y0, x1 - x0, y1 - y0);
       const p = d.data;
-      const fuerza = o.tecnica === "dtf" ? 0.7 : 1;
+      // textura < 1: el bordado tapa la trama (p. ej. malla de trucker) y la deja ver menos
+      const fuerza = (o.tecnica === "dtf" ? 0.7 : 1) * (o.textura ?? 1);
       // Fotos de varios colores (p. ej. trucker con frente negro): la luz se mide contra la tela bajo el logo,
       // no contra la parte más clara de toda la foto; si no, un frente oscuro se lee como sombra.
       let base = 1;

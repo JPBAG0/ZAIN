@@ -1100,25 +1100,29 @@ module.exports = {
       "id": "zn-go-004-c01",
       "nombre": "Negro / Beige / Mostaza",
       "hex": "#1d1d1f",
-      "hex2": "#e0d4bc"
+      "hex2": "#e0d4bc",
+      "hexMalla": "#e0d4bc"
     },
     {
       "id": "zn-go-004-c02",
       "nombre": "Negro / Café / Mostaza",
       "hex": "#1d1d1f",
-      "hex2": "#6b4a32"
+      "hex2": "#6b4a32",
+      "hexMalla": "#6b4a32"
     },
     {
       "id": "zn-go-004-c03",
       "nombre": "Olivo / Gris oscuro / Caqui",
       "hex": "#5b5e3a",
-      "hex2": "#4b4f51"
+      "hex2": "#4b4f51",
+      "hexMalla": "#4b4f51"
     },
     {
       "id": "zn-go-004-c04",
       "nombre": "Caqui / Vino / Olivo",
       "hex": "#b2a28d",
-      "hex2": "#6b1f2e"
+      "hex2": "#6b1f2e",
+      "hexMalla": "#6b1f2e"
     },
     {
       "id": "zn-go-005-c01",
@@ -1169,35 +1173,41 @@ module.exports = {
       "id": "zn-go-006-c01",
       "nombre": "Caqui / Marino",
       "hex": "#c8ad88",
-      "hex2": "#262b45"
+      "hex2": "#262b45",
+      "hexMalla": "#262b45"
     },
     {
       "id": "zn-go-006-c02",
       "nombre": "Negro",
-      "hex": "#1d1d1f"
+      "hex": "#1d1d1f",
+      "hexMalla": "#1d1d1f"
     },
     {
       "id": "zn-go-006-c03",
       "nombre": "Marino",
-      "hex": "#1f2340"
+      "hex": "#1f2340",
+      "hexMalla": "#1f2340"
     },
     {
       "id": "zn-go-006-c04",
       "nombre": "Negro / Gris oxford",
       "hex": "#1d1d1f",
-      "hex2": "#5a5a5a"
+      "hex2": "#5a5a5a",
+      "hexMalla": "#5a5a5a"
     },
     {
       "id": "zn-go-006-c05",
       "nombre": "Gris jaspe / Negro",
       "hex": "#b3b5b7",
-      "hex2": "#1d1d1f"
+      "hex2": "#1d1d1f",
+      "hexMalla": "#1d1d1f"
     },
     {
       "id": "zn-go-006-c06",
       "nombre": "Olivo / Café / Caqui",
       "hex": "#3a4034",
-      "hex2": "#9a6248"
+      "hex2": "#9a6248",
+      "hexMalla": "#c8ad88"
     },
     {
       "id": "zn-go-007-c01",
@@ -6153,13 +6163,15 @@ module.exports = {
         {
           "id": "lateral",
           "nombre": "Lateral izquierdo",
-          "x": 800,
+          "x": 870,
           "y": 430,
           "max": 5,
           "maxAlto": 3.5,
           "orientativa": true,
           "inclina": 5,
-          "compresion": 0.9
+          "compresion": 0.72,
+          "textura": 0.25,
+          "superficie": "malla"
         }
       ],
       "renderOrientativo": true,
@@ -6295,13 +6307,15 @@ module.exports = {
         {
           "id": "lateral",
           "nombre": "Lateral izquierdo",
-          "x": 800,
+          "x": 845,
           "y": 440,
           "max": 5,
           "maxAlto": 3.5,
           "orientativa": true,
           "inclina": 5,
-          "compresion": 0.9
+          "compresion": 0.72,
+          "textura": 0.25,
+          "superficie": "malla"
         }
       ],
       "renderOrientativo": true,

@@ -33,6 +33,8 @@
   };
   // Las combinaciones con foto propia (gorras trucker) se muestran tal cual, sin teñir.
   const fotoDe = (p, idColor) => p.fotosColor?.[idColor] || p.foto;
+  // color de la tela bajo el logo: en el lateral de las trucker es la malla, no el frente
+  const fondoLogo = (z, idColor) => (z?.superficie === "malla" && color(idColor).hexMalla) || color(idColor).hex;
   const tono = (c) => `--c:${c.hex}${c.hex2 ? `;--c2:${c.hex2}` : ""}`;
   const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, p.fotosColor?.[idColor] ? null : color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
   const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table>${p.tolerancia?`<small>Tolerancia: ancho ±${esc(p.tolerancia.ancho)} cm; largo ±${esc(p.tolerancia.largo)} cm.</small>`:""}</details>`;
@@ -219,9 +221,9 @@
     const g = t.getContext("2d");
     g.drawImage(prendaTenida(p, img, pz.m.c, S), 0, 0);
     const zona = p.zonas.find((z) => z.id === pz.m.z) || p.zonas[0];
-    const tinta = ZR.luz(ZR.hexARgb(col.hex)) > 0.55 ? "#141416" : "#f4f4f2";
+    const tinta = ZR.luz(ZR.hexARgb(fondoLogo(zona, pz.m.c))) > 0.55 ? "#141416" : "#f4f4f2";
     const k = S / 1000;
-    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S, sombraLocal: !!p.fotosColor, giro: zona.giro, sesgo: zona.sesgo, inclina: zona.inclina, compresion: zona.compresion });
+    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S, sombraLocal: !!p.fotosColor, giro: zona.giro, sesgo: zona.sesgo, inclina: zona.inclina, compresion: zona.compresion, textura: zona.textura });
     // gorras y bolsas llenan su foto: se encogen para que guarden proporción con la ropa
     const e = pz.m.e || 1;
     const d = pz.cv.getContext("2d");
@@ -790,7 +792,7 @@
     if (E.modo === "texto" && E.texto.trim()) return logoTexto;
     // sin logo todavía: un ejemplo «TU LOGO» para ver ubicación y tamaño
     if (!ejemplo) ejemplo = await ZR.logoDeTexto("Tu logo", "ancha", "#ffffff");
-    const claro = ZR.luz(ZR.hexARgb(color(E.c).hex)) > 0.55;
+    const claro = ZR.luz(ZR.hexARgb(fondoLogo(zAct(), E.c))) > 0.55;
     const c = ZR.lienzo(ejemplo.width, ejemplo.height);
     const g = c.getContext("2d");
     g.drawImage(ejemplo, 0, 0);
@@ -841,13 +843,13 @@
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
-        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion });
+        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura });
         const alto = (ancho * logo.height) / logo.width;
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
         caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
         const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
-        const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(color(E.c).hex))) < 0.2;
+        const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(fondoLogo(z, E.c)))) < 0.2;
         const a = $("#aviso");
         if (poco) aviso(E.modo === "imagen" ? "Tu logo casi no se ve sobre este color. Prueba otro «Color del logo»." : "El texto casi no se ve sobre este color. Cambia el color del texto.");
         else if (/casi no se ve/.test(a.textContent)) aviso("");
@@ -1006,7 +1008,7 @@
     E.dx = E.dy = 0;
     E.tinta = "original";
     // si es de 1 o 2 colores y casi no se ve sobre la prenda, se pasa a blanco o negro
-    const luzPrenda = ZR.luz(ZR.hexARgb(color(E.c).hex));
+    const luzPrenda = ZR.luz(ZR.hexARgb(fondoLogo(zAct(), E.c)));
     const seVe = info.colores.some((c) => Math.abs(ZR.luz(ZR.hexARgb(c)) - luzPrenda) >= 0.25);
     if (!info.esFoto && info.nColores <= 3 && !seVe) {
       E.tinta = luzPrenda < 0.5 ? "#f6f6f4" : "#141416";
