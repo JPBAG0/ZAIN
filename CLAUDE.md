@@ -6,7 +6,7 @@ Zonas de gorra: «Frente» (máx. 10 cm, `maxAlto` 5.5) y «Lateral izquierdo» 
 
 Trucker multicolor: el motor tiñe un solo color, así que cada combinación tiene su render (`fotosColor` {idColor: ruta}, `img/productos/zain/zn-go-00X-cNN.webp`, hechos por Codex con la pose del base) y se dibuja sin teñir; `estampar(..., {sombraLocal:true})` mide la luz bajo el logo para no oscurecerlo en frentes negros. Colores con `hex2` muestran la muestra partida (primer y segundo color del nombre; orden del proveedor frente/malla/visera). Para agregar una combinación: render con la misma pose + color + entrada en `fotosColor`; la prueba `tests/catalogo-gorras.test.mjs` exige que exista cada foto.
 
-Costos cargados (IVA incluido, versión 18): económicas $39.44 fijo; ZN-GO-005 1–500 $98.60 / 501+ $92.80; ZN-GO-006 $104.40 / $92.80; ZN-GO-007 $127.60 / $116.00 (la escala 100–500 cubre 1–99 hasta que el proveedor dé otro precio); chaleco XS–XL $344.00 (XS = precio de S, decisión de JP), 2XL $368.58. Margen y bordado van en cada cotización. Portada: la Gorra trucker de algodón Caqui/Marino (bordado frente, 8 cm) va en el carrusel entre la chamarra y la bolsa (7 muestras). Edge `zain-pedidos` v42.
+Costos cargados (IVA incluido, versión 18): económicas $39.44 fijo; ZN-GO-005 1–500 $98.60 / 501+ $92.80; ZN-GO-006 $104.40 / $92.80; ZN-GO-007 $127.60 / $116.00 (la escala 100–500 cubre 1–99 hasta que el proveedor dé otro precio); chaleco XS–XL $344.00 (XS = precio de S, decisión de JP), 2XL $368.58. Margen y bordado van en cada cotización. Portada: la Gorra trucker de algodón Caqui/Marino (bordado frente, 8 cm) va en el carrusel entre la chamarra y la bolsa (7 muestras). Edge `zain-pedidos` v43.
 
 ## Vigente: cargos únicos (ponchado por logo) como partida propia — 20-oct-2026
 
