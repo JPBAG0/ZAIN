@@ -1,3 +1,7 @@
+## Vigente: cargo único (ponchado) aparte dentro de la partida — 20-oct-2026
+
+JP pidió que el ponchado del bordado ($250, una vez por pedido) no se reparta en el precio por pieza: sale como renglón «Ponchado logo $250» dentro de la misma partida, junto al desglose por tallas. Editor: casilla «Cobrar cargo único aparte, en esta partida» con concepto e importe (vacío = la preparación de la partida). Activada por omisión en borradores nuevos de Bordado con preparación > 0; los borradores ya guardados se marcan a mano. `calcular` agrega `cargo {concepto, importe}` al bruto de la partida (el descuento de la partida también le aplica); el costo no cambia. Se proyecta en `paraCliente`, vista, PDF y la proyección SQL de `confirmacion-cotizaciones.sql`. Requiere redesplegar el Edge `zain-pedidos` y volver a aplicar esa función SQL.
+
 ## Vigente: portada para anuncios, mínimo 12 por pedido, precios desde y bolsas agrupadas — 18-oct-2026
 
 JP autorizó (18-oct): la portada dice «Envíos a todo México» (JP pidió quitar «Taller en Guadalajara» de la portada; sigue en el pie y en la meta description) y «Uniformes con el logo de tu empresa»; el botón principal es «Cotizar por WhatsApp» (`#ctaPortada`, enlace wa.me que `js/medicion.js` cuenta como clic a WhatsApp) y personalizar es secundario.

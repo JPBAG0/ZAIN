@@ -103,7 +103,7 @@ export function generar(items,cfg){
   // Los costos anteriores siguen por pieza hasta que el equipo migre ese SKU expresamente.
   const fijo=!!cp&&!prenda,medidas=medidasLogo(p.cm,p.logoGeometria),ancho=medidas?.ancho??(Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null);
   // Sin proporción del logo se supone cuadrado (alto = ancho) para tener un primer precio; autorizado por JP el 18-oct-2026.
-  return {indice:i,modo:fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0};
+  return {indice:i,modo:fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0,...(p.tecnica==='Bordado'&&(fijo?cp.preparacion:t?.preparacion??0)>0?{cargoAparte:true}:{})};
  }),pagos:pagosIniciales(),destinatario:'',condiciones:'',plazo:'Por acordar con ZAIN.',vigencia:'',impuesto:null,envio:0,costoEnvio:0});
 }
 export function calcular(items,input){
@@ -127,15 +127,18 @@ export function calcular(items,input){
   const costo=costoVariable===null?null:suma([costoVariable,preparacion]);
   // Preparación se reparte entre las piezas, redondeando hacia arriba un centavo como máximo por unidad.
   const divisor=BigInt(base.piezas)*BigInt(10000-margenObjetivo);
-  const grupos=gruposTalla(porTalla.detalle,aplicacion===null?null:aplicacion+otros,preparacion,base.piezas,margenObjetivo);
-  const sugerido=grupos.length?grupos[0].sugerido:costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
+  // Cargo único (p. ej. ponchado del bordado): renglón aparte en la partida por el importe escrito, sin repartirlo entre las piezas (JP, 20-oct-2026).
+  const cargoAparte=v.cargoAparte===true,cargoConcepto=texto(v.cargoConcepto,80)||(base.tecnica==='Bordado'?'Ponchado logo':'Preparación'),cargoPrecio=v.cargoPrecio==null?null:entero(v.cargoPrecio);
+  const cargo=cargoAparte?{concepto:cargoConcepto,importe:cargoPrecio??preparacion}:null,repartir=cargo?0:preparacion;
+  const grupos=gruposTalla(porTalla.detalle,aplicacion===null?null:aplicacion+otros,repartir,base.piezas,margenObjetivo);
+  const sugerido=grupos.length?grupos[0].sugerido:costo===null?null:entero(Number((BigInt(costo-preparacion+repartir)*10000n+divisor-1n)/divisor));
   const precio=v.precio===null?sugerido:entero(v.precio);
   // Un precio escrito a mano es el del grupo base; los demás grupos conservan su diferencia.
   const preciosTalla=precio===null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
   // Publicar exige precio por pieza; los costos son opcionales y solo sirven para conocer la utilidad.
   if(precio===null)pendiente=true;
-  const bruto=precio===null?null:preciosTalla.length?suma(preciosTalla.map(g=>g.importe)):entero(precio*base.piezas),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
-  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,preciosTalla,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
+  const piezasImporte=precio===null?null:preciosTalla.length?suma(preciosTalla.map(g=>g.importe)):entero(precio*base.piezas),bruto=piezasImporte===null?null:suma([piezasImporte,cargo?.importe??0]),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
+  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,preciosTalla,cargoAparte,cargoConcepto,cargoPrecio,cargo,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
  });
  const impuesto=input.impuesto===null?null:entero(input.impuesto,0,10000),envio=entero(input.envio),costoEnvio=entero(input.costoEnvio);
  if(impuesto===null)pendiente=true;
@@ -151,5 +154,5 @@ export function entrada(q){return {...q,schema:6,metodo:'margen_bruto',partidas:
 export function paraCliente(q){
  if(!q.preparada)error('Escribe el precio por pieza de cada partida y elige el impuesto antes de publicar.');
  return {schema:1,moneda:'MXN',pagos:normalizarPagos(q.pagos),destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
- partidas:q.partidas.map(p=>({...Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])),...(p.preciosTalla?.length?{preciosTalla:p.preciosTalla.map(g=>({tallas:g.tallas,piezas:g.piezas,precio:g.precio,importe:g.importe}))}:{})}))};
+ partidas:q.partidas.map(p=>({...Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])),...(p.preciosTalla?.length?{preciosTalla:p.preciosTalla.map(g=>({tallas:g.tallas,piezas:g.piezas,precio:g.precio,importe:g.importe}))}:{}),...(p.cargo?{cargo:{concepto:p.cargo.concepto,importe:p.cargo.importe}}:{})}))};
 }

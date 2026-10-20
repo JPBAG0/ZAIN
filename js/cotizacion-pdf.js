@@ -1,12 +1,12 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
-import {pesos} from './cotizacion-core.js?v=11';
-import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=9';
+import {pesos} from './cotizacion-core.js?v=15';
+import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=10';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
 export function datosPDF(q){
  const keys=['pagos','destinatario','publicada_at','revision','vigencia','plazo','condiciones','bruto','descuento','envio','subtotal','impuesto','impuestos','total'];
- const pkeys=['indice','sku','nombre','color','tecnica','zona','cm','piezas','tallas','precio','preciosTalla','descuento','importe'];
+ const pkeys=['indice','sku','nombre','color','tecnica','zona','cm','piezas','tallas','precio','preciosTalla','cargo','descuento','importe'];
  return {...Object.fromEntries(keys.map(k=>[k,q[k]])),pagos:normalizarPagos(q.pagos),partidas:q.partidas.map(p=>Object.fromEntries(pkeys.map(k=>[k,p[k]])))};
 }
 const texto=v=>String(v??'').normalize('NFC').replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').replace(/\u202f|\u00a0/g,' ');
@@ -76,7 +76,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  const fw=36,ix=m+fw+6,iw=right-ix-5;
  q.partidas.forEach((p,i)=>{
   const nombre=lines(p.nombre,iw,10,true),sub=lines(p.color||'',iw,7.5),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,7.5):[];
-  const grupos=p.preciosTalla?.length?p.preciosTalla:null,extra=grupos?(grupos.length-1)*4.5:0;
+  const grupos=p.preciosTalla?.length?p.preciosTalla:null,renglones=[...(grupos||[{piezas:p.piezas,precio:p.precio}]),...(p.cargo?[{cargo:p.cargo}]:[])],extra=(renglones.length-1)*4.5;
   const h=Math.max(36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11+extra);
   espacio(h+3);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
@@ -90,7 +90,8 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
   const cy=y+h-5.5,gy=cy-extra;punteada(ix,gy-4.5,ix+iw);
   let ox,ly;const parte=(t,c,b=false)=>{label(t,ox,ly,8,b,c,'left',true);font(8,b,c,true);ox+=doc.getTextWidth(t);};
   // Tallas con distinto costo: un renglón por grupo dentro de la misma partida.
-  (grupos||[{piezas:p.piezas,precio:p.precio}]).forEach((g,k)=>{ox=ix;ly=gy+k*4.5;if(g.tallas){parte(g.tallas,tinta2);ox=Math.max(ox+2,ix+22);}parte(String(g.piezas),tinta,true);parte(g.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(g.precio),tinta,true);if(p.descuento&&k===(grupos?grupos.length-1:0))parte('  - '+p.descuento/100+'%',cobaltoTxt);});
+  // Cargo único (ponchado): su propio renglón, por el importe completo.
+  renglones.forEach((g,k)=>{ox=ix;ly=gy+k*4.5;if(g.cargo){parte(g.cargo.concepto,tinta2);ox=Math.max(ox+2,ix+22);parte(numero(g.cargo.importe),tinta,true);}else{if(g.tallas){parte(g.tallas,tinta2);ox=Math.max(ox+2,ix+22);}parte(String(g.piezas),tinta,true);parte(g.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(g.precio),tinta,true);}if(p.descuento&&k===renglones.length-1)parte('  - '+p.descuento/100+'%',cobaltoTxt);});
   label(numero(p.importe),ix+iw,cy+.5,11.5,true,tinta,'right');
   y+=h+3;
  });

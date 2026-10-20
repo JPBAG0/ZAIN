@@ -1,5 +1,5 @@
-import {pesos} from './cotizacion-core.js?v=14';
-import {esc} from './cotizacion-vista.js?v=9';
+import {pesos} from './cotizacion-core.js?v=15';
+import {esc} from './cotizacion-vista.js?v=10';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 // Costo editable por cotización con referencia al valor guardado en la pestaña Costos (origenCostos).
@@ -18,13 +18,15 @@ function bandas(p,i){
 const pct=n=>(n/100).toLocaleString('es-MX',{maximumFractionDigits:2})+'%';
 const falta=p=>p.costoPrendas===null?'el costo de la prenda':p.modo!=='area'?'el costo de '+p.tecnica+' por pieza':p.ancho===null||p.alto===null?'la medida del logo':'la tarifa de '+p.tecnica+' por cm²';
 const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'No se puede calcular: falta '+falta(p)+' en «Costos de esta partida». Mientras, escribe el precio que acordaste.')+(p.preciosTalla?.length?' Por talla: '+p.preciosTalla.map(g=>g.tallas+' '+pesos(g.precio)).join(' · ')+'. El precio que escribas es el de '+p.preciosTalla[0].tallas+'; las demás tallas conservan su diferencia.':'')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
+const piezasTexto=p=>p.piezas+' piezas'+(p.cargo?' + '+p.cargo.concepto:'');
 const utilidadPartida=p=>p.costo===null||p.importe===null?'Opcional · para ver tu utilidad':'Costo '+pesos(p.costo)+' · Utilidad '+pesos(p.importe-p.costo);
 function partida(p,i,src,origen){
  const foto=imagen(src),costoPrenda=costo('prenda-q'+i,'Costo de prenda / pieza',p.prenda,origen,'prenda','placeholder="Opcional"');
  return `<section class="cot-partida cot-producto" id="cot-partida-${i}">
  <header class="cot-producto-cab ${foto?'':'cot-sinfoto'}">${foto?`<img class="cot-producto-foto" src="${foto}" alt="Diseño de ${esc(p.nombre)}" referrerpolicy="no-referrer" width="76" height="90">`:''}<div class="cot-producto-titulo"><h4>${esc(p.nombre)}</h4><p>${esc(p.color)} · ${esc(p.tecnica)} · <b>${p.piezas} piezas</b></p><small>${esc(p.tallas||'Sin desglose de tallas')} · ${esc(p.sku)}</small></div></header>
- <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}" ${p.sugerido!==null?'data-calculado':''}></span></label><div class="cot-total-partida"><span>${p.piezas} piezas</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
+ <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}" ${p.sugerido!==null?'data-calculado':''}></span></label><div class="cot-total-partida"><span data-piezas-partida>${esc(piezasTexto(p))}</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
  <div class="cot-ajuste-rapido">${field('descuento-q'+i,'Descuento %',val(p.descuento),'number','max="100"')}${field('margen-q'+i,'Margen objetivo %',val(p.margenObjetivo),'number','max="99.99"')}</div>
+ <fieldset class="cot-cargo"><label class="cot-check"><input type="checkbox" name="cargoAparte-q${i}" ${p.cargoAparte?'checked':''}>Cobrar cargo único aparte, en esta partida</label><div class="cot-edicion" data-cot-cargo ${p.cargoAparte?'':'hidden'}>${field('cargoConcepto-q'+i,'Concepto',p.cargoConcepto,'text','maxlength="80"')}${field('cargoPrecio-q'+i,'Importe (una vez)',val(p.cargoPrecio),'number','placeholder="'+esc(val(p.preparacion))+'"')}</div><small class="cot-ayuda" data-cot-cargo ${p.cargoAparte?'':'hidden'}>Sale como renglón propio y no se reparte en el precio por pieza. Vacío = la preparación de esta partida (${esc(pesos(p.preparacion))}).</small></fieldset>
  <p class="cot-sugerencia"><span data-sugerencia>${esc(sugerencia(p))}</span> <button type="button" class="btn-texto" data-usar-sugerido="${i}" ${p.precioManual!==null&&p.sugerido!==null?'':'hidden'}>Usar precio sugerido</button></p>
  <details class="cot-ajustes" data-ajustes-partida><summary>Costos de esta partida · editables <span data-utilidad-partida>${esc(utilidadPartida(p))}</span></summary><div class="cot-ajustes-contenido">
  <p class="cot-ayuda">Vienen de la pestaña Costos. Si hay un imprevisto, cámbialos aquí: solo afectan esta cotización y se recalculan la utilidad y el precio sugerido. El cliente nunca ve esta sección.</p>
@@ -54,7 +56,7 @@ export function editorCotizacion(q,{version,publicada,imagenes={},productos=[]}=
 }
 export function actualizarPartida(box,p){
  const set=(selector,value)=>{const el=box.querySelector(selector);if(el)el.textContent=value;};
- set('[data-total-partida]',pesos(p.importe));set('[data-sugerencia]',sugerencia(p));set('[data-utilidad-partida]',utilidadPartida(p));set('[data-resumen-prenda]',pesos(p.costoPrendas));set('[data-resumen-tecnica]',pesos(p.aplicacion));set('[data-resumen-logo]',p.ancho!==null&&p.alto!==null?val(p.ancho)+' × '+val(p.alto)+' cm':'Medidas pendientes');
+ set('[data-total-partida]',pesos(p.importe));set('[data-piezas-partida]',piezasTexto(p));for(const el of box.querySelectorAll('[data-cot-cargo]'))el.hidden=!p.cargoAparte;set('[data-sugerencia]',sugerencia(p));set('[data-utilidad-partida]',utilidadPartida(p));set('[data-resumen-prenda]',pesos(p.costoPrendas));set('[data-resumen-tecnica]',pesos(p.aplicacion));set('[data-resumen-logo]',p.ancho!==null&&p.alto!==null?val(p.ancho)+' × '+val(p.alto)+' cm':'Medidas pendientes');
  const precio=box.querySelector('[name^="precio-q"]');if(precio){precio.placeholder=p.sugerido!==null?val(p.sugerido):'0.00';precio.toggleAttribute('data-calculado',p.sugerido!==null);}
  const usar=box.querySelector('[data-usar-sugerido]');if(usar)usar.hidden=!(p.precioManual!==null&&p.sugerido!==null);
  const d=box.querySelector('[data-desglose-tallas]'),abierto=d.querySelector('details')?.open;d.innerHTML=detalleTallas(p);if(abierto&&d.querySelector('details'))d.querySelector('details').open=true;
