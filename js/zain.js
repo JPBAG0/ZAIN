@@ -31,7 +31,10 @@
     if (min <= 1 && paso <= 1) return C.minimoPedido > 1 ? `Mínimo ${C.minimoPedido} piezas por pedido; mezcla modelos, tallas y colores.` : "Desde 1 pieza por modelo y color.";
     return `Mínimo ${min} ${min === 1 ? "pieza" : "piezas"} por modelo y color${paso > 1 ? `, en incrementos de ${paso}` : ""}.`;
   };
-  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
+  // Las combinaciones con foto propia (gorras trucker) se muestran tal cual, sin teñir.
+  const fotoDe = (p, idColor) => p.fotosColor?.[idColor] || p.foto;
+  const tono = (c) => `--c:${c.hex}${c.hex2 ? `;--c2:${c.hex2}` : ""}`;
+  const prendaTenida = (p, img, idColor, S) => ZR.tenir(img, p.fotosColor?.[idColor] ? null : color(idColor).hex, S, p.fotoColor ? color(p.fotoColor).hex : null, p.acabadosFijos || null);
   const tablaMedidas = (p) => !p.tablaTallas ? "" : `<details class="producto__tabla"><summary>Guía de tallas · medidas en cm</summary><table><caption>Prenda extendida; ancho plano, no contorno corporal</caption><thead><tr><th>Talla</th><th>Ancho</th><th>Largo</th></tr></thead><tbody>${Object.entries(p.tablaTallas).map(([t,v]) => `<tr><th>${esc(t)}</th><td>${v.ancho}</td><td>${v.largo}</td></tr>`).join("")}</tbody></table>${p.tolerancia?`<small>Tolerancia: ancho ±${esc(p.tolerancia.ancho)} cm; largo ±${esc(p.tolerancia.largo)} cm.</small>`:""}</details>`;
   const varianteSelector = (p, id, attr = "") => {
     const opciones = variantes(p);
@@ -210,7 +213,7 @@
   const pintarMuestra = async (pz) => {
     const p = prod(pz.m.p);
     const col = color(pz.m.c);
-    const img = await ZR.cargar(p.foto);
+    const img = await ZR.cargar(fotoDe(p, pz.m.c));
     const S = 640;
     const t = ZR.lienzo(S);
     const g = t.getContext("2d");
@@ -218,7 +221,7 @@
     const zona = p.zonas.find((z) => z.id === pz.m.z) || p.zonas[0];
     const tinta = ZR.luz(ZR.hexARgb(col.hex)) > 0.55 ? "#141416" : "#f4f4f2";
     const k = S / 1000;
-    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S });
+    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S, sombraLocal: !!p.fotosColor });
     // gorras y bolsas llenan su foto: se encogen para que guarden proporción con la ropa
     const e = pz.m.e || 1;
     const d = pz.cv.getContext("2d");
@@ -461,7 +464,7 @@
     <div class="mini__foto"><canvas width="560" height="560" role="img" aria-label="${esc(nombre)}${p.imagenIA ? "; imagen ilustrativa de la prenda sin persona" : ""}"></canvas></div>
     <div class="mini__txt"><span class="mini__cat">${esc(p.categoria)}</span><h4 class="mini__nombre"><button type="button" class="mini__abrir" data-ver aria-haspopup="dialog">${esc(nombre)}</button></h4>
     <p class="mini__sub">${esc(sub)}</p>
-    <div class="mini__puntos" aria-hidden="true">${p.colores.slice(0, 6).map(color).map((c) => `<i style="--c:${c.hex}"></i>`).join("")}${n > 6 ? `<span>+${n - 6}</span>` : ""}</div></div>
+    <div class="mini__puntos" aria-hidden="true">${p.colores.slice(0, 6).map(color).map((c) => `<i style="${tono(c)}"></i>`).join("")}${n > 6 ? `<span>+${n - 6}</span>` : ""}</div></div>
     <button type="button" class="mini__mas" data-agregar aria-label="Agregar ${esc(nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
   </article>`;
   };
@@ -470,7 +473,7 @@
       ${p.fotoModelo ? `<img class="producto__modelo" src="${esc(p.fotoModelo)}" alt="${esc(p.nombre)} · foto de referencia" loading="lazy" width="1000" height="1000" hidden /><button type="button" class="producto__flecha producto__flecha--antes" data-galeria="-1" aria-label="Imagen anterior de ${esc(p.nombreFamilia || p.nombre)}">‹</button><button type="button" class="producto__flecha producto__flecha--despues" data-galeria="1" aria-label="Imagen siguiente de ${esc(p.nombreFamilia || p.nombre)}">›</button>` : ""}<span class="producto__origen">${p.fotoModelo ? "Vista personalizable · 1 / 2" : "Vista personalizable"}</span><button type="button" class="producto__mas" data-agregar aria-label="Agregar ${esc(p.nombreFamilia || p.nombre)} al pedido" title="Agregar al pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
     <div class="producto__contenido"><div class="producto__txt"><h3>${esc(p.nombreFamilia || p.nombre)}</h3></div>
     ${varianteSelector(p, "", "data-variante")}
-    <div class="producto__paleta"><div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="--c:${c.hex}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div><p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p></div>
+    <div class="producto__paleta"><div class="producto__colores" role="radiogroup" aria-label="Color de ${esc(p.nombreFamilia || p.nombre)}">${p.colores.map(color).map((c,i) => `<button type="button" role="radio" class="punto${i ? "" : " on"}" style="${tono(c)}" data-color="${c.id}" aria-checked="${!i}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`).join("")}</div><p class="producto__tono" aria-live="polite">Color elegido: ${esc(nombreColor(color(p.colores[0])))}</p></div>
     <ul class="producto__tec" aria-label="Técnicas disponibles">${p.tecnicas.map(t => `<li>${esc(tecnica(t).nombre)}</li>`).join("")}</ul>
     <details class="producto__detalles"><summary><span class="producto__ver">Ver detalles</span><span class="producto__ocultar">Ocultar detalles</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></summary><div class="producto__ficha"><p>${esc(p.descripcion)}</p>${fichaProducto(p)}</div></details>
     <div class="producto__pie"><button type="button" class="btn btn--linea btn--chico" data-agregar>Agregar rápido</button><button type="button" class="btn btn--tinta btn--chico" data-personalizar>Personalizar con tu logo</button></div></div></article>`;
@@ -493,7 +496,7 @@
     const p = prod(art.dataset.id);
     art.dataset.color = idColor;
     const cv = $("canvas", art);
-    const img = await ZR.cargar(p.foto);
+    const img = await ZR.cargar(fotoDe(p, idColor));
     if (art.dataset.id !== p.id || art.dataset.color && art.dataset.color !== idColor) return;
     const g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
@@ -511,7 +514,7 @@
   };
   const pintarMini = async (art) => {
     const p = prod(art.dataset.id), idColor = art.dataset.color || p.colores[0];
-    const img = await ZR.cargar(p.foto);
+    const img = await ZR.cargar(fotoDe(p, idColor));
     if (art.dataset.id !== p.id || art.dataset.color !== idColor) return;
     const cv = $("canvas", art), g = cv.getContext("2d");
     g.clearRect(0, 0, cv.width, cv.height);
@@ -696,7 +699,7 @@
     $("#oColor").innerHTML = p.colores
       .map(color)
       .filter(Boolean)
-      .map((c) => `<button type="button" class="punto punto--grande${c.id === E.c ? " on" : ""}" style="--c:${c.hex}" data-c="${c.id}" aria-pressed="${c.id === E.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
+      .map((c) => `<button type="button" class="punto punto--grande${c.id === E.c ? " on" : ""}" style="${tono(c)}" data-c="${c.id}" aria-pressed="${c.id === E.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
       .join("");
     $("#oTecnica").innerHTML = p.tecnicas
       .map(tecnica)
@@ -813,7 +816,7 @@
       const v = ++renderVersion;
       const p = pAct();
       const z = zAct();
-      const img = await ZR.cargar(p.foto);
+      const img = await ZR.cargar(fotoDe(p, E.c));
       const logo = await logoActual();
       if (v !== renderVersion) return;
       if (transicion && lienzo.classList.contains("listo") && !reducido) {
@@ -834,11 +837,11 @@
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
-        const altoMax = maxLogo(z) * p.pxPorCm * 0.9;
+        const altoMax = (z.maxAlto || maxLogo(z) * 0.9) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
-        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000 });
+        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor });
         const alto = (ancho * logo.height) / logo.width;
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
@@ -1345,7 +1348,7 @@
     const version = ++rapVersion, chosen = R.c;
     const p = prod(R.p);
     const cv = $("#rapFoto");
-    const img = await ZR.cargar(p.foto);
+    const img = await ZR.cargar(fotoDe(p, chosen));
     if (revision !== revisionFotoRapida) return;
     if (version !== rapVersion) return;
     const g = cv.getContext("2d");
@@ -1364,7 +1367,7 @@
     $("#rapColor").innerHTML = p.colores
       .map(color)
       .filter(Boolean)
-      .map((c) => `<button type="button" class="punto punto--grande${c.id === R.c ? " on" : ""}" style="--c:${c.hex}" data-rc="${c.id}" aria-pressed="${c.id === R.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
+      .map((c) => `<button type="button" class="punto punto--grande${c.id === R.c ? " on" : ""}" style="${tono(c)}" data-rc="${c.id}" aria-pressed="${c.id === R.c}" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"></button>`)
       .join("");
     $("#rapTecnica").innerHTML = p.tecnicas
       .map(tecnica)

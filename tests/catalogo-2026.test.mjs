@@ -11,17 +11,17 @@ const edits=C.productos.map(p=>({producto_id:p.idPublico||p.id,version:1,cambios
 const cat=resolveInternal(C,edits),publica=projectPublic(Pub,cat,[],'https://p.test');
 const request=items=>({id:'12345678-1234-4123-8123-123456789abc',token:'a'.repeat(64),items,files:[]});
 const selection=(p,cid,talla)=>({p:p.id,colorId:cid,color:cat.colores.find(c=>c.id===cid).nombre,tecnica:cat.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{[talla]:5},zona:p.zonas[0].nombre,cm:8});
-test('gama nueva conserva premium y13bolsas, publica28 referencias y mantiene29 históricas',()=>{
- assert.equal(publica.productos.length,28);assert.equal(publica.productosHistoricos.length,29);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,13);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,6);
+test('gama nueva conserva premium y13bolsas, publica35 referencias (incluye gorras y chaleco acolchado) y mantiene29 históricas',()=>{
+ assert.equal(publica.productos.length,35);assert.equal(publica.productosHistoricos.length,29);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,20);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,6);
  assert.ok([...keep].every(sku=>publica.productos.some(p=>p.sku===sku)));
- assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,57);
+ assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,64);
  for(const m of publica.muestrasPortada){const p=publica.productos.find(p=>p.id===m.p);assert.ok(p&&p.colores.includes(m.c)&&p.tecnicas.includes(m.t));}
  assert.ok(publica.categoriasCatalogo.includes('Chalecos'));
 });
 test('configuración y proyección pública excluyen nuevos datos de compras',()=>{
  for(const text of [JSON.stringify(Pub),JSON.stringify(publica)])assert.ok(!/Proveedor ficticio|REF-PRIVADA|skuProveedor|proveedorCompras|Playerytees|Wusstek/i.test(text));
  for(const p of publica.productos.filter(p=>p.catalogo2026)){assert.match(p.foto,/img\/productos\/zain\/zn-/);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);assert.ok(!p.fabricante);}
- assert.equal(publica.productos.filter(p=>p.catalogo2026&&p.fotoModelo).length,11);
+ assert.equal(publica.productos.filter(p=>p.catalogo2026&&p.fotoModelo).length,12);
 });
 test('todas las variantes nuevas guardan talla/color canónicos y referencia privada solo en snapshot',()=>{
  for(const p of cat.productos.filter(p=>p.catalogo2026))for(const cid of p.colores)for(const talla of p.tallas){

@@ -570,10 +570,19 @@
       const d = g.getImageData(x0, y0, x1 - x0, y1 - y0);
       const p = d.data;
       const fuerza = o.tecnica === "dtf" ? 0.7 : 1;
+      // Fotos de varios colores (p. ej. trucker con frente negro): la luz se mide contra la tela bajo el logo,
+      // no contra la parte más clara de toda la foto; si no, un frente oscuro se lee como sombra.
+      let base = 1;
+      if (o.sombraLocal) {
+        const v = [];
+        for (let yy = y0; yy < y1; yy += 2) for (let xx = x0; xx < x1; xx += 2) v.push(s[yy * S + xx]);
+        v.sort((a, b) => a - b);
+        base = Math.max(0.05, v[Math.floor(v.length * 0.8)] || 1);
+      }
       for (let yy = y0, i = 0; yy < y1; yy++) {
         for (let xx = x0; xx < x1; xx++, i += 4) {
           if (!p[i + 3]) continue;
-          const f = Math.min(1.05, s[yy * S + xx]);
+          const f = Math.min(1.05, s[yy * S + xx] / base);
           const k = 1 - (1 - f) * 1.4 * fuerza;
           p[i] *= k;
           p[i + 1] *= k;

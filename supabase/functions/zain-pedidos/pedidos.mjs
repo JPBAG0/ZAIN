@@ -69,7 +69,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
         item.tallasDetalle=Object.fromEntries(p.tallas.filter(t=>counts[t]).map(t=>[t,counts[t]]));item.tallas=p.tallas.filter(t=>counts[t]).map(t=>t+' '+counts[t]).join(' · ');
       }
       Object.assign(item,{silueta:p.silueta,renderOrientativo:true});
-      if(p.catalogo2026)Object.assign(item,{tejido:p.tejido||'',composicion:p.composicionColor?.[col.id]||p.composicion||'',...(p.gramaje?{gramaje:p.gramaje}:{}),detalleMedidas:p.tablaTallas?'Medidas por talla: ancho plano y largo en la guía del producto; no es área de impresión.':'Tallas sujetas a confirmación; medidas exactas de prenda por confirmar.'});
+      if(p.catalogo2026)Object.assign(item,{tejido:p.tejido||'',composicion:p.composicionColor?.[col.id]||p.composicion||'',...(p.gramaje?{gramaje:p.gramaje}:{}),detalleMedidas:p.detalleMedidas||(p.tablaTallas?'Medidas por talla: ancho plano y largo en la guía del producto; no es área de impresión.':'Tallas sujetas a confirmación; medidas exactas de prenda por confirmar.')});
     }
     if(snapshot)Object.assign(item,{nombreZain:p.nombreComercial||p.nombre,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??"",proveedor:p.proveedorCompras??p.fabricante??""});
     return item;

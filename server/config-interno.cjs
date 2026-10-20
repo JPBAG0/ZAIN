@@ -980,6 +980,279 @@ module.exports = {
       "id": "zn-ch-003-c06",
       "nombre": "Azul cobalto",
       "hex": "#4c677c"
+    },
+    {
+      "id": "zn-go-002-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-002-c02",
+      "nombre": "Azul cielo",
+      "hex": "#8fb8de"
+    },
+    {
+      "id": "zn-go-002-c03",
+      "nombre": "Vino",
+      "hex": "#6b1f2e"
+    },
+    {
+      "id": "zn-go-002-c04",
+      "nombre": "Rojo",
+      "hex": "#b8262c"
+    },
+    {
+      "id": "zn-go-002-c05",
+      "nombre": "Caqui",
+      "hex": "#b2a28d"
+    },
+    {
+      "id": "zn-go-002-c06",
+      "nombre": "Negro",
+      "hex": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-002-c07",
+      "nombre": "Gris claro",
+      "hex": "#c4c6c8"
+    },
+    {
+      "id": "zn-go-002-c08",
+      "nombre": "Rojo radiante",
+      "hex": "#d7263d"
+    },
+    {
+      "id": "zn-go-002-c09",
+      "nombre": "Rosa pastel",
+      "hex": "#f2c4ce"
+    },
+    {
+      "id": "zn-go-002-c10",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-002-c11",
+      "nombre": "Verde salvia",
+      "hex": "#9caf88"
+    },
+    {
+      "id": "zn-go-002-c12",
+      "nombre": "Gris oscuro",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-go-002-c13",
+      "nombre": "Azul rey",
+      "hex": "#2546b8"
+    },
+    {
+      "id": "zn-go-002-c14",
+      "nombre": "Azul galáctico",
+      "hex": "#2b3a8c"
+    },
+    {
+      "id": "zn-go-003-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-003-c02",
+      "nombre": "Vino",
+      "hex": "#6b1f2e"
+    },
+    {
+      "id": "zn-go-003-c03",
+      "nombre": "Rojo",
+      "hex": "#b8262c"
+    },
+    {
+      "id": "zn-go-003-c04",
+      "nombre": "Caqui",
+      "hex": "#b2a28d"
+    },
+    {
+      "id": "zn-go-003-c05",
+      "nombre": "Negro",
+      "hex": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-003-c06",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-003-c07",
+      "nombre": "Olivo",
+      "hex": "#5b5e3a"
+    },
+    {
+      "id": "zn-go-003-c08",
+      "nombre": "Gris oscuro",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-go-003-c09",
+      "nombre": "Azul rey",
+      "hex": "#2546b8"
+    },
+    {
+      "id": "zn-go-004-c01",
+      "nombre": "Negro / Beige / Mostaza",
+      "hex": "#1d1d1f",
+      "hex2": "#e0d4bc"
+    },
+    {
+      "id": "zn-go-004-c02",
+      "nombre": "Negro / Café / Mostaza",
+      "hex": "#1d1d1f",
+      "hex2": "#6b4a32"
+    },
+    {
+      "id": "zn-go-004-c03",
+      "nombre": "Olivo / Gris oscuro / Caqui",
+      "hex": "#5b5e3a",
+      "hex2": "#4b4f51"
+    },
+    {
+      "id": "zn-go-004-c04",
+      "nombre": "Caqui / Vino / Olivo",
+      "hex": "#b2a28d",
+      "hex2": "#6b1f2e"
+    },
+    {
+      "id": "zn-go-005-c01",
+      "nombre": "Caqui",
+      "hex": "#a39270"
+    },
+    {
+      "id": "zn-go-005-c02",
+      "nombre": "Azul rey",
+      "hex": "#1f4fb0"
+    },
+    {
+      "id": "zn-go-005-c03",
+      "nombre": "Piedra",
+      "hex": "#d3c8a8"
+    },
+    {
+      "id": "zn-go-005-c04",
+      "nombre": "Rosa",
+      "hex": "#d94a80"
+    },
+    {
+      "id": "zn-go-005-c05",
+      "nombre": "Olivo",
+      "hex": "#3e4229"
+    },
+    {
+      "id": "zn-go-005-c06",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-005-c07",
+      "nombre": "Marino",
+      "hex": "#1b2347"
+    },
+    {
+      "id": "zn-go-005-c08",
+      "nombre": "Negro",
+      "hex": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-005-c09",
+      "nombre": "Gris",
+      "hex": "#a8a8a8"
+    },
+    {
+      "id": "zn-go-006-c01",
+      "nombre": "Caqui / Marino",
+      "hex": "#c8ad88",
+      "hex2": "#262b45"
+    },
+    {
+      "id": "zn-go-006-c02",
+      "nombre": "Negro",
+      "hex": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-006-c03",
+      "nombre": "Marino",
+      "hex": "#1f2340"
+    },
+    {
+      "id": "zn-go-006-c04",
+      "nombre": "Negro / Gris oxford",
+      "hex": "#1d1d1f",
+      "hex2": "#5a5a5a"
+    },
+    {
+      "id": "zn-go-006-c05",
+      "nombre": "Gris jaspe / Negro",
+      "hex": "#b3b5b7",
+      "hex2": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-006-c06",
+      "nombre": "Olivo / Café / Caqui",
+      "hex": "#3a4034",
+      "hex2": "#9a6248"
+    },
+    {
+      "id": "zn-go-007-c01",
+      "nombre": "Gris oxford",
+      "hex": "#55595c"
+    },
+    {
+      "id": "zn-go-007-c02",
+      "nombre": "Negro",
+      "hex": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-007-c03",
+      "nombre": "Rojo",
+      "hex": "#c8102e"
+    },
+    {
+      "id": "zn-go-007-c04",
+      "nombre": "Marino",
+      "hex": "#1b2140"
+    },
+    {
+      "id": "zn-go-007-c05",
+      "nombre": "Petróleo",
+      "hex": "#2c4566"
+    },
+    {
+      "id": "zn-go-007-c06",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ce-002-c01",
+      "nombre": "Olivo",
+      "hex": "#4f5a3a"
+    },
+    {
+      "id": "zn-ce-002-c02",
+      "nombre": "Vino",
+      "hex": "#6e1528"
+    },
+    {
+      "id": "zn-ce-002-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-ce-002-c04",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-ce-002-c05",
+      "nombre": "Negro",
+      "hex": "#252527"
     }
   ],
   "tecnicas": [
@@ -5686,6 +5959,494 @@ module.exports = {
       "imagenIA": true,
       "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
       "fotoModelo": "img/productos/zain/zn-ch-003-modelo.webp"
+    },
+    {
+      "id": "zn-go-002",
+      "idPublico": "zn-go-002",
+      "sku": "ZN-GO-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra clásica 6 paneles",
+      "nombreComercial": "Gorra clásica 6 paneles",
+      "nombreFamilia": "Gorra clásica 6 paneles",
+      "nombreFamiliaComercial": "Gorra clásica 6 paneles",
+      "familia": "zain-2026-gorra-clasica",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra clásica de 6 paneles con visera curva. La opción económica para eventos, promociones y equipos, en 14 colores.",
+      "especificaciones": "6 paneles. Visera curva. Ojillos de ventilación. Ajuste y circunferencia por confirmar al cotizar.",
+      "tejido": "Tela de gorra",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-002-render.webp",
+      "colores": [
+        "zn-go-002-c01",
+        "zn-go-002-c02",
+        "zn-go-002-c03",
+        "zn-go-002-c04",
+        "zn-go-002-c05",
+        "zn-go-002-c06",
+        "zn-go-002-c07",
+        "zn-go-002-c08",
+        "zn-go-002-c09",
+        "zn-go-002-c10",
+        "zn-go-002-c11",
+        "zn-go-002-c12",
+        "zn-go-002-c13",
+        "zn-go-002-c14"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 455,
+          "y": 420,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 430,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Ajuste y circunferencia se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-003",
+      "idPublico": "zn-go-003",
+      "sku": "ZN-GO-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra estructurada",
+      "nombreComercial": "Gorra estructurada",
+      "nombreFamilia": "Gorra estructurada",
+      "nombreFamiliaComercial": "Gorra estructurada",
+      "familia": "zain-2026-gorra-estructurada",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de 6 paneles con frente estructurado que conserva su forma y visera curva. Económica y con buena presencia para uniformes.",
+      "especificaciones": "6 paneles. Frente estructurado. Visera curva. Tipo de ajuste por confirmar al cotizar.",
+      "tejido": "Tela de gorra",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-003-render.webp",
+      "colores": [
+        "zn-go-003-c01",
+        "zn-go-003-c02",
+        "zn-go-003-c03",
+        "zn-go-003-c04",
+        "zn-go-003-c05",
+        "zn-go-003-c06",
+        "zn-go-003-c07",
+        "zn-go-003-c08",
+        "zn-go-003-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 455,
+          "y": 420,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 430,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Ajuste y circunferencia se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-004",
+      "idPublico": "zn-go-004",
+      "sku": "ZN-GO-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra trucker con visera de gamuza",
+      "nombreComercial": "Gorra trucker con visera de gamuza",
+      "nombreFamilia": "Gorra trucker con visera de gamuza",
+      "nombreFamiliaComercial": "Gorra trucker con visera de gamuza",
+      "familia": "zain-2026-gorra-trucker-gamuza",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Trucker con frente de tela, malla trasera transpirable y visera tipo gamuza. Combinaciones de tres tonos: frente / malla / visera.",
+      "especificaciones": "Frente de tela. Malla trasera. Visera tipo gamuza. El lateral es de malla. Ajuste por confirmar al cotizar.",
+      "tejido": "Tela, malla y gamuza sintética",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-004-render.webp",
+      "colores": [
+        "zn-go-004-c01",
+        "zn-go-004-c02",
+        "zn-go-004-c03",
+        "zn-go-004-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 455,
+          "y": 430,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 800,
+          "y": 430,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Ajuste y circunferencia se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-004-c01": "img/productos/zain/zn-go-004-c01.webp",
+        "zn-go-004-c02": "img/productos/zain/zn-go-004-c02.webp",
+        "zn-go-004-c03": "img/productos/zain/zn-go-004-c03.webp",
+        "zn-go-004-c04": "img/productos/zain/zn-go-004-c04.webp"
+      }
+    },
+    {
+      "id": "zn-go-005",
+      "idPublico": "zn-go-005",
+      "sku": "ZN-GO-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra premium de algodón",
+      "nombreComercial": "Gorra premium de algodón",
+      "nombreFamilia": "Gorra premium de algodón",
+      "nombreFamiliaComercial": "Gorra premium de algodón",
+      "familia": "zain-2026-gorra-premium-algodon",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra suave de perfil bajo en algodón peinado, con hebilla metálica ajustable. Estilo relajado para oficina, eventos y regalos corporativos.",
+      "especificaciones": "Perfil bajo, 6 paneles. Sin estructura (suave). Algodón peinado. Hebilla metálica ajustable. Visera curva. Banda de sudor de poliéster.",
+      "tejido": "Algodón peinado",
+      "composicion": "100% algodón.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-005-render.webp",
+      "colores": [
+        "zn-go-005-c01",
+        "zn-go-005-c02",
+        "zn-go-005-c03",
+        "zn-go-005-c04",
+        "zn-go-005-c05",
+        "zn-go-005-c06",
+        "zn-go-005-c07",
+        "zn-go-005-c08",
+        "zn-go-005-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "medidas": "Unitalla ajustable, 58 cm de circunferencia.",
+      "detalleMedidas": "Unitalla ajustable, 58 cm de circunferencia."
+    },
+    {
+      "id": "zn-go-006",
+      "idPublico": "zn-go-006",
+      "sku": "ZN-GO-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra trucker premium",
+      "nombreComercial": "Gorra trucker premium",
+      "nombreFamilia": "Gorra trucker premium",
+      "nombreFamiliaComercial": "Gorra trucker premium",
+      "familia": "zain-2026-gorra-trucker-premium",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Trucker de perfil alto con frente de algodón, malla trasera y cierre snapback. Estructura rígida que luce bien el bordado.",
+      "especificaciones": "Perfil alto, 6 paneles. Estructura rígida. Frente 100% algodón; malla 100% poliéster. Cierre snapback. Visera curva. Banda de sudor de algodón. El lateral es de malla.",
+      "tejido": "Algodón y malla",
+      "composicion": "Frente 100% algodón; malla 100% poliéster.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-006-render.webp",
+      "colores": [
+        "zn-go-006-c01",
+        "zn-go-006-c02",
+        "zn-go-006-c03",
+        "zn-go-006-c04",
+        "zn-go-006-c05",
+        "zn-go-006-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 465,
+          "y": 440,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 800,
+          "y": 440,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "medidas": "Unitalla ajustable, 58 cm de circunferencia.",
+      "detalleMedidas": "Unitalla ajustable, 58 cm de circunferencia.",
+      "fotosColor": {
+        "zn-go-006-c01": "img/productos/zain/zn-go-006-c01.webp",
+        "zn-go-006-c02": "img/productos/zain/zn-go-006-c02.webp",
+        "zn-go-006-c03": "img/productos/zain/zn-go-006-c03.webp",
+        "zn-go-006-c04": "img/productos/zain/zn-go-006-c04.webp",
+        "zn-go-006-c05": "img/productos/zain/zn-go-006-c05.webp",
+        "zn-go-006-c06": "img/productos/zain/zn-go-006-c06.webp"
+      }
+    },
+    {
+      "id": "zn-go-007",
+      "idPublico": "zn-go-007",
+      "sku": "ZN-GO-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra deportiva premium",
+      "nombreComercial": "Gorra deportiva premium",
+      "nombreFamilia": "Gorra deportiva premium",
+      "nombreFamiliaComercial": "Gorra deportiva premium",
+      "familia": "zain-2026-gorra-deportiva",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra deportiva de perfil medio en microfibra de secado rápido, con ventilas laterales y ajuste de velcro. Para equipos, carreras y trabajo al aire libre.",
+      "especificaciones": "Perfil medio, 6 paneles. Estructura rígida. Microfibra de secado rápido. Ventilas laterales. Ajustador de velcro. Visera curva. Banda de sudor de microporo absorbente.",
+      "tejido": "Microfibra",
+      "composicion": "100% poliéster.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-007-render.webp",
+      "colores": [
+        "zn-go-007-c01",
+        "zn-go-007-c02",
+        "zn-go-007-c03",
+        "zn-go-007-c04",
+        "zn-go-007-c05",
+        "zn-go-007-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 480,
+          "y": 430,
+          "max": 10,
+          "maxAlto": 5.5,
+          "orientativa": true
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 830,
+          "y": 440,
+          "max": 5,
+          "maxAlto": 3.5,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "medidas": "Unitalla ajustable, 58 cm de circunferencia.",
+      "detalleMedidas": "Unitalla ajustable, 58 cm de circunferencia."
+    },
+    {
+      "id": "zn-ce-002",
+      "idPublico": "zn-ce-002",
+      "sku": "ZN-CE-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Chaleco acolchado",
+      "nombreComercial": "Chaleco acolchado · Unisex",
+      "nombreFamilia": "Chaleco acolchado",
+      "nombreFamiliaComercial": "Chaleco acolchado",
+      "familia": "zain-2026-chaleco-acolchado",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "Chaleco unisex acolchado y ultraligero, con cuello alto, cierre metálico completo y bolsillos frontales con cierre. Resistente al viento y empacable.",
+      "especificaciones": "Relleno suave. Resistente al viento. Bolsillos frontales. Cierres metálicos. Ultraligero. Empacable (incluye bolsa).",
+      "tejido": "Nailon con relleno de poliéster",
+      "composicion": "Tela exterior 100% nailon.",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ce-002-render.webp",
+      "colores": [
+        "zn-ce-002-c01",
+        "zn-ce-002-c02",
+        "zn-ce-002-c03",
+        "zn-ce-002-c04",
+        "zn-ce-002-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado y vinil textil; se cotiza en bordado. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.36,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 630,
+          "y": 311,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 370,
+          "y": 311,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "tablaTallas": {
+        "XS": {
+          "ancho": 45.72,
+          "largo": 60.96
+        },
+        "S": {
+          "ancho": 50.8,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 55.88,
+          "largo": 66.04
+        },
+        "L": {
+          "ancho": 60.96,
+          "largo": 68.58
+        },
+        "XL": {
+          "ancho": 66.04,
+          "largo": 71.12
+        },
+        "2XL": {
+          "ancho": 71.12,
+          "largo": 73.66
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      },
+      "fotoModelo": "img/productos/zain/zn-ce-002-modelo.webp"
     }
   ],
   "promocionales": [
