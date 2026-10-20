@@ -52,6 +52,9 @@
 .v3-grupos{display:grid;gap:4px}
 .v3-grupo{display:inline-block;min-width:72px;color:var(--v3-tinta)}
 .v3-cuenta strong{font-size:22px;letter-spacing:-.02em;white-space:nowrap}
+.v3-cargo{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--v3-linea);border-radius:14px;background:#fff;padding:16px 20px;margin-bottom:14px;break-inside:avoid}
+.v3-cargo h3{margin:4px 0 0;font-size:17px}
+.v3-cargo strong{font-size:22px;letter-spacing:-.02em;white-space:nowrap}
 .v3-cierre{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px 40px 30px}
 .v3-caja{border:1px solid var(--v3-linea);border-radius:14px;background:#fff;padding:20px;min-width:0}
 .v3-caja h3{font-size:15px;margin-bottom:12px}

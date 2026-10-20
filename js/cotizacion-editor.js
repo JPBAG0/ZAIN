@@ -1,5 +1,5 @@
-import {pesos} from './cotizacion-core.js?v=15';
-import {esc} from './cotizacion-vista.js?v=10';
+import {pesos} from './cotizacion-core.js?v=16';
+import {esc} from './cotizacion-vista.js?v=11';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 // Costo editable por cotización con referencia al valor guardado en la pestaña Costos (origenCostos).
@@ -18,15 +18,14 @@ function bandas(p,i){
 const pct=n=>(n/100).toLocaleString('es-MX',{maximumFractionDigits:2})+'%';
 const falta=p=>p.costoPrendas===null?'el costo de la prenda':p.modo!=='area'?'el costo de '+p.tecnica+' por pieza':p.ancho===null||p.alto===null?'la medida del logo':'la tarifa de '+p.tecnica+' por cm²';
 const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'No se puede calcular: falta '+falta(p)+' en «Costos de esta partida». Mientras, escribe el precio que acordaste.')+(p.preciosTalla?.length?' Por talla: '+p.preciosTalla.map(g=>g.tallas+' '+pesos(g.precio)).join(' · ')+'. El precio que escribas es el de '+p.preciosTalla[0].tallas+'; las demás tallas conservan su diferencia.':'')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
-const piezasTexto=p=>p.piezas+' piezas'+(p.cargo?' + '+p.cargo.concepto:'');
 const utilidadPartida=p=>p.costo===null||p.importe===null?'Opcional · para ver tu utilidad':'Costo '+pesos(p.costo)+' · Utilidad '+pesos(p.importe-p.costo);
 function partida(p,i,src,origen){
  const foto=imagen(src),costoPrenda=costo('prenda-q'+i,'Costo de prenda / pieza',p.prenda,origen,'prenda','placeholder="Opcional"');
  return `<section class="cot-partida cot-producto" id="cot-partida-${i}">
  <header class="cot-producto-cab ${foto?'':'cot-sinfoto'}">${foto?`<img class="cot-producto-foto" src="${foto}" alt="Diseño de ${esc(p.nombre)}" referrerpolicy="no-referrer" width="76" height="90">`:''}<div class="cot-producto-titulo"><h4>${esc(p.nombre)}</h4><p>${esc(p.color)} · ${esc(p.tecnica)} · <b>${p.piezas} piezas</b></p><small>${esc(p.tallas||'Sin desglose de tallas')} · ${esc(p.sku)}</small></div></header>
- <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}" ${p.sugerido!==null?'data-calculado':''}></span></label><div class="cot-total-partida"><span data-piezas-partida>${esc(piezasTexto(p))}</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
+ <div class="cot-precio-principal"><label class="cot-precio-campo">Precio por pieza<span class="cot-precio-entrada"><b aria-hidden="true">$</b><input name="precio-q${i}" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(val(p.precioManual))}" placeholder="${p.sugerido!==null?esc(val(p.sugerido)):'0.00'}" ${p.sugerido!==null?'data-calculado':''}></span></label><div class="cot-total-partida"><span>${p.piezas} piezas</span><strong data-total-partida>${esc(pesos(p.importe))}</strong></div></div>
  <div class="cot-ajuste-rapido">${field('descuento-q'+i,'Descuento %',val(p.descuento),'number','max="100"')}${field('margen-q'+i,'Margen objetivo %',val(p.margenObjetivo),'number','max="99.99"')}</div>
- <fieldset class="cot-cargo"><label class="cot-check"><input type="checkbox" name="cargoAparte-q${i}" ${p.cargoAparte?'checked':''}>Cobrar cargo único aparte, en esta partida</label><div class="cot-edicion" data-cot-cargo ${p.cargoAparte?'':'hidden'}>${field('cargoConcepto-q'+i,'Concepto',p.cargoConcepto,'text','maxlength="80"')}${field('cargoPrecio-q'+i,'Importe (una vez)',val(p.cargoPrecio),'number','placeholder="'+esc(val(p.preparacion))+'"')}</div><small class="cot-ayuda" data-cot-cargo ${p.cargoAparte?'':'hidden'}>Sale como renglón propio y no se reparte en el precio por pieza. Vacío = la preparación de esta partida (${esc(pesos(p.preparacion))}).</small></fieldset>
+ <label class="cot-check cot-cargo"><input type="checkbox" name="cargoAparte-q${i}" ${p.cargoAparte?'checked':''}>Su preparación (ponchado) se cobra en un cargo único de la cotización, no en el precio por pieza</label>
  <p class="cot-sugerencia"><span data-sugerencia>${esc(sugerencia(p))}</span> <button type="button" class="btn-texto" data-usar-sugerido="${i}" ${p.precioManual!==null&&p.sugerido!==null?'':'hidden'}>Usar precio sugerido</button></p>
  <details class="cot-ajustes" data-ajustes-partida><summary>Costos de esta partida · editables <span data-utilidad-partida>${esc(utilidadPartida(p))}</span></summary><div class="cot-ajustes-contenido">
  <p class="cot-ayuda">Vienen de la pestaña Costos. Si hay un imprevisto, cámbialos aquí: solo afectan esta cotización y se recalculan la utilidad y el precio sugerido. El cliente nunca ve esta sección.</p>
@@ -41,12 +40,18 @@ function partida(p,i,src,origen){
  <div class="cot-edicion">${costo('otros-q'+i,'Otros o imprevistos / pieza',p.otros,origen,'otros')}${costo('preparacion-q'+i,'Preparación o imprevisto (una vez)',p.preparacion,origen,'preparacion')}</div>
  </div></details></section>`;
 }
+// Cargos únicos de toda la cotización (p. ej. «Ponchado logo»): una partida propia que se cobra una vez por logo. Dos renglones vacíos para agregar más.
+function cargosUnicos(q){
+ const filas=[...(q.cargos||[]),{concepto:'',importe:null,costo:null},{concepto:'',importe:null,costo:null}].slice(0,10);
+ return `<fieldset class="cot-cargos"><legend>Cargos únicos · una vez por pedido</legend><p class="cot-ayuda">Por ejemplo, el ponchado de cada logo de bordado: si el mismo logo va en varias prendas, se cobra una sola vez. El cliente lo ve como partida propia. Deja el concepto vacío para quitar un cargo.</p>${filas.map((c,k)=>`<div class="cot-edicion cot-cargo-fila">${field('cargoConcepto-'+k,'Concepto',c.concepto,'text','maxlength="80" placeholder="Otro cargo (opcional)"')}${field('cargoImporte-'+k,'Se cobra al cliente',val(c.importe))}${field('cargoCosto-'+k,'Tu costo (vacío = igual)',c.costo===c.importe?'':val(c.costo),'number','placeholder="Igual al cobro"')}</div>`).join('')}</fieldset>`;
+}
 const opcionImpuesto=q=>q.impuesto===null?'':q.impuesto===0?'0':q.impuesto===1600?'1600':'otro';
 export function editorCotizacion(q,{version,publicada,imagenes={},productos=[]}={}){
  const op=opcionImpuesto(q),chip=(v,t)=>`<label class="cot-chip"><input type="radio" name="impuestoOpcion" value="${v}" ${op===v?'checked':''}><span>${t}</span></label>`;
  return `<div class="cot-cabecera"><h2>Cotización</h2><span class="cot-privado">${publicada?'Publicada · revisión '+esc(publicada.revision):'Borrador privado · v'+esc(version)}</span></div>
  <form id="formCotizacion" class="cot-editor">
  ${q.partidas.map((p,i)=>partida(p,i,imagenes[i]?.src||productos.find(v=>v.sku===p.sku)?.foto,q.origenCostos?.partidas?.[i]?.sku===p.sku?q.origenCostos.partidas[i]:null)).join('')}
+ ${cargosUnicos(q)}
  <fieldset class="cot-impuesto"><legend>¿Lleva IVA?</legend><div class="cot-chips">${chip('0','Sin IVA')}${chip('1600','+ IVA 16%')}${chip('otro','Otro %')}</div><div data-impuesto-otro ${op==='otro'?'':'hidden'}>${field('impuesto','Impuesto %',op==='otro'?val(q.impuesto):'','number','max="100"')}</div></fieldset>
  <div id="cotCifras" class="cot-totales-editor" aria-live="polite"></div><p id="cotAviso" class="cot-alerta" hidden></p>
  <details class="cot-ajustes cot-entrega"><summary>Cliente, entrega y condiciones <span>Anticipo, vigencia y envío</span></summary><div class="cot-ajustes-contenido cot-edicion">${field('destinatario','Nombre en la cotización',q.destinatario,'text','maxlength="180"')}${field('anticipo','Anticipo % (vacío = por definir)',val(q.pagos?.anticipo??null),'number','max="100" placeholder="50"')}<label class="cot-ancho">Instrucciones de pago para el cliente<textarea name="instruccionesPago" maxlength="1000">${esc(q.pagos?.instrucciones||'')}</textarea></label>${field('vigencia','Válida hasta',q.vigencia,'date')}${field('envio','Envío cobrado al cliente',val(q.envio))}${field('costoEnvio','Costo interno de envío',val(q.costoEnvio))}<label class="cot-ancho">Plazo de entrega<textarea name="plazo" maxlength="700">${esc(q.plazo)}</textarea></label><label class="cot-ancho">Condiciones para el cliente<textarea name="condiciones" maxlength="3000">${esc(q.condiciones)}</textarea></label></div></details>
@@ -56,7 +61,7 @@ export function editorCotizacion(q,{version,publicada,imagenes={},productos=[]}=
 }
 export function actualizarPartida(box,p){
  const set=(selector,value)=>{const el=box.querySelector(selector);if(el)el.textContent=value;};
- set('[data-total-partida]',pesos(p.importe));set('[data-piezas-partida]',piezasTexto(p));for(const el of box.querySelectorAll('[data-cot-cargo]'))el.hidden=!p.cargoAparte;set('[data-sugerencia]',sugerencia(p));set('[data-utilidad-partida]',utilidadPartida(p));set('[data-resumen-prenda]',pesos(p.costoPrendas));set('[data-resumen-tecnica]',pesos(p.aplicacion));set('[data-resumen-logo]',p.ancho!==null&&p.alto!==null?val(p.ancho)+' × '+val(p.alto)+' cm':'Medidas pendientes');
+ set('[data-total-partida]',pesos(p.importe));set('[data-sugerencia]',sugerencia(p));set('[data-utilidad-partida]',utilidadPartida(p));set('[data-resumen-prenda]',pesos(p.costoPrendas));set('[data-resumen-tecnica]',pesos(p.aplicacion));set('[data-resumen-logo]',p.ancho!==null&&p.alto!==null?val(p.ancho)+' × '+val(p.alto)+' cm':'Medidas pendientes');
  const precio=box.querySelector('[name^="precio-q"]');if(precio){precio.placeholder=p.sugerido!==null?val(p.sugerido):'0.00';precio.toggleAttribute('data-calculado',p.sugerido!==null);}
  const usar=box.querySelector('[data-usar-sugerido]');if(usar)usar.hidden=!(p.precioManual!==null&&p.sugerido!==null);
  const d=box.querySelector('[data-desglose-tallas]'),abierto=d.querySelector('details')?.open;d.innerHTML=detalleTallas(p);if(abierto&&d.querySelector('details'))d.querySelector('details').open=true;

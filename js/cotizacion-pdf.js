@@ -1,12 +1,12 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
-import {pesos} from './cotizacion-core.js?v=15';
-import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=10';
+import {pesos} from './cotizacion-core.js?v=16';
+import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=11';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
 export function datosPDF(q){
- const keys=['pagos','destinatario','publicada_at','revision','vigencia','plazo','condiciones','bruto','descuento','envio','subtotal','impuesto','impuestos','total'];
- const pkeys=['indice','sku','nombre','color','tecnica','zona','cm','piezas','tallas','precio','preciosTalla','cargo','descuento','importe'];
+ const keys=['pagos','cargos','destinatario','publicada_at','revision','vigencia','plazo','condiciones','bruto','descuento','envio','subtotal','impuesto','impuestos','total'];
+ const pkeys=['indice','sku','nombre','color','tecnica','zona','cm','piezas','tallas','precio','preciosTalla','descuento','importe'];
  return {...Object.fromEntries(keys.map(k=>[k,q[k]])),pagos:normalizarPagos(q.pagos),partidas:q.partidas.map(p=>Object.fromEntries(pkeys.map(k=>[k,p[k]])))};
 }
 const texto=v=>String(v??'').normalize('NFC').replace(/[\x00-\x08\x0b-\x1f\x7f]/g,'').replace(/\u202f|\u00a0/g,' ');
@@ -76,7 +76,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  const fw=36,ix=m+fw+6,iw=right-ix-5;
  q.partidas.forEach((p,i)=>{
   const nombre=lines(p.nombre,iw,10,true),sub=lines(p.color||'',iw,7.5),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,7.5):[];
-  const grupos=p.preciosTalla?.length?p.preciosTalla:null,renglones=[...(grupos||[{piezas:p.piezas,precio:p.precio}]),...(p.cargo?[{cargo:p.cargo}]:[])],extra=(renglones.length-1)*4.5;
+  const grupos=p.preciosTalla?.length?p.preciosTalla:null,extra=grupos?(grupos.length-1)*4.5:0;
   const h=Math.max(36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11+extra);
   espacio(h+3);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
@@ -90,13 +90,14 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
   const cy=y+h-5.5,gy=cy-extra;punteada(ix,gy-4.5,ix+iw);
   let ox,ly;const parte=(t,c,b=false)=>{label(t,ox,ly,8,b,c,'left',true);font(8,b,c,true);ox+=doc.getTextWidth(t);};
   // Tallas con distinto costo: un renglón por grupo dentro de la misma partida.
-  // Cargo único (ponchado): su propio renglón, por el importe completo.
-  renglones.forEach((g,k)=>{ox=ix;ly=gy+k*4.5;if(g.cargo){parte(g.cargo.concepto,tinta2);ox=Math.max(ox+2,ix+22);parte(numero(g.cargo.importe),tinta,true);}else{if(g.tallas){parte(g.tallas,tinta2);ox=Math.max(ox+2,ix+22);}parte(String(g.piezas),tinta,true);parte(g.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(g.precio),tinta,true);}if(p.descuento&&k===renglones.length-1)parte('  - '+p.descuento/100+'%',cobaltoTxt);});
+  (grupos||[{piezas:p.piezas,precio:p.precio}]).forEach((g,k)=>{ox=ix;ly=gy+k*4.5;if(g.tallas){parte(g.tallas,tinta2);ox=Math.max(ox+2,ix+22);}parte(String(g.piezas),tinta,true);parte(g.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(g.precio),tinta,true);if(p.descuento&&k===(grupos?grupos.length-1:0))parte('  - '+p.descuento/100+'%',cobaltoTxt);});
   label(numero(p.importe),ix+iw,cy+.5,11.5,true,tinta,'right');
   y+=h+3;
  });
+ // Cargos únicos (ponchado por logo): partida propia, una vez por pedido.
+ for(const c of q.cargos||[]){espacio(17);caja(m,y,width,14);etq('Cargo único · una vez',m+5,y+5.5);label(lines(c.concepto,width-60,10,true)[0],m+5,y+10.5,10,true);label(numero(c.importe),right-5,y+9.5,11.5,true,tinta,'right');y+=17;}
  // Resumen y pago
- const filas=[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
+ const filas=[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],c.importe]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
  const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7);
  const bh=Math.max(12+filas.length*4.8+14,pagos?39+instr.length*3.1:22);
  y+=1;espacio(bh+3);const bw=(width-5)/2,x2=m+bw+5;

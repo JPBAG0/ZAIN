@@ -1,5 +1,5 @@
-import {pesos,decimal} from './cotizacion-core.js?v=15';
-import {esc} from './cotizacion-vista.js?v=10';
+import {pesos,decimal} from './cotizacion-core.js?v=16';
+import {esc} from './cotizacion-vista.js?v=11';
 // Finanzas: dashboard anual y movimientos generales (gastos, ingresos y reembolsos que no son de un pedido).
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];

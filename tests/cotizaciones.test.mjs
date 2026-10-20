@@ -31,13 +31,17 @@ test('las tres técnicas comparten costo de prenda pero tienen tarifas propias',
 test('área rectangular, aplicación por pieza, preparación única y margen sobre costo completo',()=>{
  for(const t of ['DTF','Serigrafía']){const {q}=areaLista(t),p=q.partidas[0];assert.equal(p.ancho,1000);assert.equal(p.alto,500);assert.equal(p.area,500000);assert.equal(p.aplicacion,100);assert.equal(p.costoUnitario,10100);assert.equal(p.costo,102000);assert.equal(p.precio,17000);assert.equal(q.total,170000);assert.equal(q.margen,4000);}
 });
-test('bordado: el ponchado sale como cargo único dentro de la partida y no se reparte en el precio por pieza',()=>{
- const {q}=areaLista('Bordado'),p=q.partidas[0];assert.equal(p.cargoAparte,true);assert.deepEqual(p.cargo,{concepto:'Ponchado logo',importe:1000});
- assert.equal(p.costo,102000);assert.equal(p.precio,16834);assert.equal(p.bruto,10*16834+1000);assert.equal(q.total,169340);
- const out=paraCliente(q).partidas[0];assert.deepEqual(out.cargo,{concepto:'Ponchado logo',importe:1000});assert.equal(out.importe,169340);
- const v=entrada(q);v.partidas[0].cargoPrecio=25000;v.partidas[0].cargoConcepto='Ponchado del logo';const r=calcular([{...items[0],tecnica:'Bordado',piezas:10,cm:10}],v).partidas[0];
- assert.deepEqual(r.cargo,{concepto:'Ponchado del logo',importe:25000});assert.equal(r.precio,16834);assert.equal(r.importe,10*16834+25000);
- v.partidas[0].cargoAparte=false;const s=calcular([{...items[0],tecnica:'Bordado',piezas:10,cm:10}],v).partidas[0];assert.equal(s.cargo,null);assert.equal(s.precio,17000);assert.ok(!('cargo' in paraCliente({...q,partidas:[s]}).partidas[0]));
+test('bordado: un solo ponchado por logo como partida propia, sin repartirlo en el precio por pieza',()=>{
+ const pedido=[{...items[0],tecnica:'Bordado',piezas:10,cm:10},{...items[0],tecnica:'Bordado',piezas:10,cm:10}],v=entrada(generar(pedido,areaCfg()));
+ for(const p of v.partidas)p.alto=500;v.impuesto=0;const q=calcular(pedido,v);
+ assert.deepEqual(q.cargos,[{concepto:'Ponchado logo',importe:1000,costo:1000}]);
+ for(const p of q.partidas){assert.equal(p.cargoAparte,true);assert.equal(p.costo,101000);assert.equal(p.precio,16834);assert.equal(p.importe,168340);}
+ assert.equal(q.bruto,336680);assert.equal(q.subtotal,337680);assert.equal(q.costo,203000);
+ const out=paraCliente(q);assert.deepEqual(out.cargos,[{concepto:'Ponchado logo',importe:1000}]);assert.ok(!JSON.stringify(out).includes('costo'));
+ v.cargos=[{concepto:'Ponchado logo',importe:25000,costo:20000},{concepto:'Ponchado logo espalda',importe:30000,costo:null}];
+ const r=calcular(pedido,v);assert.equal(r.subtotal,336680+55000);assert.equal(r.costo,202000+20000+30000);
+ v.cargos=[];v.partidas[0].cargoAparte=false;const s=calcular(pedido,v);assert.equal(s.partidas[0].precio,17000);assert.ok(!('cargos' in paraCliente(s)));
+ assert.throws(()=>calcular(pedido,{...v,cargos:[{concepto:'',importe:100}]}),/concepto/);
 });
 test('ancho conocido sin proporción se supone cuadrado; sin altura o tarifa solo se publica con precio por pieza',()=>{
  const pedido=[{...items[0],tecnica:'DTF'}],q=generar(pedido,areaCfg());assert.equal(q.partidas[0].ancho,1400);assert.equal(q.partidas[0].alto,1400);assert.notEqual(q.partidas[0].aplicacion,null);
