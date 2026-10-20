@@ -221,7 +221,7 @@
     const zona = p.zonas.find((z) => z.id === pz.m.z) || p.zonas[0];
     const tinta = ZR.luz(ZR.hexARgb(col.hex)) > 0.55 ? "#141416" : "#f4f4f2";
     const k = S / 1000;
-    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S, sombraLocal: !!p.fotosColor });
+    ZR.estampar(g, img, ZR.logoZain(tinta), { x: zona.x * k, y: zona.y * k, ancho: pz.m.cm * p.pxPorCm * k, tecnica: pz.m.t, S, sombraLocal: !!p.fotosColor, giro: zona.giro, sesgo: zona.sesgo, inclina: zona.inclina, compresion: zona.compresion });
     // gorras y bolsas llenan su foto: se encogen para que guarden proporción con la ropa
     const e = pz.m.e || 1;
     const d = pz.cv.getContext("2d");
@@ -841,7 +841,7 @@
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
-        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor });
+        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion });
         const alto = (ancho * logo.height) / logo.width;
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);

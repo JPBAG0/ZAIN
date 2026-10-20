@@ -512,11 +512,26 @@
     const capa = lienzo(S);
     const g = capa.getContext("2d");
     g.imageSmoothingQuality = "high";
+    // Superficies en ángulo (gorras en vista 3/4), en grados: giro, sesgo (renglón) e inclina (letras); compresión = escorzo horizontal.
+    const giro = ((o.giro || 0) * Math.PI) / 180, sesgo = Math.tan(((o.sesgo || 0) * Math.PI) / 180), inclina = Math.tan(((o.inclina || 0) * Math.PI) / 180), comp = o.compresion || 1;
+    const ajustar = giro || sesgo || inclina || comp !== 1;
+    const dibujar = () => {
+      if (!ajustar) return g.drawImage(logo, x, y, w, h);
+      g.save(); g.translate(o.x, o.y); g.rotate(giro); g.transform(1, sesgo, inclina, 1, 0, 0); g.scale(comp, 1);
+      g.drawImage(logo, -w / 2, -h / 2, w, h); g.restore();
+    };
+    // caja que ocupa el logo ya transformado (para las arrugas)
+    const caja = (() => {
+      if (!ajustar) return { x0: x, y0: y, x1: x + w, y1: y + h };
+      const m = new DOMMatrix().translate(o.x, o.y).rotate((o.giro || 0)).multiply(new DOMMatrix([1, sesgo, inclina, 1, 0, 0])).scale(comp, 1);
+      const p = [[-w / 2, -h / 2], [w / 2, -h / 2], [w / 2, h / 2], [-w / 2, h / 2]].map(([a, b]) => m.transformPoint(new DOMPoint(a, b)));
+      return { x0: Math.min(...p.map((q) => q.x)), y0: Math.min(...p.map((q) => q.y)), x1: Math.max(...p.map((q) => q.x)), y1: Math.max(...p.map((q) => q.y)) };
+    })();
 
     if (o.tecnica === "bordado") {
       // el bordado no reproduce detalle microscópico: se suaviza apenas
       g.filter = `blur(${0.5 * esc}px)`;
-      g.drawImage(logo, x, y, w, h);
+      dibujar();
       g.filter = "none";
       // puntadas: textura diagonal recortada a la forma del logo
       const p = lienzo(S);
@@ -533,7 +548,7 @@
       g.drawImage(p, 0, 0);
       g.globalAlpha = 1;
     } else {
-      g.drawImage(logo, x, y, w, h);
+      dibujar();
       if (o.tecnica === "serigrafia") {
         const p = lienzo(S);
         const gp = p.getContext("2d");
@@ -562,10 +577,10 @@
 
     // arrugas de la tela encima del logo
     const { s } = mapaSombras(img, S);
-    const x0 = Math.max(0, Math.floor(x) - 2);
-    const y0 = Math.max(0, Math.floor(y) - 2);
-    const x1 = Math.min(S, Math.ceil(x + w) + 2);
-    const y1 = Math.min(S, Math.ceil(y + h) + 2);
+    const x0 = Math.max(0, Math.floor(caja.x0) - 2);
+    const y0 = Math.max(0, Math.floor(caja.y0) - 2);
+    const x1 = Math.min(S, Math.ceil(caja.x1) + 2);
+    const y1 = Math.min(S, Math.ceil(caja.y1) + 2);
     if (x1 > x0 && y1 > y0) {
       const d = g.getImageData(x0, y0, x1 - x0, y1 - y0);
       const p = d.data;

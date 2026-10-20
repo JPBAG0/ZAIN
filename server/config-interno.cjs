@@ -6012,7 +6012,10 @@ module.exports = {
           "y": 420,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
         },
         {
           "id": "lateral",
@@ -6021,7 +6024,9 @@ module.exports = {
           "y": 430,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
@@ -6076,7 +6081,10 @@ module.exports = {
           "y": 420,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
         },
         {
           "id": "lateral",
@@ -6085,7 +6093,9 @@ module.exports = {
           "y": 430,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
@@ -6135,7 +6145,10 @@ module.exports = {
           "y": 430,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
         },
         {
           "id": "lateral",
@@ -6144,7 +6157,9 @@ module.exports = {
           "y": 430,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
@@ -6205,7 +6220,10 @@ module.exports = {
           "y": 430,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
         },
         {
           "id": "lateral",
@@ -6214,7 +6232,9 @@ module.exports = {
           "y": 450,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
@@ -6267,7 +6287,10 @@ module.exports = {
           "y": 440,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
         },
         {
           "id": "lateral",
@@ -6276,7 +6299,9 @@ module.exports = {
           "y": 440,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
@@ -6337,7 +6362,10 @@ module.exports = {
           "y": 430,
           "max": 10,
           "maxAlto": 5.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": -18,
+          "sesgo": 3,
+          "compresion": 0.86
         },
         {
           "id": "lateral",
@@ -6346,7 +6374,9 @@ module.exports = {
           "y": 440,
           "max": 5,
           "maxAlto": 3.5,
-          "orientativa": true
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
         }
       ],
       "renderOrientativo": true,
