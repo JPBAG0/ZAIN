@@ -1,5 +1,5 @@
 import {pesos,decimal} from './cotizacion-core.js?v=11';
-import {esc} from './cotizacion-vista.js?v=8';
+import {esc} from './cotizacion-vista.js?v=9';
 let epoca=0;
 const valor=n=>(n/100).toFixed(2);
 const fechaMX=x=>new Date(x).toLocaleString('es-MX',{timeZone:'America/Mexico_City',day:'numeric',month:'short',hour:'numeric',minute:'2-digit'});

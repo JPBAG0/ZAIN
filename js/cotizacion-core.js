@@ -52,6 +52,18 @@ function costoPorTallas(p,bandas){
  if(piezas!==p.piezas)error('Las cantidades por talla no coinciden con la partida.');
  return {total:pendiente?null:total,detalle};
 }
+// Tallas con distinto costo se cobran por grupo dentro de la misma partida; el grupo más barato es el precio base (JP, 19-oct-2026).
+function gruposTalla(detalle,extra,preparacion,piezas,margen){
+ if(extra===null||detalle.length<2||detalle.some(d=>d.costo===null))return [];
+ const orden=detalle.map(d=>d.talla),porCosto=new Map();
+ for(const d of detalle){const g=porCosto.get(d.costo)||{costo:d.costo,tallas:[],piezas:0};g.tallas.push(d.talla);g.piezas+=d.piezas;porCosto.set(d.costo,g);}
+ if(porCosto.size<2)return [];
+ const divisor=BigInt(piezas)*BigInt(10000-margen);
+ // Mismo cálculo que el precio sugerido, como si todo el lote costara lo de este grupo.
+ const sugerido=c=>entero(Number((BigInt(entero((c+extra)*piezas+preparacion))*10000n+divisor-1n)/divisor));
+ const nombre=t=>{const i=t.map(x=>orden.indexOf(x));return t.length>2&&i.every((n,k)=>!k||n===i[k-1]+1)?t[0]+' a '+t[t.length-1]:t.join(' · ');};
+ return [...porCosto.values()].sort((a,b)=>a.costo-b.costo).map(g=>({tallas:nombre(g.tallas),piezas:g.piezas,sugerido:sugerido(g.costo)}));
+}
 export function configurar(input){
  // Leer configuraciones anteriores sin reinterpretar recargo como margen. Requieren revisión.
  if(input&&!input.metodo&&Array.isArray(input.rangos))input={...input,activo:false,metodo:'margen_bruto',rangos:input.rangos.map(r=>({desde:r.desde,hasta:r.hasta,margen:equivalente(r.recargo)}))};
@@ -115,12 +127,15 @@ export function calcular(items,input){
   const costo=costoVariable===null?null:suma([costoVariable,preparacion]);
   // Preparación se reparte entre las piezas, redondeando hacia arriba un centavo como máximo por unidad.
   const divisor=BigInt(base.piezas)*BigInt(10000-margenObjetivo);
-  const sugerido=costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
+  const grupos=gruposTalla(porTalla.detalle,aplicacion===null?null:aplicacion+otros,preparacion,base.piezas,margenObjetivo);
+  const sugerido=grupos.length?grupos[0].sugerido:costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
   const precio=v.precio===null?sugerido:entero(v.precio);
+  // Un precio escrito a mano es el del grupo base; los demás grupos conservan su diferencia.
+  const preciosTalla=precio===null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
   // Publicar exige precio por pieza; los costos son opcionales y solo sirven para conocer la utilidad.
   if(precio===null)pendiente=true;
-  const bruto=precio===null?null:entero(precio*base.piezas),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
-  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
+  const bruto=precio===null?null:preciosTalla.length?suma(preciosTalla.map(g=>g.importe)):entero(precio*base.piezas),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
+  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,preciosTalla,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
  });
  const impuesto=input.impuesto===null?null:entero(input.impuesto,0,10000),envio=entero(input.envio),costoEnvio=entero(input.costoEnvio);
  if(impuesto===null)pendiente=true;
@@ -136,5 +151,5 @@ export function entrada(q){return {...q,schema:6,metodo:'margen_bruto',partidas:
 export function paraCliente(q){
  if(!q.preparada)error('Escribe el precio por pieza de cada partida y elige el impuesto antes de publicar.');
  return {schema:1,moneda:'MXN',pagos:normalizarPagos(q.pagos),destinatario:q.destinatario,condiciones:q.condiciones,plazo:q.plazo,vigencia:q.vigencia,impuesto:q.impuesto,envio:q.envio,bruto:q.bruto,descuento:q.descuento,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
- partidas:q.partidas.map(p=>Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])))};
+ partidas:q.partidas.map(p=>({...Object.fromEntries(['indice','sku','nombre','color','tecnica','piezas','tallas','zona','cm','precio','descuento','bruto','rebaja','importe'].map(k=>[k,p[k]])),...(p.preciosTalla?.length?{preciosTalla:p.preciosTalla.map(g=>({tallas:g.tallas,piezas:g.piezas,precio:g.precio,importe:g.importe}))}:{})}))};
 }

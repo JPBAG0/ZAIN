@@ -1,5 +1,5 @@
-import {pesos} from './cotizacion-core.js?v=13';
-import {esc} from './cotizacion-vista.js?v=8';
+import {pesos} from './cotizacion-core.js?v=14';
+import {esc} from './cotizacion-vista.js?v=9';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 // Costo editable por cotización con referencia al valor guardado en la pestaña Costos (origenCostos).
@@ -17,7 +17,7 @@ function bandas(p,i){
 // Precio por pieza primero: es lo único obligatorio. Costos, margen y medidas son opcionales y solo calculan una sugerencia y la utilidad.
 const pct=n=>(n/100).toLocaleString('es-MX',{maximumFractionDigits:2})+'%';
 const falta=p=>p.costoPrendas===null?'el costo de la prenda':p.modo!=='area'?'el costo de '+p.tecnica+' por pieza':p.ancho===null||p.alto===null?'la medida del logo':'la tarifa de '+p.tecnica+' por cm²';
-const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'No se puede calcular: falta '+falta(p)+' en «Costos de esta partida». Mientras, escribe el precio que acordaste.')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
+const sugerencia=p=>(p.sugerido!==null?(p.precioManual!==null?'Precio propio. Con '+pct(p.margenObjetivo)+' de margen serían '+pesos(p.sugerido)+'.':'Precio sugerido con '+pct(p.margenObjetivo)+' de margen: '+pesos(p.sugerido)+'. Escribe otro si acordaste uno distinto.'):'No se puede calcular: falta '+falta(p)+' en «Costos de esta partida». Mientras, escribe el precio que acordaste.')+(p.preciosTalla?.length?' Por talla: '+p.preciosTalla.map(g=>g.tallas+' '+pesos(g.precio)).join(' · ')+'. El precio que escribas es el de '+p.preciosTalla[0].tallas+'; las demás tallas conservan su diferencia.':'')+(p.descuento?' Descuento de '+pct(p.descuento)+' aplicado al importe.':'');
 const utilidadPartida=p=>p.costo===null||p.importe===null?'Opcional · para ver tu utilidad':'Costo '+pesos(p.costo)+' · Utilidad '+pesos(p.importe-p.costo);
 function partida(p,i,src,origen){
  const foto=imagen(src),costoPrenda=costo('prenda-q'+i,'Costo de prenda / pieza',p.prenda,origen,'prenda','placeholder="Opcional"');

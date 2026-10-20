@@ -18,6 +18,23 @@ export default {
   "instagram": "https://instagram.com/thezainlab",
   "horario": "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
   "minimoPiezas": null,
+  "minimoPedido": 12,
+  "minimoTexto": "Pedido mínimo: 12 piezas · bolsas desde 100",
+  "preciosDesde": [
+    {
+      "categoria": "Playeras",
+      "precio": 130
+    },
+    {
+      "categoria": "Polos",
+      "precio": 165
+    },
+    {
+      "categoria": "Camisas",
+      "precio": 394
+    }
+  ],
+  "preciosLeyenda": "Precio por pieza con tu logo, en pedidos de 50 piezas o más, más IVA. Cambia según modelo, color, talla, técnica, tamaño del logo y cantidad.",
   "diasEntrega": "7 a 12 días hábiles",
   "tintasLogo": [
     {
@@ -3584,11 +3601,19 @@ export default {
   "preguntas": [
     {
       "p": "¿Cómo solicito una cotización?",
-      "r": "Elige productos, colores, técnica y cantidades, agrégalos a tu pedido y envíalo por WhatsApp. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
+      "r": "Lo más rápido: escríbenos por WhatsApp con tu logo, la prenda y cuántas piezas necesitas. Si prefieres, arma aquí tu pedido con colores, técnica y tallas y envíalo desde la página. Te cotizamos según tu diseño y volumen, y confirmamos disponibilidad y fecha de entrega antes de producir."
     },
     {
       "p": "¿Cuál es el pedido mínimo?",
-      "r": "En bolsas el mínimo es de 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200… Para los demás productos confirmamos la cantidad y las condiciones al cotizar."
+      "r": "Prendas: 12 piezas por pedido, y puedes mezclar modelos, tallas, colores y Caballero/Dama. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
+    },
+    {
+      "p": "¿Cuánto cuesta?",
+      "r": "Playeras desde $130, polos desde $165 y camisas desde $394 por pieza, con tu logo, en pedidos de 50 piezas o más, más IVA. El precio final depende del modelo, color, talla, técnica, tamaño del logo y cantidad; te lo confirmamos en la cotización."
+    },
+    {
+      "p": "¿Hacen envíos?",
+      "r": "Sí, enviamos a todo México. El costo y la paquetería dependen del destino y del tamaño del pedido; te los confirmamos en la cotización."
     },
     {
       "p": "¿Cuánto tarda mi pedido?",
