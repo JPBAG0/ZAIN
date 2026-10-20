@@ -6814,6 +6814,13 @@ module.exports = {
       "cm": 8
     },
     {
+      "p": "zn-go-006",
+      "c": "zn-go-006-c01",
+      "t": "bordado",
+      "z": "frente",
+      "cm": 8
+    },
+    {
       "p": "bolsa-expo",
       "c": "bolsa-expo-rojo",
       "t": "serigrafia",
