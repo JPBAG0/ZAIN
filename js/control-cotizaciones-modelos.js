@@ -163,7 +163,7 @@ $('#cmPDF').addEventListener('click',async e=>{
  try{const q=documentoComercial();$('#cmCampos').disabled=true;$('#cmActualizar').disabled=true;await Promise.all(modelos.map(renderizar));if(session!==epoca)return;
  for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render)throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
  const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:(m.tecnica?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Referencia')+' · '+color(m).nombre}));
- const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=1');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF generado. Puedes enviarlo al cliente.');
+ const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=2');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF generado. Puedes enviarlo al cliente.');
  }catch(e){if(session===epoca)avisar(e.message);}finally{b.disabled=false;$('#cmActualizar').disabled=false;if(session===epoca&&datos)$('#cmCampos').disabled=false;}
 });
 addEventListener('zain:equipo-listo',()=>{if(location.hash==='#cotizaciones'&&$('#seccionCotizaciones').hidden)$('#verCotizaciones').click();});

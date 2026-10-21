@@ -8,7 +8,7 @@ Acceso: Gestión → Cotizaciones, solo para el equipo autorizado. Permite prepa
 4. Definir un margen bruto por modelo o por rango, o escribir un precio directo por rango. Fórmula y redondeo en centavos: costo / (1 − margen), redondeado hacia arriba; margen menor a100%. El precio directo prevalece. Costos incompletos dejan utilidad pendiente, pero permiten precio directo.
 5. Si los costos varían por volumen, se presentan todos los tramos como referencia sin pedir una cantidad. Se pueden excluir filas. Huecos documentales siguen pendientes. No se selecciona automáticamente el tramo más barato.
 6. Confirmar IVA expresamente y capturar condiciones/cliente si corresponde. Ponchado o preparación se capturan como un cargo único de toda la cotización, sin repartirse entre prendas ni duplicarse por modelo.
-7. Copiar el texto comercial o descargar PDF con diseños, modelos, tallas y precios por pieza. La proyección comercial enumera campos; excluye costos, utilidad, márgenes, tarifas y referencias de proveedor.
+7. Copiar el texto comercial o descargar el PDF con el membrete v3 establecido (mismo generador js/cotizacion-pdf.js; cabecera oscura, logotipo, tarjetas, cobalto, condiciones y contacto) con diseños, modelos, tallas y precios por pieza. La proyección comercial enumera campos; excluye costos, utilidad, márgenes, tarifas y referencias de proveedor.
 
 La composición vive solo en memoria mientras la página esté abierta. Descargar el PDF permite conservarla. Actualizar modelos y costos reinicia la composición con confirmación si había modelos. Salir del equipo borra la composición, el logo y los datos privados en memoria. Sin cambios a pedidos, cuentas, costos guardados, publicación de catálogo ni reglas de compra.
 
