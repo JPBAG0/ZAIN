@@ -1,3 +1,7 @@
+## Cotizaciones por modelo: rediseño — 21-oct-2026 (Claude)
+
+JP no quedó convencido con la primera versión. Cambios: 4 pasos numerados y barra fija con avance y descarga; margen inicial = primer rango de Costos (antes todo salía «Pendiente»); un solo campo de precio por fila (sugerido como placeholder, escribir lo fija); redondeo hacia arriba a peso/$5/centavos (por defecto peso, nunca toca precios escritos); IVA por defecto 16%; Válida hasta (hoy+15) y Entrega llegan al PDF; folio COT-AAMMDD-HHMM; PDF muestra «Desde $X / pza» en vez de «Total: Por definir»; tramos como «Pedido de 1 a 49 piezas»; sin «Caballero · Caballero». Detalle en docs/COTIZACIONES-MODELOS.md.
+
 ## Cotizaciones por modelo sin cantidades — 21-oct-2026
 
 Gestión → Cotizaciones prepara documentos comerciales independientes del pedido público, con logo, vista sobre cada modelo, costos por talla/color/tramo, margen bruto o precio directo e IVA explícito. Ponchado/preparación como un cargo único. Texto/PDF enumeran campos comerciales y excluyen datos internos. Composición en memoria; salir limpia logo/costos. Mínimo público12 y flujos existentes intactos. No requiere SQL ni Edge. Guía: docs/COTIZACIONES-MODELOS.md.

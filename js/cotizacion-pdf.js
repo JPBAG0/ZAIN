@@ -52,6 +52,8 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  function cinta(yy){doc.setFillColor(...cobalto);for(let x=0;x<210;x+=8.5)doc.rect(x,yy,7,1.6,'F');}
  const svg=fill=>'data:image/svg+xml;base64,'+btoa(logo.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" width="740" height="300" fill="'+fill+'" '));
  const logoBlanco=await jpeg(svg('#ffffff'),740,'#111113');
+ // Sin cantidades: el precio por pieza más bajo sustituye al total como cifra principal.
+ const desde=sinCantidades?Math.min(...q.partidas.flatMap(p=>(p.preciosTalla||[]).map(g=>g.precio)).filter(Number.isSafeInteger)):null;
  const unidades=q.partidas.reduce((n,p)=>n+p.piezas,0),pagos=q.pagos,pct=pagos?pagos.anticipo/100:null,anticipo=pagos?anticipoDe(q.total,pagos):null;
  const impuestoTxt=q.impuesto==null?'Impuesto por definir':q.impuesto===0?'Sin IVA · MXN':sinCantidades?'Más IVA '+q.impuesto/100+'% · MXN':'Impuesto incluido · MXN';
  // Portada
@@ -62,7 +64,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  doc.setDrawColor(52,52,58);doc.setLineWidth(.25);doc.line(m,31,right,31);
  label(sinCantidades?'Tu cotización,':'Tu pedido,',m,41.5,21,true,blanco);label(sinCantidades?'por modelo y talla.':'listo para producir.',m,50.5,21,true,lila);
  const para=lines('Preparada para '+(q.destinatario||'Tu equipo')+(sinCantidades?' · Precios por talla':' · '+unidades.toLocaleString('es-MX')+(unidades===1?' pieza':' piezas')+' en '+q.partidas.length+(q.partidas.length===1?' selección':' selecciones')),118,8.5);label(para[0],m,58,8.5,false,[201,201,207]);
- etq(sinCantidades?'Precios':'Total',right,41,gris,'right');label(sinCantidades?'Por pieza':numero(q.total),right,50.5,19,true,blanco,'right');label(impuestoTxt,right,56.5,7.5,false,gris,'right');
+ etq(sinCantidades?'Desde':'Total',right,41,gris,'right');label(sinCantidades?numero(desde)+' / pza':numero(q.total),right,50.5,19,true,blanco,'right');label(impuestoTxt,right,56.5,7.5,false,gris,'right');
  cinta(64);
  // Datos rápidos
  y=65.6;const celdas=[['Emisión',borrador||!q.publicada_at?'Pendiente de publicación':fecha(q.publicada_at)],['Válida hasta',fecha(q.vigencia,true)],['Entrega',q.plazo||'Por acordar'],sinCantidades?['Cantidades','Por definir']:['Anticipo',pct===null?'Por acordar':pct+'% para iniciar']];
@@ -98,13 +100,13 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  // Cargos únicos (ponchado por logo): partida propia, una vez por pedido.
  for(const c of q.cargos||[]){espacio(17);caja(m,y,width,14);etq('Cargo único · una vez',m+5,y+5.5);label(lines(c.concepto,width-60,10,true)[0],m+5,y+10.5,10,true);label(numero(c.importe),right-5,y+9.5,11.5,true,tinta,'right');y+=17;}
  // Resumen y pago
- const filas=sinCantidades?[['Precios','Por pieza'],['Cantidades','Por definir'],...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],numero(c.importe)]),['IVA',q.impuesto==null?'Por definir':q.impuesto?'Más '+q.impuesto/100+'%':'Sin IVA']]:[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],c.importe]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
+ const filas=sinCantidades?[['Precios','Por pieza · MXN'],['IVA',q.impuesto==null?'Por definir':q.impuesto?'Más '+q.impuesto/100+'%':'Sin IVA'],...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0]+' (una vez)',numero(c.importe)]),['Válida hasta',fecha(q.vigencia,true)]]:[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],c.importe]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
  const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7);
  const bh=Math.max(12+filas.length*4.8+14,pagos?39+instr.length*3.1:22);
  y+=1;espacio(bh+3);const bw=(width-5)/2,x2=m+bw+5;
  caja(m,y,bw,bh);label('Resumen',m+5,y+7.5,9.5,true);let fy=y+14;
  for(const [k,v,d] of filas){label(k,m+5,fy,8,false,d?cobaltoTxt:tinta);label(sinCantidades?v:d?'-'+numero(-v):numero(v),m+bw-5,fy,8,true,d?cobaltoTxt:tinta,'right');fy+=4.8;}
- doc.setFillColor(...cobalto);doc.roundedRect(m+5,fy-1.5,bw-10,10,2,2,'F');etq('Total',m+9,fy+4.8,blanco);label(sinCantidades?'Por definir':numero(q.total),m+bw-9,fy+5.5,12.5,true,blanco,'right');
+ doc.setFillColor(...cobalto);doc.roundedRect(m+5,fy-1.5,bw-10,10,2,2,'F');etq(sinCantidades?'Desde':'Total',m+9,fy+4.8,blanco);label(sinCantidades?numero(desde)+' / pza':numero(q.total),m+bw-9,fy+5.5,12.5,true,blanco,'right');
  caja(x2,y,bw,bh);label('Cómo se paga',x2+5,y+7.5,9.5,true);
  if(pagos){const by=y+11;doc.setFillColor(...mesa);doc.roundedRect(x2+5,by,bw-10,3,1.5,1.5,'F');doc.setFillColor(...tinta);const pw=(bw-10)*Math.max(0,Math.min(100,pct))/100;if(pw>0)doc.roundedRect(x2+5,by,pw,3,1.5,1.5,'F');
   const py=by+5.5,pbw=(bw-13)/2;doc.setFillColor(...tinta);doc.roundedRect(x2+5,py,pbw,17,2,2,'F');doc.setFillColor(...algodon);doc.roundedRect(x2+8+pbw,py,pbw,17,2,2,'F');

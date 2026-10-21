@@ -41,3 +41,21 @@ test('exportación exige IVA y precio, cobra preparación una vez y excluye dato
  for(const k of ['SECRETO','PRIVADA','costo','margen','bandas','utilidad'])assert.ok(!salida.includes(k));
  assert.ok(!salida.includes('cantidad:'));assert.throws(()=>comercial([{...modelo,filas:[{...modelo.filas[0],margen:null}]}],{impuesto:0}));
 });
+test('redondeo del sugerido hacia arriba, sin tocar el precio escrito',()=>{
+ assert.equal(precioFila({costo:10000},{margen:3000,redondeo:100}).precio,14300);
+ assert.equal(precioFila({costo:10000},{margen:3000,redondeo:500}).precio,14500);
+ assert.equal(precioFila({costo:10000},{margen:3000,redondeo:100,precio:14286}).precio,14286);
+ assert.equal(precioFila({costo:14000},{margen:3000,redondeo:100}).precio,20000);
+ assert.throws(()=>precioFila({costo:10000},{margen:3000,redondeo:7}));
+});
+test('folio, vigencia y entrega pasan al documento comercial',()=>{
+ const modelo={nombre:'Modelo',sku:'ZN-TEST',aplicacion:0,filas:[{talla:'S a XL',color:'Todos los colores',volumen:'Pedido de 1 a 49 piezas',costo:10000,otros:0,margen:3000,precio:null}]};
+ const q=comercial([modelo],{impuesto:1600,folio:'COT-261021-1030',vigencia:'2026-11-05',plazo:'10 días hábiles',redondeo:100});
+ assert.equal(q.partidas[0].precio,14300);assert.equal(q.folio,'COT-261021-1030');
+ const texto=textoComercial(q);assert.match(texto,/COT-261021-1030/);assert.match(texto,/Válida hasta el 5 de noviembre de 2026/);assert.match(texto,/Entrega: 10 días hábiles/);
+ assert.throws(()=>comercial([modelo],{impuesto:0,vigencia:'mañana'}));
+});
+test('los tramos de volumen se leen como pedido, no como compra',()=>{
+ const filas=filasModelo({sku:'ZN-TEST',tallas:['S']},{prendas:[{sku:'ZN-TEST',prenda:null,otros:0,bandas:[{tallas:[],colores:[],costo:100,desdePiezas:1,hastaPiezas:49},{tallas:[],colores:[],costo:90,desdePiezas:50,hastaPiezas:null}]}]});
+ assert.deepEqual(filas.map(f=>f.volumen),['Pedido de 1 a 49 piezas','Pedido de 50 piezas o más']);
+});
