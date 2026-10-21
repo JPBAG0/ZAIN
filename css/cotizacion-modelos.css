@@ -40,6 +40,20 @@
 .cm-negativo{color:#a01828}
 .cm-excluido td{background:#f6f6f8}.cm-excluido td:not(:first-child){color:#888}.cm-excluido [data-campo=precio]::placeholder{color:#aaa}
 .cm-error{color:#a01828;font-size:14px;line-height:1.5}
+/* Cotizaciones guardadas */
+.cm-guardadascab{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}.cm-guardadascab h2{margin:0}
+.cm-filtros{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px}.cm-filtros input[type=search]{flex:1 1 240px;width:auto}.cm-area .cm-filtros .cot-check{margin:0}
+.cm-lista{list-style:none;margin:0;padding:0;max-height:330px;overflow:auto;border-top:1px solid #dedee4}
+.cm-lista li{display:flex;align-items:center;gap:8px;border-bottom:1px solid #dedee4;padding-right:6px}.cm-lista li.on{background:#eef3ff}
+.cm-item{flex:1;display:grid;grid-template-columns:90px minmax(0,1fr);gap:2px 14px;min-height:56px;padding:10px 8px;border:0;background:none;text-align:left;font:inherit;color:#111113;cursor:pointer;min-width:0}
+.cm-item b{font-size:14px}.cm-item span{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cm-item small{grid-column:2;color:#555560;font-size:12px}
+.cm-chip{display:inline-block;margin-right:8px;padding:1px 8px;border-radius:99px;font-style:normal;font-weight:600;background:#ececf0;color:#3b3b40}
+.cm-chip--enviada{background:#e6edff;color:#1f3fb8}.cm-chip--autorizada{background:#e3f5ea;color:#11633a}.cm-chip--convertida{background:#111113;color:#fff}.cm-chip--descartada{background:#f6f6f8;color:#888}
+.cm-vacia{padding:16px 8px;color:#555560;font-size:14px}
+.cm-actual{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:0 0 16px}
+.cm-actual small{display:block;font-size:12px;color:#555560}.cm-actual b{font-size:24px;letter-spacing:-.5px}.cm-area .cm-actual label{margin:0;min-width:200px}
+.cm-aviso{margin:0 0 16px;padding:12px 14px;border-radius:8px;background:#111113;color:#fff;font-size:14px}
+.cm-area .cm-exportar p.cm-pendiente{color:#a05a00}
 /* Barra fija: el resumen y la descarga quedan siempre a la mano. */
 .cm-exportar{position:sticky;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px -12px 14px;padding:12px;background:rgba(255,255,255,.96);border:1px solid #dedee4;border-radius:10px;box-shadow:0 -6px 18px rgba(17,17,19,.08)}
 .cm-area .cm-exportar p{margin:0;font-weight:600;color:#111113}
@@ -57,6 +71,8 @@
 .cm-tabla td[data-label]:before{content:attr(data-label);display:block;margin-bottom:5px;font-size:12px;color:#555560}
 .cm-exportar{margin:18px -8px 12px;padding:10px}.cm-exportar>div{width:100%}.cm-exportar .btn{flex:1;min-width:0}
 .cm-area .control__titulo{align-items:start;gap:14px;flex-wrap:wrap}
+.cm-item{grid-template-columns:minmax(0,1fr);padding:10px 4px}.cm-item small{grid-column:1}.cm-item b{font-size:12px;color:#555560}
+.cm-actual{align-items:stretch}.cm-area .cm-actual label{min-width:0;flex:1 1 100%}
 }
 
 /* Volver arriba encima de la barra de descarga, como en Costos. */

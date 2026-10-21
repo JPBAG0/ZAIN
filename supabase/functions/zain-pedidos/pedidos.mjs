@@ -9,6 +9,7 @@ import C from './catalogo.mjs';
 import PublicC from './publico.mjs';
 import {createWorkshop} from './talleres.mjs';
 import {createQuotes} from './cotizaciones.mjs';
+import {createCotizacionesModelos} from './cotizaciones-modelos.mjs';
 import {expandCatalog,normalizeNewProduct,normalCategory} from './catalogo-altas.mjs';
 import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-gestion.mjs';
 
@@ -193,7 +194,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return {url:signed.href,name:f.name,type:f.type};
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
-  const quotes=createQuotes({sb,row,fail,commercialItem});
+  const quotes=createQuotes({sb,row,fail,commercialItem}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL});
   const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
@@ -322,6 +323,16 @@ export function createHandler(env={}, fetcher=fetch) {
       if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
       if(seguimientoEnabled&&op==='cotizacion-aceptar-equipo'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.aceptarEquipo(x,b,user));}
       if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
+      // Cotizaciones por modelo y talla (Gestión → Cotizaciones), independientes de un pedido.
+      if(op.startsWith('cm-')){
+        if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
+        if(op==='cm-lista'&&request.method==='GET')return response(200,await cotizacionesModelos.lista());
+        if(op==='cm-leer'&&request.method==='GET')return response(200,await cotizacionesModelos.leer(url.searchParams.get('id')));
+        if(op==='cm-guardar'&&request.method==='POST')return response(200,await cotizacionesModelos.guardar(await jsonBody(request),user));
+        if(op==='cm-estado'&&request.method==='POST')return response(200,await cotizacionesModelos.estado(await jsonBody(request),user));
+        if(op==='cm-logo-subida'&&request.method==='POST')return response(200,await cotizacionesModelos.logoSubida(await jsonBody(request)));
+        fail(404,'Operación no encontrada.');
+      }
       if(/^(precios-|cotizacion)/.test(op)){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
         return response(200,await quotes.handle(request,url,op,user,jsonBody,currentCatalog));

@@ -99,7 +99,8 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  });
  // Cargos únicos (ponchado por logo): partida propia, una vez por pedido.
  for(const c of q.cargos||[]){espacio(17);caja(m,y,width,14);etq('Cargo único · una vez',m+5,y+5.5);label(lines(c.concepto,width-60,10,true)[0],m+5,y+10.5,10,true);label(numero(c.importe),right-5,y+9.5,11.5,true,tinta,'right');y+=17;}
- // Resumen y pago
+ // Resumen y pago. Sin cantidades no hay importes que resumir: el anticipo va en «Cómo seguimos».
+ if(!sinCantidades){
  const filas=sinCantidades?[['Precios','Por pieza · MXN'],['IVA',q.impuesto==null?'Por definir':q.impuesto?'Más '+q.impuesto/100+'%':'Sin IVA'],...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0]+' (una vez)',numero(c.importe)]),['Válida hasta',fecha(q.vigencia,true)]]:[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],c.importe]),['Envío',q.envio],['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
  const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7);
  const bh=Math.max(12+filas.length*4.8+14,pagos?39+instr.length*3.1:22);
@@ -115,8 +116,9 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
   let iy=py+22;for(const l of instr){label(l,x2+5,iy,7,false,tenue);iy+=3.1;}
  }else{let iy=y+14;for(const l of instr){label(l,x2+5,iy,7.5,false,tenue);iy+=3.3;}}
  y+=bh+8;
+ }else y+=4;
  // Cómo seguimos
- const pasos=sinCantidades?[['Confirma tu selección','Acordamos modelos, tallas y cantidades.'],['Cotización final','Confirmamos el importe y las condiciones.'],['Producción','Inicia al confirmar tu anticipo.'],['Entrega',q.plazo||'Plazo y destino por confirmar con ZAIN.']]:[['Acepta en línea','Desde tu enlace de Mi pedido.'],['Anticipo',pagos?'Con el '+pct+'% programamos tu producción.':'Acordamos contigo el anticipo.'],['Producción','Inicia al confirmar tu anticipo.'],['Entrega',q.plazo||'Plazo y destino por confirmar con ZAIN.']];
+ const pasos=sinCantidades?[['Confirma tu selección','Nos dices modelos, tallas y cantidades.'],['Anticipo',pagos?'Con el '+pct+'% programamos tu producción; el '+Math.round((100-pct)*100)/100+'% restante, antes del envío.':'Acordamos contigo el anticipo.'],['Producción','Inicia al confirmar tu anticipo.'],['Entrega',q.plazo||'Plazo y destino por confirmar con ZAIN.']]:[['Acepta en línea','Desde tu enlace de Mi pedido.'],['Anticipo',pagos?'Con el '+pct+'% programamos tu producción.':'Acordamos contigo el anticipo.'],['Producción','Inicia al confirmar tu anticipo.'],['Entrega',q.plazo||'Plazo y destino por confirmar con ZAIN.']];
  const pw=width/4,desc=pasos.map(([,d])=>lines(d,pw-6,7).slice(0,4));espacio(19+Math.max(...desc.map(d=>d.length))*3.1);
  label('Cómo seguimos',m,y,11.5,true);y+=7;punteada(m+4,y,right-6,tinta);
  pasos.forEach(([t],i)=>{const x=m+i*pw;doc.setDrawColor(...(i?tinta:cobalto));doc.setFillColor(...(i?papel:cobalto));doc.setLineWidth(.5);doc.circle(x+3.5,y,3,'FD');label(String(i+1),x+3.5,y+1.1,7,true,i?tinta:blanco,'center',true);label(t,x,y+7.5,8.5,true);desc[i].forEach((l,j)=>label(l,x,y+11.5+j*3.1,7,false,tenue));});

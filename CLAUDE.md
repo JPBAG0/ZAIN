@@ -1,3 +1,7 @@
+## Cotizaciones por modelo guardadas — 21-oct-2026 (Claude)
+
+JP pidió guardarlas y, cuando el cliente autorice, capturar cantidades y pasarlas a Pedidos respetando el precio cotizado. Fase 1–2 publicada: anticipo (%) y PDF de una hoja; tabla `zain_cotizaciones_modelos` (folio COT-0001…, estados borrador/enviada/autorizada/convertida/descartada, sin borrado) + bucket privado `zain-cotizaciones-logos`; ops `cm-*` en Edge `zain-pedidos`. Fase 3 pendiente: «Convertir en pedido» (cantidades por talla → pedido normal con precios cotizados fijos; enviar el folio ZAIN al cliente). Detalle en docs/COTIZACIONES-MODELOS.md.
+
 ## Cotizaciones por modelo: rediseño — 21-oct-2026 (Claude)
 
 JP no quedó convencido con la primera versión. Cambios: 4 pasos numerados y barra fija con avance y descarga; margen inicial = primer rango de Costos (antes todo salía «Pendiente»); un solo campo de precio por fila (sugerido como placeholder, escribir lo fija); redondeo hacia arriba a peso/$5/centavos (por defecto peso, nunca toca precios escritos); IVA por defecto 16%; Válida hasta (hoy+15) y Entrega llegan al PDF; folio COT-AAMMDD-HHMM; PDF muestra «Desde $X / pza» en vez de «Total: Por definir»; tramos como «Pedido de 1 a 49 piezas»; sin «Caballero · Caballero». Detalle en docs/COTIZACIONES-MODELOS.md.

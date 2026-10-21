@@ -48,9 +48,9 @@ export function precioFila(f,{margen=null,precio=null,aplicacion=0,redondeo=1}={
  return {costo,sugerido,precio:venta,utilidad,margenReal:utilidad==null||!venta?null:Math.round(utilidad/venta*10000)};
 }
 // Proyección comercial explícita: no copiar modelos privados, bandas o fuentes al PDF/texto.
-export function comercial(modelos,{destinatario='',impuesto=null,concepto='',cargo=null,notas='',folio='',vigencia='',plazo='',redondeo=1}={}){
+export function comercial(modelos,{destinatario='',impuesto=null,concepto='',cargo=null,notas='',folio='',vigencia='',plazo='',redondeo=1,anticipo=null}={}){
  if(impuesto==null)throw Error('Selecciona cómo se presenta el IVA.');
- entero(impuesto,10000);opcional(cargo);
+ entero(impuesto,10000);opcional(cargo);if(anticipo!=null&&(!Number.isSafeInteger(anticipo)||anticipo<0||anticipo>10000))throw Error('El anticipo va de 0 a 100%.');
  if(vigencia&&!/^\d{4}-\d{2}-\d{2}$/.test(vigencia))throw Error('Revisa la fecha de vigencia.');
  const partidas=modelos.flatMap((m,modelo)=>m.filas.filter(f=>f.incluir!==false).map(f=>{
   const r=precioFila(f,{margen:f.margen,precio:f.precio,aplicacion:m.aplicacion,redondeo});
@@ -58,9 +58,9 @@ export function comercial(modelos,{destinatario='',impuesto=null,concepto='',car
   return {modelo,nombre:m.nombre,sku:m.sku,zona:m.tecnica?(m.producto?.zonas||[]).find(z=>z.id===m.zona)?.nombre||'':'',medidas:m.tecnica&&m.ancho&&m.alto?(m.ancho/100)+' × '+(m.alto/100)+' cm':'',tallas:f.talla,color:f.color,volumen:f.volumen,personalizacion:m.tecnica||'Solo prenda',precio:r.precio};
  }));
  if(!partidas.length)throw Error('Agrega un modelo y al menos un rango de tallas.');
- return {folio:String(folio).trim().slice(0,40),destinatario:String(destinatario).trim().slice(0,180),impuesto,vigencia:vigencia||'',plazo:String(plazo).trim().slice(0,120),partidas,cargo:cargo?{concepto:String(concepto).trim().slice(0,120)||'Cargo único',importe:cargo}:null,notas:String(notas).trim().slice(0,2000)};
+ return {folio:String(folio).trim().slice(0,40),destinatario:String(destinatario).trim().slice(0,180),impuesto,vigencia:vigencia||'',plazo:String(plazo).trim().slice(0,120),anticipo,partidas,cargo:cargo?{concepto:String(concepto).trim().slice(0,120)||'Cargo único',importe:cargo}:null,notas:String(notas).trim().slice(0,2000)};
 }
 export function textoComercial(q){
  const vence=q.vigencia?new Date(q.vigencia+'T12:00:00Z').toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Mexico_City'}):'';
- return ['ZAIN · Cotización por modelo y tallas'+(q.folio?' · '+q.folio:''),q.destinatario?'Para: '+q.destinatario:'','Precios por pieza en MXN · '+(q.impuesto?'más IVA '+q.impuesto/100+'%':'sin impuesto (0%)'),[vence?'Válida hasta el '+vence:'',q.plazo?'Entrega: '+q.plazo:''].filter(Boolean).join(' · '),...q.partidas.map(p=>[p.nombre+' ('+p.sku+')',p.tallas,p.color,p.volumen,p.personalizacion,p.zona,p.medidas,pesos(p.precio)+' / pieza'].filter(Boolean).join(' · ')),q.cargo?q.cargo.concepto+' · cargo único: '+pesos(q.cargo.importe):'',q.notas,'Disponibilidad, cantidades y entrega se confirman al realizar el pedido.'].filter(Boolean).join('\n\n');
+ return ['ZAIN · Cotización por modelo y tallas'+(q.folio?' · '+q.folio:''),q.destinatario?'Para: '+q.destinatario:'','Precios por pieza en MXN · '+(q.impuesto?'más IVA '+q.impuesto/100+'%':'sin impuesto (0%)'),[vence?'Válida hasta el '+vence:'',q.plazo?'Entrega: '+q.plazo:'',q.anticipo!=null?'Anticipo '+q.anticipo/100+'% y el resto antes del envío':''].filter(Boolean).join(' · '),...q.partidas.map(p=>[p.nombre+' ('+p.sku+')',p.tallas,p.color,p.volumen,p.personalizacion,p.zona,p.medidas,pesos(p.precio)+' / pieza'].filter(Boolean).join(' · ')),q.cargo?q.cargo.concepto+' · cargo único: '+pesos(q.cargo.importe):'',q.notas,'Disponibilidad, cantidades y entrega se confirman al realizar el pedido.'].filter(Boolean).join('\n\n');
 }

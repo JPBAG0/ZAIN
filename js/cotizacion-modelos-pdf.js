@@ -1,4 +1,4 @@
-import {descargarPDF} from './cotizacion-pdf.js?v=13';
+import {descargarPDF} from './cotizacion-pdf.js?v=14';
 // Adaptar únicamente el contenido al membrete v3 existente; el diseño vive en cotizacion-pdf.js.
 export function adaptarModelos(q,imagenes=[]){
  const partidas=[],vistas={};
@@ -11,7 +11,7 @@ export function adaptarModelos(q,imagenes=[]){
    if(vista?.src)vistas[indice]={src:vista.src,referencia:primera.personalizacion==='Solo prenda'};
   }
  }
- return {cotizacion:{destinatario:q.destinatario,publicada_at:new Date().toISOString(),vigencia:q.vigencia||'',plazo:q.plazo||'Por acordar con ZAIN.',condiciones:q.notas,pagos:null,cargos:q.cargo?[q.cargo]:[],partidas,impuesto:q.impuesto,bruto:null,descuento:0,envio:null,subtotal:null,impuestos:null,total:null},imagenes:vistas};
+ return {cotizacion:{destinatario:q.destinatario,publicada_at:new Date().toISOString(),vigencia:q.vigencia||'',plazo:q.plazo||'Por acordar con ZAIN.',condiciones:q.notas,pagos:q.anticipo==null?null:{anticipo:q.anticipo,instrucciones:''},cargos:q.cargo?[q.cargo]:[],partidas,impuesto:q.impuesto,bruto:null,descuento:0,envio:null,subtotal:null,impuestos:null,total:null},imagenes:vistas};
 }
 export async function descargarModelos(q,imagenes=[]){
  const a=adaptarModelos(q,imagenes);

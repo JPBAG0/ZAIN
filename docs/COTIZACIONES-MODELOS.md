@@ -14,6 +14,18 @@ Pantalla en 4 pasos numerados y una barra fija abajo con el avance («2 modelos 
 
 PDF con el membrete v3 (mismo generador js/cotizacion-pdf.js, modo `sinCantidades`): folio de referencia `COT-AAMMDD-HHMM` (hora CDMX; no es consecutivo ni se guarda), «Desde $X / pza» en portada y resumen en lugar de un total, vigencia y entrega capturadas, diseños, modelos, tallas y precios por pieza. La proyección comercial enumera campos; excluye costos, utilidad, márgenes, tarifas y referencias de proveedor.
 
-La composición vive solo en memoria mientras la página esté abierta. Descargar el PDF permite conservarla. Actualizar modelos y costos reinicia la composición con confirmación si había modelos. Salir del equipo borra la composición, el logo y los datos privados en memoria. Sin cambios a pedidos, cuentas, costos guardados, publicación de catálogo ni reglas de compra.
+Anticipo (%) en el paso 1 (50 por defecto; vacío = «se acuerda»): sale en el texto y en el paso 2 de «Cómo seguimos» del PDF. En modo sin cantidades el PDF ya no lleva los recuadros «Resumen» y «Cómo se paga» (repetían datos); con pocos modelos cabe en una hoja.
 
-Archivos: js/cotizacion-modelos.js (cálculos/proyección/redondeo), js/control-cotizaciones-modelos.js (interfaz/logo), js/cotizacion-modelos-pdf.js, css/cotizacion-modelos.css. No requiere migración ni despliegue de Edge. Los recursos nuevos se incluyen únicamente desde gestion-zain.html.
+## Guardadas (desde 21-oct-2026)
+- Lista arriba con folio consecutivo `COT-0001…` (lo da la base), cliente, estado, modelos, «desde» y fecha; búsqueda y «Ver descartadas». **Nueva cotización**, **Abrir** (tocar la fila) y **Duplicar** (copia con folio nuevo al guardarla; vigencia se reinicia a hoy+15).
+- Estados: Borrador → Enviada → Autorizada; Descartada la oculta (nunca se borra). «Convertida en pedido» la pone la conversión (siguiente fase) y bloquea la edición.
+- **Guardar** en la barra fija. Copiar texto o Descargar PDF guardan antes y, si era borrador, la pasan a Enviada; el PDF usa el folio guardado. Aviso al salir con cambios sin guardar.
+- Se guardan los valores tal como están en pantalla (también incompletos), la última proyección comercial (`comercial`, sin costos) y el logo original en el bucket privado `zain-cotizaciones-logos` (subida firmada directa, ≤15 MB, carpeta `<id cotización>/`).
+- **Precio cotizado:** al abrir, si un precio que salía del margen cambió con los costos actuales, se fija el precio guardado y se avisa cuántos. Duplicar sí recalcula.
+- Concurrencia por `version`: si un compañero guardó antes, pide abrirla de nuevo.
+
+Servidor: `server/cotizaciones-modelos.mjs` (ops `cm-lista`, `cm-leer`, `cm-guardar`, `cm-estado`, `cm-logo-subida`, solo equipo; prefijo `cm-` para no caer en el enrutador de `cotizacion*`). Migración `supabase/cotizaciones-modelos.sql` (aplicada 21-oct-2026): tabla `zain_cotizaciones_modelos` con RLS y solo `service_role`, bucket privado. Edge `zain-pedidos` desplegado con `node server/preparar-edge.mjs` + `npx supabase functions deploy zain-pedidos --project-ref upzecgfgdtllxdhshhkd --use-api --no-verify-jwt` (antes se comprobó que la v44 en línea era idéntica al repo).
+
+Actualizar modelos y costos quita los modelos en pantalla (lo guardado se conserva). Salir del equipo limpia todo lo que está en memoria. Sin cambios a pedidos, cuentas, costos guardados, publicación de catálogo ni reglas de compra.
+
+Archivos: js/cotizacion-modelos.js (cálculos/proyección/redondeo/anticipo), js/control-cotizaciones-modelos.js (interfaz/logo/guardado), js/cotizacion-modelos-pdf.js, css/cotizacion-modelos.css, server/cotizaciones-modelos.mjs. Los recursos nuevos se incluyen únicamente desde gestion-zain.html.
