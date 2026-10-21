@@ -51,3 +51,13 @@ test('valida tamaño, modelos, precios y estado',()=>{
  for(const malo of [{id:'x'},{version:-1},{datos:[]},{datos:{x:'a'.repeat(300001)}},{modelos:21},{desde:-1},{comercial:'texto'},{estado:'convertida'}])assert.throws(()=>validarCotizacion(nueva(malo),fail),{status:400});
  assert.equal(validarCotizacion(nueva({cliente:'a'.repeat(300)}),fail).cliente.length,180);
 });
+test('convertir liga el pedido guardado y bloquea cambios posteriores',async()=>{
+ const b=base(),pedidos={[OTRO]:{id:OTRO,folio:'ZAIN-ABC',guardado_at:'2026-10-21',archivado_at:null}};
+ const row=async id=>{if(!pedidos[id])fail(404,'Solicitud no encontrada.');return pedidos[id];};
+ const api=createCotizacionesModelos({sb:b.sb,fail,storageURL,row});await api.guardar(nueva(),user);
+ await assert.rejects(api.convertir({id:ID,version:1,pedido_id:'55555555-5555-4555-8555-555555555555'},user),{status:404});
+ pedidos[OTRO].guardado_at=null;await assert.rejects(api.convertir({id:ID,version:1,pedido_id:OTRO},user),{status:409});pedidos[OTRO].guardado_at='2026-10-21';
+ const r=await api.convertir({id:ID,version:1,pedido_id:OTRO},user);assert.equal(r.cotizacion.estado,'convertida');assert.equal(r.cotizacion.pedido_id,OTRO);assert.equal(r.pedido.folio,'ZAIN-ABC');
+ await assert.rejects(api.convertir({id:ID,version:2,pedido_id:OTRO},user),{status:409});
+ await assert.rejects(api.estado({id:ID,version:2,estado:'borrador'},user),{status:409});
+});

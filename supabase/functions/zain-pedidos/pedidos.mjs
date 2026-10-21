@@ -194,7 +194,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return {url:signed.href,name:f.name,type:f.type};
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
-  const quotes=createQuotes({sb,row,fail,commercialItem}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL});
+  const quotes=createQuotes({sb,row,fail,commercialItem}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row});
   const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
@@ -330,6 +330,7 @@ export function createHandler(env={}, fetcher=fetch) {
         if(op==='cm-leer'&&request.method==='GET')return response(200,await cotizacionesModelos.leer(url.searchParams.get('id')));
         if(op==='cm-guardar'&&request.method==='POST')return response(200,await cotizacionesModelos.guardar(await jsonBody(request),user));
         if(op==='cm-estado'&&request.method==='POST')return response(200,await cotizacionesModelos.estado(await jsonBody(request),user));
+        if(op==='cm-convertir'&&request.method==='POST')return response(200,await cotizacionesModelos.convertir(await jsonBody(request),user));
         if(op==='cm-logo-subida'&&request.method==='POST')return response(200,await cotizacionesModelos.logoSubida(await jsonBody(request)));
         fail(404,'Operación no encontrada.');
       }

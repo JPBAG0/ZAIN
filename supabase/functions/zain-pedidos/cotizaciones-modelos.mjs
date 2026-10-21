@@ -24,7 +24,7 @@ export function validarCotizacion(b,fail){
  const cliente=typeof b.cliente==='string'?b.cliente.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,180):'';
  return {cliente,datos:b.datos,comercial:b.comercial??null,desde:b.desde??null,modelos:b.modelos,logo,...(b.estado?{estado:b.estado}:{})};
 }
-export function createCotizacionesModelos({sb,fail,storageURL}){
+export function createCotizacionesModelos({sb,fail,storageURL,row}){
  const fila=async id=>{if(!UUID.test(id||''))fail(400,'Cotización inválida.');const r=await sb('/rest/v1/zain_cotizaciones_modelos?id=eq.'+id+'&select=*&limit=1');if(!r[0])fail(404,'Cotización no encontrada.');return r[0];};
  const logoSubido=async(id,objeto)=>{
   const lista=await sb('/storage/v1/object/list/'+BUCKET,{method:'POST',body:JSON.stringify({prefix:id,limit:100,offset:0})});
@@ -57,6 +57,12 @@ export function createCotizacionesModelos({sb,fail,storageURL}){
   estado:async(b,user)=>{
    if(!UUID.test(b?.id||'')||!Number.isSafeInteger(b.version)||b.version<1||!ESTADOS.includes(b.estado))fail(400,'Revisa el estado de la cotización.');
    return {cotizacion:await actualizar(b.id,b.version,{estado:b.estado},user)};
+  },
+  // El pedido ya se creó con el flujo normal de solicitudes; aquí solo se liga y se cierra la cotización.
+  convertir:async(b,user)=>{
+   if(!UUID.test(b?.id||'')||!Number.isSafeInteger(b.version)||b.version<1||!UUID.test(b.pedido_id||''))fail(400,'Revisa la cotización y el pedido.');
+   const x=await row(b.pedido_id);if(!x.guardado_at||x.archivado_at)fail(409,'El pedido todavía no termina de guardarse.');
+   return {cotizacion:await actualizar(b.id,b.version,{estado:'convertida',pedido_id:x.id},user),pedido:{id:x.id,folio:x.folio}};
   },
   logoSubida:async b=>{
    if(!UUID.test(b?.id||'')||!TIPOS[b.mime]||!Number.isSafeInteger(b.bytes)||b.bytes<1||b.bytes>MAX_LOGO)fail(400,'Sube un logo PNG, JPG, WEBP o SVG de hasta 15 MB.');

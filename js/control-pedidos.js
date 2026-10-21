@@ -111,6 +111,8 @@ async function detalle(id){
  await Promise.all([history,...images]);if(turn===detailRevision)dispatchEvent(new CustomEvent('zain:pedido-abierto',{detail:x}));
 }
 $('#cerrarDetalle').addEventListener('click',closeDetail);
+// Otras secciones (p. ej. Cotizaciones al crear un pedido) piden abrir una ficha.
+addEventListener('zain:abrir-pedido',e=>{if(session&&/^[a-f0-9-]{36}$/i.test(e.detail||''))detalle(e.detail).catch(failed);});
 $('#ficha').addEventListener('close',()=>{liberarRenders();document.documentElement.classList.remove('sin-scroll');detailRevision++;selected=null;history.replaceState(null,'',location.pathname+location.search);});
 $('#ficha').addEventListener('click',e=>{if(e.target===$('#ficha')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDetail();}});
 $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
