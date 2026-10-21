@@ -1,3 +1,7 @@
+## Cotizaciones por modelo sin cantidades — 21-oct-2026
+
+Gestión → Cotizaciones prepara documentos comerciales independientes del pedido público, con logo, vista sobre cada modelo, costos por talla/color/tramo, margen bruto o precio directo e IVA explícito. Ponchado/preparación como un cargo único. Texto/PDF enumeran campos comerciales y excluyen datos internos. Composición en memoria; salir limpia logo/costos. Mínimo público12 y flujos existentes intactos. No requiere SQL ni Edge. Guía: docs/COTIZACIONES-MODELOS.md.
+
 ## Vigente: gorras 2026 y chaleco acolchado — 20-oct-2026
 
 JP aprobó y activó 6 gorras y un chaleco (catálogo 37 activas / 27 históricas). Gorras (solo Bordado): ZN-GO-002 Gorra clásica 6 paneles (14 colores), ZN-GO-003 Gorra estructurada (9), ZN-GO-004 Gorra trucker con visera de gamuza (4 combinaciones), ZN-GO-005 Gorra suave de algodón (9), ZN-GO-006 Gorra trucker de algodón (6 combinaciones), ZN-GO-007 Gorra deportiva (6). JP pidió quitar «premium» de los nombres. Chalecos: ZN-CE-002 Chaleco acolchado (5 colores, XS–2XL, guía en cm, foto de modelo). Nombres sin marcas ni modelos del proveedor; proveedor, códigos y costos solo en ediciones privadas/`zain_precios_config` y en `Proyectos-IA/Paginas/ZAIN/Proveedores/2026-10-20 Gorras/incorporacion-privada.json` (fuera de Git).
