@@ -1,9 +1,10 @@
+import {createWhatsApp} from './whatsapp.mjs';
 import {createGastos} from './gastos.mjs';
 import {createGenerales} from './finanzas-generales.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {createAvisos} from './avisos.mjs';
 import {normalizarGeometria} from './logo-medidas.mjs';
-import { randomUUID, createHash, createHmac, timingSafeEqual } from 'node:crypto';
+import { randomUUID, randomBytes, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import C from './catalogo.mjs';
 import PublicC from './publico.mjs';
@@ -200,6 +201,14 @@ export function createHandler(env={}, fetcher=fetch) {
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
   const avisosEnabled=env.ZAIN_AVISOS_ENABLED==='true',avisos=createAvisos({sb,fail,fetcher});
   const fondo=p=>{if(globalThis.EdgeRuntime?.waitUntil){globalThis.EdgeRuntime.waitUntil(p);return;}return p;};
+  const wa=createWhatsApp({sb,fail,row,storageURL,secreto:env.ZAIN_WA_SECRETO,habilitado:env.ZAIN_WA_ENABLED==='true',receipt,plantillas:C.seguimientoWhatsApp||[],
+   catalogo:async()=>{const cat=await currentCatalog();return cat.productos.filter(p=>p.activo!==false).map(p=>({sku:p.sku,nombre:p.nombreComercial||p.nombre,tallas:p.tallas||[],minimo:p.minimoPiezas||cat.minimoPedido||1,paso:p.pasoPiezas||1,colores:p.colores.map(id=>({id,nombre:cat.colores.find(c=>c.id===id)?.nombre||id})),tecnicas:p.tecnicas.map(id=>({id,nombre:cat.tecnicas.find(t=>t.id===id)?.nombre||id})),zonas:p.zonas.map(z=>({id:z.id,nombre:z.nombre,max:z.max}))}));},
+   crearDatos:async b=>{const cat=await currentCatalog(),p=cat.productos.find(p=>p.sku===b.sku&&p.activo!==false),color=cat.colores.find(c=>c.id===b.color_id),tecnica=cat.tecnicas.find(t=>t.id===b.tecnica),zona=p?.zonas.find(z=>z.id===b.zona);
+    if(!p||!color||!tecnica||!zona)fail(400,'Revisa modelo, color, técnica y zona.');
+    const id=b.id;validateID(id);const token=randomBytes(32).toString('hex');
+    const x=validateOrder({id,token,items:[{p:p.id,colorId:color.id,color:color.nombre,tecnica:tecnica.nombre,piezas:b.piezas,tallasDetalle:p.tallas?.length?{[b.talla]:b.piezas}:{},zona:zona.nombre,cm:Math.min(9,zona.max),tieneLogo:false,tieneRender:false}],files:[]},{catalogo:cat,snapshot:true});
+    return {id,token_hash:sha(token),client:sha('wa:'+b.chat_id),items:x.items,total:x.total};
+   }});
   return async request => {
     const headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
     const response=(status,body)=>new Response(JSON.stringify(body),{status,headers});
@@ -209,6 +218,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(origin){headers['Access-Control-Allow-Origin']=origin;headers['Vary']='Origin';}
       if(request.method==='OPTIONS'){headers['Access-Control-Allow-Methods']='GET, POST, OPTIONS';headers['Access-Control-Allow-Headers']='Content-Type, Authorization';return new Response(null,{status:204,headers});}
       const url=new URL(request.url),op=url.searchParams.get('op')||'config';
+      if(op==='wa-puente'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await wa.puente(request,await jsonBody(request));if(d?.nuevo&&d?.entrante&&avisosEnabled)await fondo(avisos.enviar({title:'Nuevo mensaje de WhatsApp',body:'Abre Chats en Gestión para responder.',url:'/gestion-zain#chat/'+d.id,tag:'wa-'+d.id}));return response(200,d);}
       if(request.method==='GET'&&op==='config')return response(200,{activo:ready,...(ready?{supabaseUrl:base,publishableKey:publicKey}:{})});
       if(request.method==='GET'&&op==='catalogo-publico'){
         if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');
@@ -305,6 +315,7 @@ export function createHandler(env={}, fetcher=fetch) {
 
       if(op.startsWith('taller-')){if(env.ZAIN_TALLERES_ENABLED!=='true')fail(503,'El acceso de talleres todavía no está habilitado.');return await createWorkshop({sb,identity,row,signedFile,jsonBody,fail,response})(request,url,op);}
       const user=await staff(request);
+      if(op.startsWith('wa-')){const lecturas=['wa-plantillas','wa-estado','wa-chats','wa-hilo','wa-pedidos','wa-catalogo','wa-motivos','wa-por-pedido'];if(request.method!==(lecturas.includes(op)?'GET':'POST'))fail(405,'Método no admitido.');return response(200,await wa.equipo(op,request.method==='POST'?await jsonBody(request):null,user,url));}
       if(avisosEnabled&&op==='avisos-clave'&&request.method==='GET')return response(200,await avisos.clave());
       if(avisosEnabled&&op==='avisos-suscribir'&&request.method==='POST')return response(200,await avisos.suscribir(user,await jsonBody(request)));
       if(avisosEnabled&&op==='avisos-quitar'&&request.method==='POST')return response(200,await avisos.quitar(user,await jsonBody(request)));

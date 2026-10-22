@@ -21,6 +21,33 @@
   "minimoPiezas": null,
   "minimoPedido": 12,
   "minimoTexto": "Pedido mínimo: 12 piezas · bolsas desde 100",
+  "seguimientoWhatsApp": [
+    {
+      "id": "amable",
+      "nombre": "Seguimiento amable",
+      "texto": "Hola {nombre}, soy {vendedor} de ZAIN. ¿Pudiste revisar la cotización de {prenda}? Si te late, ¿la apartamos para entregarte el {fecha A} o el {fecha B}?"
+    },
+    {
+      "id": "lo-pienso",
+      "nombre": "Lo pienso o lo consulto",
+      "texto": "Sí, claro, así estás más seguro. Para ayudarte, ¿qué es lo que te falta definir, el precio, los tiempos o el diseño? Si quieres te mando fotos de trabajos parecidos para enseñárselas a quien decide. El precio te lo respeto hasta el {fecha}."
+    },
+    {
+      "id": "precio",
+      "nombre": "Está caro",
+      "texto": "Sí, te entiendo. Fuera del precio, ¿hay algo más que te detenga? Lo que incluye es {beneficio confirmado}; sale a ${precio_por_persona} por persona de tu equipo. Si ajustamos {cantidad o técnica}, ¿lo cerramos así?"
+    },
+    {
+      "id": "retroalimentacion",
+      "nombre": "Pedir retroalimentación",
+      "texto": "{nombre}, gracias por considerarnos. Queremos mejorar en lo que hacemos y nos ayudaría mucho saber qué nos faltó: ¿fue el precio, el tiempo de entrega, el diseño u otra cosa? Con una palabra nos basta."
+    },
+    {
+      "id": "postventa",
+      "nombre": "Post venta",
+      "texto": "Hola {nombre}, ¿qué tal les quedaron los {prenda}? Nos encantaría ver una foto del equipo con ellos y, si te animas, compartirla en nuestra sección de clientes. Para tu próximo pedido aquí estamos."
+    }
+  ],
   "posadas": {
     "id": "posadas-2026",
     "activa": true,

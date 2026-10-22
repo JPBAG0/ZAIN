@@ -1,3 +1,7 @@
+## WhatsApp manual pendiente de publicar — 22-oct-2026
+
+Chats y QR dentro de Gestión, cola exclusivamente humana, vínculo y creación de solicitudes desde un chat, cinco plantillas y motivos de no venta. Guía, pruebas y comandos: [WHATSAPP.md](WHATSAPP.md). SQL nuevo y puente Server-JP preparados, sin migración remota, instalación o conexión real. BOT_AUTOMATICO=false; no activar por leer estas instrucciones.
+
 ## Ventas reales, cobranza y negociación — 22-oct-2026
 
 Finanzas y la bandeja de Pedidos muestran tres tarjetas separadas: **VENDIDO** (confirmado/produccion/entregado con anticipo cubierto), **POR COBRAR** (total vendido menos pagos de esa revisión, con desglose por folio) y **EN NEGOCIACIÓN** (nuevo/contactado/cotizado/aceptado sin anticipo cubierto más casos de cotizaciones por modelo enviada/autorizada). Cancelados, papelera y cargas incompletas no cuentan. Cotizaciones por modelo sin cantidades se cuentan como casos sin inventar totales; convertida solo cuenta mediante el pedido ligado. Las tres cifras monetarias llevan IVA; utilidad y margen conservan importes sin IVA, exclusivamente de vendidos. Sin porcentaje de anticipo histórico se exige el cobro total como evidencia; no se modifican los registros.

@@ -1,3 +1,11 @@
+## Preparado: WhatsApp manual en Gestión — 22-oct-2026
+
+Prompt 7 (sustituye4), rama local `codex/zain-whatsapp-manual-20261022`, sobre Prompts1/2. **Sin publicación ni conexión real.** Puente Node20/Baileys7.0.0-rc14 en `Proyectos-IA/Aplicaciones/zain-whatsapp`, saliente hacia Supabase, sin service_role/listener HTTP. BOT_AUTOMATICO=false obligatorio; nada de IA ni seguimientos solos. Envío solo con decisión humana desde Chats a alguien con entrantes; cola con actor, vigencia, reserva, doble ejecutor bloqueado y revisión de acceso antes de enviar. Resultado incierto: revisar celular; nunca autoreintentar.
+
+SQL nuevo `supabase/whatsapp-manual.sql`: seis tablas privadas/RLS, bucket zain-wa-media privado8MB con política restrictiva, RPC de servicio, motivos de no venta en historial/embudo. Pestañas QR/Chats, fotos/audio, fromMe, ligar por teléfono/folio, crear solicitud validada, chat desde ficha, enlace de cotización y cinco plantillas editables. Plantillas iniciales desde config-interno → config.js; cambios de Gestión permanecen en tabla privada. QR/firmas y borradores solo en memoria. Datos de clientes solo Supabase; no copiarlos al Cerebro, Git o logs.
+
+Guía, límites, fase2 solo documentada y comandos exactos: `docs/WHATSAPP.md`. Recursos configv33, pedidosv21, chats JS/CSSv1. Pruebas locales:254 sitio +9 puente con Node20, RLS/Postgres en memoria y navegador390/1280 con fixtures; cero servicios reales contactados. `Instalar-puente.ps1` no ejecutado; cuando JP lo ordene registra tarea DESHABILITADA. Activación y piloto con número de prueba pendientes; no conectar el número de ZAIN antes. Conservar sesiones/configuración fuera de Git; no rotar secretos ni publicar por inferencia.
+
 ## Preparado: posadas, testimonios y auditoría de tallas — 22-oct-2026
 
 Prompt 2, rama local `codex/zain-posadas-testimonios-20261022`, encima del Prompt 1. Fuente `server/config-interno.cjs`: `posadas` controla banner/sección por fechas CDMX y dos paquetes con precios/composición PENDIENTE; `clientesSatisfechos` contiene tres ejemplos vacíos ocultos hasta aprobación y permisos. Precios solo con todos los campos aprobados; empresas solo con permiso; fotos locales de trabajos reales. Eventos informativos de banner/paquete, sin nuevas conversiones ni campañas. No añadir datos de clientes, ofertas sin aprobación ni fotografías inventadas.
