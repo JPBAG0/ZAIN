@@ -1,3 +1,9 @@
+## Preparado: posadas, testimonios y auditoría de tallas — 22-oct-2026
+
+Prompt 2, rama local `codex/zain-posadas-testimonios-20261022`, encima del Prompt 1. Fuente `server/config-interno.cjs`: `posadas` controla banner/sección por fechas CDMX y dos paquetes con precios/composición PENDIENTE; `clientesSatisfechos` contiene tres ejemplos vacíos ocultos hasta aprobación y permisos. Precios solo con todos los campos aprobados; empresas solo con permiso; fotos locales de trabajos reales. Eventos informativos de banner/paquete, sin nuevas conversiones ni campañas. No añadir datos de clientes, ofertas sin aprobación ni fotografías inventadas.
+
+Calculadora privada `server/calcular-posadas.mjs` usa el motor de margen por piezas; salida fuera del repo, precios finales pendientes. Auditoría en `docs/TALLAS-PENDIENTES.md`: prioridad CH-001/002/003; distinguir tablas existentes, dimensiones y unitalla. Respaldo público37activas/27históricas regenerado; no se cambian productos. Guía, pruebas y comandos: `docs/POSADAS-Y-TESTIMONIOS.md`. Recursos: config v32, medición v5, temporada JS/core/CSS v1. No publicado ni desplegado; esta entrega no requiere SQL/Edge nuevos y hereda los pendientes de publicación del Prompt1.
+
 ## Vigente: ventas reales separadas de negociación — 22-oct-2026
 
 Prompt 1 de JP: Finanzas y Pedidos separan VENDIDO / POR COBRAR / EN NEGOCIACIÓN. Vendido exige estado confirmado/produccion/entregado y anticipo cubierto por pagos de la revisión publicada. Las tres tarjetas usan totales con IVA; costos/utilidad/margen siguen sin IVA. Cancelados, papelera y cargas incompletas fuera. Negociación no se suma a ventas; modelos enviada/autorizada sin cantidades cuentan casos, sin sumar precios unitarios. Convertidas se cuentan solo mediante su pedido. Sin términos históricos de anticipo, exigir cobro completo; estados confirmados sin evidencia se señalan para revisar, sin alterar datos.

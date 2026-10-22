@@ -55,7 +55,15 @@
     lastClick=Date.now();
     return conversion(whatsappLabel,{origen:['pedido','contacto'].includes(origen)?origen:'contacto'});
   }
-  window.ZAINMedicion={solicitud,whatsapp,activa:()=>usable&&permitted};
+  // Interacciones de contenido: eventos informativos, nunca conversiones ni objetivos de venta.
+  function temporada(tipo,id){
+    if(!usable||!permitted)return false;
+    const nombres={banner_ver:'posada_banner_ver',banner_clic:'posada_banner_clic',banner_cerrar:'posada_banner_cerrar',paquete_clic:'posada_paquete_clic'};
+    const c=C.posadas,permitido=tipo==='paquete_clic'?c?.paquetes?.some(p=>p.id===id):c?.id===id;
+    if(!Object.hasOwn(nombres,tipo)||!permitido||typeof id!=='string'||!/^[a-z0-9][a-z0-9-]{0,59}$/.test(id))return false;
+    try{load();window.gtag('event',nombres[tipo],{contenido_id:id,page_location:cleanLocation(),page_referrer:referrer()});return true;}catch{return false;}
+  }
+  window.ZAINMedicion={solicitud,whatsapp,temporada,activa:()=>usable&&permitted};
   document.querySelectorAll('[data-privacidad]').forEach(x=>x.hidden=!C.privacidadPublicada);
   if(!usable||(!solicitationLabel&&!whatsappLabel))return;
   // Siempre activa, como SEASA (consentimiento tácito con aviso publicado); la oposición se atiende por correo.

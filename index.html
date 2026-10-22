@@ -26,6 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/zain.css?v=34" />
   <link rel="stylesheet" href="css/privacidad.css?v=3" />
+  <link rel="stylesheet" href="css/temporada.css?v=1" />
   <script>
     /* animaciones solo si el visitante no pidió «reducir movimiento»; la entrada con el logo, una vez por visita */
     (function () {
@@ -55,6 +56,11 @@
   </div>
   <a class="saltar" href="#catalogo">Saltar al catálogo</a>
 
+  <aside class="posada-banner" id="posadaBanner" aria-label="Paquetes de posada" hidden>
+    <a id="posadaBannerEnlace" href="#paquetes"><span id="posadaBannerTexto"></span></a>
+    <button type="button" id="cerrarPosada" aria-label="Cerrar anuncio de paquetes de posada">×</button>
+  </aside>
+
   <!-- ===================== BARRA ===================== -->
   <header class="barra" id="barra">
     <a class="barra__logo" href="#inicio" aria-label="ZAIN, ir al inicio">
@@ -64,6 +70,8 @@
       <a href="#catalogo">Catálogo</a>
       <a href="#personaliza">Personaliza</a>
       <a href="#tecnicas">Técnicas</a>
+      <a href="#paquetes" id="navPaquetes" hidden>Posadas</a>
+      <a href="#clientes-satisfechos" id="navClientes" hidden>Clientes satisfechos</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
     <button class="barra__pedido" id="abrirPedido" type="button" aria-controls="pedido">
@@ -125,6 +133,11 @@
         <span>Bordado</span><i></i><span>Serigrafía</span><i></i><span>DTF</span><i></i><span>Uniformes</span><i></i><span>Merch para eventos</span><i></i><span>Kits de bienvenida</span><i></i>
       </div>
     </div>
+
+    <section class="seccion temporada" id="paquetes" aria-labelledby="paquetesTitulo" hidden>
+      <div class="seccion__cabeza"><h2 id="paquetesTitulo" tabindex="-1">Paquetes para tu posada</h2><p>Uniformes y accesorios con tu logo para regalar a todo tu equipo. Te ayudamos a elegir la combinación y las cantidades.</p></div>
+      <div class="posada-paquetes" id="listaPaquetes"></div>
+    </section>
 
     <!-- ===================== CATÁLOGO ===================== -->
     <section class="seccion catalogo" id="catalogo" aria-labelledby="catTitulo">
@@ -319,6 +332,11 @@
       </div>
     </section>
 
+    <section class="seccion temporada" id="clientes-satisfechos" aria-labelledby="clientesTitulo" hidden>
+      <div class="seccion__cabeza"><h2 id="clientesTitulo">Clientes satisfechos</h2><p>Lo que nos cuentan quienes ya personalizaron con ZAIN.</p></div>
+      <div class="trabajos-reales" id="listaTestimonios"></div>
+    </section>
+
     <!-- ===================== PREGUNTAS ===================== -->
     <section class="seccion preguntas" id="preguntas" aria-labelledby="preTitulo">
       <div class="seccion__cabeza">
@@ -446,14 +464,15 @@
     </symbol>
   </svg>
 
-  <script src="js/config.js?v=31"></script>
+  <script src="js/config.js?v=32"></script>
   <script src="js/catalogo-cargar.js?v=3"></script>
-  <script src="js/medicion.js?v=4"></script>
+  <script src="js/medicion.js?v=5"></script>
   <script src="js/render.js?v=9"></script>
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=5"></script>
   <script src="js/zain.js?v=48"></script>
+  <script type="module" src="js/temporada.js?v=1"></script>
 <script src="js/subir.js?v=3"></script>
 </body>
 </html>

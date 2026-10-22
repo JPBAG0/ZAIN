@@ -1,3 +1,9 @@
+## Posadas — eventos informativos preparados el 22-oct-2026
+
+`js/medicion.js?v=5` añade `temporada(tipo,id)`: `posada_banner_ver`, `posada_banner_clic`, `posada_banner_cerrar` y `posada_paquete_clic`. Se aceptan solo tipos enumerados y IDs del catálogo; no texto de cliente, folio, imagen, importe, correo ni contenido del mensaje. Se aplica el mismo filtro de ruta/origen y URL sin fragmento ni datos personales. Son eventos informativos; no se añadieron conversiones, campañas ni objetivos. El clic wa.me conserva la acción secundaria existente, con su deduplicación. Fallar la medición no bloquea la navegación.
+
+Estado: preparado y probado con etiqueta simulada, sin publicar ni verificar recepción real. Guía: [POSADAS-Y-TESTIMONIOS.md](POSADAS-Y-TESTIMONIOS.md). La implementación vigente ya carga la etiqueta por defecto conforme a la decisión del 18-oct documentada en CLAUDE.md; las instrucciones de consentimiento afirmativo que siguen son históricas y no describen la versión actual.
+
 # ZAIN: medición para Google Ads
 
 Preparado el 13-oct-2026. **Activado el 17-oct-2026** en la cuenta de Google Ads de JP (538-348-6598, la misma de SEASA, etiqueta AW-18438312158; la cuenta 695-604-7497 de ZAIN quedó sin uso por bloqueo de verificación de identidad): "ZAIN - Solicitud de cotización" es acción principal (objetivo Formulario de clientes potenciales, NO predeterminado de la cuenta para no mezclarse con SEASA) y "ZAIN - Clic a WhatsApp" es secundaria (objetivo Contacto); ambas cuentan Una, valor fijo MXN 1, el sitio no envía datos de usuario (las conversiones avanzadas de esa cuenta se administran en la etiqueta de Google y no se tocaron para no afectar a SEASA). Aviso de privacidad actualizado ese día. Pendiente: confirmar recepción en Ads/Tag Assistant con una solicitud real.

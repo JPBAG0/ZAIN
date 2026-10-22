@@ -21,6 +21,99 @@
   "minimoPiezas": null,
   "minimoPedido": 12,
   "minimoTexto": "Pedido mínimo: 12 piezas · bolsas desde 100",
+  "posadas": {
+    "id": "posadas-2026",
+    "activa": true,
+    "bannerActivo": true,
+    "inicio": "2026-10-22",
+    "fin": "2026-12-31",
+    "textoBanner": "Paquetes para tu posada — uniformes para todo tu equipo",
+    "paquetes": [
+      {
+        "id": "gorra-chaleco",
+        "nombre": "Gorra + chaleco",
+        "estado": "PENDIENTE",
+        "minimoPaquetes": null,
+        "piezasPorPaquete": null,
+        "precioPaquete": null,
+        "precioPieza": null,
+        "impuesto": null,
+        "contenido": [
+          {
+            "producto": "Gorra",
+            "cantidad": null,
+            "tecnica": null,
+            "ubicacion": null
+          },
+          {
+            "producto": "Chaleco",
+            "cantidad": null,
+            "tecnica": null,
+            "ubicacion": null
+          }
+        ]
+      },
+      {
+        "id": "polo-gorra",
+        "nombre": "Polo + gorra",
+        "estado": "PENDIENTE",
+        "minimoPaquetes": null,
+        "piezasPorPaquete": null,
+        "precioPaquete": null,
+        "precioPieza": null,
+        "impuesto": null,
+        "contenido": [
+          {
+            "producto": "Polo",
+            "cantidad": null,
+            "tecnica": null,
+            "ubicacion": null
+          },
+          {
+            "producto": "Gorra",
+            "cantidad": null,
+            "tecnica": null,
+            "ubicacion": null
+          }
+        ]
+      }
+    ]
+  },
+  "clientesSatisfechos": [
+    {
+      "id": "trabajo-1",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "",
+      "frase": "",
+      "producto": ""
+    },
+    {
+      "id": "trabajo-2",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "",
+      "frase": "",
+      "producto": ""
+    },
+    {
+      "id": "trabajo-3",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "",
+      "frase": "",
+      "producto": ""
+    }
+  ],
   "preciosDesde": [
     {
       "categoria": "Playeras",

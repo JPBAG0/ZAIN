@@ -10,7 +10,7 @@ function setup({saved=null,path='/',active=true,published=true,tag='AW-123456789
   const el=s=>{if(!elements.has(s))elements.set(s,{hidden:true,handlers:{},addEventListener(t,f){this.handlers[t]=f;},focus(){}});return elements.get(s);};
   const location={origin:'https://zain.test',pathname:path,href:'https://zain.test'+path+'?email=privado%40ejemplo.test&token=secreto&gclid=ABC123#folio-secreto',hostname:'zain.test',reload(){reloads++;}};
   const document={referrer:'https://otro.test/persona?nombre=privado#token',cookie:'',querySelector:el,querySelectorAll:()=>[],addEventListener(){},createElement:()=>({}),head:{appendChild(s){scripts.push(s);}}};
-  const context={window:{ZAIN:{whatsapp:'525662923967',privacidadPublicada:published,medicion:{activa:active,origenes:['https://zain.test'],googleAdsId:tag,etiquetaSolicitud:'prueba_sol',etiquetaWhatsApp:'prueba_wa'}},gtag(...args){events.push(args);if(!blocked&&args[0]==='event')queueMicrotask(()=>args[2].event_callback());}},document,location,localStorage:{getItem:k=>{if(storageFails)throw Error('Bloqueado');return storage.get(k)||null;},setItem:(k,v)=>storage.set(k,v)},URL,Date,Promise,TextEncoder,crypto:webcrypto,setTimeout,clearTimeout,queueMicrotask};
+  const context={window:{ZAIN:{whatsapp:'525662923967',posadas:{id:'posadas-2026',paquetes:[{id:'gorra-chaleco'}]},privacidadPublicada:published,medicion:{activa:active,origenes:['https://zain.test'],googleAdsId:tag,etiquetaSolicitud:'prueba_sol',etiquetaWhatsApp:'prueba_wa'}},gtag(...args){events.push(args);if(!blocked&&args[0]==='event'&&typeof args[2].event_callback==='function')queueMicrotask(()=>args[2].event_callback());}},document,location,localStorage:{getItem:k=>{if(storageFails)throw Error('Bloqueado');return storage.get(k)||null;},setItem:(k,v)=>storage.set(k,v)},URL,Date,Promise,TextEncoder,crypto:webcrypto,setTimeout,clearTimeout,queueMicrotask};
   vm.runInNewContext(code,context);return {api:context.window.ZAINMedicion,events,scripts,el,storage,reloads:()=>reloads};
 }
 const consent=allow=>({version:1,allow,fecha:Date.now()});
@@ -36,4 +36,13 @@ test('solicitud y WhatsApp son acciones distintas; doble clic inmediato no dupli
 });
 test('bloqueador o etiqueta sin respuesta no detiene la navegación: espera acotada',async()=>{
   const a=setup({saved:consent(true),blocked:true}),start=Date.now();await a.api.whatsapp();assert.ok(Date.now()-start<1200);
+});
+
+test('posadas: eventos informativos enumerados sin conversiones ni datos libres',()=>{
+ const a=setup();
+ for(const [tipo,id] of [['banner_ver','posadas-2026'],['banner_clic','posadas-2026'],['banner_cerrar','posadas-2026'],['paquete_clic','gorra-chaleco']])assert.equal(a.api.temporada(tipo,id),true);
+ const e=conversions(a);assert.deepEqual(e.map(x=>x[1]),['posada_banner_ver','posada_banner_clic','posada_banner_cerrar','posada_paquete_clic']);
+ for(const x of e){assert.equal(x[2].send_to,undefined);assert.equal(x[2].value,undefined);assert.equal(x[2].currency,undefined);}
+ assert.equal(a.api.temporada('paquete_clic','folio-privado'),false);assert.equal(a.api.temporada('cliente','posadas-2026'),false);assert.equal(a.api.temporada('constructor','posadas-2026'),false);
+ for(const mala of [{active:false},{path:'/gestion-zain'},{published:false}])assert.equal(setup(mala).api.temporada('banner_ver','posadas-2026'),false);
 });
