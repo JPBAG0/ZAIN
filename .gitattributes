@@ -1,0 +1,4 @@
+
+# Conservar los bytes originales del SDK: el HTML verifica SRI en cada carga.
+js/vendor/supabase-2.105.0.js -text -diff
+js/vendor/SUPABASE-LICENSE text eol=lf

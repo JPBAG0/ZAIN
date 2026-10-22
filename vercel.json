@@ -63,7 +63,7 @@
       }
     },
     {
-      "src": "/(server|supabase|tests|docs)(/.*)?",
+      "src": "/(server|supabase|tests|docs|scripts)(/.*)?",
       "status": 404
     },
     {

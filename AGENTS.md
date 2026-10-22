@@ -1,3 +1,7 @@
+## Preparado: passkeys nativas — 22-oct-2026
+
+Prompt 3 aprobado para programar, preparado/probado localmente; sin publicación o habilitación Auth. Guía y comandos: `docs/PASSKEYS.md`. SDK oficial 2.105.0 vendorizado, con SRI/procedencia y API experimental; sin framework/build. `js/acceso-seguro.js` es el único gestor de tokens de Gestión; conserva `zain-equipo` por pestaña mediante adaptador y canal SDK aislado. No volver a añadir refresh REST en paralelo. Contraseña de respaldo y autorización servidor de equipo intactas; taller, manifest y service worker separados. Nunca administrar llaves ajenas o usar user_metadata para permisos. Scripts de configuración son manuales y quedan bloqueados por el hosting. Prueba física y configuración productiva pendientes; no activar por inferencia.
+
 ## Preparado: WhatsApp manual en Gestión — 22-oct-2026
 
 Prompt 7 (sustituye4), rama local `codex/zain-whatsapp-manual-20261022`, sobre Prompts1/2. **Sin publicación ni conexión real.** Puente Node20/Baileys7.0.0-rc14 en `Proyectos-IA/Aplicaciones/zain-whatsapp`, saliente hacia Supabase, sin service_role/listener HTTP. BOT_AUTOMATICO=false obligatorio; nada de IA ni seguimientos solos. Envío solo con decisión humana desde Chats a alguien con entrantes; cola con actor, vigencia, reserva, doble ejecutor bloqueado y revisión de acceso antes de enviar. Resultado incierto: revisar celular; nunca autoreintentar.

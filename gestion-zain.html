@@ -26,13 +26,14 @@
 <link rel="stylesheet" href="css/chats.css?v=1">
 <link rel="stylesheet" href="css/avisos.css?v=1">
 <link rel="stylesheet" href="css/cotizacion-modelos.css?v=4">
+<link rel="stylesheet" href="css/acceso-llaves.css?v=1">
 </head>
 <body class="control">
-<header class="control__cab"><a href="/" aria-label="Volver al catálogo ZAIN"><b>ZAIN</b><span>Pedidos y catálogo</span></a><div class="control__usuario"><span id="equipo"></span><a href="/" class="control__catalogo">Ver catálogo ↗</a><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></div></header>
+<header class="control__cab"><a href="/" aria-label="Volver al catálogo ZAIN"><b>ZAIN</b><span>Pedidos y catálogo</span></a><div class="control__usuario"><span id="equipo"></span><a href="/" class="control__catalogo">Ver catálogo ↗</a><button type="button" class="btn-texto" id="abrirLlaves" hidden>Seguridad</button><button type="button" class="btn-texto" id="salir" hidden>Cerrar sesión</button></div></header>
 <main>
 <section class="control__login" id="acceso">
 <div class="control__bienvenida"><div class="control__marca">ZAIN</div><h1>Del primer logo<br>a la entrega.</h1><p>Un espacio para cotizar, coordinar la producción y dar seguimiento a cada pedido.</p><div class="control__flujo"><span>Solicitud</span><i></i><span>Producción</span><i></i><span>Entrega</span></div></div>
-<div class="control__loginform"><h2>Entrar al equipo</h2><p>Usa tu cuenta autorizada de ZAIN.</p><form id="login"><label>Correo<input id="correo" type="email" autocomplete="username" required maxlength="254" placeholder="tu@correo.com"></label><label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label><button class="btn btn--azul btn--ancho" id="entrar" disabled>Preparando acceso…</button></form></div>
+<div class="control__loginform"><h2>Entrar al equipo</h2><p>Usa tu cuenta autorizada de ZAIN.</p><form id="login"><label>Correo<input id="correo" type="email" autocomplete="username" required maxlength="254" placeholder="tu@correo.com"></label><label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label><button class="btn btn--azul btn--ancho" id="entrar" disabled>Preparando acceso…</button></form><button type="button" id="entrarLlave" class="btn btn--linea btn--ancho llaves-login" hidden>Entrar con Face ID / llave del celular</button><button type="button" id="cancelarLlave" class="btn-texto" hidden>Cancelar</button><p id="llaveAyuda" class="llaves-ayuda"></p></div>
 </section>
 <p id="estadoPanel" class="control__estado" role="status" aria-live="polite"></p>
 <section id="trabajo" hidden>
@@ -52,7 +53,17 @@
 </main>
 <dialog id="ficha" class="control__ficha"><header class="control__fichacab"><span>Detalle del pedido</span><button type="button" id="cerrarDetalle" aria-label="Cerrar detalle">✕</button></header><section id="detalle" class="control__detalle" aria-label="Ficha de pedido"></section></dialog>
 <dialog id="confirmacion" class="control__confirmacion"><form id="confirmarEliminar"><h2>Mover a papelera</h2><p id="textoEliminar"></p><p>El pedido y sus archivos se conservan. Puedes restaurarlo desde Papelera.</p><label>Escribe el folio para confirmar<input id="folioEliminar" autocomplete="off" required></label><p id="errorEliminar" role="status"></p><div class="control__confirmarbotones"><button type="button" id="cancelarEliminar" class="btn btn--linea">Conservar pedido</button><button type="submit" class="btn control__btnpeligro" id="confirmarMover">Mover a papelera</button></div></form></dialog>
-<script src="js/config.js?v=33"></script><script src="js/control-pedidos.js?v=21"></script><script src="js/control-catalogo.js?v=4"></script><script src="js/control-altas.js?v=1"></script><script src="js/control-talleres.js?v=2"></script>
+<dialog id="seguridadLlaves" class="llaves-dialog" aria-labelledby="llavesTitulo">
+<header><h2 id="llavesTitulo">Seguridad · tus llaves</h2><button type="button" id="cerrarLlaves" aria-label="Cerrar seguridad">Cerrar</button></header>
+<p>Registra una llave para entrar con Face ID, huella o PIN. Tu contraseña sigue disponible. Algunas llaves se sincronizan entre tus dispositivos.</p>
+<form id="confirmarLlave"><label>Confirma tu contraseña para administrar llaves<input id="confirmarClaveLlave" type="password" autocomplete="current-password" required></label><button type="submit">Confirmar identidad</button></form>
+<div class="llaves-acciones"><button type="button" id="registrarLlave">Registrar este celular</button><button type="button" id="actualizarLlaves">Actualizar lista</button></div>
+<p id="llavesEstado" role="status" aria-live="polite"></p><ul id="llavesLista" aria-label="Llaves registradas"></ul>
+<p>Quitar una llave impide nuevas entradas con ella; no cierra sesiones que ya estén abiertas.</p>
+</dialog>
+<script src="js/vendor/supabase-2.105.0.js" integrity="sha384-OMZvx3Vy2g+m2/bV7wq4vKCSjS3P2+OVcOXSaqWaoK3ZoSAHaje1LSM9FK4MNk2J"></script>
+<script src="js/acceso-seguro.js?v=1"></script><script src="js/acceso-llaves.js?v=1"></script>
+<script src="js/config.js?v=33"></script><script src="js/control-pedidos.js?v=22"></script><script src="js/control-catalogo.js?v=4"></script><script src="js/control-altas.js?v=1"></script><script src="js/control-talleres.js?v=2"></script>
 <script src="js/render.js?v=9"></script>
 <script type="module" src="js/control-cotizaciones.js?v=37"></script>
 <script type="module" src="js/control-gastos.js?v=3"></script>

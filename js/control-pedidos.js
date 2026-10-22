@@ -25,21 +25,20 @@ function verPestana(nombre){
 const imagenesModulo=import('./pedido-imagen.js?v=1'),recursosRender=[];
 const liberarRenders=()=>{dispatchEvent(new CustomEvent('zain:imagenes-liberar'));for(const r of recursosRender.splice(0))r.liberar();};
 addEventListener('zain:equipo-salio',liberarRenders);
-let config,session=null,offset=0,selected=null,refreshing=null,trash=false,revision=0,detailRevision=0,deleteTarget=null,authEpoch=0;
-try{session=JSON.parse(sessionStorage.getItem('zain-equipo'));}catch{}
+let config,session=null,accesoSeguro=null,llavesUI=null,offset=0,selected=null,refreshing=null,trash=false,revision=0,detailRevision=0,deleteTarget=null,authEpoch=0;
 const status=(txt,error=false)=>{$('#estadoPanel').textContent=txt;$('#estadoPanel').classList.toggle('error',error);};
-const persist=()=>{try{sessionStorage.setItem('zain-equipo',JSON.stringify(session));}catch{}};
 async function auth(body,grant){
  const epoch=authEpoch;
- const r=await fetch(config.supabaseUrl+'/auth/v1/token?grant_type='+grant,{method:'POST',headers:{apikey:config.publishableKey,'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});
- if(!r.ok){const e=new Error(grant==='password'?'Revisa tu correo y contraseña.':'Tu sesión terminó. Vuelve a entrar.');e.auth=grant!=='password';throw e;}
- const data=await r.json();if(epoch!==authEpoch){const e=new Error('Sesión cerrada.');e.auth=true;throw e;}session=data;persist();return session;
+ try{const s=grant==='password'?await accesoSeguro.password(body.email,body.password):await accesoSeguro.renovar();
+ if(epoch!==authEpoch)throw Object.assign(Error('Sesión cerrada.'),{cancelada:true});session=s;return s;
+ }catch(error){const e=Error(AccesoSeguro.mensaje(error));e.auth=grant!=='password';throw e;}
 }
 async function call(op,body,extra={},retry=true){
- const q=new URLSearchParams({op,...extra});
+ const epoch=authEpoch;const q=new URLSearchParams({op,...extra});
  const r=await fetch(api+'?'+q,{method:body?'POST':'GET',headers:{...(session?{Authorization:'Bearer '+session.access_token}:{}),...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});
+ if(epoch!==authEpoch)throw Object.assign(Error('Sesión cerrada.'),{cancelada:true});
  if(r.status===401&&retry&&session?.refresh_token){if(!refreshing)refreshing=auth({refresh_token:session.refresh_token},'refresh_token').finally(()=>refreshing=null);await refreshing;return call(op,body,extra,false);}
- const data=await r.json();if(!r.ok){const e=new Error(data.error||'No se pudo consultar el pedido.');e.auth=r.status===401||r.status===403;throw e;}return data;
+ const data=await r.json();if(epoch!==authEpoch)throw Object.assign(Error('Sesión cerrada.'),{cancelada:true});if(!r.ok){const e=new Error(data.error||'No se pudo consultar el pedido.');e.auth=r.status===401||r.status===403;throw e;}return data;
 }
 window.ZAINEquipo={call,uploadGeneral:async(archivo,blob)=>{
  const send=()=>fetch(api+'?op=generales-comprobante&archivo='+encodeURIComponent(archivo),{method:'POST',headers:{Authorization:'Bearer '+session.access_token,'Content-Type':blob.type},body:blob,signal:AbortSignal.timeout(45000)});
@@ -54,8 +53,8 @@ window.ZAINEquipo={call,uploadGeneral:async(archivo,blob)=>{
 }};
 
 function closeDetail(){liberarRenders();detailRevision++;selected=null;if($('#ficha').open)$('#ficha').close();history.replaceState(null,'',location.pathname+location.search);}
-function salir(){authEpoch++;revision++;closeDetail();if($('#confirmacion').open)$('#confirmacion').close();session=null;try{sessionStorage.removeItem('zain-equipo');}catch{}$('#trabajo').hidden=true;$('#acceso').hidden=false;$('#salir').hidden=true;$('#equipo').textContent='';$('#lista').replaceChildren();$('#resumen').replaceChildren();$('#resumenFinanciero')?.replaceChildren();$('#detalle').replaceChildren();dispatchEvent(new CustomEvent('zain:equipo-salio'));}
-const failed=er=>{if(er.auth)salir();status(er.message||'No se pudo conectar. Prueba Actualizar.',true);};
+function salir(){authEpoch++;revision++;llavesUI?.autorizar(false);accesoSeguro?.cerrar().catch(()=>{});closeDetail();if($('#confirmacion').open)$('#confirmacion').close();session=null;try{sessionStorage.removeItem('zain-equipo');}catch{}$('#trabajo').hidden=true;$('#acceso').hidden=false;$('#salir').hidden=true;$('#equipo').textContent='';$('#lista').replaceChildren();$('#resumen').replaceChildren();$('#resumenFinanciero')?.replaceChildren();$('#detalle').replaceChildren();dispatchEvent(new CustomEvent('zain:equipo-salio'));}
+const failed=er=>{if(er.cancelada)return;if(er.auth)salir();status(er.message||'No se pudo conectar. Prueba Actualizar.',true);};
 function vistas(){
  $('#activos').classList.toggle('on',!trash);$('#activos').setAttribute('aria-pressed',String(!trash));
  $('#papelera').classList.toggle('on',trash);$('#papelera').setAttribute('aria-pressed',String(trash));
@@ -76,6 +75,7 @@ async function cargar(message=''){
  const entering=!$('#acceso').hidden;
  $('#acceso').hidden=true;$('#trabajo').hidden=false;$('#salir').hidden=false;
  if(entering)window.scrollTo({top:0,behavior:'auto'});
+ llavesUI?.autorizar(true);
  $('#equipo').textContent=list.equipo.nombre||'Equipo ZAIN';
  paintSummary(stats.resumen);vistas();
  const money=n=>n==null?'Pendiente':new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(n/100);
@@ -121,7 +121,7 @@ addEventListener('zain:abrir-pedido',e=>{if(session&&/^[a-f0-9-]{36}$/i.test(e.d
 $('#ficha').addEventListener('close',()=>{liberarRenders();document.documentElement.classList.remove('sin-scroll');detailRevision++;selected=null;history.replaceState(null,'',location.pathname+location.search);});
 $('#ficha').addEventListener('click',e=>{if(e.target===$('#ficha')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDetail();}});
 $('#salir').addEventListener('click',()=>{salir();status('Sesión cerrada.');});
-$('#login').addEventListener('submit',async e=>{e.preventDefault();$('#entrar').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;}});
+$('#login').addEventListener('submit',async e=>{e.preventDefault();if(!accesoSeguro)return;await accesoSeguro.esperarCierre();if(accesoSeguro.ocupada)return;$('#entrar').disabled=true;$('#entrarLlave').disabled=true;status('Entrando…');const deepLink=location.hash.slice(1);try{await auth({email:$('#correo').value.trim(),password:$('#password').value},'password');$('#password').value='';await cargar();if(/^[a-f0-9-]{36}$/i.test(deepLink))await detalle(deepLink);}catch(er){salir();status(er.message,true);}finally{$('#entrar').disabled=!config?.activo;$('#entrarLlave').disabled=false;}});
 $('#filtros').addEventListener('submit',e=>{e.preventDefault();offset=0;cargar().catch(failed);});
 $('#recargar').addEventListener('click',()=>cargar().catch(failed));
 addEventListener('zain:gastos-guardados',()=>cargar().catch(failed));
@@ -168,5 +168,17 @@ function marcarChips(){for(const b of $('#chipsEstado').children){const on=b.dat
 $('#chipsEstado').addEventListener('click',e=>{const b=e.target.closest('[data-estado]');if(!b)return;trash=false;offset=0;$('#estadoFiltro').value=b.dataset.estado;$('#periodo').value='';vistas();cargar().catch(failed);});
 addEventListener('zain:equipo-listo',marcarChips);
 const modulosListos=document.readyState==='loading'?new Promise(r=>addEventListener('DOMContentLoaded',r,{once:true})):Promise.resolve();
-call('config').then(async x=>{await modulosListos;config=x;if(!x.activo){status('El acceso todavía está en preparación.');$('#entrar').textContent='Acceso pendiente';return;}$('#entrar').disabled=false;$('#entrar').textContent='Entrar al panel';if(session){const id=location.hash.slice(1);try{await cargar();if(/^[a-f0-9-]{36}$/i.test(id))await detalle(id);}catch(er){salir();status(er.message,true);}}}).catch(()=>{status('No se pudo conectar con ZAIN. Intenta de nuevo.',true);$('#entrar').textContent='Acceso no disponible';});
+call('config').then(async x=>{
+ await modulosListos;config=x;
+ if(!x.activo){status('El acceso todavía está en preparación.');$('#entrar').textContent='Acceso pendiente';return;}
+ let storage;try{storage=sessionStorage;}catch{storage={getItem:()=>{throw Error('Sin almacenamiento');},setItem:()=>{throw Error('Sin almacenamiento');},removeItem:()=>{}};}
+ accesoSeguro=AccesoSeguro.crear({url:x.supabaseUrl,key:x.publishableKey,storage,storageKey:'zain-equipo',autoRefreshToken:false,aislarPestana:true});
+ accesoSeguro.escuchar(s=>{session=s;});
+ llavesUI=LlavesUI.montar({acceso:accesoSeguro,autorizar:()=>call('resumen'),
+  alEntrar:async()=>{try{session=accesoSeguro.sesion;const id=location.hash.slice(1);await cargar();if(/^[a-f0-9-]{36}$/i.test(id))await detalle(id);}catch(e){salir();throw e;}},
+  alError:e=>{if(e.auth)failed(e);},loginForm:$('#login'),loginMensaje:$('#estadoPanel')});
+ $('#entrar').disabled=false;$('#entrar').textContent='Entrar al panel';
+ try{session=await accesoSeguro.restaurar();if(session){const id=location.hash.slice(1);await cargar();if(/^[a-f0-9-]{36}$/i.test(id))await detalle(id);}}
+ catch(er){salir();status(AccesoSeguro.mensaje(er),true);}
+}).catch(()=>{status('No se pudo conectar con ZAIN. Intenta de nuevo.',true);$('#entrar').textContent='Acceso no disponible';});
 })();

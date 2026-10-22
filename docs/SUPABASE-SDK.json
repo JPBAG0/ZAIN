@@ -1,0 +1,8 @@
+{
+  "paquete": "@supabase/supabase-js",
+  "version": "2.105.0",
+  "fuente": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.105.0/dist/umd/supabase.js",
+  "archivo": "js/vendor/supabase-2.105.0.js",
+  "sha256": "24e8c00dc25da420ee741068b60bcdb5f62cb3598d8834058acf37ec6ee1a724",
+  "integridad": "sha384-OMZvx3Vy2g+m2/bV7wq4vKCSjS3P2+OVcOXSaqWaoK3ZoSAHaje1LSM9FK4MNk2J"
+}
