@@ -1,3 +1,9 @@
+## Vigente: ventas reales separadas de negociación — 22-oct-2026
+
+Prompt 1 de JP: Finanzas y Pedidos separan VENDIDO / POR COBRAR / EN NEGOCIACIÓN. Vendido exige estado confirmado/produccion/entregado y anticipo cubierto por pagos de la revisión publicada. Las tres tarjetas usan totales con IVA; costos/utilidad/margen siguen sin IVA. Cancelados, papelera y cargas incompletas fuera. Negociación no se suma a ventas; modelos enviada/autorizada sin cantidades cuentan casos, sin sumar precios unitarios. Convertidas se cuentan solo mediante su pedido. Sin términos históricos de anticipo, exigir cobro completo; estados confirmados sin evidencia se señalan para revisar, sin alterar datos.
+
+SQL nuevo: `supabase/ventas-reales.sql`, posterior a los históricos; solo vista/RPC, mismos permisos privados. Respuestas `version_ventas:1`; sin migrar, la web oculta los totales anteriores. `convertida` está en los estados del servidor/Edge, reservada a `cm-convertir`. Recursos Gestión: pedidos v20, finanzas JS/CSS v3. Guía y comandos: `docs/VENTAS-REALES.md`; resumen en `docs/PEDIDOS.md`. Preparado/probado localmente en rama `codex/zain-ventas-reales-20261022`; no publicado, no desplegar ni enviar mensajes por inferencia. Este bloque prevalece sobre los históricos que trataban cotizaciones o aceptadas como ventas.
+
 ## Cotizaciones por modelo guardadas — 21-oct-2026 (Claude)
 
 JP pidió guardarlas y, cuando el cliente autorice, capturar cantidades y pasarlas a Pedidos respetando el precio cotizado. Fase 1–2 publicada: anticipo (%) y PDF de una hoja; tabla `zain_cotizaciones_modelos` (folio COT-0001…, estados borrador/enviada/autorizada/convertida/descartada, sin borrado) + bucket privado `zain-cotizaciones-logos`; ops `cm-*` en Edge `zain-pedidos`. Fase 3 pendiente: «Convertir en pedido» (cantidades por talla → pedido normal con precios cotizados fijos; enviar el folio ZAIN al cliente). Detalle en docs/COTIZACIONES-MODELOS.md.

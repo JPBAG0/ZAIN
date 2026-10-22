@@ -4,7 +4,8 @@ const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}
 const BUCKET='zain-cotizaciones-logos',MAX_JSON=300000,MAX_LOGO=15*1024*1024;
 const TIPOS={'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/svg+xml':'svg'};
 // «convertida» solo la pone la conversión a pedido.
-export const ESTADOS=['borrador','enviada','autorizada','descartada'];
+export const ESTADOS=['borrador','enviada','autorizada','convertida','descartada'];
+const ESTADOS_MANUALES=ESTADOS.filter(estado=>estado!=='convertida');
 const CAMPOS='id,folio,estado,cliente,desde,modelos,pedido_id,version,created_at,updated_at';
 const objetoValido=(id,objeto)=>typeof objeto==='string'&&objeto.startsWith(id+'/')&&/^[a-f0-9-]{36}\/[a-f0-9-]{36}\.(png|jpg|webp|svg)$/.test(objeto);
 export function validarCotizacion(b,fail){
@@ -15,7 +16,7 @@ export function validarCotizacion(b,fail){
  if(b.comercial!=null&&(!objeto(b.comercial)||JSON.stringify(b.comercial).length>MAX_JSON))fail(400,'Revisa los precios de la cotización.');
  if(b.desde!=null&&(!Number.isSafeInteger(b.desde)||b.desde<0))fail(400,'Revisa los precios de la cotización.');
  if(!Number.isSafeInteger(b.modelos)||b.modelos<0||b.modelos>20)fail(400,'La cotización admite hasta 20 modelos.');
- if(b.estado!=null&&!ESTADOS.includes(b.estado))fail(400,'Estado de cotización inválido.');
+ if(b.estado!=null&&!ESTADOS_MANUALES.includes(b.estado))fail(400,'Estado inválido: usa Convertir en pedido para marcarla convertida.');
  let logo=null;
  if(b.logo!=null){
   if(!objeto(b.logo)||!objetoValido(b.id,b.logo.objeto)||!TIPOS[b.logo.mime]||typeof b.logo.nombre!=='string'||b.logo.nombre.length>200)fail(400,'Vuelve a subir el logo.');
@@ -55,7 +56,7 @@ export function createCotizacionesModelos({sb,fail,storageURL,row}){
    return {cotizacion:await actualizar(b.id,b.version,v,user)};
   },
   estado:async(b,user)=>{
-   if(!UUID.test(b?.id||'')||!Number.isSafeInteger(b.version)||b.version<1||!ESTADOS.includes(b.estado))fail(400,'Revisa el estado de la cotización.');
+   if(!UUID.test(b?.id||'')||!Number.isSafeInteger(b.version)||b.version<1||!ESTADOS_MANUALES.includes(b.estado))fail(400,'Revisa el estado de la cotización; convertida requiere un pedido.');
    return {cotizacion:await actualizar(b.id,b.version,{estado:b.estado},user)};
   },
   // El pedido ya se creó con el flujo normal de solicitudes; aquí solo se liga y se cierra la cotización.

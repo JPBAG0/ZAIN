@@ -1,5 +1,5 @@
 /* Finanzas (17-oct-2026): dashboard anual y movimientos generales. Celular primero. */
-.fin-anio select{min-height:44px;border:1px solid #cbd2dc;border-radius:10px;padding:8px 12px;font:600 15px Archivo,Arial,sans-serif;background:#fff}
+.fin-anio select{min-height:44px;border:1px solid #cbd2dc;border-radius:10px;padding:8px 12px;font:600 16px Archivo,Arial,sans-serif;background:#fff}
 .fin-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
 .fin-kpis>div{display:grid;gap:3px;background:#fff;border:1px solid #d9dfe7;border-radius:14px;padding:14px;min-width:0}
 .fin-kpis small{font-size:12px;color:#5d6880}
@@ -89,4 +89,19 @@
  .fin-plot,.fin-meses{gap:2px}
  .fin-meses span{font-size:9px}
  .fin-eje span{font-size:9.5px}
+}
+
+/* Tres cifras independientes, también en la bandeja de Pedidos. */
+.fin-kpis.fin-principales{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fin-cobranza{margin:0 0 14px}.fin-cobranza summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+.fin-cobranza table{width:100%;border-collapse:collapse;font-size:14px}.fin-cobranza th,.fin-cobranza td{padding:10px;text-align:left;border-bottom:1px solid #d9dfe7;white-space:nowrap}
+.bandeja-finanzas span{font-size:12px;color:#4c586e;display:block;margin-top:4px}
+@media(max-width:600px){.fin-kpis.fin-principales{grid-template-columns:1fr}}
+
+.fin-anio{flex:0 0 auto}.fin-anio select{min-width:92px}
+@media(max-width:600px){
+ .fin-cobranza .cot-tablewrap tr{grid-template-columns:1fr;gap:8px}
+ .fin-cobranza .cot-tablewrap td{display:flex;justify-content:space-between;gap:14px;width:auto}
+ .fin-cobranza td::before{content:attr(data-label);color:#4c586e;font-weight:500}
+ .fin-cobranza .cot-tablewrap th{width:auto;white-space:normal;overflow-wrap:anywhere}
 }
