@@ -203,7 +203,7 @@ export function createHandler(env={}, fetcher=fetch) {
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
   const avisosEnabled=env.ZAIN_AVISOS_ENABLED==='true',avisos=createAvisos({sb,fail,fetcher});
   const fondo=p=>{if(globalThis.EdgeRuntime?.waitUntil){globalThis.EdgeRuntime.waitUntil(p);return;}return p;};
-  const wa=createWhatsApp({sb,fail,row,storageURL,secreto:env.ZAIN_WA_SECRETO,habilitado:env.ZAIN_WA_ENABLED==='true',receipt,plantillas:C.seguimientoWhatsApp||[],
+  const wa=createWhatsApp({sb,fail,row,storageURL,base,serviceHeaders,fetcher,secreto:env.ZAIN_WA_SECRETO,habilitado:env.ZAIN_WA_ENABLED==='true',receipt,plantillas:C.seguimientoWhatsApp||[],
    catalogo:async()=>{const cat=await currentCatalog();return cat.productos.filter(p=>p.activo!==false).map(p=>({sku:p.sku,nombre:p.nombreComercial||p.nombre,tallas:p.tallas||[],minimo:p.minimoPiezas||cat.minimoPedido||1,paso:p.pasoPiezas||1,colores:p.colores.map(id=>({id,nombre:cat.colores.find(c=>c.id===id)?.nombre||id})),tecnicas:p.tecnicas.map(id=>({id,nombre:cat.tecnicas.find(t=>t.id===id)?.nombre||id})),zonas:p.zonas.map(z=>({id:z.id,nombre:z.nombre,max:z.max}))}));},
    crearDatos:async b=>{const cat=await currentCatalog(),p=cat.productos.find(p=>p.sku===b.sku&&p.activo!==false),color=cat.colores.find(c=>c.id===b.color_id),tecnica=cat.tecnicas.find(t=>t.id===b.tecnica),zona=p?.zonas.find(z=>z.id===b.zona);
     if(!p||!color||!tecnica||!zona)fail(400,'Revisa modelo, color, técnica y zona.');

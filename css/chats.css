@@ -14,3 +14,7 @@
 #waResponder button{margin-top:10px}#waError,#waDialogoError{color:#9b3541}
 @media(max-width:760px){.wa-columnas{grid-template-columns:1fr}.wa-conversacion{padding:12px}.wa-botones .btn{width:100%}}
 @media(hover:hover) and (pointer:fine){.wa-chat:hover{background:#edf1fa}}
+
+/* Compositor: mismos colores, tipografía y controles de Gestión. */
+.wa-compositor{display:flex;align-items:flex-end;gap:8px}.wa-compositor #waTexto{flex:1;min-width:0;resize:vertical}.wa-compositor .wa-mas{flex:0 0 44px;min-width:44px;padding:0;font-size:28px;line-height:44px}.wa-compositor #waEnviar{flex:0 0 auto;min-height:44px;padding:10px 14px}#waResponder .wa-compositor button{margin:0}
+.wa-adjuntos-menu{display:flex;flex-wrap:wrap;gap:8px;padding:8px 0}.wa-adjuntos-menu[hidden],.wa-adjunto[hidden]{display:none}.wa-adjunto{display:flex;align-items:center;gap:12px;padding:12px;margin:8px 0;border:1px solid #d9dfe7;border-radius:10px;background:#f0f2f6}.wa-adjunto div{display:grid;gap:4px;min-width:0;overflow-wrap:anywhere;flex:1}.wa-adjunto img{width:56px;height:56px;object-fit:contain}.wa-adjunto small,.wa-formatos{color:#536077}.wa-formatos{display:block;margin:8px 0;font-size:12px}.wa-adjunto a{color:#182034;text-decoration:underline}.wa-adjunto button{flex:0 0 auto}

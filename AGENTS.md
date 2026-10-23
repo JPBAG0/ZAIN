@@ -1,3 +1,11 @@
+## Adjuntos humanos en Chats — 22-oct-2026
+
+JP confirmó que la vinculación QR ya funciona y pidió adjuntar archivos/cotizaciones. Esta decisión amplía la regla histórica de texto: PDF, JPG/PNG/WEBP y documentos Word/Excel modernos, máximo8MB, siempre por una persona al pulsar Enviar. BOT_AUTOMATICO=false. No enviar mensajes o archivos reales durante pruebas.
+
+Botón+ junto a la respuesta: Archivo del equipo o Cotización en PDF. Vista previa y quitar en memoria, borrador por chat, cotización de modelos enviada/autorizada o revisión publicada del pedido ligado. Mismo generador/membrete PDF; precios guardados, sin costos internos. Revisión/versión comprobada antes de subir y encolar. Archivo privado, hash/tamaño/contenido/actor/ruta validados, ID estable al reintentar; cambiar de chat durante carga no encola. Reserva y autorización antes de enviar; fallo posterior incierto sin reenvío automático. Documentación: docs/WHATSAPP-ADJUNTOS.md del sitio ZAIN.
+
+Validación:277 pruebas sitio/PGlite y21 puente Node20; navegador390/1280 con archivos y contactos ficticios, PDF sin logo/con logo y de pedido publicado, reintento, cambio de chat, limpieza al salir y recorrido WhatsApp anterior. PDF ficticio renderizado/revisado. La prueba humana de recepción de archivos queda en manos de JP; conexión existente confirmada. Ver el checkpoint de adjuntos para publicación/verificación real.
+
 ## Corrección de flujos — 22-oct-2026
 
 Esta actualización sustituye los estados históricos de «solo local» para la entrega del 22-oct. JP autorizó publicar y después corrigió el alcance: conservar el diseño de ZAIN, activar Passkeys y vincular su WhatsApp Business existente por QR como dispositivo adicional. No hay respuestas automáticas ni mensajes de prueba reales.

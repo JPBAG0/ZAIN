@@ -28,6 +28,8 @@ before(async()=>{if(!modulo)return;const {PGlite}=await import(modulo);db=new PG
  create table zain_cotizaciones(pedido_id uuid primary key,publicada jsonb);
  create function zain_crear_pedido(p_id uuid,p_token_hash text,p_items jsonb,p_archivos jsonb,p_total integer,p_bytes bigint,p_capacity bigint,p_client text) returns jsonb language plpgsql as $$begin insert into public.zain_pedidos(id,folio,token_hash,items,archivos,total) values(p_id,'ZAIN-FICTICIO',p_token_hash,p_items,p_archivos,p_total);return jsonb_build_object('folio','ZAIN-FICTICIO');end;$$;`);
  await db.exec(await readFile(new URL('../supabase/whatsapp-manual.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/whatsapp-adjuntos.sql',import.meta.url),'utf8'));
+ await db.exec('create table zain_cotizaciones_modelos(id uuid primary key,version integer,estado text)');
  await db.query('insert into auth.users values($1,$2)',[uid,'equipo@example.test']);await db.query('insert into zain_equipo values($1,true)',[uid]);await db.query("insert into zain_accesos values('equipo@example.test',true,'Equipo ficticio')");
 });
 after(async()=>await db?.close());
@@ -102,9 +104,10 @@ sqlTest('RLS: anon y otro usuario sin lectura; staff sí; tampoco staff inserta 
  assert.equal((await db.query("select public from storage.buckets where id='zain-wa-media'")).rows[0].public,false);
 });
 function apiFixture(){
- const calls=[];
+ const calls=[],archivos=new Map();
  const fetcher=async(url,o={})=>{
   const u=new URL(url),body=o.body?JSON.parse(o.body):{};calls.push({url,body});let d;
+  if(u.pathname.startsWith('/storage/v1/object/authenticated/zain-wa-media/')){const data=archivos.get(u.pathname.split('/zain-wa-media/')[1]);return new Response(data||'',{status:data?200:404});}
   if(u.pathname==='/auth/v1/user')d={id:uid,email:'equipo@example.test',email_confirmed_at:'2026-10-22'};
   else if(url.includes('/zain_accesos?'))d=[{nombre:'Equipo'}];else if(url.includes('/zain_equipo?'))d=[{user_id:uid,nombre:'Equipo',activo:true}];
   else if(url.includes('/rpc/zain_wa_operar'))d=await op(body.p_modo,body.p_datos,body.p_actor);
@@ -113,17 +116,20 @@ function apiFixture(){
   else if(url.includes('/zain_wa_config?'))d=(await db.query('select * from zain_wa_config')).rows;
   else if(url.includes('/zain_wa_mensajes?'))d=[];
   else if(url.includes('/zain_push?'))d=[];
-  else if(url.includes('/zain_wa_salida?')&&!u.searchParams.has('cotizacion_revision'))d=(await db.query("select id,texto,estado,error,created_at from zain_wa_salida where chat_id=$1 and estado<>'enviada'",[u.searchParams.get('chat_id')?.slice(3)])).rows;
+  else if(url.includes('/zain_wa_salida?')&&u.searchParams.has('id'))d=(await db.query('select * from zain_wa_salida where id=$1',[u.searchParams.get('id').slice(3)])).rows;
+  else if(url.includes('/zain_cotizaciones_modelos?'))d=(await db.query('select * from zain_cotizaciones_modelos where id=$1',[u.searchParams.get('id').slice(3)])).rows;
+  else if(url.includes('/zain_wa_salida?')&&!u.searchParams.has('cotizacion_revision'))d=(await db.query("select id,texto,adjunto,estado,error,created_at from zain_wa_salida where chat_id=$1 and estado<>'enviada'",[u.searchParams.get('chat_id')?.slice(3)])).rows;
   else if(url.includes('/zain_wa_salida?'))d=(await db.query("select estado,terminado_at from zain_wa_salida where chat_id=$1 and cotizacion_revision=$2 and estado in ('pendiente','preparando','enviando','enviada','incierto') order by created_at desc limit 1",[u.searchParams.get('chat_id')?.slice(3),Number(u.searchParams.get('cotizacion_revision')?.slice(3))])).rows;
   else if(url.includes('/zain_cotizaciones?'))d=(await db.query('select publicada from zain_cotizaciones where pedido_id=$1',[u.searchParams.get('pedido_id')?.slice(3)])).rows;
   else if(url.includes('/zain_pedidos?'))d=(await db.query('select * from zain_pedidos where id=$1',[u.searchParams.get('id')?.slice(3)])).rows;
+  else if(url.includes('/storage/v1/object/sign/'))d={signedURL:u.pathname.replace('/storage/v1','')+'?token=ficticio'};
   else if(url.includes('/storage/v1/object/upload/sign/'))d={url:'/object/upload/sign/ficticio?token=ficticio'};
   else throw Error('Ruta inesperada en fixture: '+u.pathname);
   return Response.json(d);
  };
  const handler=createHandler({SUPABASE_URL:'https://fixture.supabase.co',SUPABASE_SECRET_KEY:'ficticio',SUPABASE_PUBLISHABLE_KEY:'ficticio',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_WA_ENABLED:'true',ZAIN_WA_SECRETO:secreto,ZAIN_AVISOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},fetcher);
  const call=(op,b,{staff=true,bridge=false,secret=secreto}={})=>handler(new Request('https://zain.test/api/pedidos?op='+op,{method:b?'POST':'GET',headers:{'Content-Type':'application/json',...(staff?{Authorization:'Bearer ficticio'}:{}),...(bridge?{'x-puente':secret}:{})},body:b?JSON.stringify(b):undefined}));
- return {call,calls};
+ return {call,calls,archivos};
 }
 sqlTest('API: secreto no da permisos de equipo; staff no puede simular entradas; QR privado',async()=>{
  const f=apiFixture();assert.equal((await f.call('wa-estado',null,{staff:false})).status,401);
@@ -162,4 +168,44 @@ sqlTest('API: cotización sin enviar prepara enlace; seguimiento requiere envío
  await db.exec('update zain_wa_chats set ultimo_entrante=now()');assert.equal((await hilo()).seguimiento,false);
  await db.exec("update zain_cotizaciones set publicada='{\"revision\":2}'");assert.equal((await hilo()).cotizacion.revision,2);
  assert.equal((await f.call('wa-enviar',{id:randomUUID(),chat_id:c,texto:'Enlace anterior',cotizacion_revision:1})).status,409);
+});
+
+const pdfFicticio=Buffer.from('%PDF-1.4\nPDF SINTETICO\n%%EOF\n');
+const archivoFicticio=(cambios={})=>({nombre:'Cotizacion-FICTICIA.pdf',mime:'application/pdf',bytes:pdfFicticio.length,hash:createHash('sha256').update(pdfFicticio).digest('hex'),...cambios});
+sqlTest('API y SQL: adjunto privado sin texto, cola humana idempotente y acuse conserva el archivo',async()=>{
+ const f=apiFixture(),chat=(await recibir()).id,id=randomUUID();
+ const r=await f.call('wa-adjunto-subida',{id,chat_id:chat,adjunto:archivoFicticio()});assert.equal(r.status,200);const {adjunto}=await r.json();
+ assert.equal((await db.query('select count(*)::int as n from zain_wa_salida')).rows[0].n,0);
+ f.archivos.set(adjunto.ruta,pdfFicticio);const datos={id,chat_id:chat,texto:'',adjunto};
+ for(let i=0;i<2;i++)assert.equal((await f.call('wa-enviar',datos)).status,200);
+ assert.equal((await db.query('select count(*)::int as n from zain_wa_salida')).rows[0].n,1);
+ assert.equal((await f.call('wa-enviar',{...datos,adjunto:{...adjunto,nombre:'Otra.pdf'}})).status,409);
+ await conectar();const job=await op('tomar',{ejecutor:runner});assert.equal(job.adjunto.ruta,adjunto.ruta);
+ const puente=(accion,extra={})=>f.call('wa-puente',{accion,ejecutor:runner,id,lease:job.lease,...extra},{bridge:true,staff:false});
+ assert.equal((await puente('adjunto',{lease:randomUUID()})).status,409);assert.equal((await puente('adjunto')).status,200);
+ await op('iniciar',{...job,ejecutor:runner});await recibir({wa_id:job.mensaje_wa_id,direccion:'persona-desde-cel',tipo:'documento',texto:''});await op('terminar',{...job,ejecutor:runner,estado:'enviada',wa_id:job.mensaje_wa_id});
+ const m=(await db.query("select tipo,media_path,mime,texto from zain_wa_mensajes where direccion='saliente'")).rows[0];assert.deepEqual(m,{tipo:'documento',media_path:adjunto.ruta,mime:'application/pdf',texto:''});
+});
+sqlTest('API: adjuntos requieren usuario, chat entrante, tamaño/tipo y pertenencia al envío',async()=>{
+ const f=apiFixture(),chat=(await recibir()).id,id=randomUUID(),datos={id,chat_id:chat,adjunto:archivoFicticio()};
+ assert.equal((await f.call('wa-adjunto-subida',datos,{staff:false})).status,401);
+ for(const cambio of [{bytes:8388609},{mime:'text/html'},{nombre:'../archivo.pdf'},{hash:'inventado'}])assert.equal((await f.call('wa-adjunto-subida',{...datos,adjunto:archivoFicticio(cambio)})).status,400);
+ const {adjunto}=await (await f.call('wa-adjunto-subida',datos)).json();
+ assert.equal((await f.call('wa-enviar',{...datos,texto:'PDF',adjunto})).status,409,'No encolar sin subida terminada');
+ assert.equal((await f.call('wa-enviar',{...datos,texto:'PDF',adjunto:{...adjunto,ruta:'salida/otra-cuenta/archivo.pdf'}})).status,400);
+ f.archivos.set(adjunto.ruta,Buffer.alloc(pdfFicticio.length));assert.equal((await f.call('wa-enviar',{...datos,texto:'PDF',adjunto})).status,409,'Contenido/hash incorrecto');
+ assert.equal((await db.query('select count(*)::int as n from zain_wa_salida')).rows[0].n,0);
+});
+sqlTest('API: una cotización actualizada después de elegirla requiere preparar su PDF otra vez',async()=>{
+ const f=apiFixture(),chat=(await recibir()).id,id=randomUUID(),modelo=randomUUID();await db.query("insert into zain_cotizaciones_modelos values($1,1,'enviada')",[modelo]);
+ const datos={id,chat_id:chat,adjunto:archivoFicticio({origen:{tipo:'modelo',id:modelo,version:1}})};
+ const r=await f.call('wa-adjunto-subida',datos);assert.equal(r.status,200);const {adjunto}=await r.json();f.archivos.set(adjunto.ruta,pdfFicticio);
+ await db.query('update zain_cotizaciones_modelos set version=2 where id=$1',[modelo]);
+ assert.equal((await f.call('wa-enviar',{id,chat_id:chat,texto:'Cotización',adjunto})).status,409);
+ assert.equal((await db.query('select count(*)::int as n from zain_wa_salida')).rows[0].n,0);
+});
+sqlTest('SQL: un adjunto no puede usar la carpeta de otro autor y el fallo previo no es un envío incierto',async()=>{
+ const chat=(await recibir()).id,id=randomUUID(),a={...archivoFicticio(),ruta:'salida/'+randomUUID()+'/'+id+'-'+archivoFicticio().hash+'.pdf',tipo:'documento'};
+ const datos={id,chat_id:chat,texto:'',adjunto:a,autor_email:'equipo@example.test',mensaje_wa_id:'3EB0'+createHash('sha256').update(id).digest('hex').slice(0,28).toUpperCase()};
+ assert.ok((await op('encolar',datos,uid)).error);a.ruta='salida/'+uid+'/'+id+'-'+a.hash+'.pdf';await op('encolar',datos,uid);await conectar();const job=await op('tomar',{ejecutor:runner});await op('terminar',{...job,ejecutor:runner,estado:'error'});assert.equal((await db.query('select estado from zain_wa_salida')).rows[0].estado,'error');
 });
