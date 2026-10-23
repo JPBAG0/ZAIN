@@ -11,10 +11,10 @@ const edits=C.productos.map(p=>({producto_id:p.idPublico||p.id,version:1,cambios
 const cat=resolveInternal(C,edits),publica=projectPublic(Pub,cat,[],'https://p.test');
 const request=items=>({id:'12345678-1234-4123-8123-123456789abc',token:'a'.repeat(64),items,files:[]});
 const selection=(p,cid,talla)=>({p:p.id,colorId:cid,color:cat.colores.find(c=>c.id===cid).nombre,tecnica:cat.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{[talla]:5},zona:p.zonas[0].nombre,cm:8});
-test('gama nueva conserva premium y13bolsas, publica35 referencias (incluye gorras y chaleco acolchado) y mantiene29 históricas',()=>{
- assert.equal(publica.productos.length,35);assert.equal(publica.productosHistoricos.length,29);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,20);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,7);
+test('gama nueva conserva premium y13bolsas, publica36 referencias (incluye gorras, chaleco y camisa utilitaria) y mantiene29 históricas',()=>{
+ assert.equal(publica.productos.length,36);assert.equal(publica.productosHistoricos.length,29);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,21);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,7);
  assert.ok([...keep].every(sku=>publica.productos.some(p=>p.sku===sku)));
- assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,64);
+ assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,65);
  for(const m of publica.muestrasPortada){const p=publica.productos.find(p=>p.id===m.p);assert.ok(p&&p.colores.includes(m.c)&&p.tecnicas.includes(m.t));}
  assert.ok(publica.categoriasCatalogo.includes('Chalecos'));
 });

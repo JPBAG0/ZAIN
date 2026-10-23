@@ -1343,6 +1343,41 @@
       "id": "zn-ce-002-c05",
       "nombre": "Negro",
       "hex": "#252527"
+    },
+    {
+      "id": "zn-cm-016-c01",
+      "nombre": "Blanco",
+      "hex": "#e9e9e5"
+    },
+    {
+      "id": "zn-cm-016-c02",
+      "nombre": "Natural",
+      "hex": "#d6d3ca"
+    },
+    {
+      "id": "zn-cm-016-c03",
+      "nombre": "Beige",
+      "hex": "#bab8a8"
+    },
+    {
+      "id": "zn-cm-016-c04",
+      "nombre": "Olivo",
+      "hex": "#414c27"
+    },
+    {
+      "id": "zn-cm-016-c05",
+      "nombre": "Azul marino",
+      "hex": "#192138"
+    },
+    {
+      "id": "zn-cm-016-c06",
+      "nombre": "Carbón",
+      "hex": "#383b36"
+    },
+    {
+      "id": "zn-cm-016-c07",
+      "nombre": "Negro",
+      "hex": "#171a18"
     }
   ],
   "tecnicas": [
@@ -6043,6 +6078,82 @@
         "largo": 1.27
       },
       "fotoModelo": "img/productos/zain/zn-ce-002-modelo.webp"
+    },
+    {
+      "id": "zn-cm-016",
+      "sku": "ZN-CM-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa utilitaria manga larga · Unisex",
+      "nombreFamilia": "Camisa utilitaria manga larga",
+      "familia": "zain-camisa-utilitaria",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "Camisa ligera y elástica de manga larga, con ventilación trasera y bolsillos funcionales. Mangas enrollables con broche.",
+      "especificaciones": "Ventilación trasera y bolsillos con malla. Broches frontales. Mangas enrollables con broche. Bolsillo frontal con cierre y bolsillo frontal con velcro. Corte recto. Protección UPF 50+ declarada por el fabricante.",
+      "tejido": "Poliéster con elastano",
+      "composicion": "86% poliéster / 14% elastano.",
+      "composicionColor": {},
+      "gramaje": 140,
+      "foto": "img/productos/zain/zn-cm-016-c01.webp",
+      "fotosColor": {
+        "zn-cm-016-c01": "img/productos/zain/zn-cm-016-c01.webp",
+        "zn-cm-016-c02": "img/productos/zain/zn-cm-016-c02.webp",
+        "zn-cm-016-c03": "img/productos/zain/zn-cm-016-c03.webp",
+        "zn-cm-016-c04": "img/productos/zain/zn-cm-016-c04.webp",
+        "zn-cm-016-c05": "img/productos/zain/zn-cm-016-c05.webp",
+        "zn-cm-016-c06": "img/productos/zain/zn-cm-016-c06.webp",
+        "zn-cm-016-c07": "img/productos/zain/zn-cm-016-c07.webp"
+      },
+      "colores": [
+        "zn-cm-016-c01",
+        "zn-cm-016-c02",
+        "zn-cm-016-c03",
+        "zn-cm-016-c04",
+        "zn-cm-016-c05",
+        "zn-cm-016-c06",
+        "zn-cm-016-c07"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado disponible para cotización. La ficha también menciona vinil textil; otras aplicaciones requieren confirmación. Acabado y ubicación se revisan antes de producir.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 310,
+          "max": 9,
+          "maxAlto": 4,
+          "orientativa": true
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 410,
+          "y": 310,
+          "max": 9,
+          "maxAlto": 4,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": false,
+      "detalleMedidas": "Tallas XS a 2XL. Medidas exactas de la prenda y área de bordado por confirmar.",
+      "disponibilidad": "Consulta disponibilidad por talla y color. Fotografías del modelo; el tono de pantalla puede variar. Tamaño, ubicación del logo y acabado se confirman al cotizar."
     }
   ],
   "muestrasPortada": [

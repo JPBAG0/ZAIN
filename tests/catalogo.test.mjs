@@ -80,9 +80,9 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
   const out=await r.json();assert.ok(!('codigoFabricante' in out.pedido.items[0]));assert.ok(!('fabricante' in out.pedido.items[0]));assert.equal(out.pedido.items[0].sku,p.sku);assert.equal(out.pedido.items[0].color,'Rosa');assert.ok(!/Yazbek|D0605/i.test(JSON.stringify(out)));assert.equal(out.pedido.items[0].composicion,'75% algodón / 25% poliéster');assert.ok(!JSON.stringify(out).includes('NO MOSTRAR'));assert.ok(!('fuente' in out.pedido.items[0]));
 });
 
-test('base conserva 44 referencias previas y agrega 20 preparadas ocultas con SKU nuevos',()=>{
- assert.equal(Public.productos.length,39);assert.equal(Public.productosHistoricos.length,25);
- assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,64);
+test('base conserva 44 referencias previas y agrega 21 preparadas ocultas con SKU nuevos',()=>{
+ assert.equal(Public.productos.length,39);assert.equal(Public.productosHistoricos.length,26);
+ assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,65);
  assert.ok(!/Yazbek|ActiviTee|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
  assert.equal(Public.productos.filter(p=>p.fotoModelo).length,25);
  for(const p of Public.productos.filter(p=>p.fotoModelo)){
