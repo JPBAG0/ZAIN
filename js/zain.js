@@ -1007,7 +1007,7 @@
     if (!/^image\//.test(f.type)) return aviso("Ese archivo no es una imagen. Sube el logo en PNG, JPG o SVG.", true);
     if (f.size > 15 * 1024 * 1024) return aviso("La imagen pesa más de 15 MB. Prueba con una versión más ligera.", true);
     t.parentElement.querySelector("span").innerHTML = "<b>Analizando el logo…</b>";
-    try { x.crudo = await ZR.abrirArchivo(f); x.nombre = f.name; analizarCapa(x); aviso(""); }
+    try { x.crudo = await ZR.abrirArchivo(f); x.nombre = f.name; x.archivo = f; analizarCapa(x); aviso(""); }
     catch (er) { aviso(er.message, true); }
     pintarCapas();
   });
@@ -1722,7 +1722,8 @@
       tieneLogo: !!original,
       tieneRender,
     };
-    if (original || render) item.archivosTemporales = !await A.guardar(item.id, { logo: original, logoNombre: original?.name, render });
+    const extras = tieneRender ? E.extras.filter((x) => x.archivo).map((x, i) => ({ kind: "logo-" + (i + 2), nombre: x.archivo.name, blob: x.archivo })) : [];
+    if (original || render || extras.length) item.archivosTemporales = !await A.guardar(item.id, { logo: original, logoNombre: original?.name, render, extras });
     pedido.push(item);
     guardarPedido();
     aviso("Agregado a tu pedido.");

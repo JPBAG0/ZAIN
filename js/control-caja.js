@@ -27,6 +27,7 @@ export function montarCaja(){
   <fieldset data-campo="grupo" class="fin-tipo"><legend>¿Qué tipo de gasto?</legend><label class="cot-chip"><input type="radio" name="grupo" value="base"><span>Material del pedido</span></label><label class="cot-chip"><input type="radio" name="grupo" value="extra"><span>Gasto extra</span></label></fieldset>
   <label class="fin-ancho"><span data-concepto-label>Concepto</span><input name="concepto" maxlength="180"></label>
   <label data-campo="iva">IVA recuperable (MXN)<input name="iva" type="number" inputmode="decimal" min="0" step="0.01" value="0.00"></label>
+  <label class="fin-ancho" data-campo="comprobante">Comprobante (opcional)<input name="archivo" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"><small data-comprobante-actual>JPG, PNG, WEBP o PDF · hasta 4 MB</small></label>
   <p class="cot-ayuda fin-ancho" data-ayuda></p>
   <div class="fin-ancho fin-caja-botones"><button class="btn btn--azul" type="submit">Guardar</button><button type="button" class="btn-texto" data-cancelar>Cancelar</button><button type="button" class="btn-texto fin-borrar" data-borrar-form hidden>Borrar este movimiento</button></div>
   <p id="cajaMensaje" class="fin-ancho" role="status"></p></form>
@@ -67,7 +68,7 @@ function fila(m){
  const ec=Number(m.efecto_caja),es=Number(m.efecto_socio),quien=personas[m.persona]||'';
  const titulo=m.origen==='pago'?'Cobro':m.origen==='caja'?(m.tipo==='reparto'?'Reparto a '+personas[m.destino]:m.destino==='zain'?quien+' depositó a la caja':'La caja dio a '+personas[m.destino]):m.tipo==='reembolso'?'Reembolso a '+quien:m.tipo==='ingreso'?'Ingreso':'Gasto';
  const detalle=[m.folio?esc(m.folio)+(m.en_papelera?' (papelera)':''):m.origen==='general'?'General':'',m.origen==='pago'?'Recibió '+quien:m.origen==='pedido'||m.origen==='general'?(m.tipo==='gasto'?'Pagó ':m.tipo==='ingreso'?'Recibió ':'')+(m.tipo==='reembolso'?'':quien):'',m.origen!=='caja'&&!ec&&es?(es>0?'ZAIN le debe a '+quien+' '+pesos(es):quien+' tiene '+pesos(-es)+' del negocio'):''].filter(Boolean).join(' · ');
- const acciones=porBorrar===m.id?`<span class="fin-confirmar">¿Borrar? <button type="button" class="btn-texto fin-borrar" data-borrar-si="${esc(m.id)}">Sí, borrar</button><button type="button" class="btn-texto" data-borrar-no>No</button></span>`:`<button type="button" class="btn-texto" data-editar="${esc(m.id)}">Editar</button><button type="button" class="btn-texto fin-borrar" data-borrar="${esc(m.id)}">Borrar</button>`;
+ const acciones=porBorrar===m.id?`<span class="fin-confirmar">¿Borrar? <button type="button" class="btn-texto fin-borrar" data-borrar-si="${esc(m.id)}">Sí, borrar</button><button type="button" class="btn-texto" data-borrar-no>No</button></span>`:`${m.comprobante?`<button type="button" class="btn-texto" data-ver-comprobante="${esc(m.id)}">Ver comprobante</button>`:''}<button type="button" class="btn-texto" data-editar="${esc(m.id)}">Editar</button><button type="button" class="btn-texto fin-borrar" data-borrar="${esc(m.id)}">Borrar</button>`;
  return `<li class="fin-libro-fila${editando?.id===m.id?' fin-libro-fila--editando':''}"><span class="fin-libro-fecha">${esc(fechaCorta(m.fecha))}</span><div><b>${esc(titulo)}</b><p>${esc(m.concepto)}</p>${detalle?`<p class="fin-libro-meta">${detalle}</p>`:''}<div class="gastos-acciones">${acciones}</div></div><strong class="${ec>0?'fin-ingreso':ec<0?'fin-egreso':'fin-neutro'}" title="Efecto en la Caja ZAIN">${ec?esc(firmado(ec)):esc(pesos(Number(m.importe)))}</strong></li>`;
 }
 const fechaCorta=f=>new Date(f+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short'});
@@ -80,7 +81,7 @@ function formulario(reiniciar,cambio){
  if(pedido&&!pedidos.some(p=>p.id===pedido))f.elements.pedido.insertAdjacentHTML('beforeend',`<option value="${esc(pedido)}" selected>Pedido actual (fuera de la lista)</option>`);
  const conPedido=!!f.elements.pedido.value;
  mostrar('pedido',['cobro','gasto','reembolso'].includes(tipo));mostrar('ruta',tipo==='transferencia');mostrar('persona',tipo!=='transferencia');
- mostrar('categoria',(tipo==='gasto'&&!conPedido)||tipo==='ingreso');mostrar('grupo',tipo==='gasto'&&conPedido);mostrar('iva',tipo==='gasto');
+ mostrar('categoria',(tipo==='gasto'&&!conPedido)||tipo==='ingreso');mostrar('grupo',tipo==='gasto'&&conPedido);mostrar('iva',tipo==='gasto');mostrar('comprobante',tipo==='gasto');
  const quien=tipo==='reembolso'||tipo==='reparto'?[['juan_pablo','Juan Pablo'],['garcia','García']]:Object.entries(personas);
  const actual=cambio==='tipo'?'':f.elements.persona.value,omision=quien.some(([k])=>k==='zain')?'zain':quien[0][0];f.elements.persona.innerHTML=opciones(quien,quien.some(([k])=>k===actual)?actual:omision);
  f.querySelector('[data-persona-label]').textContent=tipo==='gasto'?'¿Quién pagó?':tipo==='reembolso'||tipo==='reparto'?'¿Para quién?':'¿Quién lo recibió?';
@@ -111,6 +112,7 @@ function abrir(tipo,m=null){
   if(m.grupo)f.querySelector(`[name=grupo][value="${m.grupo}"]`).checked=true;
   if(m.origen==='caja'&&m.tipo==='transferencia')f.elements.ruta.value=m.origen_persona+':'+m.destino;
  }
+ f.querySelector('[data-comprobante-actual]').textContent=m?.comprobante?'Ya tiene comprobante; sube otro solo si quieres reemplazarlo.':'JPG, PNG, WEBP o PDF · hasta 4 MB';
  formulario(true);
  $('#cajaFormTitulo').textContent=m?'Editar movimiento':'Registrar movimiento';$('#cajaMensaje').textContent='';
  if(datos)libro();
@@ -125,6 +127,11 @@ async function enviar(cuerpo,aviso){
  }catch(er){$('#cajaMensaje').textContent=er.message;if(f.hidden)$('#cajaEstado').textContent=er.message;porBorrar=null;if(datos)libro();}
  finally{ocupado=false;for(const el of f.elements)el.disabled=false;}
 }
+async function verComprobante(b){
+ const m=datos.libro.find(x=>x.id===b.dataset.verComprobante);if(!m)return;b.disabled=true;
+ try{const r=m.origen==='general'?await api('generales-archivo',{id:m.id}):await api('gastos-archivo',{id:m.pedido_id,movimiento:m.id});const a=document.createElement('a');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.click();}
+ catch(er){$('#cajaEstado').textContent=er.message;}finally{b.disabled=false;}
+}
 async function guardar(e){
  e.preventDefault();if(ocupado)return;const f=e.currentTarget,fd=new FormData(f),tipo=fd.get('tipo');
  try{
@@ -132,11 +139,17 @@ async function guardar(e){
   const conPedido=['cobro','gasto','reembolso'].includes(tipo)&&fd.get('pedido');
   if(tipo==='cobro'&&!conPedido)throw Error('Elige el folio del pedido que pagó.');
   const importe=decimal(fd.get('importe'));if(!importe)throw Error('Escribe el importe.');
+  const archivo=tipo==='gasto'?fd.get('archivo'):null;if(archivo?.size>4194304)throw Error('El comprobante puede pesar hasta 4 MB.');
   const datosMov={tipo,importe,fecha:fd.get('fecha'),concepto:String(fd.get('concepto')||''),persona:fd.get('persona')||'zain',
    ...(conPedido?{pedido_id:fd.get('pedido')}:{}),...(tipo==='gasto'?{iva_recuperable:decimal(fd.get('iva')||'0'),grupo:fd.get('grupo')||'base'}:{}),
    ...((tipo==='gasto'&&!conPedido)||tipo==='ingreso'?{categoria:fd.get('categoria')}:{}),...(tipo==='transferencia'?{origen_persona,destino_persona}:{})};
+  const firma=JSON.stringify({datosMov,editando:editando?.id,archivo:archivo?.size?[archivo.name,archivo.size,archivo.lastModified]:null});if(!ultima||ultima.firma!==firma)ultima={firma,request:crypto.randomUUID(),archivo:crypto.randomUUID(),comprobante:null};
+  if(archivo?.size&&!ultima.comprobante){
+   $('#cajaMensaje').textContent='Subiendo comprobante…';
+   const r=conPedido?await window.ZAINEquipo.uploadGasto(datosMov.pedido_id,ultima.archivo,archivo):await window.ZAINEquipo.uploadGeneral(ultima.archivo,archivo);ultima.comprobante=r.comprobante;
+  }
+  if(ultima.comprobante)datosMov.comprobante=ultima.comprobante;
   if(editando)return enviar({modo:'guardar',origen:editando.origen,id:editando.id,datos:datosMov},'Movimiento corregido.');
-  const firma=JSON.stringify(datosMov);if(!ultima||ultima.firma!==firma)ultima={firma,request:crypto.randomUUID()};
   await enviar({modo:'guardar',datos:{...datosMov,request:ultima.request}},'Movimiento registrado.');
  }catch(er){$('#cajaMensaje').textContent=er.message;}
 }
@@ -144,6 +157,7 @@ function clic(e){
  const b=e.target.closest('button');if(!b||ocupado)return;
  if(b.dataset.nuevo){abrir(b.dataset.nuevo);return;}
  if(b.hasAttribute('data-cancelar')){cerrar();return;}
+ if(b.dataset.verComprobante){verComprobante(b);return;}
  if(b.dataset.editar){const m=datos.libro.find(x=>x.id===b.dataset.editar);if(m)abrir(null,m);return;}
  if(b.dataset.borrar){porBorrar=b.dataset.borrar;libro();return;}
  if(b.hasAttribute('data-borrar-no')){porBorrar=null;libro();return;}

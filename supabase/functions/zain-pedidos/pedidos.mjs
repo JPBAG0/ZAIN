@@ -84,7 +84,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
   if (!Array.isArray(files) || files.length>40) fail(400,'Revisa los archivos del pedido.');
   const seen = new Set(); let bytes=0;
   const manifest = files.map(f=> {
-    if (!Number.isInteger(f.item) || !items[f.item] || !['logo','render'].includes(f.kind) || !TYPES[f.type] || (f.kind==='render' && f.type!=='image/png') || !Number.isSafeInteger(f.size) || f.size<1 || f.size>15*1024*1024) fail(400,'Cada logo o render debe ser un archivo válido de hasta 15 MB.');
+    if (!Number.isInteger(f.item) || !items[f.item] || !(['logo','render'].includes(f.kind) || /^logo-(?:[2-9]|1[0-3])$/.test(f.kind)) || !TYPES[f.type] || (f.kind==='render' && f.type!=='image/png') || !Number.isSafeInteger(f.size) || f.size<1 || f.size>15*1024*1024) fail(400,'Cada logo o render debe ser un archivo válido de hasta 15 MB.');
     const key=f.item+':'+f.kind; if(seen.has(key)) fail(400,'Hay archivos duplicados.'); seen.add(key);bytes+=f.size;
     return { item:f.item,kind:f.kind,type:f.type,size:f.size,name:text(f.name,140),path:body.id+'/'+f.item+'-'+f.kind+'.'+TYPES[f.type] };
   });
@@ -195,7 +195,7 @@ export function createHandler(env={}, fetcher=fetch) {
     const f=x.archivos.find(f=>f.item===b.item&&f.kind===b.kind);if(!f)fail(404,'Archivo no encontrado.');
     const data=await sb('/storage/v1/object/sign/'+bucket+'/'+f.path,{method:'POST',body:JSON.stringify({expiresIn:120})});
     const signed=storageURL(data.signedURL);
-    if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
+    if(f.kind!=='render'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
     return {url:signed.href,name:f.name,type:f.type};
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,partidas_version,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};

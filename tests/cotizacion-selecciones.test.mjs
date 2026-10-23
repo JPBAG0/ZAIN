@@ -37,7 +37,7 @@ create table zain_cotizaciones(pedido_id uuid primary key,version integer defaul
 create table zain_cotizaciones_historial(pedido_id uuid,version integer,modo text,borrador jsonb,publicada jsonb,actor uuid,primary key(pedido_id,version));
 create table zain_historial(pedido_id uuid,actor uuid,estado_anterior text,estado_nuevo text,notas text);
 create table zain_pagos(id uuid,pedido_id uuid,revision integer,importe bigint);
-`);await db.exec(await readFile(new URL('../supabase/cotizacion-partidas-editables.sql',import.meta.url),'utf8'));await db.query('insert into auth.users values($1)',[uid]);await db.query('insert into zain_equipo values($1,true)',[uid]);});
+`);await db.exec(await readFile(new URL('../supabase/cotizacion-partidas-editables.sql',import.meta.url),'utf8'));await db.exec(await readFile(new URL('../supabase/archivos-logos-extra.sql',import.meta.url),'utf8'));await db.query('insert into auth.users values($1)',[uid]);await db.query('insert into zain_equipo values($1,true)',[uid]);});
 after(async()=>await db?.close());
 const sqlTest=(nombre,fn)=>test(nombre,{skip:modulo?false:'Configura ZAIN_PGLITE_MODULE.'},async()=>{await db.exec('begin');try{await fn();}finally{await db.exec('rollback');}});
 async function preparar(x=pedido()){
@@ -108,4 +108,18 @@ test('editar tallas conserva logo, render y color con zona ajustada y colores si
  const pedido={id,items:[viejo],archivos:[{item:0,kind:'logo',path:'a'},{item:0,kind:'render',path:'b'}]};
  const [s]=validarSelecciones([{origen:0,item:{...nuevo,logo:'Logo pendiente de confirmar'}}],pedido,{productos:C.productos,productosHistoricos:C.productosHistoricos},(b)=>({items:b.items}),fail);
  assert.equal(s.item.tieneRender,true);assert.equal(s.item.logo,'archivo «logo.png»');assert.equal(s.item.zona,viejo.zona);
+});
+
+sqlTest('SQL: publicar partidas editadas conserva los logos adicionales de la partida de origen',async()=>{
+ const x=pedido();x.items.push({...x.items[0]});x.items.forEach(p=>{p.tieneLogo=true;p.tieneRender=true;});x.archivos=[{item:0,kind:'logo',path:id+'/0-logo.svg'},{item:1,kind:'logo',path:id+'/1-logo.svg'},{item:1,kind:'logo-2',path:id+'/1-logo-2.png'},{item:1,kind:'render',path:id+'/1-render.png'}];const {q}=await preparar(x);
+ const nueva=modificarSelecciones(x,q,[{origen:1,anterior:1,item:x.items[1]}],cfg),out=await rpc('publicar',nueva,paraCliente(nueva));assert.ok(out);
+ const p=await leer();assert.deepEqual(p.archivos.map(f=>[f.item,f.kind]),[[0,'logo'],[0,'logo-2'],[0,'render']]);
+});
+test('validateOrder acepta logos adicionales logo-2 a logo-13 y rechaza otros tipos',()=>{
+ const it={...itemCatalogo(p,color,C.tecnicas.find(t=>p.tecnicas.includes(t.id)).nombre,zona,8,{[talla]:12},12),tieneLogo:true,tieneRender:false};
+ const base={id,token:'a'.repeat(64),items:[it],files:[{item:0,kind:'logo',type:'image/png',size:10,name:'a.png'}]};
+ const ok=validateOrder({...base,files:[...base.files,{item:0,kind:'logo-2',type:'image/png',size:10,name:'espalda.png'},{item:0,kind:'logo-13',type:'image/svg+xml',size:10,name:'manga.svg'}]},{snapshot:true});
+ assert.deepEqual(ok.manifest.map(f=>f.path.split('/')[1]),['0-logo.png','0-logo-2.png','0-logo-13.svg']);
+ for(const kind of ['logo-1','logo-14','extra','logo-2x'])assert.throws(()=>validateOrder({...base,files:[...base.files,{item:0,kind,type:'image/png',size:10,name:'x.png'}]},{snapshot:true}),/archivo válido/);
+ assert.throws(()=>validateOrder({...base,files:[...base.files,{item:0,kind:'logo-2',type:'image/png',size:10},{item:0,kind:'logo-2',type:'image/png',size:10}]},{snapshot:true}),/duplicados/);
 });

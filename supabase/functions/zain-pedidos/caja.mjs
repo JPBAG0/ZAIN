@@ -26,6 +26,7 @@ export function validarLibro(b,fail){
  if(!Number.isSafeInteger(v.importe)||v.importe<1||v.importe>MAX)fail(400,'Revisa el importe.');
  if(!fechaValida(v.fecha))fail(400,'Revisa la fecha (no puede ser futura).');
  if(v.pedido_id!=null&&!UUID.test(v.pedido_id))fail(400,'Elige el pedido de la lista.');
+ if(v.comprobante!=null&&(!UUID.test(v.comprobante)||v.tipo!=='gasto'))fail(400,'Solo los gastos llevan comprobante.');
  const general=v.pedido_id==null&&['gasto','ingreso'].includes(v.tipo);
  if(general&&!CATEGORIAS[v.tipo].includes(v.categoria))fail(400,'Elige una categoría de la lista.');
  const concepto=typeof v.concepto==='string'?v.concepto.replace(/[\x00-\x1f\x7f]/g,' ').trim():'';

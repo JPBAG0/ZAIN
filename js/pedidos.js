@@ -36,6 +36,7 @@
       else if(x.tieneLogo||/archivo «/.test(x.logo||''))throw new Error('Falta el logo original de '+x.nombre+'. Vuelve a agregar ese producto.');
       if(stored?.render)files.push({item:i,kind:'render',name:'render.png',type:'image/png',size:stored.render.size,blob:stored.render});
       else if(x.tieneRender || x.tieneRender==null&&x.cm>0)throw new Error('Falta el render de '+x.nombre+'. Vuelve a agregar ese producto.');
+      for(const e of stored?.extras||[])if(e.blob instanceof Blob&&/^logo-(?:[2-9]|1[0-3])$/.test(e.kind))files.push({item:i,kind:e.kind,name:e.nombre||e.kind,type:e.blob.type,size:e.blob.size,blob:e.blob});
     }
     const cleanItems=items.map(({mini,unit,archivosTemporales,...x})=>x),manifest=files.map(({blob,...x})=>x);
     const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify({items:cleanItems,files:manifest})));

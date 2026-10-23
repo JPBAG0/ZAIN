@@ -13,7 +13,7 @@ export function validarSelecciones(lista,pedido,catalogo,validarPedido,fail){
   if(keepLogo)item.logo=fuente.logo;
   if(keepRender){item.zona=fuente.zona;item.color=fuente.color;if(fuente.logoGeometria)item.logoGeometria=fuente.logoGeometria;}else delete item.logoGeometria;
   if(simple){item.logo='Sin personalización';item.zona='';item.cm=0;delete item.logoGeometria;}else if(!keepLogo)item.logo='Logo pendiente de confirmar';
-  for(const f of original)if(f.kind==='logo'?keepLogo:keepRender)archivos.push({...f,item:i});
+  for(const f of original)if(f.kind==='logo'?keepLogo:f.kind==='render'?keepRender:true)archivos.push({...f,item:i});
   return item;
  });
  const validado=validarPedido({id:pedido.id,token:'a'.repeat(64),items,files:archivos},{catalogo,allowHistoricos:true,snapshot:true});

@@ -42,6 +42,10 @@ Prompt 2, rama local `codex/zain-posadas-testimonios-20261022`, encima del Promp
 
 Calculadora privada `server/calcular-posadas.mjs` usa el motor de margen por piezas; salida fuera del repo, precios finales pendientes. Auditoría en `docs/TALLAS-PENDIENTES.md`: prioridad CH-001/002/003; distinguir tablas existentes, dimensiones y unitalla. Respaldo público37activas/27históricas regenerado; no se cambian productos. Guía, pruebas y comandos: `docs/POSADAS-Y-TESTIMONIOS.md`. Recursos: config v32, medición v5, temporada JS/core/CSS v1. No publicado ni desplegado; esta entrega no requiere SQL/Edge nuevos y hereda los pendientes de publicación del Prompt1.
 
+## Vigente: logos adicionales guardados y comprobantes en el libro — 23-oct-2026
+
+Logos adicionales del personalizador se suben con el pedido como kinds `logo-2` … `logo-13` (validateOrder; ruta `<id>/<partida>-logo-N.ext`); Gestión ofrece «Descargar logo N»; editar partidas los conserva (server y `supabase/archivos-logos-extra.sql`). El libro de la caja adjunta y muestra comprobantes de gastos (`supabase/libro-comprobantes.sql`) y la sección anterior de movimientos generales se quitó de Finanzas.
+
 ## Vigente: libro flexible de finanzas — 23-oct-2026
 
 JP pidió poder corregir todo mientras aprenden a usarlo. Finanzas → Caja: «+ Registrar movimiento» (cobro por folio, gasto, ingreso, reembolso, transferencia, reparto) y Editar/Borrar en cada renglón, incluso mover entre pedidos o entre pedido y general. Una sola RPC `zain_libro_operar` (SQL `supabase/libro-flexible.sql`) con historial `zain_libro_historial`. Un cobro sin aceptación del cliente crea la aceptación del equipo. Pedidos cerrados bloquean cambios hasta reabrir. Detalle en `docs/CAJA.md`.

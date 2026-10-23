@@ -64,6 +64,7 @@
         files.push(new File([row.logo], `${prefijo}-logo-${nombreSeguro(row.logoNombre)}`, { type: row.logo.type || "application/octet-stream" }));
         logos++;
       } else if (item.tieneLogo || /archivo «/.test(item.logo || "")) faltan.push(item.nombre + ": logo original");
+      for (const e of row?.extras || []) if (e.blob instanceof Blob) { files.push(new File([e.blob], `${prefijo}-${e.kind}-${nombreSeguro(e.nombre)}`, { type: e.blob.type || "application/octet-stream" })); logos++; }
       if (row?.render instanceof Blob) {
         files.push(new File([row.render], `${prefijo}-render.png`, { type: "image/png" }));
         renders++;

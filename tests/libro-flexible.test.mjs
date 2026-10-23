@@ -19,7 +19,7 @@ before(async()=>{
  create table public.zain_cotizacion_aceptaciones(pedido_id uuid not null,revision integer not null,aceptada_at timestamptz not null default now(),documento jsonb not null,primary key(pedido_id,revision));
  create table public.zain_pagos(id uuid primary key,pedido_id uuid,revision int,importe bigint,referencia text default '',actor uuid,created_at timestamptz default now(),foreign key(pedido_id,revision) references public.zain_cotizacion_aceptaciones(pedido_id,revision));
  create table public.zain_historial(pedido_id uuid,actor uuid,estado_anterior text,estado_nuevo text,notas text);`);
- for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible'])
+ for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible','libro-comprobantes'])
   await db.exec(await readFile(new URL('../supabase/'+archivo+'.sql',import.meta.url),'utf8'));
  await db.query('insert into auth.users values($1)',[actor]);await db.query('insert into zain_equipo values($1,true)',[actor]);
 });
@@ -111,4 +111,19 @@ test('validarLibro: tipos, folio, categorías de movimientos generales y borrar 
  assert.deepEqual(validarLibro({modo:'borrar',origen:'pago',id:base.datos.request},fail).modo,'borrar');
  assert.throws(()=>validarLibro({modo:'guardar',origen:'otro',id:randomUUID(),datos:base.datos},fail),/inválido/);
  assert.equal(validarLibro({...base,datos:{...base.datos,tipo:'cobro',concepto:'',pedido_id:randomUUID()}},fail).datos.concepto,'');
+});
+
+sqlTest('comprobantes: un gasto adjunta el suyo, el libro lo devuelve, editar lo conserva y no se mueve entre registros',async()=>{
+ const a=await pedido(),b=await pedido({folio:'ZAIN-H'}),cg=randomUUID(),cp=randomUUID();
+ await db.query("insert into zain_general_archivos(id,objeto,nombre,mime,bytes,hash,actor) values($1,'generales/x.pdf','Comprobante.pdf','application/pdf',10,'h',$2)",[cg,actor]);
+ await db.query("insert into zain_gasto_archivos(id,pedido_id,objeto,nombre,mime,bytes,hash,actor) values($1,$2,'p/x.pdf','Comprobante.pdf','application/pdf',10,'h',$3)",[cp,a,actor]);
+ const r=await nuevo({tipo:'gasto',importe:900,persona:'zain',concepto:'Anuncios',categoria:'Marketing y publicidad',comprobante:cg});assert.equal(r.ok,true,JSON.stringify(r));
+ let l=(await resumen()).libro.find(m=>m.id===r.id);assert.equal(l.comprobante,cg);
+ await operar('guardar','general',r.id,{tipo:'gasto',importe:950,persona:'zain',concepto:'Anuncios octubre',categoria:'Marketing y publicidad',fecha:'2026-10-20'});
+ l=(await resumen()).libro.find(m=>m.id===r.id);assert.equal(l.comprobante,cg);assert.equal(Number(l.importe),950);
+ assert.match((await operar('guardar','general',r.id,{tipo:'gasto',pedido_id:a,importe:950,persona:'zain',concepto:'X',fecha:'2026-10-20'})).error,/comprobante/);
+ assert.match((await nuevo({tipo:'gasto',pedido_id:b,importe:100,persona:'zain',concepto:'X',comprobante:cp})).error,/comprobante/);
+ const g=await nuevo({tipo:'gasto',pedido_id:a,importe:100,persona:'zain',concepto:'Playeras',comprobante:cp});assert.equal(g.ok,true,JSON.stringify(g));
+ assert.equal((await fila('select comprobante from zain_pedido_movimientos where id=$1',[g.id])).comprobante,cp);
+ assert.match((await nuevo({tipo:'ingreso',importe:100,persona:'zain',concepto:'X',categoria:'Otros ingresos',comprobante:cg})).error,/Solo los gastos/);
 });

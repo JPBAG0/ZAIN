@@ -37,3 +37,8 @@ node --test tests/caja.test.mjs
 - Un cobro necesita una revisión aceptada (llave foránea). Si el cliente no aceptó en su enlace, el equipo la acepta al registrar el cobro (`documento.aceptada_por = 'equipo'`): el pedido pasa a Aceptado y, si cubre el anticipo, a Confirmado.
 - Movimientos de un pedido cerrado no se pueden cambiar: hay que reabrir su cierre en la pestaña Gastos.
 - El saldo del pedido, su pestaña Cobro y lo que el cliente ve en su enlace se calculan de `zain_pagos`, así que se actualizan al instante.
+
+## Comprobantes y limpieza (23-oct-2026, `supabase/libro-comprobantes.sql`)
+- Un gasto puede adjuntar su comprobante (JPG, PNG, WEBP o PDF hasta 4 MB) al registrarse o corregirse desde el libro; el renglón muestra «Ver comprobante».
+- Un gasto con comprobante no se mueve entre pedidos ni entre pedido y generales (el archivo pertenece a su registro): se borra y se registra de nuevo.
+- Finanzas ya no muestra la sección anterior de «Movimientos generales» ni su formulario: el libro de la caja los reemplaza.
