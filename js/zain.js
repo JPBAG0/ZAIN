@@ -639,6 +639,7 @@
      PERSONALIZADOR
      ===================================================================== */
   const E = {
+    extra: null, // segunda posición del mismo logo (p. ej. espalda): {x, y, cm, lugar} en px del lienzo
     p: MUESTRAS[0].p,
     c: MUESTRAS[0].c,
     t: MUESTRAS[0].t,
@@ -808,6 +809,7 @@
   let errorRender = null;
   let transicion = false;
   let caja = null; // dónde quedó el logo en el lienzo (para arrastrarlo)
+  let caja2 = null; // segunda posición del logo
   const pedirRender = () => {
     if (rafRender) return;
     rafRender = requestAnimationFrame(async () => {
@@ -848,6 +850,15 @@
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
         caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
+        caja2 = null;
+        if (E.extra) {
+          let a2 = E.extra.cm * p.pxPorCm;
+          const h2 = (a2 * logo.height) / logo.width, maxH = 30 * p.pxPorCm;
+          if (h2 > maxH) a2 = (maxH * logo.width) / logo.height;
+          ZR.estampar(lg, img, logo, { x: E.extra.x, y: E.extra.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
+          const al2 = (a2 * logo.height) / logo.width;
+          caja2 = { x0: E.extra.x - a2 / 2, y0: E.extra.y - al2 / 2, x1: E.extra.x + a2 / 2, y1: E.extra.y + al2 / 2 };
+        }
         const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
         const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(fondoLogo(z, E.c)))) < 0.2;
         const a = $("#aviso");
@@ -930,6 +941,20 @@
     E.dx = E.dy = 0;
     actualizar();
   });
+  const pintarSegundo = () => {
+    $("#segundoPanel").hidden = !E.extra;
+    $("#segundoActivar").hidden = !!E.extra;
+    if (E.extra) { $("#segundoTamano").value = E.extra.cm; $("#segundoTxt").textContent = cm(E.extra.cm); $("#segundoLugar").value = E.extra.lugar; }
+  };
+  $("#segundoActivar").addEventListener("click", () => {
+    // Arranca al centro del torso, debajo del logo principal.
+    E.extra = { x: 500, y: Math.min(620, Math.max(420, zAct().y + 180)), cm: 22, lugar: "Espalda" };
+    pintarSegundo();
+    pedirRender();
+  });
+  $("#segundoQuitar").addEventListener("click", () => { E.extra = null; caja2 = null; pintarSegundo(); pedirRender(); });
+  $("#segundoTamano").addEventListener("input", (e) => { if (!E.extra) return; E.extra.cm = Number(e.target.value); $("#segundoTxt").textContent = cm(E.extra.cm); pedirRender(); });
+  $("#segundoLugar").addEventListener("change", (e) => { if (E.extra) E.extra.lugar = e.target.value; });
   $("#tamano").addEventListener("input", (e) => {
     E.cm = Number(e.target.value);
     $("#tamanoTxt").textContent = cm(E.cm);
@@ -1137,6 +1162,12 @@
     if (!caja) return;
     const q = aLienzo(e);
     const h = 18;
+    if (caja2 && E.extra && q.x > caja2.x0 - h && q.x < caja2.x1 + h && q.y > caja2.y0 - h && q.y < caja2.y1 + h) {
+      arrastre = { id: e.pointerId, x: q.x, y: q.y, ex: E.extra.x, ey: E.extra.y, segundo: true };
+      lienzo.setPointerCapture(e.pointerId);
+      lienzo.classList.add("moviendo");
+      return;
+    }
     if (q.x < caja.x0 - h || q.x > caja.x1 + h || q.y < caja.y0 - h || q.y > caja.y1 + h) return;
     arrastre = { id: e.pointerId, x: q.x, y: q.y, dx: E.dx, dy: E.dy };
     lienzo.setPointerCapture(e.pointerId);
@@ -1150,6 +1181,12 @@
     if (!arrastre || arrastre.id !== e.pointerId) return;
     const q = aLienzo(e);
     const k = pAct().pxPorCm;
+    if (arrastre.segundo) {
+      E.extra.x = Math.min(950, Math.max(50, arrastre.ex + q.x - arrastre.x));
+      E.extra.y = Math.min(950, Math.max(50, arrastre.ey + q.y - arrastre.y));
+      pedirRender();
+      return;
+    }
     E.dx = arrastre.dx + (q.x - arrastre.x) / k;
     E.dy = arrastre.dy + (q.y - arrastre.y) / k;
     limitar();
@@ -1611,7 +1648,7 @@
       logo,
       colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
       pantone: E.pantone,
-      notas: E.notas.trim(),
+      notas: [E.notas.trim(), E.extra && tieneRender ? `Segunda posición del logo: ${E.extra.lugar} · ${cm(E.extra.cm)} de ancho (en el render se muestra al centro)` : ""].filter(Boolean).join(" · "),
       mini,
       tieneLogo: !!original,
       tieneRender,

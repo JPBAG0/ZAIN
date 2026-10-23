@@ -1,13 +1,13 @@
 import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './cotizacion-selecciones.js?v=2';
-import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=3';
-import './control-confirmacion.js?v=3';
+import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=4';
+import './control-confirmacion.js?v=4';
 import {ordenarCostos} from './control-costos-vista.js?v=2';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=19';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=20';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
 import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=18';
-import {esc,documento,imprimir} from './cotizacion-vista.js?v=11';
+import {esc,documento,imprimir} from './cotizacion-vista.js?v=12';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;
 const geometriaPedido=new Map();
@@ -121,7 +121,7 @@ $('#detalle').addEventListener('click',async e=>{const b=e.target.closest('#form
  else if(b.id==='cotRecalcular'){if(confirm('Se reemplazarán los ajustes del borrador por los costos y rangos actuales. La versión publicada se conserva. ¿Continuar?'))operar('cotizacion-recalcular');}
  else if(b.id==='cotPublicar'){if(quoteDirty){const borrador=leerBorrador();if(!vista())return;await operar('cotizacion-guardar',{borrador});if(quoteDirty||!quote?.borrador?.preparada)return;}operar('cotizacion-publicar');}
  else if(b.id==='cotRetirar')operar('cotizacion-retirar');
- else if(b.id==='cotPrevisualizar'){const q=vista();if(!q)return;const turn=quoteEpoch;b.disabled=true;let imagenes;try{imagenes=await prepararImagenes(q,imagenesCot());}finally{b.disabled=false;}if(turn!==quoteEpoch||!pedido)return;$('#cotVista').innerHTML=documento(q,{folio:pedido.folio,borrador:true,imagenes})+'<div class="cot-botones"><button type="button" class="btn btn--linea" id="cotImprimirBorrador">Imprimir borrador</button><button type="button" class="btn btn--azul" id="cotDescargarBorrador">Descargar PDF del borrador</button></div>';$('#cotVista').hidden=false;$('#cotImprimirBorrador').onclick=()=>{try{imprimir(q,{folio:pedido.folio,borrador:true,imagenes});}catch(er){$('#cotMensaje').textContent=er.message;}};$('#cotDescargarBorrador').onclick=async e=>{const boton=e.currentTarget;boton.disabled=true;try{$('#cotMensaje').textContent='Preparando PDF…';const {descargarPDF}=await import('./cotizacion-pdf.js?v=15');await descargarPDF(q,{folio:pedido.folio,borrador:true,imagenes});$('#cotMensaje').textContent='PDF del borrador generado. No publica la cotización.';}catch(er){$('#cotMensaje').textContent=er.message;}finally{boton.disabled=false;}};$('#cotVista').scrollIntoView({block:'start',behavior:'smooth'});}
+ else if(b.id==='cotPrevisualizar'){const q=vista();if(!q)return;const turn=quoteEpoch;b.disabled=true;let imagenes;try{imagenes=await prepararImagenes(q,imagenesCot());}finally{b.disabled=false;}if(turn!==quoteEpoch||!pedido)return;$('#cotVista').innerHTML=documento(q,{folio:pedido.folio,borrador:true,imagenes})+'<div class="cot-botones"><button type="button" class="btn btn--linea" id="cotImprimirBorrador">Imprimir borrador</button><button type="button" class="btn btn--azul" id="cotDescargarBorrador">Descargar PDF del borrador</button></div>';$('#cotVista').hidden=false;$('#cotImprimirBorrador').onclick=()=>{try{imprimir(q,{folio:pedido.folio,borrador:true,imagenes});}catch(er){$('#cotMensaje').textContent=er.message;}};$('#cotDescargarBorrador').onclick=async e=>{const boton=e.currentTarget;boton.disabled=true;try{$('#cotMensaje').textContent='Preparando PDF…';const {descargarPDF}=await import('./cotizacion-pdf.js?v=16');await descargarPDF(q,{folio:pedido.folio,borrador:true,imagenes});$('#cotMensaje').textContent='PDF del borrador generado. No publica la cotización.';}catch(er){$('#cotMensaje').textContent=er.message;}finally{boton.disabled=false;}};$('#cotVista').scrollIntoView({block:'start',behavior:'smooth'});}
  }catch(er){$('#cotMensaje').textContent=er.message;}});
 addEventListener('zain:equipo-salio',()=>{epoch++;quoteEpoch++;dirty=false;quoteDirty=false;config={version:0,datos:inicial()};geometriaPedido.clear();catalogo=[];filtroPrendas='';soloPendientes=false;visibilidadPrendas='activo';categoriaPrendas='';ordenPrendas='nombre';quote=null;pedido=null;$('#formPrecios').replaceChildren();$('#estadoPrecios').textContent='';});
 addEventListener('beforeunload',e=>{if(dirty||quoteDirty){e.preventDefault();e.returnValue='';}});

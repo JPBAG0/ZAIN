@@ -1,6 +1,6 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
 import {pesos} from './cotizacion-core.js?v=17';
-import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=11';
+import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=12';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
@@ -124,7 +124,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  pasos.forEach(([t],i)=>{const x=m+i*pw;doc.setDrawColor(...(i?tinta:cobalto));doc.setFillColor(...(i?papel:cobalto));doc.setLineWidth(.5);doc.circle(x+3.5,y,3,'FD');label(String(i+1),x+3.5,y+1.1,7,true,i?tinta:blanco,'center',true);label(t,x,y+7.5,8.5,true);desc[i].forEach((l,j)=>label(l,x,y+11.5+j*3.1,7,false,tenue));});
  y+=13.5+Math.max(...desc.map(d=>d.length))*3.1+1;
  // Condiciones y notas
- if(q.condiciones){const c=lines(q.condiciones,width-12,8);espacio(14+Math.min(c.length,6)*3.8);doc.setFillColor(...algodon);doc.rect(m,y,width,10+c.length*3.8,'F');doc.setFillColor(...tinta);doc.rect(m,y,.9,10+c.length*3.8,'F');label('Condiciones de tu cotización',m+5,y+6,8.5,true);let cy=y+11;for(const l of c){if(cy>bottom){siguiente();cy=y;}label(l,m+5,cy,8,false,tinta2);cy+=3.8;}y=cy+5;}
+ if(q.condiciones){const c=lines(q.condiciones,width-12,8);espacio(14+Math.min(c.length,6)*3.8);doc.setFillColor(...algodon);doc.rect(m,y,width,10+c.length*3.8,'F');doc.setFillColor(...tinta);doc.rect(m,y,.9,10+c.length*3.8,'F');label('Notas y acuerdos',m+5,y+6,8.5,true);let cy=y+11;for(const l of c){if(cy>bottom){siguiente();cy=y;}label(l,m+5,cy,8,false,tinta2);cy+=3.8;}y=cy+5;}
  const notas=sinCantidades?['Renders orientativos; diseño final por confirmar.','Cantidades y disponibilidad se acuerdan con ZAIN.','Precios por pieza según modelo y talla.','Esta cotización no es un comprobante fiscal.']:['Renders orientativos; diseño final por confirmar.','La aceptación de la cotización no registra un pago.','Precios por pieza con personalización incluida.','Esta cotización no es un comprobante fiscal.'];
  if(y+5>279.5)siguiente();notas.forEach((n,i)=>label('— '+n,m+(i%2)*(width/2),y+Math.floor(i/2)*4.2,7,false,tenue));
  // Pie en cada página. Los datos de contacto son configuración pública, no datos de compras.

@@ -16,3 +16,13 @@
 .gastos-grupo small{flex-basis:100%;font-size:12px;color:#68758b}
 .gastos-tipo{font-weight:600}.gastos-tipo--base{color:#2a30b8}.gastos-tipo--extra{color:#8a5a00}
 @media(max-width:700px){#gastosPedido .gastos-cifras--5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Cotizado contra real por partida (23-oct-2026). */
+#gastosPedido .gastos-comparativo{margin:16px 0 8px}
+#gastosPedido .gastos-comparativo h3{font-size:16px;margin:0 0 4px}
+#gastosPedido .gastos-comparativo table{width:100%;border-collapse:collapse;font-size:13px}
+#gastosPedido .gastos-comparativo th,#gastosPedido .gastos-comparativo td{padding:9px 8px;border-top:1px solid #e4e7ed;text-align:right;font-variant-numeric:tabular-nums}
+#gastosPedido .gastos-comparativo th:first-child{text-align:left;font-weight:500;overflow-wrap:anywhere}
+#gastosPedido .gastos-comparativo thead th{font-size:12px;color:#637087;font-weight:600;border-top:0}
+#gastosPedido .gastos-comparativo tfoot th,#gastosPedido .gastos-comparativo tfoot td{font-weight:700;border-top:2px solid #cbd2df}
+#gastosPedido .gastos-dif{color:#637087}#gastosPedido .gastos-dif--mas{color:#b72c40}#gastosPedido .gastos-dif--menos{color:#267663}
+@media(max-width:600px){#gastosPedido .gastos-comparativo thead{display:none}#gastosPedido .gastos-comparativo tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;border-top:1px solid #e4e7ed;padding:8px 0}#gastosPedido .gastos-comparativo th,#gastosPedido .gastos-comparativo td{border:0;padding:2px 0;text-align:left}#gastosPedido .gastos-comparativo th:first-child{grid-column:1/-1}#gastosPedido .gastos-comparativo td:before{content:attr(data-label);display:block;font-size:11px;color:#637087;font-weight:500}}

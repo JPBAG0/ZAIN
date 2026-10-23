@@ -1,5 +1,5 @@
 import {pesos,decimal} from './cotizacion-core.js?v=17';
-import {esc} from './cotizacion-vista.js?v=11';
+import {esc} from './cotizacion-vista.js?v=12';
 // Caja ZAIN tipo Tricount: saldos en vivo, libro único de movimientos, transferencias y reparto pagado.
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'};

@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=34" />
+  <link rel="stylesheet" href="css/zain.css?v=35" />
   <link rel="stylesheet" href="css/privacidad.css?v=3" />
   <link rel="stylesheet" href="css/temporada.css?v=1" />
   <script>
@@ -268,6 +268,21 @@
               <input type="range" id="tamano" min="3" max="28" step="0.5" value="9" />
               <output id="tamanoTxt" class="num" for="tamano">9.0 cm</output>
             </label>
+            <div class="segundo-logo">
+              <button type="button" class="segundo-logo__activar" id="segundoActivar">+ Agregar segunda posición del logo (ej. espalda)</button>
+              <div id="segundoPanel" hidden>
+                <label class="campo"><span>¿Dónde va la segunda posición?</span>
+                  <select id="segundoLugar"><option>Espalda</option><option>Frente</option><option>Manga izquierda</option><option>Manga derecha</option></select>
+                </label>
+                <label class="deslizador">
+                  <span>Ancho de la segunda</span>
+                  <input type="range" id="segundoTamano" min="3" max="32" step="0.5" value="22" />
+                  <output id="segundoTxt" class="num" for="segundoTamano">22.0 cm</output>
+                </label>
+                <p class="producto__nota">Arrástrala en la vista previa. En la imagen se muestra al frente; en tu pedido queda anotado dónde va de verdad.</p>
+                <button type="button" class="segundo-logo__quitar" id="segundoQuitar">Quitar segunda posición</button>
+              </div>
+            </div>
             <p class="producto__nota">El tamaño y la posición son una vista previa. Confirmamos las medidas de impresión antes de producir.</p>
           </fieldset>
 
@@ -471,7 +486,7 @@
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=5"></script>
-  <script src="js/zain.js?v=48"></script>
+  <script src="js/zain.js?v=49"></script>
   <script type="module" src="js/temporada.js?v=1"></script>
 <script src="js/subir.js?v=3"></script>
 </body>

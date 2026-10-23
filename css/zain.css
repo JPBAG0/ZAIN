@@ -1043,3 +1043,8 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 .pedido__cliente #clienteAviso:empty { display: none; }
 .catalogo__respaldo { margin:0 0 16px;padding:12px 14px;border-radius:10px;background:#fff4cc;border:1px solid #d7b353;font-size:14px;line-height:1.5; }
 .catalogo__respaldo[hidden] { display:none; }
+/* Segunda posición del logo (23-oct-2026). */
+.segundo-logo{margin:6px 0 4px}
+.segundo-logo__activar,.segundo-logo__quitar{background:none;border:0;padding:10px 0;min-height:44px;font:600 15px Archivo,Arial,sans-serif;color:var(--cobalto,#2a3bff);cursor:pointer;text-align:left}
+.segundo-logo__quitar{color:#6e6e73;font-weight:500}
+.segundo-logo select{width:100%;min-height:44px;font-size:16px}

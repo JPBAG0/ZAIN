@@ -1,5 +1,5 @@
 import {configurar} from './cotizacion-core.js?v=18';
-import {esc,tallasDe} from './cotizacion-vista.js?v=11';
+import {esc,tallasDe} from './cotizacion-vista.js?v=12';
 import {seleccionesDe,itemCatalogo,modificarSelecciones} from './cotizacion-selecciones.js?v=2';
 export async function editarSelecciones(pedido,borrador,api){
  const [{catalogo:c},{config}]=await Promise.all([api('catalogo-publico'),api('precios-config')]); // catalogo-publico no incluye técnicas; vienen de config.js.
