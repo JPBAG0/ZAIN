@@ -105,3 +105,26 @@
  .fin-cobranza td::before{content:attr(data-label);color:#4c586e;font-weight:500}
  .fin-cobranza .cot-tablewrap th{width:auto;white-space:normal;overflow-wrap:anywhere}
 }
+/* Caja ZAIN (23-oct-2026): saldos tipo Tricount y libro único. */
+.fin-caja{margin-top:0}
+.fin-caja-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.fin-caja-cab h2{margin:0;font-size:18px}.fin-caja-cab p{margin:4px 0 0}
+.fin-caja-acciones{display:flex;gap:8px;flex-wrap:wrap}
+.fin-caja-acciones .btn{min-height:44px}
+.fin-saldos{margin:14px 0 8px}
+.fin-saldos .fin-debe strong{color:#b3261e}
+.fin-caja-form{background:#f6f8fc;border:1px solid #d9dfe7;border-radius:14px;padding:14px;margin:10px 0}
+.fin-caja-botones{display:flex;gap:14px;align-items:center}
+.fin-libro-cab{margin-top:14px}.fin-libro-cab h3{margin:0;font-size:16px}
+.fin-libro{list-style:none;margin:0;padding:0}
+.fin-libro-fila{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:start;border-top:1px solid #e3e7ef;padding:11px 0}
+.fin-libro-fecha{font-size:12px;color:#68758b;padding-top:2px}
+.fin-libro-fila b{font-size:14px}
+.fin-libro-fila p{margin:2px 0 0;font-size:12.5px;color:#5d6880;overflow-wrap:anywhere}
+.fin-libro-fila .fin-libro-meta{color:#7a8599}
+.fin-libro-fila>strong{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:14px}
+.fin-libro .fin-ingreso{color:#267663}.fin-libro .fin-egreso{color:#b3261e}.fin-libro .fin-neutro{color:#68758b;font-weight:600}
+.fin-recibio{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#5d6880}
+.fin-recibio select{min-height:38px;border:1px solid #cbd2dc;border-radius:8px;padding:4px 8px;font:500 16px Archivo,Arial,sans-serif;background:#fff}
+.fin-libro-mas{padding:12px 0;text-align:center;border-top:1px solid #e3e7ef}
+@media(max-width:720px){.fin-saldos{grid-template-columns:1fr 1fr}.fin-caja-acciones{width:100%}.fin-caja-acciones .btn{flex:1 1 auto}.fin-libro-fila{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}}

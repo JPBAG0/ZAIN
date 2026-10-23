@@ -2,6 +2,7 @@ import {validarSelecciones} from './cotizacion-selecciones.mjs';
 import {createWhatsApp} from './whatsapp.mjs';
 import {createGastos} from './gastos.mjs';
 import {createGenerales} from './finanzas-generales.mjs';
+import {createCaja} from './caja.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {createAvisos} from './avisos.mjs';
 import {normalizarGeometria} from './logo-medidas.mjs';
@@ -199,7 +200,7 @@ export function createHandler(env={}, fetcher=fetch) {
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,partidas_version,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
   const quotes=createQuotes({sb,row,fail,commercialItem,publicRow,validarSelecciones:(lista,x,cat)=>validarSelecciones(lista,x,cat,validateOrder,fail)}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row});
-  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
+  const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher}),caja=createCaja({sb,fail});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
   const avisosEnabled=env.ZAIN_AVISOS_ENABLED==='true',avisos=createAvisos({sb,fail,fetcher});
@@ -327,6 +328,10 @@ export function createHandler(env={}, fetcher=fetch) {
       if(gastosEnabled&&op==='gastos-guardar'&&request.method==='POST')return response(200,{finanzas:await gastos.guardar(await jsonBody(request),user)});
       if(gastosEnabled&&op==='gastos-comprobante'&&request.method==='POST')return response(200,await gastos.subir(request,url,user));
       if(gastosEnabled&&op==='gastos-archivo'&&request.method==='POST')return response(200,await gastos.archivo(await jsonBody(request)));
+      if(gastosEnabled&&op==='caja'&&request.method==='GET')return response(200,await caja.leer());
+      if(gastosEnabled&&op==='caja-guardar'&&request.method==='POST')return response(200,await caja.guardar(await jsonBody(request),user));
+      if(gastosEnabled&&op==='caja-anular'&&request.method==='POST')return response(200,await caja.anular(await jsonBody(request),user));
+      if(gastosEnabled&&op==='caja-receptor'&&request.method==='POST')return response(200,await caja.receptor(await jsonBody(request)));
       if(gastosEnabled&&op==='generales'&&request.method==='GET')return response(200,await generales.leer(Number(url.searchParams.get('anio'))));
       if(gastosEnabled&&op==='generales-guardar'&&request.method==='POST')return response(200,await generales.guardar(await jsonBody(request),user));
       if(gastosEnabled&&op==='generales-editar'&&request.method==='POST')return response(200,await generales.editar(await jsonBody(request),user));

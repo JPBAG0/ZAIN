@@ -1,5 +1,6 @@
 import {pesos,decimal} from './cotizacion-core.js?v=17';
 import {esc} from './cotizacion-vista.js?v=11';
+import {montarCaja,cargarCaja,limpiarCaja} from './control-caja.js?v=1';
 // Finanzas: dashboard anual y movimientos generales (gastos, ingresos y reembolsos que no son de un pedido).
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -8,7 +9,7 @@ const pct=(u,v)=>!v?'—':(Math.round(u/v*1000)/10).toLocaleString('es-MX')+'%';
 let datos=null,anio=Number(hoy().slice(0,4)),epoca=0,ocupado=false,ultima=null,filtro='';
 const nav=$('.control__secciones');
 nav.querySelector('#verPedidos').insertAdjacentHTML('afterend','<button type="button" id="verFinanzas" aria-pressed="false">Finanzas</button>');
-$('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionFinanzas" hidden><div class="control__titulo"><div><h1>Finanzas</h1><p>Cómo va ZAIN: ventas, costos, gastos generales y utilidad.</p></div><label class="fin-anio"><span class="sr-only">Año</span><select id="finAnio"></select></label></div><p id="finEstado" class="control__estado" role="status"></p><div id="finTablero"></div>
+$('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionFinanzas" hidden><div class="control__titulo"><div><h1>Finanzas</h1><p>Cómo va ZAIN: caja, ventas, costos, gastos generales y utilidad.</p></div><label class="fin-anio"><span class="sr-only">Año</span><select id="finAnio"></select></label></div><p id="finEstado" class="control__estado" role="status"></p><div id="finTablero"></div>
 <details class="fin-registrar cot-panel" id="finRegistrar"><summary>+ Registrar gasto o ingreso general</summary><p class="cot-ayuda">Para lo que no es de un pedido: publicidad, software, flete, muestras, comisiones, una venta de mostrador o dinero que metieron al negocio. Los gastos de un pedido se registran dentro del pedido, en su pestaña Gastos.</p>
 <form id="finForm" class="fin-form"><fieldset class="fin-tipo"><legend class="sr-only">Tipo</legend>${[['gasto','Gasto'],['ingreso','Ingreso'],['reembolso','Reembolso']].map(([v,t],i)=>`<label class="cot-chip"><input type="radio" name="tipo" value="${v}" ${i?'':'checked'}><span>${t}</span></label>`).join('')}</fieldset>
 <label class="fin-ancho">Concepto<input name="concepto" maxlength="180" required placeholder="Anuncios de Instagram de octubre"></label>
@@ -20,6 +21,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionFinanzas" hidd
 <label class="cot-check fin-ancho" data-solo-reembolso hidden><input type="checkbox" name="verificado">Ya entregamos o transferimos este reembolso</label>
 <button class="btn btn--azul fin-ancho">Guardar movimiento</button><p id="finMensaje" class="fin-ancho" role="status"></p></form></details>
 <section class="cot-panel fin-movs"><div class="fin-movscab"><h2>Movimientos generales</h2><div class="bandeja-chips" id="finFiltro">${[['','Todos'],['gasto','Gastos'],['ingreso','Ingresos'],['reembolso','Reembolsos']].map(([v,t])=>`<button type="button" data-filtro="${v}">${t}</button>`).join('')}</div></div><div id="finLista"></div></section></section>`);
+montarCaja();
 for(let a=anio;a>=2026;a--)$('#finAnio').insertAdjacentHTML('beforeend',`<option value="${a}">${a}</option>`);
 const mensaje=t=>{const m=$('#finMensaje');if(m)m.textContent=t;};
 // Escala "redonda" para el eje: 0 y tres marcas con valores fáciles de leer.
@@ -81,7 +83,7 @@ function formulario(){
  f.querySelector('[data-solo-gasto]').hidden=tipo!=='gasto';f.querySelector('[data-solo-reembolso]').hidden=tipo!=='reembolso';f.elements.verificado.required=tipo==='reembolso';
  if(!f.elements.fecha.value){f.elements.fecha.value=hoy();}f.elements.fecha.max=hoy();
 }
-async function cargar(){const turn=++epoca;$('#finEstado').textContent='Consultando finanzas…';try{const d=await api('generales',null,{anio:String(anio)});if(turn!==epoca)return;datos=d;tablero();lista();formulario();$('#finEstado').textContent='';}catch(e){if(turn===epoca)$('#finEstado').textContent=e.message;}}
+async function cargar(){void cargarCaja();const turn=++epoca;$('#finEstado').textContent='Consultando finanzas…';try{const d=await api('generales',null,{anio:String(anio)});if(turn!==epoca)return;datos=d;tablero();lista();formulario();$('#finEstado').textContent='';}catch(e){if(turn===epoca)$('#finEstado').textContent=e.message;}}
 nav.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const on=b.id==='verFinanzas';$('#seccionFinanzas').hidden=!on;$('#verFinanzas').classList.toggle('on',on);$('#verFinanzas').setAttribute('aria-pressed',String(on));
  if(on){for(const id of ['seccionPedidos','seccionCatalogo','seccionTalleres','seccionCotizador'])if($('#'+id))$('#'+id).hidden=true;for(const x of nav.querySelectorAll('button'))if(x.id!=='verFinanzas'){x.classList.remove('on');x.setAttribute('aria-pressed','false');}history.replaceState(null,'','#finanzas');cargar();}});
 $('#finAnio').addEventListener('change',e=>{anio=Number(e.target.value);mesSel=0;cargar();});
@@ -97,16 +99,16 @@ $('#finForm').addEventListener('submit',async e=>{
   ocupado=true;for(const el of f.elements)el.disabled=true;mensaje('Guardando…');
   if(file?.size&&!ultima.comprobante){const r=await subir(ultima.archivo,file);ultima.comprobante=r.comprobante;}
   const d=await api('generales-guardar',{...datosMov,request:ultima.request,...(ultima.comprobante?{comprobante:ultima.comprobante}:{})});
-  ultima=null;if(d.anio===anio){datos=d;tablero();lista();}f.reset();formulario();mensaje('Guardado.');
+  ultima=null;if(d.anio===anio){datos=d;tablero();lista();}f.reset();formulario();mensaje('Guardado.');void cargarCaja();
  }catch(er){mensaje(er.message);}finally{ocupado=false;for(const el of f.elements)el.disabled=false;}
 });
 async function subir(archivo,blob){
  // Misma sesión y renovación que el resto de Gestión, con cuerpo binario.
  return window.ZAINEquipo.uploadGeneral(archivo,blob);
 }
-$('#finLista').addEventListener('submit',async e=>{const ed=e.target.closest('[data-editar]');if(ed){e.preventDefault();const fd=new FormData(ed),b=ed.querySelector('button');b.disabled=true;try{const d=await api('generales-editar',{id:ed.dataset.editar,categoria:fd.get('categoria'),persona:fd.get('persona'),concepto:String(fd.get('concepto')||''),importe:decimal(fd.get('importe')),iva_recuperable:fd.has('iva')?decimal(fd.get('iva')||'0'):0,fecha:fd.get('fecha')});datos=d.anio===anio?d:datos;tablero();lista();$('#finEstado').textContent='Movimiento corregido.';}catch(er){alertaLista(er.message);b.disabled=false;}return;}
- const f=e.target.closest('[data-anular]');if(!f)return;e.preventDefault();const b=f.querySelector('button');b.disabled=true;try{const d=await api('generales-anular',{id:f.dataset.anular,motivo:new FormData(f).get('motivo')});if(d.anio===anio){datos=d;tablero();lista();}}catch(er){alertaLista(er.message);}finally{b.disabled=false;}});
+$('#finLista').addEventListener('submit',async e=>{const ed=e.target.closest('[data-editar]');if(ed){e.preventDefault();const fd=new FormData(ed),b=ed.querySelector('button');b.disabled=true;try{const d=await api('generales-editar',{id:ed.dataset.editar,categoria:fd.get('categoria'),persona:fd.get('persona'),concepto:String(fd.get('concepto')||''),importe:decimal(fd.get('importe')),iva_recuperable:fd.has('iva')?decimal(fd.get('iva')||'0'):0,fecha:fd.get('fecha')});datos=d.anio===anio?d:datos;tablero();lista();$('#finEstado').textContent='Movimiento corregido.';void cargarCaja();}catch(er){alertaLista(er.message);b.disabled=false;}return;}
+ const f=e.target.closest('[data-anular]');if(!f)return;e.preventDefault();const b=f.querySelector('button');b.disabled=true;try{const d=await api('generales-anular',{id:f.dataset.anular,motivo:new FormData(f).get('motivo')});if(d.anio===anio){datos=d;tablero();lista();}void cargarCaja();}catch(er){alertaLista(er.message);}finally{b.disabled=false;}});
 $('#finLista').addEventListener('click',async e=>{const b=e.target.closest('[data-comprobante]');if(!b)return;b.disabled=true;try{const r=await api('generales-archivo',{id:b.dataset.comprobante});const a=document.createElement('a');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.click();}catch(er){alertaLista(er.message);}finally{b.disabled=false;}});
 const alertaLista=t=>{$('#finEstado').textContent=t;};
 addEventListener('zain:equipo-listo',()=>{if(location.hash==='#finanzas')$('#verFinanzas').click();});
-addEventListener('zain:equipo-salio',()=>{epoca++;datos=null;$('#seccionFinanzas').hidden=true;$('#finTablero').replaceChildren();$('#finLista').replaceChildren();});
+addEventListener('zain:equipo-salio',()=>{epoca++;datos=null;limpiarCaja();$('#seccionFinanzas').hidden=true;$('#finTablero').replaceChildren();$('#finLista').replaceChildren();});

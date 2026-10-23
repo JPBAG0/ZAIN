@@ -42,6 +42,10 @@ Prompt 2, rama local `codex/zain-posadas-testimonios-20261022`, encima del Promp
 
 Calculadora privada `server/calcular-posadas.mjs` usa el motor de margen por piezas; salida fuera del repo, precios finales pendientes. Auditoría en `docs/TALLAS-PENDIENTES.md`: prioridad CH-001/002/003; distinguir tablas existentes, dimensiones y unitalla. Respaldo público37activas/27históricas regenerado; no se cambian productos. Guía, pruebas y comandos: `docs/POSADAS-Y-TESTIMONIOS.md`. Recursos: config v32, medición v5, temporada JS/core/CSS v1. No publicado ni desplegado; esta entrega no requiere SQL/Edge nuevos y hereda los pendientes de publicación del Prompt1.
 
+## Vigente: Caja ZAIN tipo Tricount — 23-oct-2026
+
+Finanzas muestra arriba Caja y cuentas: saldo de la Caja ZAIN, saldo de cada socio (ZAIN le debe / tiene dinero del negocio), utilidad cerrada por repartir menos lo repartido, y un libro único de cobros, gastos de pedidos y generales, reembolsos, transferencias y repartos. SQL `supabase/caja-zain.sql` (columna `zain_pagos.recibio` con valor por omisión `zain`, tabla `zain_caja_movimientos`, RPC `zain_caja_libro` y `zain_caja_resumen`, solo service_role). API: caja, caja-guardar, caja-anular, caja-receptor. Reglas y pruebas en `docs/CAJA.md`. Los cálculos viven en SQL; no duplicarlos en el navegador.
+
 ## Vigente: ventas reales separadas de negociación — 22-oct-2026
 
 Prompt 1 de JP: Finanzas y Pedidos separan VENDIDO / POR COBRAR / EN NEGOCIACIÓN. Vendido exige estado confirmado/produccion/entregado y anticipo cubierto por pagos de la revisión publicada. Las tres tarjetas usan totales con IVA; costos/utilidad/margen siguen sin IVA. Cancelados, papelera y cargas incompletas fuera. Negociación no se suma a ventas; modelos enviada/autorizada sin cantidades cuentan casos, sin sumar precios unitarios. Convertidas se cuentan solo mediante su pedido. Sin términos históricos de anticipo, exigir cobro completo; estados confirmados sin evidencia se señalan para revisar, sin alterar datos.
