@@ -2,7 +2,8 @@ import {configurar} from './cotizacion-core.js?v=18';
 import {esc,tallasDe} from './cotizacion-vista.js?v=11';
 import {seleccionesDe,itemCatalogo,modificarSelecciones} from './cotizacion-selecciones.js?v=1';
 export async function editarSelecciones(pedido,borrador,api){
- const [{catalogo:c},{config}]=await Promise.all([api('catalogo-publico'),api('precios-config')]);
+ const [{catalogo:c},{config}]=await Promise.all([api('catalogo-publico'),api('precios-config')]); // catalogo-publico no incluye técnicas; vienen de config.js.
+ c.tecnicas??=window.ZAIN?.tecnicas??[];
  const productos=[...new Map([...(c.productos||[]),...(c.productosHistoricos||[])].map(p=>[p.id,p])).values()];
  const viejas=seleccionesDe(pedido,borrador);let filas=viejas.map((s,i)=>({...structuredClone(s),anterior:i})),contador=0;
  const dialogo=document.createElement('dialog');dialogo.className='cot-selecciones-dialogo';dialogo.setAttribute('aria-labelledby','cotSeleccionesTitulo');dialogo.innerHTML='<form id="cotSeleccionesForm"><header class="cot-selecciones-cab"><h2 id="cotSeleccionesTitulo">Partidas y tallas</h2><button type="button" class="btn-texto" data-cerrar>Cancelar</button></header><p>Cambia tallas, cantidades o modelos. Los cambios se aplican al borrador; el cliente los verá al publicar la nueva revisión.</p><div data-filas></div><button type="button" class="btn btn--linea" data-agregar>+ Agregar partida</button><p data-error role="status" class="cot-alerta"></p><footer class="cot-acciones"><button class="btn btn--azul">Aplicar al borrador</button></footer></form>';document.body.append(dialogo);

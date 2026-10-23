@@ -12,7 +12,7 @@ module.exports=async function verificarSelecciones(page,{base,capturas}={}){
   else if(op==='resumen')d={resumen:{activos:1}};
   else if(op==='detalle')d={pedido};else if(op==='historial')d={historial:[]};
   else if(op==='cotizacion')d={cotizacion,editable:['nuevo','contactado','cotizado','aceptado'].includes(pedido.estado)};
-  else if(op==='catalogo-publico')d={catalogo:C};else if(op==='precios-config')d={config:{version:1,datos:cfg}};
+  else if(op==='catalogo-publico'){const {tecnicas,...publico}=C;d={catalogo:publico};}else if(op==='precios-config')d={config:{version:1,datos:cfg}};
   else if(op==='cotizacion-guardar'){assert.equal(b.version,cotizacion.version);cotizacion={...cotizacion,version:cotizacion.version+1,borrador:sel.conservarSelecciones(core.calcular(sel.itemsDe(pedido,b.borrador),b.borrador),b.borrador)};operaciones.push({op,total:pedido.total});d={cotizacion};}
   else if(op==='cotizacion-publicar'){assert.equal(b.version,cotizacion.version);const q=cotizacion.borrador;pedido.items=sel.itemsDe(pedido,q);pedido.total=pedido.items.reduce((n,p)=>n+p.piezas,0);pedido.partidas_version++;pedido.version++;cotizacion={...cotizacion,version:cotizacion.version+1,publicada:{...core.paraCliente(q),revision:cotizacion.version+1},borrador:{...q,partidasVersion:pedido.partidas_version,selecciones:q.selecciones.map((s,i)=>({...s,origen:i}))}};operaciones.push({op,total:pedido.total});d={cotizacion,pedido};}
   else if(op==='cotizacion-seguimiento')d={seguimiento:null};else d={ok:true,productos:[],tecnicas:[],chats:[],finanzas:null};return route.fulfill({json:d});}

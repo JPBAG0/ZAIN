@@ -1,5 +1,5 @@
 import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './cotizacion-selecciones.js?v=1';
-import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=1';
+import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=2';
 import './control-confirmacion.js?v=3';
 import {ordenarCostos} from './control-costos-vista.js?v=2';
 import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=19';
