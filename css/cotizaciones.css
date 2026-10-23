@@ -64,3 +64,66 @@
 .cot-selecciones-acceso{margin:12px 0 20px}.cot-selecciones-dialogo{width:min(94vw,850px);max-height:92dvh;overflow:auto;border:1px solid #d9dfe7;border-radius:16px;padding:22px;color:#182034;background:#fff;box-sizing:border-box}.cot-selecciones-dialogo::backdrop{background:#11111388}.cot-selecciones-cab{display:flex;align-items:center;justify-content:space-between;gap:12px}.cot-selecciones-cab h2{margin:0}.cot-seleccion-fila{position:relative;margin:18px 0;padding:16px;border:1px solid #d9dfe7;border-radius:12px;min-width:0}.cot-seleccion-acciones{display:flex;justify-content:flex-end;gap:16px}.cot-selecciones-dialogo label{display:grid;gap:6px;margin:10px 0;font-weight:600;font-size:14px}.cot-selecciones-dialogo input,.cot-selecciones-dialogo select{width:100%;min-width:0;min-height:44px;font:400 16px Archivo,Arial,sans-serif;border:1px solid #cbd2dc;border-radius:8px;padding:10px;box-sizing:border-box}.cot-tallas-cantidades{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:10px}.cot-selecciones-dialogo [data-personalizacion][hidden]{display:none}
 @media(max-width:600px){.cot-selecciones-dialogo{padding:14px}.cot-selecciones-dialogo .cot-edicion{grid-template-columns:1fr}.cot-selecciones-dialogo .cot-acciones .btn{width:100%}.cot-tallas-cantidades{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .cot-notas{display:grid;gap:6px;margin:16px 0;font-weight:600;font-size:14px}.cot-notas small{display:block;font-weight:400;font-size:12px;color:#5d6880}.cot-notas textarea{width:100%;min-height:84px;box-sizing:border-box;border:1px solid #cbd2dc;border-radius:10px;padding:10px 12px;font:400 16px Archivo,Arial,sans-serif;resize:vertical}
+
+/* Cotización v4 (23-oct-2026): partidas en fila, bloques claros y barra fija con total y acciones. */
+.cot-v4{display:grid;gap:14px}
+.cot-v4 .cot-bloque{border:1px solid #e1e5ec;border-radius:16px;padding:14px 16px;background:#fff}
+.cot-v4 .cot-bloque h3{font-size:16px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.cot-v4 .cot-bloque h3 span{font-size:12px;font-weight:600;color:#5d6880;background:#eef1f6;border-radius:99px;padding:2px 8px}
+.cot-v4 .cot-bloque-cab{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cot-v4 .cot-bloque-cab h3{margin:0}
+.cot-v4 .cot-pendientes{margin:10px 0 0}
+.cot-fila{border-top:1px solid #edf0f4;padding:12px 0}
+.cot-fila:first-of-type{border-top:0}
+.cot-fila-principal{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(150px,190px) minmax(96px,auto);gap:12px;align-items:center}
+.cot-fila-foto{width:56px;height:66px;object-fit:contain;border:1px solid #e4e7ed;border-radius:8px;background:#fff;padding:3px;box-sizing:border-box}
+.cot-fila-foto--vacia{display:block;background:#f1f3f7}
+.cot-fila-info{min-width:0}.cot-fila-info h4{font-size:15px;margin:0 0 3px;line-height:1.3;overflow-wrap:anywhere}
+.cot-fila-info p{font-size:12.5px;color:#4a576b;margin:0 0 2px}.cot-fila-info small{font-size:11.5px;color:#68748a;overflow-wrap:anywhere}
+.cot-fila-precio label{display:grid;gap:4px;font-size:12px;font-weight:600;color:#4a576b}
+.cot-fila-precio .cot-precio-entrada{min-height:46px}
+.cot-panel .cot-fila-precio .cot-precio-entrada input{font-size:20px}
+.cot-fila-precio small{display:block;font-size:11.5px;color:#68748a;margin-top:4px}
+.cot-fila .cot-total-partida{text-align:right;display:grid;gap:2px;margin:0}
+.cot-fila .cot-total-partida span{font-size:11.5px;color:#68748a}.cot-fila .cot-total-partida strong{font-size:17px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cot-fila-ajustes{margin-top:8px}
+.cot-fila-ajustes>summary{font-size:13px}
+.cot-v4 .cot-plegable{border:1px solid #e1e5ec;border-radius:16px;padding:4px 16px;background:#fff}
+.cot-v4 .cot-notas{margin:0 0 12px}
+#formCotizacion .cot-barra{position:sticky;bottom:0;z-index:5;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center;background:#fff;border:1px solid #d9dfe7;border-radius:16px;padding:12px 14px;box-shadow:0 -6px 24px rgba(17,24,39,.08);margin-top:4px}
+#formCotizacion .cot-barra .cot-totales-editor{margin:0;padding:0;border:0;background:none;display:grid;gap:4px}
+#formCotizacion .cot-barra .cot-total-cliente strong{font-size:22px}
+#formCotizacion .cot-barra .cot-interno{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px}
+#formCotizacion .cot-barra-acciones{display:grid;gap:6px;justify-items:end}
+#formCotizacion .cot-barra .cot-paso{margin:0;font-size:12px;text-align:right}
+#formCotizacion .cot-barra .cot-acciones{display:flex;gap:8px;margin:0}
+#formCotizacion .cot-barra .cot-acciones .btn{min-height:44px;padding:10px 16px}
+#formCotizacion .cot-barra .cot-estado{grid-column:1/-1;margin:0;font-size:12.5px}
+#formCotizacion .cot-barra .cot-estado:empty{display:none}
+@media(max-width:760px){
+ .cot-fila-principal{grid-template-columns:48px minmax(0,1fr);gap:10px}
+ .cot-fila-foto{width:48px;height:56px}
+ .cot-fila-precio{grid-column:1/-1}
+ .cot-fila .cot-total-partida{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline}
+ #formCotizacion .cot-barra{grid-template-columns:1fr;padding:10px 12px;border-radius:14px 14px 0 0}
+ #formCotizacion .cot-barra-acciones{justify-items:stretch}#formCotizacion .cot-barra .cot-paso{text-align:left}
+ #formCotizacion .cot-barra .cot-acciones{display:grid;grid-template-columns:auto auto 1fr}
+ #formCotizacion .cot-barra .cot-total-cliente strong{font-size:20px}
+}
+/* Barra v4: compacta, por encima de las reglas generales de .cot-acciones y .cot-total-cliente. */
+#formCotizacion .cot-barra .cot-total-cliente{padding:10px 14px;gap:2px;border-radius:12px}
+#formCotizacion .cot-barra .cot-total-cliente strong{font-size:22px;letter-spacing:-.4px}
+#formCotizacion .cot-barra .cot-acciones{display:flex;grid-template-columns:none;padding-top:0}
+#formCotizacion .cot-barra .cot-acciones #cotPublicar{grid-column:auto;min-height:44px;font-size:15px}
+@media(max-width:760px){
+ #formCotizacion .cot-barra{gap:6px;padding:8px 10px}
+ #formCotizacion .cot-barra .cot-total-cliente{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:8px 12px;flex-wrap:wrap}
+ #formCotizacion .cot-barra .cot-total-cliente small{font-size:11px}
+ #formCotizacion .cot-barra .cot-total-cliente strong{font-size:18px}
+ #formCotizacion .cot-barra .cot-total-cliente span{flex-basis:100%;font-size:11px}
+ #formCotizacion .cot-barra .cot-interno{font-size:11px;gap:2px 10px}
+ #formCotizacion .cot-barra .cot-paso{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;font-size:11.5px}
+ #formCotizacion .cot-barra .cot-acciones{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:6px}
+ #formCotizacion .cot-barra .cot-acciones .btn{font-size:14px;padding:10px 14px;min-height:44px;width:auto}
+ #formCotizacion .cot-barra .cot-estado{font-size:11.5px}
+}

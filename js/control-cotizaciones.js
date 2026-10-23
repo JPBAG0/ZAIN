@@ -2,7 +2,7 @@ import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './co
 import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=4';
 import './control-confirmacion.js?v=4';
 import {ordenarCostos} from './control-costos-vista.js?v=2';
-import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=20';
+import {editorCotizacion,actualizarPartida} from './cotizacion-editor.js?v=21';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
@@ -92,7 +92,7 @@ function pintarCot(){
  // calcular() no devuelve origenCostos: conservarlo para mostrar el costo del panel junto a cada campo editable.
  const q={...calcularSeleccion(pedido,entrada(quote.borrador)),...(quote.borrador.origenCostos?{origenCostos:quote.borrador.origenCostos}:{})};quote={...quote,borrador:q};
  $('#cotPedido').innerHTML=editorCotizacion(q,{version:quote.version,publicada:quote.publicada,editable:quoteEditable,imagenes:imagenesCot(),productos:[...(window.ZAIN?.productos||[]),...(window.ZAIN?.productosHistoricos||[])]});
- $('#cotPaso')?.insertAdjacentHTML('afterend',avisoHTML);
+ $('#cotAvisoSlot')?.insertAdjacentHTML('beforeend',avisoHTML);
  quoteDirty=false;const nombre=$('[name=destinatario]');if(nombre&&!quote.publicada&&!nombre.value.trim()&&pedido.cliente?.nombre){nombre.value=pedido.cliente.nombre.slice(0,180);quoteDirty=true;$('#cotMensaje').textContent='Pusimos el nombre del cliente en la cotización. Se guarda al publicar.';}vista();actualizarMedidas();void prepararAviso();for(let i=0;i<itemsDe(pedido,quote.borrador).length;i++)if(normalizarGeometria(itemsDe(pedido,quote.borrador)[i].logoGeometria))aplicarMedida(i);bloquearCotizacion();
 }
 addEventListener('zain:pedido-abierto',async e=>{const x=e.detail,turn=++quoteEpoch;pedido=x;geometriaPedido.clear();quote=null;quoteDirty=false;void prepararImagenes({partidas:x.items.map((p,indice)=>({...p,indice}))},imagenesCot());if(x.archivado_at)return;$('#detalle').insertAdjacentHTML('beforeend','<section id="cotPedido" class="cot-panel"><h2>Cotización</h2><p>Cargando borrador privado…</p></section>');try{const r=await call('cotizacion',null,{id:x.id});if(turn!==quoteEpoch||$('#detalle').dataset.pedido!==x.id)return;quote=r.cotizacion;quoteEditable=r.editable!==false&&['nuevo','contactado','cotizado','aceptado'].includes(x.estado);pintarCot();void cargarMedidasAnteriores(turn);}catch(er){if(turn===quoteEpoch&&$('#cotPedido'))$('#cotPedido').textContent=er.message;}});
