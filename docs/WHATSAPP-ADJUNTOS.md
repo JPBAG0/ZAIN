@@ -13,7 +13,7 @@ El puente descarga solo del Storage del proyecto, en memoria y hasta8MB, valida 
 Desde el repositorio ZAIN, aplicar solo una vez el SQL adicional; los históricos permanecen intactos. Orden: SQL → Edge → puente → web. No enviar pruebas a chats reales.
 
 ```powershell
-npx --yes supabase@2.121.0 db query --project-ref upzecgfgdtllxdhshhkd --file supabase/whatsapp-adjuntos.sql
+npx --yes supabase@2.121.0 db query --linked --project-ref upzecgfgdtllxdhshhkd --file supabase/whatsapp-adjuntos.sql
 node server/preparar-edge.mjs
 npx --yes supabase@2.121.0 functions deploy zain-pedidos --project-ref upzecgfgdtllxdhshhkd --use-api --no-verify-jwt
 ```
