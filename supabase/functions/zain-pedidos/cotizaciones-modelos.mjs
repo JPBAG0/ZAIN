@@ -6,7 +6,7 @@ const TIPOS={'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/svg
 // «convertida» solo la pone la conversión a pedido.
 export const ESTADOS=['borrador','enviada','autorizada','convertida','descartada'];
 const ESTADOS_MANUALES=ESTADOS.filter(estado=>estado!=='convertida');
-const CAMPOS='id,folio,estado,cliente,desde,modelos,pedido_id,version,created_at,updated_at';
+const CAMPOS='id,folio,estado,cliente,desde,modelos,pedido_id,version,created_at,updated_at,impuesto:comercial->impuesto';
 const objetoValido=(id,objeto)=>typeof objeto==='string'&&objeto.startsWith(id+'/')&&/^[a-f0-9-]{36}\/[a-f0-9-]{36}\.(png|jpg|webp|svg)$/.test(objeto);
 export function validarCotizacion(b,fail){
  if(!b||typeof b!=='object'||Array.isArray(b)||!UUID.test(b.id||''))fail(400,'Cotización inválida.');

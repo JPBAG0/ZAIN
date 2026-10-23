@@ -145,3 +145,10 @@ test('el costo por área sube al siguiente centavo: 40 cm² × $0.025862 = $1.03
  assert.equal(calcular(pedido,v).partidas[0].aplicacion,104);
  Object.assign(v.partidas[0],{ancho:1000,alto:1000,tarifaCm2:decimalTarifa('0.02')});assert.equal(calcular(pedido,v).partidas[0].aplicacion,200);
 });
+
+test('solo prenda no inventa costo de impresión ni ponchado',()=>{
+ const pedido=[{...items[0],tecnica:'Solo prenda',cm:0,zona:'',piezas:10}];
+ const c=areaCfg(),q=generar(pedido,c);
+ assert.equal(q.partidas[0].aplicacion,0);assert.equal(q.partidas[0].preparacion,0);assert.equal(q.cargos.length,0);
+ assert.equal(q.partidas[0].costo,100000);
+});

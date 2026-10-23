@@ -91,3 +91,6 @@
 .control:has(#seccionCotizaciones:not([hidden])) .volver-arriba{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 @media(max-width:760px){.control:has(#seccionCotizaciones:not([hidden])) .volver-arriba{bottom:calc(132px + env(safe-area-inset-bottom,0px))}}
 @media(max-width:700px){.control .control__secciones{grid-template-columns:repeat(3,minmax(0,1fr))}.control .control__secciones button{font-size:13px;min-height:44px;padding:10px 4px;white-space:nowrap}}
+
+/* Cotizador ordenado con los mismos controles y paleta de Gestión. */
+.cm-area .cm-opciones>summary{cursor:pointer;font-size:17px;font-weight:600;list-style-position:inside}.cm-area .cm-opciones[open]>summary{margin-bottom:18px}.cm-area #cmVolver{margin:0 0 16px}.cm-area .cm-actualacciones .btn{white-space:nowrap}

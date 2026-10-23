@@ -19,7 +19,7 @@ test('agrupa por renglón cotizado y elige el tramo con el total del modelo y co
 test('no inventa precios: talla excluida, tramo sin precio, color y técnica',()=>{
  const sin2xl={...modelo,filas:modelo.filas.map(f=>f.tallas.includes('2XL')?{...f,incluir:false}:f)};
  assert.match(armarPedido({modelos:[sin2xl],lineas:[{modelo:0,colorId:'negro',cantidades:{'2XL':3}}],colores}).errores[0],/2XL no tiene precio cotizado para 3 piezas/);
- assert.match(armarPedido({modelos:[{...modelo,tecnica:''}],lineas:[{modelo:0,colorId:'negro',cantidades:{S:3}}],colores}).errores[0],/elige Bordado/);
+ assert.deepEqual(armarPedido({modelos:[{...modelo,tecnica:''}],lineas:[{modelo:0,colorId:'negro',cantidades:{S:3}}],colores}).errores,[]);
  assert.match(armarPedido({modelos:[modelo],lineas:[{modelo:0,colorId:'rojo',cantidades:{S:3}}],colores}).errores[0],/elige un color/);
  assert.match(armarPedido({modelos:[modelo],lineas:[{modelo:0,colorId:'negro',cantidades:{XS:3}}],colores}).errores[0],/no existen/);
  assert.match(armarPedido({modelos:[modelo],lineas:[{modelo:0,colorId:'negro',cantidades:{}}],colores}).errores[0],/al menos una cantidad/);
@@ -35,4 +35,19 @@ test('colores con precio distinto y varios colores del mismo modelo',()=>{
  const porColor={...modelo,filas:[fila(['S','M','L','XL','2XL'],1,null,30000,{color:'Negro',colores:['Negro']}),fila(['S','M','L','XL','2XL'],1,null,28000,{color:'Blanco',colores:['Blanco']})]};
  const r=armarPedido({modelos:[porColor],lineas:[{modelo:0,colorId:'negro',cantidades:{S:2}},{modelo:0,colorId:'blanco',cantidades:{S:3,M:1}}],colores});
  assert.deepEqual(r.selecciones.map(s=>[s.item.color,s.precio,s.item.piezas]),[['Negro',30000,2],['Blanco',28000,4]]);
+});
+
+test('una cotización sin logo pasa al contrato real de pedidos con diseño pendiente',async()=>{
+ const {validateOrder}=await import('../server/pedidos.mjs');
+ const {default:C}=await import('../server/config-interno.cjs');
+ const cat=C,p=cat.productos.find(x=>x.activo!==false&&x.tallas?.length);
+ assert.ok(p);const col=cat.colores.find(c=>c.id===p.colores[0]),tec=cat.tecnicas.find(t=>t.id===p.tecnicas[0]);
+ const m={nombre:p.nombre,producto:p,tecnica:tec.nombre,zonaDatos:p.zonas[0],ancho:500,logoNombre:null,filas:[fila(p.tallas,1,null,25000)]};
+ const r=armarPedido({modelos:[m],lineas:[{modelo:0,colorId:col.id,cantidades:{[p.tallas[0]]:12}}],colores:cat.colores,escala:C.escalaMaxLogo});
+ assert.deepEqual(r.errores,[]);assert.equal(r.selecciones[0].item.tieneLogo,false);assert.equal(r.selecciones[0].item.tieneRender,false);
+ const body={id:'12345678-1234-4123-8123-123456789abc',token:'a'.repeat(64),items:r.selecciones.map(s=>s.item),files:[]};
+ assert.equal(validateOrder(body,{catalogo:cat}).total,12);assert.match(r.selecciones[0].item.notas,/Logo pendiente/);
+ const solo=armarPedido({modelos:[{...m,tecnica:''}],lineas:[{modelo:0,colorId:col.id,cantidades:{[p.tallas[0]]:12}}],colores:cat.colores});
+ assert.deepEqual(solo.errores,[]);body.items=solo.selecciones.map(s=>s.item);assert.equal(validateOrder(body,{catalogo:cat}).items[0].tecnica,'Solo prenda');
+ assert.throws(()=>validateOrder({...body,items:body.items.map(x=>({...x,tieneLogo:true}))},{catalogo:cat}),/sin personalización/);
 });

@@ -37,7 +37,9 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
     const colors=p.colores.map(id=>C.colores.find(c=>c.id===id));
     if (!colors.some(c=>c?.nombre===x.color)) fail(400,'Color de producto inválido.');
-    if (!p.tecnicas.map(id=>C.tecnicas.find(t=>t.id===id)?.nombre).includes(x.tecnica)) fail(400,'Técnica inválida.');
+    const sinPersonalizar=x.tecnica==='Solo prenda';
+    if (!sinPersonalizar&&!p.tecnicas.map(id=>C.tecnicas.find(t=>t.id===id)?.nombre).includes(x.tecnica)) fail(400,'Técnica inválida.');
+    if(sinPersonalizar&&(x.tieneLogo||x.logoGeometria||Number(x.cm||0)!==0||x.zona))fail(400,'Una prenda sin personalización no lleva logo ni zona de impresión.');
     const item={ indice:i,p:p.id,nombre:p.nombre,color:x.color,tecnica:x.tecnica,piezas:n,medidas:p.medidas||'',detalleMedidas:text(x.detalleMedidas,500),zona:text(x.zona,120),cm:Number.isFinite(x.cm)?Math.max(0,Math.min(200,x.cm)):0,tallas:text(x.tallas,500),tallasEtq:text(x.tallasEtq,80),logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender };
     if(x.logoGeometria!=null){
       const geometria=normalizarGeometria(x.logoGeometria);
@@ -50,7 +52,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
       const counts=x.tallasDetalle;
       if(!counts || typeof counts!=='object' || Array.isArray(counts) || !Object.keys(counts).length || Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1||v>9999) || Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma para la silueta elegida.');
       const zone=p.zonas.find(z=>z.nombre===(typeof x.zona==='string'?x.zona.replace(/ \(posición ajustada\)$/,''):''));
-      if(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>maxLogo(zone))fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
+      if(!sinPersonalizar&&(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>maxLogo(zone)))fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
       Object.assign(item,{
         codigoFabricante:p.codigoFabricante,fabricante:p.fabricante,silueta:p.silueta,
         color:col.nombre+' · '+col.codigo,colorCodigo:col.codigo,
@@ -64,7 +66,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
     if(p.creadoGestion||p.catalogo2026){
       const col=colors.find(c=>c.id===x.colorId&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
       const zone=p.zonas.find(z=>z.nombre===String(x.zona||'').replace(/ \(posición ajustada\)$/,''));
-      if(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>maxLogo(zone))fail(400,'Revisa ubicación y tamaño del logo.');
+      if(!sinPersonalizar&&(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>maxLogo(zone)))fail(400,'Revisa ubicación y tamaño del logo.');
       if(p.tallas.length){
         const counts=x.tallasDetalle;
         if(!counts||typeof counts!=='object'||Array.isArray(counts)||Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1)||Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma.');

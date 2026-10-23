@@ -1,3 +1,14 @@
+## Corrección de flujos — 22-oct-2026
+
+Esta actualización sustituye los estados históricos de «solo local» para la entrega del 22-oct. JP autorizó publicar y después corrigió el alcance: conservar el diseño de ZAIN, activar Passkeys y vincular su WhatsApp Business existente por QR como dispositivo adicional. No hay respuestas automáticas ni mensajes de prueba reales.
+
+Pedidos muestra el total principal con IVA; costos/utilidad conservan su base sin IVA. Cotizaciones separa lista y editor, mantiene el membrete y permite pasar a pedido con logo pendiente o solo prenda. La conversión conserva los precios, cargos y el IVA acordados; un conflicto no genera otro pedido a ciegas. Abrir pedido cambia a la pestaña Pedidos. La lista unitaria presenta precio final con IVA cuando la cotización declara el impuesto.
+
+Passkeys se habilitó por el Dashboard oficial, RP zain.com.mx/origen https://zain.com.mx; reto nativo real sin error. Registrar una llave requiere intervención de su dueño en su dispositivo, luego entrar con ella; no equivale a una prueba física de Face ID.
+
+Puente en Server-JP configurado privadamente, tarea ZAIN WhatsApp manual activa, QR privado y señal comprobados. El número esperado se tomó del contacto público del sitio; QR y credenciales nunca van en Git/Cerebro. El usuario debe escanear desde WhatsApp Business. Las respuestas automáticas siguen apagadas. No instalar un segundo puente.
+
+Validación: 271 pruebas Node/PGlite y recorridos de navegador a 390/1280 con SDK real; cuatro conversiones completas aisladas pasan por validateOrder y calcular reales. Además, inspección privada con sesión iniciada por JP, sin guardar o crear registros reales. Ver Cerebro/output/2026-10-22 ZAIN - correcciones de Gestion.md para el cierre y versiones efectivamente publicadas.
 ## Preparado: WhatsApp manual en Gestión — 22-oct-2026
 
 Prompt 7 (sustituye4), rama local `codex/zain-whatsapp-manual-20261022`, sobre Prompts1/2. **Sin publicación ni conexión real.** Puente Node20/Baileys7.0.0-rc14 en `Proyectos-IA/Aplicaciones/zain-whatsapp`, saliente hacia Supabase, sin service_role/listener HTTP. BOT_AUTOMATICO=false obligatorio; nada de IA ni seguimientos solos. Envío solo con decisión humana desde Chats a alguien con entrantes; cola con actor, vigencia, reserva, doble ejecutor bloqueado y revisión de acceso antes de enviar. Resultado incierto: revisar celular; nunca autoreintentar.

@@ -1,4 +1,4 @@
-import {pesos,decimal} from './cotizacion-core.js?v=16';
+import {pesos,decimal} from './cotizacion-core.js?v=17';
 import {esc} from './cotizacion-vista.js?v=11';
 // Finanzas: dashboard anual y movimientos generales (gastos, ingresos y reembolsos que no son de un pedido).
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);

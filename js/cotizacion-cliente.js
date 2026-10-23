@@ -1,4 +1,4 @@
-import {pesos} from './cotizacion-core.js?v=16';
+import {pesos} from './cotizacion-core.js?v=17';
 import {prepararImagenes} from './cotizacion-imagen.js?v=2';
 import {documento,imprimir,actualizarImagenes} from './cotizacion-vista.js?v=11';
 let pedidoActual=null,cotizacionActual=null,imagenesActual={},revisionImagenes=0;
@@ -12,7 +12,7 @@ addEventListener('zain:consulta-cliente',e=>{
  else{
   section.innerHTML=documento(q,{imagenes:imagenesActual})+'<div class="cot-botones"><button type="button" class="btn btn--linea" id="imprimirCotizacionCliente">Imprimir</button><button type="button" class="btn btn--azul" id="descargarCotizacionCliente">Descargar PDF</button></div><p id="estadoCotizacionCliente" role="status" class="cot-estado"></p>';
   section.querySelector('#imprimirCotizacionCliente').onclick=()=>{try{if(Object.values(imagenesActual).some(v=>v.pendiente||v.error))throw Error('Espera a que carguen los diseños; si alguno falló, pulsa Actualizar estado.');imprimir(q,{imagenes:imagenesActual});}catch(er){section.querySelector('[role=status]').textContent=er.message;}};
-  section.querySelector('#descargarCotizacionCliente').onclick=async e=>{const b=e.currentTarget,turn=revisionImagenes;b.disabled=true;const estado=section.querySelector('[role=status]');estado.textContent='Preparando PDF…';try{const {descargarPDF}=await import('./cotizacion-pdf.js?v=14');if(turn!==revisionImagenes)return;await descargarPDF(q,{imagenes:imagenesActual});estado.textContent='PDF generado. Puedes guardarlo o compartirlo desde tu dispositivo.';}catch(er){estado.textContent=er.message;}finally{if(turn===revisionImagenes){controles();}}};
+  section.querySelector('#descargarCotizacionCliente').onclick=async e=>{const b=e.currentTarget,turn=revisionImagenes;b.disabled=true;const estado=section.querySelector('[role=status]');estado.textContent='Preparando PDF…';try{const {descargarPDF}=await import('./cotizacion-pdf.js?v=15');if(turn!==revisionImagenes)return;await descargarPDF(q,{imagenes:imagenesActual});estado.textContent='PDF generado. Puedes guardarlo o compartirlo desde tu dispositivo.';}catch(er){estado.textContent=er.message;}finally{if(turn===revisionImagenes){controles();}}};
  }
  const resumen=pedido.querySelector('.seguimiento__resumen');resumen.after(section);
  const s=x.seguimiento?.revision===q?.revision?x.seguimiento:null;

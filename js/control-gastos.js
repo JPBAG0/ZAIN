@@ -1,4 +1,4 @@
-import {pesos,decimal} from './cotizacion-core.js?v=16';
+import {pesos,decimal} from './cotizacion-core.js?v=17';
 import {esc} from './cotizacion-vista.js?v=11';
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_City'}),valor=n=>(n/100).toFixed(2);
 let epoca=0,root,pedido,finanzas,ocupado=false;

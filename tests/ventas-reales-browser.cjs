@@ -2,7 +2,7 @@
 module.exports=async function verificarVentas(page,{base='http://127.0.0.1:8085',capturas}={}){
  const assert=require('node:assert/strict'),errores=[],escrituras=[];
  page.on('pageerror',e=>errores.push(e.message));
- await page.addInitScript(()=>sessionStorage.setItem('zain-equipo',JSON.stringify({access_token:'sesion-ficticia'})));
+ await page.addInitScript(()=>sessionStorage.setItem('zain-equipo',JSON.stringify({access_token:'sesion-ficticia',refresh_token:'renovacion-ficticia',expires_at:Math.floor(Date.now()/1000)+3600,token_type:'bearer',user:{id:'12345678-1234-4123-8123-123456789abc',email:'equipo@example.test'}})));
  const meses=Array.from({length:12},(_,i)=>({mes:i+1,ventas:0,vendido:0,costo_pedidos:0,utilidad_pedidos:0,pedidos:0,pedidos_sin_costo:0,cotizado:0,en_negociacion:0,negociacion_pedidos:0,negociacion_sin_importe:0,cotizaciones_modelos:0,sin_anticipo:0,por_cobrar:0,entregados:0,gastos_generales:0,ingresos:0,aportaciones:0}));
  Object.assign(meses[8],{ventas:10000,vendido:11600,costo_pedidos:4000,utilidad_pedidos:6000,pedidos:1,entregados:1});
  Object.assign(meses[9],{ventas:10000,vendido:11600,costo_pedidos:4000,utilidad_pedidos:6000,pedidos:1,en_negociacion:46400,cotizado:46400,negociacion_pedidos:5,negociacion_sin_importe:1,cotizaciones_modelos:2,sin_anticipo:1,por_cobrar:5800});
@@ -28,7 +28,7 @@ module.exports=async function verificarVentas(page,{base='http://127.0.0.1:8085'
   await page.setViewportSize({width,height:width===390?844:800});await page.goto(base+'/gestion-zain.html');
   await page.locator('#resumenFinanciero .bandeja-finanzas').first().waitFor();
   assert.deepEqual((await valores('#resumenFinanciero .bandeja-finanzas')).slice(0,3),['$232.00','$58.00','$464.00']);
-  assert.match(await page.locator('#lista').innerText(),/Cotizado sin IVA/);assert.match(await page.locator('#lista').innerText(),/Vendido sin IVA/);
+  assert.match(await page.locator('#lista').innerText(),/Cotizado con IVA/);assert.match(await page.locator('#lista').innerText(),/Vendido con IVA/);assert.match(await page.locator('#lista .pedido-card').nth(1).innerText(),/\$116\.00/);
   await page.locator('#resumenFinanciero summary').click();assert.match(await page.locator('#resumenFinanciero table').innerText(),/ZAIN-FICTICIO-1/);await ancho();
   if(capturas)await page.screenshot({path:capturas+'/pedidos-'+width+'.png',fullPage:true});
   await page.locator('#verFinanzas').click();await page.locator('.fin-principales').waitFor();

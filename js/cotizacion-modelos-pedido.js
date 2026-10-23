@@ -13,8 +13,6 @@ export function armarPedido({modelos,lineas,colores,escala=1,folio=''}){
   if(!cantidades.length)continue;
   const etiqueta=m.nombre+(color?' · '+color.nombre:'');
   if(!color||!(p.colores||[]).includes(l.colorId)){errores.push(etiqueta+': elige un color del modelo.');continue;}
-  if(p.fabricante){errores.push(etiqueta+': este modelo todavía no se puede pasar a pedido desde aquí; captúralo desde el catálogo.');continue;}
-  if(!m.tecnica){errores.push(m.nombre+': elige Bordado, Serigrafía o DTF en la cotización antes de pasarla a pedido.');continue;}
   if(cantidades.some(([,n])=>!Number.isSafeInteger(n)||n<0||n>9999)){errores.push(etiqueta+': revisa las cantidades.');continue;}
   const conTallas=(p.tallas||[]).length>0;
   if(conTallas&&cantidades.some(([t])=>!p.tallas.includes(t))){errores.push(etiqueta+': hay tallas que no existen en este modelo.');continue;}
@@ -26,18 +24,18 @@ export function armarPedido({modelos,lineas,colores,escala=1,folio=''}){
    const g=grupos.get(f)||{fila:f,tallas:{}};g.tallas[talla]=n;grupos.set(f,g);
   }
   if(falta)continue;
-  const z=m.zonaDatos;
-  if(!z){errores.push(etiqueta+': confirma la zona del logo.');continue;}
-  const cm=m.ancho/100;if(!(cm>0)||cm>maxLogo(z,escala)){errores.push(etiqueta+': el logo de '+cm+' cm excede lo que se puede pedir en '+z.nombre+' (máx. '+maxLogo(z,escala)+' cm). Ajústalo en la cotización.');continue;}
+  const sinPersonalizar=!m.tecnica,z=m.zonaDatos;
+  if(!sinPersonalizar&&!z){errores.push(etiqueta+': confirma la zona del logo.');continue;}
+  const cm=sinPersonalizar?0:m.ancho/100;if(!sinPersonalizar&&(!(cm>0)||cm>maxLogo(z,escala))){errores.push(etiqueta+': el logo de '+cm+' cm excede lo que se puede pedir en '+z.nombre+' (máx. '+maxLogo(z,escala)+' cm). Ajústalo en la cotización.');continue;}
   for(const g of grupos.values()){
    const orden=conTallas?p.tallas.filter(t=>g.tallas[t]):[],piezas=Object.values(g.tallas).reduce((s,n)=>s+n,0),minimo=Math.max(1,p.minimoPiezas||0),paso=p.pasoPiezas||1;
    if(piezas<minimo||(piezas-(p.minimoPiezas||0))%paso){errores.push(etiqueta+': '+(conTallas?orden.join(', ')+' suman ':'')+piezas+' piezas; el mínimo es '+minimo+(paso>1?' y luego de '+paso+' en '+paso:'')+'.');continue;}
    selecciones.push({modelo:l.modelo,colorId:l.colorId,precio:g.fila.visto,item:{
-    p:p.id,nombre:p.nombre,sku:p.sku,medidas:p.medidas||'',detalleMedidas:'',color:color.nombre,colorId:color.id,colorCodigo:'',
+    p:p.id,nombre:p.nombre,sku:p.sku,medidas:p.medidas||'',detalleMedidas:'',color:color.nombre,colorId:color.id,colorCodigo:color.codigo||'',
     ...(conTallas?{tallasDetalle:Object.fromEntries(orden.map(t=>[t,g.tallas[t]])),tallas:orden.map(t=>t+' '+g.tallas[t]).join(' · ')}:{tallas:''}),
-    tallasEtq:p.tallasNombre||'Tallas',renderOrientativo:!!p.renderOrientativo,tecnica:m.tecnica,zona:z.nombre,cm,
-    ...(m.logoGeometria?{logoGeometria:m.logoGeometria}:{}),piezas,logo:'archivo «'+(m.logoNombre||'logo')+'»',colorLogo:'Original del archivo',pantone:'',
-    notas:folio?'Pedido desde la cotización '+folio+'.':'',tieneLogo:true,tieneRender:true}});
+    tallasEtq:p.tallasNombre||'Tallas',renderOrientativo:!!p.renderOrientativo,tecnica:m.tecnica||'Solo prenda',zona:sinPersonalizar?'':z.nombre,cm,
+    ...(!sinPersonalizar&&m.logoNombre&&m.logoGeometria?{logoGeometria:m.logoGeometria}:{}),piezas,logo:!sinPersonalizar&&m.logoNombre?'archivo «'+m.logoNombre+'»':sinPersonalizar?'Sin personalización':'Logo pendiente de recibir',colorLogo:'Original del archivo',pantone:'',
+    notas:(folio?'Pedido desde la cotización '+folio+'. ':'')+(!sinPersonalizar&&!m.logoNombre?'Logo pendiente de recibir y confirmar antes de producción.':''),tieneLogo:!sinPersonalizar&&!!m.logoNombre,tieneRender:!sinPersonalizar&&!!m.logoNombre}});
   }
  }
  if(selecciones.length>20)errores.push('Un pedido admite hasta 20 selecciones (modelo, color y grupo de tallas). Divide la conversión.');
