@@ -639,7 +639,7 @@
      PERSONALIZADOR
      ===================================================================== */
   const E = {
-    extra: null, // segunda posición del mismo logo (p. ej. espalda): {x, y, cm, lugar} en px del lienzo
+    extra: null, // segunda posición con su propio logo (p. ej. espalda): {x, y, cm, lugar, logo, nombre} en px del lienzo
     p: MUESTRAS[0].p,
     c: MUESTRAS[0].c,
     t: MUESTRAS[0].t,
@@ -788,6 +788,20 @@
     return b;
   };
 
+  // Segunda posición: su propio logo; mientras no lo suban, un marcador «Logo 2» para ubicarla.
+  let ejemplo2 = null;
+  async function logoSegundo() {
+    if (E.extra?.logo) return E.extra.logo;
+    if (!ejemplo2) ejemplo2 = await ZR.logoDeTexto("Logo 2", "ancha", "#ffffff");
+    const claro = ZR.luz(ZR.hexARgb(fondoLogo(zAct(), E.c))) > 0.55;
+    const c = ZR.lienzo(ejemplo2.width, ejemplo2.height);
+    const g = c.getContext("2d");
+    g.drawImage(ejemplo2, 0, 0);
+    g.globalCompositeOperation = "source-in";
+    g.fillStyle = claro ? "rgba(27,27,29,.45)" : "rgba(244,244,242,.55)";
+    g.fillRect(0, 0, c.width, c.height);
+    return c;
+  }
   async function logoActual() {
     if (E.modo === "imagen" && E.logo) return E.tinta === "original" ? E.logo : entintar(E.logo, E.tinta);
     if (E.modo === "texto" && E.texto.trim()) return logoTexto;
@@ -852,11 +866,13 @@
         caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
         caja2 = null;
         if (E.extra) {
+          const logo2 = await logoSegundo();
+          if (v !== renderVersion) return;
           let a2 = E.extra.cm * p.pxPorCm;
-          const h2 = (a2 * logo.height) / logo.width, maxH = 30 * p.pxPorCm;
-          if (h2 > maxH) a2 = (maxH * logo.width) / logo.height;
-          ZR.estampar(lg, img, logo, { x: E.extra.x, y: E.extra.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
-          const al2 = (a2 * logo.height) / logo.width;
+          const h2 = (a2 * logo2.height) / logo2.width, maxH = 30 * p.pxPorCm;
+          if (h2 > maxH) a2 = (maxH * logo2.width) / logo2.height;
+          ZR.estampar(lg, img, logo2, { x: E.extra.x, y: E.extra.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
+          const al2 = (a2 * logo2.height) / logo2.width;
           caja2 = { x0: E.extra.x - a2 / 2, y0: E.extra.y - al2 / 2, x1: E.extra.x + a2 / 2, y1: E.extra.y + al2 / 2 };
         }
         const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
@@ -946,11 +962,41 @@
     $("#segundoActivar").hidden = !!E.extra;
     if (E.extra) { $("#segundoTamano").value = E.extra.cm; $("#segundoTxt").textContent = cm(E.extra.cm); $("#segundoLugar").value = E.extra.lugar; }
   };
+  const textoSegundo = () => {
+    $("#segundoArchivoTxt").innerHTML = E.extra?.nombre ? `<b>${esc(E.extra.nombre)}</b> · toca para cambiarlo` : "<b>Elige el logo de esta posición</b> · PNG, JPG o SVG";
+  };
   $("#segundoActivar").addEventListener("click", () => {
-    // Arranca al centro del torso, debajo del logo principal.
-    E.extra = { x: 500, y: Math.min(620, Math.max(420, zAct().y + 180)), cm: 22, lugar: "Espalda" };
+    // Arranca al centro del torso, debajo del logo principal, sin logo: cada posición lleva el suyo.
+    E.extra = { x: 500, y: Math.min(620, Math.max(420, zAct().y + 180)), cm: 22, lugar: "Espalda", logo: null, nombre: "", crudo: null };
+    $("#segundoArchivo").value = "";
+    textoSegundo();
     pintarSegundo();
     pedirRender();
+  });
+  const analizarSegundo = () => {
+    const r = ZR.analizarLogo(E.extra.crudo, $("#segundoFondo").checked);
+    E.extra.logo = r.logo;
+    pedirRender();
+  };
+  $("#segundoArchivo").addEventListener("change", async (e) => {
+    const f = e.target.files[0];
+    if (!f || !E.extra) return;
+    if (!/^image\//.test(f.type)) return aviso("Ese archivo no es una imagen. Sube el segundo logo en PNG, JPG o SVG.", true);
+    if (f.size > 15 * 1024 * 1024) return aviso("La imagen pesa más de 15 MB. Prueba con una versión más ligera.", true);
+    $("#segundoArchivoTxt").innerHTML = "<b>Analizando el segundo logo…</b>";
+    try {
+      E.extra.crudo = await ZR.abrirArchivo(f);
+      E.extra.nombre = f.name;
+      analizarSegundo();
+      aviso("");
+    } catch (er) {
+      aviso(er.message, true);
+    }
+    textoSegundo();
+  });
+  $("#segundoFondo").addEventListener("change", () => {
+    if (!E.extra?.crudo) return;
+    try { analizarSegundo(); } catch (er) { aviso(er.message, true); }
   });
   $("#segundoQuitar").addEventListener("click", () => { E.extra = null; caja2 = null; pintarSegundo(); pedirRender(); });
   $("#segundoTamano").addEventListener("input", (e) => { if (!E.extra) return; E.extra.cm = Number(e.target.value); $("#segundoTxt").textContent = cm(E.extra.cm); pedirRender(); });
@@ -1617,6 +1663,7 @@
     const z = zAct();
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     const desglose = tallas.filter((x) => E.tallas[x] > 0).map((x) => (p.tallas.length ? `${x} ${E.tallas[x]}` : `${E.tallas[x]}`));
+    if (E.extra && !E.extra.logo) throw new Error("Sube el logo de la segunda posición o quítala antes de agregar.");
     const mini = renderFinal(360).toDataURL("image/jpeg", 0.78);
     const logo =
       E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${nombreTinta()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
@@ -1648,7 +1695,7 @@
       logo,
       colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
       pantone: E.pantone,
-      notas: [E.notas.trim(), E.extra && tieneRender ? `Segunda posición del logo: ${E.extra.lugar} · ${cm(E.extra.cm)} de ancho (en el render se muestra al centro)` : ""].filter(Boolean).join(" · "),
+      notas: [E.notas.trim(), E.extra && tieneRender ? `Segunda posición: ${E.extra.lugar} · logo «${E.extra.nombre}» · ${cm(E.extra.cm)} de ancho (en el render se muestra al frente)` : ""].filter(Boolean).join(" · "),
       mini,
       tieneLogo: !!original,
       tieneRender,
