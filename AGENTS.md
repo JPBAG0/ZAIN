@@ -1,3 +1,10 @@
+## Partidas y tallas editables — 23-oct-2026
+
+JP pide editar cantidades por talla y agregar/quitar partidas. Eligió explícitamente bloquear cuando el pedido pase a Confirmado, no al aceptar. Disponible en Pedido→Cotización→Editar partidas y tallas; modelo/color/técnica/zona/medida, cantidades, agregar, duplicar y quitar. Precio, cargos, IVA y condiciones siguen editables. Confirmado/producción/entregado/cancelado bloquean modificaciones en interfaz, API y SQL; la lectura no actualiza costos. Se conserva la protección previa para no republicar importes con pagos registrados.
+
+Selecciones privadas en el borrador; guardar no altera pedido ni cotización publicada. Publicar aplica todo atómicamente, requiere la versión de partidas y conserva selección/archivos anteriores en zain_cotizacion_partidas_historial, privado solo servicio. Archivos de Storage no se borran. Nueva revisión antes de Confirmado requiere de nuevo aceptación si la anterior estaba aceptada. Precios acordados por talla se conservan al redistribuir o retirar tallas, incluyendo quitar el grupo base; el campo de precio permite corregirlos. Mapas internos de precios nunca se publican en PDF/JSON comercial.
+
+Código preparado/probado en codex/zain-cotizacion-editable-20261023.290 pruebas Node20/PGlite y navegador390/1280 aprobados; datos ficticios, sin modificar clientes ni enviar mensajes. SQL adicional: supabase/cotizacion-partidas-editables.sql; históricos intactos. Guía: docs/COTIZACION-PARTIDAS.md. No cambia ni reinicia WhatsApp. Ver checkpoint de publicación para estado real.
 ## Adjuntos humanos en Chats — 22-oct-2026
 
 JP confirmó que la vinculación QR ya funciona y pidió adjuntar archivos/cotizaciones. Esta decisión amplía la regla histórica de texto: PDF, JPG/PNG/WEBP y documentos Word/Excel modernos, máximo8MB, siempre por una persona al pulsar Enviar. BOT_AUTOMATICO=false. No enviar mensajes o archivos reales durante pruebas.

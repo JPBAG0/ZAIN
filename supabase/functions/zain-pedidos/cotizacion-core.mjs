@@ -136,11 +136,23 @@ export function calcular(items,input){
   const sugerido=grupos.length?grupos[0].sugerido:costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
   const precio=v.precio===null?sugerido:entero(v.precio);
   // Un precio escrito a mano es el del grupo base; los demás grupos conservan su diferencia.
-  const preciosTalla=precio===null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
+  let preciosTalla=precio===null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
+  let preciosDetalle=null;
+  if(v.preciosAcordados&&v.precio!==null){
+   if(typeof v.preciosAcordados!=='object'||Array.isArray(v.preciosAcordados)||Object.keys(v.preciosAcordados).length>50)error('Revisa los precios acordados por talla.');
+   for(const n of Object.values(v.preciosAcordados))entero(n);const ancla=entero(v.precioAncla),diferencia=precio-ancla;
+   const costos=[...new Set(porTalla.detalle.map(d=>d.costo))].sort((a,b)=>a-b),agrupados=new Map();preciosDetalle=[];
+   for(const [talla,n] of Object.entries(p.tallasDetalle||{})){
+    const d=porTalla.detalle.find(d=>d.talla===talla),g=d?grupos[costos.indexOf(d.costo)]:null;
+    const actual=v.preciosAcordados[talla]!=null?entero(v.preciosAcordados[talla]+diferencia):g?entero(precio+g.sugerido-sugerido):precio;
+    const grupo=agrupados.get(actual)||{nombres:[],piezas:0,precio:actual,importe:0};grupo.nombres.push(talla);grupo.piezas+=n;grupo.importe=entero(grupo.importe+actual*n);agrupados.set(actual,grupo);preciosDetalle.push({talla,piezas:n,precio:actual});
+   }
+   if(agrupados.size)preciosTalla=[...agrupados.values()].sort((a,b)=>a.precio-b.precio).map(({nombres,...g})=>({tallas:nombres.join(' · '),...g}));
+  }
   // Publicar exige precio por pieza; los costos son opcionales y solo sirven para conocer la utilidad.
   if(precio===null)pendiente=true;
   const bruto=precio===null?null:preciosTalla.length?suma(preciosTalla.map(g=>g.importe)):entero(precio*base.piezas),rebaja=bruto===null?null:proporcion(bruto,descuento),importe=bruto===null?null:bruto-rebaja;
-  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,preciosTalla,cargoAparte,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
+  return {...base,modo,modoPrenda,bandas,costoPrendas,detalleCostosTalla:porTalla.detalle,ancho,alto,area,tarifaCm2,prenda,aplicacion,otros,preparacion,margenObjetivo,precioManual:v.precio===null?null:precio,precio,preciosTalla,...(preciosDetalle?{preciosAcordados:structuredClone(v.preciosAcordados),precioAncla:v.precioAncla,preciosDetalle}:{}),cargoAparte,descuento,costoUnitario,costo,sugerido,bruto,rebaja,importe};
  });
  const impuesto=input.impuesto===null?null:entero(input.impuesto,0,10000),envio=entero(input.envio),costoEnvio=entero(input.costoEnvio);
  // Cargos únicos de la cotización (p. ej. «Ponchado logo»): una partida propia, sin descuento por pieza. Costo interno vacío = importe cobrado.

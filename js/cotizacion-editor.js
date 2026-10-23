@@ -46,10 +46,11 @@ function cargosUnicos(q){
  return `<fieldset class="cot-cargos"><legend>Cargos únicos · una vez por pedido</legend><p class="cot-ayuda">Por ejemplo, el ponchado de cada logo de bordado: si el mismo logo va en varias prendas, se cobra una sola vez. El cliente lo ve como partida propia. Deja el concepto vacío para quitar un cargo.</p>${filas.map((c,k)=>`<div class="cot-edicion cot-cargo-fila">${field('cargoConcepto-'+k,'Concepto',c.concepto,'text','maxlength="80" placeholder="Otro cargo (opcional)"')}${field('cargoImporte-'+k,'Se cobra al cliente',val(c.importe))}${field('cargoCosto-'+k,'Tu costo (vacío = igual)',c.costo===c.importe?'':val(c.costo),'number','placeholder="Igual al cobro"')}</div>`).join('')}</fieldset>`;
 }
 const opcionImpuesto=q=>q.impuesto===null?'':q.impuesto===0?'0':q.impuesto===1600?'1600':'otro';
-export function editorCotizacion(q,{version,publicada,imagenes={},productos=[]}={}){
+export function editorCotizacion(q,{version,publicada,imagenes={},productos=[],editable=true}={}){
  const op=opcionImpuesto(q),chip=(v,t)=>`<label class="cot-chip"><input type="radio" name="impuestoOpcion" value="${v}" ${op===v?'checked':''}><span>${t}</span></label>`;
  return `<div class="cot-cabecera"><h2>Cotización</h2><span class="cot-privado">${publicada?'Publicada · revisión '+esc(publicada.revision):'Borrador privado · v'+esc(version)}</span></div>
  <form id="formCotizacion" class="cot-editor">
+ ${editable?'<div class="cot-selecciones-acceso"><button type="button" class="btn btn--linea" id="cotEditarPartidas">Editar partidas y tallas</button><p class="cot-ayuda">Cantidades por talla, modelos y agregar o quitar partidas.</p></div>':'<p class="cot-alerta">Cotización cerrada: el pedido ya fue confirmado o cancelado. Puedes consultar el PDF.</p>'}
  ${q.partidas.map((p,i)=>partida(p,i,imagenes[i]?.src||productos.find(v=>v.sku===p.sku)?.foto,q.origenCostos?.partidas?.[i]?.sku===p.sku?q.origenCostos.partidas[i]:null)).join('')}
  ${cargosUnicos(q)}
  <fieldset class="cot-impuesto"><legend>¿Lleva IVA?</legend><div class="cot-chips">${chip('0','Sin IVA')}${chip('1600','+ IVA 16%')}${chip('otro','Otro %')}</div><div data-impuesto-otro ${op==='otro'?'':'hidden'}>${field('impuesto','Impuesto %',op==='otro'?val(q.impuesto):'','number','max="100"')}</div></fieldset>

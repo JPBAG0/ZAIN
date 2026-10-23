@@ -1,3 +1,4 @@
+import {validarSelecciones} from './cotizacion-selecciones.mjs';
 import {createWhatsApp} from './whatsapp.mjs';
 import {createGastos} from './gastos.mjs';
 import {createGenerales} from './finanzas-generales.mjs';
@@ -196,8 +197,8 @@ export function createHandler(env={}, fetcher=fetch) {
     if(f.kind==='logo'||b.descarga)signed.searchParams.set('download',f.name||'archivo.'+TYPES[f.type]);
     return {url:signed.href,name:f.name,type:f.type};
   };
-  const publicRow=x=>{const {token_hash,consulta_nonce,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
-  const quotes=createQuotes({sb,row,fail,commercialItem}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row});
+  const publicRow=x=>{const {token_hash,consulta_nonce,partidas_version,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
+  const quotes=createQuotes({sb,row,fail,commercialItem,validarSelecciones:(lista,x,cat)=>validarSelecciones(lista,x,cat,validateOrder,fail)}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row});
   const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).

@@ -1,6 +1,7 @@
+import {itemsDe,conservarSelecciones} from '../js/cotizacion-selecciones.js';
 import {vincularCostos,sincronizarCostos,origenDe} from './cotizacion-costos.mjs';
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from '../js/cotizacion-core.js';
-export function createQuotes({sb,row,fail,commercialItem}){
+export function createQuotes({sb,row,fail,commercialItem,validarSelecciones}){
  const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]?{...r[0],datos:configurar(r[0].datos)}:{version:0,datos:inicial()};};
  const get=async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=*&limit=1'))[0]||null;
  const ensure=async (x,manual=false)=>{
@@ -24,7 +25,10 @@ export function createQuotes({sb,row,fail,commercialItem}){
    const b=request.method==='GET'?{id:url.searchParams.get('id')}:await jsonBody(request),x=await row(b.id);
    if(x.archivado_at||!x.guardado_at)fail(409,'Restaura el pedido y verifica sus archivos antes de cotizar.');
    if(op==='cotizacion'&&request.method==='GET'){
-    const old=await ensure(x,true),cfg=await config(),borrador=sincronizarCostos(x.items.map(commercialItem),old.borrador,cfg);
+    const old=await ensure(x,true),editable=['nuevo','contactado','cotizado','aceptado'].includes(x.estado);
+    if(!old)fail(409,'El pedido está cerrado y no tiene una cotización editable.');
+    if(!editable)return {cotizacion:old,editable:false};
+    const cfg=await config(),borrador=conservarSelecciones(sincronizarCostos(itemsDe(x,old.borrador).map(commercialItem),old.borrador,cfg),old.borrador);
     if(JSON.stringify(borrador)===JSON.stringify(old.borrador))return {cotizacion:old};
     const out=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:old.version,p_modo:'guardar',p_borrador:borrador,p_publicada:null,p_actor:user.id})});
     if(!out)fail(409,'La cotización cambió mientras se consultaban los costos. Vuelve a abrirla.');
@@ -32,24 +36,33 @@ export function createQuotes({sb,row,fail,commercialItem}){
    }
    if(request.method!=='POST'||!['cotizacion-guardar','cotizacion-costos','cotizacion-recalcular','cotizacion-publicar','cotizacion-retirar'].includes(op))fail(404,'Operación no encontrada.');
    if(!Number.isSafeInteger(b.version)||b.version<1)fail(400,'Versión inválida.');
+   if(!['nuevo','contactado','cotizado','aceptado'].includes(x.estado))fail(409,'La cotización está cerrada: el pedido ya fue confirmado o cancelado.');
    const old=await get(x.id);if(!old||old.version!==b.version)fail(409,'La cotización cambió. Vuelve a abrirla antes de guardar.');
    let draft=old.borrador,published=null,modo='guardar';
+   let selecciones=old.borrador.selecciones;
+   if(b.borrador?.selecciones){
+    if(!Number.isInteger(b.borrador.partidasVersion)||b.borrador.partidasVersion!==(x.partidas_version??0))fail(409,'Las partidas cambiaron. Vuelve a abrir la cotización.');
+    selecciones=validarSelecciones(b.borrador.selecciones,x,await currentCatalog());
+   }
+   const mantener=q=>selecciones?{...q,selecciones,partidasVersion:b.borrador?.partidasVersion??old.borrador.partidasVersion??x.partidas_version??0}:q;
+   const seleccionados=()=>itemsDe(x,{selecciones}).map(commercialItem);
    if(['cotizacion-guardar','cotizacion-costos'].includes(op)&&b.borrador?.schema!==6)fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
    try{
     if(['cotizacion-guardar','cotizacion-costos'].includes(op)){
-     draft=calcular(x.items.map(commercialItem),b.borrador);
+     draft=mantener(calcular(seleccionados(),b.borrador));
      if(old.borrador.origenCostos)draft.origenCostos=origenDe(old.borrador);
-     else {const cfg=await config();draft=vincularCostos(draft,cfg.version,generar(x.items.map(commercialItem),cfg.datos));}
-     if(op==='cotizacion-costos')draft=sincronizarCostos(x.items.map(commercialItem),draft,await config());
+     else {const cfg=await config();draft=vincularCostos(draft,cfg.version,generar(seleccionados(),cfg.datos));}
+     draft=mantener(draft);
+     if(op==='cotizacion-costos')draft=mantener(sincronizarCostos(seleccionados(),draft,await config()));
     }
-    if(op==='cotizacion-recalcular'){const cfg=await config();draft=vincularCostos(generar(x.items.map(commercialItem),cfg.datos),cfg.version);}
+    if(op==='cotizacion-recalcular'){const cfg=await config();draft=mantener(vincularCostos(generar(seleccionados(),cfg.datos),cfg.version));}
     if(op==='cotizacion-publicar'){
      if(['cancelado'].includes(x.estado))fail(409,'No publiques una cotización de un pedido cancelado.');
-     draft=calcular(x.items.map(commercialItem),entrada(old.borrador));if(old.borrador.origenCostos)draft.origenCostos=origenDe(old.borrador);published=paraCliente(draft);modo='publicar';
+     draft=mantener(calcular(seleccionados(),entrada(old.borrador)));if(old.borrador.origenCostos)draft.origenCostos=origenDe(old.borrador);published=paraCliente(draft);modo='publicar';
     }
     if(op==='cotizacion-retirar')modo='retirar';
    }catch(e){if(e.status)throw e;fail(400,e.message);}
    const out=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:b.version,p_modo:modo,p_borrador:draft,p_publicada:published,p_actor:user.id})});
-   if(!out)fail(409,'Tu compañero modificó esta cotización o el pedido. Actualiza antes de continuar.');return {cotizacion:out};
+   if(!out)fail(409,'Tu compañero modificó esta cotización o el pedido. Actualiza antes de continuar.');return {cotizacion:out,...(op==='cotizacion-publicar'&&selecciones?{pedido:await row(x.id)}:{})};
   }};
 }
