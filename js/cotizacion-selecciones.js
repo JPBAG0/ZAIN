@@ -4,7 +4,9 @@ export const seleccionesDe=(pedido,borrador)=>borrador?.selecciones||pedido.item
 export const itemsDe=(pedido,borrador)=>seleccionesDe(pedido,borrador).map(s=>s.item);
 export function conservarSelecciones(resultado,borrador){return {...resultado,...(borrador?.selecciones?{selecciones:structuredClone(borrador.selecciones),partidasVersion:borrador.partidasVersion??0}:{})};}
 export const calcularSeleccion=(pedido,borrador)=>conservarSelecciones(calcular(itemsDe(pedido,borrador),borrador),borrador);
-export function mismaVista(a,b){return !!a&&a.p===b.p&&a.color===b.color&&a.tecnica===b.tecnica&&a.zona===b.zona&&Number(a.cm)===Number(b.cm);}
+// La zona puede traer « (posición ajustada)» y el color « · código»: se comparan sin esos sufijos.
+const baseZona=z=>String(z||'').replace(/ \(posición ajustada\)$/,''),baseColor=c=>String(c||'').replace(/ · [^·]+$/,'');
+export function mismaVista(a,b){return !!a&&a.p===b.p&&baseColor(a.color)===baseColor(b.color)&&a.tecnica===b.tecnica&&baseZona(a.zona)===baseZona(b.zona)&&Number(a.cm)===Number(b.cm);}
 export function itemCatalogo(producto,color,tecnica,zona,cm,cantidades,piezas,anterior=null){
  const tallasDetalle=Object.fromEntries((producto.tallas||[]).filter(t=>cantidades[t]>0).map(t=>[t,Number(cantidades[t])]));
  const total=producto.tallas?.length?Object.values(tallasDetalle).reduce((n,v)=>n+v,0):Number(piezas);
@@ -12,7 +14,9 @@ export function itemCatalogo(producto,color,tecnica,zona,cm,cantidades,piezas,an
  const simple=tecnica==='Solo prenda';
  const item={...(anterior||{}),p:producto.id,sku:producto.sku,nombre:producto.nombre,nombreZain:producto.nombreComercial||producto.nombre,color:producto.fabricante?color.nombre+' · '+color.codigo:color.nombre,colorId:color.id,colorCodigo:color.codigo||'',tecnica,piezas:total,tallasDetalle,tallas:Object.entries(tallasDetalle).map(([t,n])=>t+' '+n).join(' · '),tallasEtq:'Tallas',zona:simple?'':zona?.nombre||'',cm:simple?0:Number(cm),tieneLogo:false,tieneRender:false};
  if(!simple&&(!zona||!Number.isFinite(item.cm)||item.cm<0||item.cm>200))throw Error('Revisa la zona y el ancho del logo.');
- if(anterior&&mismaVista(anterior,item)){item.tieneLogo=!!anterior.tieneLogo;item.tieneRender=!!anterior.tieneRender;}else delete item.logoGeometria;
+ // El logo del cliente no depende de la vista; el render y su proporción sí.
+ if(!simple&&anterior?.tieneLogo){item.tieneLogo=true;item.logo=anterior.logo;}
+ if(anterior&&mismaVista(anterior,item)){item.tieneRender=!!anterior.tieneRender;item.zona=anterior.zona;item.color=anterior.color;}else delete item.logoGeometria;
  if(simple){delete item.logoGeometria;item.logo='Sin personalización';}else if(!item.tieneLogo)item.logo='Logo pendiente de confirmar';
  return item;
 }

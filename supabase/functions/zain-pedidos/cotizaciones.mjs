@@ -1,7 +1,7 @@
 import {itemsDe,conservarSelecciones} from './cotizacion-selecciones.js';
 import {vincularCostos,sincronizarCostos,origenDe} from './cotizacion-costos.mjs';
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from './cotizacion-core.mjs';
-export function createQuotes({sb,row,fail,commercialItem,validarSelecciones}){
+export function createQuotes({sb,row,fail,commercialItem,validarSelecciones,publicRow=x=>x}){
  const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]?{...r[0],datos:configurar(r[0].datos)}:{version:0,datos:inicial()};};
  const get=async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=*&limit=1'))[0]||null;
  const ensure=async (x,manual=false)=>{
@@ -63,6 +63,6 @@ export function createQuotes({sb,row,fail,commercialItem,validarSelecciones}){
     if(op==='cotizacion-retirar')modo='retirar';
    }catch(e){if(e.status)throw e;fail(400,e.message);}
    const out=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:b.version,p_modo:modo,p_borrador:draft,p_publicada:published,p_actor:user.id})});
-   if(!out)fail(409,'Tu compañero modificó esta cotización o el pedido. Actualiza antes de continuar.');return {cotizacion:out,...(op==='cotizacion-publicar'&&selecciones?{pedido:await row(x.id)}:{})};
+   if(!out)fail(409,'Tu compañero modificó esta cotización o el pedido. Actualiza antes de continuar.');return {cotizacion:out,...(op==='cotizacion-publicar'&&selecciones?{pedido:publicRow(await row(x.id))}:{})};
   }};
 }

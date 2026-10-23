@@ -10,7 +10,8 @@ export function validarSelecciones(lista,pedido,catalogo,validarPedido,fail){
   const original=(pedido.archivos||[]).filter(f=>f.item===s.origen),simple=s.item.tecnica==='Solo prenda',igual=mismaVista(fuente,s.item);
   const keepLogo=!simple&&!!fuente?.tieneLogo&&original.some(f=>f.kind==='logo'),keepRender=igual&&!!fuente?.tieneRender&&original.some(f=>f.kind==='render');
   const item={...s.item,color:String(s.item.color||'').replace(/ · \d+$/,''),tieneLogo:keepLogo,tieneRender:keepRender};
-  if(!keepRender)delete item.logoGeometria;
+  if(keepLogo)item.logo=fuente.logo;
+  if(keepRender){item.zona=fuente.zona;item.color=fuente.color;if(fuente.logoGeometria)item.logoGeometria=fuente.logoGeometria;}else delete item.logoGeometria;
   if(simple){item.logo='Sin personalización';item.zona='';item.cm=0;delete item.logoGeometria;}else if(!keepLogo)item.logo='Logo pendiente de confirmar';
   for(const f of original)if(f.kind==='logo'?keepLogo:keepRender)archivos.push({...f,item:i});
   return item;

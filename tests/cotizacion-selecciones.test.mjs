@@ -98,3 +98,14 @@ test('redistribuir o quitar tallas conserva el precio acordado de cada grupo y p
  const nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[segunda]:12})}],c);assert.equal(nueva.partidas[0].preciosTalla[0].precio,precioMayor);assert.equal(nueva.total,precioMayor*12);
  const corregido=entrada(nueva);corregido.partidas[0].precio+=1000;assert.equal(calcular(itemsDe(x,nueva),corregido).total,(precioMayor+1000)*12);
 });
+test('editar tallas conserva logo, render y color con zona ajustada y colores sin código',()=>{
+ const tec=C.tecnicas.find(t=>p.tecnicas.includes(t.id)).nombre,otro=C.colores.find(c=>c.id===p.colores[1]);
+ const viejo={...itemCatalogo(p,otro,tec,zona,8,{[talla]:12},12),zona:zona.nombre+' (posición ajustada)',colorId:null,colorCodigo:undefined,tieneLogo:true,tieneRender:true,logo:'archivo «logo.png»',logoGeometria:{anchoCm:8}};
+ const nuevo=itemCatalogo(p,otro,tec,zona,8,{[talla]:9},9,viejo);
+ assert.equal(nuevo.tieneRender,true);assert.equal(nuevo.tieneLogo,true);assert.equal(nuevo.logo,'archivo «logo.png»');assert.equal(nuevo.zona,viejo.zona);assert.deepEqual(nuevo.logoGeometria,viejo.logoGeometria);
+ const recolor=itemCatalogo(p,color,tec,zona,8,{[talla]:9},9,viejo);
+ assert.equal(recolor.tieneRender,false);assert.equal(recolor.tieneLogo,true);assert.equal(recolor.logo,'archivo «logo.png»');assert.equal('logoGeometria' in recolor,false);
+ const pedido={id,items:[viejo],archivos:[{item:0,kind:'logo',path:'a'},{item:0,kind:'render',path:'b'}]};
+ const [s]=validarSelecciones([{origen:0,item:{...nuevo,logo:'Logo pendiente de confirmar'}}],pedido,{productos:C.productos,productosHistoricos:C.productosHistoricos},(b)=>({items:b.items}),fail);
+ assert.equal(s.item.tieneRender,true);assert.equal(s.item.logo,'archivo «logo.png»');assert.equal(s.item.zona,viejo.zona);
+});
