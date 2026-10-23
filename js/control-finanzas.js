@@ -1,6 +1,6 @@
 import {pesos,decimal} from './cotizacion-core.js?v=17';
 import {esc} from './cotizacion-vista.js?v=12';
-import {montarCaja,cargarCaja,limpiarCaja} from './control-caja.js?v=2';
+import {montarCaja,cargarCaja,limpiarCaja} from './control-caja.js?v=3';
 // Finanzas: dashboard anual y movimientos generales (gastos, ingresos y reembolsos que no son de un pedido).
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -111,4 +111,6 @@ $('#finLista').addEventListener('submit',async e=>{const ed=e.target.closest('[d
 $('#finLista').addEventListener('click',async e=>{const b=e.target.closest('[data-comprobante]');if(!b)return;b.disabled=true;try{const r=await api('generales-archivo',{id:b.dataset.comprobante});const a=document.createElement('a');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.click();}catch(er){alertaLista(er.message);}finally{b.disabled=false;}});
 const alertaLista=t=>{$('#finEstado').textContent=t;};
 addEventListener('zain:equipo-listo',()=>{if(location.hash==='#finanzas')$('#verFinanzas').click();});
+// Un cambio en el libro de la caja también mueve el tablero y los movimientos generales.
+addEventListener('zain:libro-cambio',()=>{if(!$('#seccionFinanzas').hidden){const turn=++epoca;api('generales',null,{anio:String(anio)}).then(d=>{if(turn===epoca){datos=d;tablero();lista();}}).catch(()=>{});}});
 addEventListener('zain:equipo-salio',()=>{epoca++;datos=null;limpiarCaja();$('#seccionFinanzas').hidden=true;$('#finTablero').replaceChildren();$('#finLista').replaceChildren();});

@@ -29,3 +29,11 @@ Identidad comprobada en `tests/caja.test.mjs`: caja − saldos de socios = ingre
 $env:ZAIN_PGLITE_MODULE = 'file:///C:/Users/JP/AppData/Local/Temp/zain-ventas-qa-20261022/node_modules/@electric-sql/pglite/dist/index.js'
 node --test tests/caja.test.mjs
 ```
+
+## Libro flexible (23-oct-2026, `supabase/libro-flexible.sql`)
+- «+ Registrar movimiento»: Cobro de pedido (por folio) · Gasto (de un pedido o general) · Ingreso · Reembolso · Transferencia · Reparto.
+- Cada renglón del libro tiene **Editar** y **Borrar**. Editar puede cambiar todo, incluso el tipo o el pedido: el registro se mueve de tabla en una sola transacción (`zain_libro_operar`).
+- Borrar anula gastos de pedido, generales y movimientos de caja; los cobros se eliminan porque otras consultas no conocen anulaciones. En todos los casos la copia queda en `zain_libro_historial` (antes y después).
+- Un cobro necesita una revisión aceptada (llave foránea). Si el cliente no aceptó en su enlace, el equipo la acepta al registrar el cobro (`documento.aceptada_por = 'equipo'`): el pedido pasa a Aceptado y, si cubre el anticipo, a Confirmado.
+- Movimientos de un pedido cerrado no se pueden cambiar: hay que reabrir su cierre en la pestaña Gastos.
+- El saldo del pedido, su pestaña Cobro y lo que el cliente ve en su enlace se calculan de `zain_pagos`, así que se actualizan al instante.

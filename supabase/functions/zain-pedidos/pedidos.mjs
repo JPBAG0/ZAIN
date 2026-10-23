@@ -331,6 +331,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(gastosEnabled&&op==='caja'&&request.method==='GET')return response(200,await caja.leer());
       if(gastosEnabled&&op==='caja-guardar'&&request.method==='POST')return response(200,await caja.guardar(await jsonBody(request),user));
       if(gastosEnabled&&op==='caja-anular'&&request.method==='POST')return response(200,await caja.anular(await jsonBody(request),user));
+      if(gastosEnabled&&op==='libro-operar'&&request.method==='POST')return response(200,await caja.operar(await jsonBody(request),user));
       if(gastosEnabled&&op==='caja-receptor'&&request.method==='POST')return response(200,await caja.receptor(await jsonBody(request)));
       if(gastosEnabled&&op==='generales'&&request.method==='GET')return response(200,await generales.leer(Number(url.searchParams.get('anio'))));
       if(gastosEnabled&&op==='generales-guardar'&&request.method==='POST')return response(200,await generales.guardar(await jsonBody(request),user));

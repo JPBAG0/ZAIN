@@ -42,6 +42,10 @@ Prompt 2, rama local `codex/zain-posadas-testimonios-20261022`, encima del Promp
 
 Calculadora privada `server/calcular-posadas.mjs` usa el motor de margen por piezas; salida fuera del repo, precios finales pendientes. Auditoría en `docs/TALLAS-PENDIENTES.md`: prioridad CH-001/002/003; distinguir tablas existentes, dimensiones y unitalla. Respaldo público37activas/27históricas regenerado; no se cambian productos. Guía, pruebas y comandos: `docs/POSADAS-Y-TESTIMONIOS.md`. Recursos: config v32, medición v5, temporada JS/core/CSS v1. No publicado ni desplegado; esta entrega no requiere SQL/Edge nuevos y hereda los pendientes de publicación del Prompt1.
 
+## Vigente: libro flexible de finanzas — 23-oct-2026
+
+JP pidió poder corregir todo mientras aprenden a usarlo. Finanzas → Caja: «+ Registrar movimiento» (cobro por folio, gasto, ingreso, reembolso, transferencia, reparto) y Editar/Borrar en cada renglón, incluso mover entre pedidos o entre pedido y general. Una sola RPC `zain_libro_operar` (SQL `supabase/libro-flexible.sql`) con historial `zain_libro_historial`. Un cobro sin aceptación del cliente crea la aceptación del equipo. Pedidos cerrados bloquean cambios hasta reabrir. Detalle en `docs/CAJA.md`.
+
 ## Vigente: Caja ZAIN tipo Tricount — 23-oct-2026
 
 Finanzas muestra arriba Caja y cuentas: saldo de la Caja ZAIN, saldo de cada socio (ZAIN le debe / tiene dinero del negocio), utilidad cerrada por repartir menos lo repartido, y un libro único de cobros, gastos de pedidos y generales, reembolsos, transferencias y repartos. SQL `supabase/caja-zain.sql` (columna `zain_pagos.recibio` con valor por omisión `zain`, tabla `zain_caja_movimientos`, RPC `zain_caja_libro` y `zain_caja_resumen`, solo service_role). API: caja, caja-guardar, caja-anular, caja-receptor. Reglas y pruebas en `docs/CAJA.md`. Los cálculos viven en SQL; no duplicarlos en el navegador.

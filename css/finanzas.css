@@ -128,3 +128,12 @@
 .fin-recibio select{min-height:38px;border:1px solid #cbd2dc;border-radius:8px;padding:4px 8px;font:500 16px Archivo,Arial,sans-serif;background:#fff}
 .fin-libro-mas{padding:12px 0;text-align:center;border-top:1px solid #e3e7ef}
 @media(max-width:720px){.fin-saldos{grid-template-columns:1fr 1fr}.fin-caja-acciones{width:100%}.fin-caja-acciones .btn{flex:1 1 auto}.fin-libro-fila{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}}
+.fin-caja-form h3{margin:0;font-size:16px}
+.fin-caja-form [hidden]{display:none!important}
+.fin-caja-form select{width:100%;min-height:44px;font-size:16px}
+.fin-caja-form small[data-saldo-pedido]{display:block;font-size:12px;color:#5d6880;margin-top:4px;font-weight:400}
+.fin-borrar{color:#b3261e!important}
+.fin-confirmar{display:inline-flex;gap:10px;align-items:center;font-size:12.5px;color:#b3261e;font-weight:600}
+.fin-libro-fila--editando{background:#f1f4fe;border-radius:10px}
+.fin-libro .gastos-acciones{gap:14px;margin-top:4px}
+.fin-libro .gastos-acciones .btn-texto{min-height:32px;font-size:12.5px}
