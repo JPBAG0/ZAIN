@@ -639,7 +639,7 @@
      PERSONALIZADOR
      ===================================================================== */
   const E = {
-    extra: null, // segunda posición con su propio logo (p. ej. espalda): {x, y, cm, lugar, logo, nombre} en px del lienzo
+    extras: [], // logos adicionales (espalda, mangas, patrocinadores): [{id, x, y, cm, lugar, logo, nombre, crudo, fondo}] en px del lienzo
     p: MUESTRAS[0].p,
     c: MUESTRAS[0].c,
     t: MUESTRAS[0].t,
@@ -788,15 +788,16 @@
     return b;
   };
 
-  // Segunda posición: su propio logo; mientras no lo suban, un marcador «Logo 2» para ubicarla.
-  let ejemplo2 = null;
-  async function logoSegundo() {
-    if (E.extra?.logo) return E.extra.logo;
-    if (!ejemplo2) ejemplo2 = await ZR.logoDeTexto("Logo 2", "ancha", "#ffffff");
+  // Logos adicionales: cada uno con su archivo; mientras no lo suban, un marcador «Logo N» para ubicarlo.
+  const marcadores = new Map();
+  async function logoExtra(x, n) {
+    if (x.logo) return x.logo;
+    if (!marcadores.has(n)) marcadores.set(n, await ZR.logoDeTexto("Logo " + n, "ancha", "#ffffff"));
+    const base = marcadores.get(n);
     const claro = ZR.luz(ZR.hexARgb(fondoLogo(zAct(), E.c))) > 0.55;
-    const c = ZR.lienzo(ejemplo2.width, ejemplo2.height);
+    const c = ZR.lienzo(base.width, base.height);
     const g = c.getContext("2d");
-    g.drawImage(ejemplo2, 0, 0);
+    g.drawImage(base, 0, 0);
     g.globalCompositeOperation = "source-in";
     g.fillStyle = claro ? "rgba(27,27,29,.45)" : "rgba(244,244,242,.55)";
     g.fillRect(0, 0, c.width, c.height);
@@ -823,7 +824,7 @@
   let errorRender = null;
   let transicion = false;
   let caja = null; // dónde quedó el logo en el lienzo (para arrastrarlo)
-  let caja2 = null; // segunda posición del logo
+  let cajas = []; // dónde quedó cada logo adicional
   const pedirRender = () => {
     if (rafRender) return;
     rafRender = requestAnimationFrame(async () => {
@@ -864,16 +865,16 @@
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
         caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
-        caja2 = null;
-        if (E.extra) {
-          const logo2 = await logoSegundo();
+        cajas = [];
+        for (const [n, x] of E.extras.entries()) {
+          const logo2 = await logoExtra(x, n + 2);
           if (v !== renderVersion) return;
-          let a2 = E.extra.cm * p.pxPorCm;
-          const h2 = (a2 * logo2.height) / logo2.width, maxH = 30 * p.pxPorCm;
-          if (h2 > maxH) a2 = (maxH * logo2.width) / logo2.height;
-          ZR.estampar(lg, img, logo2, { x: E.extra.x, y: E.extra.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
+          let a2 = x.cm * p.pxPorCm;
+          const maxH = 30 * p.pxPorCm;
+          if ((a2 * logo2.height) / logo2.width > maxH) a2 = (maxH * logo2.width) / logo2.height;
+          ZR.estampar(lg, img, logo2, { x: x.x, y: x.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
           const al2 = (a2 * logo2.height) / logo2.width;
-          caja2 = { x0: E.extra.x - a2 / 2, y0: E.extra.y - al2 / 2, x1: E.extra.x + a2 / 2, y1: E.extra.y + al2 / 2 };
+          cajas[n] = { x0: x.x - a2 / 2, y0: x.y - al2 / 2, x1: x.x + a2 / 2, y1: x.y + al2 / 2 };
         }
         const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
         const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(fondoLogo(z, E.c)))) < 0.2;
@@ -957,50 +958,64 @@
     E.dx = E.dy = 0;
     actualizar();
   });
-  const pintarSegundo = () => {
-    $("#segundoPanel").hidden = !E.extra;
-    $("#segundoActivar").hidden = !!E.extra;
-    if (E.extra) { $("#segundoTamano").value = E.extra.cm; $("#segundoTxt").textContent = cm(E.extra.cm); $("#segundoLugar").value = E.extra.lugar; }
-  };
-  const textoSegundo = () => {
-    $("#segundoArchivoTxt").innerHTML = E.extra?.nombre ? `<b>${esc(E.extra.nombre)}</b> · toca para cambiarlo` : "<b>Elige el logo de esta posición</b> · PNG, JPG o SVG";
-  };
-  $("#segundoActivar").addEventListener("click", () => {
-    // Arranca al centro del torso, debajo del logo principal, sin logo: cada posición lleva el suyo.
-    E.extra = { x: 500, y: Math.min(620, Math.max(420, zAct().y + 180)), cm: 22, lugar: "Espalda", logo: null, nombre: "", crudo: null };
-    $("#segundoArchivo").value = "";
-    textoSegundo();
-    pintarSegundo();
+  const LUGARES = ["Espalda", "Frente", "Manga izquierda", "Manga derecha", "Cuello / nuca", "Otro lugar"];
+  const MAX_EXTRAS = 12;
+  let capaActiva = -1;
+  function pintarCapas() {
+    $("#capas").innerHTML = E.extras.map((x, i) => `<div class="capa${i === capaActiva ? " capa--activa" : ""}" data-capa="${i}">
+      <div class="capa__cab"><b>Logo ${i + 2}</b><button type="button" class="capa__quitar" data-quitar-capa="${i}" aria-label="Quitar logo ${i + 2}">Quitar</button></div>
+      <label class="subir subir--capa"><input type="file" data-archivo="${i}" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg><span>${x.nombre ? `<b>${esc(x.nombre)}</b> · toca para cambiarlo` : "<b>Elige este logo</b> · PNG, JPG o SVG"}</span></label>
+      <div class="capa__fila"><label class="campo"><span>¿Dónde va?</span><select data-lugar="${i}">${LUGARES.map((l) => `<option${l === x.lugar ? " selected" : ""}>${l}</option>`).join("")}</select></label>
+      <label class="interruptor"><input type="checkbox" data-fondo="${i}"${x.fondo ? " checked" : ""} /><span>Quitar fondo</span></label></div>
+      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="32" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
+    </div>`).join("");
+    $("#capaAgregar").hidden = E.extras.length >= MAX_EXTRAS;
+    $("#capaAgregar").textContent = E.extras.length ? "+ Agregar otro logo" : "+ Agregar más logos (espalda, mangas, patrocinadores…)";
+  }
+  const activar = (i) => { capaActiva = i; $$("#capas .capa").forEach((el) => el.classList.toggle("capa--activa", Number(el.dataset.capa) === i)); };
+  $("#capaAgregar").addEventListener("click", () => {
+    if (E.extras.length >= MAX_EXTRAS) return;
+    // Cada logo nuevo aparece al centro del torso, un poco más abajo que el anterior, para no encimarse.
+    const n = E.extras.length;
+    E.extras.push({ id: crypto.randomUUID(), x: 500, y: Math.min(760, Math.max(420, zAct().y + 180) + n * 60), cm: n ? 10 : 22, lugar: n ? "Otro lugar" : "Espalda", logo: null, nombre: "", crudo: null, fondo: true });
+    capaActiva = E.extras.length - 1;
+    pintarCapas();
     pedirRender();
   });
-  const analizarSegundo = () => {
-    const r = ZR.analizarLogo(E.extra.crudo, $("#segundoFondo").checked);
-    E.extra.logo = r.logo;
+  const analizarCapa = (x) => { x.logo = ZR.analizarLogo(x.crudo, x.fondo).logo; pedirRender(); };
+  $("#capas").addEventListener("click", (e) => {
+    const q = e.target.closest("[data-quitar-capa]");
+    if (q) { E.extras.splice(Number(q.dataset.quitarCapa), 1); capaActiva = -1; cajas = []; pintarCapas(); pedirRender(); return; }
+    const c = e.target.closest("[data-capa]");
+    if (c) activar(Number(c.dataset.capa));
+  });
+  $("#capas").addEventListener("input", (e) => {
+    const a = e.target.closest("[data-ancho]");
+    if (!a) return;
+    const x = E.extras[Number(a.dataset.ancho)];
+    x.cm = Number(a.value);
+    a.nextElementSibling.textContent = cm(x.cm);
     pedirRender();
-  };
-  $("#segundoArchivo").addEventListener("change", async (e) => {
-    const f = e.target.files[0];
-    if (!f || !E.extra) return;
-    if (!/^image\//.test(f.type)) return aviso("Ese archivo no es una imagen. Sube el segundo logo en PNG, JPG o SVG.", true);
+  });
+  $("#capas").addEventListener("change", async (e) => {
+    const t = e.target;
+    if (t.dataset.lugar !== undefined) { E.extras[Number(t.dataset.lugar)].lugar = t.value; return; }
+    if (t.dataset.fondo !== undefined) { const x = E.extras[Number(t.dataset.fondo)]; x.fondo = t.checked; if (x.crudo) { try { analizarCapa(x); } catch (er) { aviso(er.message, true); } } return; }
+    if (t.dataset.archivo === undefined) return;
+    const x = E.extras[Number(t.dataset.archivo)], f = t.files[0];
+    if (!f || !x) return;
+    if (!/^image\//.test(f.type)) return aviso("Ese archivo no es una imagen. Sube el logo en PNG, JPG o SVG.", true);
     if (f.size > 15 * 1024 * 1024) return aviso("La imagen pesa más de 15 MB. Prueba con una versión más ligera.", true);
-    $("#segundoArchivoTxt").innerHTML = "<b>Analizando el segundo logo…</b>";
-    try {
-      E.extra.crudo = await ZR.abrirArchivo(f);
-      E.extra.nombre = f.name;
-      analizarSegundo();
-      aviso("");
-    } catch (er) {
-      aviso(er.message, true);
-    }
-    textoSegundo();
+    t.parentElement.querySelector("span").innerHTML = "<b>Analizando el logo…</b>";
+    try { x.crudo = await ZR.abrirArchivo(f); x.nombre = f.name; analizarCapa(x); aviso(""); }
+    catch (er) { aviso(er.message, true); }
+    pintarCapas();
   });
-  $("#segundoFondo").addEventListener("change", () => {
-    if (!E.extra?.crudo) return;
-    try { analizarSegundo(); } catch (er) { aviso(er.message, true); }
+  $("#masTintas").addEventListener("click", (e) => {
+    const abierto = $("#oTinta").classList.toggle("todas");
+    e.currentTarget.textContent = abierto ? "Menos colores" : "Más colores";
+    e.currentTarget.setAttribute("aria-expanded", String(abierto));
   });
-  $("#segundoQuitar").addEventListener("click", () => { E.extra = null; caja2 = null; pintarSegundo(); pedirRender(); });
-  $("#segundoTamano").addEventListener("input", (e) => { if (!E.extra) return; E.extra.cm = Number(e.target.value); $("#segundoTxt").textContent = cm(E.extra.cm); pedirRender(); });
-  $("#segundoLugar").addEventListener("change", (e) => { if (E.extra) E.extra.lugar = e.target.value; });
   $("#tamano").addEventListener("input", (e) => {
     E.cm = Number(e.target.value);
     $("#tamanoTxt").textContent = cm(E.cm);
@@ -1208,12 +1223,16 @@
     if (!caja) return;
     const q = aLienzo(e);
     const h = 18;
-    if (caja2 && E.extra && q.x > caja2.x0 - h && q.x < caja2.x1 + h && q.y > caja2.y0 - h && q.y < caja2.y1 + h) {
-      arrastre = { id: e.pointerId, x: q.x, y: q.y, ex: E.extra.x, ey: E.extra.y, segundo: true };
+    for (let i = cajas.length - 1; i >= 0; i--) {
+      const b = cajas[i];
+      if (!b || q.x < b.x0 - h || q.x > b.x1 + h || q.y < b.y0 - h || q.y > b.y1 + h) continue;
+      arrastre = { id: e.pointerId, x: q.x, y: q.y, ex: E.extras[i].x, ey: E.extras[i].y, capa: i };
+      activar(i);
       lienzo.setPointerCapture(e.pointerId);
       lienzo.classList.add("moviendo");
       return;
     }
+    activar(-1);
     if (q.x < caja.x0 - h || q.x > caja.x1 + h || q.y < caja.y0 - h || q.y > caja.y1 + h) return;
     arrastre = { id: e.pointerId, x: q.x, y: q.y, dx: E.dx, dy: E.dy };
     lienzo.setPointerCapture(e.pointerId);
@@ -1227,9 +1246,11 @@
     if (!arrastre || arrastre.id !== e.pointerId) return;
     const q = aLienzo(e);
     const k = pAct().pxPorCm;
-    if (arrastre.segundo) {
-      E.extra.x = Math.min(950, Math.max(50, arrastre.ex + q.x - arrastre.x));
-      E.extra.y = Math.min(950, Math.max(50, arrastre.ey + q.y - arrastre.y));
+    if (arrastre.capa !== undefined) {
+      const x = E.extras[arrastre.capa];
+      if (!x) return;
+      x.x = Math.min(950, Math.max(50, arrastre.ex + q.x - arrastre.x));
+      x.y = Math.min(950, Math.max(50, arrastre.ey + q.y - arrastre.y));
       pedirRender();
       return;
     }
@@ -1663,7 +1684,8 @@
     const z = zAct();
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     const desglose = tallas.filter((x) => E.tallas[x] > 0).map((x) => (p.tallas.length ? `${x} ${E.tallas[x]}` : `${E.tallas[x]}`));
-    if (E.extra && !E.extra.logo) throw new Error("Sube el logo de la segunda posición o quítala antes de agregar.");
+    const sinArchivo = E.extras.findIndex((x) => !x.logo);
+    if (sinArchivo >= 0) throw new Error(`Sube el archivo del logo ${sinArchivo + 2} o quítalo antes de agregar.`);
     const mini = renderFinal(360).toDataURL("image/jpeg", 0.78);
     const logo =
       E.modo === "imagen" ? (E.logo ? `archivo «${E.logoNombre}»${E.tinta === "original" ? "" : ` en ${nombreTinta()}`}` : "lo envío por WhatsApp") : E.texto.trim() ? `texto «${E.texto.trim()}»` : "lo envío por WhatsApp";
@@ -1695,7 +1717,7 @@
       logo,
       colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
       pantone: E.pantone,
-      notas: [E.notas.trim(), E.extra && tieneRender ? `Segunda posición: ${E.extra.lugar} · logo «${E.extra.nombre}» · ${cm(E.extra.cm)} de ancho (en el render se muestra al frente)` : ""].filter(Boolean).join(" · "),
+      notas: [E.notas.trim(), E.extras.length && tieneRender ? "Logos adicionales (en el render se muestran al frente): " + E.extras.map((x, i) => `${i + 2}) ${x.lugar} · «${x.nombre}» · ${cm(x.cm)}`).join("; ") : ""].filter(Boolean).join(" · ").slice(0, 1500),
       mini,
       tieneLogo: !!original,
       tieneRender,

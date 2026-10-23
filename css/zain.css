@@ -1043,8 +1043,18 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 .pedido__cliente #clienteAviso:empty { display: none; }
 .catalogo__respaldo { margin:0 0 16px;padding:12px 14px;border-radius:10px;background:#fff4cc;border:1px solid #d7b353;font-size:14px;line-height:1.5; }
 .catalogo__respaldo[hidden] { display:none; }
-/* Segunda posición del logo (23-oct-2026). */
-.segundo-logo{margin:6px 0 4px}
-.segundo-logo__activar,.segundo-logo__quitar{background:none;border:0;padding:10px 0;min-height:44px;font:600 15px Archivo,Arial,sans-serif;color:var(--cobalto,#2a3bff);cursor:pointer;text-align:left}
-.segundo-logo__quitar{color:#6e6e73;font-weight:500}
-.segundo-logo select{width:100%;min-height:44px;font-size:16px}
+/* Logos adicionales y colores compactos (23-oct-2026). */
+.capas{display:grid;gap:10px;margin:12px 0 4px}
+.capa{border:1px solid #d9d9d6;border-radius:14px;padding:12px;background:#fff;display:grid;gap:8px;transition:border-color .2s,box-shadow .2s}
+.capa--activa{border-color:var(--cobalto,#2a3bff);box-shadow:0 0 0 3px color-mix(in srgb,var(--cobalto,#2a3bff) 18%,transparent)}
+.capa__cab{display:flex;justify-content:space-between;align-items:center}
+.capa__cab b{font-size:14px}
+.capa__quitar{background:none;border:0;min-height:40px;padding:0 4px;color:#6e6e73;font:500 14px Archivo,Arial,sans-serif;cursor:pointer}
+.capa__fila{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+.capa .campo{margin:0}.capa select{width:100%;min-height:44px;font-size:16px}
+.capa .deslizador{margin:0}
+.subir--capa{min-height:52px;padding:10px 12px}
+.capa-agregar,.mas-tintas{background:none;border:0;padding:10px 0;min-height:44px;font:600 15px Archivo,Arial,sans-serif;color:var(--cobalto,#2a3bff);cursor:pointer;text-align:left}
+.mas-tintas{font-size:14px;padding:4px 0}
+#oTinta:not(.todas)>.op:nth-child(n+10):not(.on){display:none}
+@media(max-width:480px){.capa__fila{grid-template-columns:1fr}}

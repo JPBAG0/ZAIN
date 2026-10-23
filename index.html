@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=35" />
+  <link rel="stylesheet" href="css/zain.css?v=36" />
   <link rel="stylesheet" href="css/privacidad.css?v=3" />
   <link rel="stylesheet" href="css/temporada.css?v=1" />
   <script>
@@ -214,6 +214,7 @@
               <div class="tinta-logo">
                 <span>Color del logo</span>
                 <div class="opciones" id="oTinta"></div>
+                <button type="button" class="mas-tintas" id="masTintas" aria-expanded="false" aria-controls="oTinta">Más colores</button>
                 <span id="tintaActual">Color original del archivo</span>
                 <details class="mas-opciones" id="otroColor">
                   <summary>Otro color (selector o código HEX)</summary>
@@ -256,44 +257,25 @@
           </fieldset>
 
           <fieldset class="paso">
-            <legend>Técnica</legend>
-            <div class="opciones opciones--tecnicas" id="oTecnica"></div>
-          </fieldset>
-
-          <fieldset class="paso">
-            <legend>Ubicación y tamaño</legend>
+            <legend>Ubicación, tamaño y más logos</legend>
             <div class="opciones opciones--zonas" id="oZona"></div>
             <label class="deslizador">
               <span>Ancho del logo</span>
               <input type="range" id="tamano" min="3" max="28" step="0.5" value="9" />
               <output id="tamanoTxt" class="num" for="tamano">9.0 cm</output>
             </label>
-            <div class="segundo-logo">
-              <button type="button" class="segundo-logo__activar" id="segundoActivar">+ Agregar otro logo en otra posición (ej. espalda)</button>
-              <div id="segundoPanel" hidden>
-                <label class="subir subir--segundo">
-                  <input type="file" id="segundoArchivo" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
-                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg>
-                  <span id="segundoArchivoTxt"><b>Elige el logo de esta posición</b> · PNG, JPG o SVG</span>
-                </label>
-                <label class="interruptor">
-                  <input type="checkbox" id="segundoFondo" checked />
-                  <span>Quitar el fondo automáticamente</span>
-                </label>
-                <label class="campo"><span>¿Dónde va la segunda posición?</span>
-                  <select id="segundoLugar"><option>Espalda</option><option>Frente</option><option>Manga izquierda</option><option>Manga derecha</option></select>
-                </label>
-                <label class="deslizador">
-                  <span>Ancho de la segunda</span>
-                  <input type="range" id="segundoTamano" min="3" max="32" step="0.5" value="22" />
-                  <output id="segundoTxt" class="num" for="segundoTamano">22.0 cm</output>
-                </label>
-                <p class="producto__nota">Arrástrala en la vista previa. En la imagen se muestra al frente; en tu pedido queda anotado dónde va de verdad y qué logo lleva.</p>
-                <button type="button" class="segundo-logo__quitar" id="segundoQuitar">Quitar segunda posición</button>
-              </div>
+            <div class="capas" id="capas" aria-live="polite"></div>
+            <button type="button" class="capa-agregar" id="capaAgregar">+ Agregar más logos (espalda, mangas, patrocinadores…)</button>
+            <p class="producto__nota">Toca un logo en la vista previa para arrastrarlo. Los logos adicionales se muestran al frente; en tu pedido queda anotado dónde va cada uno.</p>
             </div>
             <p class="producto__nota">El tamaño y la posición son una vista previa. Confirmamos las medidas de impresión antes de producir.</p>
           </fieldset>
+
+          <fieldset class="paso">
+            <legend>Técnica</legend>
+            <div class="opciones opciones--tecnicas" id="oTecnica"></div>
+          </fieldset>
+
 
           <fieldset class="paso">
             <legend>Piezas <span class="paso__valor num" id="vPiezas">0 pzas</span></legend>
@@ -495,7 +477,7 @@
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=5"></script>
-  <script src="js/zain.js?v=50"></script>
+  <script src="js/zain.js?v=51"></script>
   <script type="module" src="js/temporada.js?v=1"></script>
 <script src="js/subir.js?v=3"></script>
 </body>
