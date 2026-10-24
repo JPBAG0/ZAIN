@@ -140,17 +140,17 @@ p { margin: 0; }
 .portada {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  grid-template-rows: 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 0 clamp(24px, 4vw, 64px);
   max-width: var(--max);
   margin: 0 auto;
   padding: calc(var(--barra) + env(safe-area-inset-top, 0px) + clamp(24px, 6vh, 72px)) var(--gutter) 0;
   min-height: min(100svh, 980px);
 }
-.portada__texto { grid-column: 1; grid-row: 1; align-self: center; display: grid; gap: 28px; padding-bottom: 24px; }
+.portada__texto { grid-column: 1; grid-row: 1; align-self: start; display: grid; gap: 24px; padding-bottom: 24px; }
 .portada__titulo {
-  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  font-size: clamp(2.4rem, 3.9vw, 4rem);
   font-weight: 820;
   font-stretch: 118%;
   line-height: 0.96;
@@ -176,8 +176,9 @@ p { margin: 0; }
 .portada__precios p { margin: 0; font-size: 12px; line-height: 1.4; color: var(--tenue); }
 
 .portada__escena {
-  grid-column: 2; grid-row: 1 / span 2;
-  position: relative; min-height: 560px; height: 100%;
+  /* alto fijo al de la pantalla: el arco se ve completo al entrar, sin importar lo largo del texto */
+  grid-column: 2; grid-row: 1; align-self: start;
+  position: relative; height: clamp(440px, calc(100svh - var(--barra) - var(--posada-alto, 0px) - 120px), 680px);
   touch-action: pan-y; user-select: none; -webkit-user-select: none;
   overflow: hidden; isolation: isolate;
   /* cinta métrica: el arco «descansa» sobre ella */
@@ -200,10 +201,10 @@ p { margin: 0; }
 .pieza:focus-visible { outline-offset: -8px; }
 
 .ficha {
-  grid-column: 1; grid-row: 2;
-  position: relative; align-self: end;
+  grid-column: 2; grid-row: 2; justify-self: center;
+  position: relative; align-self: start;
   display: grid; gap: 14px;
-  max-width: 440px; margin-bottom: 28px; padding: 18px 20px 16px;
+  width: min(100%, 440px); margin: 20px 0 28px; padding: 18px 20px 16px;
   background: var(--papel);
   border: 1px solid var(--tinta);
   border-radius: 4px;
@@ -245,7 +246,7 @@ p { margin: 0; }
   .portada { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; min-height: 0; padding-top: calc(var(--barra) + env(safe-area-inset-top, 0px) + 20px); }
   .portada__texto { grid-column: 1; grid-row: auto; gap: 20px; padding-bottom: 0; }
   .portada__escena { grid-column: 1; grid-row: auto; min-height: 0; height: min(98vw, 480px); margin: 4px calc(var(--gutter) * -1) 0; }
-  .ficha { grid-column: 1; grid-row: auto; max-width: none; margin: 16px 0 28px; }
+  .ficha { grid-column: 1; grid-row: auto; justify-self: stretch; width: auto; margin: 16px 0 28px; }
   .portada__datos { grid-column: 1; grid-row: auto; grid-template-columns: 1fr 1fr; }
   .portada__datos li:nth-child(3) { padding-left: 0; border-left: 0; }
   .portada__datos li:nth-child(n + 3) { border-top: 1px solid var(--linea); }
