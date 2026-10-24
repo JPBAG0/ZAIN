@@ -2400,7 +2400,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -2489,7 +2489,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -2585,7 +2585,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -2670,7 +2670,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -3387,7 +3387,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -3468,7 +3468,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -3777,7 +3777,7 @@
           "nombre": "Frente centrado",
           "x": 500,
           "y": 390,
-          "max": 30,
+          "max": 42,
           "orientativa": true
         }
       ],
@@ -4129,7 +4129,7 @@
           "nombre": "Centro del pecho",
           "x": 500,
           "y": 360,
-          "max": 28
+          "max": 32.5
         },
         {
           "id": "pecho-der",
@@ -4327,7 +4327,7 @@
           "nombre": "Centro del pecho",
           "x": 500,
           "y": 390,
-          "max": 26
+          "max": 32.5
         },
         {
           "id": "pecho-izq",
@@ -4809,7 +4809,7 @@
           "nombre": "Centro del pecho",
           "x": 500,
           "y": 410,
-          "max": 24
+          "max": 32.5
         }
       ],
       "renderOrientativo": true,
@@ -4914,7 +4914,7 @@
           "nombre": "Centro del pecho",
           "x": 500,
           "y": 410,
-          "max": 24
+          "max": 32.5
         }
       ],
       "renderOrientativo": true,

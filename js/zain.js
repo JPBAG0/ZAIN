@@ -967,7 +967,7 @@
       <label class="subir subir--capa"><input type="file" data-archivo="${i}" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg><span>${x.nombre ? `<b>${esc(x.nombre)}</b> · toca para cambiarlo` : "<b>Elige este logo</b> · PNG, JPG o SVG"}</span></label>
       <div class="capa__fila"><label class="campo"><span>¿Dónde va?</span><select data-lugar="${i}">${LUGARES.map((l) => `<option${l === x.lugar ? " selected" : ""}>${l}</option>`).join("")}</select></label>
       <label class="interruptor"><input type="checkbox" data-fondo="${i}"${x.fondo ? " checked" : ""} /><span>Quitar fondo</span></label></div>
-      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="32" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
+      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="42" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
     </div>`).join("");
     $("#capaAgregar").hidden = E.extras.length >= MAX_EXTRAS;
     $("#capaAgregar").textContent = E.extras.length ? "+ Agregar otro logo" : "+ Agregar más logos (espalda, mangas, patrocinadores…)";
@@ -1065,8 +1065,10 @@
   function tamanoIdeal() {
     const z = zAct();
     const pr = E.info ? E.info.proporcion : 2.2;
+    // El frente centrado permite casi todo el ancho del pecho (42 cm), pero sugiere el tamaño habitual (base de 30 cm).
+    const base = Math.min(z.max, 30);
     const f = E.info?.esFoto ? (z.max <= 12 ? 0.9 : 0.78) : z.max <= 12 ? (pr >= 2.2 ? 0.9 : pr >= 1.2 ? 0.8 : 0.66) : pr >= 1.5 ? 0.85 : 0.7;
-    return Math.round(z.max * f * 2) / 2;
+    return Math.round(base * f * 2) / 2;
   }
   // técnica sugerida: fotos y degradados → DTF; pocos colores → la principal de la prenda
   function tecnicaIdeal(info) {
