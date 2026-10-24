@@ -17,7 +17,7 @@ PDF con el membrete v3 (mismo generador js/cotizacion-pdf.js, modo `sinCantidade
 Anticipo (%) en el paso 1 (50 por defecto; vacío = «se acuerda»): sale en el texto y en el paso 2 de «Cómo seguimos» del PDF. En modo sin cantidades el PDF ya no lleva los recuadros «Resumen» y «Cómo se paga» (repetían datos); con pocos modelos cabe en una hoja.
 
 ## Guardadas (desde 21-oct-2026)
-- Lista arriba con folio consecutivo `COT-0001…` (lo da la base), cliente, estado, modelos, «desde» y fecha; búsqueda y «Ver descartadas». **Nueva cotización**, **Abrir** (tocar la fila) y **Duplicar** (copia con folio nuevo al guardarla; vigencia se reinicia a hoy+15).
+- Lista arriba con folio `COT-` + 12 caracteres del id, como los pedidos (lo da la base; desde el 24-oct-2026, `cotizaciones-folio.sql`; COT-0001 a 0003 conservan el suyo), cliente, estado, modelos, «desde» y fecha; búsqueda y «Ver descartadas». **Nueva cotización**, **Abrir** (tocar la fila) y **Duplicar** (copia con folio nuevo al guardarla; vigencia se reinicia a hoy+15).
 - Estados: Borrador → Enviada → Autorizada; Descartada la oculta (nunca se borra). «Convertida en pedido» la pone la conversión (siguiente fase) y bloquea la edición.
 - **Guardar** en la barra fija. Copiar texto o Descargar PDF guardan antes y, si era borrador, la pasan a Enviada; el PDF usa el folio guardado. Aviso al salir con cambios sin guardar.
 - Se guardan los valores tal como están en pantalla (también incompletos), la última proyección comercial (`comercial`, sin costos) y el logo original en el bucket privado `zain-cotizaciones-logos` (subida firmada directa, ≤15 MB, carpeta `<id cotización>/`).
