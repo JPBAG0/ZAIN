@@ -15,7 +15,7 @@ export default {
   "whatsapp": "525662923967",
   "correo": "atencion.zain@gmail.com",
   "ciudad": "Guadalajara, Jalisco",
-  "instagram": "https://instagram.com/thezainlab",
+  "instagram": "",
   "horario": "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
   "minimoPiezas": null,
   "minimoPedido": 12,
