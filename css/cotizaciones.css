@@ -141,3 +141,5 @@
 #formCotizacion .cot-anticipo-montos{margin:10px 0 0;font-size:14px;color:#3d4659}
 #formCotizacion .cot-anticipo-montos b{color:#111;font-variant-numeric:tabular-nums}
 #formCotizacion .cot-anticipo-pendiente input[type=range]{opacity:.4}
+/* catálogo y costos: un renglón por talla */
+.cot-bandas--lista{display:grid;gap:8px;min-width:0}.cot-banda-linea{display:grid!important;grid-template-columns:minmax(0,1fr) 120px;align-items:center;gap:12px;margin:0!important}.cot-banda-linea span{font-weight:600;font-size:14px}.cot-banda-linea small{display:inline-block;margin-left:6px;font-weight:400;color:#616168}.cot-cortes summary{cursor:pointer;font-size:13px;color:#34415a;padding:6px 0}.cot-cortes .cot-edicion{margin:8px 0}.cot-cortes .cot-edicion>.cot-ayuda{grid-column:1/-1;font-weight:600;margin:0}

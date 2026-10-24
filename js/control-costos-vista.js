@@ -3,7 +3,7 @@ export function ordenarCostos(form,estado={}){
  const definiciones=[['rangos','Rangos de cantidad','Márgenes por volumen'],['tecnicas','Tarifas de personalización','Bordado, serigrafía y DTF'],['prendas','Costos de prendas','Modelos activos y costos por talla']];
  const paneles={};
  originales.forEach((section,i)=>{
-  const [id,titulo,nota]=definiciones[i],d=document.createElement('details'),summary=document.createElement('summary');d.className='cot-panel cot-config-grupo';d.dataset.configGrupo=id;d.id='costos-'+id;d.open=estado[id]??id!=='rangos';summary.innerHTML='<h2>'+titulo+'</h2><span>'+nota+'</span>';section.querySelector('h2')?.remove();d.append(summary);const body=document.createElement('div');body.className='cot-config-cuerpo';while(section.firstChild)body.append(section.firstChild);d.append(body);section.replaceWith(d);paneles[id]=d;
+  const [id,titulo,nota]=definiciones[i],d=document.createElement('details'),summary=document.createElement('summary');d.className='cot-panel cot-config-grupo';d.dataset.configGrupo=id;d.id='costos-'+id;d.open=estado[id]??id==='prendas';summary.innerHTML='<h2>'+titulo+'</h2><span>'+nota+'</span>';section.querySelector('h2')?.remove();d.append(summary);const body=document.createElement('div');body.className='cot-config-cuerpo';while(section.firstChild)body.append(section.firstChild);d.append(body);section.replaceWith(d);paneles[id]=d;
  });
  for(const id of ['rangos','tecnicas','prendas'])form.prepend(paneles[id]);
  paneles.rangos.querySelector('.cot-tablewrap').classList.add('cot-rangos-tabla');
@@ -14,7 +14,7 @@ export function ordenarCostos(form,estado={}){
  paneles.tecnicas.querySelector('.cot-ayuda').textContent='Captura una vez el costo por cm². Se cargará al revisar cada cotización.';
  const ayudas=paneles.tecnicas.querySelectorAll('.cot-ayuda');if(ayudas[1])ayudas[1].textContent='Si una técnica se cobra por puntadas o por un mínimo, usa un costo fijo revisado en ese pedido.';
  const check=paneles.rangos.querySelector('[name="activo"]');if(check){const label=check.closest('label');label.lastChild.textContent=' Preparar costos al recibir solicitudes nuevas';label.insertAdjacentHTML('afterend','<p class="cot-ayuda">Al abrir o actualizar una cotización siempre se consultan los costos guardados.</p>');}
- paneles.prendas.querySelector('.cot-ayuda').textContent='Busca un modelo y actualiza su costo. Los costos por talla y color se conservan.';
+ paneles.prendas.querySelector('.cot-ayuda').textContent='Un costo por talla, igual para todos los colores. Captura el de la variante más cara.';
  form.querySelector('.cot-botones').classList.add('cot-guardar-costos');
  form.querySelector('.cot-guardar-costos .cot-ayuda').textContent='La cotización del cliente cambia solo al publicarla.';
  paneles.tecnicas.querySelectorAll('[name^=preparacion-t]').forEach(input=>input.closest('label').firstChild.textContent='Preparación / partida');
