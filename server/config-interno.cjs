@@ -55,52 +55,149 @@ module.exports = {
     "inicio": "2026-10-22",
     "fin": "2026-12-31",
     "textoBanner": "Paquetes para tu posada — uniformes para todo tu equipo",
+    "notaPaquetes": "Precio por kit (una persona). Incluye un logo por prenda de hasta 10 cm. Tallas S a XL; 2XL con cargo extra. Para entregar antes de tu posada, confirma la fecha al cotizar.",
     "paquetes": [
       {
-        "id": "gorra-chaleco",
-        "nombre": "Gorra + chaleco",
-        "estado": "PENDIENTE",
-        "minimoPaquetes": null,
-        "piezasPorPaquete": null,
-        "precioPaquete": null,
-        "precioPieza": null,
-        "impuesto": null,
+        "id": "kit-posada",
+        "nombre": "Kit Posada",
+        "subtitulo": "Para que todos lleguen iguales",
+        "estado": "aprobado",
+        "destacado": false,
+        "minimoPaquetes": 20,
+        "piezasPorPaquete": 2,
+        "impuesto": 1600,
         "contenido": [
           {
-            "producto": "Gorra",
-            "cantidad": null,
-            "tecnica": null,
-            "ubicacion": null
+            "producto": "Playera de algodón",
+            "sku": "ZN-PL-004",
+            "cantidad": 1,
+            "tecnica": "DTF",
+            "ubicacion": "Frente"
           },
           {
-            "producto": "Chaleco",
-            "cantidad": null,
-            "tecnica": null,
-            "ubicacion": null
+            "producto": "Gorra 6 paneles",
+            "sku": "ZN-GO-002",
+            "cantidad": 1,
+            "tecnica": "Bordado",
+            "ubicacion": "Frente"
+          }
+        ],
+        "escalones": [
+          {
+            "desde": 20,
+            "hasta": 49,
+            "precio": 24900
+          },
+          {
+            "desde": 50,
+            "hasta": 99,
+            "precio": 21900
+          },
+          {
+            "desde": 100,
+            "hasta": 149,
+            "precio": 20900
+          },
+          {
+            "desde": 150,
+            "hasta": null,
+            "precio": 19900
           }
         ]
       },
       {
-        "id": "polo-gorra",
-        "nombre": "Polo + gorra",
-        "estado": "PENDIENTE",
-        "minimoPaquetes": null,
-        "piezasPorPaquete": null,
-        "precioPaquete": null,
-        "precioPieza": null,
-        "impuesto": null,
+        "id": "kit-equipo",
+        "nombre": "Kit Equipo",
+        "subtitulo": "Uniforme que siguen usando todo el año",
+        "estado": "aprobado",
+        "destacado": true,
+        "minimoPaquetes": 20,
+        "piezasPorPaquete": 2,
+        "impuesto": 1600,
         "contenido": [
           {
-            "producto": "Polo",
-            "cantidad": null,
-            "tecnica": null,
-            "ubicacion": null
+            "producto": "Polo corporativo",
+            "sku": "ZN-PO-008",
+            "cantidad": 1,
+            "tecnica": "Bordado",
+            "ubicacion": "Frente"
           },
           {
-            "producto": "Gorra",
-            "cantidad": null,
-            "tecnica": null,
-            "ubicacion": null
+            "producto": "Gorra 6 paneles",
+            "sku": "ZN-GO-002",
+            "cantidad": 1,
+            "tecnica": "Bordado",
+            "ubicacion": "Frente"
+          }
+        ],
+        "escalones": [
+          {
+            "desde": 20,
+            "hasta": 49,
+            "precio": 33900
+          },
+          {
+            "desde": 50,
+            "hasta": 99,
+            "precio": 29900
+          },
+          {
+            "desde": 100,
+            "hasta": 149,
+            "precio": 28900
+          },
+          {
+            "desde": 150,
+            "hasta": null,
+            "precio": 27900
+          }
+        ]
+      },
+      {
+        "id": "kit-regalo",
+        "nombre": "Kit Regalo",
+        "subtitulo": "El detalle de fin de año para tu equipo",
+        "estado": "aprobado",
+        "destacado": false,
+        "minimoPaquetes": 20,
+        "piezasPorPaquete": 2,
+        "impuesto": 1600,
+        "contenido": [
+          {
+            "producto": "Chaleco acolchado",
+            "sku": "ZN-CE-002",
+            "cantidad": 1,
+            "tecnica": "Bordado",
+            "ubicacion": "Frente"
+          },
+          {
+            "producto": "Gorra 6 paneles",
+            "sku": "ZN-GO-002",
+            "cantidad": 1,
+            "tecnica": "Bordado",
+            "ubicacion": "Frente"
+          }
+        ],
+        "escalones": [
+          {
+            "desde": 20,
+            "hasta": 49,
+            "precio": 59900
+          },
+          {
+            "desde": 50,
+            "hasta": 99,
+            "precio": 54900
+          },
+          {
+            "desde": 100,
+            "hasta": 149,
+            "precio": 51900
+          },
+          {
+            "desde": 150,
+            "hasta": null,
+            "precio": 49900
           }
         ]
       }

@@ -7,7 +7,7 @@
 .hay-posada body{padding-top:var(--posada-alto,0px)}
 .hay-posada .barra{top:var(--posada-alto,0px);height:var(--barra);padding-top:0}
 .temporada{scroll-margin-top:calc(var(--barra) + var(--posada-alto,0px) + 24px)}
-.posada-paquetes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.posada-paquetes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 .posada-paquete{min-width:0;border-top:2px solid var(--tinta);padding:24px 0;display:flex;flex-direction:column;align-items:start}
 .posada-paquete h3{font-size:clamp(24px,3vw,38px);font-weight:750;line-height:1.1;letter-spacing:-.03em}
 .posada-paquete__minimo{color:var(--tenue);font-size:14px;margin:10px 0 22px}
@@ -23,3 +23,13 @@
 @media(max-width:760px){.posada-paquetes,.trabajos-reales{grid-template-columns:1fr}.posada-banner{font-size:13px;gap:8px}.posada-paquete li{align-items:start}.posada-paquete li span{max-width:62%}.posada-paquete .btn{width:100%}}
 @media(min-width:901px){.barra__nav{gap:18px;font-size:13px}}
 @media(hover:hover) and (pointer:fine){.posada-banner>a:hover{text-decoration:underline}}
+/* kits de posada con escalones de precio */
+.posada-kit{position:relative;padding-top:26px}.posada-kit--destacado{border-top-color:var(--cobalto)}
+.posada-kit__chip{position:absolute;top:-14px;left:0;background:var(--cobalto);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px}
+.posada-kit__fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin-bottom:22px}.posada-kit__fotos div{background:#fff;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}.posada-kit__fotos img{width:88%;height:88%;object-fit:contain}
+.posada-kit__sub{color:var(--tenue);font-size:15px;margin:6px 0 4px}.posada-kit ul{margin:14px 0 20px}
+.posada-kit__desde{font-size:14px;color:var(--tenue);margin:0}.posada-kit__precio{font-size:clamp(38px,4vw,48px);font-weight:850;letter-spacing:-.02em;line-height:1;margin:4px 0 0}.posada-kit__precio small{font-size:16px;font-weight:600;color:var(--tenue);letter-spacing:0}.posada-kit--destacado .posada-kit__precio{color:var(--cobalto)}
+.posada-kit__tabla{width:100%;border-collapse:collapse;margin:18px 0 22px;font-size:14px}.posada-kit__tabla th{font-weight:500;color:var(--tenue);text-align:left;padding:8px 0;border-bottom:1px solid var(--tinta)}.posada-kit__tabla td{padding:9px 0;border-bottom:1px solid var(--linea);font-weight:650}.posada-kit__tabla td:first-child{font-weight:400}.posada-kit__tabla th:last-child,.posada-kit__tabla td:last-child{text-align:right}
+.posada-kit .btn{margin-top:auto;width:100%;justify-content:center}
+.posada-nota{margin-top:28px;padding-top:16px;border-top:1px solid var(--linea);color:var(--tenue);font-size:14px;line-height:1.6}.posada-nota[hidden]{display:none}
+.posada-kit--destacado .btn{background:var(--cobalto);color:#fff}

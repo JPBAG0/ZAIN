@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import C from '../server/config-interno.cjs';
 import Pub from '../js/config.js';
-import {vigente,precioAprobado,mensajePaquete,testimoniosPublicables,fotoTrabajo} from '../js/temporada-core.js';
+import {vigente,precioAprobado,precioDesde,escalonesValidos,mensajePaquete,testimoniosPublicables,fotoTrabajo} from '../js/temporada-core.js';
 import {proponerPaquete} from '../server/calcular-posadas.mjs';
 import {faltanMedidas} from '../server/inventario-medidas.mjs';
 import {inicial} from '../js/cotizacion-core.js';
@@ -21,9 +21,16 @@ test('precios y cantidades solo se muestran tras aprobación completa y consiste
  for(const cambio of [{estado:'PENDIENTE'},{precioPaquete:null},{piezasPorPaquete:3},{precioPieza:1},{impuesto:null},{contenido:[{producto:'Gorra',cantidad:2}]}])assert.equal(precioAprobado({...paquete,...cambio}),false);
  assert.match(mensajePaquete({...paquete,estado:'PENDIENTE'}),/definir las cantidades/);
 });
-test('catálogo generado conserva propuestas pendientes y tres testimonios sin identidad',()=>{
+test('kits por escalones: contiguos desde el mínimo, sin subir de precio y último sin límite',()=>{
+ const kit={...paquete,minimoPaquetes:20,precioPaquete:undefined,precioPieza:undefined,escalones:[{desde:20,hasta:49,precio:33900},{desde:50,hasta:null,precio:29900}]};delete kit.precioPaquete;delete kit.precioPieza;
+ assert.ok(precioAprobado(kit));assert.equal(precioDesde(kit),29900);assert.match(mensajePaquete(kit),/20 kits/);
+ for(const e of [[],[{desde:21,hasta:null,precio:100}],[{desde:20,hasta:49,precio:100},{desde:51,hasta:null,precio:90}],[{desde:20,hasta:49,precio:100},{desde:50,hasta:null,precio:120}],[{desde:20,hasta:49,precio:100}],[{desde:20,hasta:null,precio:0}]])assert.equal(precioAprobado({...kit,escalones:e}),false);
+});
+test('catálogo generado publica tres kits aprobados y tres testimonios sin identidad',()=>{
  assert.deepEqual(Pub.posadas,C.posadas);assert.deepEqual(Pub.clientesSatisfechos,C.clientesSatisfechos);
- for(const p of Pub.posadas.paquetes){assert.equal(p.estado,'PENDIENTE');assert.equal(p.precioPaquete,null);assert.equal(p.precioPieza,null);assert.equal(p.minimoPaquetes,null);assert.ok(!precioAprobado(p));}
+ assert.deepEqual(Pub.posadas.paquetes.map(p=>[p.id,precioDesde(p)]),[['kit-posada',19900],['kit-equipo',27900],['kit-regalo',49900]]);
+ for(const p of Pub.posadas.paquetes){assert.ok(precioAprobado(p),p.id);assert.ok(escalonesValidos(p));assert.equal(p.minimoPaquetes,20);assert.ok(p.contenido.every(x=>/^ZN-[A-Z]{2}-\d{3}$/.test(x.sku)));}
+ assert.equal(Pub.posadas.paquetes.filter(p=>p.destacado).length,1);
  assert.equal(Pub.clientesSatisfechos.length,3);assert.equal(testimoniosPublicables(Pub.clientesSatisfechos).length,0);
  for(const t of Pub.clientesSatisfechos){assert.equal(t.empresa,'');assert.equal(t.frase,'');assert.equal(t.foto,'');}
 });
@@ -47,7 +54,7 @@ test('auditoría distingue tabla, detalle y unitalla sin completar medidas',()=>
 });
 test('portada incluye ambas secciones, enlaces, cierre accesible y versiones nuevas',async()=>{
  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
- for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=1','temporada.css?v=1','config.js?v=37','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
+ for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=2','temporada.css?v=2','config.js?v=38','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
  assert.ok(html.indexOf('id="posadaBanner"')<html.indexOf('<header class="barra"'));
 });
 
