@@ -856,7 +856,7 @@
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
-        const altoMax = (z.maxAlto || maxLogo(z) * 0.9) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra
+        const altoMax = (z.maxAlto || maxLogo(z) * (z.id === "centro" ? 1 : 0.9)) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra; el frente centrado deja el mismo alto que ancho
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
