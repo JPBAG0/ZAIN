@@ -86,22 +86,22 @@
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 24900
+            "precio": 23500
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 22900
+            "precio": 21900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 21900
+            "precio": 20900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 21500
+            "precio": 20500
           }
         ]
       },
@@ -134,22 +134,22 @@
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 38900
+            "precio": 37500
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 35900
+            "precio": 34900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 34900
+            "precio": 33500
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 33900
+            "precio": 32500
           }
         ]
       },
@@ -182,22 +182,22 @@
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 74900
+            "precio": 71900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 69900
+            "precio": 66900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 66900
+            "precio": 64500
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 64900
+            "precio": 61900
           }
         ]
       }
