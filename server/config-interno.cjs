@@ -134,22 +134,22 @@ module.exports = {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 33900
+            "precio": 34900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 29900
+            "precio": 30900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 28900
+            "precio": 29900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 27900
+            "precio": 28900
           }
         ]
       },
