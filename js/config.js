@@ -155,7 +155,7 @@
       "precio": 394
     }
   ],
-  "preciosLeyenda": "Precio por pieza con tu logo, en pedidos de 50 piezas o más, más IVA. Cambia según modelo, color, talla, técnica, tamaño del logo y cantidad.",
+  "preciosLeyenda": "Por pieza con tu logo, en pedidos desde 50 piezas, más IVA.",
   "diasEntrega": "7 a 12 días hábiles",
   "tintasLogo": [
     {

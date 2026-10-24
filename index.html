@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/zain.css?v=37" />
+  <link rel="stylesheet" href="css/zain.css?v=39" />
   <link rel="stylesheet" href="css/privacidad.css?v=3" />
   <link rel="stylesheet" href="css/temporada.css?v=1" />
   <script>
@@ -85,13 +85,14 @@
     <!-- ===================== PORTADA ===================== -->
     <section class="portada" id="inicio" aria-labelledby="titulo">
       <div class="portada__texto">
-        <p class="portada__lugar">Envíos a todo México</p>
+        <p class="portada__lugar"><span>Bordado · Serigrafía · DTF</span> — <span>Envíos a todo México</span></p>
         <h1 id="titulo" class="portada__titulo">
           <span class="linea"><span>Uniformes</span></span>
           <span class="linea"><span>con el logo de</span></span>
           <span class="linea"><span>tu empresa.</span></span>
         </h1>
         <p class="portada__lede"><span id="ledeProductos">Playeras, polos, camisas, chamarras, chalecos y bolsas</span> con <strong>bordado, serigrafía o DTF</strong>. Mándanos tu logo y cuántas piezas necesitas: te cotizamos por WhatsApp.</p>
+        <div class="portada__precios" id="preciosDesde" hidden></div>
         <div class="portada__acciones">
           <!-- enlace directo a wa.me: js/medicion.js lo cuenta como «Clic a WhatsApp» -->
           <a class="btn btn--wa" id="ctaPortada" href="https://wa.me/525662923967?text=Hola%20ZAIN%2C%20quiero%20cotizar%20uniformes%20con%20mi%20logo." target="_blank" rel="noopener">
@@ -100,10 +101,9 @@
           </a>
           <a class="btn btn--linea" href="#personaliza">Personalizar con mi logo</a>
         </div>
-        <p class="portada__nota" id="portadaNota"></p>
-        <div class="portada__precios" id="preciosDesde" hidden></div>
       </div>
 
+      <div class="portada__visual">
       <div class="portada__escena" id="escena" aria-label="Prendas de muestra. Arrastra para ver más.">
         <svg class="portada__marca" viewBox="0 0 370 150" aria-hidden="true"><use href="#logo" /></svg>
         <!-- las prendas se dibujan desde js/zain.js -->
@@ -120,6 +120,7 @@
         <button class="ficha__ir" id="fIr" type="button">Personalizar esta prenda
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </button>
+      </div>
       </div>
 
       <ul class="portada__datos" id="datos">
@@ -470,14 +471,14 @@
     </symbol>
   </svg>
 
-  <script src="js/config.js?v=36"></script>
+  <script src="js/config.js?v=37"></script>
   <script src="js/catalogo-cargar.js?v=3"></script>
   <script src="js/medicion.js?v=5"></script>
   <script src="js/render.js?v=9"></script>
   <script src="js/trama.js?v=1"></script>
   <script src="js/archivos.js?v=1"></script>
   <script src="js/pedidos.js?v=6"></script>
-  <script src="js/zain.js?v=54"></script>
+  <script src="js/zain.js?v=55"></script>
   <script type="module" src="js/temporada.js?v=1"></script>
 <script src="js/subir.js?v=3"></script>
 </body>

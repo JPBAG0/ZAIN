@@ -145,7 +145,6 @@
   const ctaPortada = $("#ctaPortada");
   if (C.whatsapp) ctaPortada.href = wa(`Hola ${C.marca}, quiero cotizar uniformes con mi logo.`);
   else { ctaPortada.removeAttribute("target"); ctaPortada.href = "#contacto"; }
-  if (C.minimoTexto) $("#portadaNota").textContent = C.minimoTexto + " · Entrega en " + C.diasEntrega + ".";
   // precios «desde» por categoría (calculados con costos y margen; ver CLAUDE.md)
   const precios = (C.preciosDesde || []).filter((x) => x.precio > 0 && (C.categoriasCatalogo || []).includes(x.categoria));
   if (precios.length) {
@@ -400,7 +399,7 @@
   const reiniciarAvance = () => {
     pararAvance();
     if (reducido || !enPantalla || encima || document.hidden) return;
-    tAvance = setTimeout(() => irA(actual + 1), 4200);
+    tAvance = setTimeout(() => irA(actual + 1), 5600);
   };
   escena.addEventListener("pointerenter", (e) => {
     if (e.pointerType === "mouse") (encima = true), pararAvance();
