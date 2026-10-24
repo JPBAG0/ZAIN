@@ -92,7 +92,7 @@ export function configurar(input){
  const tasas=input.tecnicas??inicial().tecnicas;
  if(!Array.isArray(tasas)||tasas.length!==TECNICAS.length||new Set(tasas.map(t=>t.tecnica)).size!==TECNICAS.length||tasas.some(t=>!TECNICAS.includes(t.tecnica)))error('Define una tarifa para cada técnica.');
  const legada=input.costeo!=='area_tallas_volumen_v4';
- const tecnicas=TECNICAS.map(nombre=>{const t=tasas.find(t=>t.tecnica===nombre);return {tecnica:nombre,tarifaCm2:t.tarifaCm2===null?null:entero(legada?tarifaLegada(entero(t.tarifaCm2)):t.tarifaCm2),preparacion:entero(t.preparacion)};});
+ const tecnicas=TECNICAS.map(nombre=>{const t=tasas.find(t=>t.tecnica===nombre);return {tecnica:nombre,tarifaCm2:t.tarifaCm2===null?null:entero(legada?tarifaLegada(entero(t.tarifaCm2)):t.tarifaCm2),preparacion:entero(t.preparacion),...(t.porPieza==null?{}:{porPieza:entero(t.porPieza)})};});
  return {metodo:'margen_bruto',costeo:'area_tallas_volumen_v4',activo:input.activo,rangos,prendas,tecnicas,costos};
 }
 function comercial(p,i){return {indice:i,sku:texto(p.sku,60),nombre:texto(p.nombreZain||p.nombre,150),color:texto(p.color,100).replace(/ · \d+$/,''),tecnica:texto(p.tecnica,50),piezas:entero(p.piezas,1,9999),tallas:texto(p.tallas,500),zona:texto(p.zona,120),cm:Number.isFinite(p.cm)?p.cm:0};}
@@ -103,7 +103,7 @@ export function generar(items,cfg){
   // Los costos anteriores siguen por pieza hasta que el equipo migre ese SKU expresamente.
   const fijo=!!cp&&!prenda,medidas=medidasLogo(p.cm,p.logoGeometria),ancho=medidas?.ancho??(Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null);
   // Sin proporción del logo se supone cuadrado (alto = ancho) para tener un primer precio; autorizado por JP el 18-oct-2026.
-  return {indice:i,modo:p.tecnica==='Solo prenda'?'fijo':fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:p.tecnica==='Solo prenda'?0:fijo?cp.aplicacion:null,otros:prenda?.otros??cp?.otros??0,preparacion:p.tecnica==='Solo prenda'?0:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0,...(p.tecnica==='Bordado'&&(fijo?cp.preparacion:t?.preparacion??0)>0?{cargoAparte:true}:{})};
+  return {indice:i,modo:p.tecnica==='Solo prenda'?'fijo':fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:prenda?prenda.prenda:cp?.prenda??null,aplicacion:p.tecnica==='Solo prenda'?0:fijo?cp.aplicacion:null,otros:(prenda?.otros??cp?.otros??0)+(p.tecnica==='Solo prenda'||fijo?0:(t?.porPieza??0)),preparacion:p.tecnica==='Solo prenda'?0:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0,...(p.tecnica==='Bordado'&&(fijo?cp.preparacion:t?.preparacion??0)>0?{cargoAparte:true}:{})};
  });
  // Bordado: un solo ponchado por logo, aunque vaya en varias prendas. Si son logos distintos, el equipo agrega otro cargo.
  const ponchado=partidas.filter(v=>v.cargoAparte).map(v=>v.preparacion);

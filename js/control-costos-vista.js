@@ -11,11 +11,11 @@ export function ordenarCostos(form,estado={}){
  const explicaciones=paneles.rangos.querySelectorAll('.cot-ayuda');if(explicaciones[0])explicaciones[0].textContent='Define el margen bruto para cada cantidad. Precio = costo ÷ (1 − margen).';
  paneles.rangos.querySelector('.cot-resumen')?.remove();
  if(explicaciones[1])explicaciones[1].textContent='Los rangos comienzan en una pieza, sin huecos. El último no tiene límite.';
- paneles.tecnicas.querySelector('.cot-ayuda').textContent='Captura una vez el costo por cm². Se cargará al revisar cada cotización.';
- const ayudas=paneles.tecnicas.querySelectorAll('.cot-ayuda');if(ayudas[1])ayudas[1].textContent='Si una técnica se cobra por puntadas o por un mínimo, usa un costo fijo revisado en ese pedido.';
+ paneles.tecnicas.querySelector('.cot-ayuda').textContent='Lo que te cobra el taller. Bordado y serigrafía: fijo por pieza, con el costo por cm² en 0. DTF: película por cm² más el aplicado por pieza.';
+ const ayudas=paneles.tecnicas.querySelectorAll('.cot-ayuda');if(ayudas[1])ayudas[1].textContent='El ponchado del bordado se cobra una vez por pedido. Si un trabajo sale distinto, ajusta el costo en ese pedido.';
  const check=paneles.rangos.querySelector('[name="activo"]');if(check){const label=check.closest('label');label.lastChild.textContent=' Preparar costos al recibir solicitudes nuevas';label.insertAdjacentHTML('afterend','<p class="cot-ayuda">Al abrir o actualizar una cotización siempre se consultan los costos guardados.</p>');}
  paneles.prendas.querySelector('.cot-ayuda').textContent='Un costo por talla, igual para todos los colores. Captura el de la variante más cara.';
  form.querySelector('.cot-botones').classList.add('cot-guardar-costos');
  form.querySelector('.cot-guardar-costos .cot-ayuda').textContent='La cotización del cliente cambia solo al publicarla.';
- paneles.tecnicas.querySelectorAll('[name^=preparacion-t]').forEach(input=>input.closest('label').firstChild.textContent='Preparación / partida');
+ paneles.tecnicas.querySelectorAll('[name^=preparacion-t]').forEach(input=>input.closest('label').firstChild.textContent=input.closest('.cot-tarifa')?.querySelector('h3')?.textContent==='Bordado'?'Ponchado (una vez por pedido)':'Preparación / partida');
 }

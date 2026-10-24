@@ -1,4 +1,4 @@
-import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=17';
+import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=19';
 import {esc} from './cotizacion-vista.js?v=12';
 import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=4';
 import {armarPedido} from './cotizacion-modelos-pedido.js?v=2';
@@ -141,7 +141,9 @@ function leer(m){
  m.margen=nullable(campo('margenModelo'));if(m.margen!=null&&m.margen>9999)throw Error('El margen debe ser menor a 100%.');
  if(m.tecnica&&m.ancho!=null&&m.ancho>maxAncho(m))throw Error('El ancho excede el área disponible de esta zona.');
  const limite=zona(m)?.maxAlto;if(m.tecnica&&limite&&m.alto!=null&&m.alto>Math.floor(limite*100))throw Error('El alto excede el área disponible de esta zona ('+limite+' cm).');
- m.aplicacion=!m.tecnica?0:m.modo==='fijo'?nullable(campo('fijo')):aplicacionArea(m.ancho,m.alto,campo('tarifa').value===''?null:decimalTarifa(campo('tarifa').value));
+ // por área se suma el costo fijo por pieza de la técnica (p. ej. el aplicado del DTF)
+ const fijoTecnica=datos.config.tecnicas.find(t=>t.tecnica===m.tecnica)?.porPieza??0,area=aplicacionArea(m.ancho,m.alto,campo('tarifa').value===''?null:decimalTarifa(campo('tarifa').value));
+ m.aplicacion=!m.tecnica?0:m.modo==='fijo'?nullable(campo('fijo')):area==null?null:area+fijoTecnica;
  // Un precio escrito en la fila manda; si está vacío, se usa el margen del modelo.
  for(const f of m.filas){const tr=el.querySelector('[data-fila="'+f.id+'"]');f.incluir=tr.querySelector('[data-campo=incluir]').checked;f.margen=m.margen;f.precio=f.incluir?nullable(tr.querySelector('[data-campo=precio]')):null;}
 }
@@ -181,6 +183,8 @@ function altoAutomatico(m){
 function aplicarTecnica(m){
  const el=nodo(m),nombre=tecnicas[el.querySelector('[data-campo=tecnica]').value],t=datos.config.tecnicas.find(t=>t.tecnica===nombre);
  el.querySelector('[data-personalizacion]').hidden=!nombre;el.querySelector('[data-campo=tarifa]').value=t?.tarifaCm2==null?'':t.tarifaCm2/1000000;
+ // técnica que el taller cobra fijo por pieza (bordado, serigrafía): se propone el modo fijo con ese importe
+ if(t?.porPieza!=null&&!t.tarifaCm2){el.querySelector('[data-campo=modo]').value='fijo';el.querySelector('[data-campo=fijo]').value=(t.porPieza/100).toFixed(2);aplicarModo(m);}
  el.querySelector('[data-preparacion]').textContent=!nombre?'':t?.preparacion?'Preparación de referencia: '+pesos(t.preparacion)+'. Agrégala al cargo único si corresponde.':'Preparación o ponchado: confirmar con el taller.';
 }
 function aplicarModo(m){const el=nodo(m),fijo=el.querySelector('[data-campo=modo]').value==='fijo';el.querySelector('[data-area]').hidden=fijo;el.querySelector('[data-fijo]').hidden=!fijo;}
