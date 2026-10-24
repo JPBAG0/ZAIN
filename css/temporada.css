@@ -33,3 +33,9 @@
 .posada-kit .btn{margin-top:auto;width:100%;justify-content:center}
 .posada-nota{margin-top:28px;padding-top:16px;border-top:1px solid var(--linea);color:var(--tenue);font-size:14px;line-height:1.6}.posada-nota[hidden]{display:none}
 .posada-kit--destacado .btn{background:var(--cobalto);color:#fff}
+/* tarjeta destacada: blanca, borde cobalto, levantada; etiqueta en píldora */
+.posada-kit--destacado{background:#fff;border:2px solid var(--cobalto);border-radius:16px;padding:34px 24px 24px;box-shadow:0 28px 56px -28px rgba(42,59,255,.45);transform:translateY(-14px)}
+.posada-kit--destacado .posada-kit__chip{left:50%;top:-15px;transform:translateX(-50%);border-radius:999px;padding:7px 16px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(42,59,255,.6)}
+.posada-kit--destacado .posada-kit__chip::before{content:"★ "}
+.posada-kit--destacado .posada-kit__fotos div{background:transparent}
+@media(max-width:760px){.posada-kit--destacado{transform:none;margin-top:14px;padding:30px 18px 20px}}

@@ -54,7 +54,7 @@ test('auditoría distingue tabla, detalle y unitalla sin completar medidas',()=>
 });
 test('portada incluye ambas secciones, enlaces, cierre accesible y versiones nuevas',async()=>{
  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
- for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=3','temporada.css?v=3','config.js?v=42','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
+ for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=3','temporada.css?v=4','config.js?v=42','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
  assert.ok(html.indexOf('id="posadaBanner"')<html.indexOf('<header class="barra"'));
 });
 
