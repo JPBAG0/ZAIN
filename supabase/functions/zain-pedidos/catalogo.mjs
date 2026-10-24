@@ -90,17 +90,17 @@ export default {
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 21900
+            "precio": 22900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 20900
+            "precio": 21900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 19900
+            "precio": 21500
           }
         ]
       },
@@ -118,7 +118,7 @@ export default {
             "producto": "Polo corporativo",
             "sku": "ZN-PO-008",
             "cantidad": 1,
-            "tecnica": "Bordado",
+            "tecnica": "DTF",
             "ubicacion": "Frente"
           },
           {
@@ -133,22 +133,22 @@ export default {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 34900
+            "precio": 38900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 30900
+            "precio": 35900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 29900
+            "precio": 34900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 28900
+            "precio": 33900
           }
         ]
       },
@@ -181,22 +181,22 @@ export default {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 59900
+            "precio": 74900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 54900
+            "precio": 69900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 51900
+            "precio": 66900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 49900
+            "precio": 64900
           }
         ]
       }

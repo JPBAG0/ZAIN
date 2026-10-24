@@ -28,7 +28,7 @@ test('kits por escalones: contiguos desde el mínimo, sin subir de precio y últ
 });
 test('catálogo generado publica tres kits aprobados y tres testimonios sin identidad',()=>{
  assert.deepEqual(Pub.posadas,C.posadas);assert.deepEqual(Pub.clientesSatisfechos,C.clientesSatisfechos);
- assert.deepEqual(Pub.posadas.paquetes.map(p=>[p.id,precioDesde(p)]),[['kit-posada',19900],['kit-equipo',28900],['kit-regalo',49900]]);
+ assert.deepEqual(Pub.posadas.paquetes.map(p=>[p.id,precioDesde(p)]),[['kit-posada',21500],['kit-equipo',33900],['kit-regalo',64900]]);
  for(const p of Pub.posadas.paquetes){assert.ok(precioAprobado(p),p.id);assert.ok(escalonesValidos(p));assert.equal(p.minimoPaquetes,20);assert.ok(p.contenido.every(x=>/^ZN-[A-Z]{2}-\d{3}$/.test(x.sku)));}
  assert.equal(Pub.posadas.paquetes.filter(p=>p.destacado).length,1);
  assert.equal(Pub.clientesSatisfechos.length,3);assert.equal(testimoniosPublicables(Pub.clientesSatisfechos).length,0);
@@ -54,7 +54,7 @@ test('auditoría distingue tabla, detalle y unitalla sin completar medidas',()=>
 });
 test('portada incluye ambas secciones, enlaces, cierre accesible y versiones nuevas',async()=>{
  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
- for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=3','temporada.css?v=3','config.js?v=39','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
+ for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=3','temporada.css?v=3','config.js?v=40','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
  assert.ok(html.indexOf('id="posadaBanner"')<html.indexOf('<header class="barra"'));
 });
 
