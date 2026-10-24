@@ -49,6 +49,34 @@ function cargosUnicos(q){
  return `<fieldset class="cot-cargos"><legend class="sr-only">Cargos únicos</legend><p class="cot-ayuda">Por ejemplo, el ponchado de cada logo de bordado: si el mismo logo va en varias prendas, se cobra una sola vez. El cliente lo ve como partida propia. Deja el concepto vacío para quitar un cargo.</p>${filas.map((c,k)=>`<div class="cot-edicion cot-cargo-fila">${field('cargoConcepto-'+k,'Concepto',c.concepto,'text','maxlength="80" placeholder="Otro cargo (opcional)"')}${field('cargoImporte-'+k,'Se cobra al cliente',val(c.importe))}${field('cargoCosto-'+k,'Tu costo (vacío = igual)',c.costo===c.importe?'':val(c.costo),'number','placeholder="Igual al cobro"')}</div>`).join('')}</fieldset>`;
 }
 const opcionImpuesto=q=>q.impuesto===null?'':q.impuesto===0?'0':q.impuesto===1600?'1600':'otro';
+// Anticipo de esta cotización: barra de 0 a 100% (pasos de 5) ligada al campo «anticipo», que es el que se guarda. «Por definir» lo deja vacío.
+function anticipoCampo(q){
+ const bp=q.pagos?.anticipo??null,barra=bp===null?50:Math.round(bp/100);
+ return `<fieldset class="cot-anticipo${bp===null?' cot-anticipo-pendiente':''}" data-anticipo style="--p:${barra}%"><legend>Anticipo</legend>
+ <div class="cot-anticipo-fila"><input type="range" min="0" max="100" step="5" value="${barra}" data-anticipo-barra aria-label="Porcentaje de anticipo"><label class="cot-anticipo-num"><input name="anticipo" type="number" min="0" max="100" step="0.01" inputmode="decimal" value="${bp===null?'':bp/100}" placeholder="—" aria-label="Anticipo en porcentaje"><span>%</span></label></div>
+ <div class="cot-anticipo-rapido">${[30,50,60,70,100].map(n=>`<button type="button" class="cot-chip-boton" data-anticipo-rapido="${n}">${n}%</button>`).join('')}<label class="cot-check"><input type="checkbox" data-anticipo-pendiente ${bp===null?'checked':''}>Por definir</label></div>
+ <p class="cot-anticipo-montos" data-anticipo-montos></p></fieldset>`;
+}
+// Mantiene la barra, el número y «Por definir» de acuerdo con el control que se movió.
+export function sincronizarAnticipo(form,el){
+ const box=form.querySelector('[data-anticipo]');if(!box||!box.contains(el))return;
+ const barra=box.querySelector('[data-anticipo-barra]'),num=box.querySelector('[name="anticipo"]'),pend=box.querySelector('[data-anticipo-pendiente]');
+ if(el===barra)num.value=barra.value;
+ else if(el===pend)num.value=pend.checked?'':barra.value;
+ else if(el.dataset.anticipoRapido)num.value=barra.value=el.dataset.anticipoRapido;
+ else if(el===num&&num.value!=='')barra.value=Math.round(Math.min(100,Math.max(0,Number(num.value)||0))/5)*5;
+ pend.checked=num.value==='';box.classList.toggle('cot-anticipo-pendiente',pend.checked);box.style.setProperty('--p',barra.value+'%');
+}
+// Anticipo y saldo en pesos con el total actual de la cotización.
+export function montosAnticipo(form,total){
+ const box=form.querySelector('[data-anticipo]');if(!box)return;
+ const v=box.querySelector('[name="anticipo"]').value,out=box.querySelector('[data-anticipo-montos]');
+ if(v===''){out.textContent='El cliente verá «Por acordar» en lugar del anticipo.';return;}
+ const p=Number(v);if(!(p>=0&&p<=100)){out.textContent='Escribe un porcentaje entre 0 y 100.';return;}
+ if(total==null){out.textContent=p+'% del total · el monto aparece al poner los precios.';return;}
+ const a=Math.round(total*p/100);
+ out.innerHTML=`Anticipo <b>${esc(pesos(a))}</b> · Saldo antes del envío <b>${esc(pesos(total-a))}</b>`;
+}
 export function editorCotizacion(q,{version,publicada,imagenes={},productos=[],editable=true}={}){
  const op=opcionImpuesto(q),chip=(v,t)=>`<label class="cot-chip"><input type="radio" name="impuestoOpcion" value="${v}" ${op===v?'checked':''}><span>${t}</span></label>`;
  const cargos=(q.cargos||[]).length;
@@ -60,9 +88,10 @@ export function editorCotizacion(q,{version,publicada,imagenes={},productos=[],e
  ${q.partidas.map((p,i)=>partida(p,i,imagenes[i]?.src||productos.find(v=>v.sku===p.sku)?.foto,q.origenCostos?.partidas?.[i]?.sku===p.sku?q.origenCostos.partidas[i]:null)).join('')}</section>
  <section class="cot-bloque"><h3>Para el cliente</h3>
  <label class="cot-notas"><span>Notas y acuerdos <small>Las ve en su cotización y en el PDF</small></span><textarea name="condiciones" maxlength="3000" rows="3" placeholder="Incluye serigrafía al frente (pecho izquierdo) y en la espalda (centro).">${esc(q.condiciones)}</textarea></label>
- <fieldset class="cot-impuesto"><legend>¿Lleva IVA?</legend><div class="cot-chips">${chip('0','Sin IVA')}${chip('1600','+ IVA 16%')}${chip('otro','Otro %')}</div><div data-impuesto-otro ${op==='otro'?'':'hidden'}>${field('impuesto','Impuesto %',op==='otro'?val(q.impuesto):'','number','max="100"')}</div></fieldset></section>
+ <fieldset class="cot-impuesto"><legend>¿Lleva IVA?</legend><div class="cot-chips">${chip('0','Sin IVA')}${chip('1600','+ IVA 16%')}${chip('otro','Otro %')}</div><div data-impuesto-otro ${op==='otro'?'':'hidden'}>${field('impuesto','Impuesto %',op==='otro'?val(q.impuesto):'','number','max="100"')}</div></fieldset>
+ ${anticipoCampo(q)}</section>
  <details class="cot-ajustes cot-plegable" ${cargos?'open':''}><summary>Cargos únicos <span>${cargos?cargos+' en esta cotización':'Ponchado u otro cobro una sola vez'}</span></summary><div class="cot-ajustes-contenido">${cargosUnicos(q)}</div></details>
- <details class="cot-ajustes cot-entrega cot-plegable"><summary>Cliente, entrega y pago <span>Anticipo, vigencia, envío y plazo</span></summary><div class="cot-ajustes-contenido cot-edicion">${field('destinatario','Nombre en la cotización',q.destinatario,'text','maxlength="180"')}${field('anticipo','Anticipo % (vacío = por definir)',val(q.pagos?.anticipo??null),'number','max="100" placeholder="50"')}<label class="cot-ancho">Instrucciones de pago para el cliente<textarea name="instruccionesPago" maxlength="1000">${esc(q.pagos?.instrucciones||'')}</textarea></label>${field('vigencia','Válida hasta',q.vigencia,'date')}${field('envio','Envío cobrado al cliente',val(q.envio))}${field('costoEnvio','Costo interno de envío',val(q.costoEnvio))}<label class="cot-ancho">Plazo de entrega<textarea name="plazo" maxlength="700">${esc(q.plazo)}</textarea></label></div></details>
+ <details class="cot-ajustes cot-entrega cot-plegable"><summary>Cliente, entrega y pago <span>Vigencia, envío, plazo e instrucciones de pago</span></summary><div class="cot-ajustes-contenido cot-edicion">${field('destinatario','Nombre en la cotización',q.destinatario,'text','maxlength="180"')}<label class="cot-ancho">Instrucciones de pago para el cliente<textarea name="instruccionesPago" maxlength="1000">${esc(q.pagos?.instrucciones||'')}</textarea></label>${field('vigencia','Válida hasta',q.vigencia,'date')}${field('envio','Envío cobrado al cliente',val(q.envio))}${field('costoEnvio','Costo interno de envío',val(q.costoEnvio))}<label class="cot-ancho">Plazo de entrega<textarea name="plazo" maxlength="700">${esc(q.plazo)}</textarea></label></div></details>
  <details class="cot-mas cot-plegable"><summary>Más opciones</summary><div class="cot-botones"><span class="cot-ayuda">Costos del panel${q.origenCostos?' · v'+esc(q.origenCostos.version):''}</span><button type="button" class="btn-texto" id="cotActualizarCostos">Traer costos actualizados</button><button type="button" class="btn-texto" id="cotRecalcular">Rehacer con costos actuales</button>${publicada?'<button type="button" class="btn-texto" id="cotRetirar">Retirar cotización del cliente</button>':''}</div></details>
  <div id="cotAvisoSlot"></div>
  <div class="cot-barra" role="region" aria-label="Total y acciones de la cotización">
