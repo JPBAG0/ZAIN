@@ -86,22 +86,22 @@ module.exports = {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 23500
+            "precio": 22500
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 21900
+            "precio": 21500
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 20900
+            "precio": 20500
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 20500
+            "precio": 19900
           }
         ]
       },
@@ -134,22 +134,22 @@ module.exports = {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 37500
+            "precio": 35900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 34900
+            "precio": 33900
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 33500
+            "precio": 32500
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 32500
+            "precio": 31500
           }
         ]
       },
@@ -182,22 +182,22 @@ module.exports = {
           {
             "desde": 20,
             "hasta": 49,
-            "precio": 71900
+            "precio": 68900
           },
           {
             "desde": 50,
             "hasta": 99,
-            "precio": 66900
+            "precio": 65500
           },
           {
             "desde": 100,
             "hasta": 149,
-            "precio": 64500
+            "precio": 62900
           },
           {
             "desde": 150,
             "hasta": null,
-            "precio": 61900
+            "precio": 60500
           }
         ]
       }
