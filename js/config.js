@@ -267,16 +267,16 @@
       "tecnica": "Bordado"
     },
     {
-      "id": "playeras-trabajo",
+      "id": "sudaderas-dtf",
       "estado": "PENDIENTE",
       "permisoPublicar": false,
       "permisoEmpresa": false,
       "permisoImagen": false,
       "empresa": "",
-      "foto": "img/trabajos/playeras-trabajo.webp",
+      "foto": "img/trabajos/sudaderas-dtf.webp",
       "frase": "",
-      "producto": "Playeras de trabajo",
-      "tecnica": "Con cinta reflejante"
+      "producto": "Sudaderas",
+      "tecnica": "DTF"
     },
     {
       "id": "playera-dtf",
@@ -289,6 +289,114 @@
       "frase": "",
       "producto": "Playeras a todo color",
       "tecnica": "DTF"
+    },
+    {
+      "id": "playeras-trabajo",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/playeras-trabajo.webp",
+      "frase": "",
+      "producto": "Playeras de trabajo",
+      "tecnica": "Con cinta reflejante"
+    },
+    {
+      "id": "playera-dtf-blanca",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/playera-dtf-blanca.webp",
+      "frase": "",
+      "producto": "Playeras con diseño a color",
+      "tecnica": "DTF"
+    },
+    {
+      "id": "playeras-logo",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/playeras-logo.webp",
+      "frase": "",
+      "producto": "Playeras con logo",
+      "tecnica": "DTF"
+    },
+    {
+      "id": "jerseys",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/jerseys.webp",
+      "frase": "",
+      "producto": "Jerseys",
+      "tecnica": "DTF"
+    },
+    {
+      "id": "camisas-trabajo",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/camisas-trabajo.webp",
+      "frase": "",
+      "producto": "Camisas de trabajo",
+      "tecnica": "Bordado"
+    },
+    {
+      "id": "bolsas-tienda",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/bolsas-tienda.webp",
+      "frase": "",
+      "producto": "Bolsas para negocio",
+      "tecnica": "Serigrafía"
+    },
+    {
+      "id": "bolsa-logo",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/bolsa-logo.webp",
+      "frase": "",
+      "producto": "Bolsas con logo",
+      "tecnica": "Serigrafía"
+    },
+    {
+      "id": "bolsas-mayoreo",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/bolsas-mayoreo.webp",
+      "frase": "",
+      "producto": "Bolsas por mayoreo",
+      "tecnica": "Serigrafía"
+    },
+    {
+      "id": "bordado-maquina",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/bordado-maquina.webp",
+      "frase": "",
+      "producto": "Así bordamos tu logo",
+      "tecnica": "Bordado"
     }
   ],
   "preciosDesde": [
