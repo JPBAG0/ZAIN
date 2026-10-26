@@ -30,14 +30,14 @@ if(mostrar){
 }
 const testimonios=testimoniosPublicables(C.clientesSatisfechos);
 $('#clientes-satisfechos').hidden=!testimonios.length;$('#navClientes').hidden=!testimonios.length;
-// galería de trabajos: la frase y el nombre de la empresa son opcionales (solo con permiso)
+// galería de trabajos solo con fotos; producto y técnica van en el alt. La frase y la empresa (con permiso) salen como pie
 // las fotos anchas ocupan 2 columnas; una tarjeta para cotizar llena los huecos de la última fila (3 columnas en PC, 2 en celular)
 const lugares=testimonios.reduce((n,x)=>n+(x.formato==='ancho'?2:1),0),huecoPC=(3-lugares%3)%3,huecoCel=(2-lugares%2)%2;
 const waTrabajos=`https://wa.me/${esc(String(C.whatsapp).replace(/\D/g,''))}?text=${esc(encodeURIComponent('Hola, vi sus trabajos en la página y quiero cotizar con mi logo.'))}`;
 // al inicio se ven 3 filas (9 lugares en PC, 8 en celular); el resto aparece con «Ver más trabajos»
 let suma=0;const extra=x=>{suma+=x.formato==='ancho'?2:1;return (suma>9?' trabajo-extra':'')+(suma>8?' trabajo-extra-cel':'');};
 const hayExtra=lugares>8;
-$('#listaTestimonios').innerHTML=testimonios.map(x=>{const ancho=x.formato==='ancho',frase=String(x.frase||'').trim(),empresa=x.permisoEmpresa===true&&x.empresa?x.empresa:'';return `<figure class="trabajo-real${ancho?' trabajo-real--ancho':''}${extra(x)}"><img src="${esc(x.foto)}" alt="${esc(x.producto+(x.tecnica?' · '+x.tecnica:'')+' hecho por ZAIN')}" width="${ancho?1280:720}" height="${ancho?720:900}" loading="lazy" decoding="async"><figcaption>${frase?`<blockquote><p>“${esc(frase)}”</p></blockquote>`:''}<p><b>${esc(x.producto)}</b><span>${esc([x.tecnica,empresa].filter(Boolean).join(' · '))}</span></p></figcaption></figure>`;}).join('')
+$('#listaTestimonios').innerHTML=testimonios.map(x=>{const ancho=x.formato==='ancho',frase=String(x.frase||'').trim(),empresa=x.permisoEmpresa===true&&x.empresa?x.empresa:'';return `<figure class="trabajo-real${ancho?' trabajo-real--ancho':''}${extra(x)}"><img src="${esc(x.foto)}" alt="${esc(x.producto+(x.tecnica?' · '+x.tecnica:'')+' hecho por ZAIN')}" width="${ancho?1280:720}" height="${ancho?720:900}" loading="lazy" decoding="async">${frase||empresa?`<figcaption>${frase?`<blockquote><p>“${esc(frase)}”</p></blockquote>`:''}${empresa?`<p><b>${esc(empresa)}</b></p>`:''}</figcaption>`:''}</figure>`;}).join('')
  +((huecoPC||huecoCel)?`<a class="trabajo-cta trabajo-cta--pc${huecoPC} trabajo-cta--cel${huecoCel}${hayExtra?' trabajo-extra trabajo-extra-cel':''}" href="${waTrabajos}" target="_blank" rel="noopener"><b>¿Tu logo aquí?</b><span>Cotiza tu pedido por WhatsApp</span><i aria-hidden="true">→</i></a>`:'');
 const verMas=$('#verMasTrabajos');
 if(verMas&&hayExtra){verMas.hidden=false;verMas.addEventListener('click',()=>{$('#listaTestimonios').classList.add('trabajos-reales--todos');verMas.hidden=true;});}
