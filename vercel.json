@@ -19,6 +19,14 @@
       }
     },
     {
+      "src": "/e/?",
+      "status": 302,
+      "headers": {
+        "Location": "/?utm_source=etiqueta&utm_medium=qr&utm_campaign=prenda",
+        "Cache-Control": "no-store"
+      }
+    },
+    {
       "src": "/privacidad(?:\\.html)?",
       "dest": "/privacidad.html"
     },
