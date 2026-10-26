@@ -134,7 +134,6 @@
     return d.length === 12 && d.startsWith("52") ? `+52 ${d.slice(2, 4)} ${d.slice(4, 8)} ${d.slice(8)}` : "+" + d;
   };
   const piezaDatos = [
-    C.ciudad && `<div><span>Taller</span><b>${esc(C.ciudad)}</b></div>`,
     C.whatsapp && `<div><span>WhatsApp</span><a class="num" href="${esc(wa(saludo))}" target="_blank" rel="noopener">${esc(telefono(C.whatsapp))}</a></div>`,
     C.correo && `<div><span>Correo</span><a href="mailto:${esc(C.correo)}">${esc(C.correo)}</a></div>`,
     C.horario && `<div><span>Horario</span><b>${esc(C.horario)}</b></div>`,
