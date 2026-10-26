@@ -205,37 +205,89 @@ module.exports = {
   },
   "clientesSatisfechos": [
     {
-      "id": "trabajo-1",
-      "estado": "PENDIENTE",
-      "permisoPublicar": false,
+      "id": "gorras-bordadas",
+      "estado": "aprobado",
+      "permisoPublicar": true,
       "permisoEmpresa": false,
-      "permisoImagen": false,
+      "permisoImagen": true,
       "empresa": "",
-      "foto": "",
+      "foto": "img/trabajos/gorras-bordadas.webp",
       "frase": "",
-      "producto": ""
+      "producto": "Gorras",
+      "tecnica": "Bordado",
+      "formato": "ancho"
     },
     {
-      "id": "trabajo-2",
+      "id": "chalecos-bordados",
       "estado": "PENDIENTE",
       "permisoPublicar": false,
       "permisoEmpresa": false,
       "permisoImagen": false,
       "empresa": "",
-      "foto": "",
+      "foto": "img/trabajos/chalecos-bordados.webp",
       "frase": "",
-      "producto": ""
+      "producto": "Chalecos",
+      "tecnica": "Bordado"
     },
     {
-      "id": "trabajo-3",
+      "id": "polos-escolares",
       "estado": "PENDIENTE",
       "permisoPublicar": false,
       "permisoEmpresa": false,
       "permisoImagen": false,
       "empresa": "",
-      "foto": "",
+      "foto": "img/trabajos/polos-escolares.webp",
       "frase": "",
-      "producto": ""
+      "producto": "Polos escolares",
+      "tecnica": "Bordado"
+    },
+    {
+      "id": "camisas-bordadas",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/camisas-bordadas.webp",
+      "frase": "",
+      "producto": "Camisas de vestir",
+      "tecnica": "Bordado"
+    },
+    {
+      "id": "playeras-trabajo",
+      "estado": "PENDIENTE",
+      "permisoPublicar": false,
+      "permisoEmpresa": false,
+      "permisoImagen": false,
+      "empresa": "",
+      "foto": "img/trabajos/playeras-trabajo.webp",
+      "frase": "",
+      "producto": "Playeras de trabajo",
+      "tecnica": "Con cinta reflejante"
+    },
+    {
+      "id": "playera-dtf",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/playera-dtf.webp",
+      "frase": "",
+      "producto": "Playeras a todo color",
+      "tecnica": "DTF"
+    },
+    {
+      "id": "bolsas-serigrafia",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/bolsas-serigrafia.webp",
+      "frase": "",
+      "producto": "Bolsas ecológicas",
+      "tecnica": "Serigrafía"
     }
   ],
   "preciosDesde": [

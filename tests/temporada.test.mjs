@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {existsSync} from 'node:fs';
 import C from '../server/config-interno.cjs';
 import Pub from '../js/config.js';
 import {vigente,precioAprobado,precioDesde,escalonesValidos,mensajePaquete,testimoniosPublicables,fotoTrabajo} from '../js/temporada-core.js';
@@ -26,17 +27,20 @@ test('kits por escalones: contiguos desde el mínimo, sin subir de precio y últ
  assert.ok(precioAprobado(kit));assert.equal(precioDesde(kit),29900);assert.match(mensajePaquete(kit),/20 kits/);
  for(const e of [[],[{desde:21,hasta:null,precio:100}],[{desde:20,hasta:49,precio:100},{desde:51,hasta:null,precio:90}],[{desde:20,hasta:49,precio:100},{desde:50,hasta:null,precio:120}],[{desde:20,hasta:49,precio:100}],[{desde:20,hasta:null,precio:0}]])assert.equal(precioAprobado({...kit,escalones:e}),false);
 });
-test('catálogo generado publica tres kits aprobados y tres testimonios sin identidad',()=>{
+test('catálogo generado publica tres kits aprobados y trabajos sin identidad',()=>{
  assert.deepEqual(Pub.posadas,C.posadas);assert.deepEqual(Pub.clientesSatisfechos,C.clientesSatisfechos);
  assert.deepEqual(Pub.posadas.paquetes.map(p=>[p.id,precioDesde(p)]),[['kit-posada',19900],['kit-equipo',31500],['kit-regalo',60500]]);
  for(const p of Pub.posadas.paquetes){assert.ok(precioAprobado(p),p.id);assert.ok(escalonesValidos(p));assert.equal(p.minimoPaquetes,20);assert.ok(p.contenido.every(x=>/^ZN-[A-Z]{2}-\d{3}$/.test(x.sku)));}
  assert.equal(Pub.posadas.paquetes.filter(p=>p.destacado).length,1);
- assert.equal(Pub.clientesSatisfechos.length,3);assert.equal(testimoniosPublicables(Pub.clientesSatisfechos).length,0);
- for(const t of Pub.clientesSatisfechos){assert.equal(t.empresa,'');assert.equal(t.frase,'');assert.equal(t.foto,'');}
+ // solo se publican los trabajos con permiso; sin nombres de empresa y con foto local que exista
+ const pub=testimoniosPublicables(Pub.clientesSatisfechos);
+ assert.ok(pub.length>=1);assert.ok(pub.every(t=>t.permisoPublicar===true&&t.permisoImagen===true));
+ for(const t of Pub.clientesSatisfechos){assert.equal(t.empresa,'');assert.equal(t.permisoEmpresa,false);assert.ok(fotoTrabajo(t.foto));assert.ok(existsSync(new URL('../'+t.foto,import.meta.url)),t.foto);}
+ assert.ok(Pub.clientesSatisfechos.filter(t=>t.estado!=='aprobado').every(t=>testimoniosPublicables([t]).length===0));
 });
 test('testimonios: estado, permiso de imagen y publicación explícitos; rutas externas rechazadas',()=>{
  const valido={estado:'aprobado',permisoPublicar:true,permisoImagen:true,foto:'img/trabajos/ejemplo.webp',frase:'Comentario ficticio.',producto:'Producto de prueba'};
- assert.equal(testimoniosPublicables([valido]).length,1);
+ assert.equal(testimoniosPublicables([valido]).length,1);assert.equal(testimoniosPublicables([{...valido,frase:''}]).length,1);assert.equal(testimoniosPublicables([{...valido,frase:undefined}]).length,1);
  for(const cambio of [{estado:'PENDIENTE'},{permisoPublicar:false},{permisoImagen:false},{frase:'PENDIENTE'},{foto:'https://ajeno.test/foto.webp'},{foto:'img/trabajos/../otro.webp'},{producto:''}])assert.equal(testimoniosPublicables([{...valido,...cambio}]).length,0);
  assert.equal(fotoTrabajo('javascript:alert(1)'),false);
 });
@@ -54,7 +58,7 @@ test('auditoría distingue tabla, detalle y unitalla sin completar medidas',()=>
 });
 test('portada incluye ambas secciones, enlaces, cierre accesible y versiones nuevas',async()=>{
  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
- for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=3','temporada.css?v=4','config.js?v=42','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
+ for(const texto of ['id="paquetes"','id="clientes-satisfechos"','id="navClientes"','id="cerrarPosada"','temporada.js?v=4','temporada.css?v=5','config.js?v=43','id="notaPaquetes"','medicion.js?v=5'])assert.ok(html.includes(texto),texto);
  assert.ok(html.indexOf('id="posadaBanner"')<html.indexOf('<header class="barra"'));
 });
 

@@ -1,4 +1,4 @@
-import {vigente,identificador,precioAprobado,precioDesde,mensajePaquete,testimoniosPublicables} from './temporada-core.js?v=2';
+import {vigente,identificador,precioAprobado,precioDesde,mensajePaquete,testimoniosPublicables} from './temporada-core.js?v=3';
 await window.ZAINCatalogoListo;
 const C=window.ZAIN,$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pesos=n=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',minimumFractionDigits:n%100?2:0}).format(n/100);
@@ -30,4 +30,5 @@ if(mostrar){
 }
 const testimonios=testimoniosPublicables(C.clientesSatisfechos);
 $('#clientes-satisfechos').hidden=!testimonios.length;$('#navClientes').hidden=!testimonios.length;
-$('#listaTestimonios').innerHTML=testimonios.map(x=>`<figure class="trabajo-real"><img src="${esc(x.foto)}" alt="${esc(x.producto+' personalizado por ZAIN')}" width="1200" height="900" loading="lazy" decoding="async"><figcaption><blockquote><p>“${esc(x.frase)}”</p></blockquote><p><b>${esc(x.permisoEmpresa===true&&x.empresa?x.empresa:'Cliente ZAIN')}</b><span>${esc(x.producto)}</span></p></figcaption></figure>`).join('');
+// galería de trabajos: la frase y el nombre de la empresa son opcionales (solo con permiso)
+$('#listaTestimonios').innerHTML=testimonios.map(x=>{const ancho=x.formato==='ancho',frase=String(x.frase||'').trim(),empresa=x.permisoEmpresa===true&&x.empresa?x.empresa:'';return `<figure class="trabajo-real${ancho?' trabajo-real--ancho':''}"><img src="${esc(x.foto)}" alt="${esc(x.producto+(x.tecnica?' · '+x.tecnica:'')+' hecho por ZAIN')}" width="${ancho?1600:720}" height="${ancho?969:900}" loading="lazy" decoding="async"><figcaption>${frase?`<blockquote><p>“${esc(frase)}”</p></blockquote>`:''}<p><b>${esc(x.producto)}</b><span>${esc([x.tecnica,empresa].filter(Boolean).join(' · '))}</span></p></figcaption></figure>`;}).join('');

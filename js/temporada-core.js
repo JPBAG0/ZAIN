@@ -23,5 +23,5 @@ export function mensajePaquete(p){
 }
 export const fotoTrabajo=s=>typeof s==='string'&&/^img\/trabajos\/[a-z0-9][a-z0-9-]*\.webp$/.test(s);
 export function testimoniosPublicables(lista=[]){
- return Array.isArray(lista)?lista.filter(x=>x?.estado==='aprobado'&&x.permisoPublicar===true&&x.permisoImagen===true&&fotoTrabajo(x.foto)&&typeof x.frase==='string'&&x.frase.trim()&&x.frase!=='PENDIENTE'&&typeof x.producto==='string'&&x.producto.trim()):[];
+ return Array.isArray(lista)?lista.filter(x=>x?.estado==='aprobado'&&x.permisoPublicar===true&&x.permisoImagen===true&&fotoTrabajo(x.foto)&&(x.frase===undefined||(typeof x.frase==='string'&&x.frase.trim()!=='PENDIENTE'))&&typeof x.producto==='string'&&x.producto.trim()):[];
 }

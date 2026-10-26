@@ -17,10 +17,12 @@
 .posada-paquete__precios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;margin:auto 0 24px}
 .posada-paquete__precios div{display:grid;gap:6px}.posada-paquete__precios span,.posada-paquete__iva{font-size:14px;color:var(--tenue)}
 .posada-paquete__precios strong{font-size:24px;letter-spacing:-.03em}.posada-paquete__iva{margin:-12px 0 16px}
-.trabajos-reales{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.trabajo-real{margin:0;min-width:0}.trabajo-real img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--papel)}
+.trabajos-reales{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;container-type:inline-size;--alto-foto:calc((100cqw - 72px) / 4 * 1.25)}
+.trabajo-real--ancho{grid-column:span 2}
+.trabajo-real{margin:0;min-width:0}.trabajo-real img{display:block;width:100%;aspect-ratio:4/5;height:var(--alto-foto,auto);object-fit:cover;background:var(--papel)}.trabajo-real--ancho img{aspect-ratio:auto}
+.trabajo-real figcaption>p{margin:14px 0 0}.trabajo-real figcaption b{font-size:17px}
 .trabajo-real blockquote{margin:22px 0 18px;font-size:20px;line-height:1.4}.trabajo-real figcaption>p{display:grid;gap:4px}.trabajo-real figcaption span{font-size:14px;color:var(--tenue)}
-@media(max-width:760px){.posada-paquetes,.trabajos-reales{grid-template-columns:1fr}.posada-banner{font-size:13px;gap:8px}.posada-paquete li{align-items:start}.posada-paquete li span{max-width:62%}.posada-paquete .btn{width:100%}}
+@media(max-width:760px){.posada-paquetes{grid-template-columns:1fr}.trabajos-reales{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;--alto-foto:calc((100cqw - 14px) / 2 * 1.25)}.posada-banner{font-size:13px;gap:8px}.posada-paquete li{align-items:start}.posada-paquete li span{max-width:62%}.posada-paquete .btn{width:100%}}
 @media(min-width:901px){.barra__nav{gap:18px;font-size:13px}}
 @media(hover:hover) and (pointer:fine){.posada-banner>a:hover{text-decoration:underline}}
 /* kits de posada con escalones de precio */
