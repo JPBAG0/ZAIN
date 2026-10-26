@@ -303,18 +303,6 @@ module.exports = {
       "tecnica": "Con cinta reflejante"
     },
     {
-      "id": "playera-dtf-blanca",
-      "estado": "aprobado",
-      "permisoPublicar": true,
-      "permisoEmpresa": false,
-      "permisoImagen": true,
-      "empresa": "",
-      "foto": "img/trabajos/playera-dtf-blanca.webp",
-      "frase": "",
-      "producto": "Playeras con diseño a color",
-      "tecnica": "DTF"
-    },
-    {
       "id": "playeras-logo",
       "estado": "PENDIENTE",
       "permisoPublicar": false,
