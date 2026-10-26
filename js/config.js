@@ -242,6 +242,19 @@
       "tecnica": "Bordado"
     },
     {
+      "id": "bolsas-serigrafia",
+      "estado": "aprobado",
+      "permisoPublicar": true,
+      "permisoEmpresa": false,
+      "permisoImagen": true,
+      "empresa": "",
+      "foto": "img/trabajos/bolsas-serigrafia.webp",
+      "frase": "",
+      "producto": "Bolsas ecológicas",
+      "tecnica": "Serigrafía",
+      "formato": "ancho"
+    },
+    {
       "id": "camisas-bordadas",
       "estado": "PENDIENTE",
       "permisoPublicar": false,
@@ -276,18 +289,6 @@
       "frase": "",
       "producto": "Playeras a todo color",
       "tecnica": "DTF"
-    },
-    {
-      "id": "bolsas-serigrafia",
-      "estado": "aprobado",
-      "permisoPublicar": true,
-      "permisoEmpresa": false,
-      "permisoImagen": true,
-      "empresa": "",
-      "foto": "img/trabajos/bolsas-serigrafia.webp",
-      "frase": "",
-      "producto": "Bolsas ecológicas",
-      "tecnica": "Serigrafía"
     }
   ],
   "preciosDesde": [
