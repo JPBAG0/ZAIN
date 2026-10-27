@@ -343,6 +343,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(seguimientoEnabled&&op==='cotizacion-seguimiento'&&request.method==='GET')return response(200,{seguimiento:await seguimiento.leer(validateID(url.searchParams.get('id')))});
       if(seguimientoEnabled&&op==='cotizacion-aceptar-equipo'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.aceptarEquipo(x,b,user));}
       if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
+      if(seguimientoEnabled&&op==='anticipo-aceptar'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.anticipo(x,b,user));}
       // Cotizaciones por modelo y talla (Gestión → Cotizaciones), independientes de un pedido.
       if(op.startsWith('cm-')){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');

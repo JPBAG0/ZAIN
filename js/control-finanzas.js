@@ -1,6 +1,6 @@
 import {pesos} from './cotizacion-core.js?v=17';
 import {esc} from './cotizacion-vista.js?v=12';
-import {montarCaja,cargarCaja,limpiarCaja} from './control-caja.js?v=4';
+import {montarCaja,cargarCaja,limpiarCaja} from './control-caja.js?v=5';
 // Finanzas: caja y libro de movimientos (control-caja.js) y tablero anual de ventas, costos y utilidad.
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN'},MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -40,7 +40,7 @@ function tablero(){
  <div><small>EN NEGOCIACIÓN · con IVA</small><strong>${esc(pesos(negociacion))}</strong><span>${negociacionN} solicitudes${sinImporte?' · '+sinImporte+' sin total definido':''} · ${modelos} cotizaciones por modelo sin cantidades</span><span>Fuera de ventas; precios por pieza sin sumar</span></div></div>
  <details class="cot-panel fin-cobranza"><summary>Por cobrar por pedido · ${saldos.length}</summary>${saldos.length?`<div class="cot-tablewrap"><table><thead><tr><th>Pedido</th><th>Vendido con IVA</th><th>Cobrado</th><th>Por cobrar</th></tr></thead><tbody>${saldos.map(p=>`<tr><th>${esc(p.folio)}</th><td data-label="Vendido con IVA">${esc(pesos(p.venta_total))}</td><td data-label="Cobrado">${esc(pesos(p.cobrado))}</td><td data-label="Por cobrar">${esc(pesos(p.saldo))}</td></tr>`).join('')}</tbody></table></div>`:'<p class="cot-ayuda">Sin saldos pendientes en el periodo.</p>'}</details>
  ${sinAnticipo?`<p class="cot-alerta">${sinAnticipo} pedidos en estado confirmado, producción o entregado sin anticipo demostrable: fuera de ventas. Revisa sus pagos y términos de anticipo.</p>`:''}
- <div class="fin-kpis"><div><small>Venta sin IVA · ${esc(periodo)}</small><strong>${esc(pesos(ventas))}</strong><span>${pedidosN} ${pedidosN===1?'pedido vendido':'pedidos vendidos'}${pedidosN?' · ticket '+esc(pesos(Math.round(ventas/pedidosN))):''}</span>${previo?delta(ventas,previo.ventas):''}</div>
+ <div class="fin-kpis"><div><small>Venta con IVA · ${esc(periodo)}</small><strong>${esc(pesos(ventas))}</strong><span>${pedidosN} ${pedidosN===1?'pedido vendido':'pedidos vendidos'}${pedidosN?' · ticket '+esc(pesos(Math.round(ventas/pedidosN))):''}</span>${previo?delta(ventas,previo.ventas):''}</div>
  <div><small>Costo de pedidos</small><strong>${esc(pesos(costo))}</strong><span>Material y gastos de cada pedido</span></div>
  <div><small>Gastos generales</small><strong>${esc(pesos(gastos))}</strong><span>${ingresos?'Ingresos extra '+esc(pesos(ingresos)):'Marketing, software, flete…'}</span></div>
  <div class="fin-kpi-neta ${utilNeta<0?'fin-negativa':''}"><small>Utilidad neta</small><strong>${esc(pesos(utilNeta))}</strong><span>Margen neto ${pct(utilNeta,ventas+ingresos)}</span>${previo?delta(utilNeta,neta(previo)):''}</div>

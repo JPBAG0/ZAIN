@@ -1,6 +1,6 @@
 import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './cotizacion-selecciones.js?v=2';
 import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=4';
-import './control-confirmacion.js?v=4';
+import './control-confirmacion.js?v=5';
 import {ordenarCostos} from './control-costos-vista.js?v=4';
 import {editorCotizacion,actualizarPartida,sincronizarAnticipo,montosAnticipo} from './cotizacion-editor.js?v=22';
 import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';

@@ -14,7 +14,7 @@ export function validarGeneral(b,fail){
  const entero=n=>Number.isSafeInteger(n)&&n>=0&&n<=MAX;
  if(!UUID.test(b?.request||'')||!CATEGORIAS[b.tipo])fail(400,'Elige si es gasto, ingreso o reembolso.');
  if(!CATEGORIAS[b.tipo].includes(b.categoria))fail(400,'Elige una categoría de la lista.');
- if(!['juan_pablo','garcia','zain'].includes(b.persona)||(b.tipo==='reembolso'&&b.persona==='zain'))fail(400,b.tipo==='reembolso'?'El reembolso es para quien adelantó dinero.':'Indica quién pagó o recibió el dinero.');
+ if(!['juan_pablo','garcia','zain','oficina_jp','oficina_garcia'].includes(b.persona)||(b.tipo==='reembolso'&&!['juan_pablo','garcia'].includes(b.persona)))fail(400,b.tipo==='reembolso'?'El reembolso es para quien adelantó dinero.':'Indica quién pagó o recibió el dinero.');
  if(typeof b.concepto!=='string'||!b.concepto.trim()||b.concepto.length>180)fail(400,'Escribe un concepto de hasta 180 caracteres.');
  if(!entero(b.importe)||b.importe<1)fail(400,'Revisa el importe.');
  const iva=b.iva_recuperable??0;if(!entero(iva)||iva>b.importe||(b.tipo!=='gasto'&&iva!==0))fail(400,'Revisa el impuesto recuperable.');

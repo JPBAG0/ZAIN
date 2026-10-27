@@ -1,14 +1,14 @@
 import {CATEGORIAS} from './finanzas-generales.mjs';
-// Caja ZAIN: saldos en vivo, transferencias entre socios y caja, reparto pagado y quién recibió cada cobro.
+// Caja ZAIN y oficinas: saldos en vivo, transferencias entre socios y cajas, reparto pagado y quién recibió cada cobro.
 // Solo equipo autorizado. Los saldos se calculan en la base (zain_caja_resumen) con los mismos movimientos.
 const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
-const MAX=100000000000,PERSONAS=['juan_pablo','garcia','zain'];
+const MAX=100000000000,CAJAS=['zain','oficina_jp','oficina_garcia'],PERSONAS=['juan_pablo','garcia',...CAJAS];
 const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_City'});
 const fechaValida=f=>typeof f==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(f)&&new Date(f+'T12:00Z').toISOString().slice(0,10)===f&&f>='2000-01-01'&&f<=hoy();
 export function validarCaja(b,fail){
  if(!UUID.test(b?.request||'')||!['transferencia','reparto'].includes(b.tipo))fail(400,'Elige transferencia o reparto.');
- if(!PERSONAS.includes(b.origen)||!PERSONAS.includes(b.destino)||b.origen===b.destino||![b.origen,b.destino].includes('zain'))fail(400,'Una transferencia va entre un socio y la Caja ZAIN.');
- if(b.tipo==='reparto'&&b.origen!=='zain')fail(400,'El reparto sale de la Caja ZAIN hacia un socio.');
+ if(!PERSONAS.includes(b.origen)||!PERSONAS.includes(b.destino)||b.origen===b.destino||!(CAJAS.includes(b.origen)||CAJAS.includes(b.destino)))fail(400,'Una transferencia va entre dos cajas, o entre un socio y una caja.');
+ if(b.tipo==='reparto'&&(b.origen!=='zain'||CAJAS.includes(b.destino)))fail(400,'El reparto sale de la Caja ZAIN hacia un socio.');
  if(!Number.isSafeInteger(b.importe)||b.importe<1||b.importe>MAX)fail(400,'Revisa el importe.');
  if(!fechaValida(b.fecha))fail(400,'Revisa la fecha (no puede ser futura).');
  const concepto=typeof b.concepto==='string'?b.concepto.replace(/[\x00-\x1f\x7f]/g,' ').trim():'';
@@ -27,6 +27,8 @@ export function validarLibro(b,fail){
  if(!fechaValida(v.fecha))fail(400,'Revisa la fecha (no puede ser futura).');
  if(v.pedido_id!=null&&!UUID.test(v.pedido_id))fail(400,'Elige el pedido de la lista.');
  if(v.comprobante!=null&&(!UUID.test(v.comprobante)||v.tipo!=='gasto'))fail(400,'Solo los gastos llevan comprobante.');
+ // Partida opcional de un gasto de pedido; la base valida que exista en la revisión publicada.
+ if('partida' in v&&v.partida!==null&&(v.tipo!=='gasto'||v.pedido_id==null||!Number.isSafeInteger(v.partida)||v.partida<0||v.partida>19))fail(400,'Elige una partida de la cotización.');
  const general=v.pedido_id==null&&['gasto','ingreso'].includes(v.tipo);
  if(general&&!CATEGORIAS[v.tipo].includes(v.categoria))fail(400,'Elige una categoría de la lista.');
  const concepto=typeof v.concepto==='string'?v.concepto.replace(/[\x00-\x1f\x7f]/g,' ').trim():'';

@@ -1,3 +1,12 @@
+## Preparado: todo con IVA, Oficina JP / Oficina García y anticipo aceptado — 26-oct-2026 (Claude)
+
+JP pidió (26-oct): dejar de mezclar con y sin IVA, que los gastos de material capturados en Finanzas cuadren por partida, dos cajas nuevas y poder aceptar un anticipo menor al pactado. Rama `claude/zain-iva-oficinas-anticipo`.
+- **IVA:** en `zain_finanzas_estado`, `venta` = total con IVA; utilidad y margen = venta con IVA − costos con IVA (menos el IVA recuperable que se capture). Columnas nuevas `venta_sin_iva`, `iva_cobrado`, `anticipo_aceptado`, `anticipo_pactado`; `zain_caja_resumen` da `iva_cobrado` de lo vendido. El cotizador NO cambió (margen sigue siendo costo con IVA contra precio sin IVA).
+- **Cajas:** personas `oficina_jp` y `oficina_garcia`, independientes de Caja ZAIN y de los socios (no generan deuda con socios). Pagan gastos, reciben cobros e ingresos y transfieren entre cajas o con socios. Reembolsos y reparto siguen saliendo de Caja ZAIN. Resumen versión 3 con `cajas`; `caja` sigue siendo Caja ZAIN.
+- **Anticipo aceptado:** `zain_pedido_cuentas.anticipo_aceptado/anticipo_revision`, RPC `zain_anticipo_aceptar` y op Edge `anticipo-aceptar`. El requerido es el menor entre el pactado y el aceptado de esa revisión (`zain_anticipo_requerido`), y lo usan registrar pago, libro, cambio manual de estado y seguimiento. En Cobro aparece «¿Te depositaron menos del anticipo?».
+- **Partida desde Finanzas:** el libro (`zain_libro_operar`) guarda la partida si viene la clave; sin la clave la conserva. Finanzas muestra el selector al elegir un gasto de pedido con partidas.
+- SQL `supabase/iva-oficinas-anticipo.sql` (parte de las funciones vigentes en producción el 26-oct). Pruebas: `tests/iva-oficinas-anticipo.test.mjs` (PGlite) y 321/321 de la suite. Recursos: pedidos v26, cotizaciones v47 (confirmación v5), gastos v7, finanzas v9 (caja v5), gastos-v2.css v3.
+
 ## Corrección de flujos — 22-oct-2026
 
 Esta actualización sustituye los estados históricos de «solo local» para la entrega del 22-oct. JP autorizó publicar y después corrigió el alcance: conservar el diseño de ZAIN, activar Passkeys y vincular su WhatsApp Business existente por QR como dispositivo adicional. No hay respuestas automáticas ni mensajes de prueba reales.

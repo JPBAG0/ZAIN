@@ -26,3 +26,5 @@
 #gastosPedido .gastos-comparativo tfoot th,#gastosPedido .gastos-comparativo tfoot td{font-weight:700;border-top:2px solid #cbd2df}
 #gastosPedido .gastos-dif{color:#637087}#gastosPedido .gastos-dif--mas{color:#b72c40}#gastosPedido .gastos-dif--menos{color:#267663}
 @media(max-width:600px){#gastosPedido .gastos-comparativo thead{display:none}#gastosPedido .gastos-comparativo tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;border-top:1px solid #e4e7ed;padding:8px 0}#gastosPedido .gastos-comparativo th,#gastosPedido .gastos-comparativo td{border:0;padding:2px 0;text-align:left}#gastosPedido .gastos-comparativo th:first-child{grid-column:1/-1}#gastosPedido .gastos-comparativo td:before{content:attr(data-label);display:block;font-size:11px;color:#637087;font-weight:500}}
+/* Todo con IVA (26-oct-2026): nota bajo la cifra (IVA incluido, material pagado contra cotizado). */
+#gastosPedido .gastos-cifras span{font-size:11.5px;line-height:1.35;color:#637087}
