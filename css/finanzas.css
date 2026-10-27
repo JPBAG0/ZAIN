@@ -107,6 +107,8 @@
 }
 /* Caja ZAIN (23-oct-2026): saldos tipo Tricount y libro único. */
 .fin-caja{margin-top:0}
+#finLibro{margin-top:16px}
+#finLibro .fin-libro-cab{margin-top:0}
 .fin-caja-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
 .fin-caja-cab h2{margin:0;font-size:18px}.fin-caja-cab p{margin:4px 0 0}
 .fin-caja-acciones{display:flex;gap:8px;flex-wrap:wrap}

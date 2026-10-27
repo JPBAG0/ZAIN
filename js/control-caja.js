@@ -13,7 +13,7 @@ const gastosPedido=new Map();
 
 export function montarCaja(){
  $('#finTablero').insertAdjacentHTML('beforebegin',`<section id="finCaja" class="cot-panel fin-caja" aria-labelledby="finCajaTitulo">
- <div class="fin-caja-cab"><div><h2 id="finCajaTitulo">Caja y cuentas</h2><p class="cot-ayuda">Saldos al momento. Todo se puede corregir, mover de pedido o borrar desde el libro.</p></div>
+ <div class="fin-caja-cab"><div><h2 id="finCajaTitulo">Caja y cuentas</h2><p class="cot-ayuda">Saldos al momento. Todo se puede corregir, mover de pedido o borrar desde el libro de movimientos, al final de la página.</p></div>
  <div class="fin-caja-acciones"><button type="button" class="btn btn--azul" data-nuevo="cobro">+ Registrar movimiento</button><button type="button" class="btn btn--linea" data-nuevo="reparto">Repartir utilidad</button></div></div>
  <p id="cajaEstado" class="control__estado" role="status"></p><div id="cajaSaldos"></div>
  <form id="cajaForm" class="fin-form fin-caja-form" hidden novalidate>
@@ -33,10 +33,12 @@ export function montarCaja(){
   <label class="fin-ancho" data-campo="comprobante">Comprobante (opcional)<input name="archivo" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"><small data-comprobante-actual>JPG, PNG, WEBP o PDF · hasta 4 MB</small></label>
   <p class="cot-ayuda fin-ancho" data-ayuda></p>
   <div class="fin-ancho fin-caja-botones"><button class="btn btn--azul" type="submit">Guardar</button><button type="button" class="btn-texto" data-cancelar>Cancelar</button><button type="button" class="btn-texto fin-borrar" data-borrar-form hidden>Borrar este movimiento</button></div>
-  <p id="cajaMensaje" class="fin-ancho" role="status"></p></form>
- <div class="fin-movscab fin-libro-cab"><h3>Libro de movimientos</h3><div class="bandeja-chips" id="cajaFiltro">${FILTROS.map(([v,t])=>`<button type="button" data-filtro="${v}">${t}</button>`).join('')}</div></div>
+  <p id="cajaMensaje" class="fin-ancho" role="status"></p></form></section>`);
+ // El libro va al final, después del tablero, para no tener que bajar más conforme crece.
+ $('#finTablero').insertAdjacentHTML('afterend',`<section id="finLibro" class="cot-panel fin-caja" aria-labelledby="finLibroTitulo">
+ <div class="fin-movscab fin-libro-cab"><h2 id="finLibroTitulo">Libro de movimientos</h2><div class="bandeja-chips" id="cajaFiltro">${FILTROS.map(([v,t])=>`<button type="button" data-filtro="${v}">${t}</button>`).join('')}</div></div>
  <ol id="cajaLibro" class="fin-libro"></ol></section>`);
- $('#finCaja').addEventListener('click',clic);
+ for(const id of ['#finCaja','#finLibro'])$(id).addEventListener('click',clic);
  $('#cajaForm').addEventListener('change',e=>{if(['tipo','pedido','persona'].includes(e.target.name))formulario(false,e.target.name);});
  $('#cajaForm').addEventListener('input',e=>{if(['importe','partida'].includes(e.target.name))e.target.dataset.tocado='1';});
  $('#cajaForm').addEventListener('submit',guardar);
