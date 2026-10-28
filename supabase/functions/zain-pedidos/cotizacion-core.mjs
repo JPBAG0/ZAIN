@@ -135,16 +135,17 @@ export function calcular(items,input){
   const grupos=gruposTalla(porTalla.detalle,aplicacion===null?null:aplicacion+otros,repartir,base.piezas,margenObjetivo);
   const sugerido=grupos.length?grupos[0].sugerido:costo===null?null:entero(Number((BigInt(costo)*10000n+divisor-1n)/divisor));
   const precio=v.precio===null?sugerido:entero(v.precio);
-  // Un precio escrito a mano es el del grupo base; los demás grupos conservan su diferencia.
-  let preciosTalla=precio===null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
+  // Sugerido: cada grupo de tallas con su diferencia de costo. Precio escrito a mano: el mismo para todas las tallas
+  // (JP, 27-oct-2026: «ya es mi problema poner el precio aunque sean tallas más grandes»). Los precios acordados por talla
+  // (cotización por modelo o revisión anterior) se conservan abajo.
+  let preciosTalla=precio===null||v.precio!==null?[]:grupos.map(g=>{const p=entero(precio+g.sugerido-sugerido);return {tallas:g.tallas,piezas:g.piezas,precio:p,importe:entero(p*g.piezas)};});
   let preciosDetalle=null;
   if(v.preciosAcordados&&v.precio!==null){
    if(typeof v.preciosAcordados!=='object'||Array.isArray(v.preciosAcordados)||Object.keys(v.preciosAcordados).length>50)error('Revisa los precios acordados por talla.');
    for(const n of Object.values(v.preciosAcordados))entero(n);const ancla=entero(v.precioAncla),diferencia=precio-ancla;
-   const costos=[...new Set(porTalla.detalle.map(d=>d.costo))].sort((a,b)=>a-b),agrupados=new Map();preciosDetalle=[];
+   const agrupados=new Map();preciosDetalle=[];
    for(const [talla,n] of Object.entries(p.tallasDetalle||{})){
-    const d=porTalla.detalle.find(d=>d.talla===talla),g=d?grupos[costos.indexOf(d.costo)]:null;
-    const actual=v.preciosAcordados[talla]!=null?entero(v.preciosAcordados[talla]+diferencia):g?entero(precio+g.sugerido-sugerido):precio;
+    const actual=v.preciosAcordados[talla]!=null?entero(v.preciosAcordados[talla]+diferencia):precio;
     const grupo=agrupados.get(actual)||{nombres:[],piezas:0,precio:actual,importe:0};grupo.nombres.push(talla);grupo.piezas+=n;grupo.importe=entero(grupo.importe+actual*n);agrupados.set(actual,grupo);preciosDetalle.push({talla,piezas:n,precio:actual});
    }
    if(agrupados.size)preciosTalla=[...agrupados.values()].sort((a,b)=>a.precio-b.precio).map(({nombres,...g})=>({tallas:nombres.join(' · '),...g}));

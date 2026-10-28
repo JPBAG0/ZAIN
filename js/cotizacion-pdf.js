@@ -1,5 +1,5 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
-import {pesos} from './cotizacion-core.js?v=17';
+import {pesos} from './cotizacion-core.js?v=20';
 import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=14';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));

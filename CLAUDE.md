@@ -18,6 +18,8 @@ JP pidió (27-oct) cuatro arreglos de Gestión y del personalizador. Rama `claud
   - con una cuenta elegida, cada renglón muestra lo que entra (+) o sale (−) de ella (`efectoEn` en `js/control-caja.js`; los reembolsos salen de la Caja ZAIN); en «Todas», el efecto en las cajas;
   - los repartos van aparte: «Todo sin repartos» y los totales de cada cuenta no los cuentan; el filtro «Repartos» los muestra solos;
   - casilla en cada movimiento y barra fija abajo con el total del filtro (entradas y salidas), los seleccionados y «Seleccionar todos».
+- **Precio escrito parejo en todas las tallas** (JP, 27-oct): el sugerido sigue variando por talla, pero un precio escrito a mano se cobra igual en todas (antes la EEG sumaba su diferencia de costo y un precio de $0 dejaba $272.16). Los precios acordados por talla (cotización por modelo o revisión anterior) se conservan. «Usar» regresa al sugerido por talla.
+- **Entregar con el anticipo cubierto:** `supabase/entregar-con-saldo.sql` (antes Entregado exigía el cobro completo y el botón no mostraba el motivo).
 - **Estado (27-oct):** SQL aplicado y Edge `zain-pedidos` desplegado con el sí de JP; falta el push de la web.
 - **Publicar:**
   1. `npx --yes supabase@2.121.0 db query --linked --project-ref upzecgfgdtllxdhshhkd --file supabase/editar-siempre-y-cierre-con-saldo.sql`;

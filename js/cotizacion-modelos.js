@@ -1,4 +1,4 @@
-import {pesos} from './cotizacion-core.js?v=17';
+import {pesos} from './cotizacion-core.js?v=20';
 // Cotización unitaria: nunca se inventa un pedido ni una cantidad para elegir costos.
 const max=100000000000;
 const entero=(n,limite=max)=>{if(!Number.isSafeInteger(n)||n<0||n>limite)throw Error('Revisa los importes y porcentajes.');return n;};

@@ -1,4 +1,4 @@
-import {pesos} from './cotizacion-core.js?v=17';
+import {pesos} from './cotizacion-core.js?v=20';
 import {esc} from './cotizacion-vista.js?v=14';
 import {referenciaLista} from './referencia-color.js?v=1';
 const val=n=>n==null?'':(n/100).toFixed(2);

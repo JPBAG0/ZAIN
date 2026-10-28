@@ -46,10 +46,12 @@ test('tallas con distinto costo se cobran por grupo dentro de la misma partida',
  assert.ok(q.margen>=3999);
  const out=paraCliente(q).partidas[0];assert.deepEqual(Object.keys(out.preciosTalla[0]).sort(),['importe','piezas','precio','tallas']);
 });
-test('un precio escrito a mano fija el grupo base y las tallas grandes conservan su diferencia',()=>{
+// 27-oct-2026 (JP): el sugerido varía por talla, pero un precio escrito a mano es el mismo para todas.
+test('el sugerido conserva la diferencia de tallas grandes; un precio escrito a mano es parejo',()=>{
  const x={...item,piezas:12,tallasDetalle:{M:11,EG:1},tallas:'M 11 · EG 1'},q=listo(x),v=entrada(q);
- const dif=q.partidas[0].preciosTalla[1].precio-q.partidas[0].precio;v.partidas[0].precio=20000;
- const p=calcular([x],v).partidas[0];assert.equal(p.preciosTalla[0].precio,20000);assert.equal(p.preciosTalla[1].precio,20000+dif);assert.equal(p.bruto,11*20000+20000+dif);
+ assert.ok(q.partidas[0].preciosTalla[1].precio>q.partidas[0].preciosTalla[0].precio,'el sugerido cobra más la talla grande');v.partidas[0].precio=20000;
+ const p=calcular([x],v).partidas[0];assert.deepEqual(p.preciosTalla,[]);assert.equal(p.bruto,12*20000);
+ v.partidas[0].precio=0;assert.equal(calcular([x],v).partidas[0].importe,0,'precio 0: toda la partida en 0');
 });
 test('si todas las tallas cuestan igual queda un solo precio',()=>{
  const x={...item,piezas:3,tallasDetalle:{CH:1,M:2},tallas:'CH 1 · M 2'};assert.deepEqual(listo(x).partidas[0].preciosTalla,[]);assert.ok(!('preciosTalla' in paraCliente(listo(x)).partidas[0]));

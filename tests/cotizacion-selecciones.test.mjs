@@ -95,9 +95,9 @@ sqlTest('API: confirmar en paralelo frena la escritura en curso',async()=>{
 });
 
 test('la vista recibe el precio del formulario sin volver a reinterpretar el borrador',()=>{const x=pedido(),q=inicialQ(x),v=entrada(q);v.partidas[0].precio=21000;assert.equal(calcularSeleccion(x,v).partidas[0].precioManual,21000);});
-test('redistribuir o quitar tallas conserva el precio acordado de cada grupo y permite corregirlo después',()=>{
- const x=pedido();x.items=[item({[talla]:6,[segunda]:6})];const c={...cfg,prendas:[{sku:p.sku,prenda:null,otros:0,bandas:[{tallas:[talla],colores:[],costo:10000},{tallas:[segunda],colores:[],costo:20000}]}]};const v=entrada(generar(x.items,c));v.impuesto=0;v.partidas[0].precio=20000;const q=calcular(x.items,v),precioMayor=q.partidas[0].preciosTalla[1].precio;
- const nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[segunda]:12})}],c);assert.equal(nueva.partidas[0].preciosTalla[0].precio,precioMayor);assert.equal(nueva.total,precioMayor*12);
+test('redistribuir o quitar tallas conserva el precio escrito (parejo) y permite corregirlo después',()=>{
+ const x=pedido();x.items=[item({[talla]:6,[segunda]:6})];const c={...cfg,prendas:[{sku:p.sku,prenda:null,otros:0,bandas:[{tallas:[talla],colores:[],costo:10000},{tallas:[segunda],colores:[],costo:20000}]}]};const v=entrada(generar(x.items,c));v.impuesto=0;v.partidas[0].precio=20000;const q=calcular(x.items,v),precioMayor=20000;
+ const nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[segunda]:12})}],c);assert.equal(nueva.total,precioMayor*12);
  const corregido=entrada(nueva);corregido.partidas[0].precio+=1000;assert.equal(calcular(itemsDe(x,nueva),corregido).total,(precioMayor+1000)*12);
 });
 test('editar tallas conserva logo, render y color con zona ajustada y colores sin código',()=>{

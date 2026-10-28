@@ -1,4 +1,4 @@
-import {pesos,decimal} from './cotizacion-core.js?v=17';
+import {pesos,decimal} from './cotizacion-core.js?v=20';
 import {esc} from './cotizacion-vista.js?v=14';
 let epoca=0;
 const valor=n=>(n/100).toFixed(2);
