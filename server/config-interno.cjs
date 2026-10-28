@@ -216,6 +216,14 @@ module.exports = {
     {
       "nombre": "Zürichtec Laboratorios",
       "logo": "img/clientes/zurichtec.webp"
+    },
+    {
+      "nombre": "Grupo Provase",
+      "logo": "img/clientes/provase.webp"
+    },
+    {
+      "nombre": "SEASA · Sistemas y Equipamientos Alteños",
+      "logo": "img/clientes/seasa.webp"
     }
   ],
   "clientesSatisfechos": [
