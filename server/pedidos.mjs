@@ -68,7 +68,9 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
       });
     }
     if(p.creadoGestion||p.catalogo2026){
-      const col=colors.find(c=>c.id===x.colorId&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
+      // Pedidos guardados antes del 28-oct-2026 no traen colorId: se acepta el nombre si es un color de este modelo.
+      const col=colors.find(c=>c&&(x.colorId==null||x.colorId===''||c.id===x.colorId)&&c.nombre===x.color);if(!col)fail(400,'Color de producto inválido.');
+      item.colorId=col.id;
       const zone=zonaDe(p,x.zona);
       if(!sinPersonalizar&&(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>maxLogo(zone)))fail(400,'Revisa ubicación y tamaño del logo.');
       if(p.tallas.length){

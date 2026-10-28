@@ -51,3 +51,14 @@ test('solapes de cantidad se rechazan; campos de rango se conservan en borrador 
  const q=quote(12);assert.equal(entrada(q).partidas[0].bandas[1].desdePiezas,12);assert.equal(calcular([order(12)],entrada(q)).total,q.total);
  assert.ok(!JSON.stringify(paraCliente(q)).includes('desdePiezas'));
 });
+
+test('modelos 2026: el pedido guarda colorId y una partida guardada sin colorId se acepta por el nombre del color',async()=>{
+  const {validateOrder}=await import('../server/pedidos.mjs');const C=(await import('../server/config-interno.cjs')).default;
+  const p=[...C.productos,...C.productosHistoricos].find(x=>x.sku==='ZN-PO-013'),col=C.colores.find(c=>c.id===p.colores[0]);
+  const base={p:p.id,color:col.nombre,tecnica:'Bordado',piezas:2,tallasDetalle:{M:2},zona:'Pecho izquierdo',cm:8,tieneLogo:false,tieneRender:false};
+  const body=x=>({id:'12345678-1234-4123-8123-123456789abc',token:'a'.repeat(64),items:[x],files:[]});
+  assert.equal(validateOrder(body({...base,colorId:col.id}),{allowHistoricos:true,snapshot:true}).items[0].colorId,col.id);
+  assert.equal(validateOrder(body(base),{allowHistoricos:true,snapshot:true}).items[0].colorId,col.id);
+  assert.throws(()=>validateOrder(body({...base,colorId:'zn-po-011-c01'}),{allowHistoricos:true,snapshot:true}),/Color de producto inválido/);
+  assert.throws(()=>validateOrder(body({...base,color:'Morado'}),{allowHistoricos:true,snapshot:true}),/Color de producto inválido/);
+});
