@@ -919,7 +919,7 @@
   };
   // Parte trasera (27-oct-2026, JP): botón «+» sobre la vista; los logos de la espalda son logos adicionales con lado «espalda».
   // Una prenda tiene espalda cuando su render existe en img/productos/zain/<sku>-espalda.webp y su SKU está en ESPALDAS.
-  const ESPALDAS = new Set(["ZN-PL-004", "ZN-PL-005", "ZN-PL-008", "ZN-PL-009", "ZN-PO-008", "ZN-PO-009", "ZN-PO-010", "ZN-PO-011", "ZN-CM-012", "ZN-CM-013", "ZN-CM-014", "ZN-CM-015", "ZN-SU-004", "ZN-CH-001", "ZN-CH-002", "ZN-CH-003", "ZN-CE-001", "ZN-CE-002"]);
+  const ESPALDAS = new Set(["ZN-PL-004", "ZN-PL-005", "ZN-PL-008", "ZN-PL-009", "ZN-PO-008", "ZN-PO-009", "ZN-PO-010", "ZN-PO-011", "ZN-PO-012", "ZN-PO-013", "ZN-CM-012", "ZN-CM-013", "ZN-CM-014", "ZN-CM-015", "ZN-SU-004", "ZN-CH-001", "ZN-CH-002", "ZN-CH-003", "ZN-CE-001", "ZN-CE-002"]);
   const fotoEspalda = (p) => (ESPALDAS.has(p.sku) ? `img/productos/zain/${p.sku.toLowerCase()}-espalda.webp` : null);
   const tieneEspalda = () => E.extras.some((x) => x.lado === "espalda") && !!fotoEspalda(pAct());
   function sincronizarVista() {

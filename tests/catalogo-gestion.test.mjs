@@ -63,7 +63,7 @@ test('fotos pertenecen al modelo y solo la imagen secundaria cambia',()=>{
 });
 test('sin modelos activos no deja portada ni categorías obsoletas',()=>{
  const changes=C.productos.map(p=>({producto_id:p.idPublico||p.id,cambios:{activo:false}}));
- const pub=projectPublic(PublicC,resolveInternal(C,changes),[],'https://project.supabase.co');assert.equal(pub.productos.length,0);assert.equal(pub.productosHistoricos.length,65);assert.equal(pub.muestrasPortada.length,0);assert.equal(pub.categoriasCatalogo.length,0);
+ const pub=projectPublic(PublicC,resolveInternal(C,changes),[],'https://project.supabase.co');assert.equal(pub.productos.length,0);assert.equal(pub.productosHistoricos.length,67);assert.equal(pub.muestrasPortada.length,0);assert.equal(pub.categoriasCatalogo.length,0);
 });
 test('lectura pública no necesita login; guardar y subir foto exigen equipo',async()=>{
  const s=setup();const pub=await s.request('catalogo-publico');assert.equal(pub.status,200);assert.equal((await pub.json()).catalogo.productos.length,39);
@@ -72,7 +72,7 @@ test('lectura pública no necesita login; guardar y subir foto exigen equipo',as
  assert.equal((await setup({member:false}).request('catalogo-lista',null,true)).status,403);
 });
 test('panel contiene ambos SKU y conflictos no sobrescriben cambios',async()=>{
- const s=setup();const list=(await(await s.request('catalogo-lista',null,true)).json()).productos;assert.equal(list.length,65);assert.ok(list.some(p=>p.skuProveedor==='C0200'&&p.proveedor==='Yazbek'));
+ const s=setup();const list=(await(await s.request('catalogo-lista',null,true)).json()).productos;assert.equal(list.length,67);assert.ok(list.some(p=>p.skuProveedor==='C0200'&&p.proveedor==='Yazbek'));
  assert.equal((await s.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{fotoRender:'x'}},true)).status,400);
  const c=setup({conflict:true});assert.equal((await c.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{activo:false}},true)).status,409);
  assert.equal((await s.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{activo:false}},true)).status,200);

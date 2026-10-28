@@ -1141,6 +1141,76 @@ export default {
       "hex": "#252527"
     },
     {
+      "id": "zn-po-012-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-012-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-012-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-012-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-012-c05",
+      "nombre": "Gris Oxford",
+      "hex": "#9ba5a6"
+    },
+    {
+      "id": "zn-po-012-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-012-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
+      "id": "zn-po-013-c01",
+      "nombre": "Blanco",
+      "hex": "#f6f6f4"
+    },
+    {
+      "id": "zn-po-013-c02",
+      "nombre": "Azul rey",
+      "hex": "#244d9c"
+    },
+    {
+      "id": "zn-po-013-c03",
+      "nombre": "Azul marino",
+      "hex": "#1f304e"
+    },
+    {
+      "id": "zn-po-013-c04",
+      "nombre": "Rojo",
+      "hex": "#b91f2e"
+    },
+    {
+      "id": "zn-po-013-c05",
+      "nombre": "Gris Oxford",
+      "hex": "#9ba5a6"
+    },
+    {
+      "id": "zn-po-013-c06",
+      "nombre": "Carbón",
+      "hex": "#4b4f51"
+    },
+    {
+      "id": "zn-po-013-c07",
+      "nombre": "Negro",
+      "hex": "#252527"
+    },
+    {
       "id": "zn-pl-008-c01",
       "nombre": "Blanco",
       "hex": "#f6f6f4"
@@ -5517,6 +5587,222 @@ export default {
         "largo": 1.27
       },
       "fotoModelo": "img/productos/zain/zn-po-011-modelo.webp"
+    },
+    {
+      "id": "zn-po-012",
+      "idPublico": "zn-po-012",
+      "sku": "ZN-PO-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo de piqué deportivo manga larga",
+      "nombreComercial": "Polo de piqué deportivo manga larga · Caballero",
+      "nombreFamilia": "Polo de piqué deportivo manga larga",
+      "nombreFamiliaComercial": "Polo de piqué deportivo manga larga",
+      "familia": "zain-2026-polo-deportivo-ml",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo de manga larga en piqué de poliéster, con corte recto y puño tejido.",
+      "especificaciones": "Cerrado de costados. Triple pespunte en bajos y hombros. Cuello y puños tejidos. Tapacostura a contraste. Presillas a contraste. 3 Botones al tono de la tela.",
+      "tejido": "Piqué",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-012-render.webp",
+      "colores": [
+        "zn-po-012-c01",
+        "zn-po-012-c02",
+        "zn-po-012-c03",
+        "zn-po-012-c04",
+        "zn-po-012-c05",
+        "zn-po-012-c06",
+        "zn-po-012-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.489,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 200,
+      "tablaTallas": {
+        "S": {
+          "ancho": 46.99,
+          "largo": 72.39
+        },
+        "M": {
+          "ancho": 52.07,
+          "largo": 74.93
+        },
+        "L": {
+          "ancho": 57.15,
+          "largo": 77.47
+        },
+        "XL": {
+          "ancho": 62.23,
+          "largo": 80.01
+        },
+        "2XL": {
+          "ancho": 67.31,
+          "largo": 82.55
+        },
+        "3XL": {
+          "ancho": 72.39,
+          "largo": 85.09
+        },
+        "4XL": {
+          "ancho": 77.47,
+          "largo": 87.63
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      }
+    },
+    {
+      "id": "zn-po-013",
+      "idPublico": "zn-po-013",
+      "sku": "ZN-PO-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Polo de piqué deportivo manga larga",
+      "nombreComercial": "Polo de piqué deportivo manga larga · Dama",
+      "nombreFamilia": "Polo de piqué deportivo manga larga",
+      "nombreFamiliaComercial": "Polo de piqué deportivo manga larga",
+      "familia": "zain-2026-polo-deportivo-ml",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo de manga larga en piqué de poliéster, con corte silueteado y puño tejido.",
+      "especificaciones": "Cerrado de costados. Triple pespunte en bajos y hombros. Cuello y puños tejidos. Tapacostura a contraste. Presillas a contraste. 4 Botones al tono de la tela.",
+      "tejido": "Piqué",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-013-render.webp",
+      "colores": [
+        "zn-po-013-c01",
+        "zn-po-013-c02",
+        "zn-po-013-c03",
+        "zn-po-013-c04",
+        "zn-po-013-c05",
+        "zn-po-013-c06",
+        "zn-po-013-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "tecnicasNota": "Técnicas documentadas: Bordado, Serigrafía. Área, ubicación y acabado se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.023,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "centro",
+          "nombre": "Centro del pecho",
+          "x": 500,
+          "y": 410,
+          "max": 22
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "gramaje": 200,
+      "tablaTallas": {
+        "S": {
+          "ancho": 44.45,
+          "largo": 60.96
+        },
+        "M": {
+          "ancho": 46.99,
+          "largo": 63.5
+        },
+        "L": {
+          "ancho": 49.53,
+          "largo": 66.04
+        },
+        "XL": {
+          "ancho": 52.07,
+          "largo": 68.58
+        },
+        "2XL": {
+          "ancho": 54.61,
+          "largo": 71.12
+        },
+        "3XL": {
+          "ancho": 57.15,
+          "largo": 73.66
+        },
+        "4XL": {
+          "ancho": 59.69,
+          "largo": 76.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.27,
+        "largo": 1.27
+      }
     },
     {
       "id": "zn-pl-008",
