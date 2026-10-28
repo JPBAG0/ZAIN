@@ -10,7 +10,7 @@ const body=x=>({id,token,items:[x],files:[]});
 const selection=(p,colorID=p.colores[0])=>({p:p.id,color:C.colores.find(c=>c.id===colorID).nombre,colorCodigo:C.colores.find(c=>c.id===colorID).codigo,tecnica:C.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{M:5},zona:p.zonas[0].nombre,cm:9,tieneLogo:false,tieneRender:false});
 const catalogo=[...C.productos,...(C.catalogoYazbekPendiente||[])];
 const model=code=>catalogo.find(p=>p.codigoFabricante===code);
-const expected={C0200:['CH','M','G','EG','EEG','EEEG'],D0200:['CH','M','G','EG','EEG'],C0300:['CH','M','G','EG','EEG','EEEG'],D0300:['CH','M','G','EG'],D0550:['CH','M','G','EG'],D1302:['CH','M','G','EG'],D1502:['CH','M','G','EG'],D1504:['CH','M','G','EG'],D0601:['CH','M','G','EG','EEG'],D0604:['CH','M','G','EG','EEG'],D0605:['CH','M','G','EG','EEG'],D0606:['CH','M','G','EG','EEG'],D0607:['CH','M','G','EG','EEG']};
+const expected={C0200:['S','M','L','XL','2XL','3XL'],D0200:['S','M','L','XL','2XL'],C0300:['S','M','L','XL','2XL','3XL'],D0300:['S','M','L','XL'],D0550:['S','M','L','XL'],D1302:['S','M','L','XL'],D1502:['S','M','L','XL'],D1504:['S','M','L','XL'],D0601:['S','M','L','XL','2XL'],D0604:['S','M','L','XL','2XL'],D0605:['S','M','L','XL','2XL'],D0606:['S','M','L','XL','2XL'],D0607:['S','M','L','XL','2XL']};
 
 test('originales activos junto con 14 familias / 25 referencias Yazbek sin personas',()=>{
   const current=catalogo.filter(p=>p.fabricante==='Yazbek');
@@ -43,7 +43,7 @@ test('no acepta colores de otra tela, código incompatible o DTF sin confirmar',
 
 test('rechaza tallas ajenas, sumas distintas y cantidades manipuladas',()=>{
   const x=selection(model('D0300'));
-  for(const counts of [{EEG:5},{M:4},{M:-5},{M:2.5},{M:'5'},[],{},JSON.parse('{"__proto__":5}')])assert.throws(()=>validateOrder(body({...x,tallasDetalle:counts})),/tallas/);
+  for(const counts of [{'2XL':5},{M:4},{M:-5},{M:2.5},{M:'5'},[],{},JSON.parse('{"__proto__":5}')])assert.throws(()=>validateOrder(body({...x,tallasDetalle:counts})),/tallas/);
   assert.throws(()=>validateOrder(body({...x,cm:201})),/tamaño/);
   assert.throws(()=>validateOrder(body({...x,zona:3})),/ubicación/);
 });
@@ -113,4 +113,11 @@ test('modelos ocultos y folios anteriores requieren secreto para reintento, sin 
  const h=createHandler({SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'test-secret',SUPABASE_PUBLISHABLE_KEY:'test-public',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_SITE_URL:'https://zain.test'},async()=>Response.json([]));
  const r=await h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test'},body:JSON.stringify(body(x))}));
  assert.equal(r.status,400);
+});
+
+test('carritos guardados antes de S-M-L-XL: CH, G y EG se convierten a S, L y XL',()=>{
+  const x=selection(model('D0300'));
+  const item=validateOrder(body({...x,piezas:6,tallasDetalle:{CH:1,G:2,EG:3}})).items[0];
+  assert.deepEqual(item.tallasDetalle,{S:1,L:2,XL:3});
+  assert.equal(item.tallas,'S 1 · L 2 · XL 3');
 });

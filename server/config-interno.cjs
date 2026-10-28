@@ -1730,11 +1730,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 10.4,
       "zonas": [
@@ -1789,11 +1789,11 @@ module.exports = {
         "serigrafia"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 10,
       "zonas": [
@@ -1843,11 +1843,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [
@@ -1892,11 +1892,11 @@ module.exports = {
         "dtf"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [
@@ -1943,11 +1943,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [
@@ -2648,14 +2648,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 70.5
         },
@@ -2663,15 +2663,15 @@ module.exports = {
           "ancho": 53.3,
           "largo": 73
         },
-        "G": {
+        "L": {
           "ancho": 58.4,
           "largo": 75.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 78.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 68.6,
           "largo": 80.6
         }
@@ -2753,13 +2753,13 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG"
+        "L",
+        "XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 43.2,
           "largo": 64.1
         },
@@ -2767,11 +2767,11 @@ module.exports = {
           "ancho": 47.6,
           "largo": 66.7
         },
-        "G": {
+        "L": {
           "ancho": 52.1,
           "largo": 69.2
         },
-        "EG": {
+        "XL": {
           "ancho": 56.5,
           "largo": 71.8
         }
@@ -2851,14 +2851,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 54.6,
           "largo": 76.2
         },
@@ -2866,15 +2866,15 @@ module.exports = {
           "ancho": 57.2,
           "largo": 78.7
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 82.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 85.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 87.6
         }
@@ -2946,14 +2946,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 63.5
         },
@@ -2961,15 +2961,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 64.8
         },
-        "G": {
+        "L": {
           "ancho": 53.3,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 67.3
         },
-        "EEG": {
+        "2XL": {
           "ancho": 58.4,
           "largo": 68.6
         }
@@ -3045,15 +3045,15 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG",
-        "EEEG"
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 45.7,
           "largo": 70.5
         },
@@ -3061,19 +3061,19 @@ module.exports = {
           "ancho": 50.8,
           "largo": 73
         },
-        "G": {
+        "L": {
           "ancho": 55.9,
           "largo": 75.6
         },
-        "EG": {
+        "XL": {
           "ancho": 61,
           "largo": 78.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 80.6
         },
-        "EEEG": {
+        "3XL": {
           "ancho": 71.1,
           "largo": 83.2
         }
@@ -3157,14 +3157,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 43.2,
           "largo": 63.5
         },
@@ -3172,15 +3172,15 @@ module.exports = {
           "ancho": 45.7,
           "largo": 66
         },
-        "G": {
+        "L": {
           "ancho": 50.8,
           "largo": 68.6
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 71.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 61,
           "largo": 73.7
         }
@@ -3266,15 +3266,15 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG",
-        "EEEG"
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 45.7,
           "largo": 70.5
         },
@@ -3282,19 +3282,19 @@ module.exports = {
           "ancho": 50.8,
           "largo": 73
         },
-        "G": {
+        "L": {
           "ancho": 55.9,
           "largo": 75.6
         },
-        "EG": {
+        "XL": {
           "ancho": 61,
           "largo": 78.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 80.6
         },
-        "EEEG": {
+        "3XL": {
           "ancho": 71.1,
           "largo": 83.2
         }
@@ -3379,13 +3379,13 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG"
+        "L",
+        "XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 41.3,
           "largo": 59.7
         },
@@ -3393,11 +3393,11 @@ module.exports = {
           "ancho": 43.8,
           "largo": 62.2
         },
-        "G": {
+        "L": {
           "ancho": 48.9,
           "largo": 64.8
         },
-        "EG": {
+        "XL": {
           "ancho": 54,
           "largo": 67.3
         }
@@ -3478,14 +3478,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 54.6,
           "largo": 76.2
         },
@@ -3493,15 +3493,15 @@ module.exports = {
           "ancho": 57.2,
           "largo": 78.7
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 82.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 85.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 87.6
         }
@@ -3574,14 +3574,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 63.5
         },
@@ -3589,15 +3589,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 64.8
         },
-        "G": {
+        "L": {
           "ancho": 53.3,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 67.3
         },
-        "EEG": {
+        "2XL": {
           "ancho": 58.4,
           "largo": 68.6
         }
@@ -3672,14 +3672,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 54.6,
           "largo": 76.2
         },
@@ -3687,15 +3687,15 @@ module.exports = {
           "ancho": 57.2,
           "largo": 78.7
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 82.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 85.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 87.6
         }
@@ -3770,14 +3770,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 63.5
         },
@@ -3785,15 +3785,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 64.8
         },
-        "G": {
+        "L": {
           "ancho": 53.3,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 67.3
         },
-        "EEG": {
+        "2XL": {
           "ancho": 58.4,
           "largo": 68.6
         }
@@ -3862,14 +3862,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 54.6,
           "largo": 76.2
         },
@@ -3877,15 +3877,15 @@ module.exports = {
           "ancho": 57.2,
           "largo": 78.7
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 82.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 85.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 87.6
         }
@@ -3954,14 +3954,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 63.5
         },
@@ -3969,15 +3969,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 64.8
         },
-        "G": {
+        "L": {
           "ancho": 53.3,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 67.3
         },
-        "EEG": {
+        "2XL": {
           "ancho": 58.4,
           "largo": 68.6
         }
@@ -4050,14 +4050,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 70.5
         },
@@ -4065,15 +4065,15 @@ module.exports = {
           "ancho": 53.3,
           "largo": 73
         },
-        "G": {
+        "L": {
           "ancho": 58.4,
           "largo": 75.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 78.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 68.6,
           "largo": 80.6
         }
@@ -4154,13 +4154,13 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG"
+        "L",
+        "XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 43.2,
           "largo": 64.1
         },
@@ -4168,11 +4168,11 @@ module.exports = {
           "ancho": 47.6,
           "largo": 66.7
         },
-        "G": {
+        "L": {
           "ancho": 52.1,
           "largo": 69.2
         },
-        "EG": {
+        "XL": {
           "ancho": 56.5,
           "largo": 71.8
         }
@@ -4253,14 +4253,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 45.7,
           "largo": 68.6
         },
@@ -4268,15 +4268,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 71.1
         },
-        "G": {
+        "L": {
           "ancho": 55.9,
           "largo": 73.7
         },
-        "EG": {
+        "XL": {
           "ancho": 61,
           "largo": 76.2
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 78.7
         }
@@ -4357,13 +4357,13 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG"
+        "L",
+        "XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 42.5,
           "largo": 61
         },
@@ -4371,11 +4371,11 @@ module.exports = {
           "ancho": 46.4,
           "largo": 63.5
         },
-        "G": {
+        "L": {
           "ancho": 50.2,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 54,
           "largo": 68.6
         }
@@ -4455,14 +4455,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 49.5,
           "largo": 68.6
         },
@@ -4470,15 +4470,15 @@ module.exports = {
           "ancho": 54.6,
           "largo": 71.1
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 73.7
         },
-        "EG": {
+        "XL": {
           "ancho": 64.8,
           "largo": 76.2
         },
-        "EEG": {
+        "2XL": {
           "ancho": 69.9,
           "largo": 78.7
         }
@@ -4546,14 +4546,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 54.6,
           "largo": 76.2
         },
@@ -4561,15 +4561,15 @@ module.exports = {
           "ancho": 57.2,
           "largo": 78.7
         },
-        "G": {
+        "L": {
           "ancho": 59.7,
           "largo": 82.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 85.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 66,
           "largo": 87.6
         }
@@ -4637,14 +4637,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 63.5
         },
@@ -4652,15 +4652,15 @@ module.exports = {
           "ancho": 50.8,
           "largo": 64.8
         },
-        "G": {
+        "L": {
           "ancho": 53.3,
           "largo": 66
         },
-        "EG": {
+        "XL": {
           "ancho": 55.9,
           "largo": 67.3
         },
-        "EEG": {
+        "2XL": {
           "ancho": 58.4,
           "largo": 68.6
         }
@@ -4733,14 +4733,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 50.8,
           "largo": 68.6
         },
@@ -4748,15 +4748,15 @@ module.exports = {
           "ancho": 55.9,
           "largo": 71.1
         },
-        "G": {
+        "L": {
           "ancho": 61,
           "largo": 73.7
         },
-        "EG": {
+        "XL": {
           "ancho": 66,
           "largo": 76.2
         },
-        "EEG": {
+        "2XL": {
           "ancho": 71.1,
           "largo": 78.7
         }
@@ -4835,14 +4835,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 50.8,
           "largo": 71.8
         },
@@ -4850,15 +4850,15 @@ module.exports = {
           "ancho": 55.9,
           "largo": 74.3
         },
-        "G": {
+        "L": {
           "ancho": 61,
           "largo": 76.8
         },
-        "EG": {
+        "XL": {
           "ancho": 66,
           "largo": 79.4
         },
-        "EEG": {
+        "2XL": {
           "ancho": 71.1,
           "largo": 82
         }
@@ -4928,14 +4928,14 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG",
-        "EEG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 48.3,
           "largo": 70.5
         },
@@ -4943,15 +4943,15 @@ module.exports = {
           "ancho": 53.3,
           "largo": 73
         },
-        "G": {
+        "L": {
           "ancho": 58.4,
           "largo": 75.6
         },
-        "EG": {
+        "XL": {
           "ancho": 63.5,
           "largo": 78.1
         },
-        "EEG": {
+        "2XL": {
           "ancho": 68.6,
           "largo": 80.6
         }
@@ -5029,13 +5029,13 @@ module.exports = {
       ],
       "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "EG"
+        "L",
+        "XL"
       ],
       "tablaTallas": {
-        "CH": {
+        "S": {
           "ancho": 43.2,
           "largo": 64.1
         },
@@ -5043,11 +5043,11 @@ module.exports = {
           "ancho": 47.6,
           "largo": 66.7
         },
-        "G": {
+        "L": {
           "ancho": 52.1,
           "largo": 69.2
         },
-        "EG": {
+        "XL": {
           "ancho": 56.5,
           "largo": 71.8
         }
@@ -7062,11 +7062,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 10.4,
       "zonas": [
@@ -7121,11 +7121,11 @@ module.exports = {
         "serigrafia"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 10,
       "zonas": [
@@ -7175,11 +7175,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [
@@ -7224,11 +7224,11 @@ module.exports = {
         "dtf"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [
@@ -7275,11 +7275,11 @@ module.exports = {
         "bordado"
       ],
       "tallas": [
-        "CH",
+        "S",
         "M",
-        "G",
-        "XG",
-        "2XG"
+        "L",
+        "XL",
+        "2XL"
       ],
       "pxPorCm": 7.7,
       "zonas": [

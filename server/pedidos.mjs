@@ -1,4 +1,4 @@
-import {validarSelecciones} from './cotizacion-selecciones.mjs';
+import {validarSelecciones,tallasActuales} from './cotizacion-selecciones.mjs';
 import {createWhatsApp} from './whatsapp.mjs';
 import {createGastos} from './gastos.mjs';
 import {createGenerales} from './finanzas-generales.mjs';
@@ -53,7 +53,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
     if(p.fabricante) {
       const col=colors.find(c=>(c?.codigo===x.colorCodigo || c?.idPublico===x.colorId) && c.nombre===x.color);
       if(!col)fail(400,'Código de color inválido para este modelo.');
-      const counts=x.tallasDetalle;
+      const counts=tallasActuales(x.tallasDetalle,p.tallas);
       if(!counts || typeof counts!=='object' || Array.isArray(counts) || !Object.keys(counts).length || Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1||v>9999) || Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma para la silueta elegida.');
       const zone=zonaDe(p,typeof x.zona==='string'?x.zona:'');
       if(!sinPersonalizar&&(!zone || !Number.isFinite(x.cm) || x.cm<0 || x.cm>maxLogo(zone)))fail(400,'Revisa la ubicación y el tamaño solicitado del logo.');
@@ -72,7 +72,7 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
       const zone=zonaDe(p,x.zona);
       if(!sinPersonalizar&&(!zone||!Number.isFinite(x.cm)||x.cm<0||x.cm>maxLogo(zone)))fail(400,'Revisa ubicación y tamaño del logo.');
       if(p.tallas.length){
-        const counts=x.tallasDetalle;
+        const counts=tallasActuales(x.tallasDetalle,p.tallas);
         if(!counts||typeof counts!=='object'||Array.isArray(counts)||Object.entries(counts).some(([t,v])=>!p.tallas.includes(t)||!Number.isSafeInteger(v)||v<1)||Object.values(counts).reduce((a,v)=>a+v,0)!==n)fail(400,'Revisa las tallas y su suma.');
         item.tallasDetalle=Object.fromEntries(p.tallas.filter(t=>counts[t]).map(t=>[t,counts[t]]));item.tallas=p.tallas.filter(t=>counts[t]).map(t=>t+' '+counts[t]).join(' · ');
       }

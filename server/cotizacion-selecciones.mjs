@@ -1,12 +1,20 @@
 // Las referencias de archivo proceden del pedido, nunca de rutas enviadas por el navegador.
 import {mismaVista} from '../js/cotizacion-selecciones.js';
+// 28-oct-2026: tallas unificadas a S-M-L-XL. Carritos o pedidos guardados antes pueden traer CH, G, EG, XG…
+const TALLA_ACTUAL={CH:'S',G:'L',EG:'XL',EEG:'2XL',EEEG:'3XL',XG:'XL','2XG':'2XL'};
+export function tallasActuales(cantidades,tallas){
+ if(!cantidades||typeof cantidades!=='object'||Array.isArray(cantidades))return cantidades;
+ const out={};
+ for(const [t,n] of Object.entries(cantidades)){const k=tallas?.includes(t)||!TALLA_ACTUAL[t]?t:TALLA_ACTUAL[t];out[k]=k in out&&Number.isSafeInteger(out[k])&&Number.isSafeInteger(n)?out[k]+n:n;}
+ return out;
+}
 export function validarSelecciones(lista,pedido,catalogo,validarPedido,fail){
  if(!Array.isArray(lista)||!lista.length||lista.length>20)fail(400,'La cotización admite de 1 a 20 partidas.');
  const archivos=[],items=lista.map((s,i)=>{
   if(!s||typeof s!=='object'||!s.item||typeof s.item!=='object'||s.origen!==null&&(!Number.isInteger(s.origen)||!pedido.items[s.origen]))fail(400,'Referencia de partida inválida.');
   const fuente=s.origen===null?null:pedido.items[s.origen],p=[...catalogo.productos,...catalogo.productosHistoricos||[]].find(p=>p.id===s.item.p||p.idPublico===s.item.p);
   if(!p||p.activo===false&&(!fuente||fuente.p!==p.id))fail(400,'Elige un modelo activo para la partida nueva.');
-  if(p.tallas?.length){const cantidades=s.item.tallasDetalle;if(!cantidades||typeof cantidades!=='object'||Array.isArray(cantidades)||!Object.keys(cantidades).length||Object.entries(cantidades).some(([t,n])=>!p.tallas.includes(t)||!Number.isSafeInteger(n)||n<1||n>9999)||Object.values(cantidades).reduce((a,n)=>a+n,0)!==s.item.piezas)fail(400,'Revisa las tallas y su suma para el modelo.');}
+  if(p.tallas?.length){const cantidades=s.item.tallasDetalle=tallasActuales(s.item.tallasDetalle,p.tallas);if(!cantidades||typeof cantidades!=='object'||Array.isArray(cantidades)||!Object.keys(cantidades).length||Object.entries(cantidades).some(([t,n])=>!p.tallas.includes(t)||!Number.isSafeInteger(n)||n<1||n>9999)||Object.values(cantidades).reduce((a,n)=>a+n,0)!==s.item.piezas)fail(400,'Revisa las tallas y su suma para el modelo.');}
   const original=(pedido.archivos||[]).filter(f=>f.item===s.origen),simple=s.item.tecnica==='Solo prenda',igual=mismaVista(fuente,s.item);
   const keepLogo=!simple&&!!fuente?.tieneLogo&&original.some(f=>f.kind==='logo'),keepRender=igual&&!!fuente?.tieneRender&&original.some(f=>f.kind==='render');
   const item={...s.item,color:String(s.item.color||'').replace(/ · \d+$/,''),tieneLogo:keepLogo,tieneRender:keepRender};
