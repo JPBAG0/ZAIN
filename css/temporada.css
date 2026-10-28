@@ -48,6 +48,6 @@
 /* Logos de empresas clientes (28-oct-2026): en gris, a color al pasar el cursor. */
 .logos-clientes__lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px 32px;align-items:center}
 .logos-clientes__lista li{display:flex;align-items:center;justify-content:center;height:72px}
-.logos-clientes__lista img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.logos-clientes__lista img{max-width:min(100%,220px);max-height:100%;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
 @media (hover:hover){.logos-clientes__lista li:hover img{filter:none;opacity:1}}
-@media (max-width:600px){.logos-clientes__lista{grid-template-columns:repeat(2,1fr);gap:20px}.logos-clientes__lista li{height:56px}}
+@media (max-width:600px){.logos-clientes__lista{grid-template-columns:repeat(2,1fr);gap:20px}.logos-clientes__lista li{height:56px}.logos-clientes__lista img{max-width:min(100%,140px)}}

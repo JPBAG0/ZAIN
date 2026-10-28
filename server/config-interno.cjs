@@ -204,7 +204,20 @@ module.exports = {
     ]
   },
   "mostrarTrabajos": false,
-  "empresasClientes": [],
+  "empresasClientes": [
+    {
+      "nombre": "DREA",
+      "logo": "img/clientes/drea.webp"
+    },
+    {
+      "nombre": "Microvet",
+      "logo": "img/clientes/microvet.webp"
+    },
+    {
+      "nombre": "Zürichtec Laboratorios",
+      "logo": "img/clientes/zurichtec.webp"
+    }
+  ],
   "clientesSatisfechos": [
     {
       "id": "gorras-bordadas",
