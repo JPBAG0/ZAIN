@@ -13,6 +13,11 @@ JP pidió (27-oct) cuatro arreglos de Gestión y del personalizador. Rama `claud
 - **Pendiente con JP:**
   - renders de espalda: Codex los genera; la vista trasera en el personalizador espera esas imágenes;
   - playeras nuevas para el catálogo: modelos y costos del proveedor.
+- **Libro de Finanzas por cuenta** (pedido el mismo día, solo pantalla):
+  - tarjetas Todas / Juan Pablo / García / Caja ZAIN / Oficina JP / Oficina García;
+  - con una cuenta elegida, cada renglón muestra lo que entra (+) o sale (−) de ella (`efectoEn` en `js/control-caja.js`; los reembolsos salen de la Caja ZAIN); en «Todas», el efecto en las cajas;
+  - casilla en cada movimiento y barra fija abajo con el total del filtro (entradas y salidas), los seleccionados y «Seleccionar todos».
+- **Estado (27-oct):** SQL aplicado y Edge `zain-pedidos` desplegado con el sí de JP; falta el push de la web.
 - **Publicar:**
   1. `npx --yes supabase@2.121.0 db query --linked --project-ref upzecgfgdtllxdhshhkd --file supabase/editar-siempre-y-cierre-con-saldo.sql`;
   2. `node server/preparar-edge.mjs` (ya generado);

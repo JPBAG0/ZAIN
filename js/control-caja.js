@@ -7,7 +7,9 @@ const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN',oficin
 const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_City'});
 const FILTROS=[['','Todo'],['cobro','Cobros'],['gasto','Gastos'],['caja','Caja y reparto']];
 const TIPOS=[['cobro','Cobro de pedido'],['gasto','Gasto'],['ingreso','Ingreso'],['reembolso','Reembolso'],['transferencia','Transferencia'],['reparto','Reparto']];
-let avisoHasta=0,datos=null,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
+let avisoHasta=0,datos=null,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
+// Casillas del libro para sumar varios movimientos (27-oct-2026, JP).
+const marcados=new Set();
 // Finanzas de cada pedido (partidas cotizadas y partida de cada gasto) para elegir la partida al registrar un gasto.
 const gastosPedido=new Map();
 
@@ -37,8 +39,11 @@ export function montarCaja(){
  // El libro va al final, después del tablero, para no tener que bajar más conforme crece.
  $('#finTablero').insertAdjacentHTML('afterend',`<section id="finLibro" class="cot-panel fin-caja" aria-labelledby="finLibroTitulo">
  <div class="fin-movscab fin-libro-cab"><h2 id="finLibroTitulo">Libro de movimientos</h2><div class="bandeja-chips" id="cajaFiltro">${FILTROS.map(([v,t])=>`<button type="button" data-filtro="${v}">${t}</button>`).join('')}</div></div>
- <ol id="cajaLibro" class="fin-libro"></ol></section>`);
+ <div class="fin-cuentas" id="cajaCuentas" role="group" aria-label="Movimientos de una cuenta"></div>
+ <ol id="cajaLibro" class="fin-libro"></ol>
+ <div id="cajaTotales" class="fin-libro-totales" role="status"></div></section>`);
  for(const id of ['#finCaja','#finLibro'])$(id).addEventListener('click',clic);
+ $('#finLibro').addEventListener('change',e=>{if(e.target.matches('[data-marcar-todos]')){for(const m of filtrados())e.target.checked?marcados.add(m.id):marcados.delete(m.id);libro();return;}const c=e.target.closest('[data-marcar]');if(!c)return;c.checked?marcados.add(c.dataset.marcar):marcados.delete(c.dataset.marcar);c.closest('li')?.classList.toggle('fin-libro-fila--marcada',c.checked);totales();});
  $('#cajaForm').addEventListener('change',e=>{if(['tipo','pedido','persona'].includes(e.target.name))formulario(false,e.target.name);});
  $('#cajaForm').addEventListener('input',e=>{if(['importe','partida'].includes(e.target.name))e.target.dataset.tocado='1';});
  $('#cajaForm').addEventListener('submit',guardar);
@@ -48,7 +53,7 @@ export async function cargarCaja(){
  try{const r=await api('caja');if(turn!==epoca)return;datos=r.caja;categorias=r.categorias||categorias;pintar();if(Date.now()>=avisoHasta)$('#cajaEstado').textContent='';}
  catch(e){if(turn!==epoca)return;$('#cajaEstado').textContent=/no encontrada|404|zain_caja/i.test(e.message)?'Falta aplicar la actualización de la caja en el servidor.':e.message;}
 }
-export function limpiarCaja(){epoca++;datos=null;editando=null;gastosPedido.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
+export function limpiarCaja(){epoca++;datos=null;editando=null;gastosPedido.clear();marcados.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
 const firmado=n=>(n>0?'+':n<0?'−':'')+pesos(Math.abs(n));
 function socio(k){
  const v=Number(datos.socios[k]);
@@ -65,18 +70,40 @@ function pintar(){
  libro();
 }
 const tipoDe=m=>m.origen==='pago'?'cobro':m.origen==='caja'?'caja':m.tipo==='ingreso'?'cobro':'gasto';
+// Dinero que entra (+) o sale (−) de una cuenta con cada movimiento. Los reembolsos salen de la Caja ZAIN.
+function efectoEn(m,k){
+ const n=Number(m.importe);
+ if(m.origen==='pago')return m.persona===k?n:0;
+ if(m.origen==='caja')return (m.destino===k?n:0)-(m.origen_persona===k?n:0);
+ if(m.tipo==='reembolso')return m.persona===k?n:k==='zain'?-n:0;
+ if(m.tipo==='ingreso')return m.persona===k?n:0;
+ return m.persona===k?-n:0;
+}
+// Lo que muestra cada renglón: con una cuenta elegida, su entrada o salida; en «Todas», el efecto en las cajas.
+const montoDe=m=>cuenta?efectoEn(m,cuenta):Number(m.efecto_caja)||0;
+const filtrados=()=>datos.libro.filter(m=>(!filtro||tipoDe(m)===filtro||(filtro==='gasto'&&m.tipo==='reembolso'))&&(!cuenta||efectoEn(m,cuenta)!==0));
+function totales(){
+ const lista=filtrados(),suma=l=>l.reduce((a,m)=>a+montoDe(m),0),entra=lista.reduce((a,m)=>a+Math.max(0,montoDe(m)),0),sale=lista.reduce((a,m)=>a+Math.min(0,montoDe(m)),0);
+ const sel=lista.filter(m=>marcados.has(m.id)),todos=lista.length>0&&sel.length===lista.length;
+ $('#cajaTotales').innerHTML=lista.length?`<label class="fin-libro-todos"><input type="checkbox" data-marcar-todos${todos?' checked':''}> Seleccionar todos</label>`+
+  `<div><small>${cuenta?'Total · '+esc(personas[cuenta]):'Total en cajas (ZAIN y oficinas)'} · ${lista.length} ${lista.length===1?'movimiento':'movimientos'}</small><strong class="num">${esc(firmado(suma(lista)))}</strong><span>Entradas ${esc(pesos(entra))} · Salidas ${esc(pesos(-sale))}</span></div>`+
+  `<div class="${sel.length?'':'fin-libro-sinsel'}"><small>Seleccionados · ${sel.length}</small><strong class="num">${esc(firmado(suma(sel)))}</strong>${sel.length?'<button type="button" class="btn-texto" data-quitar-marcas>Quitar selección</button>':'<span>Marca la casilla de cada movimiento</span>'}</div>`:'';
+}
 const claseDe=m=>m.origen==='pago'?'cobro':m.tipo;
 function libro(){
  for(const b of $('#cajaFiltro').children){const on=b.dataset.filtro===filtro;b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on));}
- const lista=datos.libro.filter(m=>!filtro||tipoDe(m)===filtro||(filtro==='gasto'&&m.tipo==='reembolso')),parte=lista.slice(0,visibles);
+ $('#cajaCuentas').innerHTML=[['','Todas'],...Object.entries(personas)].map(([k,t])=>{const n=k?datos.libro.filter(m=>efectoEn(m,k)!==0).length:datos.libro.length;return `<button type="button" class="fin-cuenta${k===cuenta?' on':''}" data-cuenta="${k}" aria-pressed="${k===cuenta}"><b>${esc(t)}</b><span>${n} ${n===1?'movimiento':'movimientos'}</span></button>`;}).join('');
+ const lista=filtrados(),parte=lista.slice(0,visibles);
  $('#cajaLibro').innerHTML=parte.length?parte.map(fila).join('')+(lista.length>visibles?`<li class="fin-libro-mas"><button type="button" class="btn btn--linea" data-mas>Ver más (${lista.length-visibles})</button></li>`:''):'<li class="cot-ayuda">Sin movimientos con este filtro.</li>';
+ totales();
 }
 function fila(m){
  const ec=Number(m.efecto_caja),es=Number(m.efecto_socio),quien=personas[m.persona]||'';
  const titulo=m.origen==='pago'?'Cobro':m.origen==='caja'?(m.tipo==='reparto'?'Reparto a '+personas[m.destino]:(personas[m.origen_persona]||'')+' → '+(personas[m.destino]||'')):m.tipo==='reembolso'?'Reembolso a '+quien:m.tipo==='ingreso'?'Ingreso':'Gasto';
  const detalle=[m.folio?esc(m.folio)+(m.en_papelera?' (papelera)':''):m.origen==='general'?'General':'',m.origen==='pago'?'Recibió '+quien:m.origen==='pedido'||m.origen==='general'?(m.tipo==='gasto'?'Pagó ':m.tipo==='ingreso'?'Recibió ':'')+(m.tipo==='reembolso'?'':quien):'',m.origen!=='caja'&&!ec&&es?(es>0?'ZAIN le debe a '+quien+' '+pesos(es):quien+' tiene '+pesos(-es)+' del negocio'):''].filter(Boolean).join(' · ');
  const acciones=porBorrar===m.id?`<span class="fin-confirmar">¿Borrar? <button type="button" class="btn-texto fin-borrar" data-borrar-si="${esc(m.id)}">Sí, borrar</button><button type="button" class="btn-texto" data-borrar-no>No</button></span>`:`${m.comprobante?`<button type="button" class="btn-texto" data-ver-comprobante="${esc(m.id)}">Ver comprobante</button>`:''}<button type="button" class="btn-texto" data-editar="${esc(m.id)}">Editar</button><button type="button" class="btn-texto fin-borrar" data-borrar="${esc(m.id)}">Borrar</button>`;
- return `<li class="fin-libro-fila${editando?.id===m.id?' fin-libro-fila--editando':''}"><span class="fin-libro-fecha">${esc(fechaCorta(m.fecha))}</span><div><b>${esc(titulo)}</b><p>${esc(m.concepto)}</p>${detalle?`<p class="fin-libro-meta">${detalle}</p>`:''}<div class="gastos-acciones">${acciones}</div></div><strong class="${ec>0?'fin-ingreso':ec<0?'fin-egreso':'fin-neutro'}" title="Efecto en la Caja ZAIN">${ec?esc(firmado(ec)):esc(pesos(Number(m.importe)))}</strong></li>`;
+ const marca=marcados.has(m.id),monto=montoDe(m);
+ return `<li class="fin-libro-fila${editando?.id===m.id?' fin-libro-fila--editando':''}${marca?' fin-libro-fila--marcada':''}"><input type="checkbox" class="fin-libro-marca" data-marcar="${esc(m.id)}"${marca?' checked':''} aria-label="Seleccionar ${esc(titulo)} del ${esc(fechaCorta(m.fecha))}"><span class="fin-libro-fecha">${esc(fechaCorta(m.fecha))}</span><div><b>${esc(titulo)}</b><p>${esc(m.concepto)}</p>${detalle?`<p class="fin-libro-meta">${detalle}</p>`:''}<div class="gastos-acciones">${acciones}</div></div><strong class="${monto>0?'fin-ingreso':monto<0?'fin-egreso':'fin-neutro'}" title="${cuenta?'Entrada o salida de '+esc(personas[cuenta]):'Efecto en las cajas'}">${monto?esc(firmado(monto)):esc(pesos(Number(m.importe)))}</strong></li>`;
 }
 const fechaCorta=f=>new Date(f+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short'});
 const opciones=(lista,v)=>lista.map(([k,t])=>`<option value="${esc(k)}"${k===v?' selected':''}>${esc(t)}</option>`).join('');
@@ -188,5 +215,7 @@ function clic(e){
  if(b.dataset.borrarSi){const m=datos.libro.find(x=>x.id===b.dataset.borrarSi);if(m)enviar({modo:'borrar',origen:m.origen,id:m.id},'Movimiento borrado. Queda una copia en el historial.');return;}
  if(b.hasAttribute('data-borrar-form')&&editando){if(b.dataset.seguro)enviar({modo:'borrar',origen:editando.origen,id:editando.id},'Movimiento borrado. Queda una copia en el historial.');else{b.dataset.seguro='1';b.textContent='Toca otra vez para borrar';}return;}
  if(b.closest('#cajaFiltro')&&datos){filtro=b.dataset.filtro;visibles=30;libro();return;}
+ if(b.closest('#cajaCuentas')&&datos){cuenta=b.dataset.cuenta;visibles=30;libro();return;}
+ if(b.hasAttribute('data-quitar-marcas')){marcados.clear();libro();return;}
  if(b.hasAttribute('data-mas')){visibles+=30;libro();}
 }

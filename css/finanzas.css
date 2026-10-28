@@ -119,7 +119,7 @@
 .fin-caja-botones{display:flex;gap:14px;align-items:center}
 .fin-libro-cab{margin-top:14px}.fin-libro-cab h3{margin:0;font-size:16px}
 .fin-libro{list-style:none;margin:0;padding:0}
-.fin-libro-fila{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:start;border-top:1px solid #e3e7ef;padding:11px 0}
+.fin-libro-fila{display:grid;grid-template-columns:22px 52px minmax(0,1fr) auto;gap:10px;align-items:start;border-top:1px solid #e3e7ef;padding:11px 0}
 .fin-libro-fecha{font-size:12px;color:#68758b;padding-top:2px}
 .fin-libro-fila b{font-size:14px}
 .fin-libro-fila p{margin:2px 0 0;font-size:12.5px;color:#5d6880;overflow-wrap:anywhere}
@@ -129,7 +129,7 @@
 .fin-recibio{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#5d6880}
 .fin-recibio select{min-height:38px;border:1px solid #cbd2dc;border-radius:8px;padding:4px 8px;font:500 16px Archivo,Arial,sans-serif;background:#fff}
 .fin-libro-mas{padding:12px 0;text-align:center;border-top:1px solid #e3e7ef}
-@media(max-width:720px){.fin-saldos{grid-template-columns:1fr 1fr}.fin-caja-acciones{width:100%}.fin-caja-acciones .btn{flex:1 1 auto}.fin-libro-fila{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}}
+@media(max-width:720px){.fin-saldos{grid-template-columns:1fr 1fr}.fin-caja-acciones{width:100%}.fin-caja-acciones .btn{flex:1 1 auto}.fin-libro-fila{grid-template-columns:22px 44px minmax(0,1fr) auto;gap:8px}}
 .fin-caja-form h3{margin:0;font-size:16px}
 .fin-caja-form [hidden]{display:none!important}
 .fin-caja-form select{width:100%;min-height:44px;font-size:16px}
@@ -139,3 +139,23 @@
 .fin-libro-fila--editando{background:#f1f4fe;border-radius:10px}
 .fin-libro .gastos-acciones{gap:14px;margin-top:4px}
 .fin-libro .gastos-acciones .btn-texto{min-height:32px;font-size:12.5px}
+
+/* 27-oct-2026: libro por cuenta, casillas y totales */
+.fin-cuentas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:12px 0 4px}
+.fin-cuenta{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;border:1px solid #d9deea;border-radius:12px;background:#fff;padding:9px 11px;min-height:52px;font:inherit;color:#1c2333;cursor:pointer}
+.fin-cuenta b{font-size:13.5px}.fin-cuenta span{font-size:11.5px;color:#68758b}
+.fin-cuenta.on{border-color:#1f2fd6;background:#eef0ff;box-shadow:inset 0 0 0 1px #1f2fd6}
+.fin-cuenta:focus-visible{outline:2px solid #1f2fd6;outline-offset:2px}
+.fin-libro-marca{width:20px;height:20px;margin:1px 0 0;accent-color:#1f2fd6}
+.fin-libro-fila--marcada{background:#f4f6ff}
+.fin-libro-totales{position:sticky;bottom:0;display:grid;grid-template-columns:auto 1fr 1fr;gap:10px 18px;align-items:center;background:#fff;border-top:2px solid #1c2333;padding:12px 0 6px;z-index:1}
+.fin-libro-totales:empty{display:none}
+.fin-libro-totales small{display:block;font-size:12px;color:#68758b}
+.fin-libro-totales strong{display:block;font-size:18px;font-variant-numeric:tabular-nums}
+.fin-libro-totales span{font-size:12px;color:#68758b}
+.fin-libro-totales .fin-libro-sinsel strong{color:#9aa3b5}
+.fin-libro-todos{display:flex;align-items:center;gap:8px;font-size:13px}
+.fin-libro-todos input{width:20px;height:20px;accent-color:#1f2fd6}
+@media(hover:hover) and (pointer:fine){.fin-cuenta:hover{border-color:#1f2fd6}}
+@media(max-width:720px){.fin-cuentas{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.fin-cuenta{padding:8px 9px;min-height:48px}.fin-cuenta b{font-size:12.5px}.fin-libro-totales{grid-template-columns:1fr 1fr}.fin-libro-todos{grid-column:1/-1}}
+#cajaTotales label.fin-libro-todos{display:flex;flex-direction:row;align-items:center;gap:8px;margin:0}
