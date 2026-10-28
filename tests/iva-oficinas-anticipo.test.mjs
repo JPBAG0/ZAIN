@@ -19,7 +19,7 @@ before(async()=>{
  create table public.zain_cotizacion_aceptaciones(pedido_id uuid not null,revision integer not null,aceptada_at timestamptz not null default now(),documento jsonb not null,primary key(pedido_id,revision));
  create table public.zain_pagos(id uuid primary key,pedido_id uuid,revision int,importe bigint,referencia text default '',actor uuid,created_at timestamptz default now(),foreign key(pedido_id,revision) references public.zain_cotizacion_aceptaciones(pedido_id,revision));
  create table public.zain_historial(pedido_id uuid,actor uuid,estado_anterior text,estado_nuevo text,notas text);`);
- for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible','libro-comprobantes','iva-oficinas-anticipo'])
+ for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible','libro-comprobantes','iva-oficinas-anticipo','entregar-con-saldo'])
   await db.exec(await readFile(new URL('../supabase/'+archivo+'.sql',import.meta.url),'utf8'));
  await db.query('insert into auth.users values($1)',[actor]);await db.query('insert into zain_equipo values($1,true)',[actor]);
 });
@@ -108,12 +108,22 @@ sqlTest('pestaña Gastos acepta oficinas como quien pagó; reembolsos y respaldo
  assert.equal((await op('anular',{movimiento:out.movimientos[0].id,motivo:'Se capturó dos veces'})).error,undefined,'anular un gasto de oficina no exige respaldo de reembolso');
 });
 
+sqlTest('entregado basta con el anticipo: el saldo queda por cobrar (27-oct-2026)',async()=>{
+ const a=await pedido();
+ await db.query("insert into zain_cotizacion_aceptaciones(pedido_id,revision,documento) values($1,1,'{}')",[a]);await db.query("update zain_pedidos set estado='produccion' where id=$1",[a]);
+ await fila('select zain_registrar_pago($1,1,$2,11500,$3,$4) as r',[a,randomUUID(),'Transferencia',actor]);
+ const version=(await fila('select version from zain_pedidos where id=$1',[a])).version;
+ const r=(await fila("select zain_actualizar_pedido($1,$2,'entregado','',$3) as r",[a,version,actor])).r;
+ assert.equal(r?.estado,'entregado',JSON.stringify(r));
+ const f=await fila('select venta_total,cobrado from zain_finanzas_estado where id=$1',[a]);assert.equal(Number(f.venta_total)-Number(f.cobrado),100,'faltan $1.00 por cobrar');
+});
+
 sqlTest('pestaña Cobro: con anticipo parcial aceptado, el cambio manual de estado ya no se bloquea',async()=>{
  const a=await pedido();
  await db.query("insert into zain_cotizacion_aceptaciones(pedido_id,revision,documento) values($1,1,'{}')",[a]);await db.query("update zain_pedidos set estado='aceptado' where id=$1",[a]);
  const pago=await fila('select zain_registrar_pago($1,1,$2,3000,$3,$4) as r',[a,randomUUID(),'Transferencia',actor]);assert.equal(pago.r.registrado,true);
  const version=async()=>(await fila('select version from zain_pedidos where id=$1',[a])).version;
- assert.equal((await fila("select zain_actualizar_pedido($1,$2,'confirmado','',$3) as r",[a,await version(),actor])).r,null,'sin aceptar el monto, 3000 no alcanza');
+ assert.match((await fila("select zain_actualizar_pedido($1,$2,'confirmado','',$3) as r",[a,await version(),actor])).r?.error||'',/Falta cobrar el anticipo/,'sin aceptar el monto, 3000 no alcanza');
  assert.equal((await fila('select zain_anticipo_aceptar($1,1,$2) as r',[a,actor])).r.ok,true);
  assert.equal((await fila('select estado from zain_pedidos where id=$1',[a])).estado,'confirmado');
  assert.ok((await fila("select zain_actualizar_pedido($1,$2,'produccion','',$3) as r",[a,await version(),actor])).r,'con el monto aceptado avanza a producción');
