@@ -1,3 +1,24 @@
+## Preparado: color en la cotización, pedido editable siempre, cierre con saldo y modo libre — 27-oct-2026 (Claude)
+
+JP pidió (27-oct) cuatro arreglos de Gestión y del personalizador. Rama `claude/zain-pedido-editable-libre`. **No publicado:** falta SQL, Edge y push con el sí de JP.
+- **Color de la referencia:** sin render, la cotización (editor, vista, PDF y PDF de Chats) usaba la foto base blanca, y una playera negra salía blanca (pedido de Drea, 27-oct). `js/referencia-color.js` pinta la foto del modelo con el color de la partida usando `ZR.tenir`, o usa `fotosColor`. `control-cotizaciones` espera las referencias, con un tope de 4 s, al abrir el pedido.
+- **Pedido editable en cualquier estado** salvo cancelado o con el cierre de Gastos guardado (antes se bloqueaba al pasar a Confirmado o al tener pagos). Al publicar sobre un pedido confirmado o con pagos, la nueva revisión hereda la aceptación (fila nueva en `zain_cotizacion_aceptaciones` con `aceptada_por:'equipo'`), los pagos (`zain_pagos.revision` se mueve) y el anticipo aceptado, y el estado no cambia. En confirmado, producción o entregado, lo cobrado queda como anticipo aceptado para que siga contando como vendido. Retirar sigue bloqueado con pagos o después de Confirmado.
+- **Cerrar con saldo pendiente:** en Gastos → Cerrar pedido aparece «Cerrar sin cobrar el resto», con motivo obligatorio. `zain_pedido_cuentas.saldo_condonado` guarda la diferencia. En `zain_finanzas_estado`, `venta_total` pasa a ser lo cobrado (utilidad real y nada por cobrar), y se agregan `venta_cotizada` y `saldo_condonado` para el registro. El historial dice «Saldo perdonado: $X (motivo)». Reabrir regresa el saldo a 0.
+- **Zona «Libre»** en el personalizador (todas las prendas):
+  - el logo va donde sea, de hasta 820 px ÷ `pxPorCm` de ancho;
+  - `estampar(..., {recortar:true})` borra lo que sale de la silueta de la prenda; los logos adicionales también se recortan y ya no tienen tope de 30 cm de alto;
+  - `validateOrder` y el editor de partidas reconocen «Libre» por nombre (`zonaDe`).
+- **SQL nuevo:** `supabase/editar-siempre-y-cierre-con-saldo.sql`, posterior a `iva-oficinas-anticipo.sql` y `archivos-logos-extra.sql`. Redefine la vista, `zain_finanzas_operar` y `zain_cotizacion_guardar`.
+- **Pruebas:** `tests/editar-siempre-cierre-saldo.test.mjs` (PGlite) y `tests/zona-libre.test.mjs`. Suite 328/328. Pasan los recorridos de navegador de selecciones (actualizado a la regla nueva), conversión, ventas reales, chats y WhatsApp, a 390 y 1280. `temporada-browser` ya fallaba antes por 3 paquetes de posada contra 2.
+- **Pendiente con JP:**
+  - renders de espalda: Codex los genera; la vista trasera en el personalizador espera esas imágenes;
+  - playeras nuevas para el catálogo: modelos y costos del proveedor.
+- **Publicar:**
+  1. `npx --yes supabase@2.121.0 db query --linked --project-ref upzecgfgdtllxdhshhkd --file supabase/editar-siempre-y-cierre-con-saldo.sql`;
+  2. `node server/preparar-edge.mjs` (ya generado);
+  3. `functions deploy zain-pedidos`;
+  4. push.
+
 ## Preparado: todo con IVA, Oficina JP / Oficina García y anticipo aceptado — 26-oct-2026 (Claude)
 
 JP pidió (26-oct): dejar de mezclar con y sin IVA, que los gastos de material capturados en Finanzas cuadren por partida, dos cajas nuevas y poder aceptar un anticipo menor al pactado. Rama `claude/zain-iva-oficinas-anticipo`.

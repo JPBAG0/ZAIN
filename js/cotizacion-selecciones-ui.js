@@ -1,6 +1,8 @@
 import {configurar} from './cotizacion-core.js?v=18';
-import {esc,tallasDe} from './cotizacion-vista.js?v=12';
+import {esc,tallasDe} from './cotizacion-vista.js?v=14';
 import {seleccionesDe,itemCatalogo,modificarSelecciones} from './cotizacion-selecciones.js?v=2';
+// Misma zona «Libre» que el personalizador (js/zain.js) y validateOrder.
+const zonasDe=p=>[...p.zonas,{id:'libre',nombre:'Libre',x:500,y:430,max:Math.floor(820/(p.pxPorCm||8)),orientativa:true,libre:true}];
 export async function editarSelecciones(pedido,borrador,api){
  const [{catalogo:c},{config}]=await Promise.all([api('catalogo-publico'),api('precios-config')]); // catalogo-publico no incluye técnicas; vienen de config.js.
  c.tecnicas??=window.ZAIN?.tecnicas??[];
@@ -20,13 +22,13 @@ export async function editarSelecciones(pedido,borrador,api){
   el.querySelector('[data-color]').innerHTML=p.colores.map(id=>c.colores.find(col=>col.id===id)).filter(Boolean).map(col=>'<option value="'+esc(col.id)+'">'+esc(col.nombre)+'</option>').join('');
   if(item){const nombre=String(item.color||'').replace(/ · [^·]+$/,''),opciones=c.colores.filter(col=>p.colores.includes(col.id)),col=item.colorId&&opciones.find(col=>col.id===item.colorId)||item.colorCodigo&&opciones.find(col=>col.codigo===item.colorCodigo)||opciones.find(col=>col.nombre===item.color||col.nombre===nombre);if(col)el.querySelector('[data-color]').value=col.id;else errores.textContent='No encontramos el color «'+item.color+'» en el catálogo. Elige el color correcto antes de aplicar.';}
   el.querySelector('[data-tecnica]').innerHTML='<option value="Solo prenda">Solo prenda</option>'+p.tecnicas.map(id=>c.tecnicas.find(t=>t.id===id)).filter(Boolean).map(t=>'<option value="'+esc(t.nombre)+'">'+esc(t.nombre)+'</option>').join('');
-  el.querySelector('[data-tecnica]').value=item?.tecnica||'Solo prenda';el.querySelector('[data-zona]').innerHTML=p.zonas.map(z=>'<option value="'+esc(z.id)+'">'+esc(z.nombre)+'</option>').join('');const z=p.zonas.find(z=>z.nombre===String(item?.zona||'').replace(/ \(posición ajustada\)$/,''));if(z)el.querySelector('[data-zona]').value=z.id;
+  el.querySelector('[data-tecnica]').value=item?.tecnica||'Solo prenda';el.querySelector('[data-zona]').innerHTML=zonasDe(p).map(z=>'<option value="'+esc(z.id)+'">'+esc(z.nombre)+'</option>').join('');const z=zonasDe(p).find(z=>z.nombre===String(item?.zona||'').replace(/ \(posición ajustada\)$/,''));if(z)el.querySelector('[data-zona]').value=z.id;
   const minimo=Math.max(1,p.minimoPiezas||0),tallas=p.tallas||[],desglose=item?.tallasDetalle||Object.fromEntries(tallasDe(item?.tallas)||[]);el.querySelector('[data-tallas]').innerHTML=tallas.length?'<p class="cot-ayuda">Piezas por talla · mínimo '+minimo+' por partida</p><div class="cot-tallas-cantidades">'+tallas.map((t,i)=>'<label>'+esc(t)+'<input type="number" min="0" max="9999" step="1" required inputmode="numeric" data-talla="'+esc(t)+'" value="'+(desglose[t]??(!item&&!i?minimo:0))+'"></label>').join('')+'</div>':'<label>Piezas<input data-piezas type="number" min="'+minimo+'" max="9999" step="'+(p.pasoPiezas||1)+'" required value="'+(item?.piezas||minimo)+'"></label>';
   personalizacion(el);
  }
  function personalizacion(el){el.querySelector('[data-personalizacion]').hidden=el.querySelector('[data-tecnica]').value==='Solo prenda';}
  function leer(el){
-  const f=filas.find(f=>f.clave===Number(el.dataset.seleccion)),p=productos.find(p=>p.id===el.querySelector('[data-modelo]').value),col=c.colores.find(c=>c.id===el.querySelector('[data-color]').value),t=el.querySelector('[data-tecnica]').value,z=p.zonas.find(z=>z.id===el.querySelector('[data-zona]').value),cantidades=Object.fromEntries([...el.querySelectorAll('[data-talla]')].map(e=>[e.dataset.talla,Number(e.value)]));
+  const f=filas.find(f=>f.clave===Number(el.dataset.seleccion)),p=productos.find(p=>p.id===el.querySelector('[data-modelo]').value),col=c.colores.find(c=>c.id===el.querySelector('[data-color]').value),t=el.querySelector('[data-tecnica]').value,z=zonasDe(p).find(z=>z.id===el.querySelector('[data-zona]').value),cantidades=Object.fromEntries([...el.querySelectorAll('[data-talla]')].map(e=>[e.dataset.talla,Number(e.value)]));
   return {...f,item:itemCatalogo(p,col,t,z,Number(el.querySelector('[data-cm]').value),cantidades,el.querySelector('[data-piezas]')?.value,f.item)};
  }
  try{for(const f of filas)pintar(f);}catch(e){dialogo.remove();throw e;}

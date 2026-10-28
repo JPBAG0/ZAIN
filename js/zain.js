@@ -664,7 +664,11 @@
   let ejemplo = null;
 
   const pAct = () => prod(E.p);
-  const zAct = () => pAct().zonas.find((z) => z.id === E.z) || pAct().zonas[0];
+  // «Libre» (27-oct-2026, JP): el logo va en cualquier parte y de cualquier tamaño; lo que sale de la prenda se recorta.
+  // El servidor (validateOrder) reconoce la misma zona por su nombre.
+  const zonaLibre = (p) => ({ id: "libre", nombre: "Libre", x: 500, y: 430, max: Math.floor(820 / p.pxPorCm), orientativa: true, libre: true });
+  const zonasDe = (p) => [...p.zonas, zonaLibre(p)];
+  const zAct = () => zonasDe(pAct()).find((z) => z.id === E.z) || pAct().zonas[0];
   const maxLogo = (z) => Math.round(z.max * (z.orientativa ? 1 : C.escalaMaxLogo || 1) * 2) / 2;
   const nombreTinta = () => E.tinta === "original" ? "Original" : (C.tintasLogo.find((c) => c.hex === E.tinta)?.nombre || "Color personalizado");
   $("#oTinta").innerHTML = `<button type="button" class="op op--chico on" data-tinta="original" aria-pressed="true">Original</button>` + C.tintasLogo.map((c) => `<button type="button" class="op op--tinta" data-tinta="${c.hex}" aria-pressed="false" aria-label="${esc(nombreColor(c))}" title="${esc(nombreColor(c))}"><i style="--c:${c.hex}"></i></button>`).join("");
@@ -684,7 +688,7 @@
     const p = pAct();
     if (!p.colores.includes(E.c)) E.c = p.colores[0];
     if (!p.tecnicas.includes(E.t)) E.t = p.tecnicas[0];
-    if (!p.zonas.some((z) => z.id === E.z)) E.z = p.zonas[0].id;
+    if (!zonasDe(p).some((z) => z.id === E.z)) E.z = p.zonas[0].id;
 
     $("#oPrenda").innerHTML = familias.filter((x) => x.grupo !== "bolsas")
       .map((x) => `<button type="button" class="op op--prenda${(x.familia ? x.familia === p.familia : x.id === E.p) ? " on" : ""}" data-p="${esc(x.id)}" aria-pressed="${x.familia ? x.familia === p.familia : x.id === E.p}"><img src="${esc(x.foto)}" alt="" width="64" height="64" loading="lazy" /><span>${esc(x.nombreFamilia || x.nombre)}</span></button>`)
@@ -707,8 +711,8 @@
       .filter(Boolean)
       .map((t) => `<button type="button" class="op op--tec${t.id === E.t ? " on" : ""}" data-t="${t.id}" aria-pressed="${t.id === E.t}"><b>${esc(t.nombre)}</b></button>`)
       .join("");
-    $("#oZona").innerHTML = p.zonas
-      .map((z) => `<button type="button" class="op op--zona${z.id === E.z ? " on" : ""}" data-z="${z.id}" aria-pressed="${z.id === E.z}">${esc(z.nombre)}</button>`)
+    $("#oZona").innerHTML = zonasDe(p)
+      .map((z) => `<button type="button" class="op op--zona${z.libre ? " op--libre" : ""}${z.id === E.z ? " on" : ""}" data-z="${z.id}" aria-pressed="${z.id === E.z}"${z.libre ? ' title="Ponlo donde quieras y del tamaño que quieras; lo que salga de la prenda no se imprime"' : ""}>${esc(z.nombre)}</button>`)
       .join("");
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     tallas.forEach((t) => {
@@ -854,11 +858,11 @@
       if (logo) {
         // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
         let ancho = E.cm * p.pxPorCm;
-        const altoMax = (z.maxAlto || maxLogo(z) * (z.id === "centro" ? 1 : 0.9)) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra; el frente centrado deja el mismo alto que ancho
+        const altoMax = z.libre ? 950 : (z.maxAlto || maxLogo(z) * (z.id === "centro" ? 1 : 0.9)) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra; el frente centrado deja el mismo alto que ancho
         if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
         const lx = z.x + E.dx * p.pxPorCm;
         const ly = z.y + E.dy * p.pxPorCm;
-        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura });
+        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura, recortar: !!z.libre });
         const alto = (ancho * logo.height) / logo.width;
         $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
@@ -868,9 +872,9 @@
           const logo2 = await logoExtra(x, n + 2);
           if (v !== renderVersion) return;
           let a2 = x.cm * p.pxPorCm;
-          const maxH = 30 * p.pxPorCm;
+          const maxH = 950; // logos adicionales: tamaño libre; lo que sale de la prenda se recorta
           if ((a2 * logo2.height) / logo2.width > maxH) a2 = (maxH * logo2.width) / logo2.height;
-          ZR.estampar(lg, img, logo2, { x: x.x, y: x.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura });
+          ZR.estampar(lg, img, logo2, { x: x.x, y: x.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura, recortar: true });
           const al2 = (a2 * logo2.height) / logo2.width;
           cajas[n] = { x0: x.x - a2 / 2, y0: x.y - al2 / 2, x1: x.x + a2 / 2, y1: x.y + al2 / 2 };
         }
@@ -1198,7 +1202,13 @@
 
   // mover el logo: flechas (1 cm por toque) o arrastrándolo en la vista
   const limitar = () => {
-    const m = zAct().max * 0.7;
+    const z = zAct(), k = pAct().pxPorCm;
+    if (z.libre) {
+      E.dx = Math.max((20 - z.x) / k, Math.min((980 - z.x) / k, E.dx));
+      E.dy = Math.max((20 - z.y) / k, Math.min((980 - z.y) / k, E.dy));
+      return;
+    }
+    const m = z.max * 0.7;
     E.dx = Math.max(-m, Math.min(m, E.dx));
     E.dy = Math.max(-m, Math.min(m, E.dy));
   };
@@ -1708,7 +1718,7 @@
       tallasDetalle: tallasPedido(p, E.tallas),
       renderOrientativo: !!p.renderOrientativo,
       tecnica: t.nombre,
-      zona: z.nombre + (E.dx || E.dy ? " (posición ajustada)" : ""),
+      zona: z.nombre + (!z.libre && (E.dx || E.dy) ? " (posición ajustada)" : ""),
       cm: E.cm,
       ...(logoGeometria ? {logoGeometria} : {}),
       tallas: p.tallas.length ? desglose.join(" · ") : "",
@@ -1717,7 +1727,7 @@
       logo,
       colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
       pantone: E.pantone,
-      notas: [E.notas.trim(), E.extras.length && tieneRender ? "Logos adicionales (en el render se muestran al frente): " + E.extras.map((x, i) => `${i + 2}) ${x.lugar} · «${x.nombre}» · ${cm(x.cm)}`).join("; ") : ""].filter(Boolean).join(" · ").slice(0, 1500),
+      notas: [E.notas.trim(), E.extras.length && tieneRender ? "Logos adicionales (se ven en el render): " + E.extras.map((x, i) => `${i + 2}) ${x.lugar} · «${x.nombre}» · ${cm(x.cm)}`).join("; ") : ""].filter(Boolean).join(" · ").slice(0, 1500),
       mini,
       tieneLogo: !!original,
       tieneRender,

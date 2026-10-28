@@ -18,7 +18,7 @@ export function validarMovimiento(b,fail){
   if(typeof v.motivo!=='string'||v.motivo.trim().length<5||v.motivo.length>500||(b.modo==='anular'&&!UUID.test(v.movimiento||'')))fail(400,'Escribe un motivo de al menos cinco caracteres.');
   return {motivo:v.motivo.trim(),...(b.modo==='anular'?{movimiento:v.movimiento}:{})};
  }
- if(b.modo==='cerrar'){if(v.costos_completos!==true)fail(400,'Confirma que registraste todos los costos reales.');return {costos_completos:true};}
+ if(b.modo==='cerrar'){if(v.costos_completos!==true)fail(400,'Confirma que registraste todos los costos reales.');if(v.perdonar_saldo===true){if(typeof v.motivo!=='string'||v.motivo.trim().length<3||v.motivo.length>300)fail(400,'Escribe por qué no se cobrará el resto.');return {costos_completos:true,perdonar_saldo:true,motivo:v.motivo.trim()};}return {costos_completos:true};}
  if(v.juan_pablo_bp!==null&&(!Number.isSafeInteger(v.juan_pablo_bp)||v.juan_pablo_bp<0||v.juan_pablo_bp>10000))fail(400,'Revisa el porcentaje de reparto.');return {juan_pablo_bp:v.juan_pablo_bp};
 }
 export function createGastos({sb,row,fail,base,serviceHeaders,fetcher}){

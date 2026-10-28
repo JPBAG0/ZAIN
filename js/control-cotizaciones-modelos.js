@@ -1,5 +1,5 @@
 import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=19';
-import {esc} from './cotizacion-vista.js?v=12';
+import {esc} from './cotizacion-vista.js?v=14';
 import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=4';
 import {armarPedido} from './cotizacion-modelos-pedido.js?v=2';
 const $=s=>document.querySelector(s),nav=$('.control__secciones'),api=(op,body,extra)=>window.ZAINEquipo.call(op,body,extra);
@@ -334,7 +334,7 @@ $('#cmPDF').addEventListener('click',async e=>{
  try{avisar('Guardando…');const q=await guardarParaEnviar();$('#cmCampos').disabled=true;$('#cmActualizar').disabled=true;avisar('Preparando PDF…');await Promise.all(modelos.map(renderizar));if(session!==epoca)return;
  for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render)throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
  const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:(m.tecnica?(logo?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+color(m).nombre}));
- const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=6');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF '+q.folio+' listo. Puedes enviarlo al cliente.');
+ const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=7');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF '+q.folio+' listo. Puedes enviarlo al cliente.');
  }catch(e){if(session===epoca)avisar(e.message);}finally{b.disabled=false;$('#cmActualizar').disabled=false;if(session===epoca&&datos)$('#cmCampos').disabled=false;}
 });
 // ===== Pasar a pedido: cantidades autorizadas → solicitud normal con los precios cotizados =====

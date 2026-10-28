@@ -1,5 +1,6 @@
 import {pesos} from './cotizacion-core.js?v=17';
-import {esc} from './cotizacion-vista.js?v=12';
+import {esc} from './cotizacion-vista.js?v=14';
+import {referenciaLista} from './referencia-color.js?v=1';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;
 // Costo editable por cotización con referencia al valor guardado en la pestaña Costos (origenCostos).
@@ -77,15 +78,15 @@ export function montosAnticipo(form,total){
  const a=Math.round(total*p/100);
  out.innerHTML=`Anticipo <b>${esc(pesos(a))}</b> · Saldo antes del envío <b>${esc(pesos(total-a))}</b>`;
 }
-export function editorCotizacion(q,{version,publicada,imagenes={},productos=[],editable=true}={}){
+export function editorCotizacion(q,{version,publicada,imagenes={},productos=[],editable=true,motivo='',estado=''}={}){
  const op=opcionImpuesto(q),chip=(v,t)=>`<label class="cot-chip"><input type="radio" name="impuestoOpcion" value="${v}" ${op===v?'checked':''}><span>${t}</span></label>`;
  const cargos=(q.cargos||[]).length;
  return `<div class="cot-cabecera"><h2>Cotización</h2><span class="cot-privado">${publicada?'Publicada · revisión '+esc(publicada.revision):'Borrador privado · v'+esc(version)}</span></div>
  <form id="formCotizacion" class="cot-editor cot-v4">
- ${editable?'':'<p class="cot-alerta">Cotización cerrada: el pedido ya fue confirmado o cancelado. Puedes consultar el PDF.</p>'}
+ ${editable?(['confirmado','produccion','entregado'].includes(estado)?'<p class="cot-alerta">El pedido ya está '+esc(estado==='produccion'?'en producción':estado)+'. Puedes cambiar lo que necesites (técnica, partidas, tallas, precios); al publicar, la aceptación y los pagos pasan a la nueva versión y el pedido sigue en su estado.</p>':''):'<p class="cot-alerta">'+(motivo==='cerrado'?'El pedido ya está cerrado en Gastos. Reabre el cierre para modificarlo.':'Pedido cancelado: la cotización queda solo para consulta.')+' Puedes consultar el PDF.</p>'}
  <section class="cot-bloque"><div class="cot-bloque-cab"><h3>Partidas <span>${q.partidas.length}</span></h3>${editable?'<button type="button" class="btn btn--linea" id="cotEditarPartidas">Editar partidas y tallas</button>':''}</div>
  <p id="cotAviso" class="cot-alerta cot-pendientes" hidden></p>
- ${q.partidas.map((p,i)=>partida(p,i,imagenes[i]?.src||productos.find(v=>v.sku===p.sku)?.foto,q.origenCostos?.partidas?.[i]?.sku===p.sku?q.origenCostos.partidas[i]:null)).join('')}</section>
+ ${q.partidas.map((p,i)=>partida(p,i,imagenes[i]?.src||referenciaLista(p.sku,p.color)||productos.find(v=>v.sku===p.sku)?.foto,q.origenCostos?.partidas?.[i]?.sku===p.sku?q.origenCostos.partidas[i]:null)).join('')}</section>
  <section class="cot-bloque"><h3>Para el cliente</h3>
  <label class="cot-notas"><span>Notas y acuerdos <small>Las ve en su cotización y en el PDF</small></span><textarea name="condiciones" maxlength="3000" rows="3" placeholder="Incluye serigrafía al frente (pecho izquierdo) y en la espalda (centro).">${esc(q.condiciones)}</textarea></label>
  <fieldset class="cot-impuesto"><legend>¿Lleva IVA?</legend><div class="cot-chips">${chip('0','Sin IVA')}${chip('1600','+ IVA 16%')}${chip('otro','Otro %')}</div><div data-impuesto-otro ${op==='otro'?'':'hidden'}>${field('impuesto','Impuesto %',op==='otro'?val(q.impuesto):'','number','max="100"')}</div></fieldset>

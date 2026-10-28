@@ -3,6 +3,10 @@ import {vincularCostos,sincronizarCostos,origenDe} from './cotizacion-costos.mjs
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from '../js/cotizacion-core.js';
 export function createQuotes({sb,row,fail,commercialItem,validarSelecciones,publicRow=x=>x}){
  const config=async()=>{const r=await sb('/rest/v1/zain_precios_config?id=eq.1&select=version,datos&limit=1');return r[0]?{...r[0],datos:configurar(r[0].datos)}:{version:0,datos:inicial()};};
+ // 27-oct-2026 (JP): todo el pedido se modifica en Gestión en cualquier estado, salvo cancelado o con el cierre de Finanzas guardado.
+ // Solo para avisar en pantalla: la regla real la aplica zain_cotizacion_guardar en SQL.
+ const cerrado=async id=>{try{return !!(await sb('/rest/v1/zain_pedido_cuentas?pedido_id=eq.'+id+'&select=cerrado_at&limit=1'))[0]?.cerrado_at;}catch{return false;}};
+ const editable=async x=>x.estado!=='cancelado'&&!await cerrado(x.id);
  const get=async id=>(await sb('/rest/v1/zain_cotizaciones?pedido_id=eq.'+id+'&select=*&limit=1'))[0]||null;
  const ensure=async (x,manual=false)=>{
   const old=await get(x.id);if(old)return old;
@@ -25,9 +29,9 @@ export function createQuotes({sb,row,fail,commercialItem,validarSelecciones,publ
    const b=request.method==='GET'?{id:url.searchParams.get('id')}:await jsonBody(request),x=await row(b.id);
    if(x.archivado_at||!x.guardado_at)fail(409,'Restaura el pedido y verifica sus archivos antes de cotizar.');
    if(op==='cotizacion'&&request.method==='GET'){
-    const old=await ensure(x,true),editable=['nuevo','contactado','cotizado','aceptado'].includes(x.estado);
-    if(!old)fail(409,'El pedido está cerrado y no tiene una cotización editable.');
-    if(!editable)return {cotizacion:old,editable:false};
+    const old=await ensure(x,true);
+    if(!old)fail(409,'El pedido está cancelado y no tiene una cotización.');
+    if(!await editable(x))return {cotizacion:old,editable:false,motivo:x.estado==='cancelado'?'cancelado':'cerrado'};
     const cfg=await config(),borrador=conservarSelecciones(sincronizarCostos(itemsDe(x,old.borrador).map(commercialItem),old.borrador,cfg),old.borrador);
     if(JSON.stringify(borrador)===JSON.stringify(old.borrador))return {cotizacion:old};
     const out=await sb('/rest/v1/rpc/zain_cotizacion_guardar',{method:'POST',body:JSON.stringify({p_id:x.id,p_version:old.version,p_modo:'guardar',p_borrador:borrador,p_publicada:null,p_actor:user.id})});
@@ -36,7 +40,9 @@ export function createQuotes({sb,row,fail,commercialItem,validarSelecciones,publ
    }
    if(request.method!=='POST'||!['cotizacion-guardar','cotizacion-costos','cotizacion-recalcular','cotizacion-publicar','cotizacion-retirar'].includes(op))fail(404,'Operación no encontrada.');
    if(!Number.isSafeInteger(b.version)||b.version<1)fail(400,'Versión inválida.');
-   if(!['nuevo','contactado','cotizado','aceptado'].includes(x.estado))fail(409,'La cotización está cerrada: el pedido ya fue confirmado o cancelado.');
+   if(x.estado==='cancelado')fail(409,'El pedido está cancelado.');
+   if(await cerrado(x.id))fail(409,'El pedido ya está cerrado en Gastos. Reabre el cierre para modificarlo.');
+   if(op==='cotizacion-retirar'&&['confirmado','produccion','entregado'].includes(x.estado))fail(409,'Un pedido confirmado no se retira: modifícalo y publica los cambios.');
    const old=await get(x.id);if(!old||old.version!==b.version)fail(409,'La cotización cambió. Vuelve a abrirla antes de guardar.');
    let draft=old.borrador,published=null,modo='guardar';
    let selecciones=old.borrador.selecciones;

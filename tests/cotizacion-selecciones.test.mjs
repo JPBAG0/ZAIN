@@ -88,8 +88,10 @@ sqlTest('API: valida, guarda borrador sin tocar pedido y publica cantidades nuev
  const {x,q}=await preparar(),api=fixture(),nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[talla]:8,[segunda]:5})}],cfg);
  let r=await api.call('cotizacion-guardar',{id,version:1,borrador:nueva});assert.equal(r.status,200,await r.clone().text());const d=(await r.json()).cotizacion;assert.equal((await leer()).total,12);r=await api.call('cotizacion-publicar',{id,version:d.version});assert.equal(r.status,200,await r.clone().text());const out=await r.json();assert.equal(out.pedido.total,13);assert.equal(out.cotizacion.publicada.partidas[0].piezas,13);
 });
-sqlTest('API: confirmar en paralelo frena la escritura; lectura de Confirmado no sincroniza costos',async()=>{
- const {x,q}=await preparar(),api=fixture({confirmarAlGuardar:true}),nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[talla]:13})}],cfg);assert.equal((await api.call('cotizacion-guardar',{id,version:1,borrador:nueva})).status,409);const f=fixture(),r=await f.call('cotizacion');assert.equal(r.status,200);assert.equal((await r.json()).editable,false);assert.ok(!f.llamadas.some(p=>p.includes('/rpc/')));assert.equal((await leer()).total,12);
+// 27-oct-2026: Confirmado ya no deja la cotización en solo lectura (ver editar-siempre-cierre-saldo.test.mjs); un cambio de estado
+// a mitad del guardado sigue frenando esa escritura por la versión.
+sqlTest('API: confirmar en paralelo frena la escritura en curso',async()=>{
+ const {x,q}=await preparar(),api=fixture({confirmarAlGuardar:true}),nueva=modificarSelecciones(x,q,[{origen:0,anterior:0,item:item({[talla]:13})}],cfg);assert.equal((await api.call('cotizacion-guardar',{id,version:1,borrador:nueva})).status,409);assert.equal((await leer()).total,12);
 });
 
 test('la vista recibe el precio del formulario sin volver a reinterpretar el borrador',()=>{const x=pedido(),q=inicialQ(x),v=entrada(q);v.partidas[0].precio=21000;assert.equal(calcularSeleccion(x,v).partidas[0].precioManual,21000);});

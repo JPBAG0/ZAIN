@@ -501,7 +501,8 @@
      ctx     contexto destino (tamaño S×S, la prenda ya dibujada)
      img     foto original de la prenda (para las arrugas)
      logo    canvas del logo (ya recortado)
-     o       { x, y, ancho, tecnica, S }  — x, y, ancho en píxeles de S */
+     o       { x, y, ancho, tecnica, S }  — x, y, ancho en píxeles de S
+             recortar: true borra lo que queda fuera de la prenda (modo libre, 27-oct-2026) */
   function estampar(ctx, img, logo, o) {
     const S = o.S || 1000;
     const esc = S / 1000;
@@ -606,6 +607,13 @@
         }
       }
       g.putImageData(d, x0, y0);
+    }
+
+    // modo libre: solo se imprime lo que toca la prenda (la foto tiene fondo transparente)
+    if (o.recortar) {
+      g.globalCompositeOperation = "destination-in";
+      g.drawImage(img, 0, 0, S, S);
+      g.globalCompositeOperation = "source-over";
     }
 
     // relieve: sombra corta (más marcada en bordado)

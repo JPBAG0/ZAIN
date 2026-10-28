@@ -1,3 +1,4 @@
+import {referenciaTenida} from './referencia-color.js?v=1';
 // Derivados comerciales en memoria; originales intactos y sin base64 persistente.
 const cache=new Map();let remotos,epoca=0,cola=Promise.resolve();
 function liberar(key,valor){valor.then(src=>{if(src.startsWith('blob:')&&!key.endsWith('|'+src))URL.revokeObjectURL(src);});}
@@ -27,6 +28,6 @@ async function limpiar(src,sku){
 }
 export async function prepararImagenes(q,imagenes){
  const result={},turn=epoca;
- for(const p of q.partidas){const v=imagenes?.[p.indice];if(v?.error||v?.pendiente){result[p.indice]=v;continue;}if(!v?.src)continue;if(v.referencia){result[p.indice]=v;continue;}const key=p.sku+'|'+v.src;if(!cache.has(key)){const tarea=cola.then(()=>turn===epoca?limpiar(v.src,p.sku):v.src).catch(()=>v.src);cola=tarea.then(()=>{});cache.set(key,tarea);if(cache.size>24){const old=cache.keys().next().value;liberar(old,cache.get(old));cache.delete(old);}}const src=await cache.get(key);if(turn!==epoca)return result;result[p.indice]={...v,src};}
+ for(const p of q.partidas){const v=imagenes?.[p.indice];if(v?.error||v?.pendiente){result[p.indice]=v;continue;}if(!v?.src){const ref=await referenciaTenida(p.sku,p.color);if(turn!==epoca)return result;if(ref)result[p.indice]={src:ref,referencia:true};continue;}if(v.referencia){result[p.indice]=v;continue;}const key=p.sku+'|'+v.src;if(!cache.has(key)){const tarea=cola.then(()=>turn===epoca?limpiar(v.src,p.sku):v.src).catch(()=>v.src);cola=tarea.then(()=>{});cache.set(key,tarea);if(cache.size>24){const old=cache.keys().next().value;liberar(old,cache.get(old));cache.delete(old);}}const src=await cache.get(key);if(turn!==epoca)return result;result[p.indice]={...v,src};}
  return result;
 }

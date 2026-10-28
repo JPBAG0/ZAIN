@@ -1,5 +1,5 @@
 import {pesos,decimal} from './cotizacion-core.js?v=17';
-import {esc} from './cotizacion-vista.js?v=12';
+import {esc} from './cotizacion-vista.js?v=14';
 // Caja ZAIN y oficinas tipo Tricount con libro flexible: registrar, corregir, mover de pedido y borrar cualquier movimiento.
 // Los saldos y las reglas viven en la base (zain_caja_resumen y zain_libro_operar); aquí solo se captura.
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
