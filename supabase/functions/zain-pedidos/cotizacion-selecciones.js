@@ -1,5 +1,5 @@
 // Selecciones del borrador: el pedido publicado permanece intacto hasta publicar.
-import {calcular,entrada,generar} from './cotizacion-core.mjs';
+import {calcular,entrada,generar} from './cotizacion-core.js?v=21';
 export const seleccionesDe=(pedido,borrador)=>borrador?.selecciones||pedido.items.map((item,origen)=>({origen,item}));
 export const itemsDe=(pedido,borrador)=>seleccionesDe(pedido,borrador).map(s=>s.item);
 export function conservarSelecciones(resultado,borrador){return {...resultado,...(borrador?.selecciones?{selecciones:structuredClone(borrador.selecciones),partidasVersion:borrador.partidasVersion??0}:{})};}

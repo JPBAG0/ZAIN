@@ -19,7 +19,7 @@ before(async()=>{
  create table public.zain_cotizacion_aceptaciones(pedido_id uuid not null,revision integer not null,aceptada_at timestamptz not null default now(),documento jsonb not null,primary key(pedido_id,revision));
  create table public.zain_pagos(id uuid primary key,pedido_id uuid,revision int,importe bigint,referencia text default '',actor uuid,created_at timestamptz default now(),foreign key(pedido_id,revision) references public.zain_cotizacion_aceptaciones(pedido_id,revision));
  create table public.zain_historial(pedido_id uuid,actor uuid,estado_anterior text,estado_nuevo text,notas text);`);
- for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible','libro-comprobantes','iva-oficinas-anticipo','cotizacion-partidas-editables','archivos-logos-extra','editar-siempre-y-cierre-con-saldo'])
+ for(const archivo of ['gastos-cierre','finanzas-costo-real','finanzas-generales','finanzas-dashboard-v2','cotizaciones-modelos','ventas-reales','gastos-editar','caja-zain','gastos-por-partida','libro-flexible','libro-comprobantes','iva-oficinas-anticipo','cotizacion-partidas-editables','archivos-logos-extra','editar-siempre-y-cierre-con-saldo','entregar-con-saldo','produccion-sin-anticipo'])
   await db.exec(await readFile(new URL('../supabase/'+archivo+'.sql',import.meta.url),'utf8'));
  await db.query('insert into auth.users values($1)',[actor]);await db.query('insert into zain_equipo values($1,true)',[actor]);
 });
@@ -95,4 +95,24 @@ sqlTest('cerrar con todo cobrado no cambia',async()=>{
  assert.equal((await op('cerrar',{costos_completos:true})).error,undefined);
  const f=await fila('select venta_total,saldo_condonado from zain_finanzas_estado where id=$1',[a]);
  assert.equal(Number(f.venta_total),11600);assert.equal(Number(f.saldo_condonado),0);
+});
+
+sqlTest('pasar a producción sin anticipo: cuenta como vendido, todo queda por cobrar y sobrevive a una revisión',async()=>{
+ const a=await pedido({estado:'cotizado',pago:0});
+ await db.query('delete from zain_cotizacion_aceptaciones where pedido_id=$1',[a]);
+ const version=async()=>(await fila('select version from zain_pedidos where id=$1',[a])).version;
+ const r=(await fila("select zain_actualizar_pedido($1,$2,'produccion','',$3,true) as r",[a,await version(),actor])).r;
+ assert.equal(r?.estado,'produccion',JSON.stringify(r));
+ let f=await fila('select vendido,anticipo_requerido,cobrado,venta_total,sin_anticipo from zain_finanzas_estado where id=$1',[a]);
+ assert.equal(f.vendido,true);assert.equal(Number(f.anticipo_requerido),0);assert.equal(f.sin_anticipo,true);
+ assert.match((await fila("select notas from zain_historial where pedido_id=$1 and estado_nuevo='produccion'",[a])).notas,/sin anticipo/);
+ assert.ok(await publicar(a,2,13920));
+ f=await fila('select vendido,sin_anticipo from zain_finanzas_estado where id=$1',[a]);assert.equal(f.sin_anticipo,true,'la marca pasa a la revisión nueva');assert.equal(f.vendido,true);
+ assert.equal((await fila("select zain_actualizar_pedido($1,$2,'entregado','',$3) as r",[a,await version(),actor])).r?.estado,'entregado','se puede entregar sin cobro');
+});
+
+sqlTest('sin la marca, producción sigue pidiendo anticipo',async()=>{
+ const a=await pedido({estado:'aceptado',pago:0});
+ const v=(await fila('select version from zain_pedidos where id=$1',[a])).version;
+ assert.match((await fila("select zain_actualizar_pedido($1,$2,'produccion','',$3) as r",[a,v,actor])).r?.error||'',/Falta cobrar el anticipo/);
 });

@@ -637,6 +637,7 @@
      PERSONALIZADOR
      ===================================================================== */
   const E = {
+    vista: "frente", // «espalda» cuando la prenda tiene render trasero
     extras: [], // logos adicionales (espalda, mangas, patrocinadores): [{id, x, y, cm, lugar, logo, nombre, crudo, fondo}] en px del lienzo
     p: MUESTRAS[0].p,
     c: MUESTRAS[0].c,
@@ -827,6 +828,69 @@
   let transicion = false;
   let caja = null; // dónde quedó el logo en el lienzo (para arrastrarlo)
   let cajas = []; // dónde quedó cada logo adicional
+  // Dibuja una vista (frente o espalda) en un lienzo de 1000×1000. Con ui=true actualiza medidas y avisos del editor.
+  // Devuelve dónde quedó cada logo (para arrastrarlos) o null si otra vista más nueva la reemplazó.
+  async function dibujarVista(g, vista, v, ui) {
+    const p = pAct();
+    const z = zAct();
+    const atras = vista === "espalda" && fotoEspalda(p);
+    const img = await ZR.cargar(atras ? fotoEspalda(p) : fotoDe(p, E.c));
+    const logo = atras ? null : await logoActual();
+    if (v !== renderVersion) return null;
+    if (ui && transicion && lienzo.classList.contains("listo") && !reducido) {
+      // fundido: la vista anterior se queda encima y se desvanece mientras entra la nueva
+      const f = $("#fantasma");
+      const fg = f.getContext("2d");
+      fg.clearRect(0, 0, 1000, 1000);
+      fg.drawImage(lienzo, 0, 0);
+      f.classList.remove("va");
+      lienzo.classList.remove("entra");
+      void f.offsetWidth;
+      f.classList.add("va");
+      lienzo.classList.add("entra");
+    }
+    if (ui) transicion = false;
+    g.clearRect(0, 0, 1000, 1000);
+    g.drawImage(prendaTenida(p, img, E.c, 1000), 0, 0);
+    let principal = null;
+    const otras = [];
+    if (logo) {
+      // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
+      let ancho = E.cm * p.pxPorCm;
+      const altoMax = z.libre ? 950 : (z.maxAlto || maxLogo(z) * (z.id === "centro" ? 1 : 0.9)) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra; el frente centrado deja el mismo alto que ancho
+      if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
+      const lx = z.x + E.dx * p.pxPorCm;
+      const ly = z.y + E.dy * p.pxPorCm;
+      ZR.estampar(g, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura, recortar: !!z.libre });
+      const alto = (ancho * logo.height) / logo.width;
+      if (ui) {
+        $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
+        $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
+      }
+      principal = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
+    }
+    if (logo || atras) {
+      for (const [n, x] of E.extras.entries()) {
+        if ((x.lado || "frente") !== (atras ? "espalda" : "frente")) continue;
+        const logo2 = await logoExtra(x, n + 2);
+        if (v !== renderVersion) return null;
+        let a2 = x.cm * p.pxPorCm;
+        const maxH = 950; // logos adicionales: tamaño libre; lo que sale de la prenda se recorta
+        if ((a2 * logo2.height) / logo2.width > maxH) a2 = (maxH * logo2.width) / logo2.height;
+        ZR.estampar(g, img, logo2, { x: x.x, y: x.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura, recortar: true });
+        const al2 = (a2 * logo2.height) / logo2.width;
+        otras[n] = { x0: x.x - a2 / 2, y0: x.y - al2 / 2, x1: x.x + a2 / 2, y1: x.y + al2 / 2 };
+      }
+    }
+    if (ui && logo) {
+      const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
+      const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(fondoLogo(z, E.c)))) < 0.2;
+      const a = $("#aviso");
+      if (poco) aviso(E.modo === "imagen" ? "Tu logo casi no se ve sobre este color. Prueba otro «Color del logo»." : "El texto casi no se ve sobre este color. Cambia el color del texto.");
+      else if (/casi no se ve/.test(a.textContent)) aviso("");
+    }
+    return { caja: principal, cajas: otras };
+  }
   const pedirRender = () => {
     if (rafRender) return;
     rafRender = requestAnimationFrame(async () => {
@@ -836,60 +900,45 @@
       try {
       const v = ++renderVersion;
       const p = pAct();
-      const z = zAct();
-      const img = await ZR.cargar(fotoDe(p, E.c));
-      const logo = await logoActual();
-      if (v !== renderVersion) return;
-      if (transicion && lienzo.classList.contains("listo") && !reducido) {
-        // fundido: la vista anterior se queda encima y se desvanece mientras entra la nueva
-        const f = $("#fantasma");
-        const fg = f.getContext("2d");
-        fg.clearRect(0, 0, 1000, 1000);
-        fg.drawImage(lienzo, 0, 0);
-        f.classList.remove("va");
-        lienzo.classList.remove("entra");
-        void f.offsetWidth;
-        f.classList.add("va");
-        lienzo.classList.add("entra");
-      }
-      transicion = false;
-      lg.clearRect(0, 0, 1000, 1000);
-      lg.drawImage(prendaTenida(p, img, E.c, 1000), 0, 0);
-      if (logo) {
-        // si el logo es más alto que ancho, se limita su alto para que no se salga de la zona
-        let ancho = E.cm * p.pxPorCm;
-        const altoMax = z.libre ? 950 : (z.maxAlto || maxLogo(z) * (z.id === "centro" ? 1 : 0.9)) * p.pxPorCm; // maxAlto: zonas bajas como el frente de una gorra; el frente centrado deja el mismo alto que ancho
-        if ((ancho * logo.height) / logo.width > altoMax) ancho = (altoMax * logo.width) / logo.height;
-        const lx = z.x + E.dx * p.pxPorCm;
-        const ly = z.y + E.dy * p.pxPorCm;
-        ZR.estampar(lg, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura, recortar: !!z.libre });
-        const alto = (ancho * logo.height) / logo.width;
-        $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
-        $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
-        caja = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
-        cajas = [];
-        for (const [n, x] of E.extras.entries()) {
-          const logo2 = await logoExtra(x, n + 2);
-          if (v !== renderVersion) return;
-          let a2 = x.cm * p.pxPorCm;
-          const maxH = 950; // logos adicionales: tamaño libre; lo que sale de la prenda se recorta
-          if ((a2 * logo2.height) / logo2.width > maxH) a2 = (maxH * logo2.width) / logo2.height;
-          ZR.estampar(lg, img, logo2, { x: x.x, y: x.y, ancho: a2, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, textura: z.textura, recortar: true });
-          const al2 = (a2 * logo2.height) / logo2.width;
-          cajas[n] = { x0: x.x - a2 / 2, y0: x.y - al2 / 2, x1: x.x + a2 / 2, y1: x.y + al2 / 2 };
-        }
-        const propio = (E.modo === "imagen" && E.logo) || (E.modo === "texto" && E.texto.trim());
-        const poco = propio && Math.abs(brilloLogo(logo) - ZR.luz(ZR.hexARgb(fondoLogo(z, E.c)))) < 0.2;
-        const a = $("#aviso");
-        if (poco) aviso(E.modo === "imagen" ? "Tu logo casi no se ve sobre este color. Prueba otro «Color del logo»." : "El texto casi no se ve sobre este color. Cambia el color del texto.");
-        else if (/casi no se ve/.test(a.textContent)) aviso("");
-      }
-      $("#pieTxt").textContent = `${p.renderOrientativo ? "Vista previa · " : ""}${p.nombre} · ${nombreColor(color(E.c))} · ${tecnica(E.t).nombre}`;
+      if (E.vista === "espalda" && !fotoEspalda(p)) E.vista = "frente";
+      sincronizarVista();
+      const r = await dibujarVista(lg, E.vista, v, true);
+      if (!r) return;
+      caja = r.caja;
+      cajas = r.cajas;
+      $("#pieTxt").textContent = `${p.renderOrientativo ? "Vista previa · " : ""}${p.nombre} · ${nombreColor(color(E.c))} · ${tecnica(E.t).nombre}${E.vista === "espalda" ? " · espalda" : ""}`;
       lienzo.classList.add("listo");
       } catch (er) { errorRender = er; aviso("No se pudo preparar la vista previa. Intenta otra vez.", true); }
       finally { rendersActivos--; }
     });
   };
+  // Parte trasera (27-oct-2026, JP): botón «+» sobre la vista; los logos de la espalda son logos adicionales con lado «espalda».
+  // Una prenda tiene espalda cuando su render existe en img/productos/zain/<sku>-espalda.webp y su SKU está en ESPALDAS.
+  const ESPALDAS = new Set(["ZN-PL-004", "ZN-PO-008", "ZN-SU-004"]);
+  const fotoEspalda = (p) => (ESPALDAS.has(p.sku) ? `img/productos/zain/${p.sku.toLowerCase()}-espalda.webp` : null);
+  const tieneEspalda = () => E.extras.some((x) => x.lado === "espalda") && !!fotoEspalda(pAct());
+  function sincronizarVista() {
+    const b = $("#vistaLado");
+    const hay = !!fotoEspalda(pAct());
+    b.hidden = !hay;
+    const atras = E.vista === "espalda";
+    b.setAttribute("aria-pressed", String(atras));
+    b.classList.toggle("vista-lado--atras", atras);
+    $("#vistaLadoTxt").textContent = atras ? "Ver frente" : "Parte trasera";
+    $(".mover").hidden = atras;
+    $(".taller__regla").hidden = atras;
+  }
+  $("#vistaLado").addEventListener("click", () => {
+    E.vista = E.vista === "espalda" ? "frente" : "espalda";
+    // La primera vez que voltean la prenda aparece un logo para la espalda, listo para elegir su archivo.
+    if (E.vista === "espalda" && !E.extras.some((x) => x.lado === "espalda") && E.extras.length < MAX_EXTRAS) {
+      E.extras.push({ id: crypto.randomUUID(), x: 500, y: 400, cm: 25, lugar: "Espalda", lado: "espalda", logo: null, nombre: "", crudo: null, fondo: true });
+      capaActiva = E.extras.length - 1;
+      pintarCapas();
+    }
+    transicion = true;
+    pedirRender();
+  });
   const esperarRender = () => {
     pedirRender();
     return new Promise((ok, mal) => {
@@ -965,11 +1014,11 @@
   let capaActiva = -1;
   function pintarCapas() {
     $("#capas").innerHTML = E.extras.map((x, i) => `<div class="capa${i === capaActiva ? " capa--activa" : ""}" data-capa="${i}">
-      <div class="capa__cab"><b>Logo ${i + 2}</b><button type="button" class="capa__quitar" data-quitar-capa="${i}" aria-label="Quitar logo ${i + 2}">Quitar</button></div>
+      <div class="capa__cab"><b>Logo ${i + 2}${x.lado === "espalda" ? " · espalda" : ""}</b><button type="button" class="capa__quitar" data-quitar-capa="${i}" aria-label="Quitar logo ${i + 2}">Quitar</button></div>
       <label class="subir subir--capa"><input type="file" data-archivo="${i}" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg><span>${x.nombre ? `<b>${esc(x.nombre)}</b> · toca para cambiarlo` : "<b>Elige este logo</b> · PNG, JPG o SVG"}</span></label>
       <div class="capa__fila"><label class="campo"><span>¿Dónde va?</span><select data-lugar="${i}">${LUGARES.map((l) => `<option${l === x.lugar ? " selected" : ""}>${l}</option>`).join("")}</select></label>
       <label class="interruptor"><input type="checkbox" data-fondo="${i}"${x.fondo ? " checked" : ""} /><span>Quitar fondo</span></label></div>
-      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="42" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
+      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="${Math.floor(820 / pAct().pxPorCm)}" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
     </div>`).join("");
     $("#capaAgregar").hidden = E.extras.length >= MAX_EXTRAS;
     $("#capaAgregar").textContent = E.extras.length ? "+ Agregar otro logo" : "+ Agregar más logos (espalda, mangas, patrocinadores…)";
@@ -979,7 +1028,8 @@
     if (E.extras.length >= MAX_EXTRAS) return;
     // Cada logo nuevo aparece al centro del torso, un poco más abajo que el anterior, para no encimarse.
     const n = E.extras.length;
-    E.extras.push({ id: crypto.randomUUID(), x: 500, y: Math.min(760, Math.max(420, zAct().y + 180) + n * 60), cm: n ? 10 : 22, lugar: n ? "Otro lugar" : "Espalda", logo: null, nombre: "", crudo: null, fondo: true });
+    const atras = E.vista === "espalda";
+    E.extras.push({ id: crypto.randomUUID(), x: 500, y: atras ? Math.min(760, 400 + n * 60) : Math.min(760, Math.max(420, zAct().y + 180) + n * 60), cm: n ? 10 : 22, lugar: atras ? "Espalda" : n ? "Otro lugar" : "Espalda", lado: atras ? "espalda" : "frente", logo: null, nombre: "", crudo: null, fondo: true });
     capaActiva = E.extras.length - 1;
     pintarCapas();
     pedirRender();
@@ -1230,7 +1280,7 @@
   };
   let arrastre = null;
   lienzo.addEventListener("pointerdown", (e) => {
-    if (!caja) return;
+    if (!caja && !cajas.some(Boolean)) return;
     const q = aLienzo(e);
     const h = 18;
     for (let i = cajas.length - 1; i >= 0; i--) {
@@ -1243,6 +1293,7 @@
       return;
     }
     activar(-1);
+    if (!caja) return;
     if (q.x < caja.x0 - h || q.x > caja.x1 + h || q.y < caja.y0 - h || q.y > caja.y1 + h) return;
     arrastre = { id: e.pointerId, x: q.x, y: q.y, dx: E.dx, dy: E.dy };
     lienzo.setPointerCapture(e.pointerId);
@@ -1304,9 +1355,33 @@
   ["#texto", "#letra", "#colorTexto"].forEach((s) => $(s).addEventListener("input", rehacerTexto));
 
   // Diseño comercial: prenda y logo exactos del editor, con alpha y sin ficha.
-  function renderDiseno(S) {
-    const c = ZR.lienzo(S, S);
-    c.getContext("2d").drawImage(lienzo, 0, 0, S, S);
+  // Imagen que se guarda con el pedido. Con logos en la espalda: frente y espalda lado a lado (2:1).
+  async function renderDiseno(S) {
+    if (!tieneEspalda()) {
+      if (E.vista === "frente") {
+        const c = ZR.lienzo(S, S);
+        c.getContext("2d").drawImage(lienzo, 0, 0, S, S);
+        return c;
+      }
+    }
+    const v = renderVersion;
+    const frente = ZR.lienzo(1000, 1000);
+    if (!(await dibujarVista(frente.getContext("2d"), "frente", v, false))) throw new Error("La vista previa cambió. Intenta agregarla otra vez.");
+    if (!tieneEspalda()) {
+      const c = ZR.lienzo(S, S);
+      c.getContext("2d").drawImage(frente, 0, 0, S, S);
+      return c;
+    }
+    const atras = ZR.lienzo(1000, 1000);
+    if (!(await dibujarVista(atras.getContext("2d"), "espalda", v, false))) throw new Error("La vista previa cambió. Intenta agregarla otra vez.");
+    const c = ZR.lienzo(S * 2, S);
+    const g = c.getContext("2d");
+    g.drawImage(frente, 0, 0, S, S);
+    g.drawImage(atras, S, 0, S, S);
+    g.fillStyle = "#4a4a4e";
+    g.font = `600 ${Math.round(S * 0.03)}px Archivo, Arial, sans-serif`;
+    g.fillText("FRENTE", S * 0.04, S * 0.06);
+    g.fillText("ESPALDA", S * 1.04, S * 0.06);
     return c;
   }
   // Descarga técnica: conserva fondo y ficha; no se usa como imagen del membrete.
@@ -1702,8 +1777,10 @@
     const tieneRender = !!(E.modo === "imagen" ? E.logo : E.texto.trim());
     const original = E.modo === "imagen" && E.logo ? archivoActual : null;
     const logoPreparado = tieneRender ? await logoActual() : null;
-    const logoGeometria = logoPreparado && caja ? normalizarGeometria({anchoPx:logoPreparado.width,altoPx:logoPreparado.height,anchoCm:Math.round((caja.x1-caja.x0)/p.pxPorCm*100)/100}) : null;
-    const render = tieneRender ? await new Promise((ok) => renderDiseno(1200).toBlob(ok, "image/png")) : null;
+    const cajaFrente = E.vista === "frente" ? caja : (await dibujarVista(ZR.lienzo(1000, 1000).getContext("2d"), "frente", renderVersion, false))?.caja;
+    const logoGeometria = logoPreparado && cajaFrente ? normalizarGeometria({anchoPx:logoPreparado.width,altoPx:logoPreparado.height,anchoCm:Math.round((cajaFrente.x1-cajaFrente.x0)/p.pxPorCm*100)/100}) : null;
+    const lienzoPedido = tieneRender ? await renderDiseno(1200) : null;
+    const render = lienzoPedido ? await new Promise((ok) => lienzoPedido.toBlob(ok, "image/png")) : null;
     if (tieneRender && !render) throw new Error("No se pudo guardar el render. Intenta otra vez.");
     const item = {
       id: crypto.randomUUID(),
@@ -1727,7 +1804,7 @@
       logo,
       colorLogo: E.modo === "texto" ? `HEX ${E.colorTexto.toUpperCase()}` : E.tinta === "original" ? "Original del archivo" : `${nombreTinta()} (${E.tinta.toUpperCase()})`,
       pantone: E.pantone,
-      notas: [E.notas.trim(), E.extras.length && tieneRender ? "Logos adicionales (se ven en el render): " + E.extras.map((x, i) => `${i + 2}) ${x.lugar} · «${x.nombre}» · ${cm(x.cm)}`).join("; ") : ""].filter(Boolean).join(" · ").slice(0, 1500),
+      notas: [E.notas.trim(), E.extras.length && tieneRender ? "Logos adicionales (se ven en el render): " + E.extras.map((x, i) => `${i + 2}) ${x.lugar}${x.lado === "espalda" ? " (espalda)" : ""} · «${x.nombre}» · ${cm(x.cm)}`).join("; ") : ""].filter(Boolean).join(" · ").slice(0, 1500),
       mini,
       tieneLogo: !!original,
       tieneRender,

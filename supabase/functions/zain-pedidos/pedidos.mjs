@@ -500,7 +500,7 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='POST'&&op==='actualizar') {
         const b=await jsonBody(request);validateID(b.id);
         if(!STATES.includes(b.estado)||!Number.isInteger(b.version)||b.version<0)fail(400,'Revisa el estado de la solicitud.');
-        const result=await sb('/rest/v1/rpc/zain_actualizar_pedido',{method:'POST',body:JSON.stringify({p_id:b.id,p_version:b.version,p_estado:b.estado,p_notas:text(b.notas,5000),p_actor:user.id})});
+        const result=await sb('/rest/v1/rpc/zain_actualizar_pedido',{method:'POST',body:JSON.stringify({p_id:b.id,p_version:b.version,p_estado:b.estado,p_notas:text(b.notas,5000),p_actor:user.id,...(b.sinAnticipo===true?{p_sin_anticipo:true}:{})})});
         if(!result)fail(409,'Tu compañero modificó este pedido. Recarga para ver el cambio antes de guardarlo.');
         if(result.error)fail(409,result.error);
         return response(200,{pedido:publicRow(result)});
