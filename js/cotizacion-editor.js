@@ -1,5 +1,5 @@
 import {pesos} from './cotizacion-core.js?v=20';
-import {esc} from './cotizacion-vista.js?v=14';
+import {esc} from './cotizacion-vista.js?v=15';
 import {referenciaLista} from './referencia-color.js?v=1';
 const val=n=>n==null?'':(n/100).toFixed(2);
 const field=(name,label,value,type='number',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01" inputmode="decimal"':''} ${extra}></label>`;

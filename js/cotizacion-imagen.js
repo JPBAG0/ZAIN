@@ -26,8 +26,11 @@ async function limpiar(src,sku){
   g.putImageData(d,0,0);const blob=await new Promise((ok,mal)=>output.toBlob(b=>b?ok(b):mal(Error('Imagen no disponible')),'image/png'));return URL.createObjectURL(blob);
  }finally{for(const c of lienzos)c.width=c.height=0;if(img)img.removeAttribute('src');if(mask)mask.removeAttribute('src');}
 }
+// Diseño con frente y espalda lado a lado (2:1): la cotización le da todo el ancho de la tarjeta.
+const proporciones=new Map();
+const esAncha=src=>{if(!proporciones.has(src)){proporciones.set(src,cargar(src).then(img=>{const a=img.naturalWidth/img.naturalHeight>1.4;img.removeAttribute('src');return a;}).catch(()=>false));if(proporciones.size>48)proporciones.delete(proporciones.keys().next().value);}return proporciones.get(src);};
 export async function prepararImagenes(q,imagenes){
  const result={},turn=epoca;
- for(const p of q.partidas){const v=imagenes?.[p.indice];if(v?.error||v?.pendiente){result[p.indice]=v;continue;}if(!v?.src){const ref=await referenciaTenida(p.sku,p.color);if(turn!==epoca)return result;if(ref)result[p.indice]={src:ref,referencia:true};continue;}if(v.referencia){result[p.indice]=v;continue;}const key=p.sku+'|'+v.src;if(!cache.has(key)){const tarea=cola.then(()=>turn===epoca?limpiar(v.src,p.sku):v.src).catch(()=>v.src);cola=tarea.then(()=>{});cache.set(key,tarea);if(cache.size>24){const old=cache.keys().next().value;liberar(old,cache.get(old));cache.delete(old);}}const src=await cache.get(key);if(turn!==epoca)return result;result[p.indice]={...v,src};}
+ for(const p of q.partidas){const v=imagenes?.[p.indice];if(v?.error||v?.pendiente){result[p.indice]=v;continue;}if(!v?.src){const ref=await referenciaTenida(p.sku,p.color);if(turn!==epoca)return result;if(ref)result[p.indice]={src:ref,referencia:true};continue;}if(v.referencia){result[p.indice]=v;continue;}const key=p.sku+'|'+v.src;if(!cache.has(key)){const tarea=cola.then(()=>turn===epoca?limpiar(v.src,p.sku):v.src).catch(()=>v.src);cola=tarea.then(()=>{});cache.set(key,tarea);if(cache.size>24){const old=cache.keys().next().value;liberar(old,cache.get(old));cache.delete(old);}}const src=await cache.get(key);if(turn!==epoca)return result;const ancha=await esAncha(src);if(turn!==epoca)return result;result[p.indice]={...v,src,...(ancha?{ancha:true}:{})};}
  return result;
 }

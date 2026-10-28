@@ -1,4 +1,4 @@
-import {descargarPDF} from './cotizacion-pdf.js?v=19';
+import {descargarPDF} from './cotizacion-pdf.js?v=20';
 // Adaptar únicamente el contenido al membrete v3 existente; el diseño vive en cotizacion-pdf.js.
 export function adaptarModelos(q,imagenes=[]){
  const partidas=[],vistas={};

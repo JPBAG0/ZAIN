@@ -1,6 +1,6 @@
 import {anticipoDe,normalizarPagos} from './cotizacion-pagos.js';
 import {pesos} from './cotizacion-core.js?v=20';
-import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=14';
+import {logo,fecha,imagenDe,tallasDe} from './cotizacion-vista.js?v=15';
 let biblioteca;
 const cargarBiblioteca=()=>biblioteca||(biblioteca=import('./vendor/jspdf-4.2.1.umd.min.js').then(()=>globalThis.jspdf.jsPDF).catch(e=>{biblioteca=null;throw e;}));
 // Lista comercial explícita. Nunca serializar el objeto privado en el archivo.
@@ -75,14 +75,16 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  label('Tu selección',m,y,11.5,true);etq('Precios por pieza · personalización incluida',right,y,tenue,'right');y+=4.5;
  const assets=new Map();
  for(const p of q.partidas){const image=imagenDe(p,imagenes);if(image){const key=image.src;let asset=assets.get(key);if(!asset){asset={...await jpeg(key,900,'#e7e7e3',true),alias:'diseno-'+assets.size};assets.set(key,asset);}p.imagen={...asset,referencia:image.referencia};}}
- const fw=36,ix=m+fw+6,iw=right-ix-5;
+ const fwBase=36;
  q.partidas.forEach((p,i)=>{
+  // Frente y espalda lado a lado (2:1): la columna de la foto se duplica para que se vea grande.
+  const ancha=!!p.imagen&&p.imagen.w/p.imagen.h>1.4,fw=ancha?78:fwBase,ix=m+fw+6,iw=right-ix-5;
   const nombre=lines(p.nombre,iw,10,true),sub=lines(p.color||'',iw,7.5),chips=[p.tecnica,p.zona,p.cm?'Logo '+p.cm+' cm':'',p.sku].filter(Boolean),tallas=tallasDe(p.tallas),tallasTxt=!tallas&&p.tallas?lines('Tallas: '+p.tallas,iw,7.5):[];
   const grupos=p.preciosTalla?.length?p.preciosTalla:null,unitarias=sinCantidades?(grupos||[]).map(g=>({...g,lineas:lines(g.tallas,iw-40,8,false,true)})):null,extra=unitarias?Math.max(0,unitarias.reduce((n,g)=>n+g.lineas.length,0)-1)*4.5:grupos?(grupos.length-1)*4.5:0;
-  const h=Math.max(36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11+extra);
+  const h=Math.max(ancha?50:36,8+nombre.length*4.2+sub.length*3.3+6.5+(tallas?10.5:0)+tallasTxt.length*3.3+11+extra);
   espacio(h+3);
   caja(m,y,width,h);doc.setFillColor(...mesa);doc.rect(m+.15,y+.15,fw,h-.3,'F');
-  if(p.imagen){const a=p.imagen,bw=fw-5,bh=h-11.5,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+2.5+(bw-a.w*k)/2,y+4.5+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
+  if(p.imagen){const a=p.imagen,arriba=ancha?9:4.5,bw=fw-5,bh=h-7-arriba,k=Math.min(bw/a.w,bh/a.h);doc.addImage(a.src,'JPEG',m+2.5+(bw-a.w*k)/2,y+arriba+(bh-a.h*k)/2,a.w*k,a.h*k,a.alias);}else{label('Vista previa',m+fw/2,y+h/2,7,false,tenue,'center');label('por confirmar',m+fw/2,y+h/2+3.5,7,false,tenue,'center');}
   font(5.5,false,tenue,true);label((p.imagen?.referencia?'Referencia del modelo':p.imagen?'Diseño solicitado':'').toUpperCase(),m+2.5,y+h-2.5,5.5,false,tenue,'left',true);
   doc.setFillColor(...tinta);doc.roundedRect(m+3,y+3,8,5,1.2,1.2,'F');label(String(i+1).padStart(2,'0'),m+7,y+6.6,7,true,blanco,'center',true);
   let yy=y+7;for(const l of nombre){label(l,ix,yy,10,true);yy+=4.2;}for(const l of sub){label(l,ix,yy,7.5,false,tenue);yy+=3.3;}yy+=1.5;

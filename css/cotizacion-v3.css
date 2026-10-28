@@ -116,3 +116,7 @@
  .v3-cierre,.v3-caja,.v3-pasos,.v3-partida{break-inside:avoid}
  .v3-wa{display:none}
 }
+
+/* Frente y espalda lado a lado: la foto ocupa todo el ancho de la tarjeta y los datos van abajo (28-oct-2026). */
+.v3-partida--ancha{grid-template-columns:1fr}.v3-partida--ancha .v3-imagen img{height:280px}
+@media (max-width:640px){.v3-partida--ancha .v3-imagen img{height:190px}}

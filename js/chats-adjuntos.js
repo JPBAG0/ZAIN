@@ -26,7 +26,7 @@ export async function pdfModelo(id,api){
    imagenes[i]={src:canvas.toDataURL('image/png'),nota:(s.tecnica?(logo?'Logo en '+(z?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+col.nombre};
   }finally{canvas.width=canvas.height=0;}
  }
- const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=8'),{crearPDF}=await import('./cotizacion-pdf.js?v=19');
+ const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=9'),{crearPDF}=await import('./cotizacion-pdf.js?v=20');
  const q={...x.comercial,folio:x.folio},a=adaptarModelos(q,imagenes),blob=await crearPDF(a.cotizacion,{sinCantidades:true,folio:x.folio,imagenes:a.imagenes});
  return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
 }
@@ -35,7 +35,7 @@ export async function pdfPedido(id,api){
  const q=c?.publicada;if(!q?.partidas?.length)throw Error('Este pedido todavía no tiene una cotización publicada.');
  const imagenes={};
  for(const f of p.archivos||[]){if(f.kind!=='render')continue;const d=await api('archivo',{id,item:f.item,kind:'render'});imagenes[f.item]={src:d.url,referencia:false};}
- const {prepararImagenes}=await import('./cotizacion-imagen.js?v=4'),{crearPDF}=await import('./cotizacion-pdf.js?v=19');
+ const {prepararImagenes}=await import('./cotizacion-imagen.js?v=5'),{crearPDF}=await import('./cotizacion-pdf.js?v=20');
  const blob=await crearPDF(q,{folio:p.folio,imagenes:await prepararImagenes(q,imagenes)});
  return prepararAdjunto(new File([blob],nombrePDF(p.folio),{type:'application/pdf'}),{tipo:'pedido',id,version:q.revision});
 }
