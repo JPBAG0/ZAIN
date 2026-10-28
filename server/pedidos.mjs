@@ -5,6 +5,7 @@ import {createGenerales} from './finanzas-generales.mjs';
 import {createCaja} from './caja.mjs';
 import {createSeguimiento} from './cotizacion-seguimiento.mjs';
 import {createAvisos} from './avisos.mjs';
+import {createCorreo} from './correo-prospeccion.mjs';
 import {normalizarGeometria} from '../js/logo-medidas.js';
 import { randomUUID, randomBytes, createHash, createHmac, timingSafeEqual } from 'node:crypto';
 import { Buffer } from 'node:buffer';
@@ -209,6 +210,7 @@ export function createHandler(env={}, fetcher=fetch) {
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
   const avisosEnabled=env.ZAIN_AVISOS_ENABLED==='true',avisos=createAvisos({sb,fail,fetcher});
   const fondo=p=>{if(globalThis.EdgeRuntime?.waitUntil){globalThis.EdgeRuntime.waitUntil(p);return;}return p;};
+  const correo=createCorreo({sb,fail,avisos,secreto:env.ZAIN_BREVO_SECRETO,habilitado:env.ZAIN_CORREO_ENABLED==='true'});
   const wa=createWhatsApp({sb,fail,row,storageURL,base,serviceHeaders,fetcher,secreto:env.ZAIN_WA_SECRETO,habilitado:env.ZAIN_WA_ENABLED==='true',receipt,plantillas:C.seguimientoWhatsApp||[],
    catalogo:async()=>{const cat=await currentCatalog();return cat.productos.filter(p=>p.activo!==false).map(p=>({sku:p.sku,nombre:p.nombreComercial||p.nombre,tallas:p.tallas||[],minimo:p.minimoPiezas||cat.minimoPedido||1,paso:p.pasoPiezas||1,colores:p.colores.map(id=>({id,nombre:cat.colores.find(c=>c.id===id)?.nombre||id})),tecnicas:p.tecnicas.map(id=>({id,nombre:cat.tecnicas.find(t=>t.id===id)?.nombre||id})),zonas:p.zonas.map(z=>({id:z.id,nombre:z.nombre,max:z.max}))}));},
    crearDatos:async b=>{const cat=await currentCatalog(),p=cat.productos.find(p=>p.sku===b.sku&&p.activo!==false),color=cat.colores.find(c=>c.id===b.color_id),tecnica=cat.tecnicas.find(t=>t.id===b.tecnica),zona=p?.zonas.find(z=>z.id===b.zona);
@@ -227,6 +229,9 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='OPTIONS'){headers['Access-Control-Allow-Methods']='GET, POST, OPTIONS';headers['Access-Control-Allow-Headers']='Content-Type, Authorization';return new Response(null,{status:204,headers});}
       const url=new URL(request.url),op=url.searchParams.get('op')||'config';
       if(op==='wa-puente'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await wa.puente(request,await jsonBody(request));if(d?.nuevo&&d?.entrante&&avisosEnabled)await fondo(avisos.enviar({title:'Nuevo mensaje de WhatsApp',body:'Abre Chats en Gestión para responder.',url:'/gestion-zain#chat/'+d.id,tag:'wa-'+d.id}));return response(200,d);}
+      // Vigilante de la prospección por correo: Brevo (webhook) y el resumen programado entran con la clave secreta.
+      if(op==='correo-evento'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.evento(url,await jsonBody(request));if(avisosEnabled)for(const a of d.avisos)await fondo(avisos.enviar(a));return response(200,{guardados:d.guardados});}
+      if(op==='correo-resumen'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.resumen(url);return response(200,{enviados:d.enviados});}
       if(request.method==='GET'&&op==='config')return response(200,{activo:ready,...(ready?{supabaseUrl:base,publishableKey:publicKey}:{})});
       if(request.method==='GET'&&op==='catalogo-publico'){
         if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');
