@@ -74,4 +74,8 @@ test('la Edge recibe el webhook de Brevo sin origen ni sesión',async()=>{
  const r=await post(SECRETO,brevo('click',{URL:'https://wa.me/1'}));
  assert.equal(r.status,200);assert.deepEqual(await r.json(),{guardados:1});assert.equal(pedidos.length,1);
  assert.equal((await h(new Request('https://zain.test/api/pedidos?op=correo-evento&k='+SECRETO))).status,405);
+ const porEncabezado=await h(new Request('https://zain.test/api/pedidos?op=correo-evento',{method:'POST',headers:{'Content-Type':'application/json','x-zain-clave':SECRETO},body:JSON.stringify(brevo('spam'))}));
+ assert.equal(porEncabezado.status,200,'la clave también entra por encabezado');
+ const porBearer=await h(new Request('https://zain.test/api/pedidos?op=correo-evento',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+SECRETO},body:JSON.stringify(brevo('unsubscribe'))}));
+ assert.equal(porBearer.status,200,'Brevo con autenticación Bearer');
 });

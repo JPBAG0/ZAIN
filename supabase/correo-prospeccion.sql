@@ -30,8 +30,8 @@ create extension if not exists pg_net;
 select cron.unschedule(jobid) from cron.job where jobname='zain-correo-resumen';
 select cron.schedule('zain-correo-resumen','0 0,16,20 * * *',$job$
   select net.http_post(
-    url:='https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos?op=correo-resumen&k='||(select decrypted_secret from vault.decrypted_secrets where name='zain_brevo_secreto'),
+    url:='https://upzecgfgdtllxdhshhkd.supabase.co/functions/v1/zain-pedidos?op=correo-resumen',
     body:='{}'::jsonb,
-    headers:='{"Content-Type":"application/json"}'::jsonb,
+    headers:=jsonb_build_object('Content-Type','application/json','x-zain-clave',(select decrypted_secret from vault.decrypted_secrets where name='zain_brevo_secreto')),
     timeout_milliseconds:=15000)
 $job$);

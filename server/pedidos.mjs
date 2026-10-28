@@ -230,8 +230,8 @@ export function createHandler(env={}, fetcher=fetch) {
       const url=new URL(request.url),op=url.searchParams.get('op')||'config';
       if(op==='wa-puente'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await wa.puente(request,await jsonBody(request));if(d?.nuevo&&d?.entrante&&avisosEnabled)await fondo(avisos.enviar({title:'Nuevo mensaje de WhatsApp',body:'Abre Chats en Gestión para responder.',url:'/gestion-zain#chat/'+d.id,tag:'wa-'+d.id}));return response(200,d);}
       // Vigilante de la prospección por correo: Brevo (webhook) y el resumen programado entran con la clave secreta.
-      if(op==='correo-evento'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.evento(url,await jsonBody(request));if(avisosEnabled)for(const a of d.avisos)await fondo(avisos.enviar(a));return response(200,{guardados:d.guardados});}
-      if(op==='correo-resumen'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.resumen(url);return response(200,{enviados:d.enviados});}
+      if(op==='correo-evento'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.evento(url,await jsonBody(request),request.headers);if(avisosEnabled)for(const a of d.avisos)await fondo(avisos.enviar(a));return response(200,{guardados:d.guardados});}
+      if(op==='correo-resumen'){if(request.method!=='POST')fail(405,'Usa POST.');const d=await correo.resumen(url,request.headers);return response(200,{enviados:d.enviados});}
       if(request.method==='GET'&&op==='config')return response(200,{activo:ready,...(ready?{supabaseUrl:base,publishableKey:publicKey}:{})});
       if(request.method==='GET'&&op==='catalogo-publico'){
         if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');

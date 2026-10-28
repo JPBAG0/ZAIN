@@ -45,19 +45,25 @@ export function resumen(filas){
  return {title:'Prospección por correo · hoy',body:partes.join(' · ')+(versiones.length?'\n'+versiones.map(linea).join(' | '):''),url:'/gestion-zain',tag:'correo-resumen'};
 }
 export function createCorreo({sb,fail,avisos,secreto,habilitado}){
- const autorizar=url=>{if(!habilitado)fail(404,'No disponible.');if(!secretoValido(url.searchParams.get('k')||'',secreto))fail(401,'No autorizado.');};
+ // La clave va en un encabezado (x-zain-clave, o «Authorization: Bearer» desde Brevo); la URL (?k=) queda
+ // solo de respaldo por si la pantalla de Brevo no ofrece autenticación.
+ const autorizar=(url,headers)=>{
+  if(!habilitado)fail(404,'No disponible.');
+  const bearer=(/^Bearer\s+(\S+)$/i.exec(headers?.get('authorization')||'')||[])[1];
+  if(!secretoValido(headers?.get('x-zain-clave')||bearer||url.searchParams.get('k')||'',secreto))fail(401,'No autorizado.');
+ };
  return {
   // Brevo manda un evento por llamada (o una lista si se activa el envío por lotes).
-  async evento(url,body){
-   autorizar(url);
+  async evento(url,body,headers){
+   autorizar(url,headers);
    const filas=(Array.isArray(body)?body:[body]).slice(0,200).map(normalizar).filter(Boolean);
    if(!filas.length)return {guardados:0,avisos:[]};
    // Un renglón por correo, campaña y evento: los repetidos (otro clic, otra apertura) se ignoran y no repiten aviso.
    const nuevos=await sb('/rest/v1/zain_correo_eventos?on_conflict=evento,email,campana_id',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates,return=representation'},body:JSON.stringify(filas)})||[];
    return {guardados:nuevos.length,avisos:nuevos.map(aviso).filter(Boolean)};
   },
-  async resumen(url){
-   autorizar(url);
+  async resumen(url,headers){
+   autorizar(url,headers);
    const filas=await sb('/rest/v1/zain_correo_eventos?recibido=gte.'+encodeURIComponent(inicioDelDia())+'&select=evento,email,campana&limit=10000')||[];
    const r=resumen(filas);
    return {aviso:r,enviados:r?await avisos.enviar(r):0};
