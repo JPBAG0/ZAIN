@@ -12,6 +12,8 @@ begin
   s:=regexp_replace(s,'"'||par[1]||'"','"'||par[2]||'"','g');
   -- con cantidad, rango o clave: «CH 10», «CH: 2», «CH a EG», «EEG|Blanco»
   s:=regexp_replace(s,'(^|["[:space:]·])'||par[1]||'(?=[|:]|[[:space:]][0-9]|[[:space:]]a[[:space:]])','\1'||par[2],'g');
+  -- final de un rango: «S a EG»
+  s:=regexp_replace(s,'([[:space:]]a[[:space:]])'||par[1]||'"','\1'||par[2]||'"','g');
  end loop;
  return s;
 end $$;
