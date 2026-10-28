@@ -203,6 +203,8 @@ module.exports = {
       }
     ]
   },
+  "mostrarTrabajos": false,
+  "empresasClientes": [],
   "clientesSatisfechos": [
     {
       "id": "gorras-bordadas",

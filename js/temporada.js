@@ -29,7 +29,13 @@ if(mostrar){
  }
 }
 const testimonios=testimoniosPublicables(C.clientesSatisfechos);
-$('#clientes-satisfechos').hidden=!testimonios.length;$('#navClientes').hidden=!testimonios.length;
+// 28-oct-2026 (JP): «Trabajos recientes» queda oculto mientras mostrarTrabajos sea false; en su lugar van los logos de empresas clientes.
+const verTrabajos=C.mostrarTrabajos!==false&&testimonios.length>0;
+const logos=(C.empresasClientes||[]).filter(x=>x&&x.nombre&&/^img\/clientes\/[a-z0-9-]+\.(webp|png|svg)$/.test(x.logo||''));
+$('#clientes-satisfechos').hidden=!verTrabajos;
+$('#empresas-clientes').hidden=!logos.length;
+$('#logosClientes').innerHTML=logos.map(x=>`<li><img src="${esc(x.logo)}" alt="${esc(x.nombre)}" loading="lazy" decoding="async"></li>`).join('');
+const nav=$('#navClientes');nav.hidden=!verTrabajos&&!logos.length;if(!verTrabajos&&logos.length){nav.href='#empresas-clientes';nav.textContent='Clientes';}
 // galería de trabajos solo con fotos; producto y técnica van en el alt. La frase y la empresa (con permiso) salen como pie
 // fotos casi completas en columnas tipo mosaico (3 en PC, 2 en celular); la tarjeta para cotizar va al final
 const waTrabajos=`https://wa.me/${esc(String(C.whatsapp).replace(/\D/g,''))}?text=${esc(encodeURIComponent('Hola, vi sus trabajos en la página y quiero cotizar con mi logo.'))}`;

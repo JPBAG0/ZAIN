@@ -203,6 +203,8 @@
       }
     ]
   },
+  "mostrarTrabajos": false,
+  "empresasClientes": [],
   "clientesSatisfechos": [
     {
       "id": "gorras-bordadas",
