@@ -431,6 +431,7 @@ p { margin: 0; }
   margin-top: 8px; padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--tinta); background: var(--algodon);
 }
+.taller__total[hidden] { display: none; }
 .taller__total > div { display: grid; line-height: 1.25; min-width: 0; }
 /* el botón nunca se encoge: el texto del mínimo es el que se acomoda en varias líneas */
 .taller__total > .btn { flex: none; white-space: nowrap; }

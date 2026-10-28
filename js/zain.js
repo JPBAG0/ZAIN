@@ -23,6 +23,8 @@
   const color = (id) => C.colores.find((c) => c.id === id || c.compatHash === compatHash(id));
   const tecnica = (id) => C.tecnicas.find((t) => t.id === id);
   const minimo = (p) => p.minimoPiezas || 0;
+  // El mínimo es por modelo y color: con tallas, cada talla puede quedar en 0.
+  const minimoTalla = (p) => (p?.tallas?.length ? 0 : minimo(p));
   const pasoCantidad = (p) => p.pasoPiezas || 1;
   const cantidadValida = (p, n) => n >= Math.max(1, minimo(p)) && (n - minimo(p)) % pasoCantidad(p) === 0;
   const reglaCantidad = (p) => {
@@ -718,12 +720,12 @@
     const tallas = p.tallas.length ? p.tallas : ["Piezas"];
     tallas.forEach((t) => {
       if (!(t in E.tallas)) E.tallas[t] = 0;
-      if (minimo(p) && E.tallas[t] < minimo(p)) E.tallas[t] = minimo(p);
+      if (minimoTalla(p) && E.tallas[t] < minimoTalla(p)) E.tallas[t] = minimoTalla(p);
     });
     $("#oTallas").innerHTML = tallas
       .map(
         (t) => `<label class="talla"><span>${esc(t)}</span>
-          <span class="talla__ctl"><button type="button" data-tt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimo(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${E.tallas[t] || 0}" data-talla="${esc(t)}" aria-label="Piezas talla ${esc(t)}" /><button type="button" data-tt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
+          <span class="talla__ctl"><button type="button" data-tt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimoTalla(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${E.tallas[t] || 0}" data-talla="${esc(t)}" aria-label="Piezas talla ${esc(t)}" /><button type="button" data-tt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
       )
       .join("");
     ajustarTamano();
@@ -754,6 +756,8 @@
     }
     pt.textContent = nuevo;
     $("#precioDetalle").textContent = reglaCantidad(p);
+    // La barra de agregar aparece hasta que eligen al menos una pieza.
+    $(".taller__total").hidden = !E.piezas;
   }
 
   // logo de un solo color (hilo o tinta): se pinta la silueta del logo subido
@@ -1080,7 +1084,7 @@
     const b = e.target.closest("[data-tt]");
     if (!b) return;
     const t = b.dataset.tt;
-    E.tallas[t] = Math.min(pasoCantidad(pAct()) > 1 ? 9950 : 9999, Math.max(minimo(pAct()), (Number(E.tallas[t]) || 0) + Number(b.dataset.d) * pasoCantidad(pAct())));
+    E.tallas[t] = Math.min(pasoCantidad(pAct()) > 1 ? 9950 : 9999, Math.max(minimoTalla(pAct()), (Number(E.tallas[t]) || 0) + Number(b.dataset.d) * pasoCantidad(pAct())));
     $(`input[data-talla="${CSS.escape(t)}"]`).value = E.tallas[t];
     contarPiezas();
   });
@@ -1386,22 +1390,24 @@
     return c;
   }
   // Descarga técnica: conserva fondo y ficha; no se usa como imagen del membrete.
-  function renderFinal(S) {
-    const c = ZR.lienzo(S, S);
+  // Con logos en la espalda, fuente es el compuesto 2:1 (frente y espalda) y la descarga sale apaisada.
+  function renderFinal(S, fuente = lienzo) {
+    const r = fuente.width / fuente.height, W = Math.round(S * r);
+    const c = ZR.lienzo(W, S);
     const g = c.getContext("2d");
     g.fillStyle = "#e9e9e6";
-    g.fillRect(0, 0, S, S);
-    g.drawImage(lienzo, S * 0.06, S * 0.02, S * 0.88, S * 0.88);
+    g.fillRect(0, 0, W, S);
+    g.drawImage(fuente, (W - S * 0.88 * r) / 2, S * 0.02, S * 0.88 * r, S * 0.88);
     const p = pAct();
     const z = zAct();
     g.fillStyle = "#141416";
     g.font = `600 ${Math.round(S * 0.022)}px Archivo, Arial, sans-serif`;
     g.textBaseline = "alphabetic";
-    g.fillText(`${C.marca} · ${p.nombre} · ${nombreColor(color(E.c))}`, S * 0.05, S * 0.925, S * 0.90);
+    g.fillText(`${C.marca} · ${p.nombre} · ${nombreColor(color(E.c))}`, S * 0.05, S * 0.925, W - S * 0.1);
     g.font = `400 ${Math.round(S * 0.019)}px 'JetBrains Mono', monospace`;
     g.fillStyle = "#4a4a4e";
-    g.fillText(`${tecnica(E.t).nombre} · ${z.nombre} · logo ${cm(E.cm)}${p.renderOrientativo ? " solicitado" : ""}`, S * 0.05, S * 0.957, S * 0.90);
-    if (p.renderOrientativo) { g.font = `500 ${Math.round(S * 0.015)}px Arial, sans-serif`; g.fillText("VISTA PREVIA · color, tamaño y acabado por confirmar", S * 0.05, S * 0.985, S * 0.90); }
+    g.fillText(`${tecnica(E.t).nombre} · ${z.nombre} · logo ${cm(E.cm)}${p.renderOrientativo ? " solicitado" : ""}${fuente !== lienzo ? " · con logo en la espalda" : ""}`, S * 0.05, S * 0.957, W - S * 0.1);
+    if (p.renderOrientativo) { g.font = `500 ${Math.round(S * 0.015)}px Arial, sans-serif`; g.fillText("VISTA PREVIA · color, tamaño y acabado por confirmar", S * 0.05, S * 0.985, W - S * 0.1); }
     return c;
   }
   const descargarCanvas = (c, nombre) =>
@@ -1414,7 +1420,12 @@
       a.remove();
       setTimeout(() => URL.revokeObjectURL(a.href), 4000);
     }, "image/png");
-  $("#descargar").addEventListener("click", () => descargarCanvas(renderFinal(1200), `${C.marca.toLowerCase()}-${E.p}-${E.c}.png`));
+  $("#descargar").addEventListener("click", async () => {
+    try {
+      const fuente = tieneEspalda() ? await renderDiseno(1000) : lienzo;
+      descargarCanvas(renderFinal(1200, fuente), `${C.marca.toLowerCase()}-${E.p}-${E.c}.png`);
+    } catch (err) { aviso(err.message || "No se pudo descargar. Intenta otra vez.", true); }
+  });
 
   // abrir el personalizador con una prenda elegida
   function abrirEnTaller(m) {
@@ -1573,7 +1584,7 @@
     $("#rapTallas").innerHTML = rTallas()
       .map(
         (t) => `<label class="talla"><span>${esc(t)}</span>
-          <span class="talla__ctl"><button type="button" data-rtt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimo(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${R.tallas[t] || 0}" data-rtalla="${esc(t)}" aria-label="Piezas ${esc(t)}" /><button type="button" data-rtt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
+          <span class="talla__ctl"><button type="button" data-rtt="${esc(t)}" data-d="-1" aria-label="Menos ${esc(t)}">−</button><input class="num" type="number" inputmode="numeric" min="${minimoTalla(p)}" step="${pasoCantidad(p)}" max="${pasoCantidad(p) > 1 ? 9950 : 9999}" value="${R.tallas[t] || 0}" data-rtalla="${esc(t)}" aria-label="Piezas ${esc(t)}" /><button type="button" data-rtt="${esc(t)}" data-d="1" aria-label="Más ${esc(t)}">+</button></span></label>`,
       )
       .join("");
     rTotal();
@@ -1639,7 +1650,7 @@
     }
     if (tt) {
       const k = tt.dataset.rtt;
-      R.tallas[k] = Math.min(pasoCantidad(prod(R.p)) > 1 ? 9950 : 9999, Math.max(minimo(prod(R.p)), (Number(R.tallas[k]) || 0) + Number(tt.dataset.d) * pasoCantidad(prod(R.p))));
+      R.tallas[k] = Math.min(pasoCantidad(prod(R.p)) > 1 ? 9950 : 9999, Math.max(minimoTalla(prod(R.p)), (Number(R.tallas[k]) || 0) + Number(tt.dataset.d) * pasoCantidad(prod(R.p))));
       $$("[data-rtalla]", rapidoEl).find((i) => i.dataset.rtalla === k).value = R.tallas[k];
       $("#rapAviso").textContent = "";
       rTotal();
