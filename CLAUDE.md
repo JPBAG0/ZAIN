@@ -16,6 +16,7 @@ JP pidió (27-oct) cuatro arreglos de Gestión y del personalizador. Rama `claud
 - **Libro de Finanzas por cuenta** (pedido el mismo día, solo pantalla):
   - tarjetas Todas / Juan Pablo / García / Caja ZAIN / Oficina JP / Oficina García;
   - con una cuenta elegida, cada renglón muestra lo que entra (+) o sale (−) de ella (`efectoEn` en `js/control-caja.js`; los reembolsos salen de la Caja ZAIN); en «Todas», el efecto en las cajas;
+  - los repartos van aparte: «Todo sin repartos» y los totales de cada cuenta no los cuentan; el filtro «Repartos» los muestra solos;
   - casilla en cada movimiento y barra fija abajo con el total del filtro (entradas y salidas), los seleccionados y «Seleccionar todos».
 - **Estado (27-oct):** SQL aplicado y Edge `zain-pedidos` desplegado con el sí de JP; falta el push de la web.
 - **Publicar:**

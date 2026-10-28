@@ -159,3 +159,4 @@
 @media(hover:hover) and (pointer:fine){.fin-cuenta:hover{border-color:#1f2fd6}}
 @media(max-width:720px){.fin-cuentas{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.fin-cuenta{padding:8px 9px;min-height:48px}.fin-cuenta b{font-size:12.5px}.fin-libro-totales{grid-template-columns:1fr 1fr}.fin-libro-todos{grid-column:1/-1}}
 #cajaTotales label.fin-libro-todos{display:flex;flex-direction:row;align-items:center;gap:8px;margin:0}
+#finLibro #cajaFiltro{flex-wrap:wrap;overflow:visible}
