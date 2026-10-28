@@ -1,4 +1,4 @@
-import {prepararAdjunto,pdfModelo,pdfPedido} from './chats-adjuntos.js?v=5';
+import {prepararAdjunto,pdfModelo,pdfPedido} from './chats-adjuntos.js?v=6';
 // Solo personal autorizado. Mensajes y borradores en memoria; nunca localStorage ni disco.
 const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

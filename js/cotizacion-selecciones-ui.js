@@ -1,5 +1,5 @@
 import {configurar} from './cotizacion-core.js?v=21';
-import {esc,tallasDe} from './cotizacion-vista.js?v=15';
+import {esc,tallasDe} from './cotizacion-vista.js?v=16';
 import {seleccionesDe,itemCatalogo,modificarSelecciones} from './cotizacion-selecciones.js?v=4';
 // Misma zona «Libre» que el personalizador (js/zain.js) y validateOrder.
 const zonasDe=p=>[...p.zonas,{id:'libre',nombre:'Libre',x:500,y:430,max:Math.floor(820/(p.pxPorCm||8)),orientativa:true,libre:true}];

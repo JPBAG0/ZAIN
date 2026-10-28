@@ -1,6 +1,6 @@
 import {terminosPago,anticipoDe} from './cotizacion-pagos.js';
 import {pesos} from './cotizacion-core.js';
-import {referenciaLista} from './referencia-color.js?v=1';
+import {referenciaLista} from './referencia-color.js?v=2';
 export const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const logo='<svg viewBox="0 0 370 150" role="img" aria-label="ZAIN"><path d="M0 0H75V12H24.5L85 139V150H0V139H60.5L0 12Z"/><path fill-rule="evenodd" d="M95 150L136 0H168L208 150H183L173.4 109H129L119.2 150ZM151.5 15L168.7 89H133.8Z"/><path d="M227 0H253V150H227Z"/><path d="M280 0H304V150H280ZM346 0H370V150H346ZM339.7 0H360L301 150H281Z"/></svg>';
 export const fecha=(value,soloFecha=false)=>{if(!value)return 'Por acordar';const d=new Date(soloFecha?value+'T12:00:00Z':value);return Number.isNaN(d.valueOf())?'Por acordar':d.toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Mexico_City'});};

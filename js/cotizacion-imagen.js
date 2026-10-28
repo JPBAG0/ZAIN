@@ -1,4 +1,4 @@
-import {referenciaTenida} from './referencia-color.js?v=1';
+import {referenciaTenida} from './referencia-color.js?v=2';
 // Derivados comerciales en memoria; originales intactos y sin base64 persistente.
 const cache=new Map();let remotos,epoca=0,cola=Promise.resolve();
 function liberar(key,valor){valor.then(src=>{if(src.startsWith('blob:')&&!key.endsWith('|'+src))URL.revokeObjectURL(src);});}
