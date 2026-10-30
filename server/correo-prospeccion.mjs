@@ -1,5 +1,5 @@
 // Vigilante de la prospección por correo (28-oct-2026): Brevo avisa cada evento de las campañas
-// y el equipo recibe un push al momento (clic, rebote, spam, baja) más un resumen 3 veces al día.
+// y el equipo recibe un push al momento (clic, spam, baja) más un resumen 3 veces al día.
 import {secretoValido} from './whatsapp.mjs';
 const EVENTOS=new Set(['delivered','opened','unique_opened','click','soft_bounce','hard_bounce','spam','unsubscribe','invalid_email','blocked']);
 const NOMBRE={unique_opened:'opened',invalid_email:'hard_bounce',blocked:'hard_bounce'};
@@ -28,7 +28,7 @@ export function aviso(x){
   const wa=/wa\.me|whatsapp/i.test(x.url);
   return {title:wa?'🔥 Clic en «Cotizar por WhatsApp»':'🔥 Clic en el correo de prospección',body:de+(wa?' abrió el WhatsApp de ZAIN. Atiende su mensaje o escríbele.':' abrió un enlace del correo. Buen momento para escribirle.'),url:'/gestion-zain',tag:'correo-'+x.email};
  }
- if(x.evento==='hard_bounce')return {title:'Rebote de correo',body:de+' no existe o no recibe correos. Brevo ya no le volverá a enviar.',url:'/gestion-zain',tag:'correo-rebote'};
+ // Los rebotes no avisan al momento (llegaban de a uno por correo, 29-oct): se cuentan en el resumen.
  if(x.evento==='spam')return {title:'⚠️ Queja de spam',body:de+' marcó el correo como spam. Si llegan 2 o más, conviene pausar los envíos.',url:'/gestion-zain',tag:'correo-spam'};
  if(x.evento==='unsubscribe')return {title:'Baja de correos',body:de+' pidió no recibir más correos. Brevo ya no le escribirá.',url:'/gestion-zain',tag:'correo-baja'};
  return null;

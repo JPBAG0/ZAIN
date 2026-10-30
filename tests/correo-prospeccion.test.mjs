@@ -17,12 +17,12 @@ test('normaliza eventos de Brevo y descarta lo que no sirve',()=>{
  assert.equal(normalizar(brevo('opened',{camp_id:'x'})).campana_id,0);
 });
 
-test('avisos al momento solo para clic, rebote, spam y baja',()=>{
+test('avisos al momento solo para clic, spam y baja',()=>{
  const x=normalizar(brevo('click',{URL:'https://wa.me/52133'}));
  const a=aviso(x);assert.match(a.title,/WhatsApp/);assert.match(a.body,/contacto@plasser\.mx \(versión A\)/);assert.equal(a.tag,'correo-contacto@plasser.mx');
  assert.match(aviso({...x,url:'https://zain.com.mx/?utm_source=correo'}).title,/Clic en el correo/);
  assert.match(aviso(normalizar(brevo('spam'))).title,/spam/);
- assert.match(aviso(normalizar(brevo('hard_bounce'))).title,/Rebote/);
+ assert.equal(aviso(normalizar(brevo('hard_bounce'))),null,'los rebotes van solo en el resumen');
  assert.match(aviso(normalizar(brevo('unsubscribe'))).title,/Baja/);
  assert.equal(aviso(normalizar(brevo('opened'))),null);
  assert.equal(aviso(normalizar(brevo('delivered'))),null);
