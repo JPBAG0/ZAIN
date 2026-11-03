@@ -1041,7 +1041,8 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 .pedido__cliente { display: grid; gap: 2px; padding-top: 4px; }
 .pedido__cliente .campo { margin-top: 6px; }
 .pedido__cliente .campo small { font-weight: 400; color: var(--tenue); }
-.pedido__cliente input[type="text"], .pedido__cliente input[type="tel"], .pedido__cliente input[type="date"] {
+.pedido__cliente .pedido__contacto { margin-top: 10px; font-size: 13px; color: var(--tenue); }
+.pedido__cliente input[type="text"], .pedido__cliente input[type="tel"], .pedido__cliente input[type="email"], .pedido__cliente input[type="date"] {
   min-height: 46px; width: 100%; min-width: 0; padding: 0 14px; border: 1px solid var(--linea); border-radius: 10px;
   background: var(--papel); font: inherit; font-size: 16px; font-weight: 400; color: var(--tinta);
 }

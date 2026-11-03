@@ -1451,19 +1451,27 @@
     return {...x,p:p.id,nombre:p.nombre,sku:p.sku,...(col ? {color:col.nombre,colorId:col.id,colorCodigo:""} : {})};
   }) : [];
   let paquete = null, revisionArchivos = 0, compartiendo = false;
-  // nombre, teléfono y fecha deseada: se recuerdan en este teléfono para el siguiente pedido
+  // nombre, teléfono, correo y fecha deseada: se recuerdan en este teléfono para el siguiente pedido
   const LLAVE_CLIENTE = "zain-cliente";
   const clienteGuardado = almacen.leer(LLAVE_CLIENTE, {});
   const cliente = {
     nombre: typeof clienteGuardado?.nombre === "string" ? clienteGuardado.nombre.slice(0, 120) : "",
     telefono: typeof clienteGuardado?.telefono === "string" ? clienteGuardado.telefono.slice(0, 24) : "",
+    correo: typeof clienteGuardado?.correo === "string" ? clienteGuardado.correo.slice(0, 254) : "",
     fecha: typeof clienteGuardado?.fecha === "string" && /^\d{4}-\d{2}-\d{2}$/.test(clienteGuardado.fecha) ? clienteGuardado.fecha : "",
   };
   const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   // 10 dígitos de México, o con lada de país (52…, +1…); el servidor lo guarda solo con dígitos
   const digitosTelefono = () => cliente.telefono.replace(/\D/g, "");
   const telefonoValido = () => { const d = digitosTelefono(); return d.length === 10 || (d.length >= 11 && d.length <= 15); };
-  const errorCliente = () => cliente.nombre.trim().length < 2 ? "nombre" : !telefonoValido() ? "telefono" : cliente.fecha && cliente.fecha < hoyISO() ? "fecha" : "";
+  const correoLimpio = () => cliente.correo.trim().toLowerCase();
+  const correoValido = () => /^[^\s@<>"',;]{1,64}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,24}$/.test(correoLimpio());
+  // Nombre obligatorio y al menos un contacto (teléfono o correo); el que se escriba tiene que ser válido.
+  const errorCliente = () => cliente.nombre.trim().length < 2 ? "nombre"
+    : !digitosTelefono() && !correoLimpio() ? "contacto"
+    : digitosTelefono() && !telefonoValido() ? "telefono"
+    : correoLimpio() && !correoValido() ? "correo"
+    : cliente.fecha && cliente.fecha < hoyISO() ? "fecha" : "";
   const datosItem = (x) => prod(x.p) || (x.p === "bolsa" ? { minimoPiezas: 100, pasoPiezas: 50 } : {});
   // prendas: mínimo general por pedido, sumando todos los modelos, tallas y colores (las bolsas llevan su propio mínimo)
   const esPrenda = (x) => { const p = datosItem(x); return !!p.id && minimo(p) <= 1; };
@@ -1912,7 +1920,9 @@
          <div class="pedido__piezas num">${n} piezas</div>
          <div class="pedido__cliente">
            <label class="campo"><span>Tu nombre o empresa</span><input type="text" id="clienteNombre" maxlength="120" autocomplete="name" enterkeyhint="done" required value="${esc(cliente.nombre)}" aria-describedby="clienteAviso" /></label>
-           <label class="campo"><span>Tu teléfono (WhatsApp)</span><input type="tel" id="clienteTelefono" maxlength="24" inputmode="tel" autocomplete="tel" enterkeyhint="done" required placeholder="10 dígitos" value="${esc(cliente.telefono)}" aria-describedby="clienteAviso" /></label>
+           <p class="pedido__contacto">¿Cómo te contactamos? Escribe tu teléfono, tu correo o los dos.</p>
+           <label class="campo"><span>Tu teléfono (WhatsApp)</span><input type="tel" id="clienteTelefono" maxlength="24" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="10 dígitos" value="${esc(cliente.telefono)}" aria-describedby="clienteAviso" /></label>
+           <label class="campo"><span>Tu correo electrónico</span><input type="email" id="clienteCorreo" maxlength="254" inputmode="email" autocomplete="email" enterkeyhint="done" placeholder="nombre@empresa.com" value="${esc(cliente.correo)}" aria-describedby="clienteAviso" /></label>
            <label class="campo"><span>¿Para cuándo lo necesitas? <small>Opcional</small></span><input type="date" id="clienteFecha" min="${hoyISO()}" value="${esc(cliente.fecha)}" aria-describedby="clienteAviso" /></label>
            <p class="pedido__archivos" id="clienteAviso" role="status"></p>
          </div>
@@ -1961,12 +1971,14 @@
   });
   P.ready.then(()=>estadoArchivos());
   $("#pedidoPie").addEventListener("input", (e) => {
-    if (!["clienteNombre", "clienteTelefono", "clienteFecha"].includes(e.target.id)) return;
+    if (!["clienteNombre", "clienteTelefono", "clienteCorreo", "clienteFecha"].includes(e.target.id)) return;
     if (e.target.id === "clienteNombre") cliente.nombre = e.target.value.slice(0, 120);
     else if (e.target.id === "clienteTelefono") cliente.telefono = e.target.value.slice(0, 24);
+    else if (e.target.id === "clienteCorreo") cliente.correo = e.target.value.slice(0, 254);
     else cliente.fecha = /^\d{4}-\d{2}-\d{2}$/.test(e.target.value) ? e.target.value : "";
     almacen.guardar(LLAVE_CLIENTE, cliente);
-    e.target.removeAttribute("aria-invalid");
+    // Teléfono y correo cuentan como un solo requisito: al escribir en uno se limpia el error de los dos.
+    (e.target.id === "clienteTelefono" || e.target.id === "clienteCorreo" ? [$("#clienteTelefono"), $("#clienteCorreo")] : [e.target]).forEach((x) => x.removeAttribute("aria-invalid"));
     $("#clienteAviso").textContent = "";
     const enlace = $("#enviar");
     if (enlace && !erroresCantidad().length) enlace.href = wa(mensajePedido());
@@ -1974,8 +1986,8 @@
   const revisarCliente = () => {
     const falta = errorCliente();
     if (!falta) return true;
-    const campo = $({ nombre: "#clienteNombre", telefono: "#clienteTelefono", fecha: "#clienteFecha" }[falta]), aviso = $("#clienteAviso");
-    aviso.textContent = { nombre: "Escribe tu nombre o el de tu empresa para saber a quién cotizamos.", telefono: "Escribe tu teléfono a 10 dígitos para poder contactarte.", fecha: "Elige una fecha a partir de hoy, o deja el campo vacío." }[falta];
+    const campo = $({ nombre: "#clienteNombre", contacto: "#clienteTelefono", telefono: "#clienteTelefono", correo: "#clienteCorreo", fecha: "#clienteFecha" }[falta]), aviso = $("#clienteAviso");
+    aviso.textContent = { nombre: "Escribe tu nombre o el de tu empresa para saber a quién cotizamos.", contacto: "Escribe tu teléfono o tu correo para poder contactarte.", telefono: "Revisa tu teléfono: escríbelo a 10 dígitos.", correo: "Revisa tu correo electrónico.", fecha: "Elige una fecha a partir de hoy, o deja el campo vacío." }[falta];
     aviso.classList.add("error");
     campo.setAttribute("aria-invalid", "true");
     campo.focus();
@@ -1991,7 +2003,7 @@
         $("#archivosEstado").textContent = "Paquete descargado. Adjunta pedido-zain.zip en el chat de ZAIN.";
         return;
       }
-      const snapshot=pedido.map(x=>({...x})), texto=mensajePedido(null,snapshot), datosCliente={nombre:cliente.nombre.trim(),telefono:digitosTelefono(),fecha:cliente.fecha};
+      const snapshot=pedido.map(x=>({...x})), texto=mensajePedido(null,snapshot), datosCliente={nombre:cliente.nombre.trim(),telefono:digitosTelefono(),correo:correoLimpio(),fecha:cliente.fecha};
       compartiendo=true; estadoArchivos();
       // Evita cambiar selecciones durante la subida y conserva el folio al reintentar.
       $$("#pedidoItems button, #vaciar").forEach(x=>x.disabled=true);

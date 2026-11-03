@@ -27,7 +27,7 @@
 .seguimiento__archivos { display:flex;flex-wrap:wrap;gap:14px;margin-top:10px; }
 .seguimiento__archivos button { font-size:13px;text-align:left; }
 .seguimiento__ayuda { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;border-top:1px solid var(--linea);padding-top:28px; }
-.seguimiento__contacto { display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;align-items:end;gap:16px 20px;padding:22px 24px;border:1px solid var(--linea);border-radius:12px;background:#fff; }
+.seguimiento__contacto { display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr) auto;align-items:end;gap:16px 20px;padding:22px 24px;border:1px solid var(--linea);border-radius:12px;background:#fff; }
 .seguimiento__contacto--falta { border-color:var(--cobalto);box-shadow:0 0 0 3px color-mix(in srgb,var(--cobalto) 14%,transparent); }
 .seguimiento__contacto p { font-size:14px;color:var(--tenue);margin-top:4px; }
 .seguimiento__contacto .campo { display:grid;gap:6px;font-size:13px;font-weight:600; }

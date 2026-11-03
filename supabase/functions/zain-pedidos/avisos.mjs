@@ -77,8 +77,14 @@ export function createAvisos({sb,fail,fetcher=fetch}){
   enviar,
   solicitud:x=>enviar({title:'Nueva solicitud '+(x.folio||''),body:[x.cliente?.nombre,(x.items||[]).reduce((n,p)=>n+(Number(p.piezas)||0),0).toLocaleString('es-MX')+' piezas',x.items?.[0]?.nombre+(x.items?.length>1?' y '+(x.items.length-1)+' más':'')].filter(Boolean).join(' · '),url:'/gestion-zain#'+x.id,tag:'pedido-'+x.id}),
   // Teléfono que el cliente dejó o corrigió en Mi pedido (10 dígitos si es de México).
-  // Si ya había uno, el aviso lleva el anterior: quien tenga el enlace puede cambiarlo y el equipo lo verifica.
-  telefono:(x,anterior='')=>{const ver=t=>t.length===12&&t.startsWith('52')?t.slice(2):'+'+t;return enviar({title:(anterior?'Teléfono actualizado ':'Teléfono nuevo ')+(x.folio||''),body:(x.cliente?.nombre||'El cliente')+' dejó su teléfono en Mi pedido: '+ver(String(x.cliente?.telefono||''))+(anterior?' (antes '+ver(anterior)+'). Verifícalo antes de usarlo.':''),url:'/gestion-zain#'+x.id,tag:'telefono-'+x.id});},
+  // Teléfono y/o correo que el cliente dejó en Mi pedido. Si reemplaza uno que ya había, el aviso lleva el anterior:
+  // quien tenga el enlace puede cambiarlo y el equipo lo verifica.
+  contacto:(x,antes={})=>{
+   const ver=t=>t.length===12&&t.startsWith('52')?t.slice(2):'+'+t,c=x.cliente||{},partes=[];let cambio=false;
+   if(c.telefono&&c.telefono!==antes.telefono){partes.push('teléfono '+ver(c.telefono)+(antes.telefono?' (antes '+ver(antes.telefono)+')':''));cambio||=!!antes.telefono;}
+   if(c.correo&&c.correo!==antes.correo){partes.push('correo '+c.correo+(antes.correo?' (antes '+antes.correo+')':''));cambio||=!!antes.correo;}
+   return enviar({title:(cambio?'Contacto actualizado ':'Contacto nuevo ')+(x.folio||''),body:(c.nombre||'El cliente')+' dejó en Mi pedido: '+partes.join(' y ')+(cambio?'. Verifícalo antes de usarlo.':''),url:'/gestion-zain#'+x.id,tag:'contacto-'+x.id});
+  },
   aceptada:x=>enviar({title:'Cotización aceptada '+(x.folio||''),body:(x.cliente?.nombre||'El cliente')+' aceptó su cotización. Falta registrar el anticipo.',url:'/gestion-zain#'+x.id,tag:'pedido-'+x.id})
  };
 }

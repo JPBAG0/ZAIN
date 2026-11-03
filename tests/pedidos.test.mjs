@@ -96,13 +96,18 @@ test('Mi pedido: el cliente deja su teléfono y se conserva lo demás',async()=>
   assert.equal((await request('cliente-telefono',{id,token:read,telefono:'123'})).status,400);
   assert.ok(!calls.some(c=>c.opts.method==='PATCH'));
   const r=await request('cliente-telefono',{id,token:read,telefono:'33 1234 5678'});
-  assert.equal(r.status,200);assert.deepEqual(await r.json(),{telefonoFinal:'5678'});
+  assert.equal(r.status,200);assert.deepEqual(await r.json(),{telefonoFinal:'5678',correo:''});
   assert.deepEqual(JSON.parse(calls.find(c=>c.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana',fecha:'2026-11-20',telefono:'523312345678'}});
   row.cliente.telefono='523312345678';const antes=calls.length;
   assert.equal((await request('cliente-telefono',{id,token:read,telefono:'3312345678'})).status,200);
   assert.ok(!calls.slice(antes).some(c=>c.opts.method==='PATCH'),'el mismo teléfono no vuelve a escribir');
   const vista=await(await request('consulta',{id,token:read})).text();
   assert.equal(JSON.parse(vista).pedido.telefonoFinal,'5678');assert.ok(!vista.includes('3312345678'),'el enlace no muestra el número completo');
+  const c=await request('cliente-contacto',{id,token:read,correo:'Ana@Empresa.mx'});
+  assert.deepEqual(await c.json(),{telefonoFinal:'5678',correo:'an***@empresa.mx'});
+  assert.deepEqual(JSON.parse(calls.filter(x=>x.opts.method==='PATCH').at(-1).opts.body),{cliente:{nombre:'Ana',fecha:'2026-11-20',telefono:'523312345678',correo:'ana@empresa.mx'}});
+  assert.equal((await request('cliente-contacto',{id,token:read,correo:'no-es-correo'})).status,400);
+  assert.equal((await request('cliente-contacto',{id,token:read})).status,400);
   assert.equal((await request('cliente-telefono',{id,token:'b'.repeat(64),telefono:'3312345678'})).status,404);
 });
 test('otro pedido o nonce no acepta un enlace válido para esta solicitud',async()=>{
@@ -131,6 +136,13 @@ test('guarda nombre y fecha del cliente sin bloquear la solicitud',async()=>{
   const patch=calls.find(x=>x.opts.method==='PATCH'&&x.url.includes('/zain_pedidos?'));
   assert.ok(patch.url.includes('guardado_at=is.null'));
   assert.deepEqual(JSON.parse(patch.opts.body),{cliente:{nombre:'Taller Ejemplo SA',fecha:'2026-11-20'}});
+});
+test('guarda el correo del cliente en minúsculas y descarta uno inválido',async()=>{
+  for(const [correo,esperado] of [[' Ana@Empresa.MX ','ana@empresa.mx'],['sin-arroba',undefined],['a@b',undefined]]){
+    const {request,calls}=setup();
+    await request('crear',{id,token,items:[item],files,cliente:{nombre:'Ana',correo}});
+    assert.deepEqual(JSON.parse(calls.find(x=>x.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana',...(esperado?{correo:esperado}:{})}});
+  }
 });
 test('guarda el teléfono del cliente en dígitos con lada de país',async()=>{
   for(const [telefono,esperado] of [['33 1234 5678','523312345678'],['+1 (555) 555-0101','15555550101'],['12345',undefined],[42,undefined]]){
