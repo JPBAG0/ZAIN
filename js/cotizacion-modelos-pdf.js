@@ -7,7 +7,7 @@ export function adaptarModelos(q,imagenes=[]){
   const filas=q.partidas.filter(p=>p.modelo===modelo),primera=filas[0],vista=imagenes[modelo];
   for(let inicio=0;inicio<filas.length;inicio+=6){
    const indice=partidas.length,grupo=filas.slice(inicio,inicio+6);
-   partidas.push({indice,sku:primera.sku,nombre:primera.nombre+(inicio?' (continuación)':''),color:vista?.nota||'',tecnica:primera.personalizacion,zona:primera.zona||'',cm:primera.medidas?.replace(/ cm$/,'')||'',tallas:'',piezas:null,precio:null,importe:null,descuento:0,preciosTalla:grupo.map(p=>({tallas:[p.tallas,p.color!=='Todos los colores'?p.color:'',p.volumen||''].filter(Boolean).join(' · '),precio:p.precio}))});
+   partidas.push({indice,sku:primera.sku,nombre:primera.nombre+(inicio?' (continuación)':''),color:vista?.nota||(primera.servicio?'Prenda del cliente':''),tecnica:primera.personalizacion,zona:primera.zona||'',cm:primera.medidas?.replace(/ cm$/,'')||'',tallas:'',piezas:null,precio:null,importe:null,descuento:0,preciosTalla:grupo.map(p=>({tallas:[p.tallas,p.color!=='Todos los colores'&&!p.servicio?p.color:'',p.volumen||''].filter(Boolean).join(' · '),precio:p.precio}))});
    if(vista?.src)vistas[indice]={src:vista.src,referencia:primera.personalizacion==='Solo prenda'};
   }
  }

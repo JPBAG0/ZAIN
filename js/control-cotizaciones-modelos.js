@@ -1,7 +1,8 @@
 import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=22';
 import {esc} from './cotizacion-vista.js?v=16';
-import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=6';
+import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=7';
 import {armarPedido} from './cotizacion-modelos-pedido.js?v=2';
+import {SERVICIO,NOMBRE_SERVICIO,productoServicio,filasServicio,dibujarServicio} from './cotizacion-servicio.js?v=1';
 const $=s=>document.querySelector(s),nav=$('.control__secciones'),api=(op,body,extra)=>window.ZAINEquipo.call(op,body,extra);
 const tecnicas={bordado:'Bordado',serigrafia:'Serigrafía',dtf:'DTF'},numero=n=>n==null?'':(n/100).toFixed(2),nullable=e=>e.value.trim()===''?null:decimal(e.value);
 const ESTADOS={borrador:'Borrador',enviada:'Enviada',autorizada:'Autorizada',convertida:'Convertida en pedido',descartada:'Descartada'};
@@ -26,7 +27,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionCotizaciones" 
 <p id="cmConvertida" class="cm-aviso" hidden></p>
 <section class="cot-panel"><h2>Cliente y condiciones</h2><div class="cm-campos cm-campos--3"><label>Cliente o empresa (opcional)<input id="cmDestinatario" maxlength="180" autocomplete="off" placeholder="Ej. Constructora del Bajío"></label><label>Precios e IVA<select id="cmIVA"><option value="1600" selected>Más IVA (16%)</option><option value="0">Sin IVA</option></select></label><label>Redondear precios<select id="cmRedondeo"><option value="100" selected>A peso cerrado</option><option value="500">A múltiplos de $5</option><option value="1">Sin redondeo (centavos)</option></select></label><label>Válida hasta<input id="cmVigencia" type="date"></label><label>Entrega (opcional)<input id="cmPlazo" maxlength="120" placeholder="Ej. 10 a 12 días hábiles tras el anticipo"></label><label>Anticipo (%)<input id="cmAnticipo" type="number" min="0" max="100" step="1" inputmode="numeric" value="50" placeholder="Sin anticipo"></label></div></section>
 <details class="cot-panel cm-opciones"><summary>Logo del cliente (opcional)</summary><div class="cm-logo"><label>Subir logo<input id="cmLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label><div><p id="cmLogoEstado" class="cot-ayuda">PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.</p><label class="cot-check"><input id="cmQuitarFondo" type="checkbox">Quitar fondo del logo</label><button type="button" id="cmEliminarLogo" class="btn-texto" hidden>Quitar logo</button></div></div></details>
-<section class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
+<section class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
 <div id="cmModelos"></div>
 <details class="cot-panel cm-cierre cm-opciones"><summary>Cargo único y notas</summary><div class="cm-campos"><label>Concepto del cargo (opcional)<input id="cmCargoConcepto" maxlength="120" placeholder="Ponchado del logo"></label><label>Cargo único (MXN)<input id="cmCargo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Sin cargo"></label></div><p class="cot-ayuda">Se cobra una sola vez, aunque el logo vaya en varios modelos.</p><label>Condiciones o notas para el cliente<textarea id="cmNotas" rows="3" maxlength="2000" placeholder="Forma de pago, envío…"></textarea></label><button type="button" id="cmCopiar" class="btn-texto">Copiar cotización como texto</button></details>
 <section id="cmConvertir" class="cot-panel cm-convertir" hidden aria-labelledby="cvTitulo"><h2 id="cvTitulo">Pasar a pedido</h2><p class="cot-ayuda">Escribe las piezas que autorizó el cliente. Se crea un pedido normal en Pedidos con los precios de esta cotización; de ahí sigue como cualquier pedido: Mi pedido, anticipo, talleres y finanzas.</p><label>Nombre del cliente o empresa<input id="cvCliente" minlength="2" maxlength="120" autocomplete="off"></label><div id="cvLineas"></div><div id="cvTotal" class="cm-cvtotal" aria-live="polite"></div><label class="cot-check"><input id="cvPublicar" type="checkbox" checked>Publicar la cotización del pedido para que el cliente la vea y la acepte en Mi pedido</label><ul id="cvErrores" class="cm-error"></ul><div class="cm-cvbotones"><button type="button" id="cvCancelar" class="btn btn--linea">Cancelar</button><button type="button" id="cvCrear" class="btn btn--azul" disabled>Crear pedido</button></div><p id="cvEstado" class="cot-ayuda" role="status" aria-live="polite"></p><div id="cvResultado" class="cm-cvok" hidden></div></section>
@@ -46,6 +47,8 @@ function resumen(){
  $('#cmResumen').classList.toggle('cm-pendiente',sucio&&modelos.length>0);
  $('#cmPasar').hidden=!modelos.length||['convertida','descartada'].includes(actual?.estado);
 }
+// Renglones «sin prenda» que se ofrecen: todavía no pueden pasar a Pedidos.
+const conServicio=()=>modelos.some(m=>m.servicio&&m.filas.some(f=>f.incluir!==false));
 function marcarSucio(){if(!sucio){sucio=true;resumen();}}
 function marcarLimpio(){sucio=false;resumen();}
 function cabecera(){
@@ -111,33 +114,41 @@ $('#cmActualizar').addEventListener('click',()=>{
  epoca++;cargando=false;datos=null;catalogo=[];limpiar();actual=null;cabecera();$('#cmCampos').disabled=true;void cargar();
 });
 function crearModelo(p){
- const producto={...p,colores:(p.colores||[]).map(id=>datos.colores.find(c=>c.id===id)?.nombre||id)};
- const m={id:++contador,producto:p,nombre:nombreDe(p),sku:p.sku,margen:datos.margen,filas:filasModelo(producto,datos.config).map(f=>({...f,incluir:true,margen:null,precio:null})),tecnica:'',tecnicaID:'',color:p.colores?.[0]||'',zona:p.zonas?.[0]?.id||'',ancho:800,alto:null,autoAlto:true,aplicacion:0,modo:'area',render:null,renderTurno:0};
+ const servicio=!!p.servicio,producto={...p,colores:(p.colores||[]).map(id=>datos.colores.find(c=>c.id===id)?.nombre||id)};
+ const m={id:++contador,producto:p,servicio,nombre:servicio?p.nombre:nombreDe(p),sku:p.sku,margen:datos.margen,filas:(servicio?filasServicio():filasModelo(producto,datos.config)).map(f=>({...f,incluir:true,margen:null,precio:null})),tecnica:'',tecnicaID:'',color:p.colores?.[0]||'',zona:p.zonas?.[0]?.id||'',ubicacion:'',ancho:800,alto:null,autoAlto:true,aplicacion:0,modo:'area',render:null,renderTurno:0};
  m.ancho=Math.min(m.ancho,maxAncho(m));if(logo)m.alto=Math.max(1,Math.round(m.ancho*logo.height/logo.width));
  return m;
 }
-function agregar(){
+// p: modelo del catálogo elegido en la lista, o productoServicio() para cotizar sin prenda.
+function agregar(p=catalogo.find(p=>p.sku===$('#cmModelo').value)){
  if(modelos.length>=20)return avisar('Puedes cotizar hasta 20 modelos en un documento.');
- const p=catalogo.find(p=>p.sku===$('#cmModelo').value);if(!p)return;
- const m=crearModelo(p);modelos.push(m);pintarModelo(m);void renderizar(m);marcarSucio();
- $('#cmBuscar').value='';opciones();avisar(m.nombre+' agregado.');nodo(m).scrollIntoView({block:'start',behavior:'smooth'});
+ if(!p)return;
+ const m=crearModelo(p);modelos.push(m);pintarModelo(m);if(m.servicio){aplicarTecnica(m);actualizar(m);}void renderizar(m);marcarSucio();
+ if(!m.servicio){$('#cmBuscar').value='';opciones();}avisar(m.servicio?'Personalización sin prenda agregada.':m.nombre+' agregado.');nodo(m).scrollIntoView({block:'start',behavior:'smooth'});
 }
 function pintarModelo(m){
  const seccion=document.createElement('section');seccion.className='cot-panel cm-modelo';seccion.dataset.modelo=m.id;
  const etiqueta=f=>[f.talla,f.color!=='Todos los colores'?f.color:'',f.volumen].filter(Boolean).join(' ');
- seccion.innerHTML=`<div class="cm-modelocab"><div><h2>${esc(m.nombre)}</h2><p class="cot-ayuda">${esc(m.sku)}</p></div><button type="button" data-accion="quitar" class="btn-texto">Quitar</button></div>
-<div class="cm-diseno"><div class="cm-preview"><canvas width="600" height="600" aria-label="Vista del modelo con logo"></canvas><p data-vista-estado class="cot-ayuda" role="status">Cargando modelo…</p></div><div>
-<div class="cm-campos"><label>Personalización<select data-campo="tecnica"><option value="">Solo prenda</option>${(m.producto.tecnicas||[]).map(t=>`<option value="${esc(t)}">${esc(tecnicas[t]||t)}</option>`).join('')}</select></label><label>Color de la vista<select data-campo="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}">${esc(datos.colores.find(c=>c.id===id)?.nombre||id)}</option>`).join('')}</select></label></div>
-<div data-personalizacion hidden><div class="cm-campos"><label>Zona del logo<select data-campo="zona">${(m.producto.zonas||[]).map(z=>`<option value="${esc(z.id)}">${esc(z.nombre)}</option>`).join('')}</select></label><label>Ancho del logo (cm)<input data-campo="ancho" type="number" min="0.01" max="${maxAncho(m)/100}" step="0.01" inputmode="decimal" value="${numero(m.ancho)}"></label></div>
+ const opcionesTecnica=(m.producto.tecnicas||[]).map(t=>`<option value="${esc(t)}">${esc(tecnicas[t]||t)}</option>`).join('');
+ // Sin prenda: concepto editable y ubicación del logo en texto libre; no hay color, zona del catálogo ni «Solo prenda».
+ const campos=m.servicio?`<label>Concepto<input data-campo="concepto" maxlength="120" autocomplete="off" value="${esc(m.nombre)}"></label><label>Personalización<select data-campo="tecnica">${opcionesTecnica}</select></label>`
+  :`<label>Personalización<select data-campo="tecnica"><option value="">Solo prenda</option>${opcionesTecnica}</select></label><label>Color de la vista<select data-campo="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}">${esc(datos.colores.find(c=>c.id===id)?.nombre||id)}</option>`).join('')}</select></label>`;
+ const ubicacion=m.servicio?`<label>Ubicación del logo (opcional)<input data-campo="ubicacion" maxlength="80" autocomplete="off" placeholder="Ej. Frente, espalda, manga" value="${esc(m.ubicacion)}"></label>`
+  :`<label>Zona del logo<select data-campo="zona">${(m.producto.zonas||[]).map(z=>`<option value="${esc(z.id)}">${esc(z.nombre)}</option>`).join('')}</select></label>`;
+ seccion.innerHTML=`<div class="cm-modelocab"><div><h2>${esc(m.nombre)}</h2><p class="cot-ayuda">${m.servicio?'Sin prenda · el cliente entrega sus prendas':esc(m.sku)}</p></div><button type="button" data-accion="quitar" class="btn-texto">Quitar</button></div>
+<div class="cm-diseno"><div class="cm-preview"><canvas width="600" height="600" aria-label="${m.servicio?'Vista del logo':'Vista del modelo con logo'}"></canvas><p data-vista-estado class="cot-ayuda" role="status">${m.servicio?'Sube el logo para verlo aquí':'Cargando modelo…'}</p></div><div>
+<div class="cm-campos">${campos}</div>
+<div data-personalizacion hidden><div class="cm-campos">${ubicacion}<label>Ancho del logo (cm)<input data-campo="ancho" type="number" min="0.01" max="${maxAncho(m)/100}" step="0.01" inputmode="decimal" value="${numero(m.ancho)}"></label></div>
 <details class="cm-mas"><summary>Alto y costo de la personalización</summary><div class="cm-campos"><label>Alto del logo (cm)<input data-campo="alto" type="number" min="0.01" max="200" step="0.01" inputmode="decimal" value="${numero(m.alto)}" placeholder="Sube el logo o escríbelo"></label><label>Cobro de la personalización<select data-campo="modo"><option value="area">Por cm²</option><option value="fijo">Importe fijo por pieza</option></select></label><label data-area>Tarifa MXN / cm²<input data-campo="tarifa" type="number" min="0" step="0.000001" inputmode="decimal" placeholder="Pendiente"></label><label data-fijo hidden>Costo fijo / pieza<input data-campo="fijo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Pendiente"></label></div><p class="cot-ayuda">El alto sigue la proporción del logo hasta que lo cambies.</p></details><p data-preparacion class="cot-ayuda"></p></div>
 <label class="cm-margen">Margen bruto del modelo (%)<input data-campo="margenModelo" type="number" min="0" max="99.99" step="0.01" inputmode="decimal" value="${m.margen==null?'':m.margen/100}" placeholder="Ej. 35"></label></div></div>
-<div class="cm-tabla"><table><thead><tr><th><span class="cm-oculto">Ofrecer</span></th><th>Tallas</th><th>Costo / pza</th><th>Precio / pza sin IVA</th><th>Utilidad / pza</th></tr></thead><tbody>${m.filas.map(f=>`<tr data-fila="${f.id}"><td><input type="checkbox" data-campo="incluir" checked aria-label="Ofrecer ${esc(etiqueta(f))}"></td><td><b>${esc(f.talla)}</b>${f.color!=='Todos los colores'?`<small>${esc(f.color)}</small>`:''}${f.volumen?`<small>${esc(f.volumen)}</small>`:''}</td><td data-label="Costo / pza" data-resultado="costo">—</td><td data-label="Precio / pza"><input data-campo="precio" aria-label="Precio por pieza ${esc(etiqueta(f))}" type="number" min="0" step="0.01" inputmode="decimal"><small data-resultado="nota"></small></td><td data-label="Utilidad / pza" data-resultado="utilidad">—</td></tr>`).join('')}</tbody></table></div><p data-error class="cm-error" role="status"></p>`;
+<div class="cm-tabla"><table><thead><tr><th><span class="cm-oculto">Ofrecer</span></th><th>${m.servicio?'Cobro':'Tallas'}</th><th>Costo / pza</th><th>Precio / pza sin IVA</th><th>Utilidad / pza</th></tr></thead><tbody>${m.filas.map(f=>`<tr data-fila="${f.id}"><td><input type="checkbox" data-campo="incluir" checked aria-label="Ofrecer ${esc(etiqueta(f))}"></td><td><b>${esc(f.talla)}</b>${f.color!=='Todos los colores'?`<small>${esc(f.color)}</small>`:''}${f.volumen?`<small>${esc(f.volumen)}</small>`:''}</td><td data-label="Costo / pza" data-resultado="costo">—</td><td data-label="Precio / pza"><input data-campo="precio" aria-label="Precio por pieza ${esc(etiqueta(f))}" type="number" min="0" step="0.01" inputmode="decimal"><small data-resultado="nota"></small></td><td data-label="Utilidad / pza" data-resultado="utilidad">—</td></tr>`).join('')}</tbody></table></div><p data-error class="cm-error" role="status"></p>`;
  $('#cmModelos').append(seccion);actualizar(m);
 }
 const nodo=m=>$('#cmModelos [data-modelo="'+m.id+'"]');
 function leer(m){
- const el=nodo(m),campo=k=>el.querySelector('[data-campo="'+k+'"]');
- m.tecnicaID=campo('tecnica').value;m.tecnica=tecnicas[m.tecnicaID]||'';m.color=campo('color').value;m.zona=campo('zona').value;m.modo=campo('modo').value;m.ancho=nullable(campo('ancho'));m.alto=nullable(campo('alto'));
+ const el=nodo(m),campo=k=>el.querySelector('[data-campo="'+k+'"]'),valor=k=>campo(k)?.value??'';
+ m.tecnicaID=valor('tecnica');m.tecnica=tecnicas[m.tecnicaID]||'';m.color=valor('color');m.zona=valor('zona');m.modo=valor('modo');m.ancho=nullable(campo('ancho'));m.alto=nullable(campo('alto'));
+ if(m.servicio){m.nombre=valor('concepto').replace(/\s+/g,' ').trim()||NOMBRE_SERVICIO;m.ubicacion=valor('ubicacion').replace(/\s+/g,' ').trim();}
  m.margen=nullable(campo('margenModelo'));if(m.margen!=null&&m.margen>9999)throw Error('El margen debe ser menor a 100%.');
  if(m.tecnica&&m.ancho!=null&&m.ancho>maxAncho(m))throw Error('El ancho excede el área disponible de esta zona.');
  const limite=zona(m)?.maxAlto;if(m.tecnica&&limite&&m.alto!=null&&m.alto>Math.floor(limite*100))throw Error('El alto excede el área disponible de esta zona ('+limite+' cm).');
@@ -148,7 +159,7 @@ function leer(m){
  for(const f of m.filas){const tr=el.querySelector('[data-fila="'+f.id+'"]');f.incluir=tr.querySelector('[data-campo=incluir]').checked;f.margen=m.margen;f.precio=f.incluir?nullable(tr.querySelector('[data-campo=precio]')):null;}
 }
 function actualizar(m){
- const el=nodo(m);try{leer(m);el.querySelector('[data-error]').textContent='';
+ const el=nodo(m);try{leer(m);el.querySelector('[data-error]').textContent='';if(m.servicio)el.querySelector('.cm-modelocab h2').textContent=m.nombre;
  for(const f of m.filas){
   const tr=el.querySelector('[data-fila="'+f.id+'"]'),input=tr.querySelector('[data-campo=precio]'),r=f.incluir?precioFila(f,{margen:f.margen,precio:f.precio,aplicacion:m.aplicacion,redondeo:redondeo()}):{costo:null,precio:null,sugerido:null,utilidad:null};
   f.listo=r.precio!=null;f.visto=r.precio;tr.classList.toggle('cm-excluido',!f.incluir);tr.classList.toggle('cm-fijo',f.precio!=null);input.disabled=!f.incluir;
@@ -162,6 +173,8 @@ function actualizar(m){
 }
 async function renderizar(m){
  const el=nodo(m);if(!el)return;const turn=++m.renderTurno,session=epoca;m.render=null;
+ // Sin prenda: solo el logo, sin modelo que cargar.
+ if(m.servicio){const canvas=el.querySelector('canvas'),con=dibujarServicio(canvas.getContext('2d'),logo,canvas.width);m.render=con?canvas.toDataURL('image/png'):null;el.querySelector('[data-vista-estado]').textContent=con?'Logo'+(m.ubicacion?' en '+m.ubicacion:'')+' · prenda del cliente':'Sube el logo para verlo aquí';return;}
  try{
  const p=m.producto,col=color(m),src=p.fotosColor?.[m.color]||p.fotoRender||p.foto;
  if(!src)throw Error('Este modelo todavía no tiene render.');
@@ -188,12 +201,13 @@ function aplicarTecnica(m){
  el.querySelector('[data-preparacion]').textContent=!nombre?'':t?.preparacion?'Preparación de referencia: '+pesos(t.preparacion)+'. Agrégala al cargo único si corresponde.':'Preparación o ponchado: confirmar con el taller.';
 }
 function aplicarModo(m){const el=nodo(m),fijo=el.querySelector('[data-campo=modo]').value==='fijo';el.querySelector('[data-area]').hidden=fijo;el.querySelector('[data-fijo]').hidden=!fijo;}
-$('#cmAgregar').addEventListener('click',agregar);
+$('#cmAgregar').addEventListener('click',()=>agregar());
+$('#cmServicio').addEventListener('click',()=>agregar(productoServicio()));
 $('#cmModelos').addEventListener('input',e=>{
  const el=e.target.closest('[data-modelo]');if(!el)return;const m=modelos.find(m=>m.id===Number(el.dataset.modelo)),k=e.target.dataset.campo;if(!k)return;
  if(k==='alto')m.autoAlto=false;
  if(k==='ancho'){try{m.ancho=nullable(e.target);altoAutomatico(m);}catch{}}
- actualizar(m);if(['ancho','alto'].includes(k))void renderizar(m);
+ actualizar(m);if(['ancho','alto','ubicacion'].includes(k))void renderizar(m);
 });
 $('#cmModelos').addEventListener('change',e=>{
  const el=e.target.closest('[data-modelo]');if(!el)return;const m=modelos.find(m=>m.id===Number(el.dataset.modelo)),k=e.target.dataset.campo;
@@ -225,8 +239,8 @@ function sinLogo(texto){logoTurno++;logoOcupado=false;logo=null;crudo=null;logoN
 $('#cmEliminarLogo').addEventListener('click',()=>{sinLogo('Logo retirado.');marcarSucio();for(const m of modelos)void renderizar(m);});
 // Lo que se guarda: los valores tal como están en pantalla (también los incompletos).
 function crudoModelo(m){
- const el=nodo(m),v=k=>el.querySelector('[data-campo="'+k+'"]').value;
- return {sku:m.sku,tecnica:v('tecnica'),color:v('color'),zona:v('zona'),modo:v('modo'),ancho:v('ancho'),alto:v('alto'),autoAlto:m.autoAlto,tarifa:v('tarifa'),fijo:v('fijo'),margen:v('margenModelo'),
+ const el=nodo(m),v=k=>el.querySelector('[data-campo="'+k+'"]')?.value??'';
+ return {sku:m.sku,tecnica:v('tecnica'),color:v('color'),zona:v('zona'),...(m.servicio?{concepto:v('concepto'),ubicacion:v('ubicacion')}:{}),modo:v('modo'),ancho:v('ancho'),alto:v('alto'),autoAlto:m.autoAlto,tarifa:v('tarifa'),fijo:v('fijo'),margen:v('margenModelo'),
   filas:m.filas.map(f=>{const tr=el.querySelector('[data-fila="'+f.id+'"]');return {clave:clave(f),incluir:tr.querySelector('[data-campo=incluir]').checked,precio:tr.querySelector('[data-campo=precio]').value,visto:f.visto??null};})};
 }
 const CAMPOS={destinatario:'#cmDestinatario',iva:'#cmIVA',redondeo:'#cmRedondeo',vigencia:'#cmVigencia',plazo:'#cmPlazo',anticipo:'#cmAnticipo',concepto:'#cmCargoConcepto',cargo:'#cmCargo',notas:'#cmNotas'};
@@ -290,10 +304,10 @@ async function restaurar(x,duplicar){
  if(duplicar)$('#cmVigencia').value=hoyMX(15);
  let fijados=0;const faltan=[];
  for(const s of d.modelos||[]){
-  const p=catalogo.find(p=>p.sku===s.sku);if(!p){faltan.push(s.sku);continue;}
+  const p=s.sku===SERVICIO?productoServicio():catalogo.find(p=>p.sku===s.sku);if(!p){faltan.push(s.sku);continue;}
   const m=crearModelo(p);modelos.push(m);pintarModelo(m);
   const el=nodo(m),set=(k,v)=>{const c=el.querySelector('[data-campo="'+k+'"]');if(c&&v!=null)c.value=v;};
-  set('tecnica',s.tecnica);aplicarTecnica(m);set('color',s.color);set('zona',s.zona);m.zona=el.querySelector('[data-campo=zona]').value;el.querySelector('[data-campo=ancho]').max=maxAncho(m)/100;
+  set('tecnica',s.tecnica);aplicarTecnica(m);set('color',s.color);set('zona',s.zona);set('concepto',s.concepto);set('ubicacion',s.ubicacion);m.zona=el.querySelector('[data-campo=zona]')?.value||'';el.querySelector('[data-campo=ancho]').max=maxAncho(m)/100;
   set('modo',s.modo);aplicarModo(m);set('ancho',s.ancho);set('alto',s.alto);set('tarifa',s.tarifa);set('fijo',s.fijo);set('margenModelo',s.margen);m.autoAlto=s.autoAlto!==false;
   const guardadas=new Map((s.filas||[]).map(g=>[g.clave,g]));
   for(const f of m.filas){const g=guardadas.get(clave(f)),tr=el.querySelector('[data-fila="'+f.id+'"]');if(!g)continue;tr.querySelector('[data-campo=incluir]').checked=g.incluir!==false;tr.querySelector('[data-campo=precio]').value=g.precio||'';}
@@ -332,9 +346,10 @@ $('#cmCopiar').addEventListener('click',async()=>{
 $('#cmPDF').addEventListener('click',async e=>{
  const b=e.currentTarget,session=epoca;b.disabled=true;
  try{avisar('Guardando…');const q=await guardarParaEnviar();$('#cmCampos').disabled=true;$('#cmActualizar').disabled=true;avisar('Preparando PDF…');await Promise.all(modelos.map(renderizar));if(session!==epoca)return;
- for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render)throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
- const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:(m.tecnica?(logo?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+color(m).nombre}));
- const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=10');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF '+q.folio+' listo. Puedes enviarlo al cliente.');
+ // Sin prenda y sin logo no hay imagen que esperar: el PDF dice «Vista previa por confirmar».
+ for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render&&!(m.servicio&&!logo))throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
+ const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:m.servicio?'Prenda del cliente'+(logo?'':' · logo pendiente'):(m.tecnica?(logo?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+color(m).nombre}));
+ const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=11');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF '+q.folio+' listo. Puedes enviarlo al cliente.');
  }catch(e){if(session===epoca)avisar(e.message);}finally{b.disabled=false;$('#cmActualizar').disabled=false;if(session===epoca&&datos)$('#cmCampos').disabled=false;}
 });
 // ===== Pasar a pedido: cantidades autorizadas → solicitud normal con los precios cotizados =====
@@ -361,6 +376,8 @@ function calcularConversion(){
 }
 $('#cmPasar').addEventListener('click',()=>{
  if(!modelos.length)return avisar('Agrega un modelo para pasar la cotización a pedido.');
+ // Un pedido de Pedidos exige prendas del catálogo; pasar solo una parte dejaría el pedido incompleto.
+ if(conServicio())return avisar('Esta cotización lleva personalización sin prenda, que todavía no se puede pasar a Pedidos. Guárdala y envía el PDF o el texto al cliente.');
  lineas=modelos.map((m,i)=>({modelo:i,colorId:nodo(m).querySelector('[data-campo=color]').value,cantidades:{}}));
  $('#cvCliente').value=$('#cmDestinatario').value.trim();$('#cvResultado').hidden=true;$('#cvEstado').textContent='';$('#cvCrear').hidden=false;$('#cvCancelar').textContent='Cancelar';
  $('#cmConvertir').hidden=false;$('#cmForm .cm-exportar').hidden=true;pintarLineas();$('#cvEstado').textContent=!logoOriginal&&modelos.some(m=>m.tecnica)?'El pedido quedará con logo pendiente; confirma el diseño antes de enviarlo a producción.':'';$('#cmConvertir').scrollIntoView({block:'start',behavior:'smooth'});

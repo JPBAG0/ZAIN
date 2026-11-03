@@ -15,3 +15,10 @@ test('cada modelo conserva su propio diseño y sus referencias de talla, color y
  assert.equal(a.imagenes[1].src,'B');assert.equal(a.imagenes[0].referencia,true);
  assert.match(a.cotizacion.partidas[0].preciosTalla[0].tallas,/XS a XL.*Negro.*1–49 piezas/);
 });
+test('sin prenda: el PDF no repite «Prenda del cliente» en el precio y admite no tener imagen',()=>{
+ const fila={modelo:0,nombre:'Personalización sobre prenda del cliente',sku:'',tallas:'Por pieza',color:'Prenda del cliente',volumen:'',personalizacion:'Serigrafía',zona:'Espalda',medidas:'25 × 30 cm',precio:4500,servicio:true};
+ const a=adaptarModelos({partidas:[fila],impuesto:1600},[{src:null,nota:'Prenda del cliente · logo pendiente'}]);
+ const p=a.cotizacion.partidas[0];assert.equal(p.preciosTalla[0].tallas,'Por pieza');assert.equal(p.sku,'');assert.equal(p.color,'Prenda del cliente · logo pendiente');
+ assert.equal(Object.keys(a.imagenes).length,0);
+ assert.equal(adaptarModelos({partidas:[fila],impuesto:0},[]).cotizacion.partidas[0].color,'Prenda del cliente');
+});

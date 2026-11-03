@@ -1,3 +1,7 @@
+## Vigente: cotización sin prenda (solo personalización) — 2-nov-2026 (Claude)
+
+JP pidió que Gestión → Cotizaciones no obligue a elegir una prenda: tenían un pedido de solo serigrafía sobre prendas del cliente. Botón «+ Sin prenda (solo personalización)»: concepto editable, técnica, ubicación libre, medidas y costo de la técnica, costo de prenda 0, una fila «Por pieza». Guardar, Copiar texto, PDF y adjuntar en Chats funcionan. **No pasa a Pedidos:** «Pasar a pedido» avisa y no abre mientras haya un renglón sin prenda (el Edge solo acepta prendas del catálogo). Solo web, sin SQL ni Edge. Detalle en `docs/COTIZACIONES-MODELOS.md`; código en `js/cotizacion-servicio.js`. Recursos: control-cotizaciones-modelos v14, cotizacion-modelos v7, cotizacion-modelos-pdf v11, control-chats v8 (chats-adjuntos v7), cotizacion-modelos.css v6.
+
 ## Preparado: color en la cotización, pedido editable siempre, cierre con saldo y modo libre — 27-oct-2026 (Claude)
 
 JP pidió (27-oct) cuatro arreglos de Gestión y del personalizador. Rama `claude/zain-pedido-editable-libre`. **No publicado:** falta SQL, Edge y push con el sí de JP.

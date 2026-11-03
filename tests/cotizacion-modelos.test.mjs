@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from '../js/cotizacion-modelos.js';
+import {productoServicio,filasServicio,SERVICIO} from '../js/cotizacion-servicio.js';
 const producto={sku:'ZN-TEST',tallas:['XS','S','M','L','XL','2XL'],colores:['Negro','Blanco']};
 const cfg=bandas=>({prendas:[{sku:'ZN-TEST',prenda:null,otros:100,bandas}]});
 test('agrupa tallas consecutivas y muestra todos los tramos sin pedir cantidades',()=>{
@@ -58,4 +59,18 @@ test('folio, vigencia y entrega pasan al documento comercial',()=>{
 test('los tramos de volumen se leen como pedido, no como compra',()=>{
  const filas=filasModelo({sku:'ZN-TEST',tallas:['S']},{prendas:[{sku:'ZN-TEST',prenda:null,otros:0,bandas:[{tallas:[],colores:[],costo:100,desdePiezas:1,hastaPiezas:49},{tallas:[],colores:[],costo:90,desdePiezas:50,hastaPiezas:null}]}]});
  assert.deepEqual(filas.map(f=>f.volumen),['Pedido de 1 a 49 piezas','Pedido de 50 piezas o más']);
+});
+test('sin prenda: solo personalización, sin SKU, con ubicación libre y la prenda del cliente',()=>{
+ const p=productoServicio();assert.equal(p.sku,SERVICIO);assert.equal(p.tecnicas[0],'serigrafia');
+ const filas=filasServicio().map(f=>({...f,incluir:true,margen:3000,precio:null}));
+ assert.equal(filas.length,1);assert.equal(filas[0].costo,0);assert.equal(filas[0].talla,'Por pieza');
+ const m={servicio:true,nombre:'Serigrafía sobre playeras del cliente',sku:SERVICIO,producto:p,tecnica:'Serigrafía',ubicacion:'Frente',ancho:2500,alto:1500,aplicacion:3500,filas};
+ const q=comercial([m],{impuesto:1600,redondeo:100});
+ assert.equal(q.partidas[0].precio,5000);assert.equal(q.partidas[0].sku,'');assert.equal(q.partidas[0].zona,'Frente');
+ assert.equal(q.partidas[0].color,'Prenda del cliente');assert.equal(q.partidas[0].personalizacion,'Serigrafía');assert.equal(q.partidas[0].servicio,true);
+ const texto=textoComercial(q);assert.match(texto,/Serigrafía sobre playeras del cliente · Por pieza · Prenda del cliente · Serigrafía · Frente · 25 × 15 cm/);
+ assert.ok(!texto.includes('()')&&!texto.includes(SERVICIO));
+ // Precio escrito a mano sin costo de la técnica: también se puede cotizar.
+ const sinTarifa=comercial([{...m,aplicacion:null,filas:[{...filas[0],precio:4200}]}],{impuesto:0});assert.equal(sinTarifa.partidas[0].precio,4200);
+ assert.throws(()=>comercial([{...m,aplicacion:null}],{impuesto:0}),/Completa el precio/);
 });

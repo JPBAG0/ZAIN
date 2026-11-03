@@ -55,12 +55,14 @@ export function comercial(modelos,{destinatario='',impuesto=null,concepto='',car
  const partidas=modelos.flatMap((m,modelo)=>m.filas.filter(f=>f.incluir!==false).map(f=>{
   const r=precioFila(f,{margen:f.margen,precio:f.precio,aplicacion:m.aplicacion,redondeo});
   if(r.precio==null)throw Error('Completa el precio o margen de '+m.nombre+' · '+f.talla+'.');
-  return {modelo,nombre:m.nombre,sku:m.sku,zona:m.tecnica?(m.producto?.zonas||[]).find(z=>z.id===m.zona)?.nombre||'':'',medidas:m.tecnica&&m.ancho&&m.alto?(m.ancho/100)+' × '+(m.alto/100)+' cm':'',tallas:f.talla,color:f.color,volumen:f.volumen,personalizacion:m.tecnica||'Solo prenda',precio:r.precio};
+  // Sin prenda (el cliente trae las suyas): sin SKU, la ubicación del logo es texto libre y el color es el de su prenda.
+  const zona=!m.tecnica?'':m.servicio?String(m.ubicacion||'').trim().slice(0,80):(m.producto?.zonas||[]).find(z=>z.id===m.zona)?.nombre||'';
+  return {modelo,nombre:m.nombre,sku:m.servicio?'':m.sku,zona,medidas:m.tecnica&&m.ancho&&m.alto?(m.ancho/100)+' × '+(m.alto/100)+' cm':'',tallas:f.talla,color:m.servicio?'Prenda del cliente':f.color,volumen:f.volumen,personalizacion:m.tecnica||'Solo prenda',precio:r.precio,...(m.servicio?{servicio:true}:{})};
  }));
  if(!partidas.length)throw Error('Agrega un modelo y al menos un rango de tallas.');
  return {folio:String(folio).trim().slice(0,40),destinatario:String(destinatario).trim().slice(0,180),impuesto,vigencia:vigencia||'',plazo:String(plazo).trim().slice(0,120),anticipo,partidas,cargo:cargo?{concepto:String(concepto).trim().slice(0,120)||'Cargo único',importe:cargo}:null,notas:String(notas).trim().slice(0,2000)};
 }
 export function textoComercial(q){
  const vence=q.vigencia?new Date(q.vigencia+'T12:00:00Z').toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Mexico_City'}):'';
- return ['ZAIN · Cotización por modelo y tallas'+(q.folio?' · '+q.folio:''),q.destinatario?'Para: '+q.destinatario:'','Precios por pieza en MXN · '+(q.impuesto?'más IVA '+q.impuesto/100+'%':'sin impuesto (0%)'),[vence?'Válida hasta el '+vence:'',q.plazo?'Entrega: '+q.plazo:'',q.anticipo!=null?'Anticipo '+q.anticipo/100+'% y el resto antes del envío':''].filter(Boolean).join(' · '),...q.partidas.map(p=>[p.nombre+' ('+p.sku+')',p.tallas,p.color,p.volumen,p.personalizacion,p.zona,p.medidas,pesos(p.precio)+' / pieza'].filter(Boolean).join(' · ')),q.cargo?q.cargo.concepto+' · cargo único: '+pesos(q.cargo.importe):'',q.notas,'Disponibilidad, cantidades y entrega se confirman al realizar el pedido.'].filter(Boolean).join('\n\n');
+ return ['ZAIN · Cotización por modelo y tallas'+(q.folio?' · '+q.folio:''),q.destinatario?'Para: '+q.destinatario:'','Precios por pieza en MXN · '+(q.impuesto?'más IVA '+q.impuesto/100+'%':'sin impuesto (0%)'),[vence?'Válida hasta el '+vence:'',q.plazo?'Entrega: '+q.plazo:'',q.anticipo!=null?'Anticipo '+q.anticipo/100+'% y el resto antes del envío':''].filter(Boolean).join(' · '),...q.partidas.map(p=>[p.nombre+(p.sku?' ('+p.sku+')':''),p.tallas,p.color,p.volumen,p.personalizacion,p.zona,p.medidas,pesos(p.precio)+' / pieza'].filter(Boolean).join(' · ')),q.cargo?q.cargo.concepto+' · cargo único: '+pesos(q.cargo.importe):'',q.notas,'Disponibilidad, cantidades y entrega se confirman al realizar el pedido.'].filter(Boolean).join('\n\n');
 }

@@ -16,6 +16,7 @@
 .cm-logo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 28px;align-items:start}.cm-logo .cot-ayuda{margin-top:0}
 .cm-agregar{display:grid;grid-template-columns:1fr 1.4fr auto;align-items:end;gap:14px}
 .cm-agregar label{margin:0}.cm-agregar .btn{min-height:46px;white-space:nowrap}
+.cm-sinprenda{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:12px}.cm-sinprenda .cot-ayuda{margin:0}
 .cm-area .cm-modelo{border-left:4px solid #2457c7}
 .cm-modelocab{display:flex;justify-content:space-between;align-items:start;gap:14px}
 .cm-modelocab h2{margin-bottom:4px}.cm-modelocab p{margin:0 0 18px}

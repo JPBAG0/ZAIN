@@ -1,4 +1,5 @@
 // Archivos comerciales en memoria. No guarda datos del chat ni PDFs en el navegador.
+import {SERVICIO,dibujarServicio} from './cotizacion-servicio.js?v=1';
 export const TIPOS={pdf:'application/pdf',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',webp:'image/webp',docx:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',xlsx:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'};
 export function validarArchivo(archivo){
  const ext=String(archivo?.name||'').split('.').at(-1).toLowerCase(),mime=TIPOS[ext];
@@ -16,6 +17,8 @@ export async function pdfModelo(id,api){
  const imagenes=[],productos=[...(c.productos||[]),...(c.productosHistoricos||[])];let logo=null;
  if(x.logoUrl){const res=await fetch(x.logoUrl,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('No se pudo cargar el logo de la cotización.');const f=await res.blob();logo=window.ZR.analizarLogo(await window.ZR.abrirArchivo(f),!!x.datos?.quitarFondo).logo;}
  for(const [i,s] of (x.datos?.modelos||[]).entries()){
+  // Sin prenda: solo el logo sobre fondo claro (como en Cotizaciones).
+  if(s.sku===SERVICIO){const canvas=document.createElement('canvas');canvas.width=canvas.height=1000;try{imagenes[i]=dibujarServicio(canvas.getContext('2d'),logo,1000)?{src:canvas.toDataURL('image/png'),nota:'Prenda del cliente'}:{src:null,nota:'Prenda del cliente · logo pendiente'};}finally{canvas.width=canvas.height=0;}continue;}
   const p=productos.find(p=>p.sku===s.sku),col=c.colores.find(c=>c.id===s.color);if(!p||!col)throw Error('Abre la cotización y revisa el modelo antes de adjuntarla.');
   const src=p.fotosColor?.[s.color]||p.fotoRender||p.foto;if(!src)throw Error('Falta la imagen de un modelo. Revisa la cotización.');
   const img=await window.ZR.cargar(src),canvas=document.createElement('canvas');canvas.width=canvas.height=1000;
@@ -26,7 +29,7 @@ export async function pdfModelo(id,api){
    imagenes[i]={src:canvas.toDataURL('image/png'),nota:(s.tecnica?(logo?'Logo en '+(z?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+col.nombre};
   }finally{canvas.width=canvas.height=0;}
  }
- const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=10'),{crearPDF}=await import('./cotizacion-pdf.js?v=21');
+ const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=11'),{crearPDF}=await import('./cotizacion-pdf.js?v=21');
  const q={...x.comercial,folio:x.folio},a=adaptarModelos(q,imagenes),blob=await crearPDF(a.cotizacion,{sinCantidades:true,folio:x.folio,imagenes:a.imagenes});
  return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
 }
