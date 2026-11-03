@@ -210,7 +210,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return x;
   };
   const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:p.sku||product?.sku||'',nombre:p.nombreZain||product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
-  const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,telefono:/^\d{11,15}$/.test(x.cliente?.telefono||'')?x.cliente.telefono:'',
+  const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,telefonoFinal:/^\d{11,15}$/.test(x.cliente?.telefono||'')?x.cliente.telefono.slice(-4):'',
     items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
   const signedFile=async(x,b)=>{
@@ -317,14 +317,15 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='POST'&&['consulta','archivo-consulta','cliente-telefono',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
         // El cliente deja o corrige su teléfono desde Mi pedido; el equipo recibe un aviso solo si cambió.
+        // El enlace puede estar compartido: la consulta solo muestra los 4 últimos dígitos y el aviso lleva el número anterior para verificarlo.
         if(op==='cliente-telefono'){
           const telefono=telefonoCliente(b.telefono);if(!telefono)fail(400,'Escribe tu teléfono a 10 dígitos.');
           if(x.cliente?.telefono!==telefono){
             const cliente={...(x.cliente&&typeof x.cliente==='object'?x.cliente:{}),telefono};
             await sb('/rest/v1/zain_pedidos?id=eq.'+x.id,{method:'PATCH',body:JSON.stringify({cliente})});
-            if(avisosEnabled)await fondo(avisos.telefono({...x,cliente},!!x.cliente?.telefono));
+            if(avisosEnabled)await fondo(avisos.telefono({...x,cliente},x.cliente?.telefono||''));
           }
-          return response(200,{telefono});
+          return response(200,{telefonoFinal:telefono.slice(-4)});
         }
         if(op==='cotizacion-aceptar'){const out=await seguimiento.aceptar(x,b);// Solo avisa si la cotización pasó a aceptada ahora; reaceptar en estados posteriores no repite el aviso.
           if(avisosEnabled&&['nuevo','contactado','cotizado'].includes(x.estado))await fondo(avisos.aceptada(x));return response(200,out);}

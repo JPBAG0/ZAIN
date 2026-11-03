@@ -57,9 +57,12 @@ test('llaves VAPID se crean una vez, firma válida y suscripciones vencidas se b
  const aviso=JSON.parse(await n.descifrar(o.body));
  assert.equal(aviso.title,'Nueva solicitud ZAIN-1');assert.equal(aviso.body,'ZurichTec · 600 piezas · Bolsa y 1 más');assert.equal(aviso.url,'/gestion-zain#x');
  assert.equal(enviados.length,1,'el acceso revocado no recibe avisos');
- assert.equal(await avisos.telefono({id:'x',folio:'ZAIN-1',cliente:{nombre:'Ana',telefono:'523312345678'}},false),1);
+ assert.equal(await avisos.telefono({id:'x',folio:'ZAIN-1',cliente:{nombre:'Ana',telefono:'523312345678'}}),1);
  const tel=JSON.parse(await n.descifrar(enviados[1].o.body));
  assert.deepEqual([tel.title,tel.body,tel.url],['Teléfono nuevo ZAIN-1','Ana dejó su teléfono en Mi pedido: 3312345678','/gestion-zain#x']);
+ await avisos.telefono({id:'x',folio:'ZAIN-1',cliente:{nombre:'Ana',telefono:'523399990000'}},'523312345678');
+ const cambio=JSON.parse(await n.descifrar(enviados[2].o.body));
+ assert.equal(cambio.title,'Teléfono actualizado ZAIN-1');assert.match(cambio.body,/3399990000 \(antes 3312345678\)\. Verifícalo/);
  estado=410;assert.equal(await avisos.aceptada({id:'x',folio:'ZAIN-1'}),0);assert.deepEqual(db.push.map(s=>s.endpoint),['https://web.push.apple.com/revocado']);
  assert.equal((await avisos.clave()).publica,publica);
 });

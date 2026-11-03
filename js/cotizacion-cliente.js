@@ -31,4 +31,4 @@ addEventListener('zain:render-cliente',async e=>{
  const turn=revisionImagenes,result=await prepararImagenes({partidas:[p]},{[p.indice]:{src:d.src,referencia:false}});if(turn!==revisionImagenes||d.folio!==pedidoActual)return;
  imagenesActual[p.indice]=result[p.indice];const root=document.querySelector('#cotizacionCliente');if(root)actualizarImagenes(root,cotizacionActual,imagenesActual);controles();
 });
-await import('./mi-pedido.js?v=10');
+await import('./mi-pedido.js?v=11');

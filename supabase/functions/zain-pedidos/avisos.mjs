@@ -77,7 +77,8 @@ export function createAvisos({sb,fail,fetcher=fetch}){
   enviar,
   solicitud:x=>enviar({title:'Nueva solicitud '+(x.folio||''),body:[x.cliente?.nombre,(x.items||[]).reduce((n,p)=>n+(Number(p.piezas)||0),0).toLocaleString('es-MX')+' piezas',x.items?.[0]?.nombre+(x.items?.length>1?' y '+(x.items.length-1)+' más':'')].filter(Boolean).join(' · '),url:'/gestion-zain#'+x.id,tag:'pedido-'+x.id}),
   // Teléfono que el cliente dejó o corrigió en Mi pedido (10 dígitos si es de México).
-  telefono:(x,cambio)=>{const t=String(x.cliente?.telefono||''),ver=t.length===12&&t.startsWith('52')?t.slice(2):'+'+t;return enviar({title:(cambio?'Teléfono actualizado ':'Teléfono nuevo ')+(x.folio||''),body:(x.cliente?.nombre||'El cliente')+' dejó su teléfono en Mi pedido: '+ver,url:'/gestion-zain#'+x.id,tag:'telefono-'+x.id});},
+  // Si ya había uno, el aviso lleva el anterior: quien tenga el enlace puede cambiarlo y el equipo lo verifica.
+  telefono:(x,anterior='')=>{const ver=t=>t.length===12&&t.startsWith('52')?t.slice(2):'+'+t;return enviar({title:(anterior?'Teléfono actualizado ':'Teléfono nuevo ')+(x.folio||''),body:(x.cliente?.nombre||'El cliente')+' dejó su teléfono en Mi pedido: '+ver(String(x.cliente?.telefono||''))+(anterior?' (antes '+ver(anterior)+'). Verifícalo antes de usarlo.':''),url:'/gestion-zain#'+x.id,tag:'telefono-'+x.id});},
   aceptada:x=>enviar({title:'Cotización aceptada '+(x.folio||''),body:(x.cliente?.nombre||'El cliente')+' aceptó su cotización. Falta registrar el anticipo.',url:'/gestion-zain#'+x.id,tag:'pedido-'+x.id})
  };
 }
