@@ -224,6 +224,14 @@
     {
       "nombre": "SEASA · Sistemas y Equipamientos Alteños",
       "logo": "img/clientes/seasa.webp"
+    },
+    {
+      "nombre": "Once",
+      "logo": "img/clientes/once.webp"
+    },
+    {
+      "nombre": "Black Array",
+      "logo": "img/clientes/black-array.webp"
     }
   ],
   "clientesSatisfechos": [
