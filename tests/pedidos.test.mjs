@@ -90,6 +90,20 @@ test('enlace de consulta no lista pedidos, no escribe y no autoriza cargas',asyn
   assert.equal((await request('lista')).status,401);
   assert.ok(!calls.some(c=>c.opts.method==='PATCH'||c.url.includes('actualizar_pedido')));
 });
+test('Mi pedido: el cliente deja su teléfono y se conserva lo demás',async()=>{
+  const {request,row,calls}=setup();row.guardado_at=new Date().toISOString();row.cliente={nombre:'Ana',fecha:'2026-11-20'};const read=consultaToken(row);
+  assert.equal((await(await request('consulta',{id,token:read})).json()).pedido.telefono,'');
+  assert.equal((await request('cliente-telefono',{id,token:read,telefono:'123'})).status,400);
+  assert.ok(!calls.some(c=>c.opts.method==='PATCH'));
+  const r=await request('cliente-telefono',{id,token:read,telefono:'33 1234 5678'});
+  assert.equal(r.status,200);assert.deepEqual(await r.json(),{telefono:'523312345678'});
+  assert.deepEqual(JSON.parse(calls.find(c=>c.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana',fecha:'2026-11-20',telefono:'523312345678'}});
+  row.cliente.telefono='523312345678';const antes=calls.length;
+  assert.equal((await request('cliente-telefono',{id,token:read,telefono:'3312345678'})).status,200);
+  assert.ok(!calls.slice(antes).some(c=>c.opts.method==='PATCH'),'el mismo teléfono no vuelve a escribir');
+  assert.equal((await(await request('consulta',{id,token:read})).json()).pedido.telefono,'523312345678');
+  assert.equal((await request('cliente-telefono',{id,token:'b'.repeat(64),telefono:'3312345678'})).status,404);
+});
 test('otro pedido o nonce no acepta un enlace válido para esta solicitud',async()=>{
   const {request,row}=setup();row.guardado_at=new Date().toISOString();const read=consultaToken(row);
   row.id=staffID;assert.equal((await request('consulta',{id:staffID,token:read})).status,404);

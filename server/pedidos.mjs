@@ -167,11 +167,12 @@ export function createHandler(env={}, fetcher=fetch) {
 
   // Nombre/empresa, teléfono y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
   // El teléfono queda en dígitos con lada de país (52 si vienen 10), igual que los chats de WhatsApp.
+  const telefonoCliente=v=>{const d=typeof v==='string'?v.replace(/\D/g,''):'';return d.length===10?'52'+d:d.length>=11&&d.length<=15?d:'';};
   const clienteSolicitud=c=>{
     if(!c||typeof c!=='object'||Array.isArray(c))return null;
     const nombre=typeof c.nombre==='string'?c.nombre.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,120):'';
     const fecha=typeof c.fecha==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(c.fecha)&&!Number.isNaN(Date.parse(c.fecha+'T12:00:00Z'))?c.fecha:'';
-    const digitos=typeof c.telefono==='string'?c.telefono.replace(/\D/g,''):'',telefono=digitos.length===10?'52'+digitos:digitos.length>=11&&digitos.length<=15?digitos:'';
+    const telefono=telefonoCliente(c.telefono);
     return nombre.length>=2?{nombre,...(telefono?{telefono}:{}),...(fecha?{fecha}:{})}:null;
   };
   const guardarCliente=async(id,c)=>{
@@ -209,7 +210,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return x;
   };
   const commercialItem=p=>{const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,sku:p.sku||product?.sku||'',nombre:p.nombreZain||product?.nombreComercial||p.nombre.replace(/ \([CD]\d{4}\)$/,''),color:p.color.replace(/ · \d+$/,''),detalleMedidas:(p.detalleMedidas||'').replace(/guía Yazbek/g,'guía de tallas')};};
-  const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,
+  const customerRow=x=>({folio:x.folio,created_at:x.created_at,estado:x.estado,total:x.total,telefono:/^\d{11,15}$/.test(x.cliente?.telefono||'')?x.cliente.telefono:'',
     items:x.items.map(commercialItem).map(p=>Object.fromEntries(['sku','indice','nombre','color','tecnica','piezas','medidas','detalleMedidas','zona','cm','tallas','tallasEtq','logo','colorLogo','pantone','notas','silueta','gramaje','tejido','composicion','renderOrientativo'].filter(k=>p[k]!==undefined).map(k=>[k,p[k]]))),
     archivos:x.archivos.map(({item,kind,name,type})=>({item,kind,name,type}))});
   const signedFile=async(x,b)=>{
@@ -313,8 +314,18 @@ export function createHandler(env={}, fetcher=fetch) {
         if(quotesEnabled){try{await quotes.ensure(x);}catch{console.warn('ZAIN: borrador pendiente; se reintentará desde gestión.');}}
         return response(200,receipt(x));
       }
-      if(request.method==='POST'&&['consulta','archivo-consulta',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
+      if(request.method==='POST'&&['consulta','archivo-consulta','cliente-telefono',...(seguimientoEnabled?['cotizacion-aceptar']:[])].includes(op)) {
         const b=await jsonBody(request),x=await customer(b);
+        // El cliente deja o corrige su teléfono desde Mi pedido; el equipo recibe un aviso solo si cambió.
+        if(op==='cliente-telefono'){
+          const telefono=telefonoCliente(b.telefono);if(!telefono)fail(400,'Escribe tu teléfono a 10 dígitos.');
+          if(x.cliente?.telefono!==telefono){
+            const cliente={...(x.cliente&&typeof x.cliente==='object'?x.cliente:{}),telefono};
+            await sb('/rest/v1/zain_pedidos?id=eq.'+x.id,{method:'PATCH',body:JSON.stringify({cliente})});
+            if(avisosEnabled)await fondo(avisos.telefono({...x,cliente},!!x.cliente?.telefono));
+          }
+          return response(200,{telefono});
+        }
         if(op==='cotizacion-aceptar'){const out=await seguimiento.aceptar(x,b);// Solo avisa si la cotización pasó a aceptada ahora; reaceptar en estados posteriores no repite el aviso.
           if(avisosEnabled&&['nuevo','contactado','cotizado'].includes(x.estado))await fondo(avisos.aceptada(x));return response(200,out);}
         return response(200,op==='consulta'?{pedido:{...customerRow(x),...(quotesEnabled?{cotizacion:await quotes.publicada(x.id),...(seguimientoEnabled?{seguimiento:await seguimiento.leer(x.id)}:{})}:{})}}:await signedFile(x,b));

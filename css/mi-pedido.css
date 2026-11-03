@@ -27,6 +27,16 @@
 .seguimiento__archivos { display:flex;flex-wrap:wrap;gap:14px;margin-top:10px; }
 .seguimiento__archivos button { font-size:13px;text-align:left; }
 .seguimiento__ayuda { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;border-top:1px solid var(--linea);padding-top:28px; }
+.seguimiento__contacto { display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;align-items:end;gap:16px 20px;padding:22px 24px;border:1px solid var(--linea);border-radius:12px;background:#fff; }
+.seguimiento__contacto--falta { border-color:var(--cobalto);box-shadow:0 0 0 3px color-mix(in srgb,var(--cobalto) 14%,transparent); }
+.seguimiento__contacto p { font-size:14px;color:var(--tenue);margin-top:4px; }
+.seguimiento__contacto .campo { display:grid;gap:6px;font-size:13px;font-weight:600; }
+.seguimiento__contacto input { min-height:46px;width:100%;min-width:0;padding:0 14px;border:1px solid var(--linea);border-radius:10px;background:var(--papel);font:inherit;font-size:16px;font-weight:400;color:var(--tinta); }
+.seguimiento__contacto input:focus { border-color:var(--tinta);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--cobalto) 22%,transparent); }
+.seguimiento__contacto input[aria-invalid="true"] { border-color:var(--error); }
+.seguimiento__contacto .btn { min-height:46px; }
+.seguimiento__contactoaviso { grid-column:1/-1;font-size:14px; }
+.seguimiento__contactoaviso:empty { display:none; }
 .seguimiento__privacidad { font-size:12px;color:var(--tenue);margin-top:40px;max-width:650px; }
 .seguimiento button:disabled { opacity:.5;cursor:default; }
-@media(max-width:650px){.seguimiento__items{grid-template-columns:1fr}.seguimiento__titulo{align-items:start;flex-direction:column}.seguimiento__resumen{padding:22px}.seguimiento__info{padding:20px}.seguimiento__cab .btn-texto{font-size:13px}}
+@media(max-width:650px){.seguimiento__contacto{grid-template-columns:1fr;padding:20px}.seguimiento__items{grid-template-columns:1fr}.seguimiento__titulo{align-items:start;flex-direction:column}.seguimiento__resumen{padding:22px}.seguimiento__info{padding:20px}.seguimiento__cab .btn-texto{font-size:13px}}
