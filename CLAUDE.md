@@ -1,3 +1,11 @@
+## Vigente: producción sin anticipo a la vista — 2-nov-2026 (Claude)
+
+JP (2-nov): «no me deja pasar a producción sin anticipo» (pedidos de Yahir y Drea, aceptados con $0 cobrado, ya en producción en la realidad y fuera de «por cobrar»). El SQL y el Edge del 27-oct ya lo permitían, pero nadie usó el botón (historial sin ninguna entrada «sin anticipo»): era un botón de texto en la pestaña Pedido, la ficha de un aceptado abre en Cobro y «Cambiar estado» → En producción solo respondía «Falta cobrar el anticipo». Solo web (`js/control-pedidos.js` v30, `control-gastos.js` v13, `gestion-v2.css` v9):
+- **Botón «Pasar a producción sin anticipo»** en la cabecera de la ficha (visible en cualquier pestaña) para cotizado y aceptado, con la confirmación de siempre.
+- **Cambiar estado / Pasar a producción:** si el servidor responde «Falta cobrar el anticipo» al ir a Confirmado o Producción, el aviso trae «Pasar a … sin anticipo» (`data-sin-anticipo-forzar`).
+- **Pasos:** en Producción el paso Producción se palomea (sigue resaltado). Con `sin_anticipo` (de `zain_finanzas_estado`: la lista y el evento `zain:pedido-finanzas` de Gastos, que ahora manda `finanzas`) y el anticipo pactado sin cubrir, Anticipo queda «!» pendiente y aparece la nota «Pasó a producción sin anticipo… por cobrar en Cobro»; Aceptada queda «!» si el historial no tiene ninguna aceptación.
+- Prueba de navegador en scratchpad (`sin-anticipo.cjs`): aceptado y cotizado, 390 y 1280.
+
 ## Vigente: cotización sin prenda (solo personalización) — 2-nov-2026 (Claude)
 
 JP pidió que Gestión → Cotizaciones no obligue a elegir una prenda: tenían un pedido de solo serigrafía sobre prendas del cliente. Botón «+ Sin prenda (solo personalización)»: concepto editable, técnica, ubicación libre, medidas y costo de la técnica, costo de prenda 0, una fila «Por pieza». Guardar, Copiar texto, PDF y adjuntar en Chats funcionan. Detalle en `docs/COTIZACIONES-MODELOS.md`; código en `js/cotizacion-servicio.js`.

@@ -11,14 +11,30 @@ const ORDEN={nuevo:0,contactado:0,cotizado:1,aceptado:2,confirmado:3,produccion:
 const SIGUIENTE={nuevo:['Escribe el precio y publica la cotización','cotizacion'],contactado:['Escribe el precio y publica la cotización','cotizacion'],cotizado:['Espera la aceptación o regístrala si el cliente aceptó por WhatsApp','cobro'],aceptado:['Registra el anticipo cuando lo recibas','cobro'],confirmado:['Asigna el taller y pasa el pedido a producción','resumen'],produccion:['Cuando lo entregues, márcalo como entregado','resumen'],entregado:['Registra los gastos y cierra el pedido','gastos']};
 const AVANZAR={confirmado:['produccion','Pasar a producción'],produccion:['entregado','Marcar como entregado']};
 // Producción sin anticipo (27-oct-2026, JP): decisión del equipo; el total queda por cobrar.
-const SIN_ANTICIPO=['cotizado','aceptado','confirmado'];
+// 2-nov-2026 (JP): el botón va a la vista en la cabecera de la ficha (antes, escondido en la pestaña Pedido nunca se usó),
+// «Cambiar estado» ofrece pasar sin anticipo cuando falta, y los pasos dejan Anticipo pendiente en vez de palomearlo.
+const SIN_ANTICIPO=['cotizado','aceptado'];
 let sinAnticipo=false;
+// Finanzas por pedido (zain_finanzas_estado): de la lista y, al abrir la ficha, de la pestaña Gastos.
+const finanzasPedido=new Map(),aceptadaPedido=new Map();
 const PESTANAS=[['resumen','Pedido'],['cotizacion','Cotización'],['cobro','Cobro'],['gastos','Gastos']];
 const pestanaGuardada=new Map();
 function pasosHTML(x){
  if(x.estado==='cancelado')return '<div class="ficha-siguiente ficha-siguiente--cancelado">Pedido cancelado.</div>';
  const n=ORDEN[x.estado]??0,[texto,destino]=SIGUIENTE[x.estado]||SIGUIENTE.nuevo;
- return '<ol class="ficha-pasos" aria-label="Avance del pedido">'+PASOS.map(([k,t],i)=>'<li data-paso="'+k+'" class="'+(i<n?'hecho':i===n?'actual':'')+'"><span>'+(i<n?'✓':i+1)+'</span>'+t+'</li>').join('')+'</ol><button type="button" class="ficha-siguiente" data-ir="'+destino+'"><small>Siguiente paso</small><b>'+esc(texto)+'</b><i aria-hidden="true">→</i></button>';
+ // En producción, el paso Producción ya está hecho: se palomea y sigue resaltado.
+ const hecho=i=>i<n||(x.estado==='produccion'&&i===n);
+ return '<ol class="ficha-pasos" aria-label="Avance del pedido">'+PASOS.map(([k,t],i)=>'<li data-paso="'+k+'" class="'+[hecho(i)?'hecho':'',i===n?'actual':''].filter(Boolean).join(' ')+'"><span>'+(hecho(i)?'✓':i+1)+'</span>'+t+'</li>').join('')+'</ol><p class="ficha-nota-anticipo" data-nota-anticipo hidden></p><button type="button" class="ficha-siguiente" data-ir="'+destino+'"><small>Siguiente paso</small><b>'+esc(texto)+'</b><i aria-hidden="true">→</i></button>'+
+  (SIN_ANTICIPO.includes(x.estado)?'<div class="ficha-sinanticipo"><button type="button" class="btn btn--linea" data-sin-anticipo>Pasar a producción sin anticipo</button><p data-sin-anticipo-confirmar hidden>El pedido pasa a producción aunque no hayan pagado el anticipo. El paso Anticipo queda pendiente y todo el total aparece por cobrar. <button type="button" class="btn btn--azul" data-sin-anticipo-si>Sí, pasar a producción</button> <button type="button" class="btn-texto" data-sin-anticipo-no>Cancelar</button></p></div>':'');
+}
+// Pasó sin anticipo: Anticipo queda pendiente (no palomeado) hasta cubrirlo; Aceptada, solo si el cliente la aceptó.
+function pasoPendiente(k,titulo){const li=$('#detalle [data-paso="'+k+'"]');if(!li)return;li.classList.remove('hecho');li.classList.add('pendiente');li.querySelector('span').textContent='!';li.title=titulo;li.setAttribute('aria-label',li.textContent.slice(1)+': '+titulo);}
+function aplicarCobro(id){
+ const f=finanzasPedido.get(id);if(!selected||selected.id!==id||!f?.sin_anticipo||!['confirmado','produccion','entregado'].includes(selected.estado))return;
+ const cubierto=f.anticipo_pactado!=null&&f.cobrado>=f.anticipo_pactado&&f.cobrado>0;
+ if(!cubierto)pasoPendiente('confirmado','pendiente, pasó sin anticipo');
+ if(aceptadaPedido.get(id)===false)pasoPendiente('aceptado','el cliente todavía no acepta la cotización');
+ const nota=$('#detalle [data-nota-anticipo]');if(nota&&!cubierto){nota.textContent='Pasó a producción sin anticipo por decisión del equipo: el total queda por cobrar en Cobro.';nota.hidden=false;}
 }
 function verPestana(nombre){
  const d=$('#detalle');d.dataset.ver=nombre;if(selected)pestanaGuardada.set(selected.id,nombre);
@@ -75,6 +91,7 @@ async function cargar(message=''){
  const turn=++revision;status('Actualizando pedidos…');
  const [list,stats]=await Promise.all([call('lista',null,{offset:String(offset),q:$('#buscar').value,estado:$('#estadoFiltro').value,periodo:$('#periodo').value,papelera:String(trash)}),call('resumen')]);
  if(turn!==revision||!session)return;
+ for(const p of list.pedidos||[])if(p.finanzas)finanzasPedido.set(p.id,p.finanzas);
  const entering=!$('#acceso').hidden;
  $('#acceso').hidden=true;$('#trabajo').hidden=false;$('#salir').hidden=false;
  if(entering)window.scrollTo({top:0,behavior:'auto'});
@@ -108,12 +125,12 @@ async function detalle(id){
  const {pedido:x}=await call('detalle',null,{id});if(turn!==detailRevision||!session)return;selected=x;$('#detalle').dataset.pedido=x.id;
  liberarRenders();const files=x.archivos||[];
  const cabecera='<div class="ficha-cab"><div class="control__fichatitulo"><h2>'+esc(x.cliente?.nombre||x.folio)+'</h2>'+chip(x.estado)+'</div><p class="control__dato">'+(x.cliente?.nombre?esc(x.folio)+' · ':'')+Number(x.total)+' piezas · recibido '+esc(date(x.created_at))+(x.cliente?.fecha?' · lo necesita el '+esc(new Date(x.cliente.fecha+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short'})):'')+'</p>'+(x.archivado_at?'<p class="control__retirado">En papelera desde '+esc(date(x.archivado_at))+'. Restaura el pedido para volver a atenderlo.</p>':pasosHTML(x))+'</div>'+(x.archivado_at?'':'<div class="ficha-pestanas" role="tablist">'+PESTANAS.map(([k,t])=>'<button type="button" role="tab" data-pestana="'+k+'">'+t+'</button>').join('')+'</div>');
- $('#detalle').innerHTML=cabecera+'<div class="ficha-resumen">'+(!x.archivado_at&&AVANZAR[x.estado]?'<button type="button" class="btn btn--azul ficha-avanzar" data-avanzar="'+AVANZAR[x.estado][0]+'">'+AVANZAR[x.estado][1]+'</button><p id="avanzarAviso" class="cot-alerta" role="alert" hidden></p>':'')+(!x.archivado_at&&SIN_ANTICIPO.includes(x.estado)?'<div class="ficha-sinanticipo"><button type="button" class="btn-texto" data-sin-anticipo>Pasar a producción sin anticipo</button><p data-sin-anticipo-confirmar hidden>El pedido pasa a producción aunque no hayan pagado anticipo y todo el total queda por cobrar. <button type="button" class="btn btn--azul" data-sin-anticipo-si>Sí, pasar a producción</button> <button type="button" class="btn-texto" data-sin-anticipo-no>Cancelar</button></p></div>':'')+x.items.map((p,i)=>itemHTML(p,i,files)).join('')+
+ $('#detalle').innerHTML=cabecera+'<div class="ficha-resumen">'+(!x.archivado_at&&AVANZAR[x.estado]?'<button type="button" class="btn btn--azul ficha-avanzar" data-avanzar="'+AVANZAR[x.estado][0]+'">'+AVANZAR[x.estado][1]+'</button><p id="avanzarAviso" class="cot-alerta" role="alert" hidden></p>':'')+x.items.map((p,i)=>itemHTML(p,i,files)).join('')+
  (!x.archivado_at?'<form id="editar" class="control__editar"><h3>Estado y notas</h3><label>Cambiar estado<select id="estadoPedido">'+Object.entries(labels).map(([k,v])=>'<option value="'+k+'"'+(x.estado===k?' selected':'')+'>'+v+'</option>').join('')+'</select></label><label>Notas del equipo<textarea id="notasEquipo" maxlength="5000" placeholder="Cotización, acuerdos y siguiente paso…">'+esc(x.notas_internas)+'</textarea></label><button class="btn btn--azul">Guardar estado y notas</button><p class="control__dato">El precio y la publicación están en la pestaña Cotización.</p><p id="estadoFicha" role="status"></p></form>':'')+
  '<div class="control__acciones">'+(!x.archivado_at?'<button type="button" class="btn btn--linea" id="enlaceCliente">Copiar enlace del cliente</button>':'')+'<button type="button" class="btn btn--linea" id="exportarFicha">Exportar ficha</button><button type="button" class="btn '+(x.archivado_at?'btn--azul':'control__btnpeligro')+'" id="'+(x.archivado_at?'restaurar':'eliminar')+'">'+(x.archivado_at?'Restaurar pedido':'Eliminar pedido')+'</button></div><input id="urlCliente" aria-label="Enlace del cliente" readonly hidden><p id="estadoEnlace" role="status"></p><section class="control__historial"><h3>Actividad del pedido</h3><div id="historial">Cargando actividad…</div></section></div>';
  verPestana(x.archivado_at?'resumen':pestanaGuardada.get(x.id)||SIGUIENTE[x.estado]?.[1]||'resumen');
- status('');
- const history=call('historial',null,{id:x.id}).then(data=>{if(turn!==detailRevision)return;$('#historial').innerHTML=data.historial.length?'<ol>'+data.historial.map(h=>'<li><small>'+esc(fecha(h.created_at))+'</small><b>'+esc(labels[h.estado_anterior]||h.estado_anterior)+' → '+esc(labels[h.estado_nuevo]||h.estado_nuevo)+'</b><p>'+esc(h.notas)+'</p></li>').join('')+'</ol>':'<p class="control__dato">Sin cambios registrados todavía.</p>';}).catch(()=>{if(turn===detailRevision)$('#historial').textContent='No se pudo cargar la actividad. Vuelve a abrir la ficha.';});
+ status('');aplicarCobro(x.id);
+ const history=call('historial',null,{id:x.id}).then(data=>{if(turn!==detailRevision)return;aceptadaPedido.set(x.id,data.historial.some(h=>h.estado_nuevo==='aceptado'));aplicarCobro(x.id);$('#historial').innerHTML=data.historial.length?'<ol>'+data.historial.map(h=>'<li><small>'+esc(fecha(h.created_at))+'</small><b>'+esc(labels[h.estado_anterior]||h.estado_anterior)+' → '+esc(labels[h.estado_nuevo]||h.estado_nuevo)+'</b><p>'+esc(h.notas)+'</p></li>').join('')+'</ol>':'<p class="control__dato">Sin cambios registrados todavía.</p>';}).catch(()=>{if(turn===detailRevision)$('#historial').textContent='No se pudo cargar la actividad. Vuelve a abrir la ficha.';});
  const images=files.filter(f=>f.kind==='render').map(async f=>{try{const {cargarRender}=await imagenesModulo,recurso=await cargarRender(()=>call('archivo',{id:x.id,item:f.item,kind:'render'}));if(turn!==detailRevision){recurso.liberar();return;}recursosRender.push(recurso);recurso.imagen.alt='Diseño de '+x.items[f.item].nombre;$('#render-'+f.item)?.replaceChildren(recurso.imagen);}catch{if(turn===detailRevision)$('#render-'+f.item).textContent='No se pudo cargar el diseño. Vuelve a abrir el pedido para reintentar.';}});
  await Promise.all([history,...images]);if(turn===detailRevision)dispatchEvent(new CustomEvent('zain:pedido-abierto',{detail:x}));
 }
@@ -130,7 +147,7 @@ addEventListener('zain:gastos-guardados',()=>cargar().catch(failed));
 addEventListener('zain:pago-registrado',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 addEventListener('zain:ver-pestana',e=>verPestana(e.detail));
 // La pestaña Gastos avisa si el pedido ya tiene cierre revisado: completar el último paso y quitar el aviso de cerrar.
-addEventListener('zain:pedido-finanzas',e=>{const {id,cerrado,utilidad}=e.detail;if(!selected||selected.id!==id||!cerrado)return;const paso=$('#detalle [data-paso="cerrado"]');if(paso){paso.className='hecho';paso.querySelector('span').textContent='✓';}const box=$('#detalle .ficha-siguiente');if(box)box.outerHTML='<div class="ficha-siguiente ficha-siguiente--cerrado"><small>Pedido cerrado</small><b>✓ Cierre revisado'+(utilidad==null?'':' · utilidad final '+new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(utilidad/100))+'</b></div>';});
+addEventListener('zain:pedido-finanzas',e=>{const {id,cerrado,utilidad,finanzas}=e.detail;if(finanzas){finanzasPedido.set(id,finanzas);aplicarCobro(id);}if(!selected||selected.id!==id||!cerrado)return;const paso=$('#detalle [data-paso="cerrado"]');if(paso){paso.className='hecho';paso.querySelector('span').textContent='✓';}const box=$('#detalle .ficha-siguiente');if(box)box.outerHTML='<div class="ficha-siguiente ficha-siguiente--cerrado"><small>Pedido cerrado</small><b>✓ Cierre revisado'+(utilidad==null?'':' · utilidad final '+new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(utilidad/100))+'</b></div>';});
 addEventListener('zain:cotizacion-publicada',()=>cargar().then(()=>{if(selected)detalle(selected.id).catch(failed);}).catch(failed));
 $('#anterior').addEventListener('click',()=>{offset=Math.max(0,offset-20);cargar().catch(failed);});
 $('#siguiente').addEventListener('click',()=>{offset+=20;cargar().catch(failed);});
@@ -140,12 +157,19 @@ $('#resumen').addEventListener('click',e=>{const b=e.target.closest('[data-resum
 $('#lista').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b){history.replaceState(null,'','#'+b.dataset.id);detalle(b.dataset.id).catch(failed);}});
 $('#detalle').addEventListener('submit',async e=>{
  if(e.target.id!=='editar'||!selected)return;e.preventDefault();const x=selected,b=e.target.querySelector('button');b.disabled=true;
- const sin=sinAnticipo;sinAnticipo=false;
- try{const data=await call('actualizar',{id:x.id,version:x.version,estado:$('#estadoPedido').value,notas:$('#notasEquipo').value,...(sin?{sinAnticipo:true}:{})});if(selected?.id!==x.id)return;selected=data.pedido;await detalle(x.id);await cargar('Cambios guardados.');}catch(er){const s=$('#estadoFicha');if(s)s.textContent=er.message;else failed(er);const a=$('#avanzarAviso');if(a){a.textContent=er.message;a.hidden=false;}const c=$('[data-sin-anticipo-confirmar]');if(c&&sin){c.textContent=er.message;c.hidden=false;}}finally{b.disabled=false;}
+ const sin=sinAnticipo,estado=$('#estadoPedido').value;sinAnticipo=false;
+ try{const data=await call('actualizar',{id:x.id,version:x.version,estado,notas:$('#notasEquipo').value,...(sin?{sinAnticipo:true}:{})});if(selected?.id!==x.id)return;selected=data.pedido;if(sin)finanzasPedido.set(x.id,{...(finanzasPedido.get(x.id)||{}),sin_anticipo:true});await detalle(x.id);await cargar('Cambios guardados.');}
+ catch(er){
+  // Falta el anticipo al pasar a Confirmado o Producción: ofrecer pasarlo sin anticipo en el mismo lugar (JP, 2-nov-2026).
+  const ofrecer=!sin&&/^Falta cobrar el anticipo/.test(er.message)&&['confirmado','produccion'].includes(estado),
+   html=esc(er.message)+(ofrecer?' <button type="button" class="btn btn--azul" data-sin-anticipo-forzar="'+estado+'">Pasar a '+(estado==='produccion'?'producción':'Confirmado')+' sin anticipo</button>':'');
+  const s=$('#estadoFicha');if(s)s.innerHTML=html;else failed(er);const a=$('#avanzarAviso');if(a){a.innerHTML=html;a.hidden=false;}const c=$('[data-sin-anticipo-confirmar]');if(c&&sin){c.textContent=er.message;c.hidden=false;}}
+ finally{b.disabled=false;}
 });
 $('#detalle').addEventListener('click',async e=>{
  if(e.target.closest('[data-sin-anticipo]')){$('[data-sin-anticipo-confirmar]').hidden=false;return;}
  if(e.target.closest('[data-sin-anticipo-no]')){$('[data-sin-anticipo-confirmar]').hidden=true;return;}
+ const forzar=e.target.closest('[data-sin-anticipo-forzar]');if(forzar&&$('#editar')){$('#estadoPedido').value=forzar.dataset.sinAnticipoForzar;sinAnticipo=true;$('#editar').requestSubmit();return;}
  if(e.target.closest('[data-sin-anticipo-si]')&&$('#editar')){$('#estadoPedido').value='produccion';sinAnticipo=true;$('#editar').requestSubmit();return;}
  const avanzar=e.target.closest('[data-avanzar]');if(avanzar&&$('#editar')){$('#estadoPedido').value=avanzar.dataset.avanzar;$('#editar').requestSubmit();return;}
  const tab=e.target.closest('[data-pestana],[data-ir]');if(tab){verPestana(tab.dataset.pestana||tab.dataset.ir);return;}
