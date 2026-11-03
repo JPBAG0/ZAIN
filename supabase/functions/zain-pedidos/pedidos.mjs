@@ -27,7 +27,10 @@ const equal = (a,b) => typeof a === 'string' && typeof b === 'string' && a.lengt
 const validateID = id => { if (!UUID.test(id || '')) fail(400,'Folio inválido.'); return id; };
 const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(403,'No se pudo verificar esta solicitud.'); return sha(token); };
 
-export function validateOrder(body, { allowHistoricos = false, catalogo = C, snapshot = false } = {}) {
+// Sin prenda (2-nov-2026): personalización sobre prendas que entrega el cliente, desde Cotizaciones. Mismos valores que js/cotizacion-servicio.js.
+const SERVICIO='prenda-cliente', COLOR_SERVICIO='Prenda del cliente';
+// servicio: solo el equipo (sesión verificada) puede crear o editar partidas sin prenda; el catálogo público no las ofrece.
+export function validateOrder(body, { allowHistoricos = false, catalogo = C, snapshot = false, servicio = false } = {}) {
   const C=catalogo;
   const maxLogo = z => Math.round(z.max * (z.orientativa ? 1 : C.escalaMaxLogo || 1) * 2) / 2;
   // «Libre» (27-oct-2026): cualquier lugar y tamaño de la prenda; el personalizador recorta lo que sale de ella (js/zain.js zonaLibre).
@@ -37,6 +40,18 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
     if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
+    if (x.p === SERVICIO) {
+      if (!servicio) fail(400,'Revisa las cantidades y mínimos de los productos.');
+      const n = Number(x.piezas);
+      if (!Number.isSafeInteger(n) || n<1 || n>9999) fail(400,'Revisa las piezas de la personalización sin prenda.');
+      if (!C.tecnicas.some(t=>t.nombre===x.tecnica)) fail(400,'Técnica inválida.');
+      if (x.color!==COLOR_SERVICIO) fail(400,'Color de producto inválido.');
+      if (!Number.isFinite(x.cm) || x.cm<=0 || x.cm>200) fail(400,'Revisa el tamaño del logo.');
+      if (x.logoGeometria!=null) fail(400,'Revisa las medidas del diseño del logo.');
+      const nombre=text(x.nombreZain||x.nombre,150).replace(/\s+/g,' ').trim()||'Personalización sobre prenda del cliente';
+      return { indice:i,p:SERVICIO,servicio:true,nombre,color:COLOR_SERVICIO,tecnica:x.tecnica,piezas:n,medidas:'',detalleMedidas:'',zona:text(x.zona,120),cm:x.cm,tallas:'',tallasEtq:'Piezas',logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender,
+        ...(snapshot?{nombreZain:nombre,sku:'',skuProveedor:'',proveedor:''}:{}) };
+    }
     const p = C.productos.find(p=>(p.id===x.p || p.idPublico===x.p) && (p.activo!==false || allowHistoricos)) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
     const n = Number(x.piezas);
     if (!p || !Number.isSafeInteger(n) || n<Math.max(1,p.minimoPiezas||0) || n>9999 || (n-(p.minimoPiezas||0))%(p.pasoPiezas||1)) fail(400,'Revisa las cantidades y mínimos de los productos.');
@@ -243,7 +258,9 @@ export function createHandler(env={}, fetcher=fetch) {
       if(request.method==='POST'&&['crear','subidas','finalizar'].includes(op)) {
         const body=await jsonBody(request);
         if(op==='crear') {
-
+          // Una partida sin prenda solo la crea el equipo (Cotizaciones → Pasar a pedido), con su sesión.
+          const servicio=Array.isArray(body.items)&&body.items.some(x=>x?.p===SERVICIO);
+          if(servicio)await staff(request);
           let catalog=C,existing=null,requestHash=null;
           if(catalogEnabled){
             validateID(body.id);validateToken(body.token);
@@ -255,7 +272,7 @@ export function createHandler(env={}, fetcher=fetch) {
                 await guardarCliente(body.id,body.cliente);
                 return response(200,{id:body.id,folio:existing.folio});
               }
-              const old=validateOrder(body,{allowHistoricos:true});
+              const old=validateOrder(body,{allowHistoricos:true,servicio});
               if(stable(old.items)!==stable(existing.items)||stable(old.manifest)!==stable(existing.archivos))fail(409,'Esta solicitud ya existe con otros datos.');
               return response(200,{id:body.id,folio:existing.folio});
             }
@@ -267,7 +284,7 @@ export function createHandler(env={}, fetcher=fetch) {
           if(historical) {
             try{await owner(body);}catch(e){if(e.status===404)fail(400,'Esta selección pertenece al catálogo anterior. Elige una referencia del catálogo actual; tus archivos siguen guardados.');throw e;}
           }
-          const x=validateOrder(body,{allowHistoricos:historical,catalogo:catalog,snapshot:catalogEnabled});
+          const x=validateOrder(body,{allowHistoricos:historical,catalogo:catalog,snapshot:catalogEnabled,servicio});
           if(requestHash)for(const item of x.items)item.pedido_hash=requestHash;
           const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
           const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');

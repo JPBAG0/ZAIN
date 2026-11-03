@@ -1,8 +1,8 @@
-import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=22';
+import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=23';
 import {esc} from './cotizacion-vista.js?v=16';
 import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=7';
-import {armarPedido} from './cotizacion-modelos-pedido.js?v=2';
-import {SERVICIO,NOMBRE_SERVICIO,productoServicio,filasServicio,dibujarServicio} from './cotizacion-servicio.js?v=1';
+import {armarPedido} from './cotizacion-modelos-pedido.js?v=3';
+import {SERVICIO,NOMBRE_SERVICIO,productoServicio,filasServicio,dibujarServicio} from './cotizacion-servicio.js?v=2';
 const $=s=>document.querySelector(s),nav=$('.control__secciones'),api=(op,body,extra)=>window.ZAINEquipo.call(op,body,extra);
 const tecnicas={bordado:'Bordado',serigrafia:'Serigrafía',dtf:'DTF'},numero=n=>n==null?'':(n/100).toFixed(2),nullable=e=>e.value.trim()===''?null:decimal(e.value);
 const ESTADOS={borrador:'Borrador',enviada:'Enviada',autorizada:'Autorizada',convertida:'Convertida en pedido',descartada:'Descartada'};
@@ -47,8 +47,6 @@ function resumen(){
  $('#cmResumen').classList.toggle('cm-pendiente',sucio&&modelos.length>0);
  $('#cmPasar').hidden=!modelos.length||['convertida','descartada'].includes(actual?.estado);
 }
-// Renglones «sin prenda» que se ofrecen: todavía no pueden pasar a Pedidos.
-const conServicio=()=>modelos.some(m=>m.servicio&&m.filas.some(f=>f.incluir!==false));
 function marcarSucio(){if(!sucio){sucio=true;resumen();}}
 function marcarLimpio(){sucio=false;resumen();}
 function cabecera(){
@@ -357,15 +355,15 @@ const nombreColor=id=>datos.colores.find(c=>c.id===id)?.nombre||id;
 function cerrarConversion(){$('#cmForm .cm-exportar').hidden=false;lineas=[];$('#cmConvertir').hidden=true;$('#cvLineas').replaceChildren();$('#cvResultado').hidden=true;$('#cvResultado').replaceChildren();$('#cvEstado').textContent='';$('#cvErrores').replaceChildren();}
 function pintarLineas(){
  const porModelo=modelos.map((m,i)=>({m,i,lineas:lineas.map((l,k)=>({...l,k})).filter(l=>l.modelo===i)}));
- $('#cvLineas').innerHTML=porModelo.map(({m,i,lineas:ls})=>`<div class="cm-cvmodelo"><h3>${esc(m.nombre)}${m.tecnica?'':' <small>· solo prenda</small>'}</h3>${ls.map(l=>{const tallas=(m.producto.tallas||[]).length?m.producto.tallas:[''];return `<div class="cm-cvlinea" data-linea="${l.k}"><div class="cm-cvcab"><label>Color<select data-cv="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}"${id===l.colorId?' selected':''}>${esc(nombreColor(id))}</option>`).join('')}</select></label>${ls.length>1?'<button type="button" class="btn-texto" data-cv="quitar">Quitar color</button>':''}</div><div class="cm-cvtallas">${tallas.map(t=>`<label>${esc(t||'Piezas')}<input type="number" min="0" max="9999" step="1" inputmode="numeric" data-talla="${esc(t)}" value="${l.cantidades[t]||''}"></label>`).join('')}</div><p class="cot-ayuda" data-cv="nota"></p></div>`;}).join('')}<button type="button" class="btn-texto" data-cv="otro" data-modelo="${i}">+ Otro color de este modelo</button></div>`).join('');
+ $('#cvLineas').innerHTML=porModelo.map(({m,i,lineas:ls})=>`<div class="cm-cvmodelo"><h3>${esc(m.nombre)}${m.servicio?' <small>· prenda del cliente</small>':m.tecnica?'':' <small>· solo prenda</small>'}</h3>${ls.map(l=>{const tallas=(m.producto.tallas||[]).length?m.producto.tallas:[''];return `<div class="cm-cvlinea" data-linea="${l.k}">${m.servicio?'':`<div class="cm-cvcab"><label>Color<select data-cv="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}"${id===l.colorId?' selected':''}>${esc(nombreColor(id))}</option>`).join('')}</select></label>${ls.length>1?'<button type="button" class="btn-texto" data-cv="quitar">Quitar color</button>':''}</div>`}<div class="cm-cvtallas">${tallas.map(t=>`<label>${esc(t||'Piezas')}<input type="number" min="0" max="9999" step="1" inputmode="numeric" data-talla="${esc(t)}" value="${l.cantidades[t]||''}"></label>`).join('')}</div><p class="cot-ayuda" data-cv="nota"></p></div>`;}).join('')}${m.servicio?'':`<button type="button" class="btn-texto" data-cv="otro" data-modelo="${i}">+ Otro color de este modelo</button>`}</div>`).join('');
  calcularConversion();
 }
 // Lo mínimo que necesita armarPedido de cada modelo de la pantalla.
 function vistaModelos(){
- return modelos.map(m=>{try{leer(m);}catch{}return {nombre:m.nombre,producto:m.producto,tecnica:m.tecnica,zonaDatos:zona(m),ancho:m.ancho,filas:m.filas,logoNombre:logoOriginal?.name,logoGeometria:logo&&m.ancho?{anchoPx:logo.width,altoPx:logo.height,anchoCm:m.ancho/100}:null};});
+ return modelos.map(m=>{try{leer(m);}catch{}return {nombre:m.nombre,producto:m.producto,tecnica:m.tecnica,zonaDatos:zona(m),ancho:m.ancho,ubicacion:m.ubicacion,filas:m.filas,logoNombre:logoOriginal?.name,logoGeometria:logo&&m.ancho?{anchoPx:logo.width,altoPx:logo.height,anchoCm:m.ancho/100}:null};});
 }
 function calcularConversion(){
- for(const el of $('#cvLineas').querySelectorAll('[data-linea]')){const l=lineas[Number(el.dataset.linea)];l.colorId=el.querySelector('[data-cv=color]').value;l.cantidades=Object.fromEntries([...el.querySelectorAll('[data-talla]')].map(i=>[i.dataset.talla,i.value===''?0:Number(i.value)]));}
+ for(const el of $('#cvLineas').querySelectorAll('[data-linea]')){const l=lineas[Number(el.dataset.linea)];l.colorId=el.querySelector('[data-cv=color]')?.value??'';l.cantidades=Object.fromEntries([...el.querySelectorAll('[data-talla]')].map(i=>[i.dataset.talla,i.value===''?0:Number(i.value)]));}
  const r=armarPedido({modelos:vistaModelos(),lineas,colores:datos.colores,escala:window.ZAIN.escalaMaxLogo||1,folio:actual?.folio||''});
  for(const el of $('#cvLineas').querySelectorAll('[data-linea]')){const k=Number(el.dataset.linea),l=lineas[k],sel=r.selecciones.filter(s=>s.modelo===l.modelo&&s.colorId===l.colorId);el.querySelector('[data-cv=nota]').textContent=sel.map(s=>(s.item.tallas||s.item.piezas+' piezas')+' a '+pesos(s.precio)+' / pza').join(' · ');}
  const q=(()=>{try{return comercial(modelos,opcionesComerciales(''));}catch{return null;}})(),cargo=q?.cargo?.importe||0,sub=r.subtotal+cargo,iva=q?.impuesto?Math.round(sub*q.impuesto/10000):0;
@@ -376,9 +374,8 @@ function calcularConversion(){
 }
 $('#cmPasar').addEventListener('click',()=>{
  if(!modelos.length)return avisar('Agrega un modelo para pasar la cotización a pedido.');
- // Un pedido de Pedidos exige prendas del catálogo; pasar solo una parte dejaría el pedido incompleto.
- if(conServicio())return avisar('Esta cotización lleva personalización sin prenda, que todavía no se puede pasar a Pedidos. Guárdala y envía el PDF o el texto al cliente.');
- lineas=modelos.map((m,i)=>({modelo:i,colorId:nodo(m).querySelector('[data-campo=color]').value,cantidades:{}}));
+ // Sin prenda no tiene color: su línea solo pide piezas.
+ lineas=modelos.map((m,i)=>({modelo:i,colorId:nodo(m).querySelector('[data-campo=color]')?.value??'',cantidades:{}}));
  $('#cvCliente').value=$('#cmDestinatario').value.trim();$('#cvResultado').hidden=true;$('#cvEstado').textContent='';$('#cvCrear').hidden=false;$('#cvCancelar').textContent='Cancelar';
  $('#cmConvertir').hidden=false;$('#cmForm .cm-exportar').hidden=true;pintarLineas();$('#cvEstado').textContent=!logoOriginal&&modelos.some(m=>m.tecnica)?'El pedido quedará con logo pendiente; confirma el diseño antes de enviarlo a producción.':'';$('#cmConvertir').scrollIntoView({block:'start',behavior:'smooth'});
 });
@@ -428,14 +425,16 @@ $('#cvCrear').addEventListener('click',async()=>{
   const q=documentoComercial(actual.folio,{permitirLogoPendiente:true});
   estado('Preparando diseños…');
   const archivos=[];
-  for(const [i,s] of r.selecciones.entries()){if(!s.item.tieneLogo)continue;const render=await renderPedido(modelos[s.modelo],s.colorId);archivos.push({item:i,kind:'logo',name:logoOriginal.name,type:logoOriginal.type,size:logoOriginal.size,blob:logoOriginal},{item:i,kind:'render',name:'render.png',type:'image/png',size:render.size,blob:render});}
+  // Sin prenda no lleva render (no hay prenda que mostrar): el taller recibe el logo original.
+  for(const [i,s] of r.selecciones.entries()){if(!s.item.tieneLogo)continue;if(s.item.servicio){archivos.push({item:i,kind:'logo',name:logoOriginal.name,type:logoOriginal.type,size:logoOriginal.size,blob:logoOriginal});continue;}const render=await renderPedido(modelos[s.modelo],s.colorId);archivos.push({item:i,kind:'logo',name:logoOriginal.name,type:logoOriginal.type,size:logoOriginal.size,blob:logoOriginal},{item:i,kind:'render',name:'render.png',type:'image/png',size:render.size,blob:render});}
   if(archivos.reduce((s,f)=>s+f.size,0)>30*1024*1024)throw Error('Los archivos suman más de 30 MB: el logo es muy pesado para tantas partidas. Sube una versión más ligera del logo.');
   const items=r.selecciones.map(s=>s.item),manifest=archivos.map(({blob,...f})=>f);
   const huella=hex(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify({items,cliente}))));
   const {d,guardarD,borrar}=borradorConversion(huella);
   if(!d.recibo){
    estado('Creando el pedido…');
-   const crear=()=>publico('crear',{id:d.id,token:d.token,items,files:manifest,cliente:{nombre:cliente}});
+   // Una partida sin prenda solo la acepta el servidor con la sesión del equipo.
+   const cuerpo={id:d.id,token:d.token,items,files:manifest,cliente:{nombre:cliente}},crear=()=>items.some(x=>x.servicio)?api('crear',cuerpo):publico('crear',cuerpo);
    await crear(); // Un conflicto conserva el identificador: nunca crear un segundo pedido a ciegas.
    const s=await publico('subidas',{id:d.id,token:d.token});let n=0;
    for(const f of s.files||[]){
