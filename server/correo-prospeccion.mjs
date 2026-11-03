@@ -33,7 +33,7 @@ export function aviso(x){
  if(x.evento==='unsubscribe')return {title:'Baja de correos',body:de+' pidió no recibir más correos. Brevo ya no le escribirá.',url:'/gestion-zain',tag:'correo-baja'};
  return null;
 }
-export function resumen(filas){
+export function resumen(filas,ahora=Date.now()){
  if(!filas.length)return null;
  const unicos=(ev,v)=>new Set(filas.filter(f=>f.evento===ev&&(v==null||version(f.campana)===v)).map(f=>f.email)).size;
  const rebotes=unicos('hard_bounce')+unicos('soft_bounce'),entregados=unicos('delivered');
@@ -42,7 +42,8 @@ export function resumen(filas){
  if(unicos('spam'))partes.push(unicos('spam')+' spam');
  if(unicos('unsubscribe'))partes.push(unicos('unsubscribe')+' bajas');
  const versiones=['A','B'].filter(v=>filas.some(f=>version(f.campana)===v));
- return {title:'Prospección por correo · hoy',body:partes.join(' · ')+(versiones.length?'\n'+versiones.map(linea).join(' | '):''),url:'/gestion-zain',tag:'correo-resumen'};
+ // Etiqueta distinta en cada resumen: con la misma, el aviso reemplaza al anterior sin sonar.
+ return {title:'Prospección por correo · hoy',body:partes.join(' · ')+(versiones.length?'\n'+versiones.map(linea).join(' | '):''),url:'/gestion-zain',tag:'correo-resumen-'+ahora};
 }
 export function createCorreo({sb,fail,avisos,secreto,habilitado}){
  // La clave va en un encabezado (x-zain-clave, o «Authorization: Bearer» desde Brevo); la URL (?k=) queda

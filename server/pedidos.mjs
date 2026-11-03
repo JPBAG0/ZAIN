@@ -165,12 +165,14 @@ export function createHandler(env={}, fetcher=fetch) {
     return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
-  // Nombre/empresa y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
+  // Nombre/empresa, teléfono y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
+  // El teléfono queda en dígitos con lada de país (52 si vienen 10), igual que los chats de WhatsApp.
   const clienteSolicitud=c=>{
     if(!c||typeof c!=='object'||Array.isArray(c))return null;
     const nombre=typeof c.nombre==='string'?c.nombre.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,120):'';
     const fecha=typeof c.fecha==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(c.fecha)&&!Number.isNaN(Date.parse(c.fecha+'T12:00:00Z'))?c.fecha:'';
-    return nombre.length>=2?{nombre,...(fecha?{fecha}:{})}:null;
+    const digitos=typeof c.telefono==='string'?c.telefono.replace(/\D/g,''):'',telefono=digitos.length===10?'52'+digitos:digitos.length>=11&&digitos.length<=15?digitos:'';
+    return nombre.length>=2?{nombre,...(telefono?{telefono}:{}),...(fecha?{fecha}:{})}:null;
   };
   const guardarCliente=async(id,c)=>{
     const x=clienteSolicitud(c);if(!x)return;

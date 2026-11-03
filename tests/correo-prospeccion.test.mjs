@@ -33,6 +33,7 @@ test('resumen del día cuenta correos únicos y separa A/B',()=>{
  const A='L1 jue-29 A con imagenes',B='L1 jue-29 B solo texto',f=(evento,email,campana)=>({evento,email,campana});
  const r=resumen([f('delivered','a@x.mx',A),f('delivered','b@x.mx',B),f('delivered','c@x.mx',B),f('opened','a@x.mx',A),f('opened','b@x.mx',B),f('click','b@x.mx',B),f('hard_bounce','d@x.mx',A),f('unsubscribe','c@x.mx',B)]);
  assert.equal(r.body,'3 entregados · 2 abrieron · 1 clics · 1 rebotes · 1 bajas\nA: 1 abrieron · 0 clics | B: 1 abrieron · 1 clics');
+ assert.notEqual(resumen([f('delivered','a@x.mx',A)],1).tag,resumen([f('delivered','a@x.mx',A)],2).tag,'cada resumen suena, no reemplaza al anterior');
  assert.equal(version('L1 mar-3 B solo texto'),'B');assert.equal(version('Otra campaña'),'');
  assert.equal(inicioDelDia(Date.parse('2026-10-29T05:30:00Z')),'2026-10-28T06:00:00.000Z','antes de medianoche local sigue siendo ayer');
  assert.equal(inicioDelDia(Date.parse('2026-10-29T15:30:00Z')),'2026-10-29T06:00:00.000Z');

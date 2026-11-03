@@ -117,6 +117,13 @@ test('guarda nombre y fecha del cliente sin bloquear la solicitud',async()=>{
   assert.ok(patch.url.includes('guardado_at=is.null'));
   assert.deepEqual(JSON.parse(patch.opts.body),{cliente:{nombre:'Taller Ejemplo SA',fecha:'2026-11-20'}});
 });
+test('guarda el teléfono del cliente en dígitos con lada de país',async()=>{
+  for(const [telefono,esperado] of [['33 1234 5678','523312345678'],['+1 (555) 555-0101','15555550101'],['12345',undefined],[42,undefined]]){
+    const {request,calls}=setup();
+    await request('crear',{id,token,items:[item],files,cliente:{nombre:'Ana',telefono}});
+    assert.deepEqual(JSON.parse(calls.find(x=>x.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana',...(esperado?{telefono:esperado}:{})}});
+  }
+});
 test('sin nombre válido no escribe datos del cliente',async()=>{
   for(const cliente of [undefined,{nombre:'A'},{nombre:42},['x']]){
     const {request,calls}=setup();
