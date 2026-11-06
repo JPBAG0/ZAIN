@@ -19,8 +19,8 @@ module.exports = {
   "instagram": "",
   "horario": "Lunes a viernes de 9:00 a 18:00 · Sábados de 9:00 a 14:00",
   "minimoPiezas": null,
-  "minimoPedido": 12,
-  "minimoTexto": "Pedido mínimo: 12 piezas · bolsas desde 100",
+  "minimoPedido": 1,
+  "minimoTexto": "Desde 1 pieza · bolsas desde 100",
   "seguimientoWhatsApp": [
     {
       "id": "amable",
@@ -7303,7 +7303,7 @@ module.exports = {
     },
     {
       "p": "¿Cuál es el pedido mínimo?",
-      "r": "Prendas: 12 piezas por pedido, y puedes mezclar modelos, tallas, colores y Caballero/Dama. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
+      "r": "Prendas: no hay mínimo, puedes pedir desde 1 pieza y mezclar modelos, tallas, colores y Caballero/Dama; entre más piezas, mejor precio por pieza. En serigrafía conviene desde 50 piezas; para menos te recomendamos bordado o DTF. Bolsas: mínimo 100 piezas por modelo y color, en incrementos de 50: 100, 150, 200…"
     },
     {
       "p": "¿Cuánto cuesta?",
