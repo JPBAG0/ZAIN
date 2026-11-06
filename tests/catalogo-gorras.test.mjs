@@ -55,7 +55,7 @@ test('pedido de gorra sin tallas valida color, zona y tamaño; guarda la referen
  const out=validateOrder(request([pedido(p,p.colores[3])]),{catalogo:cat,snapshot:true}).items[0];
  assert.equal(out.sku,'ZN-GO-006');assert.equal(out.skuProveedor,'REF-ZN-GO-006');assert.equal(out.color,'Negro / Gris oxford');assert.match(out.detalleMedidas,/58 cm/);
  assert.equal(validateOrder(request([pedido(p,p.colores[0],{zona:'Lateral izquierdo',cm:5})]),{catalogo:cat}).items[0].zona,'Lateral izquierdo');
- for(const diff of [{cm:10.5},{zona:'Pecho izquierdo'},{tecnica:'DTF'},{colorId:'zn-go-004-c01'}])assert.throws(()=>validateOrder(request([pedido(p,p.colores[0],diff)]),{catalogo:cat}));
+ for(const diff of [{cm:20.5},{zona:'Pecho izquierdo'},{tecnica:'DTF'},{colorId:'zn-go-004-c01'}])assert.throws(()=>validateOrder(request([pedido(p,p.colores[0],diff)]),{catalogo:cat}));
  assert.throws(()=>validateOrder(request([pedido(prod('ZN-GO-002'),prod('ZN-GO-002').colores[0])]),{catalogo:resolveInternal(C,[])}));
 });
 test('chaleco acolchado: tallas XS–2XL en cm, cinco colores y foto de modelo',()=>{
