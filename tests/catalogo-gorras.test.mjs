@@ -19,7 +19,7 @@ test('las siete referencias nuevas existen ocultas con SKU propio y render en el
   assert.deepEqual(p.tecnicas,['bordado']);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);
   assert.ok(Pub.productosHistoricos.some(x=>x.sku===sku)&&!Pub.productos.some(x=>x.sku===sku));
  }
- assert.equal(C.productos.filter(p=>p.categoria==='Gorras'&&p.catalogo2026).length,6);
+ assert.equal(C.productos.filter(p=>p.categoria==='Gorras'&&p.catalogo2026).length,8);
  assert.equal(prod('ZN-CE-002').categoria,'Chalecos');
 });
 test('gorras: frente y lateral con alto máximo; sin tallas y unitalla en las premium',()=>{
@@ -64,4 +64,22 @@ test('chaleco acolchado: tallas XS–2XL en cm, cinco colores y foto de modelo',
  const cat=activar(),q=cat.productos.find(x=>x.sku==='ZN-CE-002');
  const out=validateOrder(request([{...pedido(q,q.colores[0]),tallasDetalle:{M:6,L:6}}]),{catalogo:cat}).items[0];
  assert.deepEqual(out.tallasDetalle,{M:6,L:6});assert.throws(()=>validateOrder(request([{...pedido(q,q.colores[0]),tallasDetalle:{M:5}}]),{catalogo:cat}));
+});
+test('gorras trucker de espuma y acrílica (6-nov): renders propios, combinaciones de dos tonos y logo hasta 20 × 11 cm',()=>{
+ const espuma=prod('ZN-GO-008'),acrilica=prod('ZN-GO-009');
+ for(const p of [espuma,acrilica]){
+  assert.equal(p.activo,false);assert.deepEqual(p.tecnicas,['bordado']);assert.deepEqual(p.tallas,[]);
+  assert.ok(existsSync(new URL('../'+p.foto,import.meta.url)),p.foto);
+  assert.deepEqual(p.zonas.map(z=>[z.id,z.max,z.maxAlto]),[['frente',20,11],['lateral',10,7]]);
+  for(const id of p.colores)assert.match(color(id).hexMalla,/^#[0-9a-f]{6}$/);
+  assert.ok(Pub.productosHistoricos.some(x=>x.sku===p.sku));
+ }
+ assert.equal(espuma.colores.length,7);assert.equal(acrilica.colores.length,5);
+ // solo las combinaciones Blanco / color llevan foto propia; los lisos se tiñen del render blanco
+ assert.deepEqual(Object.keys(espuma.fotosColor),['zn-go-008-c01','zn-go-008-c02','zn-go-008-c03','zn-go-008-c06']);
+ for(const f of Object.values(espuma.fotosColor))assert.ok(existsSync(new URL('../'+f,import.meta.url)),f);
+ assert.equal(acrilica.fotosColor,undefined);
+ const cat=resolveInternal(C,[{producto_id:'zn-go-009',version:1,cambios:{activo:true}}]),q=cat.productos.find(x=>x.sku==='ZN-GO-009');
+ const ok=validateOrder(request([pedido(q,q.colores[0],{cm:20})]),{catalogo:cat}).items[0];assert.equal(ok.color,'Marino');
+ assert.throws(()=>validateOrder(request([pedido(q,q.colores[0],{cm:20.5})]),{catalogo:cat}));
 });

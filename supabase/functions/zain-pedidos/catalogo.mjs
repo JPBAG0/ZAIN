@@ -1672,6 +1672,82 @@ export default {
       "hexMalla": "#c8ad88"
     },
     {
+      "id": "zn-go-008-c01",
+      "nombre": "Blanco / Azul elemental",
+      "hex": "#ffffff",
+      "hex2": "#1f5fbf",
+      "hexMalla": "#1f5fbf"
+    },
+    {
+      "id": "zn-go-008-c02",
+      "nombre": "Blanco / Café",
+      "hex": "#ffffff",
+      "hex2": "#5b3a29",
+      "hexMalla": "#5b3a29"
+    },
+    {
+      "id": "zn-go-008-c03",
+      "nombre": "Blanco / Rojo radiante",
+      "hex": "#ffffff",
+      "hex2": "#d0102a",
+      "hexMalla": "#d0102a"
+    },
+    {
+      "id": "zn-go-008-c04",
+      "nombre": "Amarillo",
+      "hex": "#f2c300",
+      "hexMalla": "#f2c300"
+    },
+    {
+      "id": "zn-go-008-c05",
+      "nombre": "Negro",
+      "hex": "#1d1d1f",
+      "hexMalla": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-008-c06",
+      "nombre": "Blanco / Amarillo neón",
+      "hex": "#ffffff",
+      "hex2": "#e2ef0f",
+      "hexMalla": "#e2ef0f"
+    },
+    {
+      "id": "zn-go-008-c07",
+      "nombre": "Blanco",
+      "hex": "#ffffff",
+      "hexMalla": "#ffffff"
+    },
+    {
+      "id": "zn-go-009-c01",
+      "nombre": "Marino",
+      "hex": "#1f2340",
+      "hexMalla": "#1f2340"
+    },
+    {
+      "id": "zn-go-009-c02",
+      "nombre": "Vino",
+      "hex": "#5e1a2a",
+      "hexMalla": "#5e1a2a"
+    },
+    {
+      "id": "zn-go-009-c03",
+      "nombre": "Negro",
+      "hex": "#1d1d1f",
+      "hexMalla": "#1d1d1f"
+    },
+    {
+      "id": "zn-go-009-c04",
+      "nombre": "Blanco",
+      "hex": "#ffffff",
+      "hexMalla": "#ffffff"
+    },
+    {
+      "id": "zn-go-009-c05",
+      "nombre": "Olivo",
+      "hex": "#4b5320",
+      "hexMalla": "#4b5320"
+    },
+    {
       "id": "zn-go-007-c01",
       "nombre": "Gris oxford",
       "hex": "#55595c"
@@ -6735,6 +6811,7 @@ export default {
           "y": 420,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -16,
           "sesgo": 2,
@@ -6747,6 +6824,7 @@ export default {
           "y": 430,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.9
@@ -6804,6 +6882,7 @@ export default {
           "y": 420,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -16,
           "sesgo": 2,
@@ -6816,6 +6895,7 @@ export default {
           "y": 430,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.9
@@ -6868,6 +6948,7 @@ export default {
           "y": 430,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -16,
           "sesgo": 2,
@@ -6880,6 +6961,7 @@ export default {
           "y": 430,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.72,
@@ -6945,6 +7027,7 @@ export default {
           "y": 430,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -16,
           "sesgo": 2,
@@ -6957,6 +7040,7 @@ export default {
           "y": 450,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.9
@@ -7012,6 +7096,7 @@ export default {
           "y": 440,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -16,
           "sesgo": 2,
@@ -7024,6 +7109,7 @@ export default {
           "y": 440,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.72,
@@ -7089,6 +7175,7 @@ export default {
           "y": 430,
           "max": 20,
           "maxAlto": 11,
+          "sugerido": 10,
           "orientativa": true,
           "inclina": -18,
           "sesgo": 3,
@@ -7101,6 +7188,7 @@ export default {
           "y": 440,
           "max": 10,
           "maxAlto": 7,
+          "sugerido": 5,
           "orientativa": true,
           "inclina": 5,
           "compresion": 0.9
@@ -7111,6 +7199,152 @@ export default {
       "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
       "medidas": "Unitalla ajustable, 58 cm de circunferencia.",
       "detalleMedidas": "Unitalla ajustable, 58 cm de circunferencia."
+    },
+    {
+      "id": "zn-go-008",
+      "idPublico": "zn-go-008",
+      "sku": "ZN-GO-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra trucker de espuma",
+      "nombreComercial": "Gorra trucker de espuma",
+      "nombreFamilia": "Gorra trucker de espuma",
+      "nombreFamiliaComercial": "Gorra trucker de espuma",
+      "familia": "zain-2026-gorra-trucker-espuma",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Trucker clásica con frente de espuma liso, malla trasera y cierre de broche. El frente sin costura central deja el logo completo y a la vista.",
+      "especificaciones": "Frente de espuma de una sola pieza, sin costura central. Malla trasera de poliéster. Visera curva con pespuntes. Cierre de broche ajustable. El lateral es de malla.",
+      "tejido": "Espuma y malla",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-008-render.webp",
+      "colores": [
+        "zn-go-008-c01",
+        "zn-go-008-c02",
+        "zn-go-008-c03",
+        "zn-go-008-c04",
+        "zn-go-008-c05",
+        "zn-go-008-c06",
+        "zn-go-008-c07"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 440,
+          "y": 450,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 760,
+          "y": 380,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.72,
+          "textura": 0.25,
+          "superficie": "malla"
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Unitalla ajustable con broche. Circunferencia por confirmar al cotizar.",
+      "fotosColor": {
+        "zn-go-008-c01": "img/productos/zain/zn-go-008-c01.webp",
+        "zn-go-008-c02": "img/productos/zain/zn-go-008-c02.webp",
+        "zn-go-008-c03": "img/productos/zain/zn-go-008-c03.webp",
+        "zn-go-008-c06": "img/productos/zain/zn-go-008-c06.webp"
+      }
+    },
+    {
+      "id": "zn-go-009",
+      "idPublico": "zn-go-009",
+      "sku": "ZN-GO-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Gorra trucker acrílica",
+      "nombreComercial": "Gorra trucker acrílica",
+      "nombreFamilia": "Gorra trucker acrílica",
+      "nombreFamiliaComercial": "Gorra trucker acrílica",
+      "familia": "zain-2026-gorra-trucker-acrilica",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Trucker de frente acrílico estructurado, malla trasera y cierre de broche. Visera larga y frente firme que lucen bien el bordado.",
+      "especificaciones": "Frente acrílico estructurado de dos paneles con costura central. Malla trasera de poliéster. Visera larga y curva con pespuntes. Cierre de broche ajustable. El lateral es de malla.",
+      "tejido": "Acrílico y malla",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-009-render.webp",
+      "colores": [
+        "zn-go-009-c01",
+        "zn-go-009-c02",
+        "zn-go-009-c03",
+        "zn-go-009-c04",
+        "zn-go-009-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado en frente y lateral. Tamaño, puntadas y ubicación final se confirman al cotizar.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 395,
+          "y": 460,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 800,
+          "y": 430,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.72,
+          "textura": 0.25,
+          "superficie": "malla"
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Unitalla ajustable con broche. Circunferencia por confirmar al cotizar."
     },
     {
       "id": "zn-ce-002",

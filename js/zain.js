@@ -1123,8 +1123,10 @@
     const z = zAct();
     const pr = E.info ? E.info.proporcion : 2.2;
     // El frente centrado permite casi todo el ancho del pecho (42 cm), pero sugiere el tamaño habitual (base de 30 cm).
-    const base = Math.min(z.max, 30);
-    const f = E.info?.esFoto ? (z.max <= 12 ? 0.9 : 0.78) : z.max <= 12 ? (pr >= 2.2 ? 0.9 : pr >= 1.2 ? 0.8 : 0.66) : pr >= 1.5 ? 0.85 : 0.7;
+    // «sugerido»: zonas con máximo amplio (gorras, 20 cm) que arrancan en su tamaño de siempre.
+    const ref = z.sugerido || z.max;
+    const base = Math.min(ref, 30);
+    const f = E.info?.esFoto ? (ref <= 12 ? 0.9 : 0.78) : ref <= 12 ? (pr >= 2.2 ? 0.9 : pr >= 1.2 ? 0.8 : 0.66) : pr >= 1.5 ? 0.85 : 0.7;
     return Math.round(base * f * 2) / 2;
   }
   // técnica sugerida: fotos y degradados → DTF; pocos colores → la principal de la prenda
