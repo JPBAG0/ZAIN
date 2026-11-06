@@ -1535,6 +1535,8 @@
     pedidoEl.classList.add("abierto");
     pedidoEl.setAttribute("aria-hidden", "false");
     document.documentElement.classList.add("sin-scroll");
+    // el panel completo se desplaza (artículos y datos): abre siempre en los artículos
+    $(".pedido__caja", pedidoEl).scrollTop = 0;
     setTimeout(() => $(".pedido__x").focus(), 50);
   };
   const cerrarPedido = () => {

@@ -1079,3 +1079,11 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 .vista-lado:focus-visible { outline: 2px solid var(--tinta); outline-offset: 2px; }
 @media (hover: hover) and (pointer: fine) { .vista-lado:hover { border-color: var(--tinta); } }
 .mover[hidden], .taller__regla[hidden] { display: none; }
+
+/* ---------------------------------------------------------------- carrito: un solo desplazamiento (6-nov-2026)
+   Con nombre, teléfono, correo y fecha el pie mide ~670 px: en el celular dejaba la lista de artículos en 8 px
+   y no se podía volver a verla. Ahora todo el panel se desplaza junto y la cabeza se queda arriba. */
+#pedido .pedido__caja { display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; padding-top: 0; }
+#pedido .pedido__cabeza { position: sticky; top: 0; z-index: 1; flex: none; background: var(--papel); padding-top: calc(16px + env(safe-area-inset-top, 0px)); }
+#pedido .pedido__items { flex: 1 0 auto; overflow: visible; }
+#pedido .pedido__pie { flex: none; }
