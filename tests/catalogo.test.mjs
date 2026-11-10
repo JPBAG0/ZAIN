@@ -10,11 +10,11 @@ const body=x=>({id,token,items:[x],files:[]});
 const selection=(p,colorID=p.colores[0])=>({p:p.id,color:C.colores.find(c=>c.id===colorID).nombre,colorCodigo:C.colores.find(c=>c.id===colorID).codigo,tecnica:C.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{M:5},zona:p.zonas[0].nombre,cm:9,tieneLogo:false,tieneRender:false});
 const catalogo=[...C.productos,...(C.catalogoYazbekPendiente||[])];
 const model=code=>catalogo.find(p=>p.codigoFabricante===code);
-const expected={C0200:['S','M','L','XL','2XL','3XL'],D0200:['S','M','L','XL','2XL'],C0300:['S','M','L','XL','2XL','3XL'],D0300:['S','M','L','XL'],D0550:['S','M','L','XL'],D1302:['S','M','L','XL'],D1502:['S','M','L','XL'],D1504:['S','M','L','XL'],D0601:['S','M','L','XL','2XL'],D0604:['S','M','L','XL','2XL'],D0605:['S','M','L','XL','2XL'],D0606:['S','M','L','XL','2XL'],D0607:['S','M','L','XL','2XL']};
+const expected={C0200:['S','M','L','XL','2XL','3XL'],D0200:['S','M','L','XL','2XL'],C0300:['S','M','L','XL','2XL','3XL'],D0300:['S','M','L','XL'],C0304:['S','M','L','XL','2XL'],D0304:['S','M','L','XL'],C0700:['S','M','L','XL','2XL'],D0550:['S','M','L','XL'],D1302:['S','M','L','XL'],D1502:['S','M','L','XL'],D1504:['S','M','L','XL'],D0601:['S','M','L','XL','2XL'],D0604:['S','M','L','XL','2XL'],D0605:['S','M','L','XL','2XL'],D0606:['S','M','L','XL','2XL'],D0607:['S','M','L','XL','2XL']};
 
-test('originales activos junto con 14 familias / 25 referencias Yazbek sin personas',()=>{
+test('originales activos junto con 16 familias / 28 referencias Yazbek sin personas',()=>{
   const current=catalogo.filter(p=>p.fabricante==='Yazbek');
-  assert.equal(current.length,25);assert.equal(new Set(current.map(p=>p.familia)).size,14);
+  assert.equal(current.length,28);assert.equal(new Set(current.map(p=>p.familia)).size,16);
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
   assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
   assert.equal(C.productosHistoricos.length,5);assert.ok(C.productos.find(p=>p.id==="gorra").activo);
@@ -81,10 +81,10 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
 });
 
 test('base conserva 44 referencias previas y agrega 21 preparadas ocultas con SKU nuevos',()=>{
- assert.equal(Public.productos.length,39);assert.equal(Public.productosHistoricos.length,30);
- assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,69);
+ assert.equal(Public.productos.length,42);assert.equal(Public.productosHistoricos.length,30);
+ assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,72);
  assert.ok(!/Yazbek|ActiviTee|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
- assert.equal(Public.productos.filter(p=>p.fotoModelo).length,25);
+ assert.equal(Public.productos.filter(p=>p.fotoModelo).length,28);
  for(const p of Public.productos.filter(p=>p.fotoModelo)){
   assert.ok(readFileSync(new URL('../'+p.fotoModelo,import.meta.url)).length>1000);
   assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);

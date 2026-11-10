@@ -3166,10 +3166,189 @@
       "fotoModelo": "img/productos/zain/zn-pl-005-modelo.webp"
     },
     {
+      "id": "zn-pl-010",
+      "nombre": "Playera premium manga larga · Caballero",
+      "nombreFamilia": "Playera premium manga larga",
+      "familia": "zain-familia-5",
+      "silueta": "Caballero",
+      "categoria": "Playeras",
+      "descripcion": "El mismo algodón de 195 g de la playera premium, en manga larga.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "zain-color-074": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/zain/zn-pl-010-render.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "zain-color-071",
+        "zain-color-091",
+        "zain-color-074",
+        "zain-color-073",
+        "zain-color-088",
+        "zain-color-092",
+        "zain-color-076",
+        "zain-color-093",
+        "zain-color-094",
+        "zain-color-077",
+        "zain-color-072",
+        "zain-color-075"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 45.7,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 73
+        },
+        "L": {
+          "ancho": 55.9,
+          "largo": 75.6
+        },
+        "XL": {
+          "ancho": 61,
+          "largo": 78.1
+        },
+        "2XL": {
+          "ancho": 66,
+          "largo": 80.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.764,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 594,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 498,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "imagenIA": true,
+      "sku": "ZN-PL-010",
+      "activo": true,
+      "prendaCatalogo": true,
+      "compatHash": "10d308f6",
+      "fotoModelo": "img/productos/zain/zn-pl-010-modelo.webp"
+    },
+    {
+      "id": "zn-pl-011",
+      "nombre": "Playera premium manga larga · Dama",
+      "nombreFamilia": "Playera premium manga larga",
+      "familia": "zain-familia-5",
+      "silueta": "Dama",
+      "categoria": "Playeras",
+      "descripcion": "El mismo algodón de 195 g de la playera premium, en manga larga.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "zain-color-074": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/zain/zn-pl-011-render.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "zain-color-071",
+        "zain-color-074",
+        "zain-color-073",
+        "zain-color-072",
+        "zain-color-095",
+        "zain-color-096"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 41.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 43.8,
+          "largo": 65.4
+        },
+        "L": {
+          "ancho": 48.9,
+          "largo": 67.3
+        },
+        "XL": {
+          "ancho": 54,
+          "largo": 69.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.81,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 575,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 497,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "imagenIA": true,
+      "sku": "ZN-PL-011",
+      "activo": true,
+      "prendaCatalogo": true,
+      "compatHash": "475ec00f",
+      "fotoModelo": "img/productos/zain/zn-pl-011-modelo.webp"
+    },
+    {
       "id": "zn-cm-004",
       "nombre": "Camisa de trabajo manga corta · Caballero",
       "nombreFamilia": "Camisa de trabajo manga corta",
-      "familia": "zain-familia-5",
+      "familia": "zain-familia-6",
       "silueta": "Caballero",
       "categoria": "Camisas",
       "descripcion": "Para comercios y personal operativo; versión de manga corta.",
@@ -3247,7 +3426,7 @@
       "id": "zn-cm-005",
       "nombre": "Camisa de trabajo manga corta · Dama",
       "nombreFamilia": "Camisa de trabajo manga corta",
-      "familia": "zain-familia-5",
+      "familia": "zain-familia-6",
       "silueta": "Dama",
       "categoria": "Camisas",
       "descripcion": "Para comercios y personal operativo; versión de manga corta.",
@@ -3325,7 +3504,7 @@
       "id": "zn-cm-006",
       "nombre": "Camisa de trabajo manga larga · Caballero",
       "nombreFamilia": "Camisa de trabajo manga larga",
-      "familia": "zain-familia-6",
+      "familia": "zain-familia-7",
       "silueta": "Caballero",
       "categoria": "Camisas",
       "descripcion": "Alternativa de manga larga para operaciones y supervisión.",
@@ -3405,7 +3584,7 @@
       "id": "zn-cm-007",
       "nombre": "Camisa de trabajo manga larga · Dama",
       "nombreFamilia": "Camisa de trabajo manga larga",
-      "familia": "zain-familia-6",
+      "familia": "zain-familia-7",
       "silueta": "Dama",
       "categoria": "Camisas",
       "descripcion": "Alternativa de manga larga para operaciones y supervisión.",
@@ -3485,7 +3664,7 @@
       "id": "zn-cm-008",
       "nombre": "Camisa ejecutiva manga corta · Caballero",
       "nombreFamilia": "Camisa ejecutiva manga corta",
-      "familia": "zain-familia-7",
+      "familia": "zain-familia-8",
       "silueta": "Caballero",
       "categoria": "Camisas",
       "descripcion": "Para oficina y atención al público con manga corta.",
@@ -3559,7 +3738,7 @@
       "id": "zn-cm-009",
       "nombre": "Camisa ejecutiva manga corta · Dama",
       "nombreFamilia": "Camisa ejecutiva manga corta",
-      "familia": "zain-familia-7",
+      "familia": "zain-familia-8",
       "silueta": "Dama",
       "categoria": "Camisas",
       "descripcion": "Para oficina y atención al público con manga corta.",
@@ -3633,7 +3812,7 @@
       "id": "zn-po-004",
       "nombre": "Polo ligero · Caballero",
       "nombreFamilia": "Polo ligero",
-      "familia": "zain-familia-8",
+      "familia": "zain-familia-9",
       "silueta": "Caballero",
       "categoria": "Polos",
       "descripcion": "Tejido ligero para equipos con trabajo activo.",
@@ -3719,7 +3898,7 @@
       "id": "zn-po-005",
       "nombre": "Polo ligero · Dama",
       "nombreFamilia": "Polo ligero",
-      "familia": "zain-familia-8",
+      "familia": "zain-familia-9",
       "silueta": "Dama",
       "categoria": "Polos",
       "descripcion": "Tejido ligero para equipos con trabajo activo.",
@@ -3800,7 +3979,7 @@
       "id": "zn-pl-006",
       "nombre": "Playera deportiva · Caballero",
       "nombreFamilia": "Playera deportiva",
-      "familia": "zain-familia-9",
+      "familia": "zain-familia-10",
       "silueta": "Caballero",
       "categoria": "Playeras",
       "descripcion": "Una alternativa ligera de poliéster para eventos y equipos.",
@@ -3886,7 +4065,7 @@
       "id": "zn-pl-007",
       "nombre": "Playera deportiva · Dama",
       "nombreFamilia": "Playera deportiva",
-      "familia": "zain-familia-9",
+      "familia": "zain-familia-10",
       "silueta": "Dama",
       "categoria": "Playeras",
       "descripcion": "Una alternativa ligera de poliéster para eventos y equipos.",
@@ -3964,10 +4143,98 @@
       "fotoModelo": "img/productos/zain/zn-pl-007-modelo.webp"
     },
     {
+      "id": "zn-su-005",
+      "nombre": "Sudadera cuello redondo · Adultos",
+      "nombreFamilia": "Sudadera cuello redondo",
+      "familia": "zain-familia-11",
+      "silueta": "Adultos",
+      "categoria": "Sudaderas",
+      "descripcion": "Felpa de 275 g, cuello redondo y sin capucha.",
+      "gramaje": 275,
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-005-render.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "zain-color-071",
+        "zain-color-090",
+        "zain-color-074",
+        "zain-color-073",
+        "zain-color-076",
+        "zain-color-072",
+        "zain-color-075"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 50.8,
+          "largo": 68.6
+        },
+        "M": {
+          "ancho": 55.9,
+          "largo": 71.1
+        },
+        "L": {
+          "ancho": 61,
+          "largo": 73.7
+        },
+        "XL": {
+          "ancho": 66,
+          "largo": 76.2
+        },
+        "2XL": {
+          "ancho": 71.1,
+          "largo": 78.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 3.2
+      },
+      "pxPorCm": 12.211,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 662,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 498,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "imagenIA": true,
+      "sku": "ZN-SU-005",
+      "activo": true,
+      "prendaCatalogo": true,
+      "compatHash": "d9878f36",
+      "fotoModelo": "img/productos/zain/zn-su-005-modelo.webp"
+    },
+    {
       "id": "zn-su-002",
       "nombre": "Sudadera con cierre · Adultos",
       "nombreFamilia": "Sudadera con cierre",
-      "familia": "zain-familia-10",
+      "familia": "zain-familia-12",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
       "descripcion": "Capucha, cangurera y cierre completo para uniforme casual.",
@@ -4047,7 +4314,7 @@
       "id": "zn-cm-010",
       "nombre": "Camisa denim · Caballero",
       "nombreFamilia": "Camisa denim",
-      "familia": "zain-familia-11",
+      "familia": "zain-familia-13",
       "silueta": "Caballero",
       "categoria": "Camisas",
       "descripcion": "Para equipos que buscan una presentación casual.",
@@ -4120,7 +4387,7 @@
       "id": "zn-cm-011",
       "nombre": "Camisa denim · Dama",
       "nombreFamilia": "Camisa denim",
-      "familia": "zain-familia-11",
+      "familia": "zain-familia-13",
       "silueta": "Dama",
       "categoria": "Camisas",
       "descripcion": "Para equipos que buscan una presentación casual.",
@@ -4193,7 +4460,7 @@
       "id": "zn-su-003",
       "nombre": "Sudadera canguro · Adultos",
       "nombreFamilia": "Sudadera canguro",
-      "familia": "zain-familia-12",
+      "familia": "zain-familia-14",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
       "descripcion": "Una opción casual para equipos y artículos de marca.",
@@ -4286,7 +4553,7 @@
       "id": "zn-su-004",
       "nombre": "Sudadera cuello alto · Adultos",
       "nombreFamilia": "Sudadera cuello alto",
-      "familia": "zain-familia-13",
+      "familia": "zain-familia-15",
       "silueta": "Adultos",
       "categoria": "Sudaderas",
       "descripcion": "Cuello y cierre corto; alternativa sin capucha.",
@@ -4362,7 +4629,7 @@
       "id": "zn-po-006",
       "nombre": "Polo ligero manga larga · Caballero",
       "nombreFamilia": "Polo ligero manga larga",
-      "familia": "zain-familia-14",
+      "familia": "zain-familia-16",
       "silueta": "Caballero",
       "categoria": "Polos",
       "descripcion": "Complemento de manga larga para uniformes ligeros.",
@@ -4445,7 +4712,7 @@
       "id": "zn-po-007",
       "nombre": "Polo ligero manga larga · Dama",
       "nombreFamilia": "Polo ligero manga larga",
-      "familia": "zain-familia-14",
+      "familia": "zain-familia-16",
       "silueta": "Dama",
       "categoria": "Polos",
       "descripcion": "Complemento de manga larga para uniformes ligeros.",

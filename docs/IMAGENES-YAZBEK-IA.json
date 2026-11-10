@@ -323,5 +323,44 @@
     "herramienta": "image_gen integrada",
     "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate unobscured front garment. Strictly straight-on symmetrical front view, full garment visible, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, jeans, floor, captions, watermark, logo or brand label. No SVG or schematic. This is a high-resolution realistic physical garment render, consistent with input1. Design to reconstruct: RIGHT female white LONG SLEEVE Active polo, female shaped waist, long fitted sleeves with simple hem, pointed soft collar, three button slim placket, fine150gpolyester mesh, no pocket. FINAL OUTPUT: all fabric, seams, buttons and trim NEUTRAL WHITE regardless of reference garment color. Source hue is only a design guide; output white. Outer edge precise and clean.",
     "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0304",
+    "archivo": "img/productos/yazbek-ia/c0304.webp",
+    "sha256": "a2806af4a63d346bf194ec9128a222d4dee0f49fe4df13a49c5f57d00fe59824",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 13,
+    "herramienta": "image_gen integrada (Codex CLI 0.163.0, 10-nov-2026)",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct the selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate the unobscured front garment with both arms straight down at the sides (not crossed). Strictly straight-on symmetrical front view, full garment visible including both complete sleeves and cuffs, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, pants, floor, captions, watermark, logo or brand label. No SVG or schematic. High-resolution realistic physical garment render, consistent with input 1. Design to reconstruct: male straight-fit heavyweight 195 g cotton crew neck LONG-SLEEVE T-shirt, ribbed round neck, set-in long sleeves ending in plain cuffs, straight hem, smooth substantial cotton jersey. Same body cut and neck as the short-sleeve T-shirt in input 1, only with long sleeves.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "D0304",
+    "archivo": "img/productos/yazbek-ia/d0304.webp",
+    "sha256": "04b6c347162428cd7ca4be2991d8d97e82d5828ee6153a0949d42466a2618070",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 13,
+    "herramienta": "image_gen integrada (Codex CLI 0.163.0, 10-nov-2026)",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct the selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate the unobscured front garment with both arms straight down at the sides (not crossed). Strictly straight-on symmetrical front view, full garment visible including both complete sleeves and cuffs, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, pants, floor, captions, watermark, logo or brand label. No SVG or schematic. High-resolution realistic physical garment render, consistent with input 1. Design to reconstruct: female fitted heavyweight 195 g cotton crew neck LONG-SLEEVE T-shirt with feminine shaped waist (women silhouette cut), ribbed round neck, slim set-in long sleeves ending in plain cuffs, straight hem, smooth substantial cotton jersey. Same body cut and neck as the women short-sleeve T-shirt in input 1, only with long sleeves.",
+    "imagenIlustrativa": true
+  },
+  {
+    "codigo": "C0700",
+    "archivo": "img/productos/yazbek-ia/c0700.webp",
+    "sha256": "464f68b3c12c743cde7b274f239163ea31e939927f9c52766ba26cfcd95ae51d",
+    "tamano": [
+      1254,
+      1254
+    ],
+    "fuentePaginaPDF": 30,
+    "herramienta": "image_gen integrada (Codex CLI 0.163.0, 10-nov-2026)",
+    "prompt": "Use case: product-mockup. Generate ONE premium photorealistic ghost-mannequin garment only for the ZAIN color/logo editor. First input is STYLE reference only, second input is manufacturer catalog DESIGN reference. Reconstruct the selected garment's visible construction, seam layout and proportions faithfully. Remove wearer entirely; recreate the unobscured front garment with both arms straight down at the sides. Strictly straight-on symmetrical front view, full garment visible including both complete sleeves and cuffs, centered in square frame, top margin 5%, bottom margin 5%, max width around 80%. Pure WHITE fabric with neutral studio illumination, subtle true fabric folds and texture, soft interior shadows, white seams/trims. Actual transparent alpha background, crisp continuous clean garment boundary, fully opaque fabric interior, no fringes, floating scraps, exterior shadows, halo, checkerboard baked in. Single garment only, no skin, face, body, hands, neck, visible mannequin, hanger, pants, floor, captions, watermark, logo or brand label. No SVG or schematic. High-resolution realistic physical garment render, consistent with input 1. Design to reconstruct: unisex adult straight-fit 275 g poly-cotton fleece CREW NECK SWEATSHIRT (no hood, no zipper, no pocket, no drawstrings), ribbed round neck, set-in long sleeves with ribbed cuffs, ribbed waistband, smooth fleece face. Same body proportions, fabric weight, cuffs and waistband as the hooded sweatshirt in input 1, but with a plain crew neck instead of the hood and no front pocket.",
+    "imagenIlustrativa": true
   }
 ]

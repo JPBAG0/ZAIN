@@ -3699,6 +3699,221 @@ module.exports = {
       "nombreComercial": "Playera premium · Dama"
     },
     {
+      "id": "yazbek-c0304",
+      "nombre": "Playera peso completo manga larga · Caballero (C0304)",
+      "nombreFamilia": "Playera peso completo manga larga",
+      "familia": "yazbek-completa-larga",
+      "codigoFabricante": "C0304",
+      "fabricante": "Yazbek",
+      "silueta": "Caballero",
+      "categoria": "Playeras",
+      "descripcion": "El mismo algodón de 195 g de la playera premium, en manga larga.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek-ia/c0304.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-423",
+        "yazbek-102",
+        "yazbek-100",
+        "yazbek-230",
+        "yazbek-424",
+        "yazbek-413",
+        "yazbek-410",
+        "yazbek-300",
+        "yazbek-420",
+        "yazbek-414",
+        "yazbek-421"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 45.7,
+          "largo": 70.5
+        },
+        "M": {
+          "ancho": 50.8,
+          "largo": 73
+        },
+        "L": {
+          "ancho": 55.9,
+          "largo": 75.6
+        },
+        "XL": {
+          "ancho": 61,
+          "largo": 78.1
+        },
+        "2XL": {
+          "ancho": 66,
+          "largo": 80.6
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.764,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 594,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 498,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 13,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
+        "pagina": 13,
+        "ilustrativa": true,
+        "replicaVerificada": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true,
+      "sku": "ZN-PL-010",
+      "idPublico": "zn-pl-010",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera premium manga larga",
+      "nombreComercial": "Playera premium manga larga · Caballero"
+    },
+    {
+      "id": "yazbek-d0304",
+      "nombre": "Playera peso completo manga larga · Dama (D0304)",
+      "nombreFamilia": "Playera peso completo manga larga",
+      "familia": "yazbek-completa-larga",
+      "codigoFabricante": "D0304",
+      "fabricante": "Yazbek",
+      "silueta": "Dama",
+      "categoria": "Playeras",
+      "descripcion": "El mismo algodón de 195 g de la playera premium, en manga larga.",
+      "gramaje": 195,
+      "tejido": "Chifón",
+      "composicion": "100% algodón",
+      "composicionColor": {
+        "102": "90% algodón / 10% poliéster"
+      },
+      "foto": "img/productos/yazbek-ia/d0304.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-102",
+        "yazbek-100",
+        "yazbek-414",
+        "yazbek-411",
+        "yazbek-322"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 41.3,
+          "largo": 63.5
+        },
+        "M": {
+          "ancho": 43.8,
+          "largo": 65.4
+        },
+        "L": {
+          "ancho": 48.9,
+          "largo": 67.3
+        },
+        "XL": {
+          "ancho": 54,
+          "largo": 69.2
+        }
+      },
+      "tolerancia": {
+        "ancho": 2.5,
+        "largo": 2.5
+      },
+      "pxPorCm": 7.81,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 575,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 497,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 13,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
+        "pagina": 13,
+        "ilustrativa": true,
+        "replicaVerificada": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true,
+      "sku": "ZN-PL-011",
+      "idPublico": "zn-pl-011",
+      "activo": true,
+      "nombreFamiliaComercial": "Playera premium manga larga",
+      "nombreComercial": "Playera premium manga larga · Dama"
+    },
+    {
       "id": "yazbek-c0606",
       "nombre": "Camisa gabardina manga corta · Caballero (C0606)",
       "nombreFamilia": "Camisa gabardina manga corta",
@@ -4675,6 +4890,112 @@ module.exports = {
       "activo": true,
       "nombreFamiliaComercial": "Playera deportiva",
       "nombreComercial": "Playera deportiva · Dama"
+    },
+    {
+      "id": "yazbek-c0700",
+      "nombre": "Sudadera cuello redondo · Adultos (C0700)",
+      "nombreFamilia": "Sudadera cuello redondo",
+      "familia": "yazbek-sudadera-redonda",
+      "codigoFabricante": "C0700",
+      "fabricante": "Yazbek",
+      "silueta": "Adultos",
+      "categoria": "Sudaderas",
+      "descripcion": "Felpa de 275 g, cuello redondo y sin capucha.",
+      "gramaje": 275,
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/yazbek-ia/c0700.webp",
+      "renderOrientativo": true,
+      "colores": [
+        "yazbek-415",
+        "yazbek-2415",
+        "yazbek-102",
+        "yazbek-100",
+        "yazbek-413",
+        "yazbek-414",
+        "yazbek-421"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "tecnicasNota": "Técnica y acabado sujetos a revisión del logo y del tejido. DTF por confirmar: solicítalo en notas.",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tablaTallas": {
+        "S": {
+          "ancho": 50.8,
+          "largo": 68.6
+        },
+        "M": {
+          "ancho": 55.9,
+          "largo": 71.1
+        },
+        "L": {
+          "ancho": 61,
+          "largo": 73.7
+        },
+        "XL": {
+          "ancho": 66,
+          "largo": 76.2
+        },
+        "2XL": {
+          "ancho": 71.1,
+          "largo": 78.7
+        }
+      },
+      "tolerancia": {
+        "ancho": 1.9,
+        "largo": 3.2
+      },
+      "pxPorCm": 12.211,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 662,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 498,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "disponibilidad": "Consulta disponibilidad por modelo, color y talla.",
+      "fuente": {
+        "catalogo": "Yazbek · catalogo.pdf",
+        "pagina": 30,
+        "tablaTallas": 44,
+        "matrizColor": 47,
+        "decorado": 46,
+        "sha256": "642a2870b2662c9ee2259dae5876b9c39977de81475018d38d11c5145b662425"
+      },
+      "imagenFuente": {
+        "origen": "IA",
+        "referenciaCatalogo": "Yazbek · catalogo.pdf",
+        "pagina": 30,
+        "ilustrativa": true,
+        "replicaVerificada": false
+      },
+      "escalaNota": "Esquema orientativo basado en el ancho de talla G; no es un patrón ni un área de impresión aprobada.",
+      "imagenIA": true,
+      "sku": "ZN-SU-005",
+      "idPublico": "zn-su-005",
+      "activo": true,
+      "nombreFamiliaComercial": "Sudadera cuello redondo",
+      "nombreComercial": "Sudadera cuello redondo · Adultos"
     },
     {
       "id": "yazbek-c0702",
