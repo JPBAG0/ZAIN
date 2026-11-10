@@ -684,7 +684,6 @@
     $("#hexLogo").setCustomValidity("");
     $("#hexLogo").removeAttribute("aria-invalid");
     $("#hexLogoAviso").textContent = "";
-    $("#tintaActual").textContent = E.tinta === "original" ? "Color original del archivo" : `${nombreTinta()} · ${E.tinta.toUpperCase()}`;
   };
 
   function construirOpciones() {
@@ -869,7 +868,7 @@
       ZR.estampar(g, img, logo, { x: lx, y: ly, ancho, tecnica: E.t, S: 1000, sombraLocal: !!p.fotosColor, giro: z.giro, sesgo: z.sesgo, inclina: z.inclina, compresion: z.compresion, textura: z.textura, recortar: !!z.libre });
       const alto = (ancho * logo.height) / logo.width;
       if (ui) {
-        $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(2)} × ${(alto / p.pxPorCm).toFixed(2)} cm · ancho × alto estimados`;
+        $("#tamanoTxt").textContent = `${(ancho / p.pxPorCm).toFixed(1)} × ${(alto / p.pxPorCm).toFixed(1)} cm`;
         $("#reglaTxt").textContent = cm(ancho / p.pxPorCm);
       }
       principal = { x0: lx - ancho / 2, y0: ly - alto / 2, x1: lx + ancho / 2, y1: ly + alto / 2 };
@@ -964,7 +963,6 @@
     construirOpciones();
     contarPiezas();
     pedirRender();
-    if (E.info && E.modo === "imagen") pintarAnalisis();
   }
 
   $("#oPrenda").addEventListener("click", (e) => {
@@ -1026,10 +1024,11 @@
       <label class="subir subir--capa"><input type="file" data-archivo="${i}" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 19h14" /></svg><span>${x.nombre ? `<b>${esc(x.nombre)}</b> · toca para cambiarlo` : "<b>Elige este logo</b> · PNG, JPG o SVG"}</span></label>
       <div class="capa__fila"><label class="campo"><span>¿Dónde va?</span><select data-lugar="${i}">${LUGARES.map((l) => `<option${l === x.lugar ? " selected" : ""}>${l}</option>`).join("")}</select></label>
       <label class="interruptor"><input type="checkbox" data-fondo="${i}"${x.fondo ? " checked" : ""} /><span>Quitar fondo</span></label></div>
-      <label class="deslizador"><span>Ancho</span><input type="range" data-ancho="${i}" min="3" max="${Math.floor(820 / pAct().pxPorCm)}" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
+      <div class="tamano"><label class="deslizador"><span>Tamaño</span><input type="range" data-ancho="${i}" min="3" max="${Math.floor(820 / pAct().pxPorCm)}" step="0.5" value="${x.cm}" /><output class="num">${cm(x.cm)}</output></label>
+      <button type="button" class="tamano__btn tamano__btn--menos" data-paso-capa="${i}" data-paso="-0.5" aria-label="Hacer el logo ${i + 2} más chico">−</button><button type="button" class="tamano__btn tamano__btn--mas" data-paso-capa="${i}" data-paso="0.5" aria-label="Hacer el logo ${i + 2} más grande">+</button></div>
     </div>`).join("");
     $("#capaAgregar").hidden = E.extras.length >= MAX_EXTRAS;
-    $("#capaAgregar").textContent = E.extras.length ? "+ Agregar otro logo" : "+ Agregar más logos (espalda, mangas, patrocinadores…)";
+    $("#capaAgregar").textContent = "+ Agregar otro logo";
   }
   const activar = (i) => { capaActiva = i; $$("#capas .capa").forEach((el) => el.classList.toggle("capa--activa", Number(el.dataset.capa) === i)); };
   $("#capaAgregar").addEventListener("click", () => {
@@ -1050,6 +1049,12 @@
   $("#capas").addEventListener("click", (e) => {
     const q = e.target.closest("[data-quitar-capa]");
     if (q) { E.extras.splice(Number(q.dataset.quitarCapa), 1); capaActiva = -1; cajas = []; pintarCapas(); pedirRender(); return; }
+    const paso = e.target.closest("[data-paso-capa]");
+    if (paso) {
+      const r = $(`#capas [data-ancho="${paso.dataset.pasoCapa}"]`);
+      r.value = Math.min(Number(r.max), Math.max(Number(r.min), Number(r.value) + Number(paso.dataset.paso)));
+      r.dispatchEvent(new Event("input", { bubbles: true }));
+    }
     const c = e.target.closest("[data-capa]");
     if (c) activar(Number(c.dataset.capa));
   });
@@ -1096,8 +1101,15 @@
     $("#tamanoTxt").textContent = cm(E.cm);
     $("#reglaTxt").textContent = cm(E.cm);
     pedirRender();
-    if (E.info && E.modo === "imagen") pintarAnalisis();
   });
+  // Botones − / + junto a la barra: más fáciles de atinar en el celular que arrastrar la barra.
+  $("#tamanoMenos").addEventListener("click", () => cambiarTamano(-0.5));
+  $("#tamanoMas").addEventListener("click", () => cambiarTamano(0.5));
+  function cambiarTamano(d) {
+    const r = $("#tamano");
+    r.value = Math.min(Number(r.max), Math.max(Number(r.min), Number(r.value) + d));
+    r.dispatchEvent(new Event("input"));
+  }
   $("#oTallas").addEventListener("click", (e) => {
     const b = e.target.closest("[data-tt]");
     if (!b) return;
@@ -1153,21 +1165,13 @@
     if ((info.esFoto || info.nColores > 5) && p.tecnicas.includes("dtf")) return "dtf";
     return p.tecnicas[0];
   }
-  const POR_QUE = {
-    bordado: "Pocos colores y trazos definidos: se ve elegante y dura años.",
-    serigrafia: "Pocos colores sólidos: el mejor precio en volumen.",
-    dtf: "Tiene muchos colores o degradados: el DTF los imprime todos.",
-  };
-  const ICO_OK = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
-
+  // El logo se ajusta solo (fondo, técnica, tamaño y color) sin explicarlo en pantalla:
+  // JP (10-nov-2026) pidió quitar el recuadro «Así preparamos tu logo» porque era texto de más.
   function autoAjustar() {
     const info = E.info;
-    const cambios = [];
     // una foto luce mejor grande y al centro (si la prenda tiene esa zona)
-    if (info.esFoto && pAct().zonas.some((z) => z.id === "centro")) {
-      cambios.push("Al ser foto, la pusimos al centro del pecho");
-      E.z = "centro";
-    } else E.z = pAct().zonas[0].id; // la ubicación principal de la prenda (la primera en config.js)
+    if (info.esFoto && pAct().zonas.some((z) => z.id === "centro")) E.z = "centro";
+    else E.z = pAct().zonas[0].id; // la ubicación principal de la prenda (la primera en config.js)
     E.t = tecnicaIdeal(info);
     E.cm = tamanoIdeal();
     E.dx = E.dy = 0;
@@ -1175,38 +1179,10 @@
     // si es de 1 o 2 colores y casi no se ve sobre la prenda, se pasa a blanco o negro
     const luzPrenda = ZR.luz(ZR.hexARgb(fondoLogo(zAct(), E.c)));
     const seVe = info.colores.some((c) => Math.abs(ZR.luz(ZR.hexARgb(c)) - luzPrenda) >= 0.25);
-    if (!info.esFoto && info.nColores <= 3 && !seVe) {
-      E.tinta = luzPrenda < 0.5 ? "#f6f6f4" : "#141416";
-      cambios.push(`Lo pasamos a ${luzPrenda < 0.5 ? "blanco" : "negro"} para que resalte sobre ${color(E.c).nombre.toLowerCase()}`);
-    }
+    if (!info.esFoto && info.nColores <= 3 && !seVe) E.tinta = luzPrenda < 0.5 ? "#f6f6f4" : "#141416";
     sincronizarTinta();
     transicion = true;
     actualizar();
-    pintarAnalisis(cambios);
-  }
-
-  let extrasAnalisis = [];
-  function pintarAnalisis(extra) {
-    if (extra) extrasAnalisis = extra;
-    extra = extrasAnalisis;
-    const info = E.info;
-    const el = $("#analisis");
-    if (!info) return (el.hidden = true);
-    const t = tecnica(E.t);
-    const hechos = [];
-    if (info.fondoQuitado) hechos.push(`Quitamos el fondo <i class="muestra" style="--c:rgb(${info.fondo.map(Math.round).join(",")})"></i>`);
-    else if (info.yaTransparente) hechos.push("Tu imagen ya venía sin fondo");
-    if (info.agrandado) hechos.push("Era chica: la agrandamos y la enfocamos");
-    if (info.limpio) hechos.push("Limpiamos bordes y colores");
-    if (info.esFoto && !info.fondoQuitado && !info.yaTransparente) hechos.push("Es una foto: la preparamos como transfer con orillas suaves");
-    hechos.push(...extra);
-    hechos.push(`Ajustado a ${cm(E.cm)} en ${zAct().nombre.toLowerCase()}`);
-    el.innerHTML = `<b class="analisis__titulo">Así preparamos tu logo</b>
-      <div class="analisis__colores">${info.esFoto ? "<span>Foto o degradado</span>" : `<span>${info.nColores} ${info.nColores === 1 ? "color" : "colores"}</span>${info.colores.map((c) => `<i class="muestra" style="--c:${c}" title="${c}"></i>`).join("")}`}</div>
-      <ul>${hechos.map((h) => `<li>${ICO_OK}<span>${h}</span></li>`).join("")}</ul>
-      <p class="analisis__rec"><b>Recomendado: ${esc(t.nombre)}.</b> ${POR_QUE[t.id] || ""}</p>
-      <p class="analisis__tip">Arrastra el logo en la vista o usa las flechas para moverlo.</p>`;
-    el.hidden = false;
   }
 
   const analizar = () => {

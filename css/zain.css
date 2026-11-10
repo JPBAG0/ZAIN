@@ -1087,3 +1087,21 @@ html:has(.barra:not(.oculta)) .filtros { top: var(--barra); }
 #pedido .pedido__cabeza { position: sticky; top: 0; z-index: 1; flex: none; background: var(--papel); padding-top: calc(16px + env(safe-area-inset-top, 0px)); }
 #pedido .pedido__items { flex: 1 0 auto; overflow: visible; }
 #pedido .pedido__pie { flex: none; }
+
+/* ---------------------------------------------------------------- personalizador más simple (10-nov-2026)
+   JP: mucho texto y difícil de ajustar. Tamaño con − / + a los lados de la barra (fáciles de atinar en el celular). */
+.tamano { display: grid; grid-template-columns: 44px 1fr 44px; grid-template-areas: "etq etq etq" "menos barra mas"; align-items: center; gap: 4px 10px; margin-top: 16px; }
+.tamano .deslizador { display: contents; }
+.tamano .deslizador > span { grid-area: etq; font-size: 14px; font-weight: 600; }
+.tamano .deslizador output { grid-row: 1; grid-column: 2 / 4; justify-self: end; white-space: nowrap; font-size: 13px; font-weight: 600; text-align: right; }
+.tamano .deslizador input { grid-area: barra; }
+.tamano #tamanoMenos, .tamano__btn--menos { grid-area: menos; }
+.tamano #tamanoMas, .tamano__btn--mas { grid-area: mas; }
+.tamano__btn {
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0;
+  border: 1px solid var(--linea); border-radius: 50%; background: var(--papel); color: var(--tinta);
+  font: inherit; font-size: 22px; font-weight: 500; line-height: 1; cursor: pointer; touch-action: manipulation;
+}
+.tamano__btn:active { transform: scale(0.94); }
+.tamano__btn:focus-visible { outline: 2px solid var(--tinta); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .tamano__btn:hover { border-color: var(--tinta); } }
