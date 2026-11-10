@@ -46,12 +46,12 @@ export function resumen(filas,ahora=Date.now()){
  return {title:'Prospección por correo · hoy',body:partes.join(' · ')+(versiones.length?'\n'+versiones.map(linea).join(' | '):''),url:'/gestion-zain',tag:'correo-resumen-'+ahora};
 }
 export function createCorreo({sb,fail,avisos,secreto,habilitado}){
- // La clave va en un encabezado (x-zain-clave, o «Authorization: Bearer» desde Brevo); la URL (?k=) queda
- // solo de respaldo por si la pantalla de Brevo no ofrece autenticación.
+ // La clave va solo en un encabezado: x-zain-clave (resumen de pg_cron) o «Authorization: Bearer» (webhook de Brevo,
+ // autenticación Token). Desde el 10-nov ya no se acepta en la URL (?k=): las direcciones quedan en registros.
  const autorizar=(url,headers)=>{
   if(!habilitado)fail(404,'No disponible.');
   const bearer=(/^Bearer\s+(\S+)$/i.exec(headers?.get('authorization')||'')||[])[1];
-  if(!secretoValido(headers?.get('x-zain-clave')||bearer||url.searchParams.get('k')||'',secreto))fail(401,'No autorizado.');
+  if(!secretoValido(headers?.get('x-zain-clave')||bearer||'',secreto))fail(401,'No autorizado.');
  };
  return {
   // Brevo manda un evento por llamada (o una lista si se activa el envío por lotes).

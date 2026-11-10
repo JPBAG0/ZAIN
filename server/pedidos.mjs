@@ -292,8 +292,13 @@ export function createHandler(env={}, fetcher=fetch) {
           }
           const x=validateOrder(body,{allowHistoricos:historical,catalogo:catalog,snapshot:catalogEnabled,servicio});
           if(requestHash)for(const item of x.items)item.pedido_hash=requestHash;
-          const ip=request.headers.get('x-vercel-forwarded-for')||request.headers.get('x-forwarded-for')||request.headers.get('cf-connecting-ip')||'sin-ip';
-          const client=createHmac('sha256',key).update(ip.split(',')[0].trim()).digest('hex');
+          // IP del visitante para el tope por hora (revisión de seguridad, 10-nov-2026): se toma de lo que pone la plataforma,
+          // nunca de un encabezado que el visitante pueda inventar. Frente a Supabase está Cloudflare, que fija cf-connecting-ip
+          // (el 10-nov las 51,393 llamadas del día lo traían); x-vercel-forwarded-for solo cuenta si la función corre en Vercel,
+          // y de x-forwarded-for se usa el último salto (el que agrega el último proxy), no el primero.
+          const h=k=>(request.headers.get(k)||'').split(',')[0].trim();
+          const ip=(env.VERCEL&&h('x-vercel-forwarded-for'))||h('cf-connecting-ip')||(request.headers.get('x-forwarded-for')||'').split(',').map(s=>s.trim()).filter(Boolean).at(-1)||'sin-ip';
+          const client=createHmac('sha256',key).update(ip).digest('hex');
           const result=await sb('/rest/v1/rpc/zain_crear_pedido',{method:'POST',body:JSON.stringify({p_id:body.id,p_token_hash:validateToken(body.token),p_items:x.items,p_archivos:x.manifest,p_total:x.total,p_bytes:x.bytes,p_capacity:Math.min(Number(env.ZAIN_CAPACITY_MB)||800,100000)*1024*1024,p_client:client})});
           await guardarCliente(body.id,body.cliente);
           return response(200,{id:body.id,folio:result.folio});

@@ -163,3 +163,27 @@ test('una fecha inválida se descarta y conserva el nombre',async()=>{
   await request('crear',{id,token,items:[item],files,cliente:{nombre:'Ana',fecha:'mañana'}});
   assert.deepEqual(JSON.parse(calls.find(x=>x.opts.method==='PATCH').opts.body),{cliente:{nombre:'Ana'}});
 });
+
+// Revisión de seguridad (10-nov-2026): el tope por hora no se salta inventando encabezados de IP.
+test('el tope por visitante usa la IP que pone la plataforma, no un encabezado inventado',async()=>{
+  const clientes=[];
+  const fake=async(url,opts={})=>{
+    if(url.includes('/rpc/zain_crear_pedido')){clientes.push(JSON.parse(opts.body).p_client);return json({folio:'ZAIN-PRUEBA'});}
+    if(url.includes('/zain_pedidos?'))return json(null);
+    throw Error('Ruta inesperada '+url);
+  };
+  const crear=(h,ip)=>h(new Request('https://zain.test/api/pedidos?op=crear',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://zain.test',...ip},body:JSON.stringify({id,token,items:[item],files})}));
+  const supabase=createHandler(env,fake);
+  // En Supabase (Cloudflare delante): cambiar x-vercel-forwarded-for o el primer x-forwarded-for no cambia al visitante.
+  for(const falsa of ['1.1.1.1','2.2.2.2'])assert.equal((await crear(supabase,{'cf-connecting-ip':'203.0.113.7','x-vercel-forwarded-for':falsa,'x-forwarded-for':falsa+', 203.0.113.7'})).status,200);
+  assert.equal(clientes[0],clientes[1],'el encabezado inventado no cambia la identidad');
+  await crear(supabase,{'cf-connecting-ip':'203.0.113.8'});
+  assert.notEqual(clientes[2],clientes[0],'otra IP real sí es otro visitante');
+  // Sin cf-connecting-ip se usa el último salto de x-forwarded-for (el que agrega el proxy), no el primero.
+  await crear(supabase,{'x-forwarded-for':'9.9.9.9, 203.0.113.7'});await crear(supabase,{'x-forwarded-for':'8.8.8.8, 203.0.113.7'});
+  assert.equal(clientes[3],clientes[4]);
+  // En Vercel sí cuenta x-vercel-forwarded-for, porque ahí lo pone la plataforma.
+  const vercel=createHandler({...env,VERCEL:'1'},fake);
+  await crear(vercel,{'x-vercel-forwarded-for':'198.51.100.1'});await crear(vercel,{'x-vercel-forwarded-for':'198.51.100.2'});
+  assert.notEqual(clientes[5],clientes[6]);
+});

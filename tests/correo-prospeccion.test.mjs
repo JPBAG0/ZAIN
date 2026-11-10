@@ -51,14 +51,17 @@ test('webhook: exige la clave, guarda sin duplicar y avisa solo lo nuevo',async(
  };
  const correo=createCorreo({sb,fail,avisos:{enviar:async a=>{enviados.push(a);return 2;}},secreto:SECRETO,habilitado:true});
  const u=k=>new URL('https://zain.test/api?op=correo-evento'+(k?'&k='+k:''));
- await assert.rejects(correo.evento(u(),brevo('click')),e=>e.status===401);
- await assert.rejects(correo.evento(u('x'.repeat(48)),brevo('click')),e=>e.status===401);
- const d=await correo.evento(u(SECRETO),[brevo('delivered'),brevo('click',{URL:'https://wa.me/1'})]);
+ const clave=k=>new Headers(k?{'x-zain-clave':k}:{});
+ await assert.rejects(correo.evento(u(),brevo('click'),clave()),e=>e.status===401);
+ await assert.rejects(correo.evento(u(),brevo('click'),clave('x'.repeat(48))),e=>e.status===401);
+ // Desde el 10-nov la clave en la dirección ya no autoriza (revisión de seguridad).
+ await assert.rejects(correo.evento(u(SECRETO),brevo('click'),clave()),e=>e.status===401);
+ const d=await correo.evento(u(),[brevo('delivered'),brevo('click',{URL:'https://wa.me/1'})],clave(SECRETO));
  assert.equal(d.guardados,2);assert.equal(d.avisos.length,1);
- const otra=await correo.evento(u(SECRETO),brevo('click',{URL:'https://wa.me/1'}));
+ const otra=await correo.evento(u(),brevo('click',{URL:'https://wa.me/1'}),clave(SECRETO));
  assert.equal(otra.guardados,0);assert.equal(otra.avisos.length,0,'el segundo clic no repite aviso');
- const r=await correo.resumen(u(SECRETO));assert.equal(r.enviados,2);assert.match(enviados[0].body,/^1 entregados · 0 abrieron · 1 clics/);
- await assert.rejects(createCorreo({sb,fail,avisos:{},secreto:SECRETO,habilitado:false}).evento(u(SECRETO),brevo('click')),e=>e.status===404);
+ const r=await correo.resumen(u(),clave(SECRETO));assert.equal(r.enviados,2);assert.match(enviados[0].body,/^1 entregados · 0 abrieron · 1 clics/);
+ await assert.rejects(createCorreo({sb,fail,avisos:{},secreto:SECRETO,habilitado:false}).evento(u(),brevo('click'),clave(SECRETO)),e=>e.status===404);
 });
 
 test('la Edge recibe el webhook de Brevo sin origen ni sesión',async()=>{
@@ -70,11 +73,13 @@ test('la Edge recibe el webhook de Brevo sin origen ni sesión',async()=>{
  };
  const env={SUPABASE_URL:'https://project.supabase.co',SUPABASE_SECRET_KEY:'sb_secret_prueba_no_real',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_prueba_no_real',ZAIN_PEDIDOS_ENABLED:'true',ZAIN_AVISOS_ENABLED:'true',ZAIN_CORREO_ENABLED:'true',ZAIN_BREVO_SECRETO:SECRETO,ZAIN_SITE_URL:'https://zain.test'};
  const h=createHandler(env,fake);
- const post=(k,body)=>h(new Request('https://zain.test/api/pedidos?op=correo-evento&k='+k,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}));
+ const post=(k,body)=>h(new Request('https://zain.test/api/pedidos?op=correo-evento',{method:'POST',headers:{'Content-Type':'application/json','x-zain-clave':k},body:JSON.stringify(body)}));
  assert.equal((await post('mala'.repeat(12),brevo('click'))).status,401);
+ const enURL=await h(new Request('https://zain.test/api/pedidos?op=correo-evento&k='+SECRETO,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(brevo('click'))}));
+ assert.equal(enURL.status,401,'la clave en la dirección ya no autoriza');
  const r=await post(SECRETO,brevo('click',{URL:'https://wa.me/1'}));
  assert.equal(r.status,200);assert.deepEqual(await r.json(),{guardados:1});assert.equal(pedidos.length,1);
- assert.equal((await h(new Request('https://zain.test/api/pedidos?op=correo-evento&k='+SECRETO))).status,405);
+ assert.equal((await h(new Request('https://zain.test/api/pedidos?op=correo-evento',{headers:{'x-zain-clave':SECRETO}}))).status,405);
  const porEncabezado=await h(new Request('https://zain.test/api/pedidos?op=correo-evento',{method:'POST',headers:{'Content-Type':'application/json','x-zain-clave':SECRETO},body:JSON.stringify(brevo('spam'))}));
  assert.equal(porEncabezado.status,200,'la clave también entra por encabezado');
  const porBearer=await h(new Request('https://zain.test/api/pedidos?op=correo-evento',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+SECRETO},body:JSON.stringify(brevo('unsubscribe'))}));
