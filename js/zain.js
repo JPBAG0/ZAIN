@@ -919,9 +919,12 @@
   };
   // Parte trasera (27-oct-2026, JP): botón «+» sobre la vista; los logos de la espalda son logos adicionales con lado «espalda».
   // Una prenda tiene espalda cuando su render existe en img/productos/zain/<sku>-espalda.webp y su SKU está en ESPALDAS.
-  const ESPALDAS = new Set(["ZN-PL-004", "ZN-PL-005", "ZN-PL-008", "ZN-PL-009", "ZN-PO-008", "ZN-PO-009", "ZN-PO-010", "ZN-PO-011", "ZN-PO-012", "ZN-PO-013", "ZN-CM-012", "ZN-CM-013", "ZN-CM-014", "ZN-CM-015", "ZN-SU-002", "ZN-SU-003", "ZN-SU-004", "ZN-CH-001", "ZN-CH-002", "ZN-CH-003", "ZN-CE-001", "ZN-CE-002"]);
+  const ESPALDAS = new Set(["ZN-PL-004", "ZN-PL-005", "ZN-PL-010", "ZN-PL-011", "ZN-PL-008", "ZN-PL-009", "ZN-PO-008", "ZN-PO-009", "ZN-PO-010", "ZN-PO-011", "ZN-PO-012", "ZN-PO-013", "ZN-CM-012", "ZN-CM-013", "ZN-CM-014", "ZN-CM-015", "ZN-SU-002", "ZN-SU-003", "ZN-SU-004", "ZN-SU-005", "ZN-CH-001", "ZN-CH-002", "ZN-CH-003", "ZN-CE-001", "ZN-CE-002"]);
   const fotoEspalda = (p) => (ESPALDAS.has(p.sku) ? `img/productos/zain/${p.sku.toLowerCase()}-espalda.webp` : null);
   const tieneEspalda = () => E.extras.some((x) => x.lado === "espalda") && !!fotoEspalda(pAct());
+  // «¿Dónde va?» decide el lado (10-nov-2026, JP): «Espalda» se dibuja atrás si la prenda tiene render trasero.
+  // Antes solo cambiaba el texto y el logo se quedaba pintado al frente. «Cuello / nuca» conserva el lado que tenga.
+  const ladoDe = (lugar, actual) => (lugar === "Espalda" ? (fotoEspalda(pAct()) ? "espalda" : "frente") : lugar === "Cuello / nuca" ? actual : "frente");
   function sincronizarVista() {
     const b = $("#vistaLado");
     const hay = !!fotoEspalda(pAct());
@@ -1033,8 +1036,12 @@
     if (E.extras.length >= MAX_EXTRAS) return;
     // Cada logo nuevo aparece al centro del torso, un poco más abajo que el anterior, para no encimarse.
     const n = E.extras.length;
-    const atras = E.vista === "espalda";
-    E.extras.push({ id: crypto.randomUUID(), x: 500, y: atras ? Math.min(760, 400 + n * 60) : Math.min(760, Math.max(420, zAct().y + 180) + n * 60), cm: n ? 10 : 22, lugar: atras ? "Espalda" : n ? "Otro lugar" : "Espalda", lado: atras ? "espalda" : "frente", logo: null, nombre: "", crudo: null, fondo: true });
+    const lugar = E.vista === "espalda" || !n ? "Espalda" : "Otro lugar";
+    const lado = E.vista === "espalda" ? "espalda" : ladoDe(lugar, "frente");
+    // Si el logo nuevo va en la espalda, se voltea la prenda para que se vea dónde quedó.
+    if (lado === "espalda" && E.vista !== "espalda") { E.vista = "espalda"; transicion = true; }
+    const atras = lado === "espalda";
+    E.extras.push({ id: crypto.randomUUID(), x: 500, y: atras ? Math.min(760, 400 + n * 60) : Math.min(760, Math.max(420, zAct().y + 180) + n * 60), cm: n ? 10 : 22, lugar, lado, logo: null, nombre: "", crudo: null, fondo: true });
     capaActiva = E.extras.length - 1;
     pintarCapas();
     pedirRender();
@@ -1056,7 +1063,18 @@
   });
   $("#capas").addEventListener("change", async (e) => {
     const t = e.target;
-    if (t.dataset.lugar !== undefined) { E.extras[Number(t.dataset.lugar)].lugar = t.value; return; }
+    if (t.dataset.lugar !== undefined) {
+      const x = E.extras[Number(t.dataset.lugar)];
+      x.lugar = t.value;
+      const antes = x.lado || "frente", lado = ladoDe(x.lugar, antes);
+      if (lado !== antes) {
+        // Cambia de lado: se centra en el torso de ese lado y se muestra esa vista.
+        x.lado = lado; x.x = 500; x.y = lado === "espalda" ? 400 : Math.min(760, Math.max(420, zAct().y + 180));
+        E.vista = lado; transicion = true; cajas = [];
+        pintarCapas(); pedirRender();
+      }
+      return;
+    }
     if (t.dataset.fondo !== undefined) { const x = E.extras[Number(t.dataset.fondo)]; x.fondo = t.checked; if (x.crudo) { try { analizarCapa(x); } catch (er) { aviso(er.message, true); } } return; }
     if (t.dataset.archivo === undefined) return;
     const x = E.extras[Number(t.dataset.archivo)], f = t.files[0];
