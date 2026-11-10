@@ -224,6 +224,14 @@ module.exports = {
     {
       "nombre": "SEASA · Sistemas y Equipamientos Alteños",
       "logo": "img/clientes/seasa.webp"
+    },
+    {
+      "nombre": "Once",
+      "logo": "img/clientes/once.webp"
+    },
+    {
+      "nombre": "Black Array",
+      "logo": "img/clientes/black-array.webp"
     }
   ],
   "clientesSatisfechos": [
@@ -1023,6 +1031,78 @@ module.exports = {
       "fabricante": "Yazbek",
       "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
       "idPublico": "zain-color-090"
+    },
+    {
+      "id": "yazbek-423",
+      "nombre": "Carbón",
+      "codigo": "423",
+      "hex": "#4e4e4d",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-091"
+    },
+    {
+      "id": "yazbek-424",
+      "nombre": "Marrón",
+      "codigo": "424",
+      "hex": "#40171e",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-092"
+    },
+    {
+      "id": "yazbek-410",
+      "nombre": "Naranja",
+      "codigo": "410",
+      "hex": "#db4b17",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-093"
+    },
+    {
+      "id": "yazbek-300",
+      "nombre": "Mango",
+      "codigo": "300",
+      "hex": "#f0a518",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-094"
+    },
+    {
+      "id": "yazbek-411",
+      "nombre": "Turquesa",
+      "codigo": "411",
+      "hex": "#2e74a7",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-095"
+    },
+    {
+      "id": "yazbek-322",
+      "nombre": "Fucsia",
+      "codigo": "322",
+      "hex": "#c34a77",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-096"
+    },
+    {
+      "id": "yazbek-228",
+      "nombre": "Rosa Pastel",
+      "codigo": "228",
+      "hex": "#f4d4e3",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-097"
+    },
+    {
+      "id": "yazbek-229",
+      "nombre": "Lavanda",
+      "codigo": "229",
+      "hex": "#857cb4",
+      "fabricante": "Yazbek",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "idPublico": "zain-color-098"
     },
     {
       "id": "zn-po-008-c01",
@@ -4614,9 +4694,12 @@ module.exports = {
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
-        "yazbek-414",
+        "yazbek-2415",
         "yazbek-102",
-        "yazbek-2415"
+        "yazbek-100",
+        "yazbek-413",
+        "yazbek-414",
+        "yazbek-421"
       ],
       "tecnicas": [
         "bordado",
@@ -4891,10 +4974,17 @@ module.exports = {
       "renderOrientativo": true,
       "colores": [
         "yazbek-415",
-        "yazbek-414",
+        "yazbek-2415",
         "yazbek-102",
+        "yazbek-100",
         "yazbek-230",
-        "yazbek-427"
+        "yazbek-424",
+        "yazbek-413",
+        "yazbek-427",
+        "yazbek-414",
+        "yazbek-421",
+        "yazbek-228",
+        "yazbek-229"
       ],
       "tecnicas": [
         "serigrafia",

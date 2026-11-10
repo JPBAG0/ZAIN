@@ -223,6 +223,14 @@ export default {
     {
       "nombre": "SEASA · Sistemas y Equipamientos Alteños",
       "logo": "img/clientes/seasa.webp"
+    },
+    {
+      "nombre": "Once",
+      "logo": "img/clientes/once.webp"
+    },
+    {
+      "nombre": "Black Array",
+      "logo": "img/clientes/black-array.webp"
     }
   ],
   "clientesSatisfechos": [
@@ -982,6 +990,62 @@ export default {
       "hex": "#474c4f",
       "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
       "compatHash": "21942bb2"
+    },
+    {
+      "id": "zain-color-091",
+      "nombre": "Carbón",
+      "hex": "#4e4e4d",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "5ab23395"
+    },
+    {
+      "id": "zain-color-092",
+      "nombre": "Marrón",
+      "hex": "#40171e",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "53b22890"
+    },
+    {
+      "id": "zain-color-093",
+      "nombre": "Naranja",
+      "hex": "#db4b17",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "69b906f7"
+    },
+    {
+      "id": "zain-color-094",
+      "nombre": "Mango",
+      "hex": "#f0a518",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "206ad8cf"
+    },
+    {
+      "id": "zain-color-095",
+      "nombre": "Turquesa",
+      "hex": "#2e74a7",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "68b90564"
+    },
+    {
+      "id": "zain-color-096",
+      "nombre": "Fucsia",
+      "hex": "#c34a77",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "b265ae77"
+    },
+    {
+      "id": "zain-color-097",
+      "nombre": "Rosa Pastel",
+      "hex": "#f4d4e3",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "35d8d8ce"
+    },
+    {
+      "id": "zain-color-098",
+      "nombre": "Lavanda",
+      "hex": "#857cb4",
+      "muestra": "Aproximación de muestra impresa del catálogo; no Pantone.",
+      "compatHash": "36d8da61"
     },
     {
       "id": "zn-po-008-c01",
@@ -3914,9 +3978,12 @@ export default {
       "renderOrientativo": true,
       "colores": [
         "zain-color-071",
-        "zain-color-072",
+        "zain-color-090",
         "zain-color-074",
-        "zain-color-090"
+        "zain-color-073",
+        "zain-color-076",
+        "zain-color-072",
+        "zain-color-075"
       ],
       "tecnicas": [
         "bordado",
@@ -4137,10 +4204,17 @@ export default {
       "renderOrientativo": true,
       "colores": [
         "zain-color-071",
-        "zain-color-072",
+        "zain-color-090",
         "zain-color-074",
+        "zain-color-073",
         "zain-color-088",
-        "zain-color-089"
+        "zain-color-092",
+        "zain-color-076",
+        "zain-color-089",
+        "zain-color-072",
+        "zain-color-075",
+        "zain-color-097",
+        "zain-color-098"
       ],
       "tecnicas": [
         "serigrafia",
