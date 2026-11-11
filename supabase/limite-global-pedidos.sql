@@ -41,5 +41,4 @@ begin
 end;
 $function$;
 
--- Punto 4: la tabla de finanzas también con protección por fila. Solo la usa el servidor; nadie de fuera tiene permiso.
-alter table public.zain_finanzas_estado enable row level security;
+-- zain_finanzas_estado es una vista (security_invoker) con permiso solo para el servidor: no lleva protección por fila.
