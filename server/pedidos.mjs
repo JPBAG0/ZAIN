@@ -27,6 +27,16 @@ const equal = (a,b) => typeof a === 'string' && typeof b === 'string' && a.lengt
 const validateID = id => { if (!UUID.test(id || '')) fail(400,'Folio inválido.'); return id; };
 const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(403,'No se pudo verificar esta solicitud.'); return sha(token); };
 
+// «Para hoy»: junta cada pedido activo con lo cobrado y con la fecha en que entró a su estado actual.
+export function filasHoy(pedidos,historial,finanzas){
+  const desde=new Map(),f=new Map((finanzas||[]).map(x=>[x.id,x]));
+  // El historial llega del más nuevo al más viejo: la primera coincidencia es la entrada más reciente a ese estado.
+  for(const h of historial||[])if(h.estado_anterior!==h.estado_nuevo&&!desde.has(h.pedido_id+':'+h.estado_nuevo))desde.set(h.pedido_id+':'+h.estado_nuevo,h.created_at);
+  return (pedidos||[]).map(p=>({id:p.id,folio:p.folio,estado:p.estado,total:p.total,created_at:p.created_at,cliente:text(p.cliente?.nombre||'',120),
+    resumen:(Array.isArray(p.items)?p.items:[]).slice(0,2).map(i=>text(i?.nombreZain||i?.nombre||'',150)).filter(Boolean).join(' / '),
+    desde:desde.get(p.id+':'+p.estado)||p.created_at,venta_total:f.get(p.id)?.venta_total??null,cobrado:f.get(p.id)?.cobrado??null,anticipo_requerido:f.get(p.id)?.anticipo_requerido??null}));
+}
+
 // Sin prenda (2-nov-2026): personalización sobre prendas que entrega el cliente, desde Cotizaciones. Mismos valores que js/cotizacion-servicio.js.
 const SERVICIO='prenda-cliente', COLOR_SERVICIO='Prenda del cliente';
 // Artículo fuera de catálogo (11-nov-2026): lo consigue ZAIN por fuera; concepto libre y personalización opcional. Mismos valores que js/cotizacion-servicio.js.
@@ -519,6 +529,15 @@ export function createHandler(env={}, fetcher=fetch) {
         return response(200,receipt(x));
       }
       if(request.method==='GET'&&op==='resumen')return response(200,{resumen:await sb('/rest/v1/rpc/zain_panel_resumen',{method:'POST',body:'{}'}),equipo:user});
+      // «Para hoy» (11-nov-2026): todos los pedidos activos con lo necesario para decir qué toca hacer (js/para-hoy.js).
+      // Del cliente solo va el nombre. «desde» es cuándo entró el pedido a su estado actual.
+      if(request.method==='GET'&&op==='hoy'){
+        const [ps,hist,fin]=await Promise.all([
+          sb('/rest/v1/zain_pedidos?guardado_at=not.is.null&archivado_at=is.null&estado=neq.cancelado&select=id,folio,estado,total,created_at,cliente,items&order=created_at.desc&limit=300'),
+          sb('/rest/v1/zain_historial?select=pedido_id,estado_anterior,estado_nuevo,created_at&order=created_at.desc&limit=2000'),
+          gastosEnabled?sb('/rest/v1/zain_finanzas_estado?archivado_at=is.null&select=id,venta_total,cobrado,anticipo_requerido&limit=1000').catch(()=>[]):[]]);
+        return response(200,{pedidos:filasHoy(ps,hist,fin)});
+      }
       if(request.method==='GET'&&op==='lista') {
         const offset=Math.max(0,Math.min(100000,Number(url.searchParams.get('offset'))||0));
         const state=url.searchParams.get('estado');if(state&&!STATES.includes(state))fail(400,'Estado inválido.');

@@ -1,0 +1,41 @@
+/* «Para hoy» y menú inferior del celular (11-nov-2026). */
+.hoy{background:#fff;border:1px solid #dfe3ec;border-radius:16px;padding:18px 18px 10px;margin:0 0 22px}
+.hoy>h2{font-size:20px;letter-spacing:-.4px;margin:0 0 12px}
+.hoy-vacio,.hoy-sin{font-size:13px;color:#68758b;margin:0 0 8px;line-height:1.5}
+.hoy-grupo{border-top:1px solid #e6e9f0;padding:12px 0 8px}
+.hoy-grupo>header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px}
+.hoy-grupo h3{font-size:14px;font-weight:700;margin:0;color:#1a2540}
+.hoy-grupo h3 span{display:inline-block;min-width:22px;text-align:center;font-size:12px;background:#eef1f7;color:#3a4763;border-radius:99px;padding:2px 7px;margin-left:4px}
+.hoy-grupo>header b{font:700 14px 'JetBrains Mono',monospace;color:#1a2540;white-space:nowrap}
+.hoy-grupo--cobrar h3 span,.hoy-grupo--cobrar>header b{background:#fde8e6;color:#a3261b}
+.hoy-grupo--cobrar>header b{background:none}
+.hoy-fila{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:52px;text-align:left;background:#f7f8fb;border:1px solid transparent;border-left:4px solid #c9d0de;border-radius:10px;padding:8px 12px;margin:6px 0;font:inherit;color:inherit;cursor:pointer}
+.hoy-fila:hover,.hoy-fila:focus-visible{border-color:#3035ff;outline:none}
+.hoy-fila>span{display:grid;gap:2px;min-width:0}
+.hoy-fila b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hoy-fila small{font-size:12.5px;color:#5e6979;line-height:1.35}
+.hoy-fila i{font-style:normal;color:#8a94a8;flex:none}
+.hoy-fila--urgente{border-left-color:#d9822b;background:#fff8ef}
+.hoy-grupo--cobrar .hoy-fila--urgente{border-left-color:#c8372b;background:#fff4f2}
+.hoy-mas{padding:8px 0;min-height:40px}
+.menu-inferior{display:none}
+@media(max-width:700px){
+ .hoy{padding:14px 12px 6px;border-radius:14px;margin-bottom:16px}.hoy>h2{font-size:19px}
+ /* En celular los cuatro contadores sobran: «Para hoy» dice lo mismo con más detalle y los filtros siguen en la lista. */
+ .control #resumen{display:none}
+ .menu-inferior:not([hidden]){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid #d9dde7;padding:6px 6px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -6px 18px -12px #1a254055}
+ .menu-inferior button{border:0;background:transparent;font:600 12.5px Archivo,sans-serif;color:#5e6979;min-height:48px;border-radius:10px;cursor:pointer}
+ .menu-inferior button.on{background:#111;color:#fff}
+ .menu-inferior button[data-ir=cotizarRapido]{color:#3035ff}.menu-inferior button[data-ir=cotizarRapido].on{color:#fff}
+ /* Con el menú abajo, las secciones de arriba solo aparecen al tocar «Más». */
+ .control.con-menu .control__secciones{display:none}
+ .control.con-menu.menu-mas .control__secciones{display:grid}
+ .control.con-menu main{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+ /* Las barras fijas de las cotizaciones quedan arriba del menú. */
+ .control.con-menu .cm-exportar{bottom:calc(62px + env(safe-area-inset-bottom))}
+ .control.con-menu dialog .cm-exportar{bottom:0}
+ /* El botón flotante de «volver arriba» sube para no tapar el menú. */
+ .control.con-menu .volver-arriba{bottom:calc(76px + env(safe-area-inset-bottom))}
+ .control.con-menu:has(#seccionCotizador:not([hidden])) .volver-arriba{bottom:calc(174px + env(safe-area-inset-bottom))}
+ .control.con-menu:has(#seccionCotizaciones:not([hidden])) .volver-arriba{bottom:calc(194px + env(safe-area-inset-bottom))}
+}

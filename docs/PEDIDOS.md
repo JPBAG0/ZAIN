@@ -147,3 +147,12 @@ Fuentes: https://supabase.com/docs/guides/storage/buckets/fundamentals , https:/
 - `consulta` usa lista explícita de campos; no devuelve notas internas, versiones, identidades, secretos, nonce ni paths. `archivo-consulta` firma solo los archivos del manifiesto de ese pedido tras validar la capacidad; los originales se descargan sin incrustar SVG/PDF activo.
 - Quien reciba el enlace completo puede consultar esa solicitud. Mostrar este hecho al cliente; no pegar enlaces reales en documentación, logs o Git. El estado se refresca al volver a la pestaña o pulsar Actualizar estado.
 - Verificado: 17 pruebas de permisos/validación; solicitud sintética real con original/render, migración de recibo conservando folio, lectura del estado cancelado, notas internas ausentes, intento de escritura rechazado. Móvil 390×844 y escritorio 1280×800 sin desbordamiento y con imagen cargada. La prueba está cancelada, NO COTIZAR.
+
+## «Para hoy» y menú inferior (11-nov-2026)
+JP pidió que el panel diga qué toca hacer, incluido lo que ya se entregó y falta cobrar.
+- **Sección «Para hoy»** arriba de la lista de Pedidos, con cinco grupos: Por cotizar (nuevo, contactado), Cotizadas sin respuesta (cotizado), Aceptadas · falta anticipo (aceptado), Por entregar (confirmado, producción) y **Entregados · falta cobrar** (entregado con saldo).
+- Cada renglón dice hace cuánto está en ese estado y cuánto falta cobrar; lo más viejo va primero. Se marca en naranja lo atrasado (por cotizar más de 1 día, cotizada o aceptada más de 2 días, en producción más de 10 días) y en rojo todo entregado con saldo. Tocar el renglón abre el pedido en la pestaña que toca (Cotización, Cobro o Pedido).
+- Un entregado ya pagado, o cerrado con «Cerrar sin cobrar el resto», deja de aparecer. Cancelados y papelera no cuentan.
+- **Menú inferior en celular** (hasta 700 px): Pedidos, + Cotizar, Finanzas y Más. «Más» muestra las demás secciones (Catálogo, Talleres, Costos, WhatsApp, Chats). En celular se ocultan los cuatro contadores.
+- Servidor: op `hoy` (GET, solo equipo) en `server/pedidos.mjs`, con `filasHoy`. Lee `zain_pedidos`, `zain_historial` y la vista `zain_finanzas_estado`; del cliente solo manda el nombre. Sin SQL nuevo.
+- Web: `js/para-hoy.js` (cálculo puro), `js/control-hoy.js`, `css/para-hoy.css`. Si el servidor no tiene la op, la sección no aparece y lo demás sigue igual. Pruebas: `tests/para-hoy.test.mjs`. **Requiere Edge** antes que la web.

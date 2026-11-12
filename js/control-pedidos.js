@@ -191,7 +191,8 @@ $('#confirmarEliminar').addEventListener('submit',async e=>{
  try{await call('archivar',{...x,archivar:true,folio});$('#confirmacion').close();closeDetail();await cargar('Pedido movido a papelera. Puedes restaurarlo.');}catch(er){$('#errorEliminar').textContent=er.message;}finally{$('#confirmarMover').disabled=false;}
 });
 $('#estadoFiltro').insertAdjacentHTML('beforeend',Object.entries(labels).map(([k,v])=>'<option value="'+k+'">'+v+'</option>').join(''));
-addEventListener('zain:abrir-pedido',e=>{if(session&&/^[a-f0-9-]{36}$/i.test(e.detail||''))detalle(e.detail).catch(failed);});
+// detail: el id del pedido, o {id,pestana} para abrirlo en una pestaña concreta (lo usa «Para hoy»).
+addEventListener('zain:abrir-pedido',e=>{const id=typeof e.detail==='string'?e.detail:e.detail?.id,p=e.detail?.pestana;if(!session||!/^[a-f0-9-]{36}$/i.test(id||''))return;if(PESTANAS.some(([k])=>k===p))pestanaGuardada.set(id,p);detalle(id).catch(failed);});
 const ETIQUETA_CORTA={...labels,aceptado:'Aceptada'};
 $('#chipsEstado').innerHTML=[['','Todos'],...Object.keys(labels).filter(k=>k!=='contactado').map(k=>[k,ETIQUETA_CORTA[k]])].map(([k,t])=>'<button type="button" data-estado="'+k+'">'+t+'</button>').join('');
 function marcarChips(){for(const b of $('#chipsEstado').children){const on=b.dataset.estado===$('#estadoFiltro').value&&!$('#periodo').value;b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on));}}
