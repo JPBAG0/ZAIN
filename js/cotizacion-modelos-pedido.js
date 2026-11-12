@@ -1,6 +1,6 @@
 // Convierte una cotización por modelo y talla en las selecciones de una solicitud normal.
 // Cada selección agrupa las tallas que comparten el mismo renglón cotizado, para que su precio sea exactamente el prometido.
-import {itemServicio} from './cotizacion-servicio.js?v=2';
+import {itemServicio} from './cotizacion-servicio.js?v=3';
 const maxLogo=(z,escala)=>Math.round(z.max*(z.orientativa?1:escala||1)*2)/2;
 // El tramo de volumen se elige con el total de piezas del modelo en ese color, como se cotizó.
 function renglon(filas,talla,color,piezas){
@@ -18,9 +18,11 @@ export function armarPedido({modelos,lineas,colores,escala=1,folio=''}){
    if(cantidades.some(([t,v])=>t!==''||!Number.isSafeInteger(v))||n>9999){errores.push(m.nombre+': revisa las piezas.');continue;}
    const f=renglon(m.filas,'','',n);
    if(!f){errores.push(m.nombre+': no tiene precio cotizado para '+n+' piezas.');continue;}
-   if(!m.tecnica){errores.push(m.nombre+': elige la personalización.');continue;}
-   const cm=m.ancho/100;if(!(cm>0)||cm>200){errores.push(m.nombre+': revisa el ancho del logo (hasta 200 cm).');continue;}
-   selecciones.push({modelo:l.modelo,colorId:'',precio:f.visto,item:itemServicio({nombre:m.nombre,tecnica:m.tecnica,ubicacion:m.ubicacion||'',cm,piezas:n,logoNombre:m.logoNombre||'',folio})});
+   const libre=!!p.libre,simple=libre&&!m.tecnica;
+   if(!m.tecnica&&!libre){errores.push(m.nombre+': elige la personalización.');continue;}
+   const cm=simple?0:m.ancho/100;if(!simple&&(!(cm>0)||cm>200)){errores.push(m.nombre+': revisa el ancho del logo (hasta 200 cm).');continue;}
+   // El costo escrito del artículo fuera de catálogo viaja a la cotización del pedido (null = pendiente).
+   selecciones.push({modelo:l.modelo,colorId:'',precio:f.visto,...(libre?{costo:f.costo??null}:{}),item:itemServicio({libre,nombre:m.nombre,tecnica:simple?'Solo prenda':m.tecnica,ubicacion:m.ubicacion||'',cm,piezas:n,logoNombre:simple?'':m.logoNombre||'',folio})});
    continue;
   }
   const etiqueta=m.nombre+(color?' · '+color.nombre:'');

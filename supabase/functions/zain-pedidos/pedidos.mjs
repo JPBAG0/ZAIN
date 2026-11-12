@@ -29,6 +29,8 @@ const validateToken = token => { if (!/^[a-f0-9]{64}$/.test(token || '')) fail(4
 
 // Sin prenda (2-nov-2026): personalización sobre prendas que entrega el cliente, desde Cotizaciones. Mismos valores que js/cotizacion-servicio.js.
 const SERVICIO='prenda-cliente', COLOR_SERVICIO='Prenda del cliente';
+// Artículo fuera de catálogo (11-nov-2026): lo consigue ZAIN por fuera; concepto libre y personalización opcional. Mismos valores que js/cotizacion-servicio.js.
+const LIBRE='articulo-libre', COLOR_LIBRE='Artículo especial';
 // servicio: solo el equipo (sesión verificada) puede crear o editar partidas sin prenda; el catálogo público no las ofrece.
 export function validateOrder(body, { allowHistoricos = false, catalogo = C, snapshot = false, servicio = false } = {}) {
   const C=catalogo;
@@ -40,16 +42,17 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
   if (!Array.isArray(body.items) || !body.items.length || body.items.length>20) fail(400,'El pedido admite hasta 20 selecciones.');
   const items = body.items.map((x,i) => {
     if (!x || typeof x !== 'object' || Array.isArray(x)) fail(400,'Selección inválida.');
-    if (x.p === SERVICIO) {
+    if (x.p === SERVICIO || x.p === LIBRE) {
+      const libre = x.p === LIBRE, simple = libre && x.tecnica === 'Solo prenda';
       if (!servicio) fail(400,'Revisa las cantidades y mínimos de los productos.');
       const n = Number(x.piezas);
       if (!Number.isSafeInteger(n) || n<1 || n>9999) fail(400,'Revisa las piezas de la personalización sin prenda.');
-      if (!C.tecnicas.some(t=>t.nombre===x.tecnica)) fail(400,'Técnica inválida.');
-      if (x.color!==COLOR_SERVICIO) fail(400,'Color de producto inválido.');
-      if (!Number.isFinite(x.cm) || x.cm<=0 || x.cm>200) fail(400,'Revisa el tamaño del logo.');
+      if (!simple && !C.tecnicas.some(t=>t.nombre===x.tecnica)) fail(400,'Técnica inválida.');
+      if (x.color!==(libre?COLOR_LIBRE:COLOR_SERVICIO)) fail(400,'Color de producto inválido.');
+      if (simple ? x.cm!==0 || x.tieneLogo || x.tieneRender : !Number.isFinite(x.cm) || x.cm<=0 || x.cm>200) fail(400,'Revisa el tamaño del logo.');
       if (x.logoGeometria!=null) fail(400,'Revisa las medidas del diseño del logo.');
-      const nombre=text(x.nombreZain||x.nombre,150).replace(/\s+/g,' ').trim()||'Personalización sobre prenda del cliente';
-      return { indice:i,p:SERVICIO,servicio:true,nombre,color:COLOR_SERVICIO,tecnica:x.tecnica,piezas:n,medidas:'',detalleMedidas:'',zona:text(x.zona,120),cm:x.cm,tallas:'',tallasEtq:'Piezas',logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender,
+      const nombre=text(x.nombreZain||x.nombre,150).replace(/\s+/g,' ').trim()||(libre?'Artículo fuera de catálogo':'Personalización sobre prenda del cliente');
+      return { indice:i,p:x.p,servicio:true,...(libre?{libre:true}:{}),nombre,color:libre?COLOR_LIBRE:COLOR_SERVICIO,tecnica:x.tecnica,piezas:n,medidas:'',detalleMedidas:'',zona:text(x.zona,120),cm:x.cm,tallas:'',tallasEtq:'Piezas',logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender,
         ...(snapshot?{nombreZain:nombre,sku:'',skuProveedor:'',proveedor:''}:{}) };
     }
     const p = C.productos.find(p=>(p.id===x.p || p.idPublico===x.p) && (p.activo!==false || allowHistoricos)) || C.catalogoYazbekPendiente?.find(p=>p.id===x.p) || (allowHistoricos && C.productosHistoricos?.find(p=>p.id===x.p));
@@ -265,7 +268,7 @@ export function createHandler(env={}, fetcher=fetch) {
         const body=await jsonBody(request);
         if(op==='crear') {
           // Una partida sin prenda solo la crea el equipo (Cotizaciones → Pasar a pedido), con su sesión.
-          const servicio=Array.isArray(body.items)&&body.items.some(x=>x?.p===SERVICIO);
+          const servicio=Array.isArray(body.items)&&body.items.some(x=>x?.p===SERVICIO||x?.p===LIBRE);
           if(servicio)await staff(request);
           let catalog=C,existing=null,requestHash=null;
           if(catalogEnabled){

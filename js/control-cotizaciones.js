@@ -1,5 +1,5 @@
-import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './cotizacion-selecciones.js?v=5';
-import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=10';
+import {itemsDe,seleccionesDe,calcularSeleccion,conservarSelecciones} from './cotizacion-selecciones.js?v=6';
+import {editarSelecciones} from './cotizacion-selecciones-ui.js?v=11';
 import './control-confirmacion.js?v=10';
 import {ordenarCostos} from './control-costos-vista.js?v=4';
 import {editorCotizacion,actualizarPartida,sincronizarAnticipo,montosAnticipo} from './cotizacion-editor.js?v=28';
@@ -7,7 +7,7 @@ import {medidasLogo,normalizarGeometria} from './logo-medidas.js?v=1';
 import {estimarGeometria} from './logo-estimar.js?v=1';
 import {prepararImagenes} from './cotizacion-imagen.js?v=6';
 import {prepararReferencias} from './referencia-color.js?v=2';
-import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=23';
+import {inicial,configurar,decimal,decimalTarifa,pesos,calcular,entrada,paraCliente} from './cotizacion-core.js?v=24';
 import {esc,documento,imprimir} from './cotizacion-vista.js?v=16';
 const $=s=>document.querySelector(s),call=(op,b,q)=>window.ZAINEquipo.call(op,b,q);
 let epoch=0,config={version:0,datos:inicial()},catalogo=[],dirty=false,busy=false,quote=null,pedido=null,quoteEpoch=0,quoteDirty=false,quoteBusy=false;

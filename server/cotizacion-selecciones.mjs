@@ -13,7 +13,7 @@ export function validarSelecciones(lista,pedido,catalogo,validarPedido,fail){
  const archivos=[],items=lista.map((s,i)=>{
   if(!s||typeof s!=='object'||!s.item||typeof s.item!=='object'||s.origen!==null&&(!Number.isInteger(s.origen)||!pedido.items[s.origen]))fail(400,'Referencia de partida inválida.');
   // Sin prenda (p:'prenda-cliente'): no es un modelo del catálogo; validateOrder la revisa aparte. Solo llega aquí desde Gestión.
-  const servicio=s.item.p==='prenda-cliente',fuente=s.origen===null?null:pedido.items[s.origen],p=servicio?null:[...catalogo.productos,...catalogo.productosHistoricos||[]].find(p=>p.id===s.item.p||p.idPublico===s.item.p);
+  const servicio=s.item.p==='prenda-cliente'||s.item.p==='articulo-libre',fuente=s.origen===null?null:pedido.items[s.origen],p=servicio?null:[...catalogo.productos,...catalogo.productosHistoricos||[]].find(p=>p.id===s.item.p||p.idPublico===s.item.p);
   if(!servicio&&(!p||p.activo===false&&(!fuente||fuente.p!==p.id)))fail(400,'Elige un modelo activo para la partida nueva.');
   if(p?.tallas?.length){const cantidades=s.item.tallasDetalle=tallasActuales(s.item.tallasDetalle,p.tallas);if(!cantidades||typeof cantidades!=='object'||Array.isArray(cantidades)||!Object.keys(cantidades).length||Object.entries(cantidades).some(([t,n])=>!p.tallas.includes(t)||!Number.isSafeInteger(n)||n<1||n>9999)||Object.values(cantidades).reduce((a,n)=>a+n,0)!==s.item.piezas)fail(400,'Revisa las tallas y su suma para el modelo.');}
   const original=(pedido.archivos||[]).filter(f=>f.item===s.origen),simple=s.item.tecnica==='Solo prenda',igual=mismaVista(fuente,s.item);

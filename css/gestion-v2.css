@@ -199,3 +199,6 @@
 .ficha-nota-anticipo{margin:0 0 10px;padding:8px 12px;border-radius:10px;background:#fff7e6;border:1px solid #f0d49a;color:#6b4300;font-size:13px;line-height:1.4}
 .ficha-sinanticipo>.btn{width:100%}
 .ficha-sinanticipo{margin:0 0 12px}.ficha-sinanticipo [data-sin-anticipo-confirmar]{background:#fff7e6;border:1px solid #f0d49a;border-radius:10px;padding:10px 12px;font-size:13.5px;margin:6px 0 0}
+
+/* «+ Cotizar» junto a Actualizar (11-nov-2026) */
+.control__tituloacciones{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}

@@ -57,7 +57,7 @@ export function comercial(modelos,{destinatario='',impuesto=null,concepto='',car
   if(r.precio==null)throw Error('Completa el precio o margen de '+m.nombre+' · '+f.talla+'.');
   // Sin prenda (el cliente trae las suyas): sin SKU, la ubicación del logo es texto libre y el color es el de su prenda.
   const zona=!m.tecnica?'':m.servicio?String(m.ubicacion||'').trim().slice(0,80):(m.producto?.zonas||[]).find(z=>z.id===m.zona)?.nombre||'';
-  return {modelo,nombre:m.nombre,sku:m.servicio?'':m.sku,zona,medidas:m.tecnica&&m.ancho&&m.alto?(m.ancho/100)+' × '+(m.alto/100)+' cm':'',tallas:f.talla,color:m.servicio?'Prenda del cliente':f.color,volumen:f.volumen,personalizacion:m.tecnica||'Solo prenda',precio:r.precio,...(m.servicio?{servicio:true}:{})};
+  return {modelo,nombre:m.nombre,sku:m.servicio?'':m.sku,zona,medidas:m.tecnica&&m.ancho&&m.alto?(m.ancho/100)+' × '+(m.alto/100)+' cm':'',tallas:f.talla,color:m.libre?'Artículo especial':m.servicio?'Prenda del cliente':f.color,volumen:f.volumen,personalizacion:m.tecnica||(m.libre?'Sin personalización':'Solo prenda'),precio:r.precio,...(m.servicio?{servicio:true}:{})};
  }));
  if(!partidas.length)throw Error('Agrega un modelo y al menos un rango de tallas.');
  return {folio:String(folio).trim().slice(0,40),destinatario:String(destinatario).trim().slice(0,180),impuesto,vigencia:vigencia||'',plazo:String(plazo).trim().slice(0,120),anticipo,partidas,cargo:cargo?{concepto:String(concepto).trim().slice(0,120)||'Cargo único',importe:cargo}:null,notas:String(notas).trim().slice(0,2000)};

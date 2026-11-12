@@ -37,3 +37,14 @@ Servidor: `server/cotizaciones-modelos.mjs` (ops `cm-lista`, `cm-leer`, `cm-guar
 Actualizar modelos y costos quita los modelos en pantalla (lo guardado se conserva). Salir del equipo limpia todo lo que está en memoria. Sin cambios a pedidos, cuentas, costos guardados, publicación de catálogo ni reglas de compra.
 
 Archivos: js/cotizacion-modelos.js (cálculos/proyección/redondeo/anticipo), js/control-cotizaciones-modelos.js (interfaz/logo/guardado), js/cotizacion-modelos-pdf.js, css/cotizacion-modelos.css, server/cotizaciones-modelos.mjs. Los recursos nuevos se incluyen únicamente desde gestion-zain.html.
+
+## Artículo fuera de catálogo y botón «+ Cotizar» (11-nov-2026)
+JP pidió poder cotizar lo que no está en el catálogo (un termo, un mandil, una prenda de otro proveedor) y tener el cotizador a la mano.
+- **«+ Cotizar»** en la pantalla de Pedidos, junto a Actualizar: abre Cotizaciones con una cotización nueva.
+- **«+ Fuera de catálogo (artículo libre)»** en Modelos y precios. Un renglón con concepto, **costo del artículo por pieza (con IVA)**, personalización opcional («Sin personalización» o serigrafía, bordado, DTF) y margen o precio escrito. Con el costo y el margen sale el precio sugerido y la utilidad; sin costo se puede escribir el precio directo.
+- No lleva foto. Con personalización y logo, la vista es el logo sobre fondo claro, igual que «Sin prenda».
+- **Pasa a Pedidos** como partida `p:'articulo-libre'`, `servicio:true`, `libre:true`, color «Artículo especial», sin SKU ni tallas. Sin personalización va con técnica «Solo prenda», `cm:0` y sin logo. El costo escrito llega a la cotización del pedido como costo de prenda por pieza (`borradorPedido(..., costos)`); si quedó vacío, el costo queda pendiente y se escribe en la pestaña Cotización.
+- En **Partidas y tallas** de un pedido también se puede elegir el modelo «Fuera de catálogo (artículo libre)».
+- En la ficha del pedido dice «Fuera de catálogo: ZAIN consigue el artículo por fuera».
+- Solo el equipo puede crearlo: `validateOrder` lo acepta con `{servicio:true}` y `crear` exige sesión. El documento del cliente no trae el costo.
+- Código: `js/cotizacion-servicio.js` (`LIBRE`, `productoLibre`, `itemServicio({libre})`), `server/pedidos.mjs`, `server/cotizacion-selecciones.mjs`, `js/cotizacion-core.js` (`generar`). Pruebas: `tests/articulo-libre.test.mjs`. **Requiere Edge** antes que la web; no lleva SQL.

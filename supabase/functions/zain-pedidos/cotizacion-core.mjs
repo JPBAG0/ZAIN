@@ -100,11 +100,12 @@ export function generar(items,cfg){
  const c=configurar(cfg);
  const partidas=items.map((p,i)=>{
   // Sin prenda (p.servicio, 2-nov-2026): el cliente entrega las prendas; solo cuesta la técnica.
-  const servicio=p.servicio===true&&p.p==='prenda-cliente',cp=servicio?null:c.costos.find(v=>v.sku===p.sku&&v.tecnica===p.tecnica),prenda=servicio?null:c.prendas.find(v=>v.sku===p.sku),t=c.tecnicas.find(t=>t.tecnica===p.tecnica),r=c.rangos.find(r=>p.piezas>=r.desde&&(r.hasta===null||p.piezas<=r.hasta));
+  // Fuera de catálogo (11-nov-2026): el costo del artículo no sale de Costos; queda pendiente hasta que el equipo lo escriba.
+  const libre=p.servicio===true&&p.p==='articulo-libre',servicio=libre||p.servicio===true&&p.p==='prenda-cliente',cp=servicio?null:c.costos.find(v=>v.sku===p.sku&&v.tecnica===p.tecnica),prenda=servicio?null:c.prendas.find(v=>v.sku===p.sku),t=c.tecnicas.find(t=>t.tecnica===p.tecnica),r=c.rangos.find(r=>p.piezas>=r.desde&&(r.hasta===null||p.piezas<=r.hasta));
   // Los costos anteriores siguen por pieza hasta que el equipo migre ese SKU expresamente.
   const fijo=!!cp&&!prenda,medidas=medidasLogo(p.cm,p.logoGeometria),ancho=medidas?.ancho??(Number.isFinite(p.cm)&&p.cm>0?Math.round(p.cm*100):null);
   // Sin proporción del logo se supone cuadrado (alto = ancho) para tener un primer precio; autorizado por JP el 18-oct-2026.
-  return {indice:i,modo:p.tecnica==='Solo prenda'?'fijo':fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:servicio?0:prenda?prenda.prenda:cp?.prenda??null,aplicacion:p.tecnica==='Solo prenda'?0:fijo?cp.aplicacion:null,otros:(prenda?.otros??cp?.otros??0)+(p.tecnica==='Solo prenda'||fijo?0:(t?.porPieza??0)),preparacion:p.tecnica==='Solo prenda'?0:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0,...(p.tecnica==='Bordado'&&(fijo?cp.preparacion:t?.preparacion??0)>0?{cargoAparte:true}:{})};
+  return {indice:i,modo:p.tecnica==='Solo prenda'?'fijo':fijo?'fijo':'area',modoPrenda:prenda?.bandas?.length?'tallas':'unitario',bandas:prenda?.bandas||[],ancho,alto:medidas?.alto??ancho,tarifaCm2:t?.tarifaCm2??null,prenda:libre?null:servicio?0:prenda?prenda.prenda:cp?.prenda??null,aplicacion:p.tecnica==='Solo prenda'?0:fijo?cp.aplicacion:null,otros:(prenda?.otros??cp?.otros??0)+(p.tecnica==='Solo prenda'||fijo?0:(t?.porPieza??0)),preparacion:p.tecnica==='Solo prenda'?0:fijo?cp.preparacion:t?.preparacion??0,margenObjetivo:r.margen,precio:null,descuento:0,...(p.tecnica==='Bordado'&&(fijo?cp.preparacion:t?.preparacion??0)>0?{cargoAparte:true}:{})};
  });
  // Bordado: un solo ponchado por logo, aunque vaya en varias prendas. Si son logos distintos, el equipo agrega otro cargo.
  const ponchado=partidas.filter(v=>v.cargoAparte).map(v=>v.preparacion);

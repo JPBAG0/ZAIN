@@ -1,8 +1,8 @@
-import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=23';
+import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=24';
 import {esc} from './cotizacion-vista.js?v=16';
-import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=7';
-import {armarPedido} from './cotizacion-modelos-pedido.js?v=3';
-import {SERVICIO,NOMBRE_SERVICIO,productoServicio,filasServicio,dibujarServicio} from './cotizacion-servicio.js?v=2';
+import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=8';
+import {armarPedido} from './cotizacion-modelos-pedido.js?v=4';
+import {SERVICIO,NOMBRE_SERVICIO,LIBRE,NOMBRE_LIBRE,productoServicio,productoLibre,filasServicio,dibujarServicio} from './cotizacion-servicio.js?v=3';
 const $=s=>document.querySelector(s),nav=$('.control__secciones'),api=(op,body,extra)=>window.ZAINEquipo.call(op,body,extra);
 const tecnicas={bordado:'Bordado',serigrafia:'Serigrafía',dtf:'DTF'},numero=n=>n==null?'':(n/100).toFixed(2),nullable=e=>e.value.trim()===''?null:decimal(e.value);
 const ESTADOS={borrador:'Borrador',enviada:'Enviada',autorizada:'Autorizada',convertida:'Convertida en pedido',descartada:'Descartada'};
@@ -27,7 +27,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionCotizaciones" 
 <p id="cmConvertida" class="cm-aviso" hidden></p>
 <section class="cot-panel"><h2>Cliente y condiciones</h2><div class="cm-campos cm-campos--3"><label>Cliente o empresa (opcional)<input id="cmDestinatario" maxlength="180" autocomplete="off" placeholder="Ej. Constructora del Bajío"></label><label>Precios e IVA<select id="cmIVA"><option value="1600" selected>Más IVA (16%)</option><option value="0">Sin IVA</option></select></label><label>Redondear precios<select id="cmRedondeo"><option value="100" selected>A peso cerrado</option><option value="500">A múltiplos de $5</option><option value="1">Sin redondeo (centavos)</option></select></label><label>Válida hasta<input id="cmVigencia" type="date"></label><label>Entrega (opcional)<input id="cmPlazo" maxlength="120" placeholder="Ej. 10 a 12 días hábiles tras el anticipo"></label><label>Anticipo (%)<input id="cmAnticipo" type="number" min="0" max="100" step="1" inputmode="numeric" value="50" placeholder="Sin anticipo"></label></div></section>
 <details class="cot-panel cm-opciones"><summary>Logo del cliente (opcional)</summary><div class="cm-logo"><label>Subir logo<input id="cmLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label><div><p id="cmLogoEstado" class="cot-ayuda">PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.</p><label class="cot-check"><input id="cmQuitarFondo" type="checkbox">Quitar fondo del logo</label><button type="button" id="cmEliminarLogo" class="btn-texto" hidden>Quitar logo</button></div></div></details>
-<section class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
+<section class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmLibre" class="btn btn--linea">+ Fuera de catálogo (artículo libre)</button><span class="cot-ayuda">Lo que no está en el catálogo: escribe el artículo, su costo y su precio.</span></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
 <div id="cmModelos"></div>
 <details class="cot-panel cm-cierre cm-opciones"><summary>Cargo único y notas</summary><div class="cm-campos"><label>Concepto del cargo (opcional)<input id="cmCargoConcepto" maxlength="120" placeholder="Ponchado del logo"></label><label>Cargo único (MXN)<input id="cmCargo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Sin cargo"></label></div><p class="cot-ayuda">Se cobra una sola vez, aunque el logo vaya en varios modelos.</p><label>Condiciones o notas para el cliente<textarea id="cmNotas" rows="3" maxlength="2000" placeholder="Forma de pago, envío…"></textarea></label><button type="button" id="cmCopiar" class="btn-texto">Copiar cotización como texto</button></details>
 <section id="cmConvertir" class="cot-panel cm-convertir" hidden aria-labelledby="cvTitulo"><h2 id="cvTitulo">Pasar a pedido</h2><p class="cot-ayuda">Escribe las piezas que autorizó el cliente. Se crea un pedido normal en Pedidos con los precios de esta cotización; de ahí sigue como cualquier pedido: Mi pedido, anticipo, talleres y finanzas.</p><label>Nombre del cliente o empresa<input id="cvCliente" minlength="2" maxlength="120" autocomplete="off"></label><div id="cvLineas"></div><div id="cvTotal" class="cm-cvtotal" aria-live="polite"></div><label class="cot-check"><input id="cvPublicar" type="checkbox" checked>Publicar la cotización del pedido para que el cliente la vea y la acepte en Mi pedido</label><ul id="cvErrores" class="cm-error"></ul><div class="cm-cvbotones"><button type="button" id="cvCancelar" class="btn btn--linea">Cancelar</button><button type="button" id="cvCrear" class="btn btn--azul" disabled>Crear pedido</button></div><p id="cvEstado" class="cot-ayuda" role="status" aria-live="polite"></p><div id="cvResultado" class="cm-cvok" hidden></div></section>
@@ -113,28 +113,30 @@ $('#cmActualizar').addEventListener('click',()=>{
 });
 function crearModelo(p){
  const servicio=!!p.servicio,producto={...p,colores:(p.colores||[]).map(id=>datos.colores.find(c=>c.id===id)?.nombre||id)};
- const m={id:++contador,producto:p,servicio,nombre:servicio?p.nombre:nombreDe(p),sku:p.sku,margen:datos.margen,filas:(servicio?filasServicio():filasModelo(producto,datos.config)).map(f=>({...f,incluir:true,margen:null,precio:null})),tecnica:'',tecnicaID:'',color:p.colores?.[0]||'',zona:p.zonas?.[0]?.id||'',ubicacion:'',ancho:800,alto:null,autoAlto:true,aplicacion:0,modo:'area',render:null,renderTurno:0};
+ const m={id:++contador,producto:p,servicio,libre:!!p.libre,costoLibre:null,nombre:servicio?p.nombre:nombreDe(p),sku:p.sku,margen:datos.margen,filas:(servicio?filasServicio():filasModelo(producto,datos.config)).map(f=>({...f,incluir:true,margen:null,precio:null})),tecnica:'',tecnicaID:'',color:p.colores?.[0]||'',zona:p.zonas?.[0]?.id||'',ubicacion:'',ancho:800,alto:null,autoAlto:true,aplicacion:0,modo:'area',render:null,renderTurno:0};
  m.ancho=Math.min(m.ancho,maxAncho(m));if(logo)m.alto=Math.max(1,Math.round(m.ancho*logo.height/logo.width));
  return m;
 }
-// p: modelo del catálogo elegido en la lista, o productoServicio() para cotizar sin prenda.
+// p: modelo del catálogo elegido en la lista, productoServicio() para cotizar sin prenda o productoLibre() para un artículo fuera de catálogo.
 function agregar(p=catalogo.find(p=>p.sku===$('#cmModelo').value)){
  if(modelos.length>=20)return avisar('Puedes cotizar hasta 20 modelos en un documento.');
  if(!p)return;
  const m=crearModelo(p);modelos.push(m);pintarModelo(m);if(m.servicio){aplicarTecnica(m);actualizar(m);}void renderizar(m);marcarSucio();
- if(!m.servicio){$('#cmBuscar').value='';opciones();}avisar(m.servicio?'Personalización sin prenda agregada.':m.nombre+' agregado.');nodo(m).scrollIntoView({block:'start',behavior:'smooth'});
+ if(!m.servicio){$('#cmBuscar').value='';opciones();}avisar(m.libre?'Artículo fuera de catálogo agregado. Escribe el concepto, el costo y el precio.':m.servicio?'Personalización sin prenda agregada.':m.nombre+' agregado.');nodo(m).scrollIntoView({block:'start',behavior:'smooth'});
 }
 function pintarModelo(m){
  const seccion=document.createElement('section');seccion.className='cot-panel cm-modelo';seccion.dataset.modelo=m.id;
  const etiqueta=f=>[f.talla,f.color!=='Todos los colores'?f.color:'',f.volumen].filter(Boolean).join(' ');
  const opcionesTecnica=(m.producto.tecnicas||[]).map(t=>`<option value="${esc(t)}">${esc(tecnicas[t]||t)}</option>`).join('');
  // Sin prenda: concepto editable y ubicación del logo en texto libre; no hay color, zona del catálogo ni «Solo prenda».
- const campos=m.servicio?`<label>Concepto<input data-campo="concepto" maxlength="120" autocomplete="off" value="${esc(m.nombre)}"></label><label>Personalización<select data-campo="tecnica">${opcionesTecnica}</select></label>`
+ // Fuera de catálogo: además lleva el costo del artículo escrito a mano y la personalización es opcional.
+ const campos=m.libre?`<label>Concepto<input data-campo="concepto" maxlength="120" autocomplete="off" placeholder="Ej. Termo de acero 500 ml" value="${esc(m.nombre===NOMBRE_LIBRE?'':m.nombre)}"></label><label>Costo del artículo / pza (con IVA)<input data-campo="costoLibre" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Lo que te cuesta"></label><label>Personalización<select data-campo="tecnica"><option value="">Sin personalización</option>${opcionesTecnica}</select></label>`
+  :m.servicio?`<label>Concepto<input data-campo="concepto" maxlength="120" autocomplete="off" value="${esc(m.nombre)}"></label><label>Personalización<select data-campo="tecnica">${opcionesTecnica}</select></label>`
   :`<label>Personalización<select data-campo="tecnica"><option value="">Solo prenda</option>${opcionesTecnica}</select></label><label>Color de la vista<select data-campo="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}">${esc(datos.colores.find(c=>c.id===id)?.nombre||id)}</option>`).join('')}</select></label>`;
  const ubicacion=m.servicio?`<label>Ubicación del logo (opcional)<input data-campo="ubicacion" maxlength="80" autocomplete="off" placeholder="Ej. Frente, espalda, manga" value="${esc(m.ubicacion)}"></label>`
   :`<label>Zona del logo<select data-campo="zona">${(m.producto.zonas||[]).map(z=>`<option value="${esc(z.id)}">${esc(z.nombre)}</option>`).join('')}</select></label>`;
- seccion.innerHTML=`<div class="cm-modelocab"><div><h2>${esc(m.nombre)}</h2><p class="cot-ayuda">${m.servicio?'Sin prenda · el cliente entrega sus prendas':esc(m.sku)}</p></div><button type="button" data-accion="quitar" class="btn-texto">Quitar</button></div>
-<div class="cm-diseno"><div class="cm-preview"><canvas width="600" height="600" aria-label="${m.servicio?'Vista del logo':'Vista del modelo con logo'}"></canvas><p data-vista-estado class="cot-ayuda" role="status">${m.servicio?'Sube el logo para verlo aquí':'Cargando modelo…'}</p></div><div>
+ seccion.innerHTML=`<div class="cm-modelocab"><div><h2>${esc(m.nombre)}</h2><p class="cot-ayuda">${m.libre?'Fuera de catálogo · ZAIN consigue el artículo':m.servicio?'Sin prenda · el cliente entrega sus prendas':esc(m.sku)}</p></div><button type="button" data-accion="quitar" class="btn-texto">Quitar</button></div>
+<div class="cm-diseno"><div class="cm-preview"><canvas width="600" height="600" aria-label="${m.servicio?'Vista del logo':'Vista del modelo con logo'}"></canvas><p data-vista-estado class="cot-ayuda" role="status">${m.libre?'Sin foto: artículo fuera de catálogo':m.servicio?'Sube el logo para verlo aquí':'Cargando modelo…'}</p></div><div>
 <div class="cm-campos">${campos}</div>
 <div data-personalizacion hidden><div class="cm-campos">${ubicacion}<label>Ancho del logo (cm)<input data-campo="ancho" type="number" min="0.01" max="${maxAncho(m)/100}" step="0.01" inputmode="decimal" value="${numero(m.ancho)}"></label></div>
 <details class="cm-mas"><summary>Alto y costo de la personalización</summary><div class="cm-campos"><label>Alto del logo (cm)<input data-campo="alto" type="number" min="0.01" max="200" step="0.01" inputmode="decimal" value="${numero(m.alto)}" placeholder="Sube el logo o escríbelo"></label><label>Cobro de la personalización<select data-campo="modo"><option value="area">Por cm²</option><option value="fijo">Importe fijo por pieza</option></select></label><label data-area>Tarifa MXN / cm²<input data-campo="tarifa" type="number" min="0" step="0.000001" inputmode="decimal" placeholder="Pendiente"></label><label data-fijo hidden>Costo fijo / pieza<input data-campo="fijo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Pendiente"></label></div><p class="cot-ayuda">El alto sigue la proporción del logo hasta que lo cambies.</p></details><p data-preparacion class="cot-ayuda"></p></div>
@@ -146,7 +148,9 @@ const nodo=m=>$('#cmModelos [data-modelo="'+m.id+'"]');
 function leer(m){
  const el=nodo(m),campo=k=>el.querySelector('[data-campo="'+k+'"]'),valor=k=>campo(k)?.value??'';
  m.tecnicaID=valor('tecnica');m.tecnica=tecnicas[m.tecnicaID]||'';m.color=valor('color');m.zona=valor('zona');m.modo=valor('modo');m.ancho=nullable(campo('ancho'));m.alto=nullable(campo('alto'));
- if(m.servicio){m.nombre=valor('concepto').replace(/\s+/g,' ').trim()||NOMBRE_SERVICIO;m.ubicacion=valor('ubicacion').replace(/\s+/g,' ').trim();}
+ if(m.servicio){m.nombre=valor('concepto').replace(/\s+/g,' ').trim()||(m.libre?NOMBRE_LIBRE:NOMBRE_SERVICIO);m.ubicacion=valor('ubicacion').replace(/\s+/g,' ').trim();}
+ // Fuera de catálogo: el costo escrito es el costo del renglón; vacío = pendiente (se puede escribir el precio directo).
+ if(m.libre){m.costoLibre=nullable(campo('costoLibre'));for(const f of m.filas)f.costo=m.costoLibre;}
  m.margen=nullable(campo('margenModelo'));if(m.margen!=null&&m.margen>9999)throw Error('El margen debe ser menor a 100%.');
  if(m.tecnica&&m.ancho!=null&&m.ancho>maxAncho(m))throw Error('El ancho excede el área disponible de esta zona.');
  const limite=zona(m)?.maxAlto;if(m.tecnica&&limite&&m.alto!=null&&m.alto>Math.floor(limite*100))throw Error('El alto excede el área disponible de esta zona ('+limite+' cm).');
@@ -172,7 +176,7 @@ function actualizar(m){
 async function renderizar(m){
  const el=nodo(m);if(!el)return;const turn=++m.renderTurno,session=epoca;m.render=null;
  // Sin prenda: solo el logo, sin modelo que cargar.
- if(m.servicio){const canvas=el.querySelector('canvas'),con=dibujarServicio(canvas.getContext('2d'),logo,canvas.width);m.render=con?canvas.toDataURL('image/png'):null;el.querySelector('[data-vista-estado]').textContent=con?'Logo'+(m.ubicacion?' en '+m.ubicacion:'')+' · prenda del cliente':'Sube el logo para verlo aquí';return;}
+ if(m.servicio){const sinLogo=m.libre&&!m.tecnica,canvas=el.querySelector('canvas'),con=dibujarServicio(canvas.getContext('2d'),sinLogo?null:logo,canvas.width);canvas.hidden=sinLogo;m.render=con?canvas.toDataURL('image/png'):null;el.querySelector('[data-vista-estado]').textContent=con?'Logo'+(m.ubicacion?' en '+m.ubicacion:'')+(m.libre?' · artículo fuera de catálogo':' · prenda del cliente'):sinLogo?'Sin foto: artículo fuera de catálogo':'Sube el logo para verlo aquí';return;}
  try{
  const p=m.producto,col=color(m),src=p.fotosColor?.[m.color]||p.fotoRender||p.foto;
  if(!src)throw Error('Este modelo todavía no tiene render.');
@@ -201,6 +205,7 @@ function aplicarTecnica(m){
 function aplicarModo(m){const el=nodo(m),fijo=el.querySelector('[data-campo=modo]').value==='fijo';el.querySelector('[data-area]').hidden=fijo;el.querySelector('[data-fijo]').hidden=!fijo;}
 $('#cmAgregar').addEventListener('click',()=>agregar());
 $('#cmServicio').addEventListener('click',()=>agregar(productoServicio()));
+$('#cmLibre').addEventListener('click',()=>agregar(productoLibre()));
 $('#cmModelos').addEventListener('input',e=>{
  const el=e.target.closest('[data-modelo]');if(!el)return;const m=modelos.find(m=>m.id===Number(el.dataset.modelo)),k=e.target.dataset.campo;if(!k)return;
  if(k==='alto')m.autoAlto=false;
@@ -238,7 +243,7 @@ $('#cmEliminarLogo').addEventListener('click',()=>{sinLogo('Logo retirado.');mar
 // Lo que se guarda: los valores tal como están en pantalla (también los incompletos).
 function crudoModelo(m){
  const el=nodo(m),v=k=>el.querySelector('[data-campo="'+k+'"]')?.value??'';
- return {sku:m.sku,tecnica:v('tecnica'),color:v('color'),zona:v('zona'),...(m.servicio?{concepto:v('concepto'),ubicacion:v('ubicacion')}:{}),modo:v('modo'),ancho:v('ancho'),alto:v('alto'),autoAlto:m.autoAlto,tarifa:v('tarifa'),fijo:v('fijo'),margen:v('margenModelo'),
+ return {sku:m.sku,tecnica:v('tecnica'),color:v('color'),zona:v('zona'),...(m.servicio?{concepto:v('concepto'),ubicacion:v('ubicacion')}:{}),...(m.libre?{costoLibre:v('costoLibre')}:{}),modo:v('modo'),ancho:v('ancho'),alto:v('alto'),autoAlto:m.autoAlto,tarifa:v('tarifa'),fijo:v('fijo'),margen:v('margenModelo'),
   filas:m.filas.map(f=>{const tr=el.querySelector('[data-fila="'+f.id+'"]');return {clave:clave(f),incluir:tr.querySelector('[data-campo=incluir]').checked,precio:tr.querySelector('[data-campo=precio]').value,visto:f.visto??null};})};
 }
 const CAMPOS={destinatario:'#cmDestinatario',iva:'#cmIVA',redondeo:'#cmRedondeo',vigencia:'#cmVigencia',plazo:'#cmPlazo',anticipo:'#cmAnticipo',concepto:'#cmCargoConcepto',cargo:'#cmCargo',notas:'#cmNotas'};
@@ -294,6 +299,8 @@ function nueva(){
  limpiar();actual=null;cabecera();pintarLista();return true;
 }
 $('#cmVolver').addEventListener('click',()=>{if(sucio&&modelos.length&&!confirm('Hay cambios sin guardar. ¿Volver sin guardarlos?'))return;if(sucio){limpiar();actual=null;cabecera();}cerrarConversion();mostrarEditor(false);void cargarLista();});
+// «+ Cotizar» de la pantalla de Pedidos (11-nov-2026): abre una cotización nueva sin pasar por la lista.
+$('#cotizarRapido')?.addEventListener('click',()=>{$('#verCotizaciones').click();$('#cmNueva').click();});
 $('#cmNueva').addEventListener('click',()=>{if(nueva()){mostrarEditor(true);avisar('Nueva cotización.');$('#cmDestinatario').focus();}});
 async function restaurar(x,duplicar){
  limpiar();const d=x.datos||{};
@@ -302,10 +309,10 @@ async function restaurar(x,duplicar){
  if(duplicar)$('#cmVigencia').value=hoyMX(15);
  let fijados=0;const faltan=[];
  for(const s of d.modelos||[]){
-  const p=s.sku===SERVICIO?productoServicio():catalogo.find(p=>p.sku===s.sku);if(!p){faltan.push(s.sku);continue;}
+  const p=s.sku===SERVICIO?productoServicio():s.sku===LIBRE?productoLibre():catalogo.find(p=>p.sku===s.sku);if(!p){faltan.push(s.sku);continue;}
   const m=crearModelo(p);modelos.push(m);pintarModelo(m);
   const el=nodo(m),set=(k,v)=>{const c=el.querySelector('[data-campo="'+k+'"]');if(c&&v!=null)c.value=v;};
-  set('tecnica',s.tecnica);aplicarTecnica(m);set('color',s.color);set('zona',s.zona);set('concepto',s.concepto);set('ubicacion',s.ubicacion);m.zona=el.querySelector('[data-campo=zona]')?.value||'';el.querySelector('[data-campo=ancho]').max=maxAncho(m)/100;
+  set('tecnica',s.tecnica);aplicarTecnica(m);set('color',s.color);set('zona',s.zona);set('concepto',s.concepto);set('costoLibre',s.costoLibre);set('ubicacion',s.ubicacion);m.zona=el.querySelector('[data-campo=zona]')?.value||'';el.querySelector('[data-campo=ancho]').max=maxAncho(m)/100;
   set('modo',s.modo);aplicarModo(m);set('ancho',s.ancho);set('alto',s.alto);set('tarifa',s.tarifa);set('fijo',s.fijo);set('margenModelo',s.margen);m.autoAlto=s.autoAlto!==false;
   const guardadas=new Map((s.filas||[]).map(g=>[g.clave,g]));
   for(const f of m.filas){const g=guardadas.get(clave(f)),tr=el.querySelector('[data-fila="'+f.id+'"]');if(!g)continue;tr.querySelector('[data-campo=incluir]').checked=g.incluir!==false;tr.querySelector('[data-campo=precio]').value=g.precio||'';}
@@ -345,8 +352,8 @@ $('#cmPDF').addEventListener('click',async e=>{
  const b=e.currentTarget,session=epoca;b.disabled=true;
  try{avisar('Guardando…');const q=await guardarParaEnviar();$('#cmCampos').disabled=true;$('#cmActualizar').disabled=true;avisar('Preparando PDF…');await Promise.all(modelos.map(renderizar));if(session!==epoca)return;
  // Sin prenda y sin logo no hay imagen que esperar: el PDF dice «Vista previa por confirmar».
- for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render&&!(m.servicio&&!logo))throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
- const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:m.servicio?'Prenda del cliente'+(logo?'':' · logo pendiente'):(m.tecnica?(logo?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+color(m).nombre}));
+ for(const m of modelos)if(m.filas.some(f=>f.incluir)&&!m.render&&!(m.servicio&&(!logo||m.libre&&!m.tecnica)))throw Error('Espera a que cargue el diseño de '+m.nombre+' y vuelve a descargar.');
+ const imagenes=modelos.map(m=>({sku:m.sku,nombre:m.nombre,src:m.render,nota:m.libre?'Artículo especial'+(m.tecnica&&!logo?' · logo pendiente':''):m.servicio?'Prenda del cliente'+(logo?'':' · logo pendiente'):(m.tecnica?(logo?'Logo en '+(zona(m)?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+color(m).nombre}));
  const {descargarModelos}=await import('./cotizacion-modelos-pdf.js?v=11');if(session!==epoca)return;await descargarModelos(q,imagenes);avisar('PDF '+q.folio+' listo. Puedes enviarlo al cliente.');
  }catch(e){if(session===epoca)avisar(e.message);}finally{b.disabled=false;$('#cmActualizar').disabled=false;if(session===epoca&&datos)$('#cmCampos').disabled=false;}
 });
@@ -355,7 +362,7 @@ const nombreColor=id=>datos.colores.find(c=>c.id===id)?.nombre||id;
 function cerrarConversion(){$('#cmForm .cm-exportar').hidden=false;lineas=[];$('#cmConvertir').hidden=true;$('#cvLineas').replaceChildren();$('#cvResultado').hidden=true;$('#cvResultado').replaceChildren();$('#cvEstado').textContent='';$('#cvErrores').replaceChildren();}
 function pintarLineas(){
  const porModelo=modelos.map((m,i)=>({m,i,lineas:lineas.map((l,k)=>({...l,k})).filter(l=>l.modelo===i)}));
- $('#cvLineas').innerHTML=porModelo.map(({m,i,lineas:ls})=>`<div class="cm-cvmodelo"><h3>${esc(m.nombre)}${m.servicio?' <small>· prenda del cliente</small>':m.tecnica?'':' <small>· solo prenda</small>'}</h3>${ls.map(l=>{const tallas=(m.producto.tallas||[]).length?m.producto.tallas:[''];return `<div class="cm-cvlinea" data-linea="${l.k}">${m.servicio?'':`<div class="cm-cvcab"><label>Color<select data-cv="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}"${id===l.colorId?' selected':''}>${esc(nombreColor(id))}</option>`).join('')}</select></label>${ls.length>1?'<button type="button" class="btn-texto" data-cv="quitar">Quitar color</button>':''}</div>`}<div class="cm-cvtallas">${tallas.map(t=>`<label>${esc(t||'Piezas')}<input type="number" min="0" max="9999" step="1" inputmode="numeric" data-talla="${esc(t)}" value="${l.cantidades[t]||''}"></label>`).join('')}</div><p class="cot-ayuda" data-cv="nota"></p></div>`;}).join('')}${m.servicio?'':`<button type="button" class="btn-texto" data-cv="otro" data-modelo="${i}">+ Otro color de este modelo</button>`}</div>`).join('');
+ $('#cvLineas').innerHTML=porModelo.map(({m,i,lineas:ls})=>`<div class="cm-cvmodelo"><h3>${esc(m.nombre)}${m.libre?' <small>· fuera de catálogo</small>':m.servicio?' <small>· prenda del cliente</small>':m.tecnica?'':' <small>· solo prenda</small>'}</h3>${ls.map(l=>{const tallas=(m.producto.tallas||[]).length?m.producto.tallas:[''];return `<div class="cm-cvlinea" data-linea="${l.k}">${m.servicio?'':`<div class="cm-cvcab"><label>Color<select data-cv="color">${(m.producto.colores||[]).map(id=>`<option value="${esc(id)}"${id===l.colorId?' selected':''}>${esc(nombreColor(id))}</option>`).join('')}</select></label>${ls.length>1?'<button type="button" class="btn-texto" data-cv="quitar">Quitar color</button>':''}</div>`}<div class="cm-cvtallas">${tallas.map(t=>`<label>${esc(t||'Piezas')}<input type="number" min="0" max="9999" step="1" inputmode="numeric" data-talla="${esc(t)}" value="${l.cantidades[t]||''}"></label>`).join('')}</div><p class="cot-ayuda" data-cv="nota"></p></div>`;}).join('')}${m.servicio?'':`<button type="button" class="btn-texto" data-cv="otro" data-modelo="${i}">+ Otro color de este modelo</button>`}</div>`).join('');
  calcularConversion();
 }
 // Lo mínimo que necesita armarPedido de cada modelo de la pantalla.
@@ -409,9 +416,10 @@ function borradorConversion(huella){
  const guardarD=()=>{try{sessionStorage.setItem(llave,JSON.stringify(d));}catch{}};guardarD();return {d,guardarD,borrar:()=>{try{sessionStorage.removeItem(llave);}catch{}}};
 }
 // La cotización del pedido recibe exactamente los precios, cargo, IVA, vigencia, entrega y anticipo de esta cotización.
-function borradorPedido(b,precios,q){
+// costos: el costo escrito de cada artículo fuera de catálogo (null o undefined = no tocar el costo de esa partida).
+function borradorPedido(b,precios,q,costos=[]){
  const e=entrada(b),conCargo=!!q.cargo;
- return {...e,partidas:e.partidas.map((p,i)=>({...p,precio:precios[i],...(conCargo?{}:{cargoAparte:false})})),cargos:conCargo?[{concepto:q.cargo.concepto.slice(0,80),importe:q.cargo.importe,costo:b.cargos?.[0]?.costo??null}]:[],
+ return {...e,partidas:e.partidas.map((p,i)=>({...p,precio:precios[i],...(costos[i]!=null?{prenda:costos[i]}:{}),...(conCargo?{}:{cargoAparte:false})})),cargos:conCargo?[{concepto:q.cargo.concepto.slice(0,80),importe:q.cargo.importe,costo:b.cargos?.[0]?.costo??null}]:[],
   impuesto:q.impuesto,vigencia:q.vigencia||'',plazo:q.plazo||b.plazo||'',condiciones:q.notas||'',destinatario:q.destinatario||'',pagos:q.anticipo==null?null:{anticipo:q.anticipo,instrucciones:b.pagos?.instrucciones||'Coordina con ZAIN los datos para el anticipo.'}};
 }
 $('#cvCrear').addEventListener('click',async()=>{
@@ -445,7 +453,7 @@ $('#cvCrear').addEventListener('click',async()=>{
   }
   estado('Poniendo los precios cotizados…');
   const c=(await api('cotizacion',undefined,{id:d.recibo.id})).cotizacion;
-  let out=(await api('cotizacion-guardar',{id:d.recibo.id,version:c.version,borrador:borradorPedido(c.borrador,r.selecciones.map(s=>s.precio),q)})).cotizacion;
+  let out=(await api('cotizacion-guardar',{id:d.recibo.id,version:c.version,borrador:borradorPedido(c.borrador,r.selecciones.map(s=>s.precio),q,r.selecciones.map(s=>s.costo))})).cotizacion;
   if($('#cvPublicar').checked&&!out.publicada){estado('Publicando la cotización del pedido…');out=(await api('cotizacion-publicar',{id:d.recibo.id,version:out.version})).cotizacion;}
   const v=await api('cm-convertir',{id:actual.id,version:actual.version,pedido_id:d.recibo.id});aplicarGuardada(v.cotizacion);borrar();void cargarLista();
   estado('');$('#cvLineas').replaceChildren();$('#cvTotal').replaceChildren();$('#cvErrores').replaceChildren();
