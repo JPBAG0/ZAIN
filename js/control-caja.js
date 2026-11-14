@@ -6,7 +6,7 @@ const $=s=>document.querySelector(s),api=(op,b,q)=>window.ZAINEquipo.call(op,b,q
 const personas={juan_pablo:'Juan Pablo',garcia:'García',zain:'Caja ZAIN',oficina_jp:'Oficina JP',oficina_garcia:'Oficina García'},CAJAS=['zain','oficina_jp','oficina_garcia'];
 const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_City'});
 // Los repartos de utilidad van aparte: «Todo» y los totales de cada cuenta no los cuentan (27-oct-2026, JP).
-const FILTROS=[['','Todo sin repartos'],['cobro','Cobros'],['gasto','Gastos'],['caja','Transferencias'],['reparto','Repartos']];
+const FILTROS=[['','Todo sin repartos'],['todo','Todo con repartos'],['cobro','Cobros'],['gasto','Gastos'],['caja','Transferencias'],['reparto','Repartos']];
 const TIPOS=[['cobro','Cobro de pedido'],['gasto','Gasto'],['ingreso','Ingreso'],['reembolso','Reembolso'],['transferencia','Transferencia'],['reparto','Reparto']];
 let avisoHasta=0,datos=null,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
 // Casillas del libro para sumar varios movimientos (27-oct-2026, JP).
@@ -82,13 +82,13 @@ function efectoEn(m,k){
 }
 // Lo que muestra cada renglón: con una cuenta elegida, su entrada o salida; en «Todas», el efecto en las cajas.
 const montoDe=m=>cuenta?efectoEn(m,cuenta):filtro==='reparto'?Number(m.importe):Number(m.efecto_caja)||0;
-const enFiltro=m=>filtro?tipoDe(m)===filtro||(filtro==='gasto'&&m.tipo==='reembolso'):tipoDe(m)!=='reparto';
+const enFiltro=m=>filtro==='todo'?true:filtro?tipoDe(m)===filtro||(filtro==='gasto'&&m.tipo==='reembolso'):tipoDe(m)!=='reparto';
 const filtrados=()=>datos.libro.filter(m=>enFiltro(m)&&(!cuenta||efectoEn(m,cuenta)!==0));
 function totales(){
  const lista=filtrados(),suma=l=>l.reduce((a,m)=>a+montoDe(m),0),entra=lista.reduce((a,m)=>a+Math.max(0,montoDe(m)),0),sale=lista.reduce((a,m)=>a+Math.min(0,montoDe(m)),0);
  const sel=lista.filter(m=>marcados.has(m.id)),todos=lista.length>0&&sel.length===lista.length;
  $('#cajaTotales').innerHTML=lista.length?`<label class="fin-libro-todos"><input type="checkbox" data-marcar-todos${todos?' checked':''}> Seleccionar todos</label>`+
-  `<div><small>${filtro==='reparto'?'Repartos':'Total'}${cuenta?' · '+esc(personas[cuenta]):filtro==='reparto'?'':' en cajas (ZAIN y oficinas)'}${filtro?'':' · sin repartos'} · ${lista.length} ${lista.length===1?'movimiento':'movimientos'}</small><strong class="num">${esc(firmado(suma(lista)))}</strong><span>Entradas ${esc(pesos(entra))} · Salidas ${esc(pesos(-sale))}</span></div>`+
+  `<div><small>${filtro==='reparto'?'Repartos':'Total'}${cuenta?' · '+esc(personas[cuenta]):filtro==='reparto'?'':' en cajas (ZAIN y oficinas)'}${filtro==='todo'?' · con repartos':filtro?'':' · sin repartos'} · ${lista.length} ${lista.length===1?'movimiento':'movimientos'}</small><strong class="num">${esc(firmado(suma(lista)))}</strong><span>Entradas ${esc(pesos(entra))} · Salidas ${esc(pesos(-sale))}</span></div>`+
   `<div class="${sel.length?'':'fin-libro-sinsel'}"><small>Seleccionados · ${sel.length}</small><strong class="num">${esc(firmado(suma(sel)))}</strong>${sel.length?'<button type="button" class="btn-texto" data-quitar-marcas>Quitar selección</button>':'<span>Marca la casilla de cada movimiento</span>'}</div>`:'';
 }
 const claseDe=m=>m.origen==='pago'?'cobro':m.tipo;
