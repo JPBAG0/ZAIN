@@ -81,8 +81,8 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
 });
 
 test('base conserva 44 referencias previas y agrega 21 preparadas ocultas con SKU nuevos',()=>{
- assert.equal(Public.productos.length,42);assert.equal(Public.productosHistoricos.length,30);
- assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,72);
+ assert.equal(Public.productos.length,42);assert.equal(Public.productosHistoricos.length,31);
+ assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,73);
  assert.ok(!/Yazbek|ActiviTee|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
  assert.equal(Public.productos.filter(p=>p.fotoModelo).length,28);
  for(const p of Public.productos.filter(p=>p.fotoModelo)){

@@ -1916,6 +1916,26 @@ export default {
       "id": "zn-cm-016-c07",
       "nombre": "Negro",
       "hex": "#171a18"
+    },
+    {
+      "id": "zn-cm-017-c01",
+      "nombre": "Blanco",
+      "hex": "#f4f4f1"
+    },
+    {
+      "id": "zn-cm-017-c02",
+      "nombre": "Azul marino",
+      "hex": "#2c3554"
+    },
+    {
+      "id": "zn-cm-017-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-017-c04",
+      "nombre": "Azul rey",
+      "hex": "#4a6ad0"
     }
   ],
   "tecnicas": [
@@ -7928,6 +7948,74 @@ export default {
       "imagenIA": false,
       "detalleMedidas": "Tallas XS a 2XL. Medidas exactas de la prenda y área de bordado por confirmar.",
       "disponibilidad": "Consulta disponibilidad por talla y color. Fotografías del modelo; el tono de pantalla puede variar. Tamaño, ubicación del logo y acabado se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-017",
+      "idPublico": "zn-cm-017",
+      "sku": "ZN-CM-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "activo": false,
+      "nombre": "Camisa pescador manga larga",
+      "nombreComercial": "Camisa pescador manga larga · Caballero",
+      "nombreFamilia": "Camisa pescador manga larga",
+      "nombreFamiliaComercial": "Camisa pescador manga larga",
+      "familia": "zain-camisa-pescador",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa tipo pescador de manga larga, fresca y ligera, con dos bolsas al pecho.",
+      "especificaciones": "Dos bolsas con cartera al pecho. Cuello con botones en las puntas. Manga larga con puño de botón.",
+      "tejido": "Poliéster",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "gramaje": 160,
+      "foto": "img/productos/zain/zn-cm-017-render.webp",
+      "colores": [
+        "zn-cm-017-c01",
+        "zn-cm-017-c02",
+        "zn-cm-017-c03",
+        "zn-cm-017-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "tecnicasNota": "Bordado disponible para cotización. Otras aplicaciones requieren confirmación. Ubicación y acabado se revisan antes de producir.",
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 6.645,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 625,
+          "y": 262,
+          "max": 9,
+          "maxAlto": 4,
+          "orientativa": true
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 375,
+          "y": 262,
+          "max": 9,
+          "maxAlto": 4,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "detalleMedidas": "Tallas S a 4XL. Medidas exactas de la prenda por confirmar.",
+      "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar."
     }
   ],
   "promocionales": [
