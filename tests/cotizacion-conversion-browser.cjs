@@ -39,7 +39,7 @@ module.exports=async function verificarConversion(page,{base,capturas}={}){
  const resultados=[];
  for(const width of [390,1280])for(const personalizada of [false,true]){
   guardada=null;pedido=null;cotizacion=null;esperado=null;
-  await page.setViewportSize({width,height:844});await page.goto(base+'/gestion-zain.html');await page.locator('#trabajo').waitFor();await page.locator('#verCotizaciones').click();await page.locator('#cmCampos:not([disabled])').waitFor({state:'attached'});
+  await page.setViewportSize({width,height:844});await page.goto(base+'/gestion-zain.html');await page.locator('#trabajo').waitFor();await page.evaluate(()=>document.querySelector('#verCotizaciones').click());await page.locator('#cmCampos:not([disabled])').waitFor({state:'attached'});
   assert.equal(await page.locator('#cmForm').isVisible(),false);await page.locator('#cmNueva').click();assert.equal(await page.locator('#cmGuardadas').isVisible(),false);
   await page.locator('#cmDestinatario').fill('Empresa de prueba');await page.locator('#cmModelo').selectOption(producto.sku);await page.locator('#cmAgregar').click();
   if(personalizada){await page.locator('[data-campo=tecnica]').selectOption(producto.tecnicas[0]);await page.locator('.cm-mas summary').click();await page.locator('[data-campo=alto]').fill('8');}

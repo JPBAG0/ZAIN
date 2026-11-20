@@ -1,3 +1,7 @@
+## Preparado: foto en el artículo fuera de catálogo — 20-nov-2026 (Claude)
+
+Rama `claude/zain-foto-fuera-catalogo` (worktree `C:/Users/JP/Documents/zain-foto-libre`), sobre `claude/zain-website-deploy-d85pzy` 024ff12. Botón «Subir foto» en el artículo libre de Cotizaciones → Modelos y precios; vista, PDF, PDF de Chats y pedido con la foto. Detalle en `docs/COTIZACIONES-MODELOS.md`. Recursos: control-cotizaciones-modelos v17, cotizacion-servicio v4 (editor y Chats), chats-adjuntos v8, control-chats v9, cotizacion-modelos.css v7. **Requiere Edge** (`node server/preparar-edge.mjs` + deploy) antes del push. Suite 292/292 (77 de SQL se saltan sin PGlite) y recorridos de navegador de foto, conversión, selecciones y Chats a 390/1280.
+
 ## Vigente: producción sin anticipo a la vista — 2-nov-2026 (Claude)
 
 JP (2-nov): «no me deja pasar a producción sin anticipo» (pedidos de Yahir y Drea, aceptados con $0 cobrado, ya en producción en la realidad y fuera de «por cobrar»). El SQL y el Edge del 27-oct ya lo permitían, pero nadie usó el botón (historial sin ninguna entrada «sin anticipo»): era un botón de texto en la pestaña Pedido, la ficha de un aceptado abre en Cobro y «Cambiar estado» → En producción solo respondía «Falta cobrar el anticipo». Solo web (`js/control-pedidos.js` v30, `control-gastos.js` v13, `gestion-v2.css` v9):

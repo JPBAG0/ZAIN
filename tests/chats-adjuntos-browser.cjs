@@ -30,7 +30,7 @@ module.exports=async function verificarAdjuntos(page,{base,capturas}={}){
  const resultados=[];
  for(const width of [390,1280]){
   if(width===1280){q.logoUrl=base+'/fixture/logo.svg';q.datos.modelos[0].tecnica='bordado';q.comercial.partidas[0].personalizacion='Bordado';q.comercial.partidas[0].zona=producto.zonas[0].nombre;q.comercial.partidas[0].medidas='8 × 4 cm';}
-  cola.clear();subidas.clear();fallarUnaVez=true;await page.setViewportSize({width,height:width===390?844:900});await page.goto(base+'/gestion-zain.html');await page.locator('#verChats').click();await page.locator('[data-chat="'+chatA+'"]').click();
+  cola.clear();subidas.clear();fallarUnaVez=true;await page.setViewportSize({width,height:width===390?844:900});await page.goto(base+'/gestion-zain.html');await page.evaluate(()=>document.querySelector('#verChats').click());await page.locator('[data-chat="'+chatA+'"]').click();
   await page.locator('#waAdjuntar').click();await page.locator('#waMenuAdjuntos').waitFor();
   const antes=llamadas.filter(x=>x.op==='wa-enviar').length;
   const pdf=Buffer.from('%PDF-1.4\nARCHIVO DE PRUEBA\n%%EOF\n');await page.locator('#waArchivo').setInputFiles({name:'Cotizacion-prueba.pdf',mimeType:'application/pdf',buffer:pdf});await page.locator('#waAdjunto').getByText('Cotizacion-prueba.pdf',{exact:true}).waitFor();

@@ -59,7 +59,8 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
       if (!Number.isSafeInteger(n) || n<1 || n>9999) fail(400,'Revisa las piezas de la personalización sin prenda.');
       if (!simple && !C.tecnicas.some(t=>t.nombre===x.tecnica)) fail(400,'Técnica inválida.');
       if (x.color!==(libre?COLOR_LIBRE:COLOR_SERVICIO)) fail(400,'Color de producto inválido.');
-      if (simple ? x.cm!==0 || x.tieneLogo || x.tieneRender : !Number.isFinite(x.cm) || x.cm<=0 || x.cm>200) fail(400,'Revisa el tamaño del logo.');
+      // Sin personalización no hay logo; el render solo puede ser la foto del artículo fuera de catálogo (20-nov-2026).
+      if (simple ? x.cm!==0 || x.tieneLogo : !Number.isFinite(x.cm) || x.cm<=0 || x.cm>200) fail(400,'Revisa el tamaño del logo.');
       if (x.logoGeometria!=null) fail(400,'Revisa las medidas del diseño del logo.');
       const nombre=text(x.nombreZain||x.nombre,150).replace(/\s+/g,' ').trim()||(libre?'Artículo fuera de catálogo':'Personalización sobre prenda del cliente');
       return { indice:i,p:x.p,servicio:true,...(libre?{libre:true}:{}),nombre,color:libre?COLOR_LIBRE:COLOR_SERVICIO,tecnica:x.tecnica,piezas:n,medidas:'',detalleMedidas:'',zona:text(x.zona,120),cm:x.cm,tallas:'',tallasEtq:'Piezas',logo:text(x.logo,250),colorLogo:text(x.colorLogo,100),pantone:text(x.pantone,80),notas:text(x.notas,1500),tieneLogo:!!x.tieneLogo,tieneRender:!!x.tieneRender,

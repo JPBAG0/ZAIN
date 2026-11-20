@@ -1,5 +1,5 @@
 // Archivos comerciales en memoria. No guarda datos del chat ni PDFs en el navegador.
-import {SERVICIO,dibujarServicio} from './cotizacion-servicio.js?v=1';
+import {SERVICIO,LIBRE,dibujarServicio,dibujarLibre} from './cotizacion-servicio.js?v=4';
 export const TIPOS={pdf:'application/pdf',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',webp:'image/webp',docx:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',xlsx:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'};
 export function validarArchivo(archivo){
  const ext=String(archivo?.name||'').split('.').at(-1).toLowerCase(),mime=TIPOS[ext];
@@ -14,11 +14,35 @@ const nombrePDF=folio=>'Cotizacion-'+String(folio||'ZAIN').replace(/[^A-Za-z0-9_
 export async function pdfModelo(id,api){
  const [{cotizacion:x},{catalogo:c}]=await Promise.all([api('cm-leer',null,{id}),api('catalogo-publico')]);
  if(!x.comercial?.partidas?.length||!['enviada','autorizada'].includes(x.estado))throw Error('Abre la cotización y guárdala lista para enviar.');
+ // Cotización rápida (20-nov-2026): partidas escritas a mano con su foto opcional; sin logo ni modelos del catálogo.
+ if(x.comercial.tipo==='rapida'){
+  const imagenes={},urls=[];
+  try{
+   for(const [i,s] of (x.datos?.modelos||[]).entries()){
+    if(!s.foto?.objeto)continue;const url=x.fotosUrl?.[s.foto.objeto];if(!url)throw Error('No se pudo cargar la foto de una partida. Abre la cotización y súbela de nuevo.');
+    const res=await fetch(url,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('No se pudo cargar la foto de una partida. Abre la cotización y súbela de nuevo.');
+    const u=URL.createObjectURL(await res.blob());urls.push(u);imagenes[i]={src:u,referencia:false};
+   }
+   const [{documentoRapida,textosPDF},{crearPDF}]=await Promise.all([import('./cotizacion-rapida.js?v=1'),import('./cotizacion-pdf.js?v=22')]);
+   const blob=await crearPDF(documentoRapida(x.comercial),{folio:x.folio,imagenes,textos:textosPDF(x.comercial)});
+   return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
+  }finally{urls.forEach(u=>URL.revokeObjectURL(u));}
+ }
  const imagenes=[],productos=[...(c.productos||[]),...(c.productosHistoricos||[])];let logo=null;
  if(x.logoUrl){const res=await fetch(x.logoUrl,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('No se pudo cargar el logo de la cotización.');const f=await res.blob();logo=window.ZR.analizarLogo(await window.ZR.abrirArchivo(f),!!x.datos?.quitarFondo).logo;}
  for(const [i,s] of (x.datos?.modelos||[]).entries()){
   // Sin prenda: solo el logo sobre fondo claro (como en Cotizaciones).
   if(s.sku===SERVICIO){const canvas=document.createElement('canvas');canvas.width=canvas.height=1000;try{imagenes[i]=dibujarServicio(canvas.getContext('2d'),logo,1000)?{src:canvas.toDataURL('image/png'),nota:'Prenda del cliente'}:{src:null,nota:'Prenda del cliente · logo pendiente'};}finally{canvas.width=canvas.height=0;}continue;}
+  // Fuera de catálogo (20-nov-2026): la foto subida, con el logo en la esquina si lleva personalización; sin foto, como «Sin prenda».
+  if(s.sku===LIBRE){
+   let foto=null;const url=s.foto?.objeto&&x.fotosUrl?.[s.foto.objeto];
+   if(url){const res=await fetch(url,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('No se pudo cargar la foto de un artículo. Abre la cotización y súbela de nuevo.');foto=await createImageBitmap(await res.blob());}
+   else if(s.foto?.objeto)throw Error('No se pudo cargar la foto de un artículo. Abre la cotización y súbela de nuevo.');
+   const canvas=document.createElement('canvas');canvas.width=canvas.height=1000;
+   try{const con=dibujarLibre(canvas.getContext('2d'),foto,s.tecnica?logo:null,1000);imagenes[i]={src:con?canvas.toDataURL('image/png'):null,nota:'Artículo especial'+(foto?' · imagen ilustrativa':'')+(s.tecnica&&!logo?' · logo pendiente':'')};}
+   finally{canvas.width=canvas.height=0;foto?.close?.();}
+   continue;
+  }
   const p=productos.find(p=>p.sku===s.sku),col=c.colores.find(c=>c.id===s.color);if(!p||!col)throw Error('Abre la cotización y revisa el modelo antes de adjuntarla.');
   const src=p.fotosColor?.[s.color]||p.fotoRender||p.foto;if(!src)throw Error('Falta la imagen de un modelo. Revisa la cotización.');
   const img=await window.ZR.cargar(src),canvas=document.createElement('canvas');canvas.width=canvas.height=1000;
@@ -29,7 +53,7 @@ export async function pdfModelo(id,api){
    imagenes[i]={src:canvas.toDataURL('image/png'),nota:(s.tecnica?(logo?'Logo en '+(z?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+col.nombre};
   }finally{canvas.width=canvas.height=0;}
  }
- const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=11'),{crearPDF}=await import('./cotizacion-pdf.js?v=21');
+ const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=12'),{crearPDF}=await import('./cotizacion-pdf.js?v=22');
  const q={...x.comercial,folio:x.folio},a=adaptarModelos(q,imagenes),blob=await crearPDF(a.cotizacion,{sinCantidades:true,folio:x.folio,imagenes:a.imagenes});
  return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
 }
@@ -38,7 +62,7 @@ export async function pdfPedido(id,api){
  const q=c?.publicada;if(!q?.partidas?.length)throw Error('Este pedido todavía no tiene una cotización publicada.');
  const imagenes={};
  for(const f of p.archivos||[]){if(f.kind!=='render')continue;const d=await api('archivo',{id,item:f.item,kind:'render'});imagenes[f.item]={src:d.url,referencia:false};}
- const {prepararImagenes}=await import('./cotizacion-imagen.js?v=6'),{crearPDF}=await import('./cotizacion-pdf.js?v=21');
+ const {prepararImagenes}=await import('./cotizacion-imagen.js?v=6'),{crearPDF}=await import('./cotizacion-pdf.js?v=22');
  const blob=await crearPDF(q,{folio:p.folio,imagenes:await prepararImagenes(q,imagenes)});
  return prepararAdjunto(new File([blob],nombrePDF(p.folio),{type:'application/pdf'}),{tipo:'pedido',id,version:q.revision});
 }

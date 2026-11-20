@@ -48,3 +48,13 @@ JP pidió poder cotizar lo que no está en el catálogo (un termo, un mandil, un
 - En la ficha del pedido dice «Fuera de catálogo: ZAIN consigue el artículo por fuera».
 - Solo el equipo puede crearlo: `validateOrder` lo acepta con `{servicio:true}` y `crear` exige sesión. El documento del cliente no trae el costo.
 - Código: `js/cotizacion-servicio.js` (`LIBRE`, `productoLibre`, `itemServicio({libre})`), `server/pedidos.mjs`, `server/cotizacion-selecciones.mjs`, `js/cotizacion-core.js` (`generar`). Pruebas: `tests/articulo-libre.test.mjs`. **Requiere Edge** antes que la web; no lleva SQL.
+
+## Foto del artículo fuera de catálogo (20-nov-2026)
+JP: un cliente pidió cotizar modelos del catálogo mayoreo que no están en Gestión; mínimo poder poner la foto del catálogo.
+- En el artículo «Fuera de catálogo» hay un botón **Subir foto** (JPG, PNG, WEBP; HEIC si el navegador lo abre). Es opcional. El navegador la deja en JPEG de hasta 1600 px por lado y se sube **al guardar** al bucket privado `zain-cotizaciones-logos`, carpeta de la cotización, con la misma firma `cm-logo-subida`. Se guarda en `datos.modelos[i].foto` = `{objeto,mime}`.
+- La vista, el PDF y el PDF de Chats muestran la foto completa sobre fondo claro; si lleva personalización y hay logo, el logo va en una tarjeta en la esquina. La nota dice «Artículo especial · imagen ilustrativa». Sin foto todo sigue como antes.
+- **Servidor:** `cm-guardar` solo acepta la foto en un `articulo-libre`, en la carpeta de esa cotización, JPG/PNG/WEBP y ya subida (409 si no). `cm-leer` devuelve `fotosUrl` firmadas por 5 min; una foto que ya no exista no impide abrir. Duplicar vuelve a subir la foto a la cotización nueva.
+- **Pasar a pedido:** la foto (con el logo si lo lleva) se sube como `render` PNG de 1200 px de esa partida (`tieneRender:true`), así Pedidos, Mi pedido, talleres y el PDF del pedido la muestran sin cambios. `validateOrder` ahora deja que el artículo libre «Solo prenda» lleve render (sigue sin logo ni medida).
+- Arreglo de paso: el PDF de Chats fallaba con un artículo fuera de catálogo («revisa el modelo»); ya lo dibuja.
+- Pruebas: `tests/foto-libre.test.mjs` y `tests/foto-libre-browser.cjs` (390 y 1280, API simulada). `cotizacion-conversion-browser` y `chats-adjuntos-browser` ya no encontraban los botones en celular desde el menú inferior del 11-nov; ahora los activan por código.
+- **Requiere Edge** (`server/cotizaciones-modelos.mjs` y `server/pedidos.mjs`) antes que la web. Sin SQL.
