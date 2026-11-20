@@ -58,3 +58,14 @@ JP: un cliente pidió cotizar modelos del catálogo mayoreo que no están en Ges
 - Arreglo de paso: el PDF de Chats fallaba con un artículo fuera de catálogo («revisa el modelo»); ya lo dibuja.
 - Pruebas: `tests/foto-libre.test.mjs` y `tests/foto-libre-browser.cjs` (390 y 1280, API simulada). `cotizacion-conversion-browser` y `chats-adjuntos-browser` ya no encontraban los botones en celular desde el menú inferior del 11-nov; ahora los activan por código.
 - **Requiere Edge** (`server/cotizaciones-modelos.mjs` y `server/pedidos.mjs`) antes que la web. Sin SQL.
+
+## Cotización rápida (20-nov-2026)
+JP: «tardo como 40 minutos queriendo hacer una cotización de 3 productos». Para lo que no está en el catálogo (termos, tazas con tampografía…).
+- Botón **Cotización rápida** en Guardadas (junto a «Por modelo y talla»). Mismo editor y mismos datos de Cliente y condiciones; se ocultan logo, modelos, redondeo y Pasar a pedido.
+- Cada partida: concepto, descripción, foto opcional, cantidad (opcional), precio por pieza sin IVA, descuento % y costo por pieza privado (solo para ver la utilidad; no va a lo comercial). Subir, bajar y quitar partidas; hasta 20.
+- Totales: productos, descuento, cargo único, IVA y total. Sin cantidad o sin precio no hay total y el PDF muestra el precio por pieza.
+- «Textos del PDF»: título en dos líneas, encabezado de las partidas, nota junto al encabezado, «Cómo seguimos» sí/no y notas al pie (una por renglón).
+- Se guarda en la misma tabla: `datos.tipo:'rapida'`, `datos.modelos[]` con `sku:'articulo-libre'` (así la foto usa la misma validación y firma), `datos.textos`; `comercial` = `comercialRapida()` (`js/cotizacion-rapida.js`). La lista muestra «Rápida · N partidas · total».
+- PDF con el membrete de siempre (`crearPDF` con `textos`), sin renglón de envío. Chats adjunta el mismo PDF. Duplicar vuelve a subir las fotos.
+- Todavía no pasa a pedido (falta definir cómo se vuelve partida del pedido).
+- Pruebas: `tests/cotizacion-rapida.test.mjs` y `tests/cotizacion-rapida-browser.cjs` (390 y 1280).

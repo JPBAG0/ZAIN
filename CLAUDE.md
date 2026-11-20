@@ -1,4 +1,8 @@
-## Preparado: foto en el artículo fuera de catálogo — 20-nov-2026 (Claude)
+## Publicado: cotización rápida y foto en el artículo fuera de catálogo — 20-nov-2026 (Claude)
+
+Cotización rápida (partidas escritas a mano con foto opcional, cantidad, precio, descuento y textos del PDF editables) y PDF sin recuadro gris cuando una partida no tiene imagen. Detalle en `docs/COTIZACIONES-MODELOS.md`. Recursos nuevos: cotizacion-rapida v1, cotizacion-pdf v22, cotizacion-modelos-pdf v12, control-cotizaciones v56, cotizacion-cliente v31.
+
+### Foto en el artículo fuera de catálogo
 
 Rama `claude/zain-foto-fuera-catalogo` (worktree `C:/Users/JP/Documents/zain-foto-libre`), sobre `claude/zain-website-deploy-d85pzy` 024ff12. Botón «Subir foto» en el artículo libre de Cotizaciones → Modelos y precios; vista, PDF, PDF de Chats y pedido con la foto. Detalle en `docs/COTIZACIONES-MODELOS.md`. Recursos: control-cotizaciones-modelos v17, cotizacion-servicio v4 (editor y Chats), chats-adjuntos v8, control-chats v9, cotizacion-modelos.css v7. **Requiere Edge** (`node server/preparar-edge.mjs` + deploy) antes del push. Suite 292/292 (77 de SQL se saltan sin PGlite) y recorridos de navegador de foto, conversión, selecciones y Chats a 390/1280.
 
