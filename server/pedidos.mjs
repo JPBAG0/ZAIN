@@ -179,7 +179,7 @@ export function createHandler(env={}, fetcher=fetch) {
   const knownProduct=async id=>(altasEnabled?(await currentCatalog()).productos:C.productos).find(p=>(p.idPublico||p.id)===id);
   const productInfo=(p,photos=[])=>{
     const original=[...PublicC.productos,...PublicC.productosHistoricos].find(x=>x.sku===p.sku),photo=photos.find(x=>x.id===p.fotoReferenciaId&&x.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(x.objeto));
-    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',paginaProveedor:p.paginaProveedor||'',soloCotizar:!!p.soloCotizar,silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
+    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',paginaProveedor:p.paginaProveedor||'',soloCotizar:!!p.soloCotizar,soloGestion:!!p.soloGestion,silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
   // Nombre/empresa, teléfono y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
@@ -275,7 +275,9 @@ export function createHandler(env={}, fetcher=fetch) {
         if(!ready&&catalogEnabled)fail(503,'No se pudo actualizar el catálogo.');
         const {rows,cat,photos}=await catalogState();
         headers['Cache-Control']='no-store';
-        return response(200,{catalogo:projectPublic(PublicC,cat,photos,base)});
+        // Las prendas de catálogos de proveedores (soloGestion) solo van al equipo con sesión; la página no las recibe.
+        let equipo=false;if(request.headers.get('authorization')){try{await staff(request);equipo=true;}catch{}}
+        return response(200,{catalogo:projectPublic(PublicC,cat,photos,base,equipo)});
       }
       if(!ready)fail(503,'El guardado de pedidos todavía no está habilitado.');
       if(request.method==='POST'&&['crear','subidas','finalizar'].includes(op)) {
@@ -526,6 +528,7 @@ export function createHandler(env={}, fetcher=fetch) {
         let changes;try{changes=normalizeChanges(b.cambios);}catch(e){fail(400,e.message);}
         if(changes.categoria!==undefined&&!(await currentCatalog()).categoriasCatalogo.includes(changes.categoria))fail(400,'Categoría no disponible.');
         if(changes.activo===true&&p.creadoGestion&&!p.foto)fail(409,'Prepara y revisa el render antes de publicar.');
+        if(changes.activo===true&&p.soloGestion)fail(409,'Esta prenda es del catálogo del proveedor, solo para Gestión: primero hay que pasarla al catálogo de la página.');
         const r=await sb('/rest/v1/rpc/zain_guardar_catalogo',{method:'POST',body:JSON.stringify({p_producto_id:b.id,p_version:b.version,p_cambios:changes,p_actor:user.id})});
         if(!r)fail(409,'Tu compañero modificó este modelo. Recárgalo antes de guardar.');
         return response(200,{guardado:true,version:r.version});

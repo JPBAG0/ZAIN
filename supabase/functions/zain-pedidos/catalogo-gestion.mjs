@@ -36,12 +36,15 @@ export function resolveInternal(base,editions){
  catalog.productosHistoricos=catalog.productos.filter(p=>p.activo===false);
  return catalog;
 }
-export function projectPublic(basePublic,internal,photos,storageBase){
+// equipo=true (sesión del equipo): también las prendas soloGestion, de los catálogos de proveedores (22-nov-2026).
+export function projectPublic(basePublic,internal,photos,storageBase,equipo=false){
  const copy=structuredClone(basePublic),bySku=new Map([...copy.productos,...copy.productosHistoricos].map(p=>[p.sku,p]));
  const photoMap=new Map(photos.map(f=>[f.id,f])),all=[];
  for(const p of internal.productos){
   if(p.creadoGestion&&!p.publicado&&p.activo===false)continue;
-  const pub=bySku.get(p.sku)||(p.creadoGestion?publicNewProduct(p):null);if(!pub)continue;
+  if(p.soloGestion&&!equipo)continue;
+  const pub=bySku.get(p.sku)||(p.creadoGestion||p.soloGestion?publicNewProduct(p):null);if(!pub)continue;
+  if(p.soloGestion){pub.soloCotizar=true;pub.soloGestion=true;}
   pub.categoria=p.categoria;pub.foto=p.creadoGestion?p.foto:pub.foto;
   pub.tecnicas=[...p.tecnicas];pub.tecnicasNota=p.tecnicasNota||pub.tecnicasNota;
   pub.activo=p.activo!==false;pub.nombre=p.nombreComercial||pub.nombre;pub.nombreFamilia=p.nombreFamiliaComercial||pub.nombreFamilia;
@@ -60,7 +63,7 @@ export function projectPublic(basePublic,internal,photos,storageBase){
  if(!copy.muestrasPortada.length&&copy.productos.length){const p=copy.productos[0];copy.muestrasPortada=[{p:p.id,c:p.colores[0],t:p.tecnicas[0],z:p.zonas[0].id,cm:Math.min(9,p.zonas[0].max)}];}
  const bag=copy.productos.find(p=>p.id==='bolsa-expo')||copy.productos.find(p=>p.grupo==='bolsas');
  if(bag){copy.grupos.bolsas.foto=bag.foto;copy.grupos.bolsas.productoInicial=bag.id;}
- const newIDs=new Set(all.filter(p=>p.creadoGestion).flatMap(p=>p.colores));
+ const newIDs=new Set(all.filter(p=>p.creadoGestion||p.soloGestion).flatMap(p=>p.colores));
  copy.colores.push(...internal.colores.filter(c=>newIDs.has(c.id)).map(({id,nombre,hex})=>({id,nombre,hex})));
  return {colores:copy.colores,productos:copy.productos,productosHistoricos:copy.productosHistoricos,categoriasCatalogo:copy.categoriasCatalogo,muestrasPortada:copy.muestrasPortada,grupos:copy.grupos};
 }

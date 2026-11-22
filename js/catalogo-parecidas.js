@@ -39,11 +39,12 @@ const GRUPOS={
  'Playera infantil deportiva':['ZN-IN-004','ZN-IN-007','ZN-IN-008'],
  'Polo infantil':['ZN-IN-003','ZN-IN-009'],
  'Sudadera infantil':['ZN-IN-002','ZN-IN-010'],
- 'Gorra clásica':['ZN-GO-001','ZN-GO-002','ZN-GO-003','ZN-GO-005','ZN-GO-023','ZN-GO-025'],
- 'Gorra trucker':['ZN-GO-004','ZN-GO-006','ZN-GO-008','ZN-GO-009','ZN-GO-014','ZN-GO-015','ZN-GO-016','ZN-GO-017','ZN-GO-018','ZN-GO-019','ZN-GO-020','ZN-GO-021','ZN-GO-022','ZN-GO-024'],
- 'Gorra deportiva':['ZN-GO-007','ZN-GO-010','ZN-GO-011','ZN-GO-012','ZN-GO-013'],
+ 'Gorra clásica':['ZN-GO-001','ZN-GO-002','ZN-GO-003','ZN-GO-005','ZN-GO-023','ZN-GO-025','ZN-GO-032','ZN-GO-033','ZN-GO-034','ZN-GO-035','ZN-GO-039','ZN-GO-040','ZN-GO-041','ZN-GO-043','ZN-GO-044','ZN-GO-045','ZN-GO-046','ZN-GO-047'],
+ 'Gorra trucker':['ZN-GO-004','ZN-GO-006','ZN-GO-008','ZN-GO-009','ZN-GO-014','ZN-GO-015','ZN-GO-016','ZN-GO-017','ZN-GO-018','ZN-GO-019','ZN-GO-020','ZN-GO-021','ZN-GO-022','ZN-GO-024','ZN-GO-036','ZN-GO-037','ZN-GO-038','ZN-GO-049'],
+ 'Gorra deportiva':['ZN-GO-007','ZN-GO-010','ZN-GO-011','ZN-GO-012','ZN-GO-013','ZN-GO-031','ZN-GO-042'],
  'Gorra outdoor':['ZN-GO-026','ZN-GO-028','ZN-GO-030'],
- 'Sombrero':['ZN-GO-027','ZN-GO-029']
+ 'Sombrero':['ZN-GO-027','ZN-GO-029'],
+ 'Visera':['ZN-GO-048']
 };
 const ORDEN=Object.keys(GRUPOS),POR_SKU=new Map();
 for(const [grupo,skus] of Object.entries(GRUPOS))for(const sku of skus)POR_SKU.set(sku,grupo);

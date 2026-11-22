@@ -6817,6 +6817,371 @@ export default {
       "id": "zn-go-030-c04",
       "nombre": "Camuflaje",
       "hex": "#66614c"
+    },
+    {
+      "id": "zn-go-031-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-031-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-031-c03",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-031-c04",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-032-c01",
+      "nombre": "Turquesa oscuro",
+      "hex": "#1aa6a6"
+    },
+    {
+      "id": "zn-go-032-c02",
+      "nombre": "Vino",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-032-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-032-c04",
+      "nombre": "Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-033-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-033-c02",
+      "nombre": "Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-033-c03",
+      "nombre": "Azul elemental",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-033-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-033-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-033-c06",
+      "nombre": "Verde salvia",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-go-034-c01",
+      "nombre": "Caqui rayado",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-035-c01",
+      "nombre": "Azul pastel",
+      "hex": "#a9c8e8"
+    },
+    {
+      "id": "zn-go-035-c02",
+      "nombre": "Limón",
+      "hex": "#d7e34a"
+    },
+    {
+      "id": "zn-go-035-c03",
+      "nombre": "Mostaza",
+      "hex": "#c99a2e"
+    },
+    {
+      "id": "zn-go-035-c04",
+      "nombre": "Beige",
+      "hex": "#d8c8a8"
+    },
+    {
+      "id": "zn-go-035-c05",
+      "nombre": "Rosa pastel",
+      "hex": "#cfe0f0"
+    },
+    {
+      "id": "zn-go-035-c06",
+      "nombre": "Menta",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-035-c07",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-036-c01",
+      "nombre": "Verde/Blanco",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-go-036-c02",
+      "nombre": "Rojo/Blanco/Azul",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-037-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-037-c02",
+      "nombre": "Blanco/Turquesa",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c03",
+      "nombre": "Blanco/Vino",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c04",
+      "nombre": "Vino",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-037-c05",
+      "nombre": "Blanco/Amarillo",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c06",
+      "nombre": "Café claro",
+      "hex": "#5a3e2b"
+    },
+    {
+      "id": "zn-go-037-c07",
+      "nombre": "Blanco/Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c08",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-037-c09",
+      "nombre": "Gris claro",
+      "hex": "#c9cbcf"
+    },
+    {
+      "id": "zn-go-037-c10",
+      "nombre": "Blanco/Lavanda",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c11",
+      "nombre": "Mora azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-go-037-c12",
+      "nombre": "Blanco/Rosa pastel",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c13",
+      "nombre": "Rosa pastel",
+      "hex": "#cfe0f0"
+    },
+    {
+      "id": "zn-go-037-c14",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c15",
+      "nombre": "Blanco/Menta",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-037-c16",
+      "nombre": "Menta",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-038-c01",
+      "nombre": "Beige/Olivo",
+      "hex": "#d8c8a8"
+    },
+    {
+      "id": "zn-go-038-c02",
+      "nombre": "Camel/Negro",
+      "hex": "#b98a52"
+    },
+    {
+      "id": "zn-go-038-c03",
+      "nombre": "Gris jaspeado/Negro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-039-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-039-c02",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-040-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-040-c02",
+      "nombre": "Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-040-c03",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-040-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-040-c05",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-040-c06",
+      "nombre": "Menta",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-040-c07",
+      "nombre": "Lima",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-041-c01",
+      "nombre": "Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-041-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-041-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-041-c04",
+      "nombre": "Blanco/Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-041-c05",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-042-c01",
+      "nombre": "Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-042-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-042-c03",
+      "nombre": "Naranja neón",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-042-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-042-c05",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-042-c06",
+      "nombre": "Amarillo neón",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-go-042-c07",
+      "nombre": "Rosa neón",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-go-042-c08",
+      "nombre": "Gris oscuro",
+      "hex": "#4a4c50"
+    },
+    {
+      "id": "zn-go-043-c01",
+      "nombre": "Blanco (camuflajeada según encabezado)",
+      "hex": "#5f6b3a"
+    },
+    {
+      "id": "zn-go-044-c01",
+      "nombre": "Negro camuflaje",
+      "hex": "#5f6b3a"
+    },
+    {
+      "id": "zn-go-045-c01",
+      "nombre": "Azul turquesa deslavado",
+      "hex": "#1aa6a6"
+    },
+    {
+      "id": "zn-go-045-c02",
+      "nombre": "Mostaza deslavado/Gris oscuro",
+      "hex": "#c99a2e"
+    },
+    {
+      "id": "zn-go-046-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-047-c01",
+      "nombre": "Menta",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-048-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-049-c01",
+      "nombre": "Blanco/Rojo/Verde",
+      "hex": "#f7f7f5"
     }
   ],
   "tecnicas": [
@@ -20400,6 +20765,1282 @@ export default {
         "zn-go-030-c03": "img/productos/zain/zn-go-030-c03.webp",
         "zn-go-030-c04": "img/productos/zain/zn-go-030-c04.webp"
       }
+    },
+    {
+      "id": "zn-go-031",
+      "idPublico": "zn-go-031",
+      "sku": "ZN-GO-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra deportiva de visera curva con paneles",
+      "nombreComercial": "Gorra deportiva de visera curva con paneles",
+      "nombreFamilia": "Gorra deportiva de visera curva con paneles",
+      "nombreFamiliaComercial": "Gorra deportiva de visera curva con paneles",
+      "familia": "zain-proveedor-zn-go-031",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra deportiva de visera curva con paneles ventilados visibles.",
+      "especificaciones": "Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-031-c01",
+        "zn-go-031-c02",
+        "zn-go-031-c03",
+        "zn-go-031-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-032",
+      "idPublico": "zn-go-032",
+      "sku": "ZN-GO-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva",
+      "nombreComercial": "Gorra cerrada de visera curva",
+      "nombreFamilia": "Gorra cerrada de visera curva",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva",
+      "familia": "zain-proveedor-zn-go-032",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva.",
+      "especificaciones": "Algodón según abreviatura ALG, sin porcentaje. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-032-c01",
+        "zn-go-032-c02",
+        "zn-go-032-c03",
+        "zn-go-032-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-033",
+      "idPublico": "zn-go-033",
+      "sku": "ZN-GO-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva · acrílico",
+      "nombreComercial": "Gorra cerrada de visera curva · acrílico",
+      "nombreFamilia": "Gorra cerrada de visera curva · acrílico",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva · acrílico",
+      "familia": "zain-proveedor-zn-go-033",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva.",
+      "especificaciones": "Acrílico (sin porcentaje). Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-033-c01",
+        "zn-go-033-c02",
+        "zn-go-033-c03",
+        "zn-go-033-c04",
+        "zn-go-033-c05",
+        "zn-go-033-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-034",
+      "idPublico": "zn-go-034",
+      "sku": "ZN-GO-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva y textura",
+      "nombreComercial": "Gorra cerrada de visera curva y textura",
+      "nombreFamilia": "Gorra cerrada de visera curva y textura",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva y textura",
+      "familia": "zain-proveedor-zn-go-034",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva y textura de líneas finas visible.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-034-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-035",
+      "idPublico": "zn-go-035",
+      "sku": "ZN-GO-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva",
+      "nombreComercial": "Gorra cerrada de visera curva",
+      "nombreFamilia": "Gorra cerrada de visera curva",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva",
+      "familia": "zain-proveedor-zn-go-035",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva.",
+      "especificaciones": "Unitalla o ajustable. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-035-c01",
+        "zn-go-035-c02",
+        "zn-go-035-c03",
+        "zn-go-035-c04",
+        "zn-go-035-c05",
+        "zn-go-035-c06",
+        "zn-go-035-c07"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-036",
+      "idPublico": "zn-go-036",
+      "sku": "ZN-GO-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con malla contrastante",
+      "nombreComercial": "Gorra de visera curva con malla contrastante",
+      "nombreFamilia": "Gorra de visera curva con malla contrastante",
+      "nombreFamiliaComercial": "Gorra de visera curva con malla contrastante",
+      "familia": "zain-proveedor-zn-go-036",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con malla contrastante.",
+      "especificaciones": "Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-036-c01",
+        "zn-go-036-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-036-c01",
+        "zn-go-036-c02"
+      ]
+    },
+    {
+      "id": "zn-go-037",
+      "idPublico": "zn-go-037",
+      "sku": "ZN-GO-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con malla trasera",
+      "nombreComercial": "Gorra de visera curva con malla trasera",
+      "nombreFamilia": "Gorra de visera curva con malla trasera",
+      "nombreFamiliaComercial": "Gorra de visera curva con malla trasera",
+      "familia": "zain-proveedor-zn-go-037",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con malla trasera y textura acanalada.",
+      "especificaciones": "Pana y malla, según encabezado; sin porcentajes. Unitalla o ajustable. 16 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-037-c01",
+        "zn-go-037-c02",
+        "zn-go-037-c03",
+        "zn-go-037-c04",
+        "zn-go-037-c05",
+        "zn-go-037-c06",
+        "zn-go-037-c07",
+        "zn-go-037-c08",
+        "zn-go-037-c09",
+        "zn-go-037-c10",
+        "zn-go-037-c11",
+        "zn-go-037-c12",
+        "zn-go-037-c13",
+        "zn-go-037-c14",
+        "zn-go-037-c15",
+        "zn-go-037-c16"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-037-c02",
+        "zn-go-037-c03",
+        "zn-go-037-c05",
+        "zn-go-037-c07",
+        "zn-go-037-c10",
+        "zn-go-037-c12",
+        "zn-go-037-c15"
+      ]
+    },
+    {
+      "id": "zn-go-038",
+      "idPublico": "zn-go-038",
+      "sku": "ZN-GO-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva y malla trasera",
+      "nombreComercial": "Gorra de visera curva y malla trasera",
+      "nombreFamilia": "Gorra de visera curva y malla trasera",
+      "nombreFamiliaComercial": "Gorra de visera curva y malla trasera",
+      "familia": "zain-proveedor-zn-go-038",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva y malla trasera; tres combinaciones fotografiadas.",
+      "especificaciones": "Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-038-c01",
+        "zn-go-038-c02",
+        "zn-go-038-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-039",
+      "idPublico": "zn-go-039",
+      "sku": "ZN-GO-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada con visera plana",
+      "nombreComercial": "Gorra cerrada con visera plana",
+      "nombreFamilia": "Gorra cerrada con visera plana",
+      "nombreFamiliaComercial": "Gorra cerrada con visera plana",
+      "familia": "zain-proveedor-zn-go-039",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada con visera plana según encabezado.",
+      "especificaciones": "Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-039-c01",
+        "zn-go-039-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-040",
+      "idPublico": "zn-go-040",
+      "sku": "ZN-GO-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera plana",
+      "nombreComercial": "Gorra cerrada de visera plana",
+      "nombreFamilia": "Gorra cerrada de visera plana",
+      "nombreFamiliaComercial": "Gorra cerrada de visera plana",
+      "familia": "zain-proveedor-zn-go-040",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera plana.",
+      "especificaciones": "Unitalla o ajustable. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-040-c01",
+        "zn-go-040-c02",
+        "zn-go-040-c03",
+        "zn-go-040-c04",
+        "zn-go-040-c05",
+        "zn-go-040-c06",
+        "zn-go-040-c07"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-041",
+      "idPublico": "zn-go-041",
+      "sku": "ZN-GO-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera plana",
+      "nombreComercial": "Gorra cerrada de visera plana",
+      "nombreFamilia": "Gorra cerrada de visera plana",
+      "nombreFamiliaComercial": "Gorra cerrada de visera plana",
+      "familia": "zain-proveedor-zn-go-041",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera plana.",
+      "especificaciones": "Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-041-c01",
+        "zn-go-041-c02",
+        "zn-go-041-c03",
+        "zn-go-041-c04",
+        "zn-go-041-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-041-c04"
+      ]
+    },
+    {
+      "id": "zn-go-042",
+      "idPublico": "zn-go-042",
+      "sku": "ZN-GO-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con ventilación lateral",
+      "nombreComercial": "Gorra de visera curva con ventilación lateral",
+      "nombreFamilia": "Gorra de visera curva con ventilación lateral",
+      "nombreFamiliaComercial": "Gorra de visera curva con ventilación lateral",
+      "familia": "zain-proveedor-zn-go-042",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con ventilación lateral visible.",
+      "especificaciones": "Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-042-c01",
+        "zn-go-042-c02",
+        "zn-go-042-c03",
+        "zn-go-042-c04",
+        "zn-go-042-c05",
+        "zn-go-042-c06",
+        "zn-go-042-c07",
+        "zn-go-042-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-042-c06"
+      ]
+    },
+    {
+      "id": "zn-go-043",
+      "idPublico": "zn-go-043",
+      "sku": "ZN-GO-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva",
+      "nombreComercial": "Gorra cerrada de visera curva",
+      "nombreFamilia": "Gorra cerrada de visera curva",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva",
+      "familia": "zain-proveedor-zn-go-043",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-043-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-043-c01"
+      ]
+    },
+    {
+      "id": "zn-go-044",
+      "idPublico": "zn-go-044",
+      "sku": "ZN-GO-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva y patrón",
+      "nombreComercial": "Gorra cerrada de visera curva y patrón",
+      "nombreFamilia": "Gorra cerrada de visera curva y patrón",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva y patrón",
+      "familia": "zain-proveedor-zn-go-044",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva y patrón de camuflaje tonal visible.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-044-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-044-c01"
+      ]
+    },
+    {
+      "id": "zn-go-045",
+      "idPublico": "zn-go-045",
+      "sku": "ZN-GO-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra sin estructura",
+      "nombreComercial": "Gorra sin estructura",
+      "nombreFamilia": "Gorra sin estructura",
+      "nombreFamiliaComercial": "Gorra sin estructura",
+      "familia": "zain-proveedor-zn-go-045",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra sin estructura aparente, visera curva; muestras de acabado deslavado.",
+      "especificaciones": "Algodón según abreviatura ALG, sin porcentaje. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-045-c01",
+        "zn-go-045-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-046",
+      "idPublico": "zn-go-046",
+      "sku": "ZN-GO-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva",
+      "nombreComercial": "Gorra cerrada de visera curva",
+      "nombreFamilia": "Gorra cerrada de visera curva",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva",
+      "familia": "zain-proveedor-zn-go-046",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-046-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-047",
+      "idPublico": "zn-go-047",
+      "sku": "ZN-GO-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada con visera plana",
+      "nombreComercial": "Gorra cerrada con visera plana",
+      "nombreFamilia": "Gorra cerrada con visera plana",
+      "nombreFamiliaComercial": "Gorra cerrada con visera plana",
+      "familia": "zain-proveedor-zn-go-047",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada con visera plana o ligeramente curva en la foto.",
+      "especificaciones": "Algodón según abreviatura ALG, sin porcentaje. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-047-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-048",
+      "idPublico": "zn-go-048",
+      "sku": "ZN-GO-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Visera abierta de banda ancha con ajuste trasero",
+      "nombreComercial": "Visera abierta de banda ancha con ajuste trasero",
+      "nombreFamilia": "Visera abierta de banda ancha con ajuste trasero",
+      "nombreFamiliaComercial": "Visera abierta de banda ancha con ajuste trasero",
+      "familia": "zain-proveedor-zn-go-048",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Visera abierta de banda ancha con ajuste trasero visible.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-048-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-049",
+      "idPublico": "zn-go-049",
+      "sku": "ZN-GO-049",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de frente blanco · esponja",
+      "nombreComercial": "Gorra de frente blanco · esponja",
+      "nombreFamilia": "Gorra de frente blanco · esponja",
+      "nombreFamiliaComercial": "Gorra de frente blanco · esponja",
+      "familia": "zain-proveedor-zn-go-049",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de frente blanco, laterales rojos y visera verde.",
+      "especificaciones": "Esponja, según encabezado. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-049-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
     }
   ],
   "promocionales": [

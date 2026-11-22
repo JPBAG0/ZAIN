@@ -6,7 +6,8 @@ import Pub from '../js/config.js';
 import {normalizeChanges,resolveInternal} from '../server/catalogo-gestion.mjs';
 import {createHandler,validateOrder} from '../server/pedidos.mjs';
 // Catálogo mayoreo en Gestión (22-nov-2026): 98 prendas con render de Codex, ocultas en la página y «solo para cotizar».
-const solo=C.productos.filter(p=>p.soloCotizar),color=id=>C.colores.find(c=>c.id===id);
+// Las 98 del catálogo mayoreo; las de catálogos de proveedores (soloGestion) se prueban en catalogo-proveedores.
+const solo=C.productos.filter(p=>p.soloCotizar&&!p.soloGestion),color=id=>C.colores.find(c=>c.id===id);
 const archivo=r=>existsSync(new URL('../'+r,import.meta.url));
 const id='12345678-1234-4123-8123-123456789abc',token='a'.repeat(64),uid='87654321-4321-4321-8321-cba987654321';
 

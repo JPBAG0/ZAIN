@@ -90,7 +90,8 @@ async function abrir(id,pagina=null){
 }
 $('#provVisorCerrar').addEventListener('click',()=>$('#provVisor').close());
 // Para la ficha de cada prenda en Catálogo: sus catálogos del mismo proveedor («Player y Tees» = «Playerytees»).
-const mismoProveedor=(a,b)=>{const n=s=>clave(s).replace(/^proveedor /,'').replace(/\s+/g,'');return !!n(a)&&n(a)===n(b);};
+// «Dimeo · DKPS» es la marca DKPS que se compra con Dimeo: cuenta como Dimeo (22-nov-2026).
+const mismoProveedor=(a,b)=>{const n=s=>clave(String(s||'').split('·')[0]).replace(/^proveedor /,'').replace(/\s+/g,'');return !!n(a)&&n(a)===n(b);};
 window.ZAINProveedores={
  async catalogosDe(proveedor){await cargar();return archivos.filter(a=>a.tipo==='catalogo'&&mismoProveedor(a.proveedor,proveedor)).sort((a,b)=>a.titulo.localeCompare(b.titulo,'es'));},
  abrir:(id,pagina)=>abrir(id,pagina)

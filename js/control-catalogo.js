@@ -27,6 +27,10 @@ const compacto=s=>clave(s).replace(/[^a-z0-9]/g,'');
 const proveedorDe=p=>{const s=String(p.proveedor||'').replace(/^proveedor\s+/i,'').trim();return s?s[0].toLocaleUpperCase('es-MX')+s.slice(1):'';};
 const publico=p=>{const Z=window.ZAIN;return [...(Z.productos||[]),...(Z.productosHistoricos||[])].find(x=>x.sku===p.sku)||null;};
 const colorDe=id=>(window.ZAIN.colores||[]).find(c=>c.id===id)||null;
+// Las prendas de los catálogos de proveedores (soloGestion) no vienen en config.js: llegan con la sesión del equipo.
+const mezclarGestion=cat=>{const Z=window.ZAIN;if(!cat)return;const ya=new Set([...(Z.productos||[]),...(Z.productosHistoricos||[])].map(p=>p.sku));
+ const nuevas=[...(cat.productos||[]),...(cat.productosHistoricos||[])].filter(p=>p.soloGestion&&!ya.has(p.sku));if(!nuevas.length)return;
+ Z.productosHistoricos=[...(Z.productosHistoricos||[]),...nuevas];const cs=new Set((Z.colores||[]).map(c=>c.id));Z.colores=[...(Z.colores||[]),...(cat.colores||[]).filter(c=>!cs.has(c.id))];};
 const paginaDe=p=>Number(String(p.paginaProveedor||'').match(/\d+/)?.[0])||null;
 const cmp=(a,b)=>String(a||'').localeCompare(String(b||''),'es-MX',{numeric:true,sensitivity:'base'});
 const status=(s,error=false)=>{$('#estadoCatalogo').textContent=s;$('#estadoCatalogo').classList.toggle('error',error);};
@@ -96,7 +100,8 @@ function paint(){
  }).join('')||vacio;
 }
 async function load(message=''){
- const turn=epoch;status('Cargando prendas…');const [data]=await Promise.all([window.ZAINEquipo.call('catalogo-lista'),cargarCostos()]);if(turn!==epoch||$('#trabajo').hidden)return;
+ const turn=epoch;status('Cargando prendas…');const [data,vivo]=await Promise.all([window.ZAINEquipo.call('catalogo-lista'),window.ZAINEquipo.call('catalogo-publico').catch(()=>null),cargarCostos()]);if(turn!==epoch||$('#trabajo').hidden)return;
+ mezclarGestion(vivo?.catalogo);
  rows=data.productos.map(p=>{const r={...p,tecnicas:p.tecnicas||publico(p)?.tecnicas||['serigrafia']};r._busca=clave([r.nombre,r.sku,r.proveedor,proveedorDe(r),r.skuProveedor,r.categoria,r.silueta,PZ.grupoDe(r)].join(' '));r._codigo=compacto(r.skuProveedor)+' '+compacto(r.sku);return r;});
  techniques=data.opcionesTecnicas||techniques;allowed=data.editable;loaded=true;
  const prov=$('#proveedorCatalogo'),antes=prov.value;prov.innerHTML='<option value="">Todos</option>'+[...new Set(rows.map(proveedorDe).filter(Boolean))].sort(cmp).map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');prov.value=antes;if(prov.selectedIndex<0)prov.value='';
@@ -123,7 +128,9 @@ async function catalogosProveedor(p){
  const caja=$('#catFichaCatalogos'),pagina=paginaDe(p);caja.innerHTML='';
  if(!p.proveedor||!window.ZAINProveedores)return;
  try{
-  const lista=await window.ZAINProveedores.catalogosDe(p.proveedor);if(ficha?.id!==p.id)return;
+  const todos=await window.ZAINProveedores.catalogosDe(p.proveedor);if(ficha?.id!==p.id)return;
+  // Con «Dimeo · DKPS» se abre el catálogo de esa marca, no los once de Dimeo.
+  const marca=clave(String(p.proveedor).split('·')[1]||''),deMarca=marca?todos.filter(a=>clave(a.titulo).includes(marca)):[],lista=deMarca.length?deMarca:todos;
   caja.innerHTML=lista.slice(0,4).map(a=>'<button type="button" class="btn btn--linea cat-ficha__catalogo" data-catalogo="'+esc(a.id)+'">'+esc(lista.length>1?a.titulo:'Ver en su catálogo')+(pagina?' · p. '+pagina:'')+'</button>').join('');
  }catch{caja.innerHTML='';}
 }
@@ -140,8 +147,8 @@ function abrirFicha(id,colorInicial=null){
  $('#catFichaDesc').textContent=p.descripcion||'';
  costoFicha(p);parecidasFicha(p);
  $('#catFichaColores').innerHTML=ids.map(colorDe).filter(Boolean).map(c=>'<button type="button" data-color="'+esc(c.id)+'" style="--c:'+esc(c.hex)+';--c2:'+esc(c.hex2||c.hex)+'" aria-label="'+esc(c.nombre)+'" title="'+esc(c.nombre)+'" aria-pressed="false"'+(aprox.includes(c.id)?' class="aprox"':'')+'></button>').join('');
- const web=$('#catFichaWeb');web.checked=p.activo;web.disabled=!allowed||(p.creadoGestion&&!p.renderListo);
- $('#catFichaEstado').textContent=p.activo?'Los clientes la ven en la página.':p.soloCotizar?'No sale en la página: solo la usa el equipo para cotizar.':'Oculta: no sale en la página ni en el cotizador.';
+ const web=$('#catFichaWeb');web.checked=p.activo;web.disabled=!allowed||(p.creadoGestion&&!p.renderListo)||p.soloGestion;
+ $('#catFichaEstado').textContent=p.activo?'Los clientes la ven en la página.':p.soloGestion?'Del catálogo del proveedor, solo para Gestión. Para mostrarla en la página primero hay que pasarla al catálogo de la página.':p.soloCotizar?'No sale en la página: solo la usa el equipo para cotizar.':'Oculta: no sale en la página ni en el cotizador.';
  const cotizable=p.activo||p.soloCotizar;$('#catFichaCotizar').disabled=!cotizable;$('#catFichaCotizar').title=cotizable?'':'Muéstrala en la página para poder cotizarla.';
  $('#catFichaEditar').disabled=!allowed;
  mostrarColor(p,colorInicial&&ids.includes(colorInicial)?colorInicial:null);
@@ -172,7 +179,7 @@ async function cambiarWeb(p,activo){
  web.disabled=true;$('#catFichaEstado').textContent='Guardando…';
  try{await window.ZAINEquipo.call('catalogo-guardar',{id:p.id,version:p.version,cambios:{activo}});if(turn===epoch)await load(activo?'Prenda visible en la página web.':'Prenda oculta en la página web. Se conserva el modelo.');}
  catch(er){if(turn===epoch){web.checked=p.activo;$('#catFichaEstado').textContent=er.message;if(er.auth)error(er);}}
- finally{if(turn===epoch&&ficha)web.disabled=!allowed;}
+ finally{if(turn===epoch&&ficha)web.disabled=!allowed||!!ficha.soloGestion;}
 }
 async function verCostos(p){
  vista('costos');

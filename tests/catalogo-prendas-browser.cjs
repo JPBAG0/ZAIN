@@ -12,6 +12,9 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
  const conFoto=solo.find(p=>p.fotosColor&&Object.keys(p.fotosColor).length&&p.colores.length>Object.keys(p.fotosColor).length);
  const fila=(p,i)=>{const e=reales.get(p.id);return {id:p.id,sku:p.sku,skuProveedor:e?.sku_proveedor??(p.soloCotizar?'PR'+(5000+i):''),proveedor:e?.proveedor??(p.soloCotizar?(i%2?'Proveedor ficticio':'Proveedor gorras premium'):''),paginaProveedor:e?.pagina_proveedor??(p.soloCotizar?'p. '+(10+i%20):''),soloCotizar:!!p.soloCotizar,silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:'',disponibilidad:'',creadoGestion:false,renderListo:true,fotoRender:p.foto,fotoModelo:'',version:0};};
  const filas=todos.map(fila),objetivo=filas.find(r=>r.sku===conFoto.sku);
+ // Prenda del catálogo de un proveedor (soloGestion): no viene en config.js; llega con la sesión del equipo en catalogo-publico.
+ const baseG=solo.find(p=>p.categoria==='Gorras'),gestion={...structuredClone(baseG),id:'zn-go-901',sku:'ZN-GO-901',nombre:'Gorra del catálogo del proveedor',foto:'',fotosColor:{},coloresSinRender:[],soloGestion:true,colores:['zn-go-901-c01'],activo:false};
+ filas.push({...fila(gestion,999),fotoRender:'',soloGestion:true,proveedor:'Dimeo · DKPS',skuProveedor:'PRO-120',paginaProveedor:'Catálogo DKPS p. 12'});
  // Costos ficticios para comparar parecidas: tres playeras básicas de distintos proveedores con tramos distintos.
  const banda=(tallas,costo,desdePiezas,hastaPiezas)=>({tallas,colores:[],costo,...(desdePiezas?{desdePiezas,hastaPiezas}:{})});
  const ficticios={'ZN-PL-012':[banda(['S','M','L','XL'],7622,1,11),banda(['S','M','L','XL'],5326,12,35),banda(['S','M','L','XL'],4806,36,null),banda(['2XL'],9471,1,11),banda(['2XL'],6781,12,null)],
@@ -30,7 +33,7 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
    else if(op==='lista')d={pedidos:[],siguiente:false,equipo:{nombre:'Equipo ficticio'}};
    else if(op==='resumen')d={resumen:{activos:0}};
    else if(op==='catalogo-lista')d={productos:filas,editable:true,opcionesTecnicas:C.tecnicas.map(({id,nombre})=>({id,nombre})),categorias:C.categoriasCatalogo,altas:false,plantillas:[]};
-   else if(op==='catalogo-publico'){const {tecnicas,...publico}=C;d={catalogo:publico};}
+   else if(op==='catalogo-publico'){const {tecnicas,...publico}=C;d={catalogo:{...publico,productosHistoricos:[...publico.productosHistoricos,gestion],colores:[...publico.colores,{id:'zn-go-901-c01',nombre:'Negro',hex:'#111111'}]}};}
    else if(op==='precios-config')d={config:{version:1,datos:cfg}};
    else if(op==='proveedores-archivos')d={archivos:[archivoCat]};
    else if(op==='proveedor-archivo-abrir')d={url:'https://fixture.invalid/storage/v1/object/sign/zain-proveedores/x.pdf?token=t',mime:'application/pdf',titulo:archivoCat.titulo,proveedor:archivoCat.proveedor};
@@ -54,7 +57,7 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   await page.waitForFunction(()=>[...document.querySelectorAll('#listaCatalogo .cat-card img')].slice(0,4).every(i=>i.complete&&i.naturalWidth>0));
   assert.match(await page.locator('#estadoCatalogo').innerText(),/solo para cotizar/);
   assert.equal(await page.locator('#listaCatalogo .cat-card').count(),filas.length,'todas las prendas');
-  assert.match(await page.locator('#usoCatalogo [data-uso="cotizar"]').innerText(),new RegExp('Solo cotizar\\s*'+solo.length));
+  assert.match(await page.locator('#usoCatalogo [data-uso="cotizar"]').innerText(),new RegExp('Solo cotizar\\s*'+filas.filter(r=>r.soloCotizar).length));
   await ancho('lista');
   assert.equal(await page.locator('#provPanel').evaluate(d=>d.open),false,'el panel de proveedores empieza cerrado');
   if(capturas){await page.screenshot({path:path.join(capturas,'catalogo-prendas-'+width+'.png')});await page.locator('#listaCatalogo .cat-card').nth(width===390?0:2).scrollIntoViewIfNeeded();await page.waitForTimeout(400);await page.screenshot({path:path.join(capturas,'catalogo-tarjetas-'+width+'.png')});}
@@ -99,6 +102,17 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   assert.match(await page.locator('#catFichaRanking').innerText(),/esta es la más barata/);
   assert.match(await page.locator('#catFichaTramos').innerText(),/Cualquier cantidad[\s\S]*\$50\.92[\s\S]*hasta \$62\.69 según la talla/);
   await page.locator('#catFichaCerrar').click();
+  // La prenda del catálogo del proveedor: sale en Prendas sin render, con su código, y no se puede mostrar en la página.
+  await page.locator('#categoriasCatalogo [data-categoria=""]').click();await page.locator('#buscarCatalogo').fill('pro-120');
+  const tarjetaG=page.locator('#listaCatalogo [data-ficha="zn-go-901"]');await tarjetaG.waitFor();
+  assert.match(await tarjetaG.innerText(),/PRO-120[\s\S]*DIMEO · DKPS|PRO-120[\s\S]*Dimeo · DKPS/i);
+  await tarjetaG.click();await page.locator('#catFicha[open]').waitFor();
+  assert.match(await page.locator('#catFichaImg').innerText(),/Sin render/);
+  assert.equal(await page.locator('#catFichaWeb').isDisabled(),true,'no se puede mostrar en la página');
+  assert.match(await page.locator('#catFichaEstado').innerText(),/solo para Gestión/);
+  assert.match(await page.locator('#catFichaColores').innerHTML(),/zn-go-901-c01/);
+  if(capturas)await page.screenshot({path:path.join(capturas,'catalogo-proveedor-'+width+'.png')});
+  await page.locator('#catFichaCerrar').click();await page.locator('#buscarCatalogo').fill('');
   await page.locator('#categoriasCatalogo [data-categoria=""]').click();
   // Búsqueda por código del proveedor (sin importar espacios ni diagonales).
   await page.locator('#buscarCatalogo').fill(objetivo.skuProveedor.replace(/[\/\s]/g,' ').split(' ')[0].toLowerCase());

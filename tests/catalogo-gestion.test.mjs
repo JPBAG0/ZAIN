@@ -33,6 +33,10 @@ function setup({editions=[],member=true,existing=null,conflict=false}={}){
  const request=(op,b,auth=false,query='')=>handler(new Request('https://zain.test/api/pedidos?op='+op+query,{method:b?'POST':'GET',headers:{Origin:'https://zain.test',...(b?{'Content-Type':'application/json'}:{}),...(auth?{Authorization:'Bearer prueba'}:{})},body:b?JSON.stringify(b):undefined}));
  return {handler,request,calls,saved,editions};
 }
+test('catalogo-publico con la sesión del equipo responde igual que sin sesión mientras no haya prendas soloGestion',async()=>{
+ const s=setup();const con=await s.request('catalogo-publico',null,true),sin=await s.request('catalogo-publico');
+ assert.equal(con.status,200);assert.equal((await con.json()).catalogo.productos.length,(await sin.json()).catalogo.productos.length);
+});
 test('edición restringida: render, SKU ZAIN, tallas y colores no son modificables',()=>{
  for(const key of ['foto','fotoRender','sku','codigoFabricante','colores','tallas','__proto__'])assert.throws(()=>normalizeChanges(JSON.parse('{"'+key+'":"x"}')),/protegido/);
  assert.deepEqual(normalizeChanges({activo:false,nombre:'  Nueva playera  ',sku_proveedor:'C0200'}),{activo:false,nombre:'Nueva playera',sku_proveedor:'C0200'});
@@ -72,7 +76,7 @@ test('lectura pública no necesita login; guardar y subir foto exigen equipo',as
  assert.equal((await setup({member:false}).request('catalogo-lista',null,true)).status,403);
 });
 test('panel contiene ambos SKU y conflictos no sobrescriben cambios',async()=>{
- const s=setup();const list=(await(await s.request('catalogo-lista',null,true)).json()).productos;assert.equal(list.length,171);assert.equal(list.filter(p=>p.soloCotizar&&!p.activo).length,98);assert.ok(list.some(p=>p.skuProveedor==='C0200'&&p.proveedor==='Yazbek'));
+ const s=setup();const list=(await(await s.request('catalogo-lista',null,true)).json()).productos;assert.equal(list.length,C.productos.length);assert.equal(list.filter(p=>p.soloCotizar&&!p.activo).length,C.productos.filter(p=>p.soloCotizar).length);assert.equal(list.filter(p=>p.soloGestion).length,C.productos.filter(p=>p.soloGestion).length);assert.ok(list.some(p=>p.skuProveedor==='C0200'&&p.proveedor==='Yazbek'));
  assert.equal((await s.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{fotoRender:'x'}},true)).status,400);
  const c=setup({conflict:true});assert.equal((await c.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{activo:false}},true)).status,409);
  assert.equal((await s.request('catalogo-guardar',{id:'bolsa-expo',version:0,cambios:{activo:false}},true)).status,200);

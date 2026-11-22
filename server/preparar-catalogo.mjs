@@ -3,6 +3,10 @@ import {writeFile,mkdir,copyFile} from 'node:fs/promises';
 import C from './config-interno.cjs';
 if(C.productos.some(p=>!/^ZN-[A-Z]{2}-\d{3}$/.test(p.sku)) || new Set(C.productos.map(p=>p.sku)).size!==C.productos.length)throw Error('Asignar SKU únicos y persistentes antes de generar.');
 const copy=structuredClone(C);
+// Prendas de los catálogos de proveedores (soloGestion, 22-nov-2026): solo para Gestión; ni ellas ni sus colores van a la página.
+const coloresGestion=new Set(copy.productos.filter(p=>p.soloGestion).flatMap(p=>p.colores));
+copy.productos=copy.productos.filter(p=>!p.soloGestion);
+{const usados=new Set(copy.productos.flatMap(p=>p.colores));copy.colores=copy.colores.filter(c=>usados.has(c.id)||!coloresGestion.has(c.id));}
 const legacyHash=s=>{let h=2166136261;for(const c of s)h=Math.imul(h^c.charCodeAt(0),16777619);return (h>>>0).toString(16);};
 const colorIDs=new Map(C.colores.map(c=>[c.id,c.idPublico||c.id]));
 const families=new Map();let count=0;
