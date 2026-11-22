@@ -80,15 +80,19 @@ function efectoEn(m,k){
  if(m.tipo==='ingreso')return m.persona===k?n:0;
  return m.persona===k?-n:0;
 }
-// Lo que muestra cada renglón: con una cuenta elegida, su entrada o salida; en «Todas», el efecto en las cajas.
-const montoDe=m=>cuenta?efectoEn(m,cuenta):filtro==='reparto'?Number(m.importe):Number(m.efecto_caja)||0;
+// Lo que muestra cada renglón: con una cuenta elegida, su entrada o salida. En «Todas» (JP, 21-nov-2026), lo que suma o
+// resta al negocio: un cobro suma y un gasto resta aunque lo haya recibido o pagado un socio de su bolsa (antes salían en
+// gris porque no tocaban ninguna caja). Transferencias y reembolsos solo mueven dinero entre cuentas: no suman ni restan.
+// Es el efecto en las cajas menos lo que el negocio le debe a los socios (efecto_socio > 0 = ZAIN le debe).
+const montoDe=m=>cuenta?efectoEn(m,cuenta):filtro==='reparto'?Number(m.importe):(Number(m.efecto_caja)||0)-(Number(m.efecto_socio)||0);
+const soloMueve=m=>m.tipo==='reembolso'||m.origen==='caja'&&m.tipo!=='reparto';
 const enFiltro=m=>filtro==='todo'?true:filtro?tipoDe(m)===filtro||(filtro==='gasto'&&m.tipo==='reembolso'):tipoDe(m)!=='reparto';
 const filtrados=()=>datos.libro.filter(m=>enFiltro(m)&&(!cuenta||efectoEn(m,cuenta)!==0));
 function totales(){
  const lista=filtrados(),suma=l=>l.reduce((a,m)=>a+montoDe(m),0),entra=lista.reduce((a,m)=>a+Math.max(0,montoDe(m)),0),sale=lista.reduce((a,m)=>a+Math.min(0,montoDe(m)),0);
  const sel=lista.filter(m=>marcados.has(m.id)),todos=lista.length>0&&sel.length===lista.length;
  $('#cajaTotales').innerHTML=lista.length?`<label class="fin-libro-todos"><input type="checkbox" data-marcar-todos${todos?' checked':''}> Seleccionar todos</label>`+
-  `<div><small>${filtro==='reparto'?'Repartos':'Total'}${cuenta?' · '+esc(personas[cuenta]):filtro==='reparto'?'':' en cajas (ZAIN y oficinas)'}${filtro==='todo'?' · con repartos':filtro?'':' · sin repartos'} · ${lista.length} ${lista.length===1?'movimiento':'movimientos'}</small><strong class="num">${esc(firmado(suma(lista)))}</strong><span>Entradas ${esc(pesos(entra))} · Salidas ${esc(pesos(-sale))}</span></div>`+
+  `<div><small>${filtro==='reparto'?'Repartos':cuenta?'Total · '+esc(personas[cuenta]):'Resultado del negocio (cobros menos gastos)'}${filtro==='todo'?' · con repartos':filtro?'':' · sin repartos'} · ${lista.length} ${lista.length===1?'movimiento':'movimientos'}</small><strong class="num">${esc(firmado(suma(lista)))}</strong><span>Entradas ${esc(pesos(entra))} · Salidas ${esc(pesos(-sale))}</span></div>`+
   `<div class="${sel.length?'':'fin-libro-sinsel'}"><small>Seleccionados · ${sel.length}</small><strong class="num">${esc(firmado(suma(sel)))}</strong>${sel.length?'<button type="button" class="btn-texto" data-quitar-marcas>Quitar selección</button>':'<span>Marca la casilla de cada movimiento</span>'}</div>`:'';
 }
 const claseDe=m=>m.origen==='pago'?'cobro':m.tipo;
@@ -100,12 +104,12 @@ function libro(){
  totales();
 }
 function fila(m){
- const ec=Number(m.efecto_caja),es=Number(m.efecto_socio),quien=personas[m.persona]||'';
+ const ec=Number(m.efecto_caja),es=Number(m.efecto_socio),quien=personas[m.persona]||'',monto=montoDe(m);
  const titulo=m.origen==='pago'?'Cobro':m.origen==='caja'?(m.tipo==='reparto'?'Reparto a '+personas[m.destino]:(personas[m.origen_persona]||'')+' → '+(personas[m.destino]||'')):m.tipo==='reembolso'?'Reembolso a '+quien:m.tipo==='ingreso'?'Ingreso':'Gasto';
- const detalle=[m.folio?esc(m.folio)+(m.en_papelera?' (papelera)':''):m.origen==='general'?'General':'',m.origen==='pago'?'Recibió '+quien:m.origen==='pedido'||m.origen==='general'?(m.tipo==='gasto'?'Pagó ':m.tipo==='ingreso'?'Recibió ':'')+(m.tipo==='reembolso'?'':quien):'',m.origen!=='caja'&&!ec&&es?(es>0?'ZAIN le debe a '+quien+' '+pesos(es):quien+' tiene '+pesos(-es)+' del negocio'):''].filter(Boolean).join(' · ');
+ const detalle=[m.folio?esc(m.folio)+(m.en_papelera?' (papelera)':''):m.origen==='general'?'General':'',m.origen==='pago'?'Recibió '+quien:m.origen==='pedido'||m.origen==='general'?(m.tipo==='gasto'?'Pagó ':m.tipo==='ingreso'?'Recibió ':'')+(m.tipo==='reembolso'?'':quien):'',m.origen!=='caja'&&!ec&&es?(es>0?'ZAIN le debe a '+quien+' '+pesos(es):quien+' tiene '+pesos(-es)+' del negocio'):'',!cuenta&&filtro!=='reparto'&&!monto&&soloMueve(m)?'Solo mueve dinero entre cuentas: no suma ni resta':''].filter(Boolean).join(' · ');
  const acciones=porBorrar===m.id?`<span class="fin-confirmar">¿Borrar? <button type="button" class="btn-texto fin-borrar" data-borrar-si="${esc(m.id)}">Sí, borrar</button><button type="button" class="btn-texto" data-borrar-no>No</button></span>`:`${m.comprobante?`<button type="button" class="btn-texto" data-ver-comprobante="${esc(m.id)}">Ver comprobante</button>`:''}<button type="button" class="btn-texto" data-editar="${esc(m.id)}">Editar</button><button type="button" class="btn-texto fin-borrar" data-borrar="${esc(m.id)}">Borrar</button>`;
- const marca=marcados.has(m.id),monto=montoDe(m);
- return `<li class="fin-libro-fila${editando?.id===m.id?' fin-libro-fila--editando':''}${marca?' fin-libro-fila--marcada':''}"><input type="checkbox" class="fin-libro-marca" data-marcar="${esc(m.id)}"${marca?' checked':''} aria-label="Seleccionar ${esc(titulo)} del ${esc(fechaCorta(m.fecha))}"><span class="fin-libro-fecha">${esc(fechaCorta(m.fecha))}</span><div><b>${esc(titulo)}</b><p>${esc(m.concepto)}</p>${detalle?`<p class="fin-libro-meta">${detalle}</p>`:''}<div class="gastos-acciones">${acciones}</div></div><strong class="${monto>0?'fin-ingreso':monto<0?'fin-egreso':'fin-neutro'}" title="${cuenta?'Entrada o salida de '+esc(personas[cuenta]):'Efecto en las cajas'}">${monto?esc(firmado(monto)):esc(pesos(Number(m.importe)))}</strong></li>`;
+ const marca=marcados.has(m.id);
+ return `<li class="fin-libro-fila${editando?.id===m.id?' fin-libro-fila--editando':''}${marca?' fin-libro-fila--marcada':''}"><input type="checkbox" class="fin-libro-marca" data-marcar="${esc(m.id)}"${marca?' checked':''} aria-label="Seleccionar ${esc(titulo)} del ${esc(fechaCorta(m.fecha))}"><span class="fin-libro-fecha">${esc(fechaCorta(m.fecha))}</span><div><b>${esc(titulo)}</b><p>${esc(m.concepto)}</p>${detalle?`<p class="fin-libro-meta">${detalle}</p>`:''}<div class="gastos-acciones">${acciones}</div></div><strong class="${monto>0?'fin-ingreso':monto<0?'fin-egreso':'fin-neutro'}" title="${cuenta?'Entrada o salida de '+esc(personas[cuenta]):'Lo que suma o resta al negocio'}">${monto?esc(firmado(monto)):esc(pesos(Number(m.importe)))}</strong></li>`;
 }
 const fechaCorta=f=>new Date(f+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short'});
 const opciones=(lista,v)=>lista.map(([k,t])=>`<option value="${esc(k)}"${k===v?' selected':''}>${esc(t)}</option>`).join('');

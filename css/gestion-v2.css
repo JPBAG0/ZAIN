@@ -202,3 +202,9 @@
 
 /* «+ Cotizar» junto a Actualizar (11-nov-2026) */
 .control__tituloacciones{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+/* Pedido cerrado (21-nov-2026): verde claro para distinguirlo de un vistazo; «Por cerrar» en los entregados sin cierre. */
+.control__estadochip--cerrado{color:#0f6b3c;background:#d3f3df;box-shadow:inset 0 0 0 1px #9edcb5;font-weight:700}
+.control__estadochip--cerrado:before{display:none}
+.control__estadochip--porcerrar{color:#8a5a00;background:#fff4d6;box-shadow:inset 0 0 0 1px #f0d48a}
+.pedido-card__chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+.pedido-card--cerrado{background:#f3fbf6;box-shadow:inset 4px 0 0 #3fb26f}
