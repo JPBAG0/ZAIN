@@ -12,7 +12,12 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
  const conFoto=solo.find(p=>p.fotosColor&&Object.keys(p.fotosColor).length&&p.colores.length>Object.keys(p.fotosColor).length);
  const fila=(p,i)=>{const e=reales.get(p.id);return {id:p.id,sku:p.sku,skuProveedor:e?.sku_proveedor??(p.soloCotizar?'PR'+(5000+i):''),proveedor:e?.proveedor??(p.soloCotizar?(i%2?'Proveedor ficticio':'Proveedor gorras premium'):''),paginaProveedor:e?.pagina_proveedor??(p.soloCotizar?'p. '+(10+i%20):''),soloCotizar:!!p.soloCotizar,silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:'',disponibilidad:'',creadoGestion:false,renderListo:true,fotoRender:p.foto,fotoModelo:'',version:0};};
  const filas=todos.map(fila),objetivo=filas.find(r=>r.sku===conFoto.sku);
- const cfg={...core.inicial(),activo:true,prendas:todos.filter(x=>x.sku).map(x=>({sku:x.sku,prenda:x.soloCotizar?null:10000,otros:0})),rangos:[{desde:1,hasta:null,margen:3000}]};
+ // Costos ficticios para comparar parecidas: tres playeras básicas de distintos proveedores con tramos distintos.
+ const banda=(tallas,costo,desdePiezas,hastaPiezas)=>({tallas,colores:[],costo,...(desdePiezas?{desdePiezas,hastaPiezas}:{})});
+ const ficticios={'ZN-PL-012':[banda(['S','M','L','XL'],7622,1,11),banda(['S','M','L','XL'],5326,12,35),banda(['S','M','L','XL'],4806,36,null),banda(['2XL'],9471,1,11),banda(['2XL'],6781,12,null)],
+  'ZN-PL-025':[banda(['S','M','L','XL'],5092),banda(['2XL'],6269)],'ZN-PL-013':[banda(['S','M','L','XL'],10990,1,11),banda(['S','M','L','XL'],6923,12,null)]};
+ const cfg={...core.inicial(),activo:true,prendas:todos.filter(x=>x.sku).map(x=>ficticios[x.sku]?{sku:x.sku,prenda:null,otros:0,bandas:ficticios[x.sku]}:{sku:x.sku,prenda:x.soloCotizar?null:10000,otros:0}),rangos:[{desde:1,hasta:null,margen:3000}]};
+ const porSku=s=>filas.find(r=>r.sku===s);
  const pdf=Buffer.from('%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 200 200]>>endobj\ntrailer<</Root 1 0 R>>\n%%EOF\n');
  const archivoCat={id:'88888888-8888-4888-8888-000000000001',proveedor:objetivo.proveedor.replace(/^Proveedor /,''),tipo:'catalogo',titulo:'Catálogo 2026',objeto:'x.pdf',mime:'application/pdf',bytes:1000,nota:'',version:1};
  await page.addInitScript(s=>sessionStorage.setItem('zain-equipo',JSON.stringify(s)),{access_token:'ficticio',refresh_token:'renovacion-ficticia',expires_at:Math.floor(Date.now()/1000)+3600,token_type:'bearer',user:{id:uid,email:'equipo@example.test'}});
@@ -60,6 +65,36 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   const gorras=filas.filter(r=>r.soloCotizar&&r.categoria==='Gorras').length;assert.equal(await page.locator('#listaCatalogo .cat-card').count(),gorras);
   if(capturas&&width===390)await page.screenshot({path:path.join(capturas,'catalogo-gorras-'+width+'.png')});
   await page.locator('#categoriasCatalogo [data-categoria=""]').click();await page.locator('#usoCatalogo [data-uso=""]').click();
+  // Parecidas juntas: las playeras básicas de todos los proveedores, la más barata primero para la cantidad elegida.
+  await page.locator('#ordenCatalogo').selectOption('parecidas');await page.locator('#piezasCatalogo').selectOption('50');
+  await page.locator('#categoriasCatalogo [data-categoria="Playeras"]').click();
+  const grupo=page.locator('.cat-grupo').filter({has:page.locator('h3',{hasText:/^Playera básica de algodón$/})});
+  await grupo.waitFor();
+  const orden=async()=>grupo.locator('.cat-card').evaluateAll(b=>b.map(x=>x.dataset.ficha));
+  assert.equal((await orden())[0],porSku('ZN-PL-012').id,'a 50 piezas la más barata es la de tramos por volumen');
+  assert.equal(await grupo.locator('.cat-card').first().locator('.cat-card__costo').innerText(),'$48.06');
+  assert.equal(await grupo.locator('.cat-card__barata').count(),1);assert.match(await grupo.locator('.cat-card').first().innerText(),/Más barata/);
+  assert.match(await grupo.locator('.cat-grupo__cab p').innerText(),/de \$48\.06 a \$100\.00/);
+  assert.equal(await grupo.locator('[data-ficha="'+porSku('ZN-PL-014').id+'"] .cat-card__costo').innerText(),'Sin costo');
+  assert.match(await page.locator('#resultadoCatalogo').innerText(),/costo por pieza para 50 piezas/);
+  await page.locator('#piezasCatalogo').selectOption('12');
+  assert.equal((await orden())[0],porSku('ZN-PL-025').id,'a 12 piezas la más barata es la de precio único');
+  await ancho('parecidas');
+  if(capturas){await grupo.scrollIntoViewIfNeeded();await page.waitForTimeout(400);await page.screenshot({path:path.join(capturas,'catalogo-parecidas-'+width+'.png')});}
+  // La ficha compara contra las parecidas y deja saltar a la más barata.
+  await grupo.locator('[data-ficha="'+porSku('ZN-PL-013').id+'"]').click();await page.locator('#catFicha[open]').waitFor();
+  await page.locator('#catFichaParecidas:not([hidden])').waitFor();
+  assert.match(await page.locator('#catFichaRanking').innerText(),/costo para 12 piezas · 2 más baratas que esta/);
+  assert.match(await page.locator('#catFichaLista [data-par="'+porSku('ZN-PL-025').id+'"]').innerText(),/\$50\.92[\s\S]*\$18\.31 menos/);
+  assert.match(await page.locator('#catFichaTramos li.on').innerText(),/12 piezas o más[\s\S]*\$69\.23/);
+  await ancho('ficha con parecidas');
+  if(capturas){await page.locator('#catFichaParecidas').scrollIntoViewIfNeeded();await page.waitForTimeout(300);await page.screenshot({path:path.join(capturas,'catalogo-ficha-parecidas-'+width+'.png')});}
+  await page.locator('#catFichaLista [data-par="'+porSku('ZN-PL-025').id+'"]').click();
+  await page.waitForFunction(n=>document.querySelector('#catFichaNombre').textContent===n,porSku('ZN-PL-025').nombre);
+  assert.match(await page.locator('#catFichaRanking').innerText(),/esta es la más barata/);
+  assert.match(await page.locator('#catFichaTramos').innerText(),/Cualquier cantidad[\s\S]*\$50\.92[\s\S]*hasta \$62\.69 según la talla/);
+  await page.locator('#catFichaCerrar').click();
+  await page.locator('#categoriasCatalogo [data-categoria=""]').click();
   // Búsqueda por código del proveedor (sin importar espacios ni diagonales).
   await page.locator('#buscarCatalogo').fill(objetivo.skuProveedor.replace(/[\/\s]/g,' ').split(' ')[0].toLowerCase());
   assert.ok(await page.locator('#listaCatalogo [data-ficha="'+objetivo.id+'"]').count()===1,'encuentra la prenda por su código');

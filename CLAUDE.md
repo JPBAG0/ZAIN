@@ -1,3 +1,17 @@
+## Publicado: costos del catálogo mayoreo y «Parecidas juntas» en Prendas — 22-nov-2026 (Claude)
+
+JP (22-nov): «Sí, agrega los costos, y me gustaría que exista una opción de ordenar y que sean como prendas casi iguales pero de diferente proveedor para ver precio y qué le ofrezco al cliente… si me pide playera, filtro a playera y que me salgan las de todos los proveedores».
+- **Costos (base, no Git):** 83 de las 98 con costo por talla y cantidad, con IVA, desde las listas de los proveedores (`herramientas-claude/costos_98.py` en la carpeta de renders → `alta-gestion/costos-98.json` → `cargar-costos.sql`, que guarda con `zain_precios_guardar` solo si la configuración sigue en la v28). Configuración de costos v28 → **v29** (46 → 129 prendas); respaldo de la v28 en `Proyectos-IA/Paginas/ZAIN/Archivo/2026-11-22-costos-catalogo-mayoreo/`.
+  - Reglas: color más caro; caballero/dama del mismo modelo, el más caro por talla; si la prenda junta modelos distintos, el costo es del primero (el de la foto) y la fuente dice los otros; XS/2XS/3XS/YXS sin precio impreso = el de S (como pidió JP para el chaleco el 20-oct); tallas grandes sin precio quedan sin costo (el cotizador lo pide a mano).
+  - Cada prenda guarda en «fuente» la lista, la página y los tramos de cantidad de su proveedor (las listas sin IVA se multiplican por 1.16). Los proveedores y sus códigos no van en Git: el detalle está en `costos-98.json` (Dropbox).
+  - **Sin costo, 15** que el distribuidor no vende; el cotizador pide el costo a mano.
+- **Prendas:** cada tarjeta muestra el costo por pieza (talla más barata) para la cantidad de «Costo para» (1–500, se recuerda en el navegador). Ordenar: «Parecidas juntas, más barata primero» (nuevo, por omisión), «Costo: más barata/más cara primero» y los de antes. En «Parecidas juntas» cada grupo dice opciones, proveedores y rango de costo, y la más barata lleva insignia.
+  - Los grupos están en `js/catalogo-parecidas.js` (SKU → grupo; para mover una prenda se cambia de lista). Una prenda nueva sin grupo cae en su categoría. La búsqueda también encuentra por grupo.
+  - **Ficha:** «Costo por pieza» por tramo (marca el de la cantidad elegida) y «Parecidas · grupo»: todas las del grupo de la más barata a la más cara, con la diferencia contra esta; al tocar una se abre su ficha.
+  - Al volver de la vista Costos se releen los costos.
+- ZN-CH-009 y ZN-CH-010 (chalecos del catálogo mayoreo) pasan a la categoría **Chalecos** (siguen ocultas en la página).
+- **Pruebas:** 400/400 (`tests/catalogo-parecidas.test.mjs` nuevo) y navegador catálogo-prendas (con parecidas a 390/1280), proveedores, clientes, cotización-selecciones y conversión.
+
 ## Publicado: catálogo mayoreo en Gestión y vista «Prendas» — 22-nov-2026 (Claude)
 
 **Publicado el 22-nov-2026** con el «ya las puedes subir» de JP: SQL `catalogo-pagina-proveedor.sql`, Edge `zain-pedidos`, `cargar-ediciones.sql` (98 prendas con proveedor, código y página, historial con el usuario de JP, ninguna visible) y push 8a82eba → b94abc1 (Vercel READY; en vivo `control-catalogo.js?v=5`). Las pruebas de navegador temporada, ventas-reales y passkeys ya fallaban en la versión publicada antes de este cambio.

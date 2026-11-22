@@ -4,9 +4,19 @@
 // rápido… que esté mucho más sencillo ver las prendas». Vista «Prendas»: tarjetas con foto y código del proveedor en
 // grande; al tocar, la ficha con colores, catálogo del proveedor en su página, «Cotizar este modelo» y «Mostrar en la
 // página web». Vista «Costos»: la tabla de costos por talla de siempre (control-cotizaciones.js).
+// v6 (22-nov-2026), JP: «prendas casi iguales pero de diferente proveedor para ver precio y qué le ofrezco al
+// cliente». Cada tarjeta muestra su costo por pieza para la cantidad elegida; «Parecidas juntas» agrupa las prendas
+// equivalentes de todos los proveedores, de la más barata a la más cara, y la ficha las compara (catalogo-parecidas.js).
 const $=s=>document.querySelector(s), esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let rows=[],loaded=false,epoch=0,selected=null,dirty=false,photoChange=undefined,busy=false,uploading=false,allowed=false;
-let uso='',categoria='',ficha=null,fichaColor=null,fichaTurno=0;
+let uso='',categoria='',ficha=null,fichaColor=null,fichaTurno=0,costos=new Map(),costosVistos=false;
+const PZ=window.ZAINParecidas,PIEZAS=[1,12,24,50,100,250,500],PREF='zain-cat-prendas';
+const dinero=c=>'$'+(c/100).toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2});
+const piezas=()=>Number($('#piezasCatalogo').value)||50;
+const costoDe=p=>PZ.costoPara(costos.get(p.sku),piezas());
+const rango=t=>t.hasta==null?(t.desde<=1?'Cualquier cantidad':t.desde+' piezas o más'):t.desde===t.hasta?t.desde+' pieza'+(t.desde===1?'':'s'):t.desde+' a '+t.hasta+' piezas';
+function guardarPref(){try{localStorage.setItem(PREF,JSON.stringify({orden:$('#ordenCatalogo').value,piezas:piezas()}));}catch{}}
+function leerPref(){let p={};try{p=JSON.parse(localStorage.getItem(PREF)||'{}')||{};}catch{}const o=$('#ordenCatalogo');if([...o.options].some(x=>x.value===p.orden))o.value=p.orden;if(PIEZAS.includes(p.piezas))$('#piezasCatalogo').value=String(p.piezas);}
 let techniques=window.ZAIN.tecnicas.map(({id,nombre})=>({id,nombre}));
 const USO={web:'En la web',cotizar:'Solo cotizar',oculta:'Oculta'};
 const ORDEN_CAT=['Playeras','Deportivas','Polos','Camisas','Sudaderas','Chamarras','Chalecos','Pantalones','Infantil','Gorras','Bolsas'];
@@ -22,13 +32,20 @@ const cmp=(a,b)=>String(a||'').localeCompare(String(b||''),'es-MX',{numeric:true
 const status=(s,error=false)=>{$('#estadoCatalogo').textContent=s;$('#estadoCatalogo').classList.toggle('error',error);};
 const field=(key,label,type='text',max=300)=>'<label>'+label+'<input name="'+key+'" type="'+type+'" maxlength="'+max+'"></label>';
 document.body.insertAdjacentHTML('beforeend','<dialog id="editorCatalogo" class="control__editorcatalogo"><header class="control__fichacab"><span>Editar publicación</span><button type="button" id="cerrarCatalogo" aria-label="Cerrar editor">✕</button></header><form id="formCatalogo"><div class="control__editorcab"><h2 id="tituloCatalogo"></h2><p id="skuCatalogo" class="control__dato"></p><label class="control__publicar"><input name="activo" type="checkbox">Visible para clientes</label></div><div class="control__fotoseditor"><div><img id="renderCatalogo" alt="Render protegido"><b>Render del personalizador</b><small>Se conserva para mantener los colores y el logo.</small></div><div><img id="fotoCatalogo" alt="Foto secundaria del producto"><b>Foto de referencia</b><label class="btn btn--linea control__subirfoto">Cambiar foto<input id="archivoCatalogo" type="file" accept="image/jpeg,image/png,image/webp"></label><button type="button" id="fotoOriginal" class="btn-texto">Usar foto original</button><small>JPG, PNG o WEBP. Guarda para publicar el cambio.</small></div></div><div class="control__camposedicion"><fieldset class="control__tecnicaseditor"><legend>Técnicas disponibles</legend><div id="tecnicasCatalogo" class="control__elegirtecnicas" role="group" aria-label="Técnicas disponibles"></div><p>Selecciona una o varias técnicas que tu equipo pueda producir en este modelo.</p></fieldset>'+field('nombre','Nombre de la familia','text',120)+field('disponibilidad','Aviso de disponibilidad','text',300)+'<label class="control__ancho">Descripción<textarea name="descripcion" maxlength="900" rows="3"></textarea></label><label class="control__ancho">Especificaciones adicionales<textarea name="especificaciones" maxlength="2400" rows="4"></textarea></label>'+field('tejido','Tejido','text',120)+field('gramaje','Gramaje (g/m²)','number')+field('composicion','Composición','text',250)+field('medidas','Medidas','text',300)+'<p class="control__ancho control__dato">La composición se aplica a todos los colores si la cambias. Las tallas, paletas y cantidades mínimas conservan sus valores.</p><div class="control__internotitulo control__ancho"><h3>Para compras · solo equipo ZAIN</h3><p>Estas referencias se guardan en los pedidos nuevos y no se muestran al cliente.</p></div>'+field('proveedor','Proveedor','text',120)+field('sku_proveedor','Código del proveedor','text',120)+field('pagina_proveedor','Página en su catálogo','text',60)+'</div><footer class="control__guardar"><p id="mensajeEditor" role="status" aria-live="polite"></p><div><button type="button" class="btn btn--linea" id="cancelarCatalogo">Cerrar</button><button type="submit" class="btn btn--azul" id="guardarCatalogo">Guardar y publicar</button></div></footer></form></dialog>');
-document.body.insertAdjacentHTML('beforeend','<dialog id="catFicha" class="cat-ficha" aria-labelledby="catFichaNombre"><header class="cat-ficha__cab"><div><small id="catFichaCat"></small><h2 id="catFichaNombre"></h2></div><button type="button" id="catFichaCerrar" class="cat-ficha__cerrar" aria-label="Cerrar ficha">✕</button></header><div class="cat-ficha__cuerpo"><div class="cat-ficha__visual"><div id="catFichaImg" class="cat-ficha__img"></div><p id="catFichaColor" class="cat-ficha__colornombre"></p><div id="catFichaColores" class="cat-ficha__colores" role="group" aria-label="Colores"></div></div><div class="cat-ficha__datos"><section class="cat-ficha__prov" aria-label="Proveedor"><small>Código del proveedor</small><div class="cat-ficha__codigo"><b id="catFichaCodigo"></b><button type="button" id="catFichaCopiar" class="btn-texto">Copiar</button></div><p id="catFichaProveedor"></p><div id="catFichaCatalogos" class="cat-ficha__catalogos"></div></section><dl id="catFichaDl" class="cat-ficha__dl"></dl><p id="catFichaDesc" class="cat-ficha__desc"></p><label class="cat-ficha__web"><input type="checkbox" id="catFichaWeb"><span>Mostrar en la página web</span></label><p id="catFichaEstado" class="cat-ficha__estado" role="status" aria-live="polite"></p></div></div><footer class="cat-ficha__acciones"><button type="button" class="btn btn--azul" id="catFichaCotizar">Cotizar este modelo</button><button type="button" class="btn btn--linea" id="catFichaCostos">Costos</button><button type="button" class="btn btn--linea" id="catFichaEditar">Editar datos</button></footer></dialog>');
+document.body.insertAdjacentHTML('beforeend','<dialog id="catFicha" class="cat-ficha" aria-labelledby="catFichaNombre"><header class="cat-ficha__cab"><div><small id="catFichaCat"></small><h2 id="catFichaNombre"></h2></div><button type="button" id="catFichaCerrar" class="cat-ficha__cerrar" aria-label="Cerrar ficha">✕</button></header><div class="cat-ficha__cuerpo"><div class="cat-ficha__visual"><div id="catFichaImg" class="cat-ficha__img"></div><p id="catFichaColor" class="cat-ficha__colornombre"></p><div id="catFichaColores" class="cat-ficha__colores" role="group" aria-label="Colores"></div></div><div class="cat-ficha__datos"><section class="cat-ficha__prov" aria-label="Proveedor"><small>Código del proveedor</small><div class="cat-ficha__codigo"><b id="catFichaCodigo"></b><button type="button" id="catFichaCopiar" class="btn-texto">Copiar</button></div><p id="catFichaProveedor"></p><div id="catFichaCatalogos" class="cat-ficha__catalogos"></div></section><section class="cat-ficha__costo" aria-label="Costo por pieza"><small>Costo por pieza, como está en Costos</small><ul id="catFichaTramos" class="cat-ficha__tramos"></ul></section><dl id="catFichaDl" class="cat-ficha__dl"></dl><p id="catFichaDesc" class="cat-ficha__desc"></p><label class="cat-ficha__web"><input type="checkbox" id="catFichaWeb"><span>Mostrar en la página web</span></label><p id="catFichaEstado" class="cat-ficha__estado" role="status" aria-live="polite"></p></div><section id="catFichaParecidas" class="cat-ficha__parecidas" hidden><header><h3 id="catFichaGrupo"></h3><p id="catFichaRanking"></p></header><div id="catFichaLista" class="cat-ficha__lista"></div></section></div><footer class="cat-ficha__acciones"><button type="button" class="btn btn--azul" id="catFichaCotizar">Cotizar este modelo</button><button type="button" class="btn btn--linea" id="catFichaCostos">Costos</button><button type="button" class="btn btn--linea" id="catFichaEditar">Editar datos</button></footer></dialog>');
 $('#seccionCatalogo').insertAdjacentHTML('afterbegin','<p id="estadoCatalogo" role="status" class="control__estado"></p>');
 const dialog=$('#editorCatalogo'), form=$('#formCatalogo'), fichaDlg=$('#catFicha');
 form.elements.gramaje.min='1';form.elements.gramaje.max='2000';form.elements.gramaje.step='1';
 function tab(catalogue){$('#seccionPedidos').hidden=catalogue;$('#seccionCatalogo').hidden=!catalogue;for(const [id,on] of [['verCatalogo',catalogue],['verPedidos',!catalogue]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}if(catalogue){history.replaceState(null,'','#catalogo');if(!loaded)load().catch(error);}else history.replaceState(null,'',location.pathname+location.search);}
 function error(e){status(e.message||'No se pudo actualizar el catálogo.',true);if(e.auth)$('#salir').click();}
-function vista(v){const costos=v==='costos';$('#vistaPrendas').hidden=costos;$('#vistaCostos').hidden=!costos;for(const [id,on] of [['catVerPrendas',!costos],['catVerCostos',costos]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}}
+function vista(v){const enCostos=v==='costos';$('#vistaPrendas').hidden=enCostos;$('#vistaCostos').hidden=!enCostos;for(const [id,on] of [['catVerPrendas',!enCostos],['catVerCostos',enCostos]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}
+ // Al volver de Costos se releen, por si alguien los cambió ahí.
+ if(enCostos)costosVistos=true;else if(costosVistos&&loaded){costosVistos=false;void cargarCostos().then(()=>{paint();if(ficha&&fichaDlg.open)abrirFicha(ficha.id,fichaColor);});}
+}
+async function cargarCostos(){
+ const turn=epoch;try{const r=await window.ZAINEquipo.call('precios-config');if(turn!==epoch)return;costos=new Map((r?.config?.datos?.prendas||[]).map(c=>[c.sku,c]));}
+ catch(e){if(turn===epoch)costos=new Map();if(e?.auth)throw e;}
+}
 
 // ---------- Vista «Prendas» ----------
 function puntos(p,max){
@@ -39,10 +56,23 @@ function filtrados(){
  const texto=clave($('#buscarCatalogo').value),codigo=compacto($('#buscarCatalogo').value),prov=$('#proveedorCatalogo').value;
  return rows.filter(p=>(!uso||usoDe(p)===uso)&&(!categoria||p.categoria===categoria)&&(!prov||proveedorDe(p)===prov)&&(!texto||p._busca.includes(texto)||(codigo&&p._codigo.includes(codigo))));
 }
+const catDe=p=>{const i=ORDEN_CAT.indexOf(p.categoria);return i<0?99:i;};
+const porCodigo=(a,b)=>cmp(a.skuProveedor||'~',b.skuProveedor||'~');
+// Más barata primero; las que no tienen costo van al final.
+const porCosto=(a,b,signo=1)=>{const x=costoDe(a),y=costoDe(b);return x==null&&y==null?0:x==null?1:y==null?-1:signo*(x-y);};
 function ordenar(lista){
- const o=$('#ordenCatalogo').value,cat=p=>{const i=ORDEN_CAT.indexOf(p.categoria);return i<0?99:i;};
- const porCodigo=(a,b)=>cmp(a.skuProveedor||'~',b.skuProveedor||'~');
- return lista.sort((a,b)=>o==='nombre'?cmp(a.nombre,b.nombre)||cmp(a.sku,b.sku):o==='sku'?cmp(a.sku,b.sku):o==='codigo'?porCodigo(a,b)||cmp(a.nombre,b.nombre):cat(a)-cat(b)||cmp(proveedorDe(a),proveedorDe(b))||porCodigo(a,b)||cmp(a.nombre,b.nombre));
+ const o=$('#ordenCatalogo').value;
+ return lista.sort((a,b)=>o==='nombre'?cmp(a.nombre,b.nombre)||cmp(a.sku,b.sku):o==='sku'?cmp(a.sku,b.sku):o==='codigo'?porCodigo(a,b)||cmp(a.nombre,b.nombre):o==='costo'||o==='costo-desc'?porCosto(a,b,o==='costo'?1:-1)||cmp(a.nombre,b.nombre):o==='parecidas'?porCosto(a,b)||porCodigo(a,b):catDe(a)-catDe(b)||cmp(proveedorDe(a),proveedorDe(b))||porCodigo(a,b)||cmp(a.nombre,b.nombre));
+}
+// «Parecidas juntas»: un bloque por grupo, en el orden de las categorías.
+function grupos(lista){
+ const m=new Map();for(const p of lista){const g=PZ.grupoDe(p);if(!m.has(g))m.set(g,[]);m.get(g).push(p);}
+ const pos=g=>Math.min(...m.get(g).map(catDe));
+ return [...m.keys()].sort((a,b)=>pos(a)-pos(b)||PZ.ordenGrupo(a)-PZ.ordenGrupo(b)||cmp(a,b)).map(g=>({grupo:g,prendas:m.get(g)}));
+}
+function tarjeta(p,barata=false){
+ const u=usoDe(p),c=costoDe(p);
+ return '<button type="button" class="cat-card cat-card--'+u+'" data-ficha="'+esc(p.id)+'"><span class="cat-card__foto">'+(p.fotoRender?'<img src="'+esc(p.fotoRender)+'" alt="" loading="lazy" decoding="async">':'<span class="cat-card__sinfoto">Sin render</span>')+'<span class="cat-card__uso">'+esc(USO[u])+'</span>'+(barata?'<span class="cat-card__barata">Más barata</span>':'')+'</span><span class="cat-card__codigo'+(p.skuProveedor?'':' cat-card__codigo--falta')+'">'+esc(p.skuProveedor||'Sin código')+'</span><span class="cat-card__prov">'+esc(proveedorDe(p)||'Sin proveedor')+'</span><span class="cat-card__nombre">'+esc(p.nombre)+'</span><span class="cat-card__pie"><span class="cat-card__colores" aria-hidden="true">'+puntos(p,5)+'</span>'+(c==null?'<span class="cat-card__costo cat-card__costo--falta">Sin costo</span>':'<span class="cat-card__costo">'+dinero(c)+'</span>')+'</span></button>';
 }
 function chips(){
  const cuenta=k=>rows.filter(p=>!k||usoDe(p)===k).length;
@@ -53,13 +83,21 @@ function chips(){
 }
 function paint(){
  chips();
- const visible=ordenar(filtrados());
- $('#resultadoCatalogo').textContent=visible.length===rows.length?rows.length+' prendas':visible.length+' de '+rows.length+' prendas';
- $('#listaCatalogo').innerHTML=visible.map(p=>{const u=usoDe(p);return '<button type="button" class="cat-card cat-card--'+u+'" data-ficha="'+esc(p.id)+'"><span class="cat-card__foto">'+(p.fotoRender?'<img src="'+esc(p.fotoRender)+'" alt="" loading="lazy" decoding="async">':'<span class="cat-card__sinfoto">Sin render</span>')+'<span class="cat-card__uso">'+esc(USO[u])+'</span></span><span class="cat-card__codigo'+(p.skuProveedor?'':' cat-card__codigo--falta')+'">'+esc(p.skuProveedor||'Sin código')+'</span><span class="cat-card__prov">'+esc(proveedorDe(p)||'Sin proveedor')+'</span><span class="cat-card__nombre">'+esc(p.nombre)+'</span><span class="cat-card__colores" aria-hidden="true">'+puntos(p,7)+'</span></button>';}).join('')||'<div class="control__vacio"><h3>No hay prendas con estos filtros</h3><p>Prueba con otro código, nombre o SKU.</p></div>';
+ const visible=ordenar(filtrados()),juntas=$('#ordenCatalogo').value==='parecidas',lista=$('#listaCatalogo');
+ $('#resultadoCatalogo').textContent=(visible.length===rows.length?rows.length+' prendas':visible.length+' de '+rows.length+' prendas')+(costos.size?' · costo por pieza para '+piezas()+(piezas()===1?' pieza':' piezas')+', talla más barata':' · sin costos cargados');
+ lista.classList.toggle('cat-grid',!juntas);lista.classList.toggle('cat-grupos',juntas);
+ const vacio='<div class="control__vacio"><h3>No hay prendas con estos filtros</h3><p>Prueba con otro código, nombre o SKU.</p></div>';
+ if(!juntas){lista.innerHTML=visible.map(p=>tarjeta(p)).join('')||vacio;return;}
+ lista.innerHTML=grupos(visible).map(({grupo,prendas})=>{
+  const con=prendas.map(costoDe).filter(c=>c!=null),provs=new Set(prendas.map(proveedorDe).filter(Boolean)).size;
+  const barata=con.length>1&&new Set(con).size>1?prendas.find(p=>costoDe(p)!=null):null;
+  const resumen=[prendas.length===1?'1 opción':prendas.length+' opciones',provs>1?provs+' proveedores':'',con.length?(Math.min(...con)===Math.max(...con)?dinero(con[0]):'de '+dinero(Math.min(...con))+' a '+dinero(Math.max(...con))):'sin costo'].filter(Boolean).join(' · ');
+  return '<section class="cat-grupo"><header class="cat-grupo__cab"><h3>'+esc(grupo)+'</h3><p>'+esc(resumen)+'</p></header><div class="cat-grid">'+prendas.map(p=>tarjeta(p,p===barata)).join('')+'</div></section>';
+ }).join('')||vacio;
 }
 async function load(message=''){
- const turn=epoch;status('Cargando prendas…');const data=await window.ZAINEquipo.call('catalogo-lista');if(turn!==epoch||$('#trabajo').hidden)return;
- rows=data.productos.map(p=>{const r={...p,tecnicas:p.tecnicas||publico(p)?.tecnicas||['serigrafia']};r._busca=clave([r.nombre,r.sku,r.proveedor,proveedorDe(r),r.skuProveedor,r.categoria,r.silueta].join(' '));r._codigo=compacto(r.skuProveedor)+' '+compacto(r.sku);return r;});
+ const turn=epoch;status('Cargando prendas…');const [data]=await Promise.all([window.ZAINEquipo.call('catalogo-lista'),cargarCostos()]);if(turn!==epoch||$('#trabajo').hidden)return;
+ rows=data.productos.map(p=>{const r={...p,tecnicas:p.tecnicas||publico(p)?.tecnicas||['serigrafia']};r._busca=clave([r.nombre,r.sku,r.proveedor,proveedorDe(r),r.skuProveedor,r.categoria,r.silueta,PZ.grupoDe(r)].join(' '));r._codigo=compacto(r.skuProveedor)+' '+compacto(r.sku);return r;});
  techniques=data.opcionesTecnicas||techniques;allowed=data.editable;loaded=true;
  const prov=$('#proveedorCatalogo'),antes=prov.value;prov.innerHTML='<option value="">Todos</option>'+[...new Set(rows.map(proveedorDe).filter(Boolean))].sort(cmp).map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');prov.value=antes;if(prov.selectedIndex<0)prov.value='';
  paint();dispatchEvent(new CustomEvent('zain:catalogo-listo',{detail:data}));
@@ -100,6 +138,7 @@ function abrirFicha(id,colorInicial=null){
  const datos=[['Dónde se usa','<span class="cat-uso cat-uso--'+u+'">'+esc(USO[u])+'</span>'],['SKU ZAIN',esc(p.sku)],['Tallas',esc(pub?.tallas?.length?pub.tallas.join(', '):'Unitalla')],['Tela',esc([p.composicion,p.tejido].filter(Boolean).join(' · ')||'Por confirmar')],['Gramaje',p.gramaje?esc(p.gramaje+' g/m²'):''],['Técnicas',esc(tec)],['Colores',ids.length?ids.length+(aprox.length?' · '+aprox.length+' aproximados':''):'']];
  $('#catFichaDl').innerHTML=datos.filter(([,v])=>v).map(([k,v])=>'<div><dt>'+esc(k)+'</dt><dd>'+v+'</dd></div>').join('');
  $('#catFichaDesc').textContent=p.descripcion||'';
+ costoFicha(p);parecidasFicha(p);
  $('#catFichaColores').innerHTML=ids.map(colorDe).filter(Boolean).map(c=>'<button type="button" data-color="'+esc(c.id)+'" style="--c:'+esc(c.hex)+';--c2:'+esc(c.hex2||c.hex)+'" aria-label="'+esc(c.nombre)+'" title="'+esc(c.nombre)+'" aria-pressed="false"'+(aprox.includes(c.id)?' class="aprox"':'')+'></button>').join('');
  const web=$('#catFichaWeb');web.checked=p.activo;web.disabled=!allowed||(p.creadoGestion&&!p.renderListo);
  $('#catFichaEstado').textContent=p.activo?'Los clientes la ven en la página.':p.soloCotizar?'No sale en la página: solo la usa el equipo para cotizar.':'Oculta: no sale en la página ni en el cotizador.';
@@ -108,6 +147,24 @@ function abrirFicha(id,colorInicial=null){
  mostrarColor(p,colorInicial&&ids.includes(colorInicial)?colorInicial:null);
  void catalogosProveedor(p);
  if(!fichaDlg.open)fichaDlg.showModal();
+}
+function costoFicha(p){
+ const ts=PZ.tramos(costos.get(p.sku)),n=piezas();
+ $('#catFichaTramos').innerHTML=ts.length?ts.map(t=>{const on=n>=t.desde&&(t.hasta==null||n<=t.hasta);return '<li'+(on?' class="on"':'')+'><span>'+esc(rango(t))+'</span><b>'+dinero(t.costo)+'</b>'+(t.mayor>t.costo?'<small>hasta '+dinero(t.mayor)+' según la talla</small>':'')+'</li>';}).join(''):'<li class="cat-ficha__sincosto">Sin costo capturado: el cotizador lo pide a mano.</li>';
+}
+// Las parecidas de todos los proveedores, de la más barata a la más cara, con la diferencia contra esta.
+function parecidasFicha(p){
+ const g=PZ.grupoDe(p),n=piezas(),caja=$('#catFichaParecidas');
+ const lista=rows.filter(x=>PZ.grupoDe(x)===g&&(x.id===p.id||x.proveedor||costos.has(x.sku))).sort((a,b)=>porCosto(a,b)||porCodigo(a,b));
+ caja.hidden=lista.length<2;if(caja.hidden){$('#catFichaLista').innerHTML='';return;}
+ const mio=costoDe(p),antes=mio==null?0:lista.filter(x=>x.id!==p.id&&costoDe(x)!=null&&costoDe(x)<mio).length;
+ $('#catFichaGrupo').textContent='Parecidas · '+g;
+ $('#catFichaRanking').textContent=lista.length+' opciones · costo para '+n+(n===1?' pieza':' piezas')+(mio==null?'':antes===0?' · esta es la más barata':antes===1?' · 1 más barata que esta':' · '+antes+' más baratas que esta');
+ $('#catFichaLista').innerHTML=lista.map(x=>{
+  const c=costoDe(x),u=usoDe(x),yo=x.id===p.id,d=c!=null&&mio!=null&&!yo?c-mio:null;
+  const nota=yo?'<small>Esta</small>':d===0?'<small>Igual</small>':d!=null?'<small class="'+(d<0?'menos':'mas')+'">'+(d<0?dinero(-d)+' menos':dinero(d)+' más')+'</small>':'';
+  return '<button type="button" class="cat-par cat-par--'+u+(yo?' on':'')+'" data-par="'+esc(x.id)+'"'+(yo?' aria-current="true"':'')+'><span class="cat-par__foto">'+(x.fotoRender?'<img src="'+esc(x.fotoRender)+'" alt="" loading="lazy" decoding="async">':'')+'</span><span class="cat-par__txt"><b>'+esc(x.skuProveedor||x.sku)+'</b><small>'+esc((proveedorDe(x)||'Sin proveedor')+' · '+USO[u])+'</small><span>'+esc(x.nombre)+'</span></span><span class="cat-par__costo">'+(c==null?'<small>Sin costo</small>':'<b>'+dinero(c)+'</b>'+nota)+'</span></button>';
+ }).join('');
 }
 async function cambiarWeb(p,activo){
  const web=$('#catFichaWeb'),turn=epoch;
@@ -131,7 +188,9 @@ function close(force=false){if(!force&&(busy||uploading||window.ZAINRenderPendie
 $('#verCatalogo').addEventListener('click',()=>tab(true));$('#verPedidos').addEventListener('click',()=>tab(false));
 $('#catVerPrendas').addEventListener('click',()=>vista('prendas'));$('#catVerCostos').addEventListener('click',()=>vista('costos'));
 $('#recargarCatalogo').addEventListener('click',()=>load().catch(error));
-$('#buscarCatalogo').addEventListener('input',paint);$('#proveedorCatalogo').addEventListener('change',paint);$('#ordenCatalogo').addEventListener('change',paint);
+$('#buscarCatalogo').addEventListener('input',paint);$('#proveedorCatalogo').addEventListener('change',paint);
+for(const id of ['ordenCatalogo','piezasCatalogo'])$('#'+id).addEventListener('change',()=>{guardarPref();paint();});
+$('#catFichaLista').addEventListener('click',e=>{const b=e.target.closest('[data-par]');if(!b||b.dataset.par===ficha?.id)return;abrirFicha(b.dataset.par);fichaDlg.querySelector('.cat-ficha__cuerpo').scrollTop=0;});
 $('#usoCatalogo').addEventListener('click',e=>{const b=e.target.closest('[data-uso]');if(!b)return;uso=b.dataset.uso;paint();});
 $('#categoriasCatalogo').addEventListener('click',e=>{const b=e.target.closest('[data-categoria]');if(!b)return;categoria=b.dataset.categoria;paint();});
 $('#listaCatalogo').addEventListener('click',e=>{const b=e.target.closest('[data-ficha]');if(b)abrirFicha(b.dataset.ficha);});
@@ -178,6 +237,7 @@ form.addEventListener('submit',async e=>{
  catch(er){if(turn===epoch&&selected===p){$('#mensajeEditor').textContent=er.message;if(er.auth)error(er);}}finally{if(turn===epoch){busy=false;$('#guardarCatalogo').disabled=!allowed;}}
 });
 addEventListener('zain:equipo-listo',()=>{if(location.hash==='#catalogo')tab(true);});
-addEventListener('zain:equipo-salio',()=>{epoch++;rows=[];loaded=false;busy=false;uploading=false;allowed=false;close(true);if(fichaDlg.open)fichaDlg.close();$('#listaCatalogo').replaceChildren();status('');$('#buscarCatalogo').value='';uso='';categoria='';vista('prendas');tab(false);});
+leerPref();
+addEventListener('zain:equipo-salio',()=>{epoch++;rows=[];costos=new Map();costosVistos=false;loaded=false;busy=false;uploading=false;allowed=false;close(true);if(fichaDlg.open)fichaDlg.close();$('#listaCatalogo').replaceChildren();status('');$('#buscarCatalogo').value='';uso='';categoria='';vista('prendas');tab(false);});
 window.ZAINCatalogo={recargar:load,abrir:open,ficha:abrirFicha,puedePreparar:()=>!dirty&&!busy&&!uploading&&!window.ZAINRenderPendiente};
 })();

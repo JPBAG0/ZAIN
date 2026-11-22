@@ -25,7 +25,7 @@ test('las 98 prendas existen ocultas, con SKU propio, render, colores y zonas v�
   assert.equal(p.minimoPiezas,1);assert.equal(p.pasoPiezas,1);
   assert.ok(Pub.productosHistoricos.some(x=>x.sku===p.sku)&&!Pub.productos.some(x=>x.sku===p.sku),p.sku+' oculta en la página');
  }
- assert.deepEqual([...new Set(solo.map(p=>p.categoria))].sort(),['Camisas','Chamarras','Deportivas','Gorras','Infantil','Pantalones','Playeras','Polos','Sudaderas']);
+ assert.deepEqual([...new Set(solo.map(p=>p.categoria))].sort(),['Camisas','Chalecos','Chamarras','Deportivas','Gorras','Infantil','Pantalones','Playeras','Polos','Sudaderas']);
 });
 test('la página pública no lleva proveedores, códigos ni páginas de sus catálogos',()=>{
  const texto=JSON.stringify(Pub);
