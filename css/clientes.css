@@ -1,6 +1,27 @@
 /* Clientes (21-nov-2026): lista, ficha con historial, barra del cliente en el pedido y selector de cliente.
    Verde = se cerró, morado = en proceso, rosa = no se cerró (los mismos tonos de los estados de Pedidos). */
 .cl-panel input[type=search]{width:100%;margin-bottom:10px}
+/* 22-nov: orden, casillas, total abajo y barra de seleccionados (se queda pegada abajo al bajar en la lista). */
+.cl-herr{display:flex;gap:10px;align-items:flex-start}
+.cl-herr input[type=search]{flex:1 1 auto;min-width:0}
+.cl-panel .cl-orden{display:flex;flex-direction:row;align-items:center;gap:6px;flex:none;font-size:14px;color:#4b4b52;margin:0}
+.cl-panel .cl-orden select{width:auto;min-height:44px;margin:0}
+.cl-lista .cl-li{display:flex;align-items:stretch;border-bottom:1px solid #dedee4}
+.cl-lista .cl-li .cl-item{border-bottom:0;flex:1 1 auto;min-width:0}
+.cl-lista .cl-li.on{background:#eef0ff}
+.cl-panel .cl-marca{display:flex;align-items:center;justify-content:center;flex:none;width:44px;margin:0;cursor:pointer}
+.cl-panel .cl-marca input{width:22px;height:22px;min-height:0;margin:0;accent-color:#2a3bff;cursor:pointer}
+.cl-total{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;padding:14px 6px 4px;border-top:2px solid #111113;margin-top:-1px;font-size:14px;color:#3b3b40}
+.cl-total:empty{display:none}
+.cl-total b,.cl-sel b{font-variant-numeric:tabular-nums}
+.cl-total span:first-child{font-weight:700;color:#111113}
+.cl-sel{position:sticky;bottom:12px;z-index:3;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 14px;margin:12px 0 0;padding:12px 14px;border-radius:14px;background:#111113;color:#fff;box-shadow:0 10px 30px rgba(17,17,19,.25);font-size:14px}
+.cl-sel[hidden]{display:none}
+.cl-sel-botones{display:flex;gap:8px;flex-wrap:wrap}
+.cl-sel .btn{width:auto;min-height:40px;padding:6px 14px}
+.cl-sel .btn--blanco{background:#fff;color:#111113;border:1px solid #fff}
+.cl-sel .btn--blanco:disabled{opacity:.5}
+.cl-sel .btn--linea{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
 .cl-lista{list-style:none;margin:0;padding:0;border-top:1px solid #dedee4}
 .cl-item{display:flex;align-items:center;gap:12px;width:100%;min-height:64px;padding:12px 6px;border:0;border-bottom:1px solid #dedee4;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
 .cl-item:active{background:#f1f2f7}
@@ -60,6 +81,10 @@
 .cl-dialogo-botones .btn{width:auto}
 @media (max-width:720px){
  .cl-cifras{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cl-herr{flex-direction:column;gap:0}.cl-herr input[type=search]{width:100%}
+ .cl-panel .cl-orden{margin-bottom:10px}
+ .cl-sel{bottom:calc(72px + env(safe-area-inset-bottom))}
+ .cl-sel-botones{width:100%}.cl-sel .btn{flex:1 1 auto}
  .cl-fila{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"abrir importe" "estado duplicar";row-gap:8px}
  .cl-abrir{grid-area:abrir}.cl-importe{grid-area:importe}.cl-estado{grid-area:estado}.cl-fila .cl-duplicar{grid-area:duplicar}
  .cl-form .cl-campos{grid-template-columns:1fr}

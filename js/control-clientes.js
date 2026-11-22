@@ -14,13 +14,16 @@ const grupoCot=c=>c.estado==='descartada'?'no':['autorizada','convertida'].inclu
 const GRUPO={si:'Cerrado',proceso:'En proceso',no:'No se cerró'};
 // 523312345678 → 33 1234 5678
 const telVista=t=>t?.length===12&&t.startsWith('52')?t.slice(2).replace(/(\d{2})(\d{4})(\d{4})/,'$1 $2 $3'):t||'';
-let lista=[],epoca=0,filtro='',ficha=null,editando=false,cargando=null;
+let lista=[],epoca=0,filtro='',ficha=null,editando=false,cargando=null,orden='reciente';
+// JP (22-nov-2026): casilla para seleccionar clientes, total abajo y total de los seleccionados, para ver quién
+// nos ha comprado más; y unir en uno solo los que están repetidos.
+const sel=new Set();
 
 ($('#verCotizaciones')||$('#verPedidos')).insertAdjacentHTML('afterend','<button type="button" id="verClientes" aria-pressed="false">Clientes</button>');
 $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionClientes" class="cl-area" hidden>
 <div class="control__titulo"><div><h1>Clientes</h1><p>Cada cliente con sus pedidos y cotizaciones. Duplica un pedido para repetirlo sin volver a cotizar.</p></div><button type="button" id="clNuevo" class="btn btn--azul">+ Nuevo cliente</button></div>
 <p id="clEstado" class="control__estado" role="status" aria-live="polite"></p>
-<div id="clListaPanel" class="cot-panel cl-panel"><input id="clBuscar" type="search" placeholder="Buscar nombre, empresa o teléfono" aria-label="Buscar cliente" autocomplete="off" enterkeyhint="search"><ul id="clLista" class="cl-lista" aria-live="polite"><li class="cl-vacia">Cargando clientes…</li></ul></div>
+<div id="clListaPanel" class="cot-panel cl-panel"><div class="cl-herr"><input id="clBuscar" type="search" placeholder="Buscar nombre, empresa o teléfono" aria-label="Buscar cliente" autocomplete="off" enterkeyhint="search"><label class="cl-orden">Ordenar<select id="clOrden"><option value="reciente">Más recientes</option><option value="vendido">Más vendido</option><option value="pedidos">Más pedidos</option><option value="nombre">Nombre</option></select></label></div><ul id="clLista" class="cl-lista" aria-live="polite"><li class="cl-vacia">Cargando clientes…</li></ul><div id="clTotal" class="cl-total" aria-live="polite"></div><div id="clSel" class="cl-sel" hidden><span id="clSelTexto"></span><span class="cl-sel-botones"><button type="button" class="btn btn--blanco" id="clSelUnir">Unir en un solo cliente…</button><button type="button" class="btn btn--linea" id="clSelQuitar">Quitar selección</button></span></div></div>
 <div id="clFicha" class="cl-ficha" hidden></div>
 </section>`);
 document.body.insertAdjacentHTML('beforeend',`<dialog id="clElegir" class="cl-dialogo" aria-labelledby="clElegirTitulo"><form method="dialog">
@@ -28,7 +31,8 @@ document.body.insertAdjacentHTML('beforeend',`<dialog id="clElegir" class="cl-di
 <label class="cl-elegir-buscar">Cliente<input id="clElegirBuscar" type="search" placeholder="Busca o escribe un cliente nuevo" autocomplete="off"></label>
 <ul id="clElegirLista" class="cl-elegir-lista"></ul><p id="clElegirEstado" class="cl-elegir-estado" role="status" aria-live="polite"></p>
 <div class="cl-dialogo-botones"><button type="button" class="btn btn--linea" data-cl-cancelar>Cancelar</button><button type="button" class="btn btn--azul" id="clElegirOk" disabled>Listo</button></div>
-</form></dialog>`);
+</form></dialog>
+<dialog id="clUnir" class="cl-dialogo" aria-labelledby="clUnirTitulo"><form method="dialog"><h2 id="clUnirTitulo">Unir en un solo cliente</h2><p class="cot-ayuda">Elige cuál se queda. Los pedidos y cotizaciones de los demás pasan a ese cliente y sus datos completan los que le falten. No se borra nada.</p><ul id="clUnirLista" class="cl-elegir-lista"></ul><p id="clUnirEstado" class="cl-elegir-estado" role="status" aria-live="polite"></p><div class="cl-dialogo-botones"><button type="button" class="btn btn--linea" data-cl-unir-cancelar>Cancelar</button><button type="button" class="btn btn--azul" id="clUnirOk" disabled>Unir</button></div></form></dialog>`);
 
 const avisar=t=>{$('#clEstado').textContent=t||'';};
 const publicar=()=>dispatchEvent(new CustomEvent('zain:clientes-lista',{detail:lista}));
@@ -42,14 +46,52 @@ async function cargarLista(){
  return cargando;
 }
 const coincide=(c,q)=>!q||clave([c.nombre,c.empresa,c.telefono,telVista(c.telefono),c.correo].join(' ')).includes(q);
+const ORDEN={reciente:null,vendido:(a,b)=>Number(b.vendido)-Number(a.vendido)||b.cerrados-a.cerrados,pedidos:(a,b)=>b.pedidos-a.pedidos||Number(b.vendido)-Number(a.vendido),nombre:(a,b)=>a.nombre.localeCompare(b.nombre,'es')};
+const sumar=cs=>({clientes:cs.length,pedidos:cs.reduce((a,c)=>a+c.pedidos,0),cerrados:cs.reduce((a,c)=>a+c.cerrados,0),vendido:cs.reduce((a,c)=>a+Number(c.vendido||0),0)});
+const cifrasTexto=t=>`<b>${t.clientes}</b> ${t.clientes===1?'cliente':'clientes'} · <b>${t.pedidos}</b> ${t.pedidos===1?'pedido':'pedidos'} (${t.cerrados} ${t.cerrados===1?'cerrado':'cerrados'}) · <b>${esc(pesos(t.vendido))}</b> vendido`;
+function pintarTotales(vistos){
+ const t=sumar(vistos),todo=sumar(lista);
+ $('#clTotal').innerHTML=lista.length?'<span>Total'+(vistos.length<lista.length?' de los que se ven':'')+'</span><span>'+cifrasTexto(t)+'</span>':'';
+ const elegidos=lista.filter(c=>sel.has(c.id)),s=sumar(elegidos);
+ $('#clSel').hidden=!elegidos.length;
+ if(elegidos.length)$('#clSelTexto').innerHTML='Seleccionados: '+cifrasTexto(s)+(todo.vendido>0?' · <b>'+Math.round(s.vendido*100/todo.vendido)+'%</b> de lo vendido':'');
+ $('#clSelUnir').disabled=elegidos.length<2;
+}
 function pintarLista(){
- const q=clave(filtro),vistos=lista.filter(c=>coincide(c,q));
- $('#clLista').innerHTML=vistos.length?vistos.map(c=>`<li><button type="button" class="cl-item" data-cliente="${esc(c.id)}"><span class="cl-item-nombre"><b>${esc(c.nombre)}</b><small>${esc([c.empresa,telVista(c.telefono)].filter(Boolean).join(' · ')||'Sin datos de contacto')}</small></span>`+
+ for(const id of [...sel])if(!lista.some(c=>c.id===id))sel.delete(id);
+ const q=clave(filtro),vistos=lista.filter(c=>coincide(c,q));if(ORDEN[orden])vistos.sort(ORDEN[orden]);
+ pintarTotales(vistos);
+ $('#clLista').innerHTML=vistos.length?vistos.map(c=>`<li class="cl-li${sel.has(c.id)?' on':''}"><label class="cl-marca"><input type="checkbox" data-sel="${esc(c.id)}"${sel.has(c.id)?' checked':''} aria-label="Seleccionar ${esc(c.nombre)}"></label><button type="button" class="cl-item" data-cliente="${esc(c.id)}"><span class="cl-item-nombre"><b>${esc(c.nombre)}</b><small>${esc([c.empresa,telVista(c.telefono)].filter(Boolean).join(' · ')||'Sin datos de contacto')}</small></span>`+
   `<span class="cl-item-cifras"><span>${c.pedidos} ${c.pedidos===1?'pedido':'pedidos'}${c.cerrados?' · <i class="cl-si">'+c.cerrados+(c.cerrados===1?' cerrado':' cerrados')+'</i>':''}${c.cotizaciones?' · '+c.cotizaciones+(c.cotizaciones===1?' cotización':' cotizaciones'):''}</span>${Number(c.vendido)?'<b>'+esc(pesos(Number(c.vendido)))+'</b>':''}</span><i aria-hidden="true">→</i></button></li>`).join('')
   :`<li class="cl-vacia">${lista.length?'Ningún cliente coincide con «'+esc(filtro)+'».':'Todavía no hay clientes.'}</li>`;
 }
 $('#clBuscar').addEventListener('input',e=>{filtro=e.target.value;pintarLista();});
+$('#clOrden').addEventListener('change',e=>{orden=e.target.value;pintarLista();});
 $('#clLista').addEventListener('click',e=>{const b=e.target.closest('[data-cliente]');if(b)void abrirFicha(b.dataset.cliente);});
+$('#clLista').addEventListener('change',e=>{const x=e.target.closest('[data-sel]');if(!x)return;if(x.checked)sel.add(x.dataset.sel);else sel.delete(x.dataset.sel);x.closest('.cl-li')?.classList.toggle('on',x.checked);pintarTotales(lista.filter(c=>coincide(c,clave(filtro))));});
+$('#clSelQuitar').addEventListener('click',()=>{sel.clear();pintarLista();});
+// Unir los seleccionados: el que se elija se queda; los demás se juntan con él uno por uno (misma función que «Juntar»).
+let destinoUnir=null;
+function pintarUnir(){
+ const elegidos=lista.filter(c=>sel.has(c.id));
+ $('#clUnirLista').innerHTML=elegidos.map(c=>`<li><button type="button" class="cl-opcion${destinoUnir===c.id?' on':''}" data-unir-destino="${esc(c.id)}" aria-pressed="${destinoUnir===c.id}"><b>${esc(c.nombre)}</b><small>${esc([c.empresa,telVista(c.telefono),c.pedidos+(c.pedidos===1?' pedido':' pedidos'),c.cotizaciones+(c.cotizaciones===1?' cotización':' cotizaciones'),Number(c.vendido)?pesos(Number(c.vendido)):''].filter(Boolean).join(' · '))}</small></button></li>`).join('');
+ $('#clUnirOk').disabled=!destinoUnir;
+}
+$('#clSelUnir').addEventListener('click',()=>{
+ const elegidos=lista.filter(c=>sel.has(c.id));if(elegidos.length<2)return;
+ destinoUnir=[...elegidos].sort((a,b)=>b.pedidos+b.cotizaciones-a.pedidos-a.cotizaciones||Number(b.vendido)-Number(a.vendido))[0].id;
+ $('#clUnirEstado').textContent='';pintarUnir();$('#clUnir').showModal();
+});
+$('#clUnirLista').addEventListener('click',e=>{const b=e.target.closest('[data-unir-destino]');if(b){destinoUnir=b.dataset.unirDestino;pintarUnir();}});
+$('#clUnir [data-cl-unir-cancelar]').addEventListener('click',()=>{if(!$('#clUnirOk').dataset.ocupado)$('#clUnir').close();});
+$('#clUnir').addEventListener('cancel',e=>{if($('#clUnirOk').dataset.ocupado)e.preventDefault();});
+$('#clUnirOk').addEventListener('click',async()=>{
+ const b=$('#clUnirOk'),d=destinoUnir,origenes=[...sel].filter(id=>id!==d);if(!d||!origenes.length||b.dataset.ocupado)return;
+ b.dataset.ocupado='1';b.disabled=true;let hechos=0;
+ try{for(const o of origenes){$('#clUnirEstado').textContent='Uniendo '+(hechos+1)+' de '+origenes.length+'…';await api('cliente-unir',{origen:o,destino:d});hechos++;sel.delete(o);}
+  delete b.dataset.ocupado;$('#clUnir').close();sel.clear();await cargarLista();avisar((hechos+1)+' clientes unidos en «'+(lista.find(c=>c.id===d)?.nombre||'uno solo')+'».');
+ }catch(er){delete b.dataset.ocupado;b.disabled=false;$('#clUnirEstado').textContent=(hechos?'Se unieron '+hechos+'. ':'')+er.message;void cargarLista();}
+});
 
 function mostrarFicha(si){$('#clFicha').hidden=!si;$('#clListaPanel').hidden=si;}
 async function abrirFicha(id){
@@ -91,7 +133,7 @@ function pintarFicha(){
  const c=ficha.cliente;
  $('#clFicha').innerHTML=`<button type="button" class="btn-texto" data-cl-volver>← Clientes</button>
  <div class="cl-cab"><div><h2>${esc(c.nombre)}</h2><p>${esc([c.empresa,telVista(c.telefono)?'tel. '+telVista(c.telefono):'',c.correo].filter(Boolean).join(' · ')||'Sin datos de contacto')}</p></div>
- <div class="cl-acciones"><button type="button" class="btn btn--azul" data-cl-cotizar="modelos">+ Cotizar</button><button type="button" class="btn btn--linea" data-cl-cotizar="rapida">+ Cotización rápida</button><button type="button" class="btn btn--linea" data-cl-editar>Editar datos</button></div></div>
+ <div class="cl-acciones"><button type="button" class="btn btn--azul" data-cl-cotizar="modelos">+ Cotizar</button><button type="button" class="btn btn--linea" data-cl-cotizar="rapida">+ Cotización rápida</button><button type="button" class="btn btn--linea" data-cl-editar>Editar datos</button><button type="button" class="btn btn--linea" data-cl-juntar>Unir con otro cliente…</button></div></div>
  ${editando?formulario(c):''}${cifras()}${c.notas&&!editando?`<p class="cl-notas">${esc(c.notas)}</p>`:''}
  <section class="cot-panel cl-historial"><h3>Pedidos <span>${ficha.pedidos.length}</span></h3>${ficha.pedidos.length?'<ul class="cl-filas">'+ficha.pedidos.map(filaPedido).join('')+'</ul>':'<p class="cot-ayuda">Sin pedidos todavía.</p>'}</section>
  <section class="cot-panel cl-historial"><h3>Cotizaciones <span>${ficha.cotizaciones.length}</span></h3>${ficha.cotizaciones.length?'<ul class="cl-filas">'+ficha.cotizaciones.map(filaCot).join('')+'</ul>':'<p class="cot-ayuda">Sin cotizaciones guardadas.</p>'}</section>`;
@@ -222,4 +264,4 @@ nav.addEventListener('click',e=>{
  }
 });
 addEventListener('zain:equipo-listo',()=>{void cargarLista();if(location.hash==='#clientes'&&$('#seccionClientes').hidden)$('#verClientes').click();});
-addEventListener('zain:equipo-salio',()=>{epoca++;lista=[];ficha=null;editando=false;pedidoAbierto=null;filtro='';$('#clBuscar').value='';mostrarFicha(false);$('#clFicha').replaceChildren();$('#clLista').innerHTML='<li class="cl-vacia">Cargando clientes…</li>';avisar('');publicar();});
+addEventListener('zain:equipo-salio',()=>{epoca++;lista=[];sel.clear();ficha=null;editando=false;pedidoAbierto=null;filtro='';$('#clBuscar').value='';mostrarFicha(false);$('#clFicha').replaceChildren();$('#clLista').innerHTML='<li class="cl-vacia">Cargando clientes…</li>';avisar('');publicar();});

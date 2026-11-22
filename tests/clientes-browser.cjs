@@ -60,6 +60,26 @@ module.exports=async function verificarClientes(page,{base,capturas}={}){
   await page.locator('#clBuscar').fill('sur');assert.equal(await page.locator('#clLista [data-cliente]').count(),1);
   await page.locator('#clBuscar').fill('1111');assert.equal(await page.locator('#clLista [data-cliente]').count(),1,'busca por teléfono');
   await page.locator('#clBuscar').fill('');await ancho('lista');
+  // Total abajo, casillas, total de los seleccionados y orden por lo vendido (JP, 22-nov).
+  assert.match(await page.locator('#clTotal').innerText(),/Total[\s\S]*2 clientes · 3 pedidos \(1 cerrado\) · \$1,160\.00 vendido/);
+  assert.equal(await page.locator('#clSel').isHidden(),true);
+  await page.locator('#clLista [data-sel="'+norte+'"]').check();
+  assert.match(await page.locator('#clSel').innerText(),/Seleccionados: 1 cliente · 3 pedidos \(1 cerrado\) · \$1,160\.00 vendido · 100% de lo vendido/);
+  assert.equal(await page.locator('#clSelUnir').isDisabled(),true,'para unir se necesitan dos');
+  await page.locator('#clLista [data-sel="'+sur+'"]').check();
+  assert.match(await page.locator('#clSel').innerText(),/Seleccionados: 2 clientes/);
+  await page.locator('#clOrden').selectOption('vendido');
+  assert.equal(await page.locator('#clLista [data-cliente]').first().getAttribute('data-cliente'),norte,'el que más ha comprado va primero');
+  assert.equal(await page.locator('#clLista .cl-li.on').count(),2,'la selección se conserva al reordenar');
+  await ancho('selección');
+  if(capturas)await page.screenshot({path:path.join(capturas,'clientes-seleccion-'+width+'.png')});
+  await page.locator('#clSelUnir').click();await page.locator('#clUnir[open]').waitFor();
+  assert.equal(await page.locator('#clUnir .cl-opcion').count(),2);
+  assert.match(await page.locator('#clUnir .cl-opcion.on').innerText(),/Escuela Norte/,'se queda el que tiene más historial');
+  if(capturas)await page.locator('#clUnir').screenshot({path:path.join(capturas,'clientes-unir-'+width+'.png')});
+  await page.locator('#clUnir [data-cl-unir-cancelar]').click();
+  await page.locator('#clSelQuitar').click();assert.equal(await page.locator('#clSel').isHidden(),true);
+  await page.locator('#clOrden').selectOption('reciente');
   if(capturas)await page.screenshot({path:path.join(capturas,'clientes-lista-'+width+'.png'),fullPage:true});
   // Ficha: 1 cerrado, 1 en proceso, 1 no se cerró; vendido con IVA.
   await page.locator('#clLista [data-cliente="'+norte+'"]').click();await page.locator('#clFicha .cl-cifras').waitFor();
@@ -92,8 +112,9 @@ module.exports=async function verificarClientes(page,{base,capturas}={}){
   await page.locator('#cerrarDetalle').click();await page.waitForFunction(()=>!document.querySelector('#ficha').open);
   // Juntar la ficha nueva con Escuela Norte.
   await page.locator('#clFicha [data-cl-volver]').click();
-  await page.locator('#clLista [data-cliente="'+nuevoCliente+'"]').click();await page.locator('#clFicha [data-cl-editar]').click();
-  await page.locator('#clFicha [data-cl-juntar]').click();await dialogo.waitFor();
+  // «Unir con otro cliente…» ya está a la vista en la ficha, sin entrar a «Editar datos».
+  await page.locator('#clLista [data-cliente="'+nuevoCliente+'"]').click();
+  await page.locator('#clFicha .cl-acciones [data-cl-juntar]').click();await dialogo.waitFor();
   assert.equal(await dialogo.locator('[data-elegir="'+nuevoCliente+'"]').count(),0,'no se ofrece juntar consigo mismo');
   assert.equal(await dialogo.locator('[data-elegir-nuevo]').count(),0);
   await dialogo.locator('[data-elegir="'+norte+'"]').click();await page.locator('#clElegirOk').click();
