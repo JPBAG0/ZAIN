@@ -44,10 +44,11 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
  });
  const ancho=async donde=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Sin desbordamiento horizontal: '+donde);
  const resultados=[];
- for(const width of [390,1280]){
+ // ZAIN_ANCHOS=1180 prueba otros tamaños (por ejemplo el iPad acostado: 1180×760).
+ for(const width of (process.env.ZAIN_ANCHOS||'390,1280').split(',').map(Number)){
   ops.length=0;
-  await page.setViewportSize({width,height:width===390?844:900});await page.goto(base+'/gestion-zain.html');
-  if(width===390)await page.locator('#menuInferior [data-ir="mas"]').click();
+  await page.setViewportSize({width,height:{390:844,1280:900}[width]||760});await page.goto(base+'/gestion-zain.html');
+  if(width<=720)await page.locator('#menuInferior [data-ir="mas"]').click();
   await page.locator('#verCatalogo').click();
   await page.locator('#listaCatalogo .cat-card').first().waitFor();
   await page.waitForFunction(()=>[...document.querySelectorAll('#listaCatalogo .cat-card img')].slice(0,4).every(i=>i.complete&&i.naturalWidth>0));
@@ -84,6 +85,10 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   // La ficha compara contra las parecidas y deja saltar a la más barata.
   await grupo.locator('[data-ficha="'+porSku('ZN-PL-013').id+'"]').click();await page.locator('#catFicha[open]').waitFor();
   await page.locator('#catFichaParecidas:not([hidden])').waitFor();
+  // El cuerpo de la ficha llena el diálogo (en el iPad medía 0 y solo se veían el título y los botones).
+  const medidas=await page.locator('#catFicha').evaluate(d=>{const c=d.querySelector('.cat-ficha__cuerpo');return {cuerpo:c.clientHeight,contenido:c.scrollHeight,dialogo:d.clientHeight,alto:innerHeight};});
+  assert.ok(medidas.cuerpo>=Math.min(medidas.contenido,medidas.alto*0.5),'la ficha muestra su contenido: '+JSON.stringify(medidas));
+  assert.equal(await page.locator('#catFicha .cat-ficha__cuerpo').evaluate(c=>getComputedStyle(c).flexBasis),'auto','base flexible automática para Safari');
   assert.match(await page.locator('#catFichaRanking').innerText(),/costo para 12 piezas · 2 más baratas que esta/);
   assert.match(await page.locator('#catFichaLista [data-par="'+porSku('ZN-PL-025').id+'"]').innerText(),/\$50\.92[\s\S]*\$18\.31 menos/);
   assert.match(await page.locator('#catFichaTramos li.on').innerText(),/12 piezas o más[\s\S]*\$69\.23/);
