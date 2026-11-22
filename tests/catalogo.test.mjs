@@ -18,7 +18,8 @@ test('originales activos junto con 16 familias / 28 referencias Yazbek sin perso
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
   assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
   assert.equal(C.productosHistoricos.length,5);assert.ok(C.productos.find(p=>p.id==="gorra").activo);
-  assert.deepEqual(C.categoriasCatalogo,['Playeras','Polos','Camisas','Sudaderas','Chalecos','Chamarras','Gorras','Deportivas','Pantalones','Infantil','Bolsas']);
+  // Las categorías que solo tienen prendas de catálogos de proveedores (soloGestion: batas, overoles…) son de Gestión.
+  assert.deepEqual(C.categoriasCatalogo.filter(c=>C.productos.some(p=>p.categoria===c&&!p.soloGestion)),['Playeras','Polos','Camisas','Sudaderas','Chalecos','Chamarras','Gorras','Deportivas','Pantalones','Infantil','Bolsas']);
   for (const p of C.productos.filter(p=>p.imagenLimpia)) { assert.match(p.foto,/originales-limpios/);assert.ok(readFileSync(new URL('../'+p.fotoOriginal,import.meta.url)).length>1000); }
   for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.origen,'IA');assert.equal(p.imagenIA,true);assert.equal(p.imagenFuente.replicaVerificada,false);assert.match(p.foto,/yazbek-ia/);assert.ok(!p.esquema);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);}
 });

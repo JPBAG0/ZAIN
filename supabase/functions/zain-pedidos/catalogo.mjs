@@ -7182,6 +7182,6981 @@ export default {
       "id": "zn-go-049-c01",
       "nombre": "Blanco/Rojo/Verde",
       "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-050-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-050-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-go-050-c03",
+      "nombre": "Caribe",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-051-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-051-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-051-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-051-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-051-c05",
+      "nombre": "Caqui",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-051-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-051-c07",
+      "nombre": "Jaspe oscuro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-051-c08",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-052-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-052-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-053-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-054-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-055-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-055-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-055-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-055-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-056-c01",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-056-c02",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-056-c03",
+      "nombre": "Marino jaspe",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-056-c04",
+      "nombre": "Zafiro jaspe",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-056-c05",
+      "nombre": "Rojo jaspe",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-056-c06",
+      "nombre": "Rosa jaspe",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-057-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-057-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-057-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-057-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-057-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-057-c06",
+      "nombre": "Carbón",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-go-058-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-058-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-058-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-058-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-059-c01",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-059-c02",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-059-c03",
+      "nombre": "Marino jaspe",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-059-c04",
+      "nombre": "Zafiro jaspe",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-059-c05",
+      "nombre": "Rojo jaspe",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-060-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-060-c02",
+      "nombre": "Caqui",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-060-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-060-c04",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-060-c05",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-060-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-060-c07",
+      "nombre": "Olivo",
+      "hex": "#5f6b3a"
+    },
+    {
+      "id": "zn-go-060-c08",
+      "nombre": "Turquesa",
+      "hex": "#1aa6a6"
+    },
+    {
+      "id": "zn-go-060-c09",
+      "nombre": "Coral",
+      "hex": "#f0735f"
+    },
+    {
+      "id": "zn-go-061-c01",
+      "nombre": "Marino/Caqui",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-061-c02",
+      "nombre": "Caqui/Café",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-061-c03",
+      "nombre": "Beige/Marino",
+      "hex": "#d8c8a8"
+    },
+    {
+      "id": "zn-go-061-c04",
+      "nombre": "Negro/Caqui",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-061-c05",
+      "nombre": "Olivo/Caqui",
+      "hex": "#5f6b3a"
+    },
+    {
+      "id": "zn-go-061-c06",
+      "nombre": "Uva/Beige",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-061-c07",
+      "nombre": "Menta/Negro",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-go-061-c08",
+      "nombre": "Coral/Marino",
+      "hex": "#f0735f"
+    },
+    {
+      "id": "zn-go-062-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-062-c02",
+      "nombre": "Caqui",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-062-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-062-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-062-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-062-c06",
+      "nombre": "Olivo",
+      "hex": "#5f6b3a"
+    },
+    {
+      "id": "zn-go-063-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-063-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-063-c03",
+      "nombre": "Caqui",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-063-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-063-c05",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-064-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-064-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-064-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-064-c04",
+      "nombre": "Vino",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-064-c05",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-064-c06",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-064-c07",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-064-c08",
+      "nombre": "Carbón",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-go-064-c09",
+      "nombre": "Bandera",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-065-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-065-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-065-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-065-c04",
+      "nombre": "Vino",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-065-c05",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-065-c06",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-065-c07",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-065-c08",
+      "nombre": "Carbón",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-go-065-c09",
+      "nombre": "Bandera",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-066-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-066-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-066-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-066-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-066-c05",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-go-067-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-067-c02",
+      "nombre": "Marino/Blanco",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-067-c03",
+      "nombre": "Vino/Blanco",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-067-c04",
+      "nombre": "Royal/Blanco",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-067-c05",
+      "nombre": "Rojo/Negro",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-067-c06",
+      "nombre": "Jaspe oscuro/Negro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-067-c07",
+      "nombre": "Jaspe claro/Negro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-067-c08",
+      "nombre": "Camo/Negro",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-067-c09",
+      "nombre": "Bandera/Blanco",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-067-c10",
+      "nombre": "Negro/Blanco",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-067-c11",
+      "nombre": "Caribe tres",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-067-c12",
+      "nombre": "Blanco tres",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-067-c13",
+      "nombre": "Negro tres",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-068-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-069-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-069-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-069-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-069-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-069-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-069-c06",
+      "nombre": "Amarillo neón",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-go-070-c01",
+      "nombre": "Marino/Blanco",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-070-c02",
+      "nombre": "Vino/Blanco",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-go-070-c03",
+      "nombre": "Negro/Blanco",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-070-c04",
+      "nombre": "Royal/Blanco",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-070-c05",
+      "nombre": "Rojo/Blanco",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-070-c06",
+      "nombre": "Bandera/Blanco",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-071-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-071-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-071-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-071-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-071-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-071-c06",
+      "nombre": "Naranja neón",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-go-071-c07",
+      "nombre": "Verde neón",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-go-072-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-072-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-072-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-072-c04",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-go-073-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-073-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-073-c03",
+      "nombre": "Caqui",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-go-073-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-go-073-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-074-c01",
+      "nombre": "Blanco/ojos rojos",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-074-c02",
+      "nombre": "Bandera/ojos blancos",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-074-c03",
+      "nombre": "Rojo/ojos blancos",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-go-074-c04",
+      "nombre": "Blanco/ojos bandera",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-075-c01",
+      "nombre": "Marino/ojos blancos",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-go-075-c02",
+      "nombre": "Bandera/ojos blancos",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-075-c03",
+      "nombre": "Amarillo/ojos negro",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-go-075-c04",
+      "nombre": "Amarillo/ojos marino",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-go-075-c05",
+      "nombre": "Royal/ojos blancos",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-go-075-c06",
+      "nombre": "Blanco/ojos rojos",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-bo-014-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-bo-014-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-bo-014-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-014-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-bo-014-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-bo-014-c06",
+      "nombre": "Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-bo-015-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-bo-015-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-015-c03",
+      "nombre": "Vino",
+      "hex": "#6d1f2f"
+    },
+    {
+      "id": "zn-bo-015-c04",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-bo-015-c05",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-bo-015-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-bo-015-c07",
+      "nombre": "Limón",
+      "hex": "#d7e34a"
+    },
+    {
+      "id": "zn-bo-015-c08",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-bo-016-c01",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-016-c02",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-ot-001-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-bo-017-c01",
+      "nombre": "Marino jaspe",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-bo-017-c02",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-bo-017-c03",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-018-c01",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-018-c02",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-bo-019-c01",
+      "nombre": "Negro jaspe",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-bo-020-c01",
+      "nombre": "Jaspe claro",
+      "hex": "#a7a9ac"
+    },
+    {
+      "id": "zn-bo-021-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-tv-001-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-001-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-001-c03",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-001-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-002-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-002-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-002-c03",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-002-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-003-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-003-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-003-c03",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-003-c04",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-004-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-004-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-004-c03",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-tv-004-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-004-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-004-c06",
+      "nombre": "Fusha",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-tv-004-c07",
+      "nombre": "Menta",
+      "hex": "#9fe2bf"
+    },
+    {
+      "id": "zn-tv-004-c08",
+      "nombre": "Cromo",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-tv-005-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-005-c02",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-tv-005-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-005-c04",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-tv-005-c05",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-005-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-005-c07",
+      "nombre": "Carbón",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-tv-005-c08",
+      "nombre": "Cromo",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-tv-006-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-tv-006-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-tv-006-c03",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-tv-006-c04",
+      "nombre": "Royal",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-tv-006-c05",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-tv-006-c06",
+      "nombre": "Carbón",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-ot-002-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-003-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-004-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-005-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-006-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-007-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-076-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-076-c02",
+      "nombre": "Caqui",
+      "hex": "#b7977b"
+    },
+    {
+      "id": "zn-go-076-c03",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-076-c04",
+      "nombre": "Negro",
+      "hex": "#16171a"
+    },
+    {
+      "id": "zn-go-076-c05",
+      "nombre": "Rojo",
+      "hex": "#e02145"
+    },
+    {
+      "id": "zn-go-076-c06",
+      "nombre": "Gris",
+      "hex": "#4d4954"
+    },
+    {
+      "id": "zn-go-077-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-077-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-077-c03",
+      "nombre": "Negro",
+      "hex": "#16171a"
+    },
+    {
+      "id": "zn-go-077-c04",
+      "nombre": "Rojo",
+      "hex": "#e02145"
+    },
+    {
+      "id": "zn-go-077-c05",
+      "nombre": "Gris",
+      "hex": "#4d4954"
+    },
+    {
+      "id": "zn-go-078-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-078-c02",
+      "nombre": "Negro",
+      "hex": "#121e30"
+    },
+    {
+      "id": "zn-go-079-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-079-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-079-c03",
+      "nombre": "Negro",
+      "hex": "#121e30"
+    },
+    {
+      "id": "zn-go-079-c04",
+      "nombre": "Royal",
+      "hex": "#14479e"
+    },
+    {
+      "id": "zn-go-079-c05",
+      "nombre": "Rojo",
+      "hex": "#e02145"
+    },
+    {
+      "id": "zn-go-079-c06",
+      "nombre": "Gris",
+      "hex": "#808d96"
+    },
+    {
+      "id": "zn-go-080-c01",
+      "nombre": "Marino Jaspe",
+      "hex": "#5c7797"
+    },
+    {
+      "id": "zn-go-081-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#5e6263"
+    },
+    {
+      "id": "zn-go-081-c02",
+      "nombre": "Gris Jaspe",
+      "hex": "#babec0"
+    },
+    {
+      "id": "zn-go-081-c03",
+      "nombre": "Marino Jaspe",
+      "hex": "#5c7797"
+    },
+    {
+      "id": "zn-go-082-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#363741"
+    },
+    {
+      "id": "zn-go-082-c02",
+      "nombre": "Jaspe Marino",
+      "hex": "#4d5c72"
+    },
+    {
+      "id": "zn-go-083-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#363741"
+    },
+    {
+      "id": "zn-go-083-c02",
+      "nombre": "Jaspe Marino",
+      "hex": "#4d5c72"
+    },
+    {
+      "id": "zn-go-083-c03",
+      "nombre": "Negro",
+      "hex": "#231f20"
+    },
+    {
+      "id": "zn-go-084-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-084-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-084-c03",
+      "nombre": "Negro",
+      "hex": "#16171a"
+    },
+    {
+      "id": "zn-go-084-c04",
+      "nombre": "Rojo",
+      "hex": "#bc1f31"
+    },
+    {
+      "id": "zn-go-085-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-085-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-085-c03",
+      "nombre": "Negro",
+      "hex": "#16171a"
+    },
+    {
+      "id": "zn-go-085-c04",
+      "nombre": "Gris",
+      "hex": "#acacaf"
+    },
+    {
+      "id": "zn-go-086-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-086-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-086-c03",
+      "nombre": "Negro",
+      "hex": "#16171a"
+    },
+    {
+      "id": "zn-go-087-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-087-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-087-c03",
+      "nombre": "Negro",
+      "hex": "#121e30"
+    },
+    {
+      "id": "zn-go-087-c04",
+      "nombre": "Vino",
+      "hex": "#78031a"
+    },
+    {
+      "id": "zn-go-087-c05",
+      "nombre": "Rosa",
+      "hex": "#f7b8d3"
+    },
+    {
+      "id": "zn-go-087-c06",
+      "nombre": "Acero",
+      "hex": "#6b8897"
+    },
+    {
+      "id": "zn-go-088-c01",
+      "nombre": "Blanco",
+      "hex": "#eeeeef"
+    },
+    {
+      "id": "zn-go-088-c02",
+      "nombre": "Marino",
+      "hex": "#1a2661"
+    },
+    {
+      "id": "zn-go-088-c03",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-go-088-c04",
+      "nombre": "Royal",
+      "hex": "#14479e"
+    },
+    {
+      "id": "zn-go-088-c05",
+      "nombre": "Rojo",
+      "hex": "#e02145"
+    },
+    {
+      "id": "zn-go-088-c06",
+      "nombre": "Carbón",
+      "hex": "#4a4e51"
+    },
+    {
+      "id": "zn-go-089-c01",
+      "nombre": "Negro",
+      "hex": "#121718"
+    },
+    {
+      "id": "zn-pa-004-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-004-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-004-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-004-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-004-c05",
+      "nombre": "Verde olivo [OG]",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pa-004-c06",
+      "nombre": "Gris plata [SV]",
+      "hex": "#c0c2c4"
+    },
+    {
+      "id": "zn-pa-005-c01",
+      "nombre": "Código DB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-005-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-005-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-006-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-006-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-006-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-007-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-007-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-008-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-008-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-008-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-008-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-009-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-009-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-009-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-009-c04",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-010-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-010-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-010-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-011-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-011-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-011-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-012-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-012-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-012-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-012-c04",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-013-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-013-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-014-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-014-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-014-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-014-c04",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-014-c05",
+      "nombre": "Código OG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-015-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-015-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-015-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-015-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-016-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-016-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-016-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-017-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-017-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-017-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-018-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-018-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-018-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-018-c04",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-019-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-019-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-019-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-019-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-020-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-020-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-020-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-021-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-021-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-021-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-021-c04",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-022-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-022-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-022-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-023-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-023-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-023-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-023-c04",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-024-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-024-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-024-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-024-c04",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-025-c01",
+      "nombre": "Azul índigo enjuagado, lavado en prenda [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-025-c02",
+      "nombre": "Azul índigo deslavado a la piedra, lavado enzimáti",
+      "hex": "#b9b2a3"
+    },
+    {
+      "id": "zn-pa-026-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-027-c01",
+      "nombre": "Azul índigo rígido [NB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-027-c02",
+      "nombre": "Azul índigo enjuagado, lavado en prenda [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-028-c01",
+      "nombre": "Azul índigo enjuagado, lavado en prenda [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-028-c02",
+      "nombre": "Código SB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-029-c01",
+      "nombre": "Azul índigo enjuagado [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-030-c01",
+      "nombre": "Azul índigo enjuagado [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-031-c01",
+      "nombre": "Azul índigo enjuagado [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-032-c01",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-033-c01",
+      "nombre": "Negro enjuagado [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-033-c02",
+      "nombre": "Café loneta enjuagado [BD]",
+      "hex": "#5a3e2b"
+    },
+    {
+      "id": "zn-pa-033-c03",
+      "nombre": "Arena del desierto enjuagado [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-033-c04",
+      "nombre": "Musgo enjuagado [MS]",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-033-c05",
+      "nombre": "Pizarra enjuagado [SL]",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-033-c06",
+      "nombre": "Madera enjuagado [TB]",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-034-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-034-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-035-c01",
+      "nombre": "Código NB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-035-c02",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-036-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-036-c02",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-037-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-038-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-039-c01",
+      "nombre": "Código NT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-039-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-001-c01",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ov-002-c01",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-002-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-003-c01",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ov-004-c01",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ov-004-c02",
+      "nombre": "Gris [GY]",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-004-c03",
+      "nombre": "Naranja [OR]",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ov-004-c04",
+      "nombre": "Rojo [RD]",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-ov-005-c01",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ov-006-c01",
+      "nombre": "Código NB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-007-c01",
+      "nombre": "Código NB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-008-c01",
+      "nombre": "Código NB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-001-c01",
+      "nombre": "Código NB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-001-c02",
+      "nombre": "Código NT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-021-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-021-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-cm-021-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-021-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-021-c05",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-021-c06",
+      "nombre": "Verde olivo [OG]",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-021-c07",
+      "nombre": "Gris plata [SV]",
+      "hex": "#c0c2c4"
+    },
+    {
+      "id": "zn-cm-021-c08",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-021-c09",
+      "nombre": "Código GH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-021-c10",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-021-c11",
+      "nombre": "Blanco [WH]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-022-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-022-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-cm-022-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-022-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-022-c05",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-022-c06",
+      "nombre": "Verde olivo [OG]",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-022-c07",
+      "nombre": "Gris plata [SV]",
+      "hex": "#c0c2c4"
+    },
+    {
+      "id": "zn-cm-022-c08",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-022-c09",
+      "nombre": "Código GH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-022-c10",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-023-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-023-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-024-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-024-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-025-c01",
+      "nombre": "Azul índigo [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-025-c02",
+      "nombre": "Azul deslavado a la piedra [SB]",
+      "hex": "#b9b2a3"
+    },
+    {
+      "id": "zn-cm-026-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-026-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-cm-026-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-026-c04",
+      "nombre": "Código GG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-026-c05",
+      "nombre": "Azul claro [LW]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-026-c06",
+      "nombre": "Marino oscuro [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-026-c07",
+      "nombre": "Blanco [WH]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-027-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-027-c02",
+      "nombre": "Carbón oscuro [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-cm-027-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-027-c04",
+      "nombre": "Código GG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-027-c05",
+      "nombre": "Azul claro [LW]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-027-c06",
+      "nombre": "Marino oscuro [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-027-c07",
+      "nombre": "Blanco [WH]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-028-c01",
+      "nombre": "Código BKSM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-028-c02",
+      "nombre": "Código DNSM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-028-c03",
+      "nombre": "Código BKER",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-028-c04",
+      "nombre": "Código FLBK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-028-c05",
+      "nombre": "Código SMBK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-029-c01",
+      "nombre": "Código BKCH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-029-c02",
+      "nombre": "Código DNSM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-029-c03",
+      "nombre": "Código BKER",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-029-c04",
+      "nombre": "Código CHRB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-030-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-030-c02",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-030-c03",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-030-c04",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-031-c01",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-032-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-032-c02",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-032-c03",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-032-c04",
+      "nombre": "Código SB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-033-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-033-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-033-c03",
+      "nombre": "Código LW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-034-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-034-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-034-c03",
+      "nombre": "Código LW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c06",
+      "nombre": "Código OG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-035-c07",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c06",
+      "nombre": "Código OG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-036-c07",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-037-c01",
+      "nombre": "Azul con rayas blancas [B]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-037-c02",
+      "nombre": "Azul francés [F]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-037-c03",
+      "nombre": "Azul claro [L]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-037-c04",
+      "nombre": "Blanco [W]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-038-c01",
+      "nombre": "Azul con rayas blancas [B]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-038-c02",
+      "nombre": "Azul francés [F]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-038-c03",
+      "nombre": "Azul claro [L]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-038-c04",
+      "nombre": "Blanco [W]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-025-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-025-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-037-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-037-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-037-c03",
+      "nombre": "Código SM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-037-c04",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-038-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-038-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-038-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-038-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-038-c05",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-039-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-039-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-039-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-039-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-039-c05",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-040-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-040-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-040-c03",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-015-c01",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-015-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-011-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-011-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-012-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-012-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ch-013-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-013-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-014-c01",
+      "nombre": "Café loneta [BD]",
+      "hex": "#5a3e2b"
+    },
+    {
+      "id": "zn-ch-014-c02",
+      "nombre": "Marino [RN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ch-015-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-016-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-017-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-017-c02",
+      "nombre": "Marino [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ch-017-c03",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-ch-018-c01",
+      "nombre": "Negro / plata [BS]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-018-c02",
+      "nombre": "Marino oscuro / plata [NS]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ch-019-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-019-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-su-016-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-016-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-040-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-040-c02",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-040-c03",
+      "nombre": "Código MD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-040-c04",
+      "nombre": "Código OD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-041-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-041-c02",
+      "nombre": "Código MD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-041-c03",
+      "nombre": "Código OD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-041-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-042-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-042-c02",
+      "nombre": "Carbón oscuro [DC]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-042-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-042-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-043-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-043-c02",
+      "nombre": "Carbón oscuro [DC]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-043-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-043-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-044-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-044-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-044-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-045-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-045-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-045-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-046-c01",
+      "nombre": "Azul índigo enjuagado, lavado en prenda [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-047-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-047-c02",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-047-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-047-c04",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-048-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-048-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-048-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-048-c04",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-049-c01",
+      "nombre": "Azul índigo enjuagado [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-050-c01",
+      "nombre": "Azul índigo enjuagado, lavado en prenda [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-051-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-051-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-051-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-051-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-051-c05",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-052-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-052-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-052-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-052-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-053-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-053-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-053-c03",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-053-c04",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-054-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-054-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-054-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-055-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-056-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-056-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-056-c03",
+      "nombre": "Código DS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-057-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-039-c01",
+      "nombre": "Azul con rayas blancas [BS]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-039-c02",
+      "nombre": "Azul francés [FB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-039-c03",
+      "nombre": "Azul claro [LB]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-039-c04",
+      "nombre": "Blanco [WH]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-040-c01",
+      "nombre": "Azul con rayas blancas [BS]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-040-c02",
+      "nombre": "Azul francés [FB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-040-c03",
+      "nombre": "Azul claro [LB]",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-040-c04",
+      "nombre": "Blanco [WH]",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-041-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-041-c02",
+      "nombre": "Código DC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-041-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-041-c04",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-042-c01",
+      "nombre": "Negro [B]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-042-c02",
+      "nombre": "Marino oscuro [N]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-043-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-043-c02",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-043-c03",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pl-044-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-058-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-058-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-058-c03",
+      "nombre": "Marino oscuro [DN]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-058-c04",
+      "nombre": "Caqui [KH]",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-059-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-059-c02",
+      "nombre": "Carbón [CH]",
+      "hex": "#3d3f43"
+    },
+    {
+      "id": "zn-pa-059-c03",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-059-c04",
+      "nombre": "Marino oscuro [NV]",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-060-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-060-c02",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-061-c01",
+      "nombre": "Negro [BK]",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-061-c02",
+      "nombre": "Arena del desierto [DS]",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-062-c01",
+      "nombre": "Azul índigo enjuagado [RB]",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pa-063-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-063-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-063-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-063-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c04",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c05",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c06",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-064-c07",
+      "nombre": "Código EV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-065-c01",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-065-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-066-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-066-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-066-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-067-c01",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-067-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-068-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-069-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-069-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-070-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-071-c01",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-072-c01",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-072-c02",
+      "nombre": "Código SW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-072-c03",
+      "nombre": "Código ED",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-072-c04",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-073-c01",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-073-c02",
+      "nombre": "Código SW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-074-c01",
+      "nombre": "Código MW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-074-c02",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c02",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c05",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c06",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-075-c07",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c02",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c04",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c06",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c07",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-076-c08",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-077-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-077-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-078-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-078-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-078-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-078-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-079-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-079-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-079-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-080-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-080-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c02",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c04",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c06",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-081-c07",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-082-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-082-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-082-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-082-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-083-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-083-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-083-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-083-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-084-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-084-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-084-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-084-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-084-c05",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-085-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-085-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-085-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-086-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-086-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-086-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-086-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-087-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-087-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-088-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-088-c02",
+      "nombre": "Código CN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-088-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-088-c04",
+      "nombre": "Código TP",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-089-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-090-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-090-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-090-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-090-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-091-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-091-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-091-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-092-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-092-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-092-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-092-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-093-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-093-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-093-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-093-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-094-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-094-c02",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-094-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-094-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-094-c05",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-095-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-095-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-095-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-096-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-096-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-096-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-041-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-041-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-041-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-041-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-041-c05",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-042-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-042-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-042-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-042-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-042-c05",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-043-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-044-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-045-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-045-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-045-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c02",
+      "nombre": "Código GG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c06",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c07",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c08",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c09",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c10",
+      "nombre": "Código EG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-046-c11",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c02",
+      "nombre": "Código GG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c06",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c07",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c08",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c09",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c10",
+      "nombre": "Código EG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-047-c11",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-048-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-048-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-049-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-049-c02",
+      "nombre": "Código ST",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-050-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-050-c02",
+      "nombre": "Código ST",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-051-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-052-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-053-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c02",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c04",
+      "nombre": "Código DB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c05",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c06",
+      "nombre": "Código KK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c07",
+      "nombre": "Código LA",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c08",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c09",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c10",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c11",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c12",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c13",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c14",
+      "nombre": "Código EX",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c15",
+      "nombre": "Código AC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c16",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c17",
+      "nombre": "Código LG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c18",
+      "nombre": "Código LT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c19",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c20",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c21",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c22",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c23",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c24",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c25",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c26",
+      "nombre": "Código GM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c27",
+      "nombre": "Código NL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c28",
+      "nombre": "Código EG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c29",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c30",
+      "nombre": "Código ON",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-054-c31",
+      "nombre": "Código WM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c01",
+      "nombre": "Código BB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c02",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c03",
+      "nombre": "Código GI",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c04",
+      "nombre": "Código GW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c05",
+      "nombre": "Código EX",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c06",
+      "nombre": "Código HK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-055-c07",
+      "nombre": "Código KB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-056-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-056-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-056-c03",
+      "nombre": "Código LA",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-056-c04",
+      "nombre": "Código LT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-056-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-057-c01",
+      "nombre": "Código BG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-057-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-057-c03",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-057-c04",
+      "nombre": "Código NP",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-057-c05",
+      "nombre": "Código RN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-058-c01",
+      "nombre": "Código BG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-058-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-058-c03",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-058-c04",
+      "nombre": "Código NP",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-058-c05",
+      "nombre": "Código RN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-059-c01",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c02",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c04",
+      "nombre": "Código DB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c05",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c06",
+      "nombre": "Código KK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c07",
+      "nombre": "Código LA",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c08",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c09",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c10",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c11",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c12",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c13",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c14",
+      "nombre": "Código EX",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c15",
+      "nombre": "Código AC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c16",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c17",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c18",
+      "nombre": "Código GM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c19",
+      "nombre": "Código NL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c20",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c21",
+      "nombre": "Código LG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c22",
+      "nombre": "Código LT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c23",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c24",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c25",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c26",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c27",
+      "nombre": "Código EG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c28",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c29",
+      "nombre": "Código ON",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-060-c30",
+      "nombre": "Código WM",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-061-c01",
+      "nombre": "Código WB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-062-c01",
+      "nombre": "Código WB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c01",
+      "nombre": "Código BB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c02",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c03",
+      "nombre": "Código CW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c04",
+      "nombre": "Código GI",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c05",
+      "nombre": "Código GW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c06",
+      "nombre": "Código EX",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c07",
+      "nombre": "Código HK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-063-c08",
+      "nombre": "Código KB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-064-c01",
+      "nombre": "Código LA",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-064-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-064-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-064-c04",
+      "nombre": "Código LT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-064-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-065-c01",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-065-c02",
+      "nombre": "Código WB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-066-c01",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-066-c02",
+      "nombre": "Código WB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-067-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-067-c02",
+      "nombre": "Código FB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-067-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-067-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-067-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-068-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-068-c02",
+      "nombre": "Código FB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-068-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-068-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-068-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-069-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-069-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-069-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-069-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-069-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-070-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-070-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-070-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-070-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-070-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c02",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c06",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c07",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c08",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-071-c09",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c02",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c06",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c07",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c08",
+      "nombre": "Código SV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-072-c09",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-073-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-073-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-073-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-073-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-073-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-074-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-074-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-074-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-074-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-074-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c04",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c05",
+      "nombre": "Código CF",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-075-c06",
+      "nombre": "Código NT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c04",
+      "nombre": "Código BY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c05",
+      "nombre": "Código CF",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-076-c06",
+      "nombre": "Código NT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c02",
+      "nombre": "Código BL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c03",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c04",
+      "nombre": "Código CG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c05",
+      "nombre": "Código CO",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c06",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c07",
+      "nombre": "Código NG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c08",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-077-c09",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c02",
+      "nombre": "Código BL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c03",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c04",
+      "nombre": "Código CG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c05",
+      "nombre": "Código CO",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c06",
+      "nombre": "Código CR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c07",
+      "nombre": "Código NG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c08",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-078-c09",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-079-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-079-c02",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-079-c03",
+      "nombre": "Código TR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-080-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-080-c02",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-080-c03",
+      "nombre": "Código TR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c02",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c03",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c04",
+      "nombre": "Código CF",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c05",
+      "nombre": "Código CY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c06",
+      "nombre": "Código FC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c07",
+      "nombre": "Código GC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-081-c08",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c02",
+      "nombre": "Código BR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c03",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c04",
+      "nombre": "Código CF",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c05",
+      "nombre": "Código CY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c06",
+      "nombre": "Código FC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c07",
+      "nombre": "Código GC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-082-c08",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c04",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c05",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-083-c06",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c04",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c05",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-084-c06",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c03",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c05",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c06",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c07",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-026-c08",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c03",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c05",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c06",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c07",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-027-c08",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c02",
+      "nombre": "Código BU",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c05",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c06",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c07",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c08",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c09",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-028-c10",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c02",
+      "nombre": "Código BU",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c05",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c06",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c07",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c08",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c09",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-029-c10",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-008-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-008-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-017-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-017-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-017-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-017-c04",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-017-c05",
+      "nombre": "Código YB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-020-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-020-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-021-c01",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-022-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-022-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-022-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-023-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-023-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-024-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-024-c02",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-024-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-024-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-024-c05",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-025-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-009-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-026-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-026-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-026-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-027-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c04",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c05",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c06",
+      "nombre": "Código EC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-028-c07",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-029-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-029-c02",
+      "nombre": "Código NC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-029-c03",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-029-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-003-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-003-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-004-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-004-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-004-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-005-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-005-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-009-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-009-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-010-c01",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-011-c01",
+      "nombre": "Código HB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-011-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-011-c03",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-011-c04",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-011-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-012-c01",
+      "nombre": "Código HB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-012-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-012-c03",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-012-c04",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-013-c01",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-013-c02",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-013-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-014-c01",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-015-c01",
+      "nombre": "Código BD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-015-c02",
+      "nombre": "Código ND",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-016-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-017-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-017-c02",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-017-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c02",
+      "nombre": "Código EB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c04",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c05",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c06",
+      "nombre": "Código BN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c07",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c08",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c09",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c10",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-018-c11",
+      "nombre": "Código EN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-019-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-020-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-021-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-097-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-097-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-097-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-098-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-098-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-098-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-098-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-099-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-099-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-099-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-099-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-099-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-100-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-100-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-100-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-100-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-101-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-101-c02",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-101-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-102-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-102-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-102-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-103-c01",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-104-c01",
+      "nombre": "Código PW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-105-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-105-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-106-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-106-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-106-c03",
+      "nombre": "Código SG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-106-c04",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-107-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-107-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-107-c03",
+      "nombre": "Código KH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-107-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-108-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-108-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-108-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-108-c04",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-045-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-045-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-045-c03",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-045-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-045-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-046-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-046-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-046-c03",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-046-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-046-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-047-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-048-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-048-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-049-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-049-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-049-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-049-c04",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-049-c05",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-050-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-050-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-050-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-050-c04",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-050-c05",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-051-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-051-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-051-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-052-c01",
+      "nombre": "Código BS",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-052-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-052-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-053-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-053-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-053-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-053-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-053-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-054-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-054-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-054-c03",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-054-c04",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-054-c05",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-055-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-055-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-055-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-056-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-056-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-056-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-057-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-057-c02",
+      "nombre": "Código CY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-057-c03",
+      "nombre": "Código FC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-057-c04",
+      "nombre": "Código GC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-057-c05",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-058-c01",
+      "nombre": "Código BC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-058-c02",
+      "nombre": "Código CY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-058-c03",
+      "nombre": "Código FC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-058-c04",
+      "nombre": "Código GC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-058-c05",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c02",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c03",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c04",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c05",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c06",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c07",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-030-c08",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c02",
+      "nombre": "Código BU",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c03",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c05",
+      "nombre": "Código HG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c06",
+      "nombre": "Código MB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c07",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c08",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c09",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-031-c10",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-030-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-001-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-002-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-003-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-004-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-005-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-005-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-005-c03",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-005-c04",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-006-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-007-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-008-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-009-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-109-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-010-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-010-c02",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-010-c03",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-010-c04",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-011-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-011-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-011-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-010-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-011-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-001-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-002-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-003-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-004-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-005-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-006-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-007-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-008-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-008-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-008-c03",
+      "nombre": "Código ML",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-008-c04",
+      "nombre": "Código TL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-008-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-009-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-009-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-009-c03",
+      "nombre": "Código ML",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-009-c04",
+      "nombre": "Código TL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-009-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-010-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-010-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-010-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-011-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-011-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-011-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-110-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-110-c02",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-111-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-111-c02",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-112-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-112-c02",
+      "nombre": "Código GB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-059-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-059-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-059-c03",
+      "nombre": "Código ML",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-059-c04",
+      "nombre": "Código TL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-059-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-085-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-085-c02",
+      "nombre": "Código CB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-085-c03",
+      "nombre": "Código ML",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-085-c04",
+      "nombre": "Código TL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-085-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-012-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-013-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-014-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-014-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-014-c03",
+      "nombre": "Código FR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-014-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-014-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-015-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-016-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-016-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-016-c03",
+      "nombre": "Código FR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-016-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-016-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-017-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-018-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-018-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-018-c03",
+      "nombre": "Código FR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-018-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-018-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-019-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-019-c02",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-019-c03",
+      "nombre": "Código FR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-019-c04",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-019-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-002-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-002-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-002-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-002-c04",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-003-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-004-c01",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-004-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-113-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-113-c02",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-113-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-012-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-060-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-060-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-086-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-086-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-087-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-088-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-088-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-089-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-089-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-090-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-114-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-114-c02",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-090-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-090-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-091-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-020-c01",
+      "nombre": "Código BT",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-005-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-005-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-006-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-006-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-013-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-013-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-014-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-014-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-031-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-015-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-015-c02",
+      "nombre": "Código TN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-015-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-015-c04",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-015-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-016-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-016-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-017-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-018-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-019-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-019-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-019-c03",
+      "nombre": "Código RB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-019-c04",
+      "nombre": "Código RD",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-019-c05",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-020-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-021-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-021-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-021-c03",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-022-c01",
+      "nombre": "Código GY",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-022-c02",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-022-c03",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-022-c04",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-023-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-024-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-025-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-026-c01",
+      "nombre": "Código LB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-026-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-027-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-028-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-029-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-030-c01",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-022-c01",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-023-c01",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-032-c01",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-091-c01",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-092-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-092-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-092-c03",
+      "nombre": "Código O2",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-092-c04",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-092-c05",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-093-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-093-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-093-c03",
+      "nombre": "Código O2",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-093-c04",
+      "nombre": "Código OR",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-093-c05",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-061-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-062-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-094-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-094-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-095-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-095-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c03",
+      "nombre": "Código YC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c04",
+      "nombre": "Código YG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c05",
+      "nombre": "Código YN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-096-c06",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c01",
+      "nombre": "Código AB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c02",
+      "nombre": "Código HV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c03",
+      "nombre": "Código YC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c04",
+      "nombre": "Código YG",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c05",
+      "nombre": "Código YN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-097-c06",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-098-c01",
+      "nombre": "Código YC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-098-c02",
+      "nombre": "Código YN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-099-c01",
+      "nombre": "Código YC",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-099-c02",
+      "nombre": "Código YN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-006-c01",
+      "nombre": "Código YE",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-007-c01",
+      "nombre": "Código BW",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ma-007-c02",
+      "nombre": "Código DN",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-031-c01",
+      "nombre": "Código CH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-031-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-031-c03",
+      "nombre": "Código PB",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-032-c01",
+      "nombre": "Código BL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-032-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-033-c01",
+      "nombre": "Código BL",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-033-c02",
+      "nombre": "Código WH",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ov-024-c01",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-092-c01",
+      "nombre": "Código BK",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-092-c02",
+      "nombre": "Código NV",
+      "hex": "#9a9ca0"
     }
   ],
   "tecnicas": [
@@ -22041,6 +29016,23991 @@ export default {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-050",
+      "idPublico": "zn-go-050",
+      "sku": "ZN-GO-050",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de bebé con visera curva y ajuste · 100% algodón",
+      "nombreComercial": "Gorra de bebé con visera curva y ajuste · 100% algodón",
+      "nombreFamilia": "Gorra de bebé con visera curva y ajuste · 100% algodón",
+      "nombreFamiliaComercial": "Gorra de bebé con visera curva y ajuste · 100% algodón",
+      "familia": "zain-proveedor-zn-go-050",
+      "categoria": "Gorras",
+      "silueta": "Bebé",
+      "descripcion": "Gorra de bebé con visera curva y ajuste de velcro.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-050-c01",
+        "zn-go-050-c02",
+        "zn-go-050-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-051",
+      "idPublico": "zn-go-051",
+      "sku": "ZN-GO-051",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con ajuste de hebilla · 65% algodón, 35% poliéster",
+      "nombreComercial": "Gorra de visera curva con ajuste de hebilla · 65% algodón, 35% poliéster",
+      "nombreFamilia": "Gorra de visera curva con ajuste de hebilla · 65% algodón, 35% poliéster",
+      "nombreFamiliaComercial": "Gorra de visera curva con ajuste de hebilla · 65% algodón, 35% poliéster",
+      "familia": "zain-proveedor-zn-go-051",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con ajuste de hebilla.",
+      "especificaciones": "65% algodón, 35% poliéster. Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% algodón, 35% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-051-c01",
+        "zn-go-051-c02",
+        "zn-go-051-c03",
+        "zn-go-051-c04",
+        "zn-go-051-c05",
+        "zn-go-051-c06",
+        "zn-go-051-c07",
+        "zn-go-051-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-051-c07",
+        "zn-go-051-c08"
+      ]
+    },
+    {
+      "id": "zn-go-052",
+      "idPublico": "zn-go-052",
+      "sku": "ZN-GO-052",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de cinco gajos · 100% poliéster",
+      "nombreComercial": "Gorra de cinco gajos · 100% poliéster",
+      "nombreFamilia": "Gorra de cinco gajos · 100% poliéster",
+      "nombreFamiliaComercial": "Gorra de cinco gajos · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-052",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de cinco gajos, visera curva y ajuste de hebilla.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-052-c01",
+        "zn-go-052-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-053",
+      "idPublico": "zn-go-053",
+      "sku": "ZN-GO-053",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra",
+      "nombreComercial": "Gorra",
+      "nombreFamilia": "Gorra",
+      "nombreFamiliaComercial": "Gorra",
+      "familia": "zain-proveedor-zn-go-053",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-053-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-054",
+      "idPublico": "zn-go-054",
+      "sku": "ZN-GO-054",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra",
+      "nombreComercial": "Gorra",
+      "nombreFamilia": "Gorra",
+      "nombreFamiliaComercial": "Gorra",
+      "familia": "zain-proveedor-zn-go-054",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-054-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-055",
+      "idPublico": "zn-go-055",
+      "sku": "ZN-GO-055",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con franja en contraste · 100% algodón",
+      "nombreComercial": "Gorra de visera curva con franja en contraste · 100% algodón",
+      "nombreFamilia": "Gorra de visera curva con franja en contraste · 100% algodón",
+      "nombreFamiliaComercial": "Gorra de visera curva con franja en contraste · 100% algodón",
+      "familia": "zain-proveedor-zn-go-055",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con franja en contraste y ajuste de hebilla.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-055-c01",
+        "zn-go-055-c02",
+        "zn-go-055-c03",
+        "zn-go-055-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-055-c01",
+        "zn-go-055-c02",
+        "zn-go-055-c03",
+        "zn-go-055-c04"
+      ]
+    },
+    {
+      "id": "zn-go-056",
+      "idPublico": "zn-go-056",
+      "sku": "ZN-GO-056",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra jaspeada de visera curva y ajuste · 98% poliéster, 2% spandex",
+      "nombreComercial": "Gorra jaspeada de visera curva y ajuste · 98% poliéster, 2% spandex",
+      "nombreFamilia": "Gorra jaspeada de visera curva y ajuste · 98% poliéster, 2% spandex",
+      "nombreFamiliaComercial": "Gorra jaspeada de visera curva y ajuste · 98% poliéster, 2% spandex",
+      "familia": "zain-proveedor-zn-go-056",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra jaspeada de visera curva y ajuste de velcro.",
+      "especificaciones": "98% poliéster, 2% spandex. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "98% poliéster, 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-056-c01",
+        "zn-go-056-c02",
+        "zn-go-056-c03",
+        "zn-go-056-c04",
+        "zn-go-056-c05",
+        "zn-go-056-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-056-c01",
+        "zn-go-056-c02",
+        "zn-go-056-c03",
+        "zn-go-056-c04",
+        "zn-go-056-c05",
+        "zn-go-056-c06"
+      ]
+    },
+    {
+      "id": "zn-go-057",
+      "idPublico": "zn-go-057",
+      "sku": "ZN-GO-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · tela stretch",
+      "nombreComercial": "Gorra de visera curva · tela stretch",
+      "nombreFamilia": "Gorra de visera curva · tela stretch",
+      "nombreFamiliaComercial": "Gorra de visera curva · tela stretch",
+      "familia": "zain-proveedor-zn-go-057",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, tela stretch, ajuste y ojal metálico.",
+      "especificaciones": "Tela stretch. 100% poliéster. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-057-c01",
+        "zn-go-057-c02",
+        "zn-go-057-c03",
+        "zn-go-057-c04",
+        "zn-go-057-c05",
+        "zn-go-057-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-058",
+      "idPublico": "zn-go-058",
+      "sku": "ZN-GO-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera plana con ajuste de plástico · 100% algodón",
+      "nombreComercial": "Gorra de visera plana con ajuste de plástico · 100% algodón",
+      "nombreFamilia": "Gorra de visera plana con ajuste de plástico · 100% algodón",
+      "nombreFamiliaComercial": "Gorra de visera plana con ajuste de plástico · 100% algodón",
+      "familia": "zain-proveedor-zn-go-058",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera plana con ajuste de plástico.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-058-c01",
+        "zn-go-058-c02",
+        "zn-go-058-c03",
+        "zn-go-058-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-059",
+      "idPublico": "zn-go-059",
+      "sku": "ZN-GO-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra jaspeada de visera plana y ajuste · 98% poliéster, 2% spandex",
+      "nombreComercial": "Gorra jaspeada de visera plana y ajuste · 98% poliéster, 2% spandex",
+      "nombreFamilia": "Gorra jaspeada de visera plana y ajuste · 98% poliéster, 2% spandex",
+      "nombreFamiliaComercial": "Gorra jaspeada de visera plana y ajuste · 98% poliéster, 2% spandex",
+      "familia": "zain-proveedor-zn-go-059",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra jaspeada de visera plana y ajuste de velcro.",
+      "especificaciones": "98% poliéster, 2% spandex. Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "98% poliéster, 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-059-c01",
+        "zn-go-059-c02",
+        "zn-go-059-c03",
+        "zn-go-059-c04",
+        "zn-go-059-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-059-c01",
+        "zn-go-059-c02",
+        "zn-go-059-c03",
+        "zn-go-059-c04",
+        "zn-go-059-c05"
+      ]
+    },
+    {
+      "id": "zn-go-060",
+      "idPublico": "zn-go-060",
+      "sku": "ZN-GO-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra deslavada · tela pigmentada",
+      "nombreComercial": "Gorra deslavada · tela pigmentada",
+      "nombreFamilia": "Gorra deslavada · tela pigmentada",
+      "nombreFamiliaComercial": "Gorra deslavada · tela pigmentada",
+      "familia": "zain-proveedor-zn-go-060",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra deslavada, visera curva y ajuste de velcro.",
+      "especificaciones": "Tela pigmentada. 100% algodón. Unitalla o ajustable. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-060-c01",
+        "zn-go-060-c02",
+        "zn-go-060-c03",
+        "zn-go-060-c04",
+        "zn-go-060-c05",
+        "zn-go-060-c06",
+        "zn-go-060-c07",
+        "zn-go-060-c08",
+        "zn-go-060-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-060-c01",
+        "zn-go-060-c02",
+        "zn-go-060-c03",
+        "zn-go-060-c04",
+        "zn-go-060-c05",
+        "zn-go-060-c06",
+        "zn-go-060-c07",
+        "zn-go-060-c08",
+        "zn-go-060-c09"
+      ]
+    },
+    {
+      "id": "zn-go-061",
+      "idPublico": "zn-go-061",
+      "sku": "ZN-GO-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra deslavada combinada · tela pigmentada",
+      "nombreComercial": "Gorra deslavada combinada · tela pigmentada",
+      "nombreFamilia": "Gorra deslavada combinada · tela pigmentada",
+      "nombreFamiliaComercial": "Gorra deslavada combinada · tela pigmentada",
+      "familia": "zain-proveedor-zn-go-061",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra deslavada combinada, visera curva y ajuste de velcro.",
+      "especificaciones": "Tela pigmentada. 100% algodón. Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-061-c01",
+        "zn-go-061-c02",
+        "zn-go-061-c03",
+        "zn-go-061-c04",
+        "zn-go-061-c05",
+        "zn-go-061-c06",
+        "zn-go-061-c07",
+        "zn-go-061-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-061-c01",
+        "zn-go-061-c02",
+        "zn-go-061-c03",
+        "zn-go-061-c04",
+        "zn-go-061-c05",
+        "zn-go-061-c06",
+        "zn-go-061-c07",
+        "zn-go-061-c08"
+      ]
+    },
+    {
+      "id": "zn-go-062",
+      "idPublico": "zn-go-062",
+      "sku": "ZN-GO-062",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra trucker de visera curva",
+      "nombreComercial": "Gorra trucker de visera curva",
+      "nombreFamilia": "Gorra trucker de visera curva",
+      "nombreFamiliaComercial": "Gorra trucker de visera curva",
+      "familia": "zain-proveedor-zn-go-062",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra trucker de visera curva, frente pigmentado, malla blanca de nylon y ajuste de velcro.",
+      "especificaciones": "Tela pigmentada y malla de nylon. 100% algodón; malla de nylon (porcentajes del conjunto no indicados). Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón; malla de nylon (porcentajes del conjunto no indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-062-c01",
+        "zn-go-062-c02",
+        "zn-go-062-c03",
+        "zn-go-062-c04",
+        "zn-go-062-c05",
+        "zn-go-062-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-062-c01",
+        "zn-go-062-c02",
+        "zn-go-062-c03",
+        "zn-go-062-c04",
+        "zn-go-062-c05",
+        "zn-go-062-c06"
+      ]
+    },
+    {
+      "id": "zn-go-063",
+      "idPublico": "zn-go-063",
+      "sku": "ZN-GO-063",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sombrero de ala perimetral y ojillos · tela pigmentada",
+      "nombreComercial": "Sombrero de ala perimetral y ojillos · tela pigmentada",
+      "nombreFamilia": "Sombrero de ala perimetral y ojillos · tela pigmentada",
+      "nombreFamiliaComercial": "Sombrero de ala perimetral y ojillos · tela pigmentada",
+      "familia": "zain-proveedor-zn-go-063",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Sombrero de ala perimetral y ojillos de ventilación, acabado pigmentado.",
+      "especificaciones": "Tela pigmentada. 100% algodón. Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-063-c01",
+        "zn-go-063-c02",
+        "zn-go-063-c03",
+        "zn-go-063-c04",
+        "zn-go-063-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-063-c01",
+        "zn-go-063-c02",
+        "zn-go-063-c03",
+        "zn-go-063-c04",
+        "zn-go-063-c05"
+      ]
+    },
+    {
+      "id": "zn-go-064",
+      "idPublico": "zn-go-064",
+      "sku": "ZN-GO-064",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con ajuste de velcro · 100% acrílico",
+      "nombreComercial": "Gorra de visera curva con ajuste de velcro · 100% acrílico",
+      "nombreFamilia": "Gorra de visera curva con ajuste de velcro · 100% acrílico",
+      "nombreFamiliaComercial": "Gorra de visera curva con ajuste de velcro · 100% acrílico",
+      "familia": "zain-proveedor-zn-go-064",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con ajuste de velcro.",
+      "especificaciones": "100% acrílico. Unitalla o ajustable. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% acrílico",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-064-c01",
+        "zn-go-064-c02",
+        "zn-go-064-c03",
+        "zn-go-064-c04",
+        "zn-go-064-c05",
+        "zn-go-064-c06",
+        "zn-go-064-c07",
+        "zn-go-064-c08",
+        "zn-go-064-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-065",
+      "idPublico": "zn-go-065",
+      "sku": "ZN-GO-065",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de cinco gajos · 100% acrílico",
+      "nombreComercial": "Gorra de cinco gajos · 100% acrílico",
+      "nombreFamilia": "Gorra de cinco gajos · 100% acrílico",
+      "nombreFamiliaComercial": "Gorra de cinco gajos · 100% acrílico",
+      "familia": "zain-proveedor-zn-go-065",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de cinco gajos, visera curva y ajuste de velcro.",
+      "especificaciones": "100% acrílico. Unitalla o ajustable. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% acrílico",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-065-c01",
+        "zn-go-065-c02",
+        "zn-go-065-c03",
+        "zn-go-065-c04",
+        "zn-go-065-c05",
+        "zn-go-065-c06",
+        "zn-go-065-c07",
+        "zn-go-065-c08",
+        "zn-go-065-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-066",
+      "idPublico": "zn-go-066",
+      "sku": "ZN-GO-066",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Visera abierta con ajuste de velcro · 100% algodón",
+      "nombreComercial": "Visera abierta con ajuste de velcro · 100% algodón",
+      "nombreFamilia": "Visera abierta con ajuste de velcro · 100% algodón",
+      "nombreFamiliaComercial": "Visera abierta con ajuste de velcro · 100% algodón",
+      "familia": "zain-proveedor-zn-go-066",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Visera abierta con ajuste de velcro.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-066-c01",
+        "zn-go-066-c02",
+        "zn-go-066-c03",
+        "zn-go-066-c04",
+        "zn-go-066-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-067",
+      "idPublico": "zn-go-067",
+      "sku": "ZN-GO-067",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra trucker de visera curva",
+      "nombreComercial": "Gorra trucker de visera curva",
+      "nombreFamilia": "Gorra trucker de visera curva",
+      "nombreFamiliaComercial": "Gorra trucker de visera curva",
+      "familia": "zain-proveedor-zn-go-067",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra trucker de visera curva, malla de nylon y ajuste de plástico con bandera.",
+      "especificaciones": "Mezcla de algodón/poliéster y malla de nylon. 50% algodón, 50% poliéster; malla de nylon (porcentajes del conjunto no indicados). Unitalla o ajustable. 13 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón, 50% poliéster; malla de nylon (porcentajes del conjunto no indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-067-c01",
+        "zn-go-067-c02",
+        "zn-go-067-c03",
+        "zn-go-067-c04",
+        "zn-go-067-c05",
+        "zn-go-067-c06",
+        "zn-go-067-c07",
+        "zn-go-067-c08",
+        "zn-go-067-c09",
+        "zn-go-067-c10",
+        "zn-go-067-c11",
+        "zn-go-067-c12",
+        "zn-go-067-c13"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-067-c02",
+        "zn-go-067-c03",
+        "zn-go-067-c04",
+        "zn-go-067-c05",
+        "zn-go-067-c06",
+        "zn-go-067-c07",
+        "zn-go-067-c08",
+        "zn-go-067-c09",
+        "zn-go-067-c10",
+        "zn-go-067-c11",
+        "zn-go-067-c12",
+        "zn-go-067-c13"
+      ]
+    },
+    {
+      "id": "zn-go-068",
+      "idPublico": "zn-go-068",
+      "sku": "ZN-GO-068",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra",
+      "nombreComercial": "Gorra",
+      "nombreFamilia": "Gorra",
+      "nombreFamiliaComercial": "Gorra",
+      "familia": "zain-proveedor-zn-go-068",
+      "categoria": "Gorras",
+      "silueta": "Juvenil",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-068-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-069",
+      "idPublico": "zn-go-069",
+      "sku": "ZN-GO-069",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra trucker con frente de poliéster · poliéster y malla de nylon",
+      "nombreComercial": "Gorra trucker con frente de poliéster · poliéster y malla de nylon",
+      "nombreFamilia": "Gorra trucker con frente de poliéster · poliéster y malla de nylon",
+      "nombreFamiliaComercial": "Gorra trucker con frente de poliéster · poliéster y malla de nylon",
+      "familia": "zain-proveedor-zn-go-069",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra trucker con frente de poliéster, malla de nylon y ajuste de plástico.",
+      "especificaciones": "Poliéster y malla de nylon. 100% poliéster; malla de nylon (porcentajes del conjunto no indicados). Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster; malla de nylon (porcentajes del conjunto no indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-069-c01",
+        "zn-go-069-c02",
+        "zn-go-069-c03",
+        "zn-go-069-c04",
+        "zn-go-069-c05",
+        "zn-go-069-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-070",
+      "idPublico": "zn-go-070",
+      "sku": "ZN-GO-070",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra trucker combinada con malla de nylon · poliéster y malla de nylon",
+      "nombreComercial": "Gorra trucker combinada con malla de nylon · poliéster y malla de nylon",
+      "nombreFamilia": "Gorra trucker combinada con malla de nylon · poliéster y malla de nylon",
+      "nombreFamiliaComercial": "Gorra trucker combinada con malla de nylon · poliéster y malla de nylon",
+      "familia": "zain-proveedor-zn-go-070",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra trucker combinada con malla de nylon y ajuste de plástico.",
+      "especificaciones": "Poliéster y malla de nylon. 100% poliéster; malla de nylon (porcentajes del conjunto no indicados). Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster; malla de nylon (porcentajes del conjunto no indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-070-c01",
+        "zn-go-070-c02",
+        "zn-go-070-c03",
+        "zn-go-070-c04",
+        "zn-go-070-c05",
+        "zn-go-070-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-070-c01",
+        "zn-go-070-c02",
+        "zn-go-070-c03",
+        "zn-go-070-c04",
+        "zn-go-070-c05",
+        "zn-go-070-c06"
+      ]
+    },
+    {
+      "id": "zn-go-071",
+      "idPublico": "zn-go-071",
+      "sku": "ZN-GO-071",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra deportiva de visera curva · microfibra de poliéster",
+      "nombreComercial": "Gorra deportiva de visera curva · microfibra de poliéster",
+      "nombreFamilia": "Gorra deportiva de visera curva · microfibra de poliéster",
+      "nombreFamiliaComercial": "Gorra deportiva de visera curva · microfibra de poliéster",
+      "familia": "zain-proveedor-zn-go-071",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra deportiva de visera curva, respiradores laterales y ajuste de cinturón de velcro.",
+      "especificaciones": "Microfibra de poliéster. 100% microfibra de poliéster. Unitalla o ajustable. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% microfibra de poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-071-c01",
+        "zn-go-071-c02",
+        "zn-go-071-c03",
+        "zn-go-071-c04",
+        "zn-go-071-c05",
+        "zn-go-071-c06",
+        "zn-go-071-c07"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-071-c01",
+        "zn-go-071-c02",
+        "zn-go-071-c03",
+        "zn-go-071-c04",
+        "zn-go-071-c05",
+        "zn-go-071-c06",
+        "zn-go-071-c07"
+      ]
+    },
+    {
+      "id": "zn-go-072",
+      "idPublico": "zn-go-072",
+      "sku": "ZN-GO-072",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · 100% poliéster",
+      "nombreComercial": "Gorra de visera curva · 100% poliéster",
+      "nombreFamilia": "Gorra de visera curva · 100% poliéster",
+      "nombreFamiliaComercial": "Gorra de visera curva · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-072",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, perforaciones laterales/traseras y ajuste de cinturón de velcro.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-072-c01",
+        "zn-go-072-c02",
+        "zn-go-072-c03",
+        "zn-go-072-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-072-c04"
+      ]
+    },
+    {
+      "id": "zn-go-073",
+      "idPublico": "zn-go-073",
+      "sku": "ZN-GO-073",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de cinco gajos con cubrenuca · 100% algodón",
+      "nombreComercial": "Gorra de cinco gajos con cubrenuca · 100% algodón",
+      "nombreFamilia": "Gorra de cinco gajos con cubrenuca · 100% algodón",
+      "nombreFamiliaComercial": "Gorra de cinco gajos con cubrenuca · 100% algodón",
+      "familia": "zain-proveedor-zn-go-073",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de cinco gajos con cubrenuca, respiradores metálicos y ajuste de cordón.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-073-c01",
+        "zn-go-073-c02",
+        "zn-go-073-c03",
+        "zn-go-073-c04",
+        "zn-go-073-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-074",
+      "idPublico": "zn-go-074",
+      "sku": "ZN-GO-074",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada tipo máscara · 100% algodón",
+      "nombreComercial": "Gorra cerrada tipo máscara · 100% algodón",
+      "nombreFamilia": "Gorra cerrada tipo máscara · 100% algodón",
+      "nombreFamiliaComercial": "Gorra cerrada tipo máscara · 100% algodón",
+      "familia": "zain-proveedor-zn-go-074",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada tipo máscara, con abertura facial y contornos de ojos en contraste.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-074-c01",
+        "zn-go-074-c02",
+        "zn-go-074-c03",
+        "zn-go-074-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-074-c01",
+        "zn-go-074-c02",
+        "zn-go-074-c03",
+        "zn-go-074-c04"
+      ]
+    },
+    {
+      "id": "zn-go-075",
+      "idPublico": "zn-go-075",
+      "sku": "ZN-GO-075",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada juvenil tipo máscara · 100% algodón",
+      "nombreComercial": "Gorra cerrada juvenil tipo máscara · 100% algodón",
+      "nombreFamilia": "Gorra cerrada juvenil tipo máscara · 100% algodón",
+      "nombreFamiliaComercial": "Gorra cerrada juvenil tipo máscara · 100% algodón",
+      "familia": "zain-proveedor-zn-go-075",
+      "categoria": "Gorras",
+      "silueta": "Juvenil",
+      "descripcion": "Gorra cerrada juvenil tipo máscara, con abertura facial y contornos de ojos en contraste.",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-075-c01",
+        "zn-go-075-c02",
+        "zn-go-075-c03",
+        "zn-go-075-c04",
+        "zn-go-075-c05",
+        "zn-go-075-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-075-c01",
+        "zn-go-075-c02",
+        "zn-go-075-c03",
+        "zn-go-075-c04",
+        "zn-go-075-c05",
+        "zn-go-075-c06"
+      ]
+    },
+    {
+      "id": "zn-bo-014",
+      "idPublico": "zn-bo-014",
+      "sku": "ZN-BO-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Morral de jareta · % poliéster",
+      "nombreComercial": "Morral de jareta · % poliéster",
+      "nombreFamilia": "Morral de jareta · % poliéster",
+      "nombreFamiliaComercial": "Morral de jareta · % poliéster",
+      "familia": "zain-proveedor-zn-bo-014",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Morral de jareta, cordón hueco de 5 mm, refuerzos de vinipiel y carga declarada de 7 kg.",
+      "especificaciones": "% poliéster. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-014-c01",
+        "zn-bo-014-c02",
+        "zn-bo-014-c03",
+        "zn-bo-014-c04",
+        "zn-bo-014-c05",
+        "zn-bo-014-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-015",
+      "idPublico": "zn-bo-015",
+      "sku": "ZN-BO-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsa con asas y fuelle · non-woven",
+      "nombreComercial": "Bolsa con asas y fuelle · non-woven",
+      "nombreFamilia": "Bolsa con asas y fuelle · non-woven",
+      "nombreFamiliaComercial": "Bolsa con asas y fuelle · non-woven",
+      "familia": "zain-proveedor-zn-bo-015",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Bolsa con asas y fuelle; carga declarada de 10 a 15 kg.",
+      "especificaciones": "Non-woven. 50% algodón, 50% poliéster (texto del catálogo). Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón, 50% poliéster (texto del catálogo)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-015-c01",
+        "zn-bo-015-c02",
+        "zn-bo-015-c03",
+        "zn-bo-015-c04",
+        "zn-bo-015-c05",
+        "zn-bo-015-c06",
+        "zn-bo-015-c07",
+        "zn-bo-015-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-016",
+      "idPublico": "zn-bo-016",
+      "sku": "ZN-BO-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mochila con compartimento para computadora · loneta",
+      "nombreComercial": "Mochila con compartimento para computadora · loneta",
+      "nombreFamilia": "Mochila con compartimento para computadora · loneta",
+      "nombreFamiliaComercial": "Mochila con compartimento para computadora · loneta",
+      "familia": "zain-proveedor-zn-bo-016",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Mochila con compartimento para computadora, líneas reflejantes y carga declarada de 17 kg.",
+      "especificaciones": "Loneta. 100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-016-c01",
+        "zn-bo-016-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-bo-016-c01",
+        "zn-bo-016-c02"
+      ]
+    },
+    {
+      "id": "zn-ot-001",
+      "idPublico": "zn-ot-001",
+      "sku": "ZN-OT-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-001",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-001-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-017",
+      "idPublico": "zn-bo-017",
+      "sku": "ZN-BO-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mochila con compartimento para computadora · loneta",
+      "nombreComercial": "Mochila con compartimento para computadora · loneta",
+      "nombreFamilia": "Mochila con compartimento para computadora · loneta",
+      "nombreFamiliaComercial": "Mochila con compartimento para computadora · loneta",
+      "familia": "zain-proveedor-zn-bo-017",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Mochila con compartimento para computadora, detalle de gamuza y carga declarada de 17 kg.",
+      "especificaciones": "Loneta. 100% poliéster. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-017-c01",
+        "zn-bo-017-c02",
+        "zn-bo-017-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-bo-017-c01",
+        "zn-bo-017-c02",
+        "zn-bo-017-c03"
+      ]
+    },
+    {
+      "id": "zn-bo-018",
+      "idPublico": "zn-bo-018",
+      "sku": "ZN-BO-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mochila con compartimento para computadora · loneta",
+      "nombreComercial": "Mochila con compartimento para computadora · loneta",
+      "nombreFamilia": "Mochila con compartimento para computadora · loneta",
+      "nombreFamiliaComercial": "Mochila con compartimento para computadora · loneta",
+      "familia": "zain-proveedor-zn-bo-018",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Mochila con compartimento para computadora, asa de aluminio y carga declarada de 17 kg.",
+      "especificaciones": "Loneta. 100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-018-c01",
+        "zn-bo-018-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-bo-018-c01",
+        "zn-bo-018-c02"
+      ]
+    },
+    {
+      "id": "zn-bo-019",
+      "idPublico": "zn-bo-019",
+      "sku": "ZN-BO-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mochila con compartimento para computadora · loneta",
+      "nombreComercial": "Mochila con compartimento para computadora · loneta",
+      "nombreFamilia": "Mochila con compartimento para computadora · loneta",
+      "nombreFamiliaComercial": "Mochila con compartimento para computadora · loneta",
+      "familia": "zain-proveedor-zn-bo-019",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Mochila con compartimento para computadora, bolsa frontal de PVC y carga declarada de 17 kg.",
+      "especificaciones": "Loneta. 100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-019-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-bo-019-c01"
+      ]
+    },
+    {
+      "id": "zn-bo-020",
+      "idPublico": "zn-bo-020",
+      "sku": "ZN-BO-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mochila con compartimento para computadora · loneta",
+      "nombreComercial": "Mochila con compartimento para computadora · loneta",
+      "nombreFamilia": "Mochila con compartimento para computadora · loneta",
+      "nombreFamiliaComercial": "Mochila con compartimento para computadora · loneta",
+      "familia": "zain-proveedor-zn-bo-020",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Mochila con compartimento para computadora, cierre vertical y carga declarada de 17 kg.",
+      "especificaciones": "Loneta. 100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-020-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-bo-020-c01"
+      ]
+    },
+    {
+      "id": "zn-bo-021",
+      "idPublico": "zn-bo-021",
+      "sku": "ZN-BO-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsa",
+      "nombreComercial": "Bolsa",
+      "nombreFamilia": "Bolsa",
+      "nombreFamiliaComercial": "Bolsa",
+      "familia": "zain-proveedor-zn-bo-021",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-021-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-tv-001",
+      "idPublico": "zn-tv-001",
+      "sku": "ZN-TV-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Botella térmica con tapa de rosca y asa abatible",
+      "nombreComercial": "Botella térmica con tapa de rosca y asa abatible",
+      "nombreFamilia": "Botella térmica con tapa de rosca y asa abatible",
+      "nombreFamiliaComercial": "Botella térmica con tapa de rosca y asa abatible",
+      "familia": "zain-proveedor-zn-tv-001",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Botella térmica con tapa de rosca y asa abatible. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-001-c01",
+        "zn-tv-001-c02",
+        "zn-tv-001-c03",
+        "zn-tv-001-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-tv-002",
+      "idPublico": "zn-tv-002",
+      "sku": "ZN-TV-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Botella térmica cilíndrica con tapa de rosca",
+      "nombreComercial": "Botella térmica cilíndrica con tapa de rosca",
+      "nombreFamilia": "Botella térmica cilíndrica con tapa de rosca",
+      "nombreFamiliaComercial": "Botella térmica cilíndrica con tapa de rosca",
+      "familia": "zain-proveedor-zn-tv-002",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Botella térmica cilíndrica con tapa de rosca y asa abatible. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-002-c01",
+        "zn-tv-002-c02",
+        "zn-tv-002-c03",
+        "zn-tv-002-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-tv-003",
+      "idPublico": "zn-tv-003",
+      "sku": "ZN-TV-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Botella térmica de cuello estrecho con tapa",
+      "nombreComercial": "Botella térmica de cuello estrecho con tapa",
+      "nombreFamilia": "Botella térmica de cuello estrecho con tapa",
+      "nombreFamiliaComercial": "Botella térmica de cuello estrecho con tapa",
+      "familia": "zain-proveedor-zn-tv-003",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Botella térmica de cuello estrecho con tapa de rosca. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-003-c01",
+        "zn-tv-003-c02",
+        "zn-tv-003-c03",
+        "zn-tv-003-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-tv-004",
+      "idPublico": "zn-tv-004",
+      "sku": "ZN-TV-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Vaso térmico cónico con tapa transparente",
+      "nombreComercial": "Vaso térmico cónico con tapa transparente",
+      "nombreFamilia": "Vaso térmico cónico con tapa transparente",
+      "nombreFamiliaComercial": "Vaso térmico cónico con tapa transparente",
+      "familia": "zain-proveedor-zn-tv-004",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Vaso térmico cónico con tapa transparente. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-004-c01",
+        "zn-tv-004-c02",
+        "zn-tv-004-c03",
+        "zn-tv-004-c04",
+        "zn-tv-004-c05",
+        "zn-tv-004-c06",
+        "zn-tv-004-c07",
+        "zn-tv-004-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-tv-004-c08"
+      ]
+    },
+    {
+      "id": "zn-tv-005",
+      "idPublico": "zn-tv-005",
+      "sku": "ZN-TV-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Vaso térmico con base estrecha y tapa",
+      "nombreComercial": "Vaso térmico con base estrecha y tapa",
+      "nombreFamilia": "Vaso térmico con base estrecha y tapa",
+      "nombreFamiliaComercial": "Vaso térmico con base estrecha y tapa",
+      "familia": "zain-proveedor-zn-tv-005",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Vaso térmico con base estrecha y tapa transparente con cierre. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-005-c01",
+        "zn-tv-005-c02",
+        "zn-tv-005-c03",
+        "zn-tv-005-c04",
+        "zn-tv-005-c05",
+        "zn-tv-005-c06",
+        "zn-tv-005-c07",
+        "zn-tv-005-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-tv-005-c08"
+      ]
+    },
+    {
+      "id": "zn-tv-006",
+      "idPublico": "zn-tv-006",
+      "sku": "ZN-TV-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Botella térmica de cuello estrecho con tapa",
+      "nombreComercial": "Botella térmica de cuello estrecho con tapa",
+      "nombreFamilia": "Botella térmica de cuello estrecho con tapa",
+      "nombreFamiliaComercial": "Botella térmica de cuello estrecho con tapa",
+      "familia": "zain-proveedor-zn-tv-006",
+      "categoria": "Termos y vasos",
+      "silueta": "Unisex",
+      "descripcion": "Botella térmica de cuello estrecho con tapa metálica de rosca. Doble pared 304/201; libre de BPA.",
+      "especificaciones": "Acero inoxidable y silicón (sin porcentajes indicados). Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Acero inoxidable y silicón (sin porcentajes indicados)",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-tv-006-c01",
+        "zn-tv-006-c02",
+        "zn-tv-006-c03",
+        "zn-tv-006-c04",
+        "zn-tv-006-c05",
+        "zn-tv-006-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-002",
+      "idPublico": "zn-ot-002",
+      "sku": "ZN-OT-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-002",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-002-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-003",
+      "idPublico": "zn-ot-003",
+      "sku": "ZN-OT-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-003",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-003-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-004",
+      "idPublico": "zn-ot-004",
+      "sku": "ZN-OT-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-004",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-004-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-005",
+      "idPublico": "zn-ot-005",
+      "sku": "ZN-OT-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-005",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-005-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-006",
+      "idPublico": "zn-ot-006",
+      "sku": "ZN-OT-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-006",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-006-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-007",
+      "idPublico": "zn-ot-007",
+      "sku": "ZN-OT-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-007",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-007-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-076",
+      "idPublico": "zn-go-076",
+      "sku": "ZN-GO-076",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva · 87% nylon, 13% spandex",
+      "nombreComercial": "Gorra cerrada de visera curva · 87% nylon, 13% spandex",
+      "nombreFamilia": "Gorra cerrada de visera curva · 87% nylon, 13% spandex",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva · 87% nylon, 13% spandex",
+      "familia": "zain-proveedor-zn-go-076",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva, repelente y unida a calor.",
+      "especificaciones": "87% Nylon, 13% Spandex. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "87% Nylon, 13% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-076-c01",
+        "zn-go-076-c02",
+        "zn-go-076-c03",
+        "zn-go-076-c04",
+        "zn-go-076-c05",
+        "zn-go-076-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-077",
+      "idPublico": "zn-go-077",
+      "sku": "ZN-GO-077",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con ajuste de cinturón · 87% nylon, 13% spandex",
+      "nombreComercial": "Gorra de visera curva con ajuste de cinturón · 87% nylon, 13% spandex",
+      "nombreFamilia": "Gorra de visera curva con ajuste de cinturón · 87% nylon, 13% spandex",
+      "nombreFamiliaComercial": "Gorra de visera curva con ajuste de cinturón · 87% nylon, 13% spandex",
+      "familia": "zain-proveedor-zn-go-077",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con ajuste de cinturón de velcro, repelente y unida a calor.",
+      "especificaciones": "87% Nylon, 13% Spandex. Unitalla o ajustable. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "87% Nylon, 13% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-077-c01",
+        "zn-go-077-c02",
+        "zn-go-077-c03",
+        "zn-go-077-c04",
+        "zn-go-077-c05"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-078",
+      "idPublico": "zn-go-078",
+      "sku": "ZN-GO-078",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de 5 paneles y visera curva · malla acojinada",
+      "nombreComercial": "Gorra de 5 paneles y visera curva · malla acojinada",
+      "nombreFamilia": "Gorra de 5 paneles y visera curva · malla acojinada",
+      "nombreFamiliaComercial": "Gorra de 5 paneles y visera curva · malla acojinada",
+      "familia": "zain-proveedor-zn-go-078",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de 5 paneles y visera curva, con malla acojinada. La foto negra muestra estampado de la bandera de México bajo la visera.",
+      "especificaciones": "Malla acojinada. 80% Algodón, 20% Poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% Algodón, 20% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-078-c01",
+        "zn-go-078-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-078-c02"
+      ]
+    },
+    {
+      "id": "zn-go-079",
+      "idPublico": "zn-go-079",
+      "sku": "ZN-GO-079",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · 100% poliéster",
+      "nombreComercial": "Gorra de visera curva · 100% poliéster",
+      "nombreFamilia": "Gorra de visera curva · 100% poliéster",
+      "nombreFamiliaComercial": "Gorra de visera curva · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-079",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, laterales en microperforado láser, repelente y con ajuste de cinturón de velcro.",
+      "especificaciones": "100% Poliéster. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-079-c01",
+        "zn-go-079-c02",
+        "zn-go-079-c03",
+        "zn-go-079-c04",
+        "zn-go-079-c05",
+        "zn-go-079-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-080",
+      "idPublico": "zn-go-080",
+      "sku": "ZN-GO-080",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva",
+      "nombreComercial": "Gorra cerrada de visera curva",
+      "nombreFamilia": "Gorra cerrada de visera curva",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva",
+      "familia": "zain-proveedor-zn-go-080",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva, frente y visera jaspeados y malla premium oscura en laterales y parte trasera.",
+      "especificaciones": "Malla premium; frente jaspeado. 60% Poliéster, 32% Nylon, 8% Spandex. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% Poliéster, 32% Nylon, 8% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-080-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-080-c01"
+      ]
+    },
+    {
+      "id": "zn-go-081",
+      "idPublico": "zn-go-081",
+      "sku": "ZN-GO-081",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva",
+      "nombreComercial": "Gorra de visera curva",
+      "nombreFamilia": "Gorra de visera curva",
+      "nombreFamiliaComercial": "Gorra de visera curva",
+      "familia": "zain-proveedor-zn-go-081",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, frente y visera jaspeados, malla premium oscura y ajuste de cinturón de velcro.",
+      "especificaciones": "Malla premium; frente jaspeado. 60% Poliéster, 32% Nylon, 8% Spandex. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% Poliéster, 32% Nylon, 8% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-081-c01",
+        "zn-go-081-c02",
+        "zn-go-081-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-081-c01",
+        "zn-go-081-c02",
+        "zn-go-081-c03"
+      ]
+    },
+    {
+      "id": "zn-go-082",
+      "idPublico": "zn-go-082",
+      "sku": "ZN-GO-082",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera plana y tela jaspeada",
+      "nombreComercial": "Gorra cerrada de visera plana y tela jaspeada",
+      "nombreFamilia": "Gorra cerrada de visera plana y tela jaspeada",
+      "nombreFamiliaComercial": "Gorra cerrada de visera plana y tela jaspeada",
+      "familia": "zain-proveedor-zn-go-082",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera plana y tela jaspeada.",
+      "especificaciones": "Jaspeada. 65% Poliéster, 33% Rayon, 2% Spandex. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% Poliéster, 33% Rayon, 2% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-082-c01",
+        "zn-go-082-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-082-c01",
+        "zn-go-082-c02"
+      ]
+    },
+    {
+      "id": "zn-go-083",
+      "idPublico": "zn-go-083",
+      "sku": "ZN-GO-083",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva con ajuste metálico",
+      "nombreComercial": "Gorra de visera curva con ajuste metálico",
+      "nombreFamilia": "Gorra de visera curva con ajuste metálico",
+      "nombreFamiliaComercial": "Gorra de visera curva con ajuste metálico",
+      "familia": "zain-proveedor-zn-go-083",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva con ajuste metálico; disponible en jaspeados y negro liso.",
+      "especificaciones": "Jaspeada en colores 119 y 178; nombre del tejido no indicado para Negro 104. 65% Poliéster, 33% Rayon, 2% Spandex. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% Poliéster, 33% Rayon, 2% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-083-c01",
+        "zn-go-083-c02",
+        "zn-go-083-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-go-083-c01",
+        "zn-go-083-c02"
+      ]
+    },
+    {
+      "id": "zn-go-084",
+      "idPublico": "zn-go-084",
+      "sku": "ZN-GO-084",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · stretch",
+      "nombreComercial": "Gorra de visera curva · stretch",
+      "nombreFamilia": "Gorra de visera curva · stretch",
+      "nombreFamiliaComercial": "Gorra de visera curva · stretch",
+      "familia": "zain-proveedor-zn-go-084",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, tela stretch y ajuste metálico con ojal.",
+      "especificaciones": "Stretch. 97% Algodón, 3% Spandex. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% Algodón, 3% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-084-c01",
+        "zn-go-084-c02",
+        "zn-go-084-c03",
+        "zn-go-084-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-085",
+      "idPublico": "zn-go-085",
+      "sku": "ZN-GO-085",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra cerrada de visera curva y tela con textura",
+      "nombreComercial": "Gorra cerrada de visera curva y tela con textura",
+      "nombreFamilia": "Gorra cerrada de visera curva y tela con textura",
+      "nombreFamiliaComercial": "Gorra cerrada de visera curva y tela con textura",
+      "familia": "zain-proveedor-zn-go-085",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra cerrada de visera curva y tela con textura.",
+      "especificaciones": "Tela con textura. 97% Poliéster, 3% Spandex. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% Poliéster, 3% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-085-c01",
+        "zn-go-085-c02",
+        "zn-go-085-c03",
+        "zn-go-085-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-086",
+      "idPublico": "zn-go-086",
+      "sku": "ZN-GO-086",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · tela con textura",
+      "nombreComercial": "Gorra de visera curva · tela con textura",
+      "nombreFamilia": "Gorra de visera curva · tela con textura",
+      "nombreFamiliaComercial": "Gorra de visera curva · tela con textura",
+      "familia": "zain-proveedor-zn-go-086",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, tela con textura y ajuste deportivo con bandera.",
+      "especificaciones": "Tela con textura. 97% Poliéster, 3% Spandex. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% Poliéster, 3% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-086-c01",
+        "zn-go-086-c02",
+        "zn-go-086-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-087",
+      "idPublico": "zn-go-087",
+      "sku": "ZN-GO-087",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva · stretch",
+      "nombreComercial": "Gorra de visera curva · stretch",
+      "nombreFamilia": "Gorra de visera curva · stretch",
+      "nombreFamiliaComercial": "Gorra de visera curva · stretch",
+      "familia": "zain-proveedor-zn-go-087",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva, tela stretch y ajuste de cinturón de velcro.",
+      "especificaciones": "Stretch. 90% Poliéster, 10% Algodón. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "90% Poliéster, 10% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-087-c01",
+        "zn-go-087-c02",
+        "zn-go-087-c03",
+        "zn-go-087-c04",
+        "zn-go-087-c05",
+        "zn-go-087-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-088",
+      "idPublico": "zn-go-088",
+      "sku": "ZN-GO-088",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera curva y tela stretch",
+      "nombreComercial": "Gorra de visera curva y tela stretch",
+      "nombreFamilia": "Gorra de visera curva y tela stretch",
+      "nombreFamiliaComercial": "Gorra de visera curva y tela stretch",
+      "familia": "zain-proveedor-zn-go-088",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera curva y tela stretch; ajuste descrito como velcro deportivo en la ficha.",
+      "especificaciones": "Stretch. 85% Poliéster, 10% Algodón, 5% Spandex. Unitalla o ajustable. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "85% Poliéster, 10% Algodón, 5% Spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-088-c01",
+        "zn-go-088-c02",
+        "zn-go-088-c03",
+        "zn-go-088-c04",
+        "zn-go-088-c05",
+        "zn-go-088-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-089",
+      "idPublico": "zn-go-089",
+      "sku": "ZN-GO-089",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra de visera plana · 100% poliéster",
+      "nombreComercial": "Gorra de visera plana · 100% poliéster",
+      "nombreFamilia": "Gorra de visera plana · 100% poliéster",
+      "nombreFamiliaComercial": "Gorra de visera plana · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-089",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra de visera plana, ojillos metálicos y ajuste de plástico deportivo.",
+      "especificaciones": "100% Poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-089-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-004",
+      "idPublico": "zn-pa-004",
+      "sku": "ZN-PA-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte original recto · gabardina",
+      "nombreComercial": "Corte original recto · gabardina",
+      "nombreFamilia": "Corte original recto · gabardina",
+      "nombreFamiliaComercial": "Corte original recto · gabardina",
+      "familia": "zain-proveedor-zn-pa-004",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte original recto, cintura alta, pliegue central y presillas tipo túnel; fácil cuidado.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-004-c01",
+        "zn-pa-004-c02",
+        "zn-pa-004-c03",
+        "zn-pa-004-c04",
+        "zn-pa-004-c05",
+        "zn-pa-004-c06"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-005",
+      "idPublico": "zn-pa-005",
+      "sku": "ZN-PA-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-005",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-005-c01",
+        "zn-pa-005-c02",
+        "zn-pa-005-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-006",
+      "idPublico": "zn-pa-006",
+      "sku": "ZN-PA-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte original recto con cintura alta",
+      "nombreComercial": "Corte original recto con cintura alta",
+      "nombreFamilia": "Corte original recto con cintura alta",
+      "nombreFamiliaComercial": "Corte original recto con cintura alta",
+      "familia": "zain-proveedor-zn-pa-006",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte original recto con cintura alta, stretch mecánico, presillas largas y control de humedad.",
+      "especificaciones": "Gabardina con stretch mecánico. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-006-c01",
+        "zn-pa-006-c02",
+        "zn-pa-006-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-007",
+      "idPublico": "zn-pa-007",
+      "sku": "ZN-PA-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina flex",
+      "nombreComercial": "Corte relajado recto · gabardina flex",
+      "nombreFamilia": "Corte relajado recto · gabardina flex",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina flex",
+      "familia": "zain-proveedor-zn-pa-007",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, tecnología de frescura Temp IQ, pretina flexible y bolsillos para celular y herramientas.",
+      "especificaciones": "Gabardina Flex. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-007-c01",
+        "zn-pa-007-c02"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-008",
+      "idPublico": "zn-pa-008",
+      "sku": "ZN-PA-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte ajustado en cadera y recto en piernas · gabardina flex",
+      "nombreComercial": "Corte ajustado en cadera y recto en piernas · gabardina flex",
+      "nombreFamilia": "Corte ajustado en cadera y recto en piernas · gabardina flex",
+      "nombreFamiliaComercial": "Corte ajustado en cadera y recto en piernas · gabardina flex",
+      "familia": "zain-proveedor-zn-pa-008",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte ajustado en cadera y recto en piernas, cintura baja, tela flexible y bolsillo para celular.",
+      "especificaciones": "Gabardina Flex. 81% algodón / 18% poliéster / 1% spandex. Tallas: 28, 30, 32, 34, 36, 38. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "81% algodón / 18% poliéster / 1% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-008-c01",
+        "zn-pa-008-c02",
+        "zn-pa-008-c03",
+        "zn-pa-008-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-009",
+      "idPublico": "zn-pa-009",
+      "sku": "ZN-PA-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Costuras dobles · canvas",
+      "nombreComercial": "Costuras dobles · canvas",
+      "nombreFamilia": "Costuras dobles · canvas",
+      "nombreFamiliaComercial": "Costuras dobles · canvas",
+      "familia": "zain-proveedor-zn-pa-009",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Costuras dobles, bolsillos reforzados y refuerzo en entrepierna; ajuste moderno.",
+      "especificaciones": "Canvas. 60% algodón / 40% poliéster. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-009-c01",
+        "zn-pa-009-c02",
+        "zn-pa-009-c03",
+        "zn-pa-009-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-010",
+      "idPublico": "zn-pa-010",
+      "sku": "ZN-PA-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsillos cargo profundos con velcro · gabardina",
+      "nombreComercial": "Bolsillos cargo profundos con velcro · gabardina",
+      "nombreFamilia": "Bolsillos cargo profundos con velcro · gabardina",
+      "nombreFamiliaComercial": "Bolsillos cargo profundos con velcro · gabardina",
+      "familia": "zain-proveedor-zn-pa-010",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Bolsillos cargo profundos con velcro, gancho metálico y presillas tipo túnel; repele manchas y resiste arrugas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-010-c01",
+        "zn-pa-010-c02",
+        "zn-pa-010-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-011",
+      "idPublico": "zn-pa-011",
+      "sku": "ZN-PA-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina",
+      "nombreComercial": "Corte relajado recto · gabardina",
+      "nombreFamilia": "Corte relajado recto · gabardina",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina",
+      "familia": "zain-proveedor-zn-pa-011",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, raya permanente y pretina casual; repele manchas y resiste arrugas.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-011-c01",
+        "zn-pa-011-c02",
+        "zn-pa-011-c03"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-012",
+      "idPublico": "zn-pa-012",
+      "sku": "ZN-PA-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Costuras dobles · canvas",
+      "nombreComercial": "Costuras dobles · canvas",
+      "nombreFamilia": "Costuras dobles · canvas",
+      "nombreFamiliaComercial": "Costuras dobles · canvas",
+      "familia": "zain-proveedor-zn-pa-012",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Costuras dobles, refuerzo en entrepierna, bolsillos cargo con fuelle y bolsillo exterior; ajuste moderno.",
+      "especificaciones": "Canvas. 60% algodón / 40% poliéster. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-012-c01",
+        "zn-pa-012-c02",
+        "zn-pa-012-c03",
+        "zn-pa-012-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-013",
+      "idPublico": "zn-pa-013",
+      "sku": "ZN-PA-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-013",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte regular; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES3. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-013-c01",
+        "zn-pa-013-c02"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-014",
+      "idPublico": "zn-pa-014",
+      "sku": "ZN-PA-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-014",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28-35,TALLAS. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-014-c01",
+        "zn-pa-014-c02",
+        "zn-pa-014-c03",
+        "zn-pa-014-c04",
+        "zn-pa-014-c05"
+      ],
+      "tallas": [
+        "28-35,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-015",
+      "idPublico": "zn-pa-015",
+      "sku": "ZN-PA-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-015",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado; bolsillos cargo.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 28-35,TALLAS. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-015-c01",
+        "zn-pa-015-c02",
+        "zn-pa-015-c03",
+        "zn-pa-015-c04"
+      ],
+      "tallas": [
+        "28-35,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-016",
+      "idPublico": "zn-pa-016",
+      "sku": "ZN-PA-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-016",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28-35,TALLAS. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-016-c01",
+        "zn-pa-016-c02",
+        "zn-pa-016-c03"
+      ],
+      "tallas": [
+        "28-35,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-017",
+      "idPublico": "zn-pa-017",
+      "sku": "ZN-PA-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-017",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28-29,TALLAS. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-017-c01",
+        "zn-pa-017-c02",
+        "zn-pa-017-c03"
+      ],
+      "tallas": [
+        "28-29,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-018",
+      "idPublico": "zn-pa-018",
+      "sku": "ZN-PA-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-018",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28-35,TALLAS. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-018-c01",
+        "zn-pa-018-c02",
+        "zn-pa-018-c03",
+        "zn-pa-018-c04"
+      ],
+      "tallas": [
+        "28-35,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-019",
+      "idPublico": "zn-pa-019",
+      "sku": "ZN-PA-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-019",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28-35,TALLAS. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-019-c01",
+        "zn-pa-019-c02",
+        "zn-pa-019-c03",
+        "zn-pa-019-c04"
+      ],
+      "tallas": [
+        "28-35,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-020",
+      "idPublico": "zn-pa-020",
+      "sku": "ZN-PA-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-020",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte regular; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES3. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-020-c01",
+        "zn-pa-020-c02",
+        "zn-pa-020-c03"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-021",
+      "idPublico": "zn-pa-021",
+      "sku": "ZN-PA-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Ajuste moderno · canvas",
+      "nombreComercial": "Ajuste moderno · canvas",
+      "nombreFamilia": "Ajuste moderno · canvas",
+      "nombreFamiliaComercial": "Ajuste moderno · canvas",
+      "familia": "zain-proveedor-zn-pa-021",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Ajuste moderno, costuras dobles, bolsillos cargo con fuelle, refuerzo en entrepierna y largo de 12 pulgadas.",
+      "especificaciones": "Canvas. 60% algodón / 40% poliéster. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-021-c01",
+        "zn-pa-021-c02",
+        "zn-pa-021-c03",
+        "zn-pa-021-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-022",
+      "idPublico": "zn-pa-022",
+      "sku": "ZN-PA-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte holgado · gabardina",
+      "nombreComercial": "Corte holgado · gabardina",
+      "nombreFamilia": "Corte holgado · gabardina",
+      "nombreFamiliaComercial": "Corte holgado · gabardina",
+      "familia": "zain-proveedor-zn-pa-022",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte holgado, presillas tipo túnel y bolsillo lateral multiusos; resiste arrugas y manchas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-022-c01",
+        "zn-pa-022-c02",
+        "zn-pa-022-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-023",
+      "idPublico": "zn-pa-023",
+      "sku": "ZN-PA-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-023",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte relajado; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES2. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-023-c01",
+        "zn-pa-023-c02",
+        "zn-pa-023-c03",
+        "zn-pa-023-c04"
+      ],
+      "tallas": [
+        "TALLASPARES2"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-024",
+      "idPublico": "zn-pa-024",
+      "sku": "ZN-PA-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-024",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES2. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-024-c01",
+        "zn-pa-024-c02",
+        "zn-pa-024-c03",
+        "zn-pa-024-c04"
+      ],
+      "tallas": [
+        "TALLASPARES2"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-025",
+      "idPublico": "zn-pa-025",
+      "sku": "ZN-PA-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · mezclilla gruesa lavada",
+      "nombreComercial": "Corte relajado recto · mezclilla gruesa lavada",
+      "nombreFamilia": "Corte relajado recto · mezclilla gruesa lavada",
+      "nombreFamiliaComercial": "Corte relajado recto · mezclilla gruesa lavada",
+      "familia": "zain-proveedor-zn-pa-025",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, presilla para martillo, bolsillos de herramientas, costuras triples y remaches.",
+      "especificaciones": "Mezclilla gruesa lavada. 100% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-025-c01",
+        "zn-pa-025-c02"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13,
+      "coloresSinRender": [
+        "zn-pa-025-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-026",
+      "idPublico": "zn-pa-026",
+      "sku": "ZN-PA-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-026",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte regular.",
+      "especificaciones": "Mezclilla. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-026-c01"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 14,
+      "coloresSinRender": [
+        "zn-pa-026-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-027",
+      "idPublico": "zn-pa-027",
+      "sku": "ZN-PA-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte regular recto · mezclilla",
+      "nombreComercial": "Corte regular recto · mezclilla",
+      "nombreFamilia": "Corte regular recto · mezclilla",
+      "nombreFamiliaComercial": "Corte regular recto · mezclilla",
+      "familia": "zain-proveedor-zn-pa-027",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte regular recto, cinco bolsillos, remaches y cierre metálico.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-027-c01",
+        "zn-pa-027-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 14,
+      "coloresSinRender": [
+        "zn-pa-027-c01",
+        "zn-pa-027-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-028",
+      "idPublico": "zn-pa-028",
+      "sku": "ZN-PA-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · mezclilla gruesa",
+      "nombreComercial": "Corte relajado recto · mezclilla gruesa",
+      "nombreFamilia": "Corte relajado recto · mezclilla gruesa",
+      "nombreFamiliaComercial": "Corte relajado recto · mezclilla gruesa",
+      "familia": "zain-proveedor-zn-pa-028",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, remaches y cierre metálico; mezclilla gruesa lavada en prenda.",
+      "especificaciones": "Mezclilla gruesa. 100% algodón. Tallas: 30,32,33,34-. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-028-c01",
+        "zn-pa-028-c02"
+      ],
+      "tallas": [
+        "30,32,33,34-"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 14,
+      "coloresSinRender": [
+        "zn-pa-028-c01",
+        "zn-pa-028-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-029",
+      "idPublico": "zn-pa-029",
+      "sku": "ZN-PA-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · mezclilla premium prelavada",
+      "nombreComercial": "Corte relajado recto · mezclilla premium prelavada",
+      "nombreFamilia": "Corte relajado recto · mezclilla premium prelavada",
+      "nombreFamiliaComercial": "Corte relajado recto · mezclilla premium prelavada",
+      "familia": "zain-proveedor-zn-pa-029",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, paneles dobles en rodilla y bolsillos multiusos; mezclilla prelavada.",
+      "especificaciones": "Mezclilla premium prelavada. 100% algodón. Tallas: 30-50UL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-029-c01"
+      ],
+      "tallas": [
+        "30-50UL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13,
+      "coloresSinRender": [
+        "zn-pa-029-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-030",
+      "idPublico": "zn-pa-030",
+      "sku": "ZN-PA-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte regular recto · mezclilla premium flex",
+      "nombreComercial": "Corte regular recto · mezclilla premium flex",
+      "nombreFamilia": "Corte regular recto · mezclilla premium flex",
+      "nombreFamiliaComercial": "Corte regular recto · mezclilla premium flex",
+      "familia": "zain-proveedor-zn-pa-030",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte regular recto, tela flexible, bolsillos profundos y cierre de latón; apto para lavado industrial.",
+      "especificaciones": "Mezclilla premium Flex. 93% algodón / 6% poliéster / 1% elastano. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "93% algodón / 6% poliéster / 1% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-030-c01"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12,
+      "coloresSinRender": [
+        "zn-pa-030-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-031",
+      "idPublico": "zn-pa-031",
+      "sku": "ZN-PA-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte regular recto · mezclilla premium flex",
+      "nombreComercial": "Corte regular recto · mezclilla premium flex",
+      "nombreFamilia": "Corte regular recto · mezclilla premium flex",
+      "nombreFamiliaComercial": "Corte regular recto · mezclilla premium flex",
+      "familia": "zain-proveedor-zn-pa-031",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte regular recto, tela flexible, bolsillos profundos y cierre de latón; apto para lavado industrial. Diseño sin remaches, presilla para martillo y bolsillo doble para herramientas.",
+      "especificaciones": "Mezclilla premium Flex. 93% algodón / 6% poliéster / 1% elastano. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "93% algodón / 6% poliéster / 1% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-031-c01"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12,
+      "coloresSinRender": [
+        "zn-pa-031-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-032",
+      "idPublico": "zn-pa-032",
+      "sku": "ZN-PA-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte regular recto · gabardina ruda",
+      "nombreComercial": "Corte regular recto · gabardina ruda",
+      "nombreFamilia": "Corte regular recto · gabardina ruda",
+      "nombreFamiliaComercial": "Corte regular recto · gabardina ruda",
+      "familia": "zain-proveedor-zn-pa-032",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte regular recto, tecnología StayDark y bolsillo para celular; resistente a rasgaduras y arrugas.",
+      "especificaciones": "Gabardina ruda. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-032-c01"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-pa-033",
+      "idPublico": "zn-pa-033",
+      "sku": "ZN-PA-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · loneta prelavada",
+      "nombreComercial": "Corte relajado recto · loneta prelavada",
+      "nombreFamilia": "Corte relajado recto · loneta prelavada",
+      "nombreFamiliaComercial": "Corte relajado recto · loneta prelavada",
+      "familia": "zain-proveedor-zn-pa-033",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, bolsillos para herramientas, presilla utilitaria y remaches; loneta prelavada.",
+      "especificaciones": "Loneta prelavada. 100% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-033-c01",
+        "zn-pa-033-c02",
+        "zn-pa-033-c03",
+        "zn-pa-033-c04",
+        "zn-pa-033-c05",
+        "zn-pa-033-c06"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12,
+      "coloresSinRender": [
+        "zn-pa-033-c01",
+        "zn-pa-033-c02",
+        "zn-pa-033-c03",
+        "zn-pa-033-c04",
+        "zn-pa-033-c05",
+        "zn-pa-033-c06"
+      ]
+    },
+    {
+      "id": "zn-pa-034",
+      "idPublico": "zn-pa-034",
+      "sku": "ZN-PA-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · loneta",
+      "nombreComercial": "Pantalón de trabajo para caballero · loneta",
+      "nombreFamilia": "Pantalón de trabajo para caballero · loneta",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · loneta",
+      "familia": "zain-proveedor-zn-pa-034",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Loneta. 75% algodón / 25% poliéster. Tallas: 30-33,TALLAS. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "75% algodón / 25% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-034-c01",
+        "zn-pa-034-c02"
+      ],
+      "tallas": [
+        "30-33,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10,
+      "coloresSinRender": [
+        "zn-pa-034-c01",
+        "zn-pa-034-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-035",
+      "idPublico": "zn-pa-035",
+      "sku": "ZN-PA-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-035",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: TALLASPARES3. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-035-c01",
+        "zn-pa-035-c02"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11
+    },
+    {
+      "id": "zn-pa-036",
+      "idPublico": "zn-pa-036",
+      "sku": "ZN-PA-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-036",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte regular.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28-34,TALLAS. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-036-c01",
+        "zn-pa-036-c02"
+      ],
+      "tallas": [
+        "28-34,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 14,
+      "coloresSinRender": [
+        "zn-pa-036-c01",
+        "zn-pa-036-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-037",
+      "idPublico": "zn-pa-037",
+      "sku": "ZN-PA-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-037",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 30-33,TALLAS. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-037-c01"
+      ],
+      "tallas": [
+        "30-33,TALLAS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13,
+      "coloresSinRender": [
+        "zn-pa-037-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-038",
+      "idPublico": "zn-pa-038",
+      "sku": "ZN-PA-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-038",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28,30-34,TAL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-038-c01"
+      ],
+      "tallas": [
+        "28,30-34,TAL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13,
+      "coloresSinRender": [
+        "zn-pa-038-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-039",
+      "idPublico": "zn-pa-039",
+      "sku": "ZN-PA-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreComercial": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreFamilia": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · dril para pintor",
+      "familia": "zain-proveedor-zn-pa-039",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Dril para pintor. 100% algodón. Tallas: NT:TALLASPAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-039-c01",
+        "zn-pa-039-c02"
+      ],
+      "tallas": [
+        "NT:TALLASPAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-001",
+      "idPublico": "zn-ov-001",
+      "sku": "ZN-OV-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol con espalda de pliegues · popelina",
+      "nombreComercial": "Overol con espalda de pliegues · popelina",
+      "nombreFamilia": "Overol con espalda de pliegues · popelina",
+      "nombreFamiliaComercial": "Overol con espalda de pliegues · popelina",
+      "familia": "zain-proveedor-zn-ov-001",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol con espalda de pliegues, elástico en cintura y cierre frontal de nailon de dos vías.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-2XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-001-c01"
+      ],
+      "tallas": [
+        "S-2XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-002",
+      "idPublico": "zn-ov-002",
+      "sku": "ZN-OV-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · popelina",
+      "nombreComercial": "Overol para caballero · popelina",
+      "nombreFamilia": "Overol para caballero · popelina",
+      "nombreFamiliaComercial": "Overol para caballero · popelina",
+      "familia": "zain-proveedor-zn-ov-002",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-002-c01",
+        "zn-ov-002-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-003",
+      "idPublico": "zn-ov-003",
+      "sku": "ZN-OV-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol con espalda de pliegues · gabardina",
+      "nombreComercial": "Overol con espalda de pliegues · gabardina",
+      "nombreFamilia": "Overol con espalda de pliegues · gabardina",
+      "nombreFamiliaComercial": "Overol con espalda de pliegues · gabardina",
+      "familia": "zain-proveedor-zn-ov-003",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol con espalda de pliegues, elástico en cintura, broches ocultos y cierre metálico de dos vías.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-003-c01"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-ov-004",
+      "idPublico": "zn-ov-004",
+      "sku": "ZN-OV-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol con espalda de pliegues · gabardina resistente",
+      "nombreComercial": "Overol con espalda de pliegues · gabardina resistente",
+      "nombreFamilia": "Overol con espalda de pliegues · gabardina resistente",
+      "nombreFamiliaComercial": "Overol con espalda de pliegues · gabardina resistente",
+      "familia": "zain-proveedor-zn-ov-004",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol con espalda de pliegues, elástico, bolsillos de herramientas y cierre metálico de dos vías.",
+      "especificaciones": "Gabardina resistente. 100% algodón. Tallas: S-3XLREGULAR. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-004-c01",
+        "zn-ov-004-c02",
+        "zn-ov-004-c03",
+        "zn-ov-004-c04"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-ov-005",
+      "idPublico": "zn-ov-005",
+      "sku": "ZN-OV-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol con cierre de dos vías · gabardina",
+      "nombreComercial": "Overol con cierre de dos vías · gabardina",
+      "nombreFamilia": "Overol con cierre de dos vías · gabardina",
+      "nombreFamiliaComercial": "Overol con cierre de dos vías · gabardina",
+      "familia": "zain-proveedor-zn-ov-005",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol con cierre de dos vías, espalda con pliegues, elástico en cintura, bolsillos con cierre y presilla para martillo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S-3XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-005-c01"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-ov-006",
+      "idPublico": "zn-ov-006",
+      "sku": "ZN-OV-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · mezclilla",
+      "nombreComercial": "Overol para caballero · mezclilla",
+      "nombreFamilia": "Overol para caballero · mezclilla",
+      "nombreFamiliaComercial": "Overol para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-ov-006",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: TALLASPARES3. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-006-c01"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11
+    },
+    {
+      "id": "zn-ov-007",
+      "idPublico": "zn-ov-007",
+      "sku": "ZN-OV-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · mezclilla",
+      "nombreComercial": "Overol para caballero · mezclilla",
+      "nombreFamilia": "Overol para caballero · mezclilla",
+      "nombreFamiliaComercial": "Overol para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-ov-007",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con cintas reflejantes.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: TALLASPARES3. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-007-c01"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11,
+      "coloresSinRender": [
+        "zn-ov-007-c01"
+      ]
+    },
+    {
+      "id": "zn-ov-008",
+      "idPublico": "zn-ov-008",
+      "sku": "ZN-OV-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · mezclilla",
+      "nombreComercial": "Overol para caballero · mezclilla",
+      "nombreFamilia": "Overol para caballero · mezclilla",
+      "nombreFamiliaComercial": "Overol para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-ov-008",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con cintas reflejantes.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: TALLASPARES3. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-008-c01"
+      ],
+      "tallas": [
+        "TALLASPARES3"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11,
+      "coloresSinRender": [
+        "zn-ov-008-c01"
+      ]
+    },
+    {
+      "id": "zn-ma-001",
+      "idPublico": "zn-ma-001",
+      "sku": "ZN-MA-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · mezclilla",
+      "nombreComercial": "Mandil unisex · mezclilla",
+      "nombreFamilia": "Mandil unisex · mezclilla",
+      "nombreFamiliaComercial": "Mandil unisex · mezclilla",
+      "familia": "zain-proveedor-zn-ma-001",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex.",
+      "especificaciones": "Mezclilla. Mezclilla: 100% algodón; Dril: 100% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Mezclilla: 100% algodón; Dril: 100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-001-c01",
+        "zn-ma-001-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11
+    },
+    {
+      "id": "zn-cm-021",
+      "idPublico": "zn-cm-021",
+      "sku": "ZN-CM-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte original amplio en hombros · gabardina",
+      "nombreComercial": "Corte original amplio en hombros · gabardina",
+      "nombreFamilia": "Corte original amplio en hombros · gabardina",
+      "nombreFamiliaComercial": "Corte original amplio en hombros · gabardina",
+      "familia": "zain-proveedor-zn-cm-021",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Corte original amplio en hombros; dos bolsillos con solapa y botón, división para lápiz, repelente a manchas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: REGULARS-3XL, REGULARXL-3X. 11 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-021-c01",
+        "zn-cm-021-c02",
+        "zn-cm-021-c03",
+        "zn-cm-021-c04",
+        "zn-cm-021-c05",
+        "zn-cm-021-c06",
+        "zn-cm-021-c07",
+        "zn-cm-021-c08",
+        "zn-cm-021-c09",
+        "zn-cm-021-c10",
+        "zn-cm-021-c11"
+      ],
+      "tallas": [
+        "REGULARS-3XL",
+        "REGULARXL-3X"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-022",
+      "idPublico": "zn-cm-022",
+      "sku": "ZN-CM-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Dos bolsillos con solapa y botón · gabardina",
+      "nombreComercial": "Dos bolsillos con solapa y botón · gabardina",
+      "nombreFamilia": "Dos bolsillos con solapa y botón · gabardina",
+      "nombreFamiliaComercial": "Dos bolsillos con solapa y botón · gabardina",
+      "familia": "zain-proveedor-zn-cm-022",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Dos bolsillos con solapa y botón, división para lápiz; resiste arrugas, repele manchas y absorbe humedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: REGULARS-3XL, REGULARXL-3X. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-022-c01",
+        "zn-cm-022-c02",
+        "zn-cm-022-c03",
+        "zn-cm-022-c04",
+        "zn-cm-022-c05",
+        "zn-cm-022-c06",
+        "zn-cm-022-c07",
+        "zn-cm-022-c08",
+        "zn-cm-022-c09",
+        "zn-cm-022-c10"
+      ],
+      "tallas": [
+        "REGULARS-3XL",
+        "REGULARXL-3X"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-023",
+      "idPublico": "zn-cm-023",
+      "sku": "ZN-CM-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas · gabardina",
+      "nombreComercial": "Cuello de dos piezas · gabardina",
+      "nombreFamilia": "Cuello de dos piezas · gabardina",
+      "nombreFamiliaComercial": "Cuello de dos piezas · gabardina",
+      "familia": "zain-proveedor-zn-cm-023",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello de dos piezas, bolsillos frontales y división para lápiz; resiste arrugas y decoloración.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: REGULARS-3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-023-c01",
+        "zn-cm-023-c02"
+      ],
+      "tallas": [
+        "REGULARS-3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-024",
+      "idPublico": "zn-cm-024",
+      "sku": "ZN-CM-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas · gabardina",
+      "nombreComercial": "Cuello de dos piezas · gabardina",
+      "nombreFamilia": "Cuello de dos piezas · gabardina",
+      "nombreFamiliaComercial": "Cuello de dos piezas · gabardina",
+      "familia": "zain-proveedor-zn-cm-024",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello de dos piezas, bolsillos frontales y división para lápiz; resiste arrugas y decoloración.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-024-c01",
+        "zn-cm-024-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-025",
+      "idPublico": "zn-cm-025",
+      "sku": "ZN-CM-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello con botones · mezclilla lavada con enzimas",
+      "nombreComercial": "Cuello con botones · mezclilla lavada con enzimas",
+      "nombreFamilia": "Cuello con botones · mezclilla lavada con enzimas",
+      "nombreFamiliaComercial": "Cuello con botones · mezclilla lavada con enzimas",
+      "familia": "zain-proveedor-zn-cm-025",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello con botones, bolsillo en pecho, pinza en espalda y puño ajustable; mezclilla lavada con enzimas.",
+      "especificaciones": "Mezclilla lavada con enzimas. 100% algodón. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-025-c01",
+        "zn-cm-025-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-025-c01",
+        "zn-cm-025-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-026",
+      "idPublico": "zn-cm-026",
+      "sku": "ZN-CM-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas con refuerzo",
+      "nombreComercial": "Cuello de dos piezas con refuerzo",
+      "nombreFamilia": "Cuello de dos piezas con refuerzo",
+      "nombreFamiliaComercial": "Cuello de dos piezas con refuerzo",
+      "familia": "zain-proveedor-zn-cm-026",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello de dos piezas con refuerzo, bolsillos con botón y división para lápiz; resistente a arrugas y decoloración.",
+      "especificaciones": "Popelina de planchado permanente. 65% poliéster / 35% algodón. Tallas: REGULARS-3XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-026-c01",
+        "zn-cm-026-c02",
+        "zn-cm-026-c03",
+        "zn-cm-026-c04",
+        "zn-cm-026-c05",
+        "zn-cm-026-c06",
+        "zn-cm-026-c07"
+      ],
+      "tallas": [
+        "REGULARS-3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-027",
+      "idPublico": "zn-cm-027",
+      "sku": "ZN-CM-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas con broche",
+      "nombreComercial": "Cuello de dos piezas con broche",
+      "nombreFamilia": "Cuello de dos piezas con broche",
+      "nombreFamiliaComercial": "Cuello de dos piezas con broche",
+      "familia": "zain-proveedor-zn-cm-027",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello de dos piezas con broche, bolsillos con botón y división para lápiz; resistente a arrugas y decoloración.",
+      "especificaciones": "Popelina de planchado permanente. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-027-c01",
+        "zn-cm-027-c02",
+        "zn-cm-027-c03",
+        "zn-cm-027-c04",
+        "zn-cm-027-c05",
+        "zn-cm-027-c06",
+        "zn-cm-027-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-028",
+      "idPublico": "zn-cm-028",
+      "sku": "ZN-CM-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-028",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: REGULARS-5XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-028-c01",
+        "zn-cm-028-c02",
+        "zn-cm-028-c03",
+        "zn-cm-028-c04",
+        "zn-cm-028-c05"
+      ],
+      "tallas": [
+        "REGULARS-5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-029",
+      "idPublico": "zn-cm-029",
+      "sku": "ZN-CM-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-029",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; corte relajado; colores combinados.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: REGULARS-5XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-029-c01",
+        "zn-cm-029-c02",
+        "zn-cm-029-c03",
+        "zn-cm-029-c04"
+      ],
+      "tallas": [
+        "REGULARS-5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-029-c01",
+        "zn-cm-029-c02",
+        "zn-cm-029-c03",
+        "zn-cm-029-c04"
+      ]
+    },
+    {
+      "id": "zn-cm-030",
+      "idPublico": "zn-cm-030",
+      "sku": "ZN-CM-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-030",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; corte relajado; colores combinados.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: REGULARS-5XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-030-c01",
+        "zn-cm-030-c02",
+        "zn-cm-030-c03",
+        "zn-cm-030-c04"
+      ],
+      "tallas": [
+        "REGULARS-5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-030-c01",
+        "zn-cm-030-c02",
+        "zn-cm-030-c03",
+        "zn-cm-030-c04"
+      ]
+    },
+    {
+      "id": "zn-cm-031",
+      "idPublico": "zn-cm-031",
+      "sku": "ZN-CM-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-031",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; corte relajado.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: REGULARS-3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-031-c01"
+      ],
+      "tallas": [
+        "REGULARS-3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-032",
+      "idPublico": "zn-cm-032",
+      "sku": "ZN-CM-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-032",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; corte relajado.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: REGULARS-5XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-032-c01",
+        "zn-cm-032-c02",
+        "zn-cm-032-c03",
+        "zn-cm-032-c04"
+      ],
+      "tallas": [
+        "REGULARS-5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-033",
+      "idPublico": "zn-cm-033",
+      "sku": "ZN-CM-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-033",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; corte relajado; con malla.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón hilado en anillos, hilado / 100% poliéster. Tallas: REGULARS-4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón hilado en anillos, hilado / 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-033-c01",
+        "zn-cm-033-c02",
+        "zn-cm-033-c03"
+      ],
+      "tallas": [
+        "REGULARS-4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-034",
+      "idPublico": "zn-cm-034",
+      "sku": "ZN-CM-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-034",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; corte relajado; con malla.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón hilado en anillos, hilado / 100% poliéster. Tallas: REGULARS-4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón hilado en anillos, hilado / 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-034-c01",
+        "zn-cm-034-c02",
+        "zn-cm-034-c03"
+      ],
+      "tallas": [
+        "REGULARS-4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-035",
+      "idPublico": "zn-cm-035",
+      "sku": "ZN-CM-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · canvas",
+      "nombreComercial": "Camisa para caballero · canvas",
+      "nombreFamilia": "Camisa para caballero · canvas",
+      "nombreFamiliaComercial": "Camisa para caballero · canvas",
+      "familia": "zain-proveedor-zn-cm-035",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga.",
+      "especificaciones": "Canvas. 60% algodón / 40% poliéster. Tallas: REGULARS-4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-035-c01",
+        "zn-cm-035-c02",
+        "zn-cm-035-c03",
+        "zn-cm-035-c04",
+        "zn-cm-035-c05",
+        "zn-cm-035-c06",
+        "zn-cm-035-c07"
+      ],
+      "tallas": [
+        "REGULARS-4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-036",
+      "idPublico": "zn-cm-036",
+      "sku": "ZN-CM-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · canvas",
+      "nombreComercial": "Camisa para caballero · canvas",
+      "nombreFamilia": "Camisa para caballero · canvas",
+      "nombreFamiliaComercial": "Camisa para caballero · canvas",
+      "familia": "zain-proveedor-zn-cm-036",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Canvas. 60% algodón / 40% poliéster. Tallas: REGULARS-4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-036-c01",
+        "zn-cm-036-c02",
+        "zn-cm-036-c03",
+        "zn-cm-036-c04",
+        "zn-cm-036-c05",
+        "zn-cm-036-c06",
+        "zn-cm-036-c07"
+      ],
+      "tallas": [
+        "REGULARS-4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-037",
+      "idPublico": "zn-cm-037",
+      "sku": "ZN-CM-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello con botones · oxford flex",
+      "nombreComercial": "Cuello con botones · oxford flex",
+      "nombreFamilia": "Cuello con botones · oxford flex",
+      "nombreFamiliaComercial": "Cuello con botones · oxford flex",
+      "familia": "zain-proveedor-zn-cm-037",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello con botones, bolsillo en pecho, pinza en espalda y parte trasera larga; fácil cuidado y repelencia a manchas.",
+      "especificaciones": "Oxford Flex. 60% algodón / 40% poliéster. Tallas: 14-141/2-17-. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-037-c01",
+        "zn-cm-037-c02",
+        "zn-cm-037-c03",
+        "zn-cm-037-c04"
+      ],
+      "tallas": [
+        "14-141/2-17-"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-037-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-038",
+      "idPublico": "zn-cm-038",
+      "sku": "ZN-CM-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello con botones · oxford flex",
+      "nombreComercial": "Cuello con botones · oxford flex",
+      "nombreFamilia": "Cuello con botones · oxford flex",
+      "nombreFamiliaComercial": "Cuello con botones · oxford flex",
+      "familia": "zain-proveedor-zn-cm-038",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Cuello con botones, bolsillo en pecho, pinza en espalda y parte trasera larga; fácil cuidado y repelencia a manchas.",
+      "especificaciones": "Oxford Flex. 60% algodón / 40% poliéster. Tallas: 14-141/2-17-. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-038-c01",
+        "zn-cm-038-c02",
+        "zn-cm-038-c03",
+        "zn-cm-038-c04"
+      ],
+      "tallas": [
+        "14-141/2-17-"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-038-c01"
+      ]
+    },
+    {
+      "id": "zn-po-025",
+      "idPublico": "zn-po-025",
+      "sku": "ZN-PO-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para caballero · micropiqué",
+      "nombreComercial": "Polo para caballero · micropiqué",
+      "nombreFamilia": "Polo para caballero · micropiqué",
+      "nombreFamiliaComercial": "Polo para caballero · micropiqué",
+      "familia": "zain-proveedor-zn-po-025",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo para caballero; con malla.",
+      "especificaciones": "Micropiqué. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-025-c01",
+        "zn-po-025-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-037",
+      "idPublico": "zn-pl-037",
+      "sku": "ZN-PL-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera para caballero · jersey",
+      "nombreComercial": "Playera para caballero · jersey",
+      "nombreFamilia": "Playera para caballero · jersey",
+      "nombreFamiliaComercial": "Playera para caballero · jersey",
+      "familia": "zain-proveedor-zn-pl-037",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera para caballero.",
+      "especificaciones": "Jersey. 50% poliéster / 50% algodón. Tallas: BK:REGULARS-. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% poliéster / 50% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-037-c01",
+        "zn-pl-037-c02",
+        "zn-pl-037-c03",
+        "zn-pl-037-c04"
+      ],
+      "tallas": [
+        "BK:REGULARS-"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185
+    },
+    {
+      "id": "zn-pl-038",
+      "idPublico": "zn-pl-038",
+      "sku": "ZN-PL-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera manga larga para caballero · jersey",
+      "nombreComercial": "Playera manga larga para caballero · jersey",
+      "nombreFamilia": "Playera manga larga para caballero · jersey",
+      "nombreFamiliaComercial": "Playera manga larga para caballero · jersey",
+      "familia": "zain-proveedor-zn-pl-038",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera manga larga para caballero; manga larga; con bolsillos.",
+      "especificaciones": "Jersey. Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster. Tallas: REGULARS-5XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-038-c01",
+        "zn-pl-038-c02",
+        "zn-pl-038-c03",
+        "zn-pl-038-c04",
+        "zn-pl-038-c05"
+      ],
+      "tallas": [
+        "REGULARS-5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220,
+      "coloresSinRender": [
+        "zn-pl-038-c05"
+      ]
+    },
+    {
+      "id": "zn-pl-039",
+      "idPublico": "zn-pl-039",
+      "sku": "ZN-PL-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera para caballero · jersey",
+      "nombreComercial": "Playera para caballero · jersey",
+      "nombreFamilia": "Playera para caballero · jersey",
+      "nombreFamiliaComercial": "Playera para caballero · jersey",
+      "familia": "zain-proveedor-zn-pl-039",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera para caballero; manga corta; con bolsillos.",
+      "especificaciones": "Jersey. Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster. Tallas: REGULARS-3XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-039-c01",
+        "zn-pl-039-c02",
+        "zn-pl-039-c03",
+        "zn-pl-039-c04",
+        "zn-pl-039-c05"
+      ],
+      "tallas": [
+        "REGULARS-3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220,
+      "coloresSinRender": [
+        "zn-pl-039-c05"
+      ]
+    },
+    {
+      "id": "zn-pl-040",
+      "idPublico": "zn-pl-040",
+      "sku": "ZN-PL-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera para caballero · jersey",
+      "nombreComercial": "Playera para caballero · jersey",
+      "nombreFamilia": "Playera para caballero · jersey",
+      "nombreFamiliaComercial": "Playera para caballero · jersey",
+      "familia": "zain-proveedor-zn-pl-040",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera para caballero; manga corta; con bolsillos.",
+      "especificaciones": "Jersey. Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster. Tallas: REGULARM-3XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Colores lisos: 100% algodón; gris jaspeado [HG]: 90% algodón / 10% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-040-c01",
+        "zn-pl-040-c02",
+        "zn-pl-040-c03"
+      ],
+      "tallas": [
+        "REGULARM-3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220,
+      "coloresSinRender": [
+        "zn-pl-040-c03"
+      ]
+    },
+    {
+      "id": "zn-su-015",
+      "idPublico": "zn-su-015",
+      "sku": "ZN-SU-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera para caballero · jersey",
+      "nombreComercial": "Sudadera para caballero · jersey",
+      "nombreFamilia": "Sudadera para caballero · jersey",
+      "nombreFamiliaComercial": "Sudadera para caballero · jersey",
+      "familia": "zain-proveedor-zn-su-015",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera para caballero; cierre de cremallera.",
+      "especificaciones": "Jersey. 80% poliéster / 20% lana merino. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% lana merino",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-015-c01",
+        "zn-su-015-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-011",
+      "idPublico": "zn-ch-011",
+      "sku": "ZN-CH-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · jersey",
+      "nombreComercial": "Chamarra para caballero · jersey",
+      "nombreFamilia": "Chamarra para caballero · jersey",
+      "nombreFamiliaComercial": "Chamarra para caballero · jersey",
+      "familia": "zain-proveedor-zn-ch-011",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Jersey. Exterior: 100% nailon; Forro: 65% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 100% nailon; Forro: 65% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-011-c01",
+        "zn-ch-011-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-012",
+      "idPublico": "zn-ch-012",
+      "sku": "ZN-CH-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cierre frontal metálico",
+      "nombreComercial": "Cierre frontal metálico",
+      "nombreFamilia": "Cierre frontal metálico",
+      "nombreFamiliaComercial": "Cierre frontal metálico",
+      "familia": "zain-proveedor-zn-ch-012",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Cierre frontal metálico, cintura ajustable, bolsillos diagonales y bolsillo para lápiz; forro acolchado.",
+      "especificaciones": "Gabardina teñida; forro de tafeta de nailon. Exterior: 65% poliéster / 35% algodón; forro de nailon con relleno de poliuretano. Tallas: REGULARS-2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; forro de nailon con relleno de poliuretano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-012-c01",
+        "zn-ch-012-c02"
+      ],
+      "tallas": [
+        "REGULARS-2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-013",
+      "idPublico": "zn-ch-013",
+      "sku": "ZN-CH-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-013",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-013-c01",
+        "zn-ch-013-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-014",
+      "idPublico": "zn-ch-014",
+      "sku": "ZN-CH-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cierre metálico",
+      "nombreComercial": "Cierre metálico",
+      "nombreFamilia": "Cierre metálico",
+      "nombreFamiliaComercial": "Cierre metálico",
+      "familia": "zain-proveedor-zn-ch-014",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Cierre metálico, cintura ajustable y bolsillos diagonales; prelavada y con forro acolchado.",
+      "especificaciones": "Loneta; forro de tafeta de nailon. Exterior: 75% algodón / 25% poliéster; forro de nailon con relleno de poliuretano. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 75% algodón / 25% poliéster; forro de nailon con relleno de poliuretano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-014-c01",
+        "zn-ch-014-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ch-015",
+      "idPublico": "zn-ch-015",
+      "sku": "ZN-CH-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · loneta",
+      "nombreComercial": "Chamarra para caballero · loneta",
+      "nombreFamilia": "Chamarra para caballero · loneta",
+      "nombreFamiliaComercial": "Chamarra para caballero · loneta",
+      "familia": "zain-proveedor-zn-ch-015",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Loneta. Exterior: 98% algodón / 2% spandex; Forro del cuerpo: 100% poliéster; Forro de mangas: 100% poliéster; Banda de canalé: 98% poliéster / 2% spandex. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 98% algodón / 2% spandex; Forro del cuerpo: 100% poliéster; Forro de mangas: 100% poliéster; Banda de canalé: 98% poliéster / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-015-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11
+    },
+    {
+      "id": "zn-ch-016",
+      "idPublico": "zn-ch-016",
+      "sku": "ZN-CH-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · loneta",
+      "nombreComercial": "Chamarra para caballero · loneta",
+      "nombreFamilia": "Chamarra para caballero · loneta",
+      "nombreFamiliaComercial": "Chamarra para caballero · loneta",
+      "familia": "zain-proveedor-zn-ch-016",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Loneta. Cuerpo: 75% algodón; Forro: 46% nailon / 43% poliuretano / 11% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 75% algodón; Forro: 46% nailon / 43% poliuretano / 11% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-016-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ch-017",
+      "idPublico": "zn-ch-017",
+      "sku": "ZN-CH-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Costuras dobles · canvas; forro polar",
+      "nombreComercial": "Costuras dobles · canvas; forro polar",
+      "nombreFamilia": "Costuras dobles · canvas; forro polar",
+      "nombreFamiliaComercial": "Costuras dobles · canvas; forro polar",
+      "familia": "zain-proveedor-zn-ch-017",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Costuras dobles, axilas reforzadas, codos articulados y puños ajustables; forro polar.",
+      "especificaciones": "Canvas; forro polar. Exterior: 60% algodón / 40% poliéster; forro 100% poliéster. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 60% algodón / 40% poliéster; forro 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-017-c01",
+        "zn-ch-017-c02",
+        "zn-ch-017-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-018",
+      "idPublico": "zn-ch-018",
+      "sku": "ZN-CH-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Resistente al agua",
+      "nombreComercial": "Resistente al agua",
+      "nombreFamilia": "Resistente al agua",
+      "nombreFamiliaComercial": "Resistente al agua",
+      "familia": "zain-proveedor-zn-ch-018",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Resistente al agua, cierre completo, hombros contrastantes, puños y cintura ajustables; forro acolchado.",
+      "especificaciones": "Gabardina; forro de tafeta de nailon. Exterior: 65% poliéster / 35% algodón; forro de nailon con espuma de poliuretano. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; forro de nailon con espuma de poliuretano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-018-c01",
+        "zn-ch-018-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ch-018-c01",
+        "zn-ch-018-c02"
+      ]
+    },
+    {
+      "id": "zn-ch-019",
+      "idPublico": "zn-ch-019",
+      "sku": "ZN-CH-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Capucha con visera y cordón oculto SafeCinch",
+      "nombreComercial": "Capucha con visera y cordón oculto SafeCinch",
+      "nombreFamilia": "Capucha con visera y cordón oculto SafeCinch",
+      "nombreFamiliaComercial": "Capucha con visera y cordón oculto SafeCinch",
+      "familia": "zain-proveedor-zn-ch-019",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Capucha con visera y cordón oculto SafeCinch; tela WeatherWeave elástica, bolsillos de seguridad y codos articulados.",
+      "especificaciones": "WeatherWeave, stretch en cuatro direcciones, reverso cepillado. 92% poliéster / 8% elastano. Tallas: XS-5XLREGULA. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "92% poliéster / 8% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-019-c01",
+        "zn-ch-019-c02"
+      ],
+      "tallas": [
+        "XS-5XLREGULA"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-su-016",
+      "idPublico": "zn-su-016",
+      "sku": "ZN-SU-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera para caballero · felpa",
+      "nombreComercial": "Sudadera para caballero · felpa",
+      "nombreFamilia": "Sudadera para caballero · felpa",
+      "nombreFamiliaComercial": "Sudadera para caballero · felpa",
+      "familia": "zain-proveedor-zn-su-016",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera para caballero; cierre de cremallera.",
+      "especificaciones": "Felpa. 60% algodón / 40% poliéster reciclado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-016-c01",
+        "zn-su-016-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-040",
+      "idPublico": "zn-pa-040",
+      "sku": "ZN-PA-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · ripstop",
+      "nombreComercial": "Pantalón de trabajo para dama · ripstop",
+      "nombreFamilia": "Pantalón de trabajo para dama · ripstop",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · ripstop",
+      "familia": "zain-proveedor-zn-pa-040",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Ripstop. Cuerpo: 61% poliéster / 32% algodón / 7% elasterell-P. Tallas: 2-16EVEN,18W. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 61% poliéster / 32% algodón / 7% elasterell-P",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-040-c01",
+        "zn-pa-040-c02",
+        "zn-pa-040-c03",
+        "zn-pa-040-c04"
+      ],
+      "tallas": [
+        "2-16EVEN,18W"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-041",
+      "idPublico": "zn-pa-041",
+      "sku": "ZN-PA-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · ripstop",
+      "nombreComercial": "Pantalón de trabajo para caballero · ripstop",
+      "nombreFamilia": "Pantalón de trabajo para caballero · ripstop",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · ripstop",
+      "familia": "zain-proveedor-zn-pa-041",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Ripstop. Cuerpo: 61% poliéster / 32% algodón / 7% elasterell-P. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, TALLASPARES2. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 61% poliéster / 32% algodón / 7% elasterell-P",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-041-c01",
+        "zn-pa-041-c02",
+        "zn-pa-041-c03",
+        "zn-pa-041-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56",
+        "58",
+        "60",
+        "TALLASPARES2"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-042",
+      "idPublico": "zn-pa-042",
+      "sku": "ZN-PA-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina flex",
+      "nombreComercial": "Corte relajado recto · gabardina flex",
+      "nombreFamilia": "Corte relajado recto · gabardina flex",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina flex",
+      "familia": "zain-proveedor-zn-pa-042",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado recto, tecnología StayDark, cintura con stretch y cierre de gancho; tallas extra con banda elástica.",
+      "especificaciones": "Gabardina Flex. 65% poliéster / 35% algodón. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-042-c01",
+        "zn-pa-042-c02",
+        "zn-pa-042-c03",
+        "zn-pa-042-c04"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-043",
+      "idPublico": "zn-pa-043",
+      "sku": "ZN-PA-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina flex",
+      "nombreComercial": "Corte relajado recto · gabardina flex",
+      "nombreFamilia": "Corte relajado recto · gabardina flex",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina flex",
+      "familia": "zain-proveedor-zn-pa-043",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado recto, tecnología StayDark, cintura con stretch y cierre de gancho; tallas extra con banda elástica.",
+      "especificaciones": "Gabardina Flex. 65% poliéster / 35% algodón. Tallas: 16W, 24W. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-043-c01",
+        "zn-pa-043-c02",
+        "zn-pa-043-c03",
+        "zn-pa-043-c04"
+      ],
+      "tallas": [
+        "16W",
+        "24W"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-044",
+      "idPublico": "zn-pa-044",
+      "sku": "ZN-PA-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte slim con pierna para bota · gabardina stretch",
+      "nombreComercial": "Corte slim con pierna para bota · gabardina stretch",
+      "nombreFamilia": "Corte slim con pierna para bota · gabardina stretch",
+      "nombreFamiliaComercial": "Corte slim con pierna para bota · gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-044",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte slim con pierna para bota, cierre de gancho y pretina stretch; tela cepillada.",
+      "especificaciones": "Gabardina stretch. 97% algodón / 3% spandex. Tallas: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% algodón / 3% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-044-c01",
+        "zn-pa-044-c02",
+        "zn-pa-044-c03"
+      ],
+      "tallas": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-045",
+      "idPublico": "zn-pa-045",
+      "sku": "ZN-PA-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina stretch",
+      "nombreComercial": "Corte relajado recto · gabardina stretch",
+      "nombreFamilia": "Corte relajado recto · gabardina stretch",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-045",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado recto, cierre de gancho, pretina stretch y bolsillos traseros ribeteados; tela cepillada.",
+      "especificaciones": "Gabardina stretch. 97% algodón / 3% spandex. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% algodón / 3% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-045-c01",
+        "zn-pa-045-c02",
+        "zn-pa-045-c03"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-046",
+      "idPublico": "zn-pa-046",
+      "sku": "ZN-PA-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte regular recto · mezclilla",
+      "nombreComercial": "Corte regular recto · mezclilla",
+      "nombreFamilia": "Corte regular recto · mezclilla",
+      "nombreFamiliaComercial": "Corte regular recto · mezclilla",
+      "familia": "zain-proveedor-zn-pa-046",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte regular recto, cintura baja, cinco bolsillos y refuerzos en puntos de tensión; lavado en prenda.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-046-c01"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 14,
+      "coloresSinRender": [
+        "zn-pa-046-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-047",
+      "idPublico": "zn-pa-047",
+      "sku": "ZN-PA-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado · gabardina teñida",
+      "nombreComercial": "Corte relajado · gabardina teñida",
+      "nombreFamilia": "Corte relajado · gabardina teñida",
+      "nombreFamiliaComercial": "Corte relajado · gabardina teñida",
+      "familia": "zain-proveedor-zn-pa-047",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado, pretina stretch, bolsillos cargo con solapa y bolsillo exterior; cierre de latón.",
+      "especificaciones": "Gabardina teñida. 100% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-047-c01",
+        "zn-pa-047-c02",
+        "zn-pa-047-c03",
+        "zn-pa-047-c04"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-048",
+      "idPublico": "zn-pa-048",
+      "sku": "ZN-PA-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado · gabardina teñida",
+      "nombreComercial": "Corte relajado · gabardina teñida",
+      "nombreFamilia": "Corte relajado · gabardina teñida",
+      "nombreFamiliaComercial": "Corte relajado · gabardina teñida",
+      "familia": "zain-proveedor-zn-pa-048",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado, pretina stretch, bolsillos cargo con solapa y bolsillo exterior; cierre de latón.",
+      "especificaciones": "Gabardina teñida. 100% algodón. Tallas: 18W, 24W. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-048-c01",
+        "zn-pa-048-c02",
+        "zn-pa-048-c03",
+        "zn-pa-048-c04"
+      ],
+      "tallas": [
+        "18W",
+        "24W"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-049",
+      "idPublico": "zn-pa-049",
+      "sku": "ZN-PA-049",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte slim recto · mezclilla premium flex",
+      "nombreComercial": "Corte slim recto · mezclilla premium flex",
+      "nombreFamilia": "Corte slim recto · mezclilla premium flex",
+      "nombreFamiliaComercial": "Corte slim recto · mezclilla premium flex",
+      "familia": "zain-proveedor-zn-pa-049",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte slim recto, tela Flex, pretina stretch y tela cepillada; apto para lavado industrial.",
+      "especificaciones": "Mezclilla premium Flex. 93% algodón / 6% poliéster / 1% elastano. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "93% algodón / 6% poliéster / 1% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-049-c01"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12,
+      "coloresSinRender": [
+        "zn-pa-049-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-050",
+      "idPublico": "zn-pa-050",
+      "sku": "ZN-PA-050",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte slim recto · mezclilla stretch",
+      "nombreComercial": "Corte slim recto · mezclilla stretch",
+      "nombreFamilia": "Corte slim recto · mezclilla stretch",
+      "nombreFamiliaComercial": "Corte slim recto · mezclilla stretch",
+      "familia": "zain-proveedor-zn-pa-050",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte slim recto, tecnología Cone S-Gene, panel flexible abdominal y 46% de stretch; lavado en prenda.",
+      "especificaciones": "Mezclilla stretch. 89% algodón / 8% poliéster / 3% spandex. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "89% algodón / 8% poliéster / 3% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-050-c01"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pa-050-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-051",
+      "idPublico": "zn-pa-051",
+      "sku": "ZN-PA-051",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte skinny · gabardina stretch",
+      "nombreComercial": "Corte skinny · gabardina stretch",
+      "nombreFamilia": "Corte skinny · gabardina stretch",
+      "nombreFamiliaComercial": "Corte skinny · gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-051",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte skinny, cintura baja, botón frontal, pretina stretch y bolsillos traseros ribeteados.",
+      "especificaciones": "Gabardina stretch. 58% algodón / 40% poliéster / 2% spandex. Tallas: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "58% algodón / 40% poliéster / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-051-c01",
+        "zn-pa-051-c02",
+        "zn-pa-051-c03",
+        "zn-pa-051-c04",
+        "zn-pa-051-c05"
+      ],
+      "tallas": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-052",
+      "idPublico": "zn-pa-052",
+      "sku": "ZN-PA-052",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-052",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte relajado; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES0. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-052-c01",
+        "zn-pa-052-c02",
+        "zn-pa-052-c03",
+        "zn-pa-052-c04"
+      ],
+      "tallas": [
+        "TALLASPARES0"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-053",
+      "idPublico": "zn-pa-053",
+      "sku": "ZN-PA-053",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-053",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte relajado; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES1. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-053-c01",
+        "zn-pa-053-c02",
+        "zn-pa-053-c03",
+        "zn-pa-053-c04"
+      ],
+      "tallas": [
+        "TALLASPARES1"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-054",
+      "idPublico": "zn-pa-054",
+      "sku": "ZN-PA-054",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-054",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES2. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-054-c01",
+        "zn-pa-054-c02",
+        "zn-pa-054-c03"
+      ],
+      "tallas": [
+        "TALLASPARES2"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-055",
+      "idPublico": "zn-pa-055",
+      "sku": "ZN-PA-055",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · mezclilla",
+      "familia": "zain-proveedor-zn-pa-055",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte relajado; con bolsillos.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: TALLASPARES2. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-055-c01"
+      ],
+      "tallas": [
+        "TALLASPARES2"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-pa-056",
+      "idPublico": "zn-pa-056",
+      "sku": "ZN-PA-056",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para dama · gabardina",
+      "nombreComercial": "Short de trabajo para dama · gabardina",
+      "nombreFamilia": "Short de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-056",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Short de trabajo para dama.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: TALLASPARES4. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-056-c01",
+        "zn-pa-056-c02",
+        "zn-pa-056-c03"
+      ],
+      "tallas": [
+        "TALLASPARES4"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-057",
+      "idPublico": "zn-pa-057",
+      "sku": "ZN-PA-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para dama · gabardina",
+      "nombreComercial": "Short de trabajo para dama · gabardina",
+      "nombreFamilia": "Short de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-057",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Short de trabajo para dama; bolsillos cargo.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: TALLASPARES4. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-057-c01"
+      ],
+      "tallas": [
+        "TALLASPARES4"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-039",
+      "idPublico": "zn-cm-039",
+      "sku": "ZN-CM-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Ajuste acinturado · oxford flex",
+      "nombreComercial": "Ajuste acinturado · oxford flex",
+      "nombreFamilia": "Ajuste acinturado · oxford flex",
+      "nombreFamiliaComercial": "Ajuste acinturado · oxford flex",
+      "familia": "zain-proveedor-zn-cm-039",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Ajuste acinturado, stretch mecánico, botones aperlados, bolsillo en pecho y pinzas frontales/traseras.",
+      "especificaciones": "Oxford Flex. 60% algodón / 40% poliéster. Tallas: XS, S, M, L, XL, 2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-039-c01",
+        "zn-cm-039-c02",
+        "zn-cm-039-c03",
+        "zn-cm-039-c04"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-039-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-040",
+      "idPublico": "zn-cm-040",
+      "sku": "ZN-CM-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Ajuste acinturado · oxford flex",
+      "nombreComercial": "Ajuste acinturado · oxford flex",
+      "nombreFamilia": "Ajuste acinturado · oxford flex",
+      "nombreFamiliaComercial": "Ajuste acinturado · oxford flex",
+      "familia": "zain-proveedor-zn-cm-040",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Ajuste acinturado, stretch mecánico, botones aperlados, bolsillo en pecho y pinzas frontales/traseras.",
+      "especificaciones": "Oxford Flex. 60% algodón / 40% poliéster. Tallas: XS, S, M, L, XL, 2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-040-c01",
+        "zn-cm-040-c02",
+        "zn-cm-040-c03",
+        "zn-cm-040-c04"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-040-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-041",
+      "idPublico": "zn-pl-041",
+      "sku": "ZN-PL-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas con broche y bolsillos",
+      "nombreComercial": "Cuello de dos piezas con broche y bolsillos",
+      "nombreFamilia": "Cuello de dos piezas con broche y bolsillos",
+      "nombreFamiliaComercial": "Cuello de dos piezas con broche y bolsillos",
+      "familia": "zain-proveedor-zn-pl-041",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello de dos piezas con broche y bolsillos frontales; resistente a decoloración y arrugas.",
+      "especificaciones": "Popelina de planchado permanente. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-041-c01",
+        "zn-pl-041-c02",
+        "zn-pl-041-c03",
+        "zn-pl-041-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-042",
+      "idPublico": "zn-pl-042",
+      "sku": "ZN-PL-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello de dos piezas con broche y bolsillos",
+      "nombreComercial": "Cuello de dos piezas con broche y bolsillos",
+      "nombreFamilia": "Cuello de dos piezas con broche y bolsillos",
+      "nombreFamiliaComercial": "Cuello de dos piezas con broche y bolsillos",
+      "familia": "zain-proveedor-zn-pl-042",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello de dos piezas con broche y bolsillos frontales; resistente a decoloración y arrugas.",
+      "especificaciones": "Popelina de planchado permanente. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-042-c01",
+        "zn-pl-042-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-043",
+      "idPublico": "zn-pl-043",
+      "sku": "ZN-PL-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pinzas frontales y traseras · gabardina",
+      "nombreComercial": "Pinzas frontales y traseras · gabardina",
+      "nombreFamilia": "Pinzas frontales y traseras · gabardina",
+      "nombreFamiliaComercial": "Pinzas frontales y traseras · gabardina",
+      "familia": "zain-proveedor-zn-pl-043",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Pinzas frontales y traseras, pliegue en espalda y manejo de humedad; resistente a arrugas y manchas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-043-c01",
+        "zn-pl-043-c02",
+        "zn-pl-043-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-044",
+      "idPublico": "zn-pl-044",
+      "sku": "ZN-PL-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · mezclilla",
+      "nombreComercial": "Blusa para dama · mezclilla",
+      "nombreFamilia": "Blusa para dama · mezclilla",
+      "nombreFamiliaComercial": "Blusa para dama · mezclilla",
+      "familia": "zain-proveedor-zn-pl-044",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-044-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pl-044-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-058",
+      "idPublico": "zn-pa-058",
+      "sku": "ZN-PA-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte holgado recto · gabardina",
+      "nombreComercial": "Corte holgado recto · gabardina",
+      "nombreFamilia": "Corte holgado recto · gabardina",
+      "nombreFamiliaComercial": "Corte holgado recto · gabardina",
+      "familia": "zain-proveedor-zn-pa-058",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte holgado recto, rodillas dobles con apertura para rodilleras, bolsillo multiusos y raya permanente.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30–50;LARGO3. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-058-c01",
+        "zn-pa-058-c02",
+        "zn-pa-058-c03",
+        "zn-pa-058-c04"
+      ],
+      "tallas": [
+        "30–50;LARGO3"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-059",
+      "idPublico": "zn-pa-059",
+      "sku": "ZN-PA-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina teñida",
+      "nombreComercial": "Corte relajado recto · gabardina teñida",
+      "nombreFamilia": "Corte relajado recto · gabardina teñida",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina teñida",
+      "familia": "zain-proveedor-zn-pa-059",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Corte relajado recto, tecnología StayDark, bolsillos profundos y cierre de botón; resistente a arrugas.",
+      "especificaciones": "Gabardina teñida. 65% poliéster / 35% algodón. Tallas: 28–38;LARGOS. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-059-c01",
+        "zn-pa-059-c02",
+        "zn-pa-059-c03",
+        "zn-pa-059-c04"
+      ],
+      "tallas": [
+        "28–38;LARGOS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-060",
+      "idPublico": "zn-pa-060",
+      "sku": "ZN-PA-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte skinny · gabardina stretch",
+      "nombreComercial": "Corte skinny · gabardina stretch",
+      "nombreFamilia": "Corte skinny · gabardina stretch",
+      "nombreFamiliaComercial": "Corte skinny · gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-060",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte skinny, cintura baja, botón frontal, pretina stretch y bolsillos traseros ribeteados.",
+      "especificaciones": "Gabardina stretch. 58% algodón / 40% poliéster / 2% spandex. Tallas: 16W–24W;LARG. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "58% algodón / 40% poliéster / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-060-c01",
+        "zn-pa-060-c02"
+      ],
+      "tallas": [
+        "16W–24W;LARG"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-061",
+      "idPublico": "zn-pa-061",
+      "sku": "ZN-PA-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte relajado recto · gabardina stretch",
+      "nombreComercial": "Corte relajado recto · gabardina stretch",
+      "nombreFamilia": "Corte relajado recto · gabardina stretch",
+      "nombreFamiliaComercial": "Corte relajado recto · gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-061",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte relajado recto, cierre de gancho, pretina stretch y bolsillos traseros ribeteados; tela cepillada.",
+      "especificaciones": "Gabardina stretch. 97% algodón / 3% spandex. Tallas: 16W–24W;LARG. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "97% algodón / 3% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-061-c01",
+        "zn-pa-061-c02"
+      ],
+      "tallas": [
+        "16W–24W;LARG"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-062",
+      "idPublico": "zn-pa-062",
+      "sku": "ZN-PA-062",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Corte slim recto · mezclilla premium flex",
+      "nombreComercial": "Corte slim recto · mezclilla premium flex",
+      "nombreFamilia": "Corte slim recto · mezclilla premium flex",
+      "nombreFamiliaComercial": "Corte slim recto · mezclilla premium flex",
+      "familia": "zain-proveedor-zn-pa-062",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Corte slim recto, tela Flex, pretina stretch y tela cepillada; apto para lavado industrial.",
+      "especificaciones": "Mezclilla premium Flex. 93% algodón / 6% poliéster / 1% elastano. Tallas: 16W, 24W. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "93% algodón / 6% poliéster / 1% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-062-c01"
+      ],
+      "tallas": [
+        "16W",
+        "24W"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12,
+      "coloresSinRender": [
+        "zn-pa-062-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-063",
+      "idPublico": "zn-pa-063",
+      "sku": "ZN-PA-063",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-063",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-063-c01",
+        "zn-pa-063-c02",
+        "zn-pa-063-c03",
+        "zn-pa-063-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-064",
+      "idPublico": "zn-pa-064",
+      "sku": "ZN-PA-064",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-064",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón resistente a arrugas. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 28, 46, 48, 50, 52, 54, 56. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón resistente a arrugas",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-064-c01",
+        "zn-pa-064-c02",
+        "zn-pa-064-c03",
+        "zn-pa-064-c04",
+        "zn-pa-064-c05",
+        "zn-pa-064-c06",
+        "zn-pa-064-c07"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "28",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pa-064-c07"
+      ]
+    },
+    {
+      "id": "zn-pa-065",
+      "idPublico": "zn-pa-065",
+      "sku": "ZN-PA-065",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-065",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón resistente a arrugas. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón resistente a arrugas",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-065-c01",
+        "zn-pa-065-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-066",
+      "idPublico": "zn-pa-066",
+      "sku": "ZN-PA-066",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-066",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-066-c01",
+        "zn-pa-066-c02",
+        "zn-pa-066-c03"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-067",
+      "idPublico": "zn-pa-067",
+      "sku": "ZN-PA-067",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-067",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; bolsillos cargo.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-067-c01",
+        "zn-pa-067-c02"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-068",
+      "idPublico": "zn-pa-068",
+      "sku": "ZN-PA-068",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreComercial": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreFamilia": "Pantalón de trabajo para caballero · dril para pintor",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · dril para pintor",
+      "familia": "zain-proveedor-zn-pa-068",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte holgado; con bolsillos.",
+      "especificaciones": "Dril para pintor. 100% algodón. Tallas: 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-068-c01"
+      ],
+      "tallas": [
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-069",
+      "idPublico": "zn-pa-069",
+      "sku": "ZN-PA-069",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · loneta",
+      "nombreComercial": "Pantalón de trabajo para caballero · loneta",
+      "nombreFamilia": "Pantalón de trabajo para caballero · loneta",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · loneta",
+      "familia": "zain-proveedor-zn-pa-069",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte holgado.",
+      "especificaciones": "Loneta. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-069-c01",
+        "zn-pa-069-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-pa-070",
+      "idPublico": "zn-pa-070",
+      "sku": "ZN-PA-070",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-070",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-070-c01"
+      ],
+      "tallas": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-pa-071",
+      "idPublico": "zn-pa-071",
+      "sku": "ZN-PA-071",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-071",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-071-c01"
+      ],
+      "tallas": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-pa-072",
+      "idPublico": "zn-pa-072",
+      "sku": "ZN-PA-072",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-072",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-072-c01",
+        "zn-pa-072-c02",
+        "zn-pa-072-c03",
+        "zn-pa-072-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13,
+      "coloresSinRender": [
+        "zn-pa-072-c03"
+      ]
+    },
+    {
+      "id": "zn-pa-073",
+      "idPublico": "zn-pa-073",
+      "sku": "ZN-PA-073",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-073",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte holgado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-073-c01",
+        "zn-pa-073-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-pa-074",
+      "idPublico": "zn-pa-074",
+      "sku": "ZN-PA-074",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para caballero · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-pa-074",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Mezclilla. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-074-c01",
+        "zn-pa-074-c02"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-075",
+      "idPublico": "zn-pa-075",
+      "sku": "ZN-PA-075",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-075",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 62. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-075-c01",
+        "zn-pa-075-c02",
+        "zn-pa-075-c03",
+        "zn-pa-075-c04",
+        "zn-pa-075-c05",
+        "zn-pa-075-c06",
+        "zn-pa-075-c07"
+      ],
+      "tallas": [
+        "28",
+        "62"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-076",
+      "idPublico": "zn-pa-076",
+      "sku": "ZN-PA-076",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-076",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 28, 46, 48, 50, 52, 54, 56, 58, 60. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-076-c01",
+        "zn-pa-076-c02",
+        "zn-pa-076-c03",
+        "zn-pa-076-c04",
+        "zn-pa-076-c05",
+        "zn-pa-076-c06",
+        "zn-pa-076-c07",
+        "zn-pa-076-c08"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "28",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56",
+        "58",
+        "60"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pa-076-c08"
+      ]
+    },
+    {
+      "id": "zn-pa-077",
+      "idPublico": "zn-pa-077",
+      "sku": "ZN-PA-077",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-077",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; con botones; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-077-c01",
+        "zn-pa-077-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-078",
+      "idPublico": "zn-pa-078",
+      "sku": "ZN-PA-078",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · canvas",
+      "nombreComercial": "Pantalón de trabajo para caballero · canvas",
+      "nombreFamilia": "Pantalón de trabajo para caballero · canvas",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · canvas",
+      "familia": "zain-proveedor-zn-pa-078",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; bolsillos cargo; con bolsillos; pretina elástica; con botones; acabado que facilita retirar suciedad.",
+      "especificaciones": "Canvas. 54% poliéster / 42% algodón / 4% spandex. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "54% poliéster / 42% algodón / 4% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-078-c01",
+        "zn-pa-078-c02",
+        "zn-pa-078-c03",
+        "zn-pa-078-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-079",
+      "idPublico": "zn-pa-079",
+      "sku": "ZN-PA-079",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-079",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte relajado; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-079-c01",
+        "zn-pa-079-c02",
+        "zn-pa-079-c03"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-080",
+      "idPublico": "zn-pa-080",
+      "sku": "ZN-PA-080",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-080",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-080-c01",
+        "zn-pa-080-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-081",
+      "idPublico": "zn-pa-081",
+      "sku": "ZN-PA-081",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-081",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; cintura elástica; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-081-c01",
+        "zn-pa-081-c02",
+        "zn-pa-081-c03",
+        "zn-pa-081-c04",
+        "zn-pa-081-c05",
+        "zn-pa-081-c06",
+        "zn-pa-081-c07"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56",
+        "58"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-082",
+      "idPublico": "zn-pa-082",
+      "sku": "ZN-PA-082",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-082",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-082-c01",
+        "zn-pa-082-c02",
+        "zn-pa-082-c03",
+        "zn-pa-082-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-083",
+      "idPublico": "zn-pa-083",
+      "sku": "ZN-PA-083",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · ripstop, gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · ripstop, gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · ripstop, gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · ripstop, gabardina",
+      "familia": "zain-proveedor-zn-pa-083",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Ripstop, gabardina. 70% poliéster / 28% algodón / 2% spandex. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "70% poliéster / 28% algodón / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-083-c01",
+        "zn-pa-083-c02",
+        "zn-pa-083-c03",
+        "zn-pa-083-c04"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-084",
+      "idPublico": "zn-pa-084",
+      "sku": "ZN-PA-084",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-084",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-084-c01",
+        "zn-pa-084-c02",
+        "zn-pa-084-c03",
+        "zn-pa-084-c04",
+        "zn-pa-084-c05"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pa-084-c05"
+      ]
+    },
+    {
+      "id": "zn-pa-085",
+      "idPublico": "zn-pa-085",
+      "sku": "ZN-PA-085",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-085",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; paneles Mimix.",
+      "especificaciones": "Gabardina. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 93% nailon / 7% spandex. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 93% nailon / 7% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-085-c01",
+        "zn-pa-085-c02",
+        "zn-pa-085-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-pa-086",
+      "idPublico": "zn-pa-086",
+      "sku": "ZN-PA-086",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-086",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte recto; bolsillos cargo; con bolsillos; pretina elástica; acabado que facilita retirar suciedad; paneles Mimix.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-086-c01",
+        "zn-pa-086-c02",
+        "zn-pa-086-c03",
+        "zn-pa-086-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-087",
+      "idPublico": "zn-pa-087",
+      "sku": "ZN-PA-087",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · gabardina",
+      "nombreComercial": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-087",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Gabardina. 80% poliéster / 20% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-087-c01",
+        "zn-pa-087-c02"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-088",
+      "idPublico": "zn-pa-088",
+      "sku": "ZN-PA-088",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-088",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero.",
+      "especificaciones": "Gabardina. 81% poliéster / 13% algodón / 6% elastano. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "81% poliéster / 13% algodón / 6% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-088-c01",
+        "zn-pa-088-c02",
+        "zn-pa-088-c03",
+        "zn-pa-088-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-089",
+      "idPublico": "zn-pa-089",
+      "sku": "ZN-PA-089",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-089",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; bolsillos cargo; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón resistente a arrugas. Tallas: 30, 32, 34, 36, 38, 40, 42, 44. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón resistente a arrugas",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-089-c01"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-090",
+      "idPublico": "zn-pa-090",
+      "sku": "ZN-PA-090",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-090",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte recto; bolsillos cargo; con bolsillos; pretina elástica; acabado que facilita retirar suciedad; paneles Mimix.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-090-c01",
+        "zn-pa-090-c02",
+        "zn-pa-090-c03",
+        "zn-pa-090-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-091",
+      "idPublico": "zn-pa-091",
+      "sku": "ZN-PA-091",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · canvas",
+      "nombreComercial": "Short de trabajo para caballero · canvas",
+      "nombreFamilia": "Short de trabajo para caballero · canvas",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · canvas",
+      "familia": "zain-proveedor-zn-pa-091",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte relajado; bolsillos cargo; con bolsillos; pretina elástica; con botones; acabado que facilita retirar suciedad.",
+      "especificaciones": "Canvas. 54% poliéster / 42% algodón / 4% spandex. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "54% poliéster / 42% algodón / 4% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-091-c01",
+        "zn-pa-091-c02",
+        "zn-pa-091-c03"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-092",
+      "idPublico": "zn-pa-092",
+      "sku": "ZN-PA-092",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-092",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte relajado; con bolsillos; cierre con broches; resistente a arrugas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-092-c01",
+        "zn-pa-092-c02",
+        "zn-pa-092-c03",
+        "zn-pa-092-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-093",
+      "idPublico": "zn-pa-093",
+      "sku": "ZN-PA-093",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · ripstop, gabardina",
+      "nombreComercial": "Short de trabajo para caballero · ripstop, gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · ripstop, gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · ripstop, gabardina",
+      "familia": "zain-proveedor-zn-pa-093",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte recto; con bolsillos; pretina elástica; cierre con broches; con botones; acabado que facilita retirar suciedad.",
+      "especificaciones": "Ripstop, gabardina. 70% poliéster / 28% algodón / 2% spandex. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "70% poliéster / 28% algodón / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-093-c01",
+        "zn-pa-093-c02",
+        "zn-pa-093-c03",
+        "zn-pa-093-c04"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-094",
+      "idPublico": "zn-pa-094",
+      "sku": "ZN-PA-094",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-094",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-094-c01",
+        "zn-pa-094-c02",
+        "zn-pa-094-c03",
+        "zn-pa-094-c04",
+        "zn-pa-094-c05"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-095",
+      "idPublico": "zn-pa-095",
+      "sku": "ZN-PA-095",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-095",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte relajado; bolsillos cargo; con bolsillos; cierre con broches; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-095-c01",
+        "zn-pa-095-c02",
+        "zn-pa-095-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-096",
+      "idPublico": "zn-pa-096",
+      "sku": "ZN-PA-096",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para caballero · gabardina",
+      "nombreComercial": "Short de trabajo para caballero · gabardina",
+      "nombreFamilia": "Short de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-pa-096",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short de trabajo para caballero; corte recto; acabado que facilita retirar suciedad; paneles Mimix.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-096-c01",
+        "zn-pa-096-c02",
+        "zn-pa-096-c03"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-041",
+      "idPublico": "zn-cm-041",
+      "sku": "ZN-CM-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-041",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-041-c01",
+        "zn-cm-041-c02",
+        "zn-cm-041-c03",
+        "zn-cm-041-c04",
+        "zn-cm-041-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-042",
+      "idPublico": "zn-cm-042",
+      "sku": "ZN-CM-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-042",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-042-c01",
+        "zn-cm-042-c02",
+        "zn-cm-042-c03",
+        "zn-cm-042-c04",
+        "zn-cm-042-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-043",
+      "idPublico": "zn-cm-043",
+      "sku": "ZN-CM-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · chambray",
+      "nombreComercial": "Camisa para caballero · chambray",
+      "nombreFamilia": "Camisa para caballero · chambray",
+      "nombreFamiliaComercial": "Camisa para caballero · chambray",
+      "familia": "zain-proveedor-zn-cm-043",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; cierre con broches.",
+      "especificaciones": "Chambray. 65% poliéster / 35% algodón. Tallas: S-3XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-043-c01"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-044",
+      "idPublico": "zn-cm-044",
+      "sku": "ZN-CM-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · chambray",
+      "nombreComercial": "Camisa para caballero · chambray",
+      "nombreFamilia": "Camisa para caballero · chambray",
+      "nombreFamiliaComercial": "Camisa para caballero · chambray",
+      "familia": "zain-proveedor-zn-cm-044",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con bolsillos; cierre con broches.",
+      "especificaciones": "Chambray. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-044-c01"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-045",
+      "idPublico": "zn-cm-045",
+      "sku": "ZN-CM-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-045",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; sin bolsillos; cierre con broches; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S-3XLREGULAR. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-045-c01",
+        "zn-cm-045-c02",
+        "zn-cm-045-c03"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-046",
+      "idPublico": "zn-cm-046",
+      "sku": "ZN-CM-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-046",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, S-4XLREGULAR. 11 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-046-c01",
+        "zn-cm-046-c02",
+        "zn-cm-046-c03",
+        "zn-cm-046-c04",
+        "zn-cm-046-c05",
+        "zn-cm-046-c06",
+        "zn-cm-046-c07",
+        "zn-cm-046-c08",
+        "zn-cm-046-c09",
+        "zn-cm-046-c10",
+        "zn-cm-046-c11"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 68,
+      "coloresSinRender": [
+        "zn-cm-046-c10",
+        "zn-cm-046-c11"
+      ]
+    },
+    {
+      "id": "zn-cm-047",
+      "idPublico": "zn-cm-047",
+      "sku": "ZN-CM-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-047",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, S-4XLREGULAR. 11 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-047-c01",
+        "zn-cm-047-c02",
+        "zn-cm-047-c03",
+        "zn-cm-047-c04",
+        "zn-cm-047-c05",
+        "zn-cm-047-c06",
+        "zn-cm-047-c07",
+        "zn-cm-047-c08",
+        "zn-cm-047-c09",
+        "zn-cm-047-c10",
+        "zn-cm-047-c11"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 70,
+      "coloresSinRender": [
+        "zn-cm-047-c10",
+        "zn-cm-047-c11"
+      ]
+    },
+    {
+      "id": "zn-cm-048",
+      "idPublico": "zn-cm-048",
+      "sku": "ZN-CM-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-048",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón resistente a arrugas. Tallas: S, M, L, XL, 2XL, S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón resistente a arrugas",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-048-c01",
+        "zn-cm-048-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-049",
+      "idPublico": "zn-cm-049",
+      "sku": "ZN-CM-049",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-049",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con botones; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-049-c01",
+        "zn-cm-049-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-049-c01",
+        "zn-cm-049-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-050",
+      "idPublico": "zn-cm-050",
+      "sku": "ZN-CM-050",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-050",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con botones; resistente a arrugas.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-050-c01",
+        "zn-cm-050-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-050-c01",
+        "zn-cm-050-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-051",
+      "idPublico": "zn-cm-051",
+      "sku": "ZN-CM-051",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-051",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-051-c01"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-051-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-052",
+      "idPublico": "zn-cm-052",
+      "sku": "ZN-CM-052",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-052",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-052-c01"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-052-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-053",
+      "idPublico": "zn-cm-053",
+      "sku": "ZN-CM-053",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · mezclilla",
+      "nombreComercial": "Camisa para caballero · mezclilla",
+      "nombreFamilia": "Camisa para caballero · mezclilla",
+      "nombreFamiliaComercial": "Camisa para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-cm-053",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-053-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-cm-054",
+      "idPublico": "zn-cm-054",
+      "sku": "ZN-CM-054",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-054",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, S-5XLREGULAR, S-3XLREGULAR, S-4XLREGULAR. 31 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-054-c01",
+        "zn-cm-054-c02",
+        "zn-cm-054-c03",
+        "zn-cm-054-c04",
+        "zn-cm-054-c05",
+        "zn-cm-054-c06",
+        "zn-cm-054-c07",
+        "zn-cm-054-c08",
+        "zn-cm-054-c09",
+        "zn-cm-054-c10",
+        "zn-cm-054-c11",
+        "zn-cm-054-c12",
+        "zn-cm-054-c13",
+        "zn-cm-054-c14",
+        "zn-cm-054-c15",
+        "zn-cm-054-c16",
+        "zn-cm-054-c17",
+        "zn-cm-054-c18",
+        "zn-cm-054-c19",
+        "zn-cm-054-c20",
+        "zn-cm-054-c21",
+        "zn-cm-054-c22",
+        "zn-cm-054-c23",
+        "zn-cm-054-c24",
+        "zn-cm-054-c25",
+        "zn-cm-054-c26",
+        "zn-cm-054-c27",
+        "zn-cm-054-c28",
+        "zn-cm-054-c29",
+        "zn-cm-054-c30",
+        "zn-cm-054-c31"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-5XLREGULAR",
+        "S-3XLREGULAR",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 79,
+      "coloresSinRender": [
+        "zn-cm-054-c24",
+        "zn-cm-054-c25",
+        "zn-cm-054-c27",
+        "zn-cm-054-c28",
+        "zn-cm-054-c29",
+        "zn-cm-054-c30",
+        "zn-cm-054-c31"
+      ]
+    },
+    {
+      "id": "zn-cm-055",
+      "idPublico": "zn-cm-055",
+      "sku": "ZN-CM-055",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-055",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. Filas 80, 81, 83: 65% poliéster / 35% algodón; Filas 86: 65% poliéster / 35% algodón peinado. Tallas: S-5XLREGULAR, S-6XLREGULAR. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Filas 80, 81, 83: 65% poliéster / 35% algodón; Filas 86: 65% poliéster / 35% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-055-c01",
+        "zn-cm-055-c02",
+        "zn-cm-055-c03",
+        "zn-cm-055-c04",
+        "zn-cm-055-c05",
+        "zn-cm-055-c06",
+        "zn-cm-055-c07"
+      ],
+      "tallas": [
+        "S-5XLREGULAR",
+        "S-6XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 80,
+      "coloresSinRender": [
+        "zn-cm-055-c01",
+        "zn-cm-055-c02",
+        "zn-cm-055-c03",
+        "zn-cm-055-c04",
+        "zn-cm-055-c05",
+        "zn-cm-055-c06",
+        "zn-cm-055-c07"
+      ]
+    },
+    {
+      "id": "zn-cm-056",
+      "idPublico": "zn-cm-056",
+      "sku": "ZN-CM-056",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-056",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; sin bolsillos; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, S-6XLREGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-056-c01",
+        "zn-cm-056-c02",
+        "zn-cm-056-c03",
+        "zn-cm-056-c04",
+        "zn-cm-056-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-6XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-057",
+      "idPublico": "zn-cm-057",
+      "sku": "ZN-CM-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-057",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-057-c01",
+        "zn-cm-057-c02",
+        "zn-cm-057-c03",
+        "zn-cm-057-c04",
+        "zn-cm-057-c05"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-058",
+      "idPublico": "zn-cm-058",
+      "sku": "ZN-CM-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-058",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-058-c01",
+        "zn-cm-058-c02",
+        "zn-cm-058-c03",
+        "zn-cm-058-c04",
+        "zn-cm-058-c05"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-059",
+      "idPublico": "zn-cm-059",
+      "sku": "ZN-CM-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-059",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con cintas reflejantes.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-059-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-059-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-060",
+      "idPublico": "zn-cm-060",
+      "sku": "ZN-CM-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-060",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, S-4XLREGULAR, S-3XLREGULAR, 3XL. 30 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-060-c01",
+        "zn-cm-060-c02",
+        "zn-cm-060-c03",
+        "zn-cm-060-c04",
+        "zn-cm-060-c05",
+        "zn-cm-060-c06",
+        "zn-cm-060-c07",
+        "zn-cm-060-c08",
+        "zn-cm-060-c09",
+        "zn-cm-060-c10",
+        "zn-cm-060-c11",
+        "zn-cm-060-c12",
+        "zn-cm-060-c13",
+        "zn-cm-060-c14",
+        "zn-cm-060-c15",
+        "zn-cm-060-c16",
+        "zn-cm-060-c17",
+        "zn-cm-060-c18",
+        "zn-cm-060-c19",
+        "zn-cm-060-c20",
+        "zn-cm-060-c21",
+        "zn-cm-060-c22",
+        "zn-cm-060-c23",
+        "zn-cm-060-c24",
+        "zn-cm-060-c25",
+        "zn-cm-060-c26",
+        "zn-cm-060-c27",
+        "zn-cm-060-c28",
+        "zn-cm-060-c29",
+        "zn-cm-060-c30"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-4XLREGULAR",
+        "S-3XLREGULAR",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-060-c16",
+        "zn-cm-060-c17",
+        "zn-cm-060-c19",
+        "zn-cm-060-c27",
+        "zn-cm-060-c28",
+        "zn-cm-060-c29",
+        "zn-cm-060-c30"
+      ]
+    },
+    {
+      "id": "zn-cm-061",
+      "idPublico": "zn-cm-061",
+      "sku": "ZN-CM-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-061",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-061-c01"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-061-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-062",
+      "idPublico": "zn-cm-062",
+      "sku": "ZN-CM-062",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-062",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-062-c01"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-062-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-063",
+      "idPublico": "zn-cm-063",
+      "sku": "ZN-CM-063",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-063",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de rayas.",
+      "especificaciones": "Popelina. Filas 104, 106, 108, 110, 112: 65% poliéster / 35% algodón; Filas 116: 65% poliéster / 35% algodón peinado. Tallas: S-4XLREGULAR, S-5XLREGULAR, S-6XLREGULAR. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Filas 104, 106, 108, 110, 112: 65% poliéster / 35% algodón; Filas 116: 65% poliéster / 35% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-063-c01",
+        "zn-cm-063-c02",
+        "zn-cm-063-c03",
+        "zn-cm-063-c04",
+        "zn-cm-063-c05",
+        "zn-cm-063-c06",
+        "zn-cm-063-c07",
+        "zn-cm-063-c08"
+      ],
+      "tallas": [
+        "S-4XLREGULAR",
+        "S-5XLREGULAR",
+        "S-6XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 104,
+      "coloresSinRender": [
+        "zn-cm-063-c01",
+        "zn-cm-063-c02",
+        "zn-cm-063-c03",
+        "zn-cm-063-c04",
+        "zn-cm-063-c05",
+        "zn-cm-063-c06",
+        "zn-cm-063-c07",
+        "zn-cm-063-c08"
+      ]
+    },
+    {
+      "id": "zn-cm-064",
+      "idPublico": "zn-cm-064",
+      "sku": "ZN-CM-064",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-064",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; sin bolsillos; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, S-6XLREGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-064-c01",
+        "zn-cm-064-c02",
+        "zn-cm-064-c03",
+        "zn-cm-064-c04",
+        "zn-cm-064-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-6XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-065",
+      "idPublico": "zn-cm-065",
+      "sku": "ZN-CM-065",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-065",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; corte relajado; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de cuadros.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-065-c01",
+        "zn-cm-065-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-065-c01",
+        "zn-cm-065-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-066",
+      "idPublico": "zn-cm-066",
+      "sku": "ZN-CM-066",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-066",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; corte relajado; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; diseño de cuadros.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-066-c01",
+        "zn-cm-066-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-066-c01",
+        "zn-cm-066-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-067",
+      "idPublico": "zn-cm-067",
+      "sku": "ZN-CM-067",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · oxford",
+      "nombreComercial": "Camisa para caballero · oxford",
+      "nombreFamilia": "Camisa para caballero · oxford",
+      "nombreFamiliaComercial": "Camisa para caballero · oxford",
+      "familia": "zain-proveedor-zn-cm-067",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 14.5-22.5REG. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-067-c01",
+        "zn-cm-067-c02",
+        "zn-cm-067-c03",
+        "zn-cm-067-c04",
+        "zn-cm-067-c05"
+      ],
+      "tallas": [
+        "14.5-22.5REG"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-068",
+      "idPublico": "zn-cm-068",
+      "sku": "ZN-CM-068",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · oxford",
+      "nombreComercial": "Camisa para caballero · oxford",
+      "nombreFamilia": "Camisa para caballero · oxford",
+      "nombreFamiliaComercial": "Camisa para caballero · oxford",
+      "familia": "zain-proveedor-zn-cm-068",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 14.5-22.5REG. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-068-c01",
+        "zn-cm-068-c02",
+        "zn-cm-068-c03",
+        "zn-cm-068-c04",
+        "zn-cm-068-c05"
+      ],
+      "tallas": [
+        "14.5-22.5REG"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-069",
+      "idPublico": "zn-cm-069",
+      "sku": "ZN-CM-069",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-069",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con malla.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-069-c01",
+        "zn-cm-069-c02",
+        "zn-cm-069-c03",
+        "zn-cm-069-c04",
+        "zn-cm-069-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-070",
+      "idPublico": "zn-cm-070",
+      "sku": "ZN-CM-070",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-070",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con malla.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-070-c01",
+        "zn-cm-070-c02",
+        "zn-cm-070-c03",
+        "zn-cm-070-c04",
+        "zn-cm-070-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-071",
+      "idPublico": "zn-cm-071",
+      "sku": "ZN-CM-071",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-071",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-071-c01",
+        "zn-cm-071-c02",
+        "zn-cm-071-c03",
+        "zn-cm-071-c04",
+        "zn-cm-071-c05",
+        "zn-cm-071-c06",
+        "zn-cm-071-c07",
+        "zn-cm-071-c08",
+        "zn-cm-071-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-072",
+      "idPublico": "zn-cm-072",
+      "sku": "ZN-CM-072",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-072",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-072-c01",
+        "zn-cm-072-c02",
+        "zn-cm-072-c03",
+        "zn-cm-072-c04",
+        "zn-cm-072-c05",
+        "zn-cm-072-c06",
+        "zn-cm-072-c07",
+        "zn-cm-072-c08",
+        "zn-cm-072-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-073",
+      "idPublico": "zn-cm-073",
+      "sku": "ZN-CM-073",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-073",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con malla; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-073-c01",
+        "zn-cm-073-c02",
+        "zn-cm-073-c03",
+        "zn-cm-073-c04",
+        "zn-cm-073-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-074",
+      "idPublico": "zn-cm-074",
+      "sku": "ZN-CM-074",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-074",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con malla; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-074-c01",
+        "zn-cm-074-c02",
+        "zn-cm-074-c03",
+        "zn-cm-074-c04",
+        "zn-cm-074-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-075",
+      "idPublico": "zn-cm-075",
+      "sku": "ZN-CM-075",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-075",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; cierre con broches; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-075-c01",
+        "zn-cm-075-c02",
+        "zn-cm-075-c03",
+        "zn-cm-075-c04",
+        "zn-cm-075-c05",
+        "zn-cm-075-c06"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-076",
+      "idPublico": "zn-cm-076",
+      "sku": "ZN-CM-076",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-076",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; cierre con broches; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-076-c01",
+        "zn-cm-076-c02",
+        "zn-cm-076-c03",
+        "zn-cm-076-c04",
+        "zn-cm-076-c05",
+        "zn-cm-076-c06"
+      ],
+      "tallas": [
+        "S-5XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-077",
+      "idPublico": "zn-cm-077",
+      "sku": "ZN-CM-077",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-077",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con botones; colores combinados; bicolor.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR, S-4XLREGULAR. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-077-c01",
+        "zn-cm-077-c02",
+        "zn-cm-077-c03",
+        "zn-cm-077-c04",
+        "zn-cm-077-c05",
+        "zn-cm-077-c06",
+        "zn-cm-077-c07",
+        "zn-cm-077-c08",
+        "zn-cm-077-c09"
+      ],
+      "tallas": [
+        "S-5XLREGULAR",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-077-c01",
+        "zn-cm-077-c02",
+        "zn-cm-077-c03",
+        "zn-cm-077-c04",
+        "zn-cm-077-c05",
+        "zn-cm-077-c06",
+        "zn-cm-077-c07"
+      ]
+    },
+    {
+      "id": "zn-cm-078",
+      "idPublico": "zn-cm-078",
+      "sku": "ZN-CM-078",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-078",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con botones; colores combinados; bicolor.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR, S-4XLREGULAR. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-078-c01",
+        "zn-cm-078-c02",
+        "zn-cm-078-c03",
+        "zn-cm-078-c04",
+        "zn-cm-078-c05",
+        "zn-cm-078-c06",
+        "zn-cm-078-c07",
+        "zn-cm-078-c08",
+        "zn-cm-078-c09"
+      ],
+      "tallas": [
+        "S-5XLREGULAR",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-078-c01",
+        "zn-cm-078-c02",
+        "zn-cm-078-c03",
+        "zn-cm-078-c04",
+        "zn-cm-078-c05",
+        "zn-cm-078-c06",
+        "zn-cm-078-c07"
+      ]
+    },
+    {
+      "id": "zn-cm-079",
+      "idPublico": "zn-cm-079",
+      "sku": "ZN-CM-079",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-079",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; cierre con broches; colores combinados; tricolor.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-3XLREGULAR. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-079-c01",
+        "zn-cm-079-c02",
+        "zn-cm-079-c03"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-079-c01",
+        "zn-cm-079-c02",
+        "zn-cm-079-c03"
+      ]
+    },
+    {
+      "id": "zn-cm-080",
+      "idPublico": "zn-cm-080",
+      "sku": "ZN-CM-080",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-080",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; cierre con broches; colores combinados; tricolor.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-3XLREGULAR. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-080-c01",
+        "zn-cm-080-c02",
+        "zn-cm-080-c03"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-080-c01",
+        "zn-cm-080-c02",
+        "zn-cm-080-c03"
+      ]
+    },
+    {
+      "id": "zn-cm-081",
+      "idPublico": "zn-cm-081",
+      "sku": "ZN-CM-081",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-081",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con malla; tecnología OilBlok.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-081-c01",
+        "zn-cm-081-c02",
+        "zn-cm-081-c03",
+        "zn-cm-081-c04",
+        "zn-cm-081-c05",
+        "zn-cm-081-c06",
+        "zn-cm-081-c07",
+        "zn-cm-081-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-082",
+      "idPublico": "zn-cm-082",
+      "sku": "ZN-CM-082",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-082",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con malla; tecnología OilBlok.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-082-c01",
+        "zn-cm-082-c02",
+        "zn-cm-082-c03",
+        "zn-cm-082-c04",
+        "zn-cm-082-c05",
+        "zn-cm-082-c06",
+        "zn-cm-082-c07",
+        "zn-cm-082-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-083",
+      "idPublico": "zn-cm-083",
+      "sku": "ZN-CM-083",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-083",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-083-c01",
+        "zn-cm-083-c02",
+        "zn-cm-083-c03",
+        "zn-cm-083-c04",
+        "zn-cm-083-c05",
+        "zn-cm-083-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-084",
+      "idPublico": "zn-cm-084",
+      "sku": "ZN-CM-084",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-084",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-084-c01",
+        "zn-cm-084-c02",
+        "zn-cm-084-c03",
+        "zn-cm-084-c04",
+        "zn-cm-084-c05",
+        "zn-cm-084-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-po-026",
+      "idPublico": "zn-po-026",
+      "sku": "ZN-PO-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para caballero · tejido técnico de poliéster",
+      "nombreComercial": "Polo para caballero · tejido técnico de poliéster",
+      "nombreFamilia": "Polo para caballero · tejido técnico de poliéster",
+      "nombreFamiliaComercial": "Polo para caballero · tejido técnico de poliéster",
+      "familia": "zain-proveedor-zn-po-026",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo para caballero.",
+      "especificaciones": "Tejido técnico de poliéster. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-026-c01",
+        "zn-po-026-c02",
+        "zn-po-026-c03",
+        "zn-po-026-c04",
+        "zn-po-026-c05",
+        "zn-po-026-c06",
+        "zn-po-026-c07",
+        "zn-po-026-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-027",
+      "idPublico": "zn-po-027",
+      "sku": "ZN-PO-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para caballero · tejido técnico de poliéster",
+      "nombreComercial": "Polo para caballero · tejido técnico de poliéster",
+      "nombreFamilia": "Polo para caballero · tejido técnico de poliéster",
+      "nombreFamiliaComercial": "Polo para caballero · tejido técnico de poliéster",
+      "familia": "zain-proveedor-zn-po-027",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo para caballero.",
+      "especificaciones": "Tejido técnico de poliéster. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-027-c01",
+        "zn-po-027-c02",
+        "zn-po-027-c03",
+        "zn-po-027-c04",
+        "zn-po-027-c05",
+        "zn-po-027-c06",
+        "zn-po-027-c07",
+        "zn-po-027-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-028",
+      "idPublico": "zn-po-028",
+      "sku": "ZN-PO-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para caballero · micromalla",
+      "nombreComercial": "Polo para caballero · micromalla",
+      "nombreFamilia": "Polo para caballero · micromalla",
+      "nombreFamiliaComercial": "Polo para caballero · micromalla",
+      "familia": "zain-proveedor-zn-po-028",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo para caballero; con malla.",
+      "especificaciones": "Micromalla. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-028-c01",
+        "zn-po-028-c02",
+        "zn-po-028-c03",
+        "zn-po-028-c04",
+        "zn-po-028-c05",
+        "zn-po-028-c06",
+        "zn-po-028-c07",
+        "zn-po-028-c08",
+        "zn-po-028-c09",
+        "zn-po-028-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-029",
+      "idPublico": "zn-po-029",
+      "sku": "ZN-PO-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para caballero · micromalla",
+      "nombreComercial": "Polo para caballero · micromalla",
+      "nombreFamilia": "Polo para caballero · micromalla",
+      "nombreFamiliaComercial": "Polo para caballero · micromalla",
+      "familia": "zain-proveedor-zn-po-029",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo para caballero; con bolsillos; con malla.",
+      "especificaciones": "Micromalla. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-029-c01",
+        "zn-po-029-c02",
+        "zn-po-029-c03",
+        "zn-po-029-c04",
+        "zn-po-029-c05",
+        "zn-po-029-c06",
+        "zn-po-029-c07",
+        "zn-po-029-c08",
+        "zn-po-029-c09",
+        "zn-po-029-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-008",
+      "idPublico": "zn-ot-008",
+      "sku": "ZN-OT-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Capucha desmontable para caballero · loneta",
+      "nombreComercial": "Capucha desmontable para caballero · loneta",
+      "nombreFamilia": "Capucha desmontable para caballero · loneta",
+      "nombreFamiliaComercial": "Capucha desmontable para caballero · loneta",
+      "familia": "zain-proveedor-zn-ot-008",
+      "categoria": "Otros",
+      "silueta": "Caballero",
+      "descripcion": "Capucha desmontable para caballero; cierre con broches; acabado que facilita retirar suciedad.",
+      "especificaciones": "Loneta. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-008-c01",
+        "zn-ot-008-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-su-017",
+      "idPublico": "zn-su-017",
+      "sku": "ZN-SU-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera para caballero · felpa",
+      "nombreComercial": "Sudadera para caballero · felpa",
+      "nombreFamilia": "Sudadera para caballero · felpa",
+      "nombreFamiliaComercial": "Sudadera para caballero · felpa",
+      "familia": "zain-proveedor-zn-su-017",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera para caballero; cierre de cremallera; resistente al agua.",
+      "especificaciones": "Felpa. 100% poliéster. Tallas: XS-4XLREGULA. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-017-c01",
+        "zn-su-017-c02",
+        "zn-su-017-c03",
+        "zn-su-017-c04",
+        "zn-su-017-c05"
+      ],
+      "tallas": [
+        "XS-4XLREGULA"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-su-017-c05"
+      ]
+    },
+    {
+      "id": "zn-ch-020",
+      "idPublico": "zn-ch-020",
+      "sku": "ZN-CH-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · loneta",
+      "nombreComercial": "Chamarra para caballero · loneta",
+      "nombreFamilia": "Chamarra para caballero · loneta",
+      "nombreFamiliaComercial": "Chamarra para caballero · loneta",
+      "familia": "zain-proveedor-zn-ch-020",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; cierre de cremallera.",
+      "especificaciones": "Loneta. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-020-c01",
+        "zn-ch-020-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ch-021",
+      "idPublico": "zn-ch-021",
+      "sku": "ZN-CH-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · loneta",
+      "nombreComercial": "Chamarra para caballero · loneta",
+      "nombreFamilia": "Chamarra para caballero · loneta",
+      "nombreFamiliaComercial": "Chamarra para caballero · loneta",
+      "familia": "zain-proveedor-zn-ch-021",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; con bolsillos; acabado que facilita retirar suciedad.",
+      "especificaciones": "Loneta. Tejido: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Tejido: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-021-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ch-022",
+      "idPublico": "zn-ch-022",
+      "sku": "ZN-CH-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · softshell",
+      "nombreComercial": "Chamarra para caballero · softshell",
+      "nombreFamilia": "Chamarra para caballero · softshell",
+      "nombreFamiliaComercial": "Chamarra para caballero · softshell",
+      "familia": "zain-proveedor-zn-ch-022",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Softshell. Exterior: 96% poliéster / 4% spandex. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 96% poliéster / 4% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-022-c01",
+        "zn-ch-022-c02",
+        "zn-ch-022-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ch-023",
+      "idPublico": "zn-ch-023",
+      "sku": "ZN-CH-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · popelina",
+      "nombreComercial": "Chamarra para caballero · popelina",
+      "nombreFamilia": "Chamarra para caballero · popelina",
+      "nombreFamiliaComercial": "Chamarra para caballero · popelina",
+      "familia": "zain-proveedor-zn-ch-023",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; cierre con broches; repelente al agua.",
+      "especificaciones": "Popelina. Exterior: 65% poliéster / 35% algodón. Tallas: S-5XLREGULAR, S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-023-c01",
+        "zn-ch-023-c02"
+      ],
+      "tallas": [
+        "S-5XLREGULAR",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-024",
+      "idPublico": "zn-ch-024",
+      "sku": "ZN-CH-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-024",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; con bolsillos.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S-6XLREGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-024-c01",
+        "zn-ch-024-c02",
+        "zn-ch-024-c03",
+        "zn-ch-024-c04",
+        "zn-ch-024-c05"
+      ],
+      "tallas": [
+        "S-6XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ch-025",
+      "idPublico": "zn-ch-025",
+      "sku": "ZN-CH-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-025",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-025-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ot-009",
+      "idPublico": "zn-ot-009",
+      "sku": "ZN-OT-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Forro desmontable para chamarra para caballero",
+      "nombreComercial": "Forro desmontable para chamarra para caballero",
+      "nombreFamilia": "Forro desmontable para chamarra para caballero",
+      "nombreFamiliaComercial": "Forro desmontable para chamarra para caballero",
+      "familia": "zain-proveedor-zn-ot-009",
+      "categoria": "Otros",
+      "silueta": "Caballero",
+      "descripcion": "Forro desmontable para chamarra para caballero; cierre de cremallera.",
+      "especificaciones": "Tejido: 100% nailon; Forro: 100% nailon; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Tejido: 100% nailon; Forro: 100% nailon; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-009-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-026",
+      "idPublico": "zn-ch-026",
+      "sku": "ZN-CH-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-026",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-026-c01",
+        "zn-ch-026-c02",
+        "zn-ch-026-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ch-027",
+      "idPublico": "zn-ch-027",
+      "sku": "ZN-CH-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-027",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S-3XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-027-c01"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-ch-027-c01"
+      ]
+    },
+    {
+      "id": "zn-ch-028",
+      "idPublico": "zn-ch-028",
+      "sku": "ZN-CH-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-028",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, S-6XLREGULAR, S-3XLREGULAR. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-028-c01",
+        "zn-ch-028-c02",
+        "zn-ch-028-c03",
+        "zn-ch-028-c04",
+        "zn-ch-028-c05",
+        "zn-ch-028-c06",
+        "zn-ch-028-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-6XLREGULAR",
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-ch-028-c06",
+        "zn-ch-028-c07"
+      ]
+    },
+    {
+      "id": "zn-ch-029",
+      "idPublico": "zn-ch-029",
+      "sku": "ZN-CH-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · ripstop, gabardina",
+      "nombreComercial": "Chamarra para caballero · ripstop, gabardina",
+      "nombreFamilia": "Chamarra para caballero · ripstop, gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · ripstop, gabardina",
+      "familia": "zain-proveedor-zn-ch-029",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; corte recto; con bolsillos; repelente al agua.",
+      "especificaciones": "Ripstop, gabardina. Tallas: S, M, L, XL, 2XL, 3XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-029-c01",
+        "zn-ch-029-c02",
+        "zn-ch-029-c03",
+        "zn-ch-029-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ce-003",
+      "idPublico": "zn-ce-003",
+      "sku": "ZN-CE-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco para caballero · loneta",
+      "nombreComercial": "Chaleco para caballero · loneta",
+      "nombreFamilia": "Chaleco para caballero · loneta",
+      "nombreFamiliaComercial": "Chaleco para caballero · loneta",
+      "familia": "zain-proveedor-zn-ce-003",
+      "categoria": "Chalecos",
+      "silueta": "Caballero",
+      "descripcion": "Chaleco para caballero.",
+      "especificaciones": "Loneta. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-003-c01",
+        "zn-ce-003-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ce-004",
+      "idPublico": "zn-ce-004",
+      "sku": "ZN-CE-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco para caballero · softshell",
+      "nombreComercial": "Chaleco para caballero · softshell",
+      "nombreFamilia": "Chaleco para caballero · softshell",
+      "nombreFamiliaComercial": "Chaleco para caballero · softshell",
+      "familia": "zain-proveedor-zn-ce-004",
+      "categoria": "Chalecos",
+      "silueta": "Caballero",
+      "descripcion": "Chaleco para caballero.",
+      "especificaciones": "Softshell. Exterior: 96% poliéster / 4% spandex. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 96% poliéster / 4% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-004-c01",
+        "zn-ce-004-c02",
+        "zn-ce-004-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ce-005",
+      "idPublico": "zn-ce-005",
+      "sku": "ZN-CE-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco para caballero",
+      "nombreComercial": "Chaleco para caballero",
+      "nombreFamilia": "Chaleco para caballero",
+      "nombreFamiliaComercial": "Chaleco para caballero",
+      "familia": "zain-proveedor-zn-ce-005",
+      "categoria": "Chalecos",
+      "silueta": "Caballero",
+      "descripcion": "Chaleco para caballero.",
+      "especificaciones": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-005-c01",
+        "zn-ce-005-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-009",
+      "idPublico": "zn-ov-009",
+      "sku": "ZN-OV-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · loneta",
+      "nombreComercial": "Overol para caballero · loneta",
+      "nombreFamilia": "Overol para caballero · loneta",
+      "nombreFamiliaComercial": "Overol para caballero · loneta",
+      "familia": "zain-proveedor-zn-ov-009",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; cierre de cremallera; acabado que facilita retirar suciedad.",
+      "especificaciones": "Loneta. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-009-c01",
+        "zn-ov-009-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ov-010",
+      "idPublico": "zn-ov-010",
+      "sku": "ZN-OV-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · mezclilla",
+      "nombreComercial": "Overol para caballero · mezclilla",
+      "nombreFamilia": "Overol para caballero · mezclilla",
+      "nombreFamiliaComercial": "Overol para caballero · mezclilla",
+      "familia": "zain-proveedor-zn-ov-010",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; corte relajado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-010-c01"
+      ],
+      "tallas": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56",
+        "58"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 11
+    },
+    {
+      "id": "zn-ov-011",
+      "idPublico": "zn-ov-011",
+      "sku": "ZN-OV-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-011",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; cierre con broches.",
+      "especificaciones": "Gabardina. 100% algodón preencogido. Tallas: 38, 40, 42, 44, 46, 48, 50, 52, 38-52REGULAR. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón preencogido",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-011-c01",
+        "zn-ov-011-c02",
+        "zn-ov-011-c03",
+        "zn-ov-011-c04",
+        "zn-ov-011-c05"
+      ],
+      "tallas": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "38-52REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-012",
+      "idPublico": "zn-ov-012",
+      "sku": "ZN-OV-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-012",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 36-66REGULAR. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-012-c01",
+        "zn-ov-012-c02",
+        "zn-ov-012-c03",
+        "zn-ov-012-c04"
+      ],
+      "tallas": [
+        "36-66REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10,
+      "coloresSinRender": [
+        "zn-ov-012-c01"
+      ]
+    },
+    {
+      "id": "zn-ov-013",
+      "idPublico": "zn-ov-013",
+      "sku": "ZN-OV-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-013",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; cierre de cremallera.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 36, 38, 40, 42, 44, 46, 48, 50, 52, 36-60REGULAR. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-013-c01",
+        "zn-ov-013-c02",
+        "zn-ov-013-c03"
+      ],
+      "tallas": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "36-60REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-014",
+      "idPublico": "zn-ov-014",
+      "sku": "ZN-OV-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-014",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; cierre de cremallera.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-014-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-015",
+      "idPublico": "zn-ov-015",
+      "sku": "ZN-OV-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · loneta",
+      "nombreComercial": "Overol para caballero · loneta",
+      "nombreFamilia": "Overol para caballero · loneta",
+      "nombreFamiliaComercial": "Overol para caballero · loneta",
+      "familia": "zain-proveedor-zn-ov-015",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero.",
+      "especificaciones": "Loneta. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-015-c01",
+        "zn-ov-015-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ov-016",
+      "idPublico": "zn-ov-016",
+      "sku": "ZN-OV-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · popelina",
+      "nombreComercial": "Overol para caballero · popelina",
+      "nombreFamilia": "Overol para caballero · popelina",
+      "nombreFamiliaComercial": "Overol para caballero · popelina",
+      "familia": "zain-proveedor-zn-ov-016",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; manga larga.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-016-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-017",
+      "idPublico": "zn-ov-017",
+      "sku": "ZN-OV-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · popelina",
+      "nombreComercial": "Overol para caballero · popelina",
+      "nombreFamilia": "Overol para caballero · popelina",
+      "nombreFamiliaComercial": "Overol para caballero · popelina",
+      "familia": "zain-proveedor-zn-ov-017",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, S-4XLREGULAR. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-017-c01",
+        "zn-ov-017-c02",
+        "zn-ov-017-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-018",
+      "idPublico": "zn-ov-018",
+      "sku": "ZN-OV-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-018",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; manga larga; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 36, 38, 40, 42, 44, 46, 48, 50, 52, 34-62REGULAR. 11 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-018-c01",
+        "zn-ov-018-c02",
+        "zn-ov-018-c03",
+        "zn-ov-018-c04",
+        "zn-ov-018-c05",
+        "zn-ov-018-c06",
+        "zn-ov-018-c07",
+        "zn-ov-018-c08",
+        "zn-ov-018-c09",
+        "zn-ov-018-c10",
+        "zn-ov-018-c11"
+      ],
+      "tallas": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "34-62REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-ov-018-c11"
+      ]
+    },
+    {
+      "id": "zn-ov-019",
+      "idPublico": "zn-ov-019",
+      "sku": "ZN-OV-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-019",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; manga larga; con bolsillos.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-019-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ov-020",
+      "idPublico": "zn-ov-020",
+      "sku": "ZN-OV-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-020",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero.",
+      "especificaciones": "Gabardina. Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 65% poliéster / 35% algodón; Forro: 100% poliéster; Relleno: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-020-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ov-021",
+      "idPublico": "zn-ov-021",
+      "sku": "ZN-OV-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-021",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con bolsillos; cierre de cremallera; con cintas reflejantes.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 38-56REGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-021-c01"
+      ],
+      "tallas": [
+        "38-56REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-ov-021-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-097",
+      "idPublico": "zn-pa-097",
+      "sku": "ZN-PA-097",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-097",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-097-c01",
+        "zn-pa-097-c02",
+        "zn-pa-097-c03"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-098",
+      "idPublico": "zn-pa-098",
+      "sku": "ZN-PA-098",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-098",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-098-c01",
+        "zn-pa-098-c02",
+        "zn-pa-098-c03",
+        "zn-pa-098-c04"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-099",
+      "idPublico": "zn-pa-099",
+      "sku": "ZN-PA-099",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-099",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; cintura elástica; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-099-c01",
+        "zn-pa-099-c02",
+        "zn-pa-099-c03",
+        "zn-pa-099-c04",
+        "zn-pa-099-c05"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-100",
+      "idPublico": "zn-pa-100",
+      "sku": "ZN-PA-100",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · ripstop, gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · ripstop, gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · ripstop, gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · ripstop, gabardina",
+      "familia": "zain-proveedor-zn-pa-100",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Ripstop, gabardina. 70% poliéster / 28% algodón / 2% spandex. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "70% poliéster / 28% algodón / 2% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-100-c01",
+        "zn-pa-100-c02",
+        "zn-pa-100-c03",
+        "zn-pa-100-c04"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-101",
+      "idPublico": "zn-pa-101",
+      "sku": "ZN-PA-101",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-101",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; bolsillos cargo.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-101-c01",
+        "zn-pa-101-c02",
+        "zn-pa-101-c03"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-102",
+      "idPublico": "zn-pa-102",
+      "sku": "ZN-PA-102",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-102",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; paneles Mimix.",
+      "especificaciones": "Gabardina. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 93% nailon / 7% spandex. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 93% nailon / 7% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-102-c01",
+        "zn-pa-102-c02",
+        "zn-pa-102-c03"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-pa-103",
+      "idPublico": "zn-pa-103",
+      "sku": "ZN-PA-103",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · mezclilla",
+      "familia": "zain-proveedor-zn-pa-103",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte recto; corte ajustado.",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-103-c01"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-pa-104",
+      "idPublico": "zn-pa-104",
+      "sku": "ZN-PA-104",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · mezclilla",
+      "nombreComercial": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamilia": "Pantalón de trabajo para dama · mezclilla",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · mezclilla",
+      "familia": "zain-proveedor-zn-pa-104",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte recto.",
+      "especificaciones": "Mezclilla. 68% algodón / 32% poliéster. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "68% algodón / 32% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-104-c01"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 12
+    },
+    {
+      "id": "zn-pa-105",
+      "idPublico": "zn-pa-105",
+      "sku": "ZN-PA-105",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · popelina",
+      "nombreComercial": "Pantalón de trabajo para dama · popelina",
+      "nombreFamilia": "Pantalón de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-pa-105",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; con bolsillos; cintura elástica.",
+      "especificaciones": "Popelina. Tallas: 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-105-c01",
+        "zn-pa-105-c02"
+      ],
+      "tallas": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-106",
+      "idPublico": "zn-pa-106",
+      "sku": "ZN-PA-106",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-106",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-106-c01",
+        "zn-pa-106-c02",
+        "zn-pa-106-c03",
+        "zn-pa-106-c04"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30",
+        "32"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-107",
+      "idPublico": "zn-pa-107",
+      "sku": "ZN-PA-107",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · gabardina",
+      "nombreComercial": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamilia": "Pantalón de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-107",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama.",
+      "especificaciones": "Gabardina. 80% poliéster / 20% algodón. Tallas: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-107-c01",
+        "zn-pa-107-c02",
+        "zn-pa-107-c03",
+        "zn-pa-107-c04"
+      ],
+      "tallas": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-108",
+      "idPublico": "zn-pa-108",
+      "sku": "ZN-PA-108",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short de trabajo para dama · gabardina",
+      "nombreComercial": "Short de trabajo para dama · gabardina",
+      "nombreFamilia": "Short de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Short de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-pa-108",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Short de trabajo para dama; con bolsillos; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-108-c01",
+        "zn-pa-108-c02",
+        "zn-pa-108-c03",
+        "zn-pa-108-c04"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-045",
+      "idPublico": "zn-pl-045",
+      "sku": "ZN-PL-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-045",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-045-c01",
+        "zn-pl-045-c02",
+        "zn-pl-045-c03",
+        "zn-pl-045-c04",
+        "zn-pl-045-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-046",
+      "idPublico": "zn-pl-046",
+      "sku": "ZN-PL-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-046",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-046-c01",
+        "zn-pl-046-c02",
+        "zn-pl-046-c03",
+        "zn-pl-046-c04",
+        "zn-pl-046-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-047",
+      "idPublico": "zn-pl-047",
+      "sku": "ZN-PL-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-047",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga; sin bolsillos; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-047-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-048",
+      "idPublico": "zn-pl-048",
+      "sku": "ZN-PL-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-048",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; sin bolsillos; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-048-c01",
+        "zn-pl-048-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-049",
+      "idPublico": "zn-pl-049",
+      "sku": "ZN-PL-049",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-049",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-049-c01",
+        "zn-pl-049-c02",
+        "zn-pl-049-c03",
+        "zn-pl-049-c04",
+        "zn-pl-049-c05"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-050",
+      "idPublico": "zn-pl-050",
+      "sku": "ZN-PL-050",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-050",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: 4, 6, 8, 10, 12, 14, 16, 18. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-050-c01",
+        "zn-pl-050-c02",
+        "zn-pl-050-c03",
+        "zn-pl-050-c04",
+        "zn-pl-050-c05"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-051",
+      "idPublico": "zn-pl-051",
+      "sku": "ZN-PL-051",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · oxford",
+      "nombreComercial": "Blusa para dama · oxford",
+      "nombreFamilia": "Blusa para dama · oxford",
+      "nombreFamiliaComercial": "Blusa para dama · oxford",
+      "familia": "zain-proveedor-zn-pl-051",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-051-c01",
+        "zn-pl-051-c02",
+        "zn-pl-051-c03"
+      ],
+      "tallas": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-052",
+      "idPublico": "zn-pl-052",
+      "sku": "ZN-PL-052",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · oxford",
+      "nombreComercial": "Blusa para dama · oxford",
+      "nombreFamilia": "Blusa para dama · oxford",
+      "nombreFamiliaComercial": "Blusa para dama · oxford",
+      "familia": "zain-proveedor-zn-pl-052",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-052-c01",
+        "zn-pl-052-c02",
+        "zn-pl-052-c03"
+      ],
+      "tallas": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-053",
+      "idPublico": "zn-pl-053",
+      "sku": "ZN-PL-053",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-053",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga; con malla; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-053-c01",
+        "zn-pl-053-c02",
+        "zn-pl-053-c03",
+        "zn-pl-053-c04",
+        "zn-pl-053-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-054",
+      "idPublico": "zn-pl-054",
+      "sku": "ZN-PL-054",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-054",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; con malla; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-054-c01",
+        "zn-pl-054-c02",
+        "zn-pl-054-c03",
+        "zn-pl-054-c04",
+        "zn-pl-054-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-055",
+      "idPublico": "zn-pl-055",
+      "sku": "ZN-PL-055",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-055",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga; cierre con broches; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-055-c01",
+        "zn-pl-055-c02",
+        "zn-pl-055-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-056",
+      "idPublico": "zn-pl-056",
+      "sku": "ZN-PL-056",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-056",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; cierre con broches; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-056-c01",
+        "zn-pl-056-c02",
+        "zn-pl-056-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-057",
+      "idPublico": "zn-pl-057",
+      "sku": "ZN-PL-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-057",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga larga; cierre con broches; resistente a arrugas; tecnología OilBlok.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-057-c01",
+        "zn-pl-057-c02",
+        "zn-pl-057-c03",
+        "zn-pl-057-c04",
+        "zn-pl-057-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-058",
+      "idPublico": "zn-pl-058",
+      "sku": "ZN-PL-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-058",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; cierre con broches; resistente a arrugas; tecnología OilBlok.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-058-c01",
+        "zn-pl-058-c02",
+        "zn-pl-058-c03",
+        "zn-pl-058-c04",
+        "zn-pl-058-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-po-030",
+      "idPublico": "zn-po-030",
+      "sku": "ZN-PO-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para dama · tejido técnico de poliéster",
+      "nombreComercial": "Polo para dama · tejido técnico de poliéster",
+      "nombreFamilia": "Polo para dama · tejido técnico de poliéster",
+      "nombreFamiliaComercial": "Polo para dama · tejido técnico de poliéster",
+      "familia": "zain-proveedor-zn-po-030",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo para dama.",
+      "especificaciones": "Tejido técnico de poliéster. 100% poliéster. Tallas: XS, S, M, L, XL, 2XL, 3XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-030-c01",
+        "zn-po-030-c02",
+        "zn-po-030-c03",
+        "zn-po-030-c04",
+        "zn-po-030-c05",
+        "zn-po-030-c06",
+        "zn-po-030-c07",
+        "zn-po-030-c08"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-031",
+      "idPublico": "zn-po-031",
+      "sku": "ZN-PO-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo para dama · micromalla",
+      "nombreComercial": "Polo para dama · micromalla",
+      "nombreFamilia": "Polo para dama · micromalla",
+      "nombreFamiliaComercial": "Polo para dama · micromalla",
+      "familia": "zain-proveedor-zn-po-031",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo para dama; con malla.",
+      "especificaciones": "Micromalla. 100% poliéster. Tallas: XS, S, M, L, XL, 2XL, 3XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-031-c01",
+        "zn-po-031-c02",
+        "zn-po-031-c03",
+        "zn-po-031-c04",
+        "zn-po-031-c05",
+        "zn-po-031-c06",
+        "zn-po-031-c07",
+        "zn-po-031-c08",
+        "zn-po-031-c09",
+        "zn-po-031-c10"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-030",
+      "idPublico": "zn-ch-030",
+      "sku": "ZN-CH-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para dama · softshell",
+      "nombreComercial": "Chamarra para dama · softshell",
+      "nombreFamilia": "Chamarra para dama · softshell",
+      "nombreFamiliaComercial": "Chamarra para dama · softshell",
+      "familia": "zain-proveedor-zn-ch-030",
+      "categoria": "Chamarras",
+      "silueta": "Dama",
+      "descripcion": "Chamarra para dama.",
+      "especificaciones": "Softshell. Exterior: 96% poliéster / 4% spandex. Tallas: XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Exterior: 96% poliéster / 4% spandex",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-030-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 10
+    },
+    {
+      "id": "zn-ba-001",
+      "idPublico": "zn-ba-001",
+      "sku": "ZN-BA-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-001",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-001-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-002",
+      "idPublico": "zn-ba-002",
+      "sku": "ZN-BA-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-002",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; sin bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-002-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-003",
+      "idPublico": "zn-ba-003",
+      "sku": "ZN-BA-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-003",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-003-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-004",
+      "idPublico": "zn-ba-004",
+      "sku": "ZN-BA-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-004",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-004-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-005",
+      "idPublico": "zn-ba-005",
+      "sku": "ZN-BA-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · tejido plano",
+      "nombreComercial": "Bata de trabajo unisex · tejido plano",
+      "nombreFamilia": "Bata de trabajo unisex · tejido plano",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · tejido plano",
+      "familia": "zain-proveedor-zn-ba-005",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; sin bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Tejido plano. 100% poliéster hilado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-005-c01",
+        "zn-ba-005-c02",
+        "zn-ba-005-c03",
+        "zn-ba-005-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-006",
+      "idPublico": "zn-ba-006",
+      "sku": "ZN-BA-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · tejido plano",
+      "nombreComercial": "Bata de trabajo unisex · tejido plano",
+      "nombreFamilia": "Bata de trabajo unisex · tejido plano",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · tejido plano",
+      "familia": "zain-proveedor-zn-ba-006",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Tejido plano. 100% poliéster hilado. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-006-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-007",
+      "idPublico": "zn-ba-007",
+      "sku": "ZN-BA-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · tejido plano",
+      "nombreComercial": "Bata de trabajo unisex · tejido plano",
+      "nombreFamilia": "Bata de trabajo unisex · tejido plano",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · tejido plano",
+      "familia": "zain-proveedor-zn-ba-007",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Tejido plano. 100% poliéster hilado. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-007-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-008",
+      "idPublico": "zn-ba-008",
+      "sku": "ZN-BA-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · gabardina",
+      "nombreComercial": "Bata de trabajo para caballero · gabardina",
+      "nombreFamilia": "Bata de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ba-008",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Gabardina. 80% poliéster / 20% algodón peinado. Tallas: XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-008-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-009",
+      "idPublico": "zn-ba-009",
+      "sku": "ZN-BA-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-009",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-009-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pa-109",
+      "idPublico": "zn-pa-109",
+      "sku": "ZN-PA-109",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo unisex · gabardina",
+      "nombreComercial": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamilia": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-pa-109",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Pantalón de trabajo unisex; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-109-c01"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-010",
+      "idPublico": "zn-ot-010",
+      "sku": "ZN-OT-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Prenda de trabajo unisex · popelina",
+      "nombreComercial": "Prenda de trabajo unisex · popelina",
+      "nombreFamilia": "Prenda de trabajo unisex · popelina",
+      "nombreFamiliaComercial": "Prenda de trabajo unisex · popelina",
+      "familia": "zain-proveedor-zn-ot-010",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "Prenda de trabajo unisex; con bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-010-c01",
+        "zn-ot-010-c02",
+        "zn-ot-010-c03",
+        "zn-ot-010-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-011",
+      "idPublico": "zn-ot-011",
+      "sku": "ZN-OT-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Prenda de trabajo unisex · popelina",
+      "nombreComercial": "Prenda de trabajo unisex · popelina",
+      "nombreFamilia": "Prenda de trabajo unisex · popelina",
+      "nombreFamiliaComercial": "Prenda de trabajo unisex · popelina",
+      "familia": "zain-proveedor-zn-ot-011",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "Prenda de trabajo unisex; sin bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-011-c01",
+        "zn-ot-011-c02",
+        "zn-ot-011-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-010",
+      "idPublico": "zn-ba-010",
+      "sku": "ZN-BA-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · tejido plano",
+      "nombreComercial": "Bata de trabajo unisex · tejido plano",
+      "nombreFamilia": "Bata de trabajo unisex · tejido plano",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · tejido plano",
+      "familia": "zain-proveedor-zn-ba-010",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; con botones.",
+      "especificaciones": "Tejido plano. 100% poliéster. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-010-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-011",
+      "idPublico": "zn-ba-011",
+      "sku": "ZN-BA-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-011",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-011-c01"
+      ],
+      "tallas": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-fi-001",
+      "idPublico": "zn-fi-001",
+      "sku": "ZN-FI-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-001",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; manga tres cuartos; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-001-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-002",
+      "idPublico": "zn-fi-002",
+      "sku": "ZN-FI-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-002",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: XS-5XL(REGUL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-002-c01"
+      ],
+      "tallas": [
+        "XS-5XL(REGUL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-003",
+      "idPublico": "zn-fi-003",
+      "sku": "ZN-FI-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-003",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; media manga; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-003-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-004",
+      "idPublico": "zn-fi-004",
+      "sku": "ZN-FI-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-004",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-004-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-005",
+      "idPublico": "zn-fi-005",
+      "sku": "ZN-FI-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-005",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-005-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-006",
+      "idPublico": "zn-fi-006",
+      "sku": "ZN-FI-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-006",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-006-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-007",
+      "idPublico": "zn-fi-007",
+      "sku": "ZN-FI-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-007",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-007-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-008",
+      "idPublico": "zn-fi-008",
+      "sku": "ZN-FI-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para dama · popelina",
+      "nombreComercial": "Filipina de chef para dama · popelina",
+      "nombreFamilia": "Filipina de chef para dama · popelina",
+      "nombreFamiliaComercial": "Filipina de chef para dama · popelina",
+      "familia": "zain-proveedor-zn-fi-008",
+      "categoria": "Filipinas",
+      "silueta": "Dama",
+      "descripcion": "Filipina de chef para dama; con malla; tecnología OilBlok.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Malla: 100% poliéster. Tallas: XS, S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-008-c01",
+        "zn-fi-008-c02",
+        "zn-fi-008-c03",
+        "zn-fi-008-c04",
+        "zn-fi-008-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-009",
+      "idPublico": "zn-fi-009",
+      "sku": "ZN-FI-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para caballero · popelina",
+      "nombreComercial": "Filipina de chef para caballero · popelina",
+      "nombreFamilia": "Filipina de chef para caballero · popelina",
+      "nombreFamiliaComercial": "Filipina de chef para caballero · popelina",
+      "familia": "zain-proveedor-zn-fi-009",
+      "categoria": "Filipinas",
+      "silueta": "Caballero",
+      "descripcion": "Filipina de chef para caballero; con malla; tecnología OilBlok.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Malla: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-009-c01",
+        "zn-fi-009-c02",
+        "zn-fi-009-c03",
+        "zn-fi-009-c04",
+        "zn-fi-009-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-010",
+      "idPublico": "zn-fi-010",
+      "sku": "ZN-FI-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para dama · gabardina",
+      "nombreComercial": "Filipina de chef para dama · gabardina",
+      "nombreFamilia": "Filipina de chef para dama · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef para dama · gabardina",
+      "familia": "zain-proveedor-zn-fi-010",
+      "categoria": "Filipinas",
+      "silueta": "Dama",
+      "descripcion": "Filipina de chef para dama.",
+      "especificaciones": "Gabardina. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: XS, S, M, L, XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-010-c01",
+        "zn-fi-010-c02",
+        "zn-fi-010-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-fi-011",
+      "idPublico": "zn-fi-011",
+      "sku": "ZN-FI-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para caballero · gabardina",
+      "nombreComercial": "Filipina de chef para caballero · gabardina",
+      "nombreFamilia": "Filipina de chef para caballero · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef para caballero · gabardina",
+      "familia": "zain-proveedor-zn-fi-011",
+      "categoria": "Filipinas",
+      "silueta": "Caballero",
+      "descripcion": "Filipina de chef para caballero.",
+      "especificaciones": "Gabardina. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-011-c01",
+        "zn-fi-011-c02",
+        "zn-fi-011-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-110",
+      "idPublico": "zn-pa-110",
+      "sku": "ZN-PA-110",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para dama · tejido plano",
+      "nombreComercial": "Pantalón de trabajo para dama · tejido plano",
+      "nombreFamilia": "Pantalón de trabajo para dama · tejido plano",
+      "nombreFamiliaComercial": "Pantalón de trabajo para dama · tejido plano",
+      "familia": "zain-proveedor-zn-pa-110",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón de trabajo para dama; corte recto.",
+      "especificaciones": "Tejido plano. Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster. Tallas: XS, S, M, L, XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-110-c01",
+        "zn-pa-110-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-111",
+      "idPublico": "zn-pa-111",
+      "sku": "ZN-PA-111",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreComercial": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreFamilia": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · tejido plano",
+      "familia": "zain-proveedor-zn-pa-111",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero.",
+      "especificaciones": "Tejido plano. Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-111-c01",
+        "zn-pa-111-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pa-112",
+      "idPublico": "zn-pa-112",
+      "sku": "ZN-PA-112",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreComercial": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreFamilia": "Pantalón de trabajo para caballero · tejido plano",
+      "nombreFamiliaComercial": "Pantalón de trabajo para caballero · tejido plano",
+      "familia": "zain-proveedor-zn-pa-112",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de trabajo para caballero; corte recto.",
+      "especificaciones": "Tejido plano. Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 77% poliéster / 23% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-112-c01",
+        "zn-pa-112-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 75
+    },
+    {
+      "id": "zn-pl-059",
+      "idPublico": "zn-pl-059",
+      "sku": "ZN-PL-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · popelina",
+      "nombreComercial": "Blusa para dama · popelina",
+      "nombreFamilia": "Blusa para dama · popelina",
+      "nombreFamiliaComercial": "Blusa para dama · popelina",
+      "familia": "zain-proveedor-zn-pl-059",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; con malla; tecnología OilBlok.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster. Tallas: XS, S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-059-c01",
+        "zn-pl-059-c02",
+        "zn-pl-059-c03",
+        "zn-pl-059-c04",
+        "zn-pl-059-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-085",
+      "idPublico": "zn-cm-085",
+      "sku": "ZN-CM-085",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-085",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; con malla; tecnología OilBlok.",
+      "especificaciones": "Popelina. Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Espalda de malla: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-085-c01",
+        "zn-cm-085-c02",
+        "zn-cm-085-c03",
+        "zn-cm-085-c04",
+        "zn-cm-085-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-012",
+      "idPublico": "zn-fi-012",
+      "sku": "ZN-FI-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-012",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con botones.",
+      "especificaciones": "Gabardina. 100% poliéster hilado. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-012-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-013",
+      "idPublico": "zn-fi-013",
+      "sku": "ZN-FI-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-013",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-013-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-014",
+      "idPublico": "zn-fi-014",
+      "sku": "ZN-FI-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para dama · ripstop",
+      "nombreComercial": "Filipina de chef para dama · ripstop",
+      "nombreFamilia": "Filipina de chef para dama · ripstop",
+      "nombreFamiliaComercial": "Filipina de chef para dama · ripstop",
+      "familia": "zain-proveedor-zn-fi-014",
+      "categoria": "Filipinas",
+      "silueta": "Dama",
+      "descripcion": "Filipina de chef para dama; manga larga; con botones; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-014-c01",
+        "zn-fi-014-c02",
+        "zn-fi-014-c03",
+        "zn-fi-014-c04",
+        "zn-fi-014-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-015",
+      "idPublico": "zn-fi-015",
+      "sku": "ZN-FI-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · tejido plano",
+      "nombreComercial": "Filipina de chef unisex · tejido plano",
+      "nombreFamilia": "Filipina de chef unisex · tejido plano",
+      "nombreFamiliaComercial": "Filipina de chef unisex · tejido plano",
+      "familia": "zain-proveedor-zn-fi-015",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con botones.",
+      "especificaciones": "Tejido plano. 100% poliéster hilado. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-015-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-fi-016",
+      "idPublico": "zn-fi-016",
+      "sku": "ZN-FI-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para caballero · ripstop",
+      "nombreComercial": "Filipina de chef para caballero · ripstop",
+      "nombreFamilia": "Filipina de chef para caballero · ripstop",
+      "nombreFamiliaComercial": "Filipina de chef para caballero · ripstop",
+      "familia": "zain-proveedor-zn-fi-016",
+      "categoria": "Filipinas",
+      "silueta": "Caballero",
+      "descripcion": "Filipina de chef para caballero; manga larga; con botones; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-016-c01",
+        "zn-fi-016-c02",
+        "zn-fi-016-c03",
+        "zn-fi-016-c04",
+        "zn-fi-016-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-017",
+      "idPublico": "zn-fi-017",
+      "sku": "ZN-FI-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · ripstop",
+      "nombreComercial": "Filipina de chef unisex · ripstop",
+      "nombreFamilia": "Filipina de chef unisex · ripstop",
+      "nombreFamiliaComercial": "Filipina de chef unisex · ripstop",
+      "familia": "zain-proveedor-zn-fi-017",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con botones; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-017-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-018",
+      "idPublico": "zn-fi-018",
+      "sku": "ZN-FI-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para dama · ripstop",
+      "nombreComercial": "Filipina de chef para dama · ripstop",
+      "nombreFamilia": "Filipina de chef para dama · ripstop",
+      "nombreFamiliaComercial": "Filipina de chef para dama · ripstop",
+      "familia": "zain-proveedor-zn-fi-018",
+      "categoria": "Filipinas",
+      "silueta": "Dama",
+      "descripcion": "Filipina de chef para dama; manga corta; con botones; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-018-c01",
+        "zn-fi-018-c02",
+        "zn-fi-018-c03",
+        "zn-fi-018-c04",
+        "zn-fi-018-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-fi-019",
+      "idPublico": "zn-fi-019",
+      "sku": "ZN-FI-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef para caballero · ripstop",
+      "nombreComercial": "Filipina de chef para caballero · ripstop",
+      "nombreFamilia": "Filipina de chef para caballero · ripstop",
+      "nombreFamiliaComercial": "Filipina de chef para caballero · ripstop",
+      "familia": "zain-proveedor-zn-fi-019",
+      "categoria": "Filipinas",
+      "silueta": "Caballero",
+      "descripcion": "Filipina de chef para caballero; manga corta; con botones; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-019-c01",
+        "zn-fi-019-c02",
+        "zn-fi-019-c03",
+        "zn-fi-019-c04",
+        "zn-fi-019-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ma-002",
+      "idPublico": "zn-ma-002",
+      "sku": "ZN-MA-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · gabardina",
+      "nombreComercial": "Mandil unisex · gabardina",
+      "nombreFamilia": "Mandil unisex · gabardina",
+      "nombreFamiliaComercial": "Mandil unisex · gabardina",
+      "familia": "zain-proveedor-zn-ma-002",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Unitalla o ajustable. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-002-c01",
+        "zn-ma-002-c02",
+        "zn-ma-002-c03",
+        "zn-ma-002-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ma-003",
+      "idPublico": "zn-ma-003",
+      "sku": "ZN-MA-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · gabardina",
+      "nombreComercial": "Mandil unisex · gabardina",
+      "nombreFamilia": "Mandil unisex · gabardina",
+      "nombreFamiliaComercial": "Mandil unisex · gabardina",
+      "familia": "zain-proveedor-zn-ma-003",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-003-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ma-004",
+      "idPublico": "zn-ma-004",
+      "sku": "ZN-MA-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · popelina",
+      "nombreComercial": "Mandil unisex · popelina",
+      "nombreFamilia": "Mandil unisex · popelina",
+      "nombreFamiliaComercial": "Mandil unisex · popelina",
+      "familia": "zain-proveedor-zn-ma-004",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón. Tallas: M, L. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-004-c01",
+        "zn-ma-004-c02"
+      ],
+      "tallas": [
+        "M",
+        "L"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-113",
+      "idPublico": "zn-pa-113",
+      "sku": "ZN-PA-113",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo unisex · gabardina",
+      "nombreComercial": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamilia": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-pa-113",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Pantalón de trabajo unisex; con bolsillos; cintura elástica; cierre con broches; cierre de cremallera.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 30, 32, 34, 36, 38, 40, 42, 44, 46. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-113-c01",
+        "zn-pa-113-c02",
+        "zn-pa-113-c03"
+      ],
+      "tallas": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-012",
+      "idPublico": "zn-ba-012",
+      "sku": "ZN-BA-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · gabardina",
+      "nombreComercial": "Bata de trabajo para caballero · gabardina",
+      "nombreFamilia": "Bata de trabajo para caballero · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ba-012",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-012-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-pl-060",
+      "idPublico": "zn-pl-060",
+      "sku": "ZN-PL-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Blusa para dama · ripstop",
+      "nombreComercial": "Blusa para dama · ripstop",
+      "nombreFamilia": "Blusa para dama · ripstop",
+      "nombreFamiliaComercial": "Blusa para dama · ripstop",
+      "familia": "zain-proveedor-zn-pl-060",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Blusa para dama; manga corta; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: XS, S, M, L, XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-060-c01",
+        "zn-pl-060-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-086",
+      "idPublico": "zn-cm-086",
+      "sku": "ZN-CM-086",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-086",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con malla; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Cuerpo: 65% poliéster / 35% algodón; Paneles elásticos: 100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-086-c01",
+        "zn-cm-086-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-cm-087",
+      "idPublico": "zn-cm-087",
+      "sku": "ZN-CM-087",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa unisex · popelina",
+      "nombreComercial": "Camisa unisex · popelina",
+      "nombreFamilia": "Camisa unisex · popelina",
+      "nombreFamiliaComercial": "Camisa unisex · popelina",
+      "familia": "zain-proveedor-zn-cm-087",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "Camisa unisex; con bolsillos; con botones.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-087-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-088",
+      "idPublico": "zn-cm-088",
+      "sku": "ZN-CM-088",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa unisex · popelina",
+      "nombreComercial": "Camisa unisex · popelina",
+      "nombreFamilia": "Camisa unisex · popelina",
+      "nombreFamiliaComercial": "Camisa unisex · popelina",
+      "familia": "zain-proveedor-zn-cm-088",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "Camisa unisex; manga corta; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-088-c01",
+        "zn-cm-088-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-089",
+      "idPublico": "zn-cm-089",
+      "sku": "ZN-CM-089",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa unisex · tejido plano",
+      "nombreComercial": "Camisa unisex · tejido plano",
+      "nombreFamilia": "Camisa unisex · tejido plano",
+      "nombreFamiliaComercial": "Camisa unisex · tejido plano",
+      "familia": "zain-proveedor-zn-cm-089",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "Camisa unisex; sin bolsillos; cierre con broches.",
+      "especificaciones": "Tejido plano. 100% poliéster hilado. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster hilado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-089-c01",
+        "zn-cm-089-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-090",
+      "idPublico": "zn-cm-090",
+      "sku": "ZN-CM-090",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa unisex · popelina",
+      "nombreComercial": "Camisa unisex · popelina",
+      "nombreFamilia": "Camisa unisex · popelina",
+      "nombreFamiliaComercial": "Camisa unisex · popelina",
+      "familia": "zain-proveedor-zn-cm-090",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "Camisa unisex; sin bolsillos; cierre con broches.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-090-c01"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-114",
+      "idPublico": "zn-pa-114",
+      "sku": "ZN-PA-114",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de trabajo unisex · gabardina",
+      "nombreComercial": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamilia": "Pantalón de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Pantalón de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-pa-114",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Pantalón de trabajo unisex; con bolsillos; cintura elástica.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-114-c01",
+        "zn-pa-114-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-go-090",
+      "idPublico": "zn-go-090",
+      "sku": "ZN-GO-090",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorro de chef unisex · popelina",
+      "nombreComercial": "Gorro de chef unisex · popelina",
+      "nombreFamilia": "Gorro de chef unisex · popelina",
+      "nombreFamiliaComercial": "Gorro de chef unisex · popelina",
+      "familia": "zain-proveedor-zn-go-090",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorro de chef unisex.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-090-c01",
+        "zn-go-090-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-091",
+      "idPublico": "zn-go-091",
+      "sku": "ZN-GO-091",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorro de cocina con elástico unisex · gabardina",
+      "nombreComercial": "Gorro de cocina con elástico unisex · gabardina",
+      "nombreFamilia": "Gorro de cocina con elástico unisex · gabardina",
+      "nombreFamiliaComercial": "Gorro de cocina con elástico unisex · gabardina",
+      "familia": "zain-proveedor-zn-go-091",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorro de cocina con elástico unisex.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-091-c01"
+      ],
+      "tallas": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-fi-020",
+      "idPublico": "zn-fi-020",
+      "sku": "ZN-FI-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina de chef unisex · gabardina",
+      "nombreComercial": "Filipina de chef unisex · gabardina",
+      "nombreFamilia": "Filipina de chef unisex · gabardina",
+      "nombreFamiliaComercial": "Filipina de chef unisex · gabardina",
+      "familia": "zain-proveedor-zn-fi-020",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina de chef unisex; con bolsillos; con botones.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-020-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ma-005",
+      "idPublico": "zn-ma-005",
+      "sku": "ZN-MA-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · gabardina",
+      "nombreComercial": "Mandil unisex · gabardina",
+      "nombreFamilia": "Mandil unisex · gabardina",
+      "nombreFamiliaComercial": "Mandil unisex · gabardina",
+      "familia": "zain-proveedor-zn-ma-005",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex; con bolsillos; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-005-c01",
+        "zn-ma-005-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ma-006",
+      "idPublico": "zn-ma-006",
+      "sku": "ZN-MA-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · gabardina",
+      "nombreComercial": "Mandil unisex · gabardina",
+      "nombreFamilia": "Mandil unisex · gabardina",
+      "nombreFamiliaComercial": "Mandil unisex · gabardina",
+      "familia": "zain-proveedor-zn-ma-006",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex; con bolsillos; acabado que facilita retirar suciedad.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-006-c01",
+        "zn-ma-006-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-013",
+      "idPublico": "zn-ba-013",
+      "sku": "ZN-BA-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-013",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con bolsillos; cierre de cremallera.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-013-c01",
+        "zn-ba-013-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-014",
+      "idPublico": "zn-ba-014",
+      "sku": "ZN-BA-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-014",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos; cierre de cremallera.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-014-c01",
+        "zn-ba-014-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ch-031",
+      "idPublico": "zn-ch-031",
+      "sku": "ZN-CH-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · popelina",
+      "nombreComercial": "Chamarra para caballero · popelina",
+      "nombreFamilia": "Chamarra para caballero · popelina",
+      "nombreFamiliaComercial": "Chamarra para caballero · popelina",
+      "familia": "zain-proveedor-zn-ch-031",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; cierre con broches; con botones.",
+      "especificaciones": "Popelina. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-031-c01"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-015",
+      "idPublico": "zn-ba-015",
+      "sku": "ZN-BA-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-015",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; manga corta; corte holgado; con bolsillos; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-015-c01",
+        "zn-ba-015-c02",
+        "zn-ba-015-c03",
+        "zn-ba-015-c04",
+        "zn-ba-015-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-016",
+      "idPublico": "zn-ba-016",
+      "sku": "ZN-BA-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero",
+      "nombreComercial": "Bata de trabajo para caballero",
+      "nombreFamilia": "Bata de trabajo para caballero",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero",
+      "familia": "zain-proveedor-zn-ba-016",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos.",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-016-c01",
+        "zn-ba-016-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-017",
+      "idPublico": "zn-ba-017",
+      "sku": "ZN-BA-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-017",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-017-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-018",
+      "idPublico": "zn-ba-018",
+      "sku": "ZN-BA-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-018",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con bolsillos; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-018-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-019",
+      "idPublico": "zn-ba-019",
+      "sku": "ZN-BA-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-019",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, XS-4XLREGULA. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-019-c01",
+        "zn-ba-019-c02",
+        "zn-ba-019-c03",
+        "zn-ba-019-c04",
+        "zn-ba-019-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "XS-4XLREGULA"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-020",
+      "idPublico": "zn-ba-020",
+      "sku": "ZN-BA-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-020",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-020-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-021",
+      "idPublico": "zn-ba-021",
+      "sku": "ZN-BA-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-021",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, XS, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-021-c01",
+        "zn-ba-021-c02",
+        "zn-ba-021-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "XS",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-022",
+      "idPublico": "zn-ba-022",
+      "sku": "ZN-BA-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-022",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con botones.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: 38, 40, 42, 44, 46, 48, 50, 52, 54, 36, 56, 32-60REGULAR. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-022-c01",
+        "zn-ba-022-c02",
+        "zn-ba-022-c03",
+        "zn-ba-022-c04"
+      ],
+      "tallas": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "36",
+        "56",
+        "32-60REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-023",
+      "idPublico": "zn-ba-023",
+      "sku": "ZN-BA-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-023",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con bolsillos.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-023-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-024",
+      "idPublico": "zn-ba-024",
+      "sku": "ZN-BA-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-024",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-024-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-025",
+      "idPublico": "zn-ba-025",
+      "sku": "ZN-BA-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · popelina",
+      "nombreComercial": "Bata de trabajo para dama · popelina",
+      "nombreFamilia": "Bata de trabajo para dama · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · popelina",
+      "familia": "zain-proveedor-zn-ba-025",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con bolsillos; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-025-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-026",
+      "idPublico": "zn-ba-026",
+      "sku": "ZN-BA-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para caballero · popelina",
+      "nombreComercial": "Bata de trabajo para caballero · popelina",
+      "nombreFamilia": "Bata de trabajo para caballero · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo para caballero · popelina",
+      "familia": "zain-proveedor-zn-ba-026",
+      "categoria": "Batas",
+      "silueta": "Caballero",
+      "descripcion": "Bata de trabajo para caballero; con bolsillos.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-026-c01",
+        "zn-ba-026-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-027",
+      "idPublico": "zn-ba-027",
+      "sku": "ZN-BA-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · popelina",
+      "nombreComercial": "Bata de trabajo unisex · popelina",
+      "nombreFamilia": "Bata de trabajo unisex · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · popelina",
+      "familia": "zain-proveedor-zn-ba-027",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; cierre con broches; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-027-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-028",
+      "idPublico": "zn-ba-028",
+      "sku": "ZN-BA-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · popelina",
+      "nombreComercial": "Bata de trabajo unisex · popelina",
+      "nombreFamilia": "Bata de trabajo unisex · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · popelina",
+      "familia": "zain-proveedor-zn-ba-028",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-028-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-029",
+      "idPublico": "zn-ba-029",
+      "sku": "ZN-BA-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · popelina",
+      "nombreComercial": "Bata de trabajo unisex · popelina",
+      "nombreFamilia": "Bata de trabajo unisex · popelina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · popelina",
+      "familia": "zain-proveedor-zn-ba-029",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches; resistente a arrugas.",
+      "especificaciones": "Popelina. 80% poliéster / 20% algodón peinado. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-029-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-030",
+      "idPublico": "zn-ba-030",
+      "sku": "ZN-BA-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo para dama · gabardina",
+      "nombreComercial": "Bata de trabajo para dama · gabardina",
+      "nombreFamilia": "Bata de trabajo para dama · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo para dama · gabardina",
+      "familia": "zain-proveedor-zn-ba-030",
+      "categoria": "Batas",
+      "silueta": "Dama",
+      "descripcion": "Bata de trabajo para dama; con bolsillos; con botones; resistente a arrugas.",
+      "especificaciones": "Gabardina. 80% poliéster / 20% algodón peinado. Tallas: XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-030-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-022",
+      "idPublico": "zn-ov-022",
+      "sku": "ZN-OV-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero",
+      "nombreComercial": "Overol para caballero",
+      "nombreFamilia": "Overol para caballero",
+      "nombreFamiliaComercial": "Overol para caballero",
+      "familia": "zain-proveedor-zn-ov-022",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; con botones; con cintas reflejantes.",
+      "especificaciones": "Tallas: 38-60REGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-022-c01"
+      ],
+      "tallas": [
+        "38-60REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ov-022-c01"
+      ]
+    },
+    {
+      "id": "zn-ov-023",
+      "idPublico": "zn-ov-023",
+      "sku": "ZN-OV-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol para caballero · gabardina",
+      "nombreComercial": "Overol para caballero · gabardina",
+      "nombreFamilia": "Overol para caballero · gabardina",
+      "nombreFamiliaComercial": "Overol para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ov-023",
+      "categoria": "Overoles",
+      "silueta": "Caballero",
+      "descripcion": "Overol para caballero; cierre de cremallera; con cintas reflejantes.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 38-60REGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-023-c01"
+      ],
+      "tallas": [
+        "38-60REGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-ov-023-c01"
+      ]
+    },
+    {
+      "id": "zn-ch-032",
+      "idPublico": "zn-ch-032",
+      "sku": "ZN-CH-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra para caballero · gabardina",
+      "nombreComercial": "Chamarra para caballero · gabardina",
+      "nombreFamilia": "Chamarra para caballero · gabardina",
+      "nombreFamiliaComercial": "Chamarra para caballero · gabardina",
+      "familia": "zain-proveedor-zn-ch-032",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra para caballero; con bolsillos; con botones; con cintas reflejantes.",
+      "especificaciones": "Gabardina. 100% poliéster. Tallas: 38-54REGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-032-c01"
+      ],
+      "tallas": [
+        "38-54REGULAR"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ch-032-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-091",
+      "idPublico": "zn-cm-091",
+      "sku": "ZN-CM-091",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · gabardina",
+      "nombreComercial": "Camisa para caballero · gabardina",
+      "nombreFamilia": "Camisa para caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa para caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-091",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con cintas reflejantes.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-091-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-091-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-092",
+      "idPublico": "zn-cm-092",
+      "sku": "ZN-CM-092",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-092",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; con cintas reflejantes.",
+      "especificaciones": "Popelina. 100% poliéster. Tallas: S-4XLREGULAR, S-3XLREGULAR, L-2XLLARGO. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-092-c01",
+        "zn-cm-092-c02",
+        "zn-cm-092-c03",
+        "zn-cm-092-c04",
+        "zn-cm-092-c05"
+      ],
+      "tallas": [
+        "S-4XLREGULAR",
+        "S-3XLREGULAR",
+        "L-2XLLARGO"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-092-c01",
+        "zn-cm-092-c02",
+        "zn-cm-092-c03"
+      ]
+    },
+    {
+      "id": "zn-cm-093",
+      "idPublico": "zn-cm-093",
+      "sku": "ZN-CM-093",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · popelina",
+      "nombreComercial": "Camisa para caballero · popelina",
+      "nombreFamilia": "Camisa para caballero · popelina",
+      "nombreFamiliaComercial": "Camisa para caballero · popelina",
+      "familia": "zain-proveedor-zn-cm-093",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; con bolsillos; con botones; resistente a arrugas; acabado que facilita retirar suciedad; con cintas reflejantes.",
+      "especificaciones": "Popelina. 100% poliéster. Tallas: S-4XLREGULAR, S-3XLREGULAR, L-2XLLARGO. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-093-c01",
+        "zn-cm-093-c02",
+        "zn-cm-093-c03",
+        "zn-cm-093-c04",
+        "zn-cm-093-c05"
+      ],
+      "tallas": [
+        "S-4XLREGULAR",
+        "S-3XLREGULAR",
+        "L-2XLLARGO"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-cm-093-c01",
+        "zn-cm-093-c02",
+        "zn-cm-093-c03"
+      ]
+    },
+    {
+      "id": "zn-pl-061",
+      "idPublico": "zn-pl-061",
+      "sku": "ZN-PL-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera manga larga para caballero · malla ojo de pájaro",
+      "nombreComercial": "Playera manga larga para caballero · malla ojo de pájaro",
+      "nombreFamilia": "Playera manga larga para caballero · malla ojo de pájaro",
+      "nombreFamiliaComercial": "Playera manga larga para caballero · malla ojo de pájaro",
+      "familia": "zain-proveedor-zn-pl-061",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera manga larga para caballero; manga larga; resistente al agua; con malla; con cintas reflejantes.",
+      "especificaciones": "Malla ojo de pájaro. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-061-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pl-061-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-062",
+      "idPublico": "zn-pl-062",
+      "sku": "ZN-PL-062",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera para caballero · malla ojo de pájaro",
+      "nombreComercial": "Playera para caballero · malla ojo de pájaro",
+      "nombreFamilia": "Playera para caballero · malla ojo de pájaro",
+      "nombreFamiliaComercial": "Playera para caballero · malla ojo de pájaro",
+      "familia": "zain-proveedor-zn-pl-062",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera para caballero; manga corta; resistente al agua; con malla; con cintas reflejantes.",
+      "especificaciones": "Malla ojo de pájaro. 100% poliéster. Tallas: S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-062-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "6XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-pl-062-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-094",
+      "idPublico": "zn-cm-094",
+      "sku": "ZN-CM-094",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-094",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-094-c01",
+        "zn-cm-094-c02"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-094-c01",
+        "zn-cm-094-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-095",
+      "idPublico": "zn-cm-095",
+      "sku": "ZN-CM-095",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-095",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; tecnología OilBlok; paneles Mimix.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-095-c01",
+        "zn-cm-095-c02"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-095-c01",
+        "zn-cm-095-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-096",
+      "idPublico": "zn-cm-096",
+      "sku": "ZN-CM-096",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-096",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; resistente a arrugas; acabado que facilita retirar suciedad; con cintas reflejantes; colores combinados.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-096-c01",
+        "zn-cm-096-c02",
+        "zn-cm-096-c03",
+        "zn-cm-096-c04",
+        "zn-cm-096-c05",
+        "zn-cm-096-c06"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-096-c01",
+        "zn-cm-096-c02",
+        "zn-cm-096-c03",
+        "zn-cm-096-c04",
+        "zn-cm-096-c05"
+      ]
+    },
+    {
+      "id": "zn-cm-097",
+      "idPublico": "zn-cm-097",
+      "sku": "ZN-CM-097",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-097",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga corta; resistente a arrugas; acabado que facilita retirar suciedad; con cintas reflejantes; colores combinados.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-097-c01",
+        "zn-cm-097-c02",
+        "zn-cm-097-c03",
+        "zn-cm-097-c04",
+        "zn-cm-097-c05",
+        "zn-cm-097-c06"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-097-c01",
+        "zn-cm-097-c02",
+        "zn-cm-097-c03",
+        "zn-cm-097-c04",
+        "zn-cm-097-c05"
+      ]
+    },
+    {
+      "id": "zn-cm-098",
+      "idPublico": "zn-cm-098",
+      "sku": "ZN-CM-098",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-098",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con cintas reflejantes; colores combinados.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-098-c01",
+        "zn-cm-098-c02"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-098-c01",
+        "zn-cm-098-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-099",
+      "idPublico": "zn-cm-099",
+      "sku": "ZN-CM-099",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa para caballero · ripstop",
+      "nombreComercial": "Camisa para caballero · ripstop",
+      "nombreFamilia": "Camisa para caballero · ripstop",
+      "nombreFamiliaComercial": "Camisa para caballero · ripstop",
+      "familia": "zain-proveedor-zn-cm-099",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa para caballero; manga larga; con cintas reflejantes; colores combinados.",
+      "especificaciones": "Ripstop. 65% poliéster / 35% algodón. Tallas: S-4XLREGULAR. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-099-c01",
+        "zn-cm-099-c02"
+      ],
+      "tallas": [
+        "S-4XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25,
+      "coloresSinRender": [
+        "zn-cm-099-c01",
+        "zn-cm-099-c02"
+      ]
+    },
+    {
+      "id": "zn-ce-006",
+      "idPublico": "zn-ce-006",
+      "sku": "ZN-CE-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco para caballero · 100% poliéster",
+      "nombreComercial": "Chaleco para caballero · 100% poliéster",
+      "nombreFamilia": "Chaleco para caballero · 100% poliéster",
+      "nombreFamiliaComercial": "Chaleco para caballero · 100% poliéster",
+      "familia": "zain-proveedor-zn-ce-006",
+      "categoria": "Chalecos",
+      "silueta": "Caballero",
+      "descripcion": "Chaleco para caballero; con cintas reflejantes.",
+      "especificaciones": "100% poliéster. Tallas: M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-006-c01"
+      ],
+      "tallas": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ce-006-c01"
+      ]
+    },
+    {
+      "id": "zn-ma-007",
+      "idPublico": "zn-ma-007",
+      "sku": "ZN-MA-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Mandil unisex · mezclilla",
+      "nombreComercial": "Mandil unisex · mezclilla",
+      "nombreFamilia": "Mandil unisex · mezclilla",
+      "nombreFamiliaComercial": "Mandil unisex · mezclilla",
+      "familia": "zain-proveedor-zn-ma-007",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "Mandil unisex.",
+      "especificaciones": "Mezclilla. 100% algodón. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-007-c01",
+        "zn-ma-007-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 13
+    },
+    {
+      "id": "zn-ba-031",
+      "idPublico": "zn-ba-031",
+      "sku": "ZN-BA-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · gabardina",
+      "nombreComercial": "Bata de trabajo unisex · gabardina",
+      "nombreFamilia": "Bata de trabajo unisex · gabardina",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · gabardina",
+      "familia": "zain-proveedor-zn-ba-031",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; con bolsillos; cierre con broches.",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-031-c01",
+        "zn-ba-031-c02",
+        "zn-ba-031-c03"
+      ],
+      "tallas": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56",
+        "58"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 25
+    },
+    {
+      "id": "zn-ba-032",
+      "idPublico": "zn-ba-032",
+      "sku": "ZN-BA-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de trabajo unisex · tejido de punto por urdimbre",
+      "nombreComercial": "Bata de trabajo unisex · tejido de punto por urdimbre",
+      "nombreFamilia": "Bata de trabajo unisex · tejido de punto por urdimbre",
+      "nombreFamiliaComercial": "Bata de trabajo unisex · tejido de punto por urdimbre",
+      "familia": "zain-proveedor-zn-ba-032",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de trabajo unisex; cierre con broches; protección antiestática.",
+      "especificaciones": "Tejido de punto por urdimbre. 94% poliéster texturizado / 6% nailon con carbono. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "94% poliéster texturizado / 6% nailon con carbono",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-032-c01",
+        "zn-ba-032-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ch-033",
+      "idPublico": "zn-ch-033",
+      "sku": "ZN-CH-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra unisex · tejido de punto por urdimbre",
+      "nombreComercial": "Chamarra unisex · tejido de punto por urdimbre",
+      "nombreFamilia": "Chamarra unisex · tejido de punto por urdimbre",
+      "nombreFamiliaComercial": "Chamarra unisex · tejido de punto por urdimbre",
+      "familia": "zain-proveedor-zn-ch-033",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Chamarra unisex; protección antiestática.",
+      "especificaciones": "Tejido de punto por urdimbre. 94% poliéster texturizado / 6% nailon con carbono. Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "94% poliéster texturizado / 6% nailon con carbono",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-033-c01",
+        "zn-ch-033-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ov-024",
+      "idPublico": "zn-ov-024",
+      "sku": "ZN-OV-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Overol unisex · tejido de punto por urdimbre",
+      "nombreComercial": "Overol unisex · tejido de punto por urdimbre",
+      "nombreFamilia": "Overol unisex · tejido de punto por urdimbre",
+      "nombreFamiliaComercial": "Overol unisex · tejido de punto por urdimbre",
+      "familia": "zain-proveedor-zn-ov-024",
+      "categoria": "Overoles",
+      "silueta": "Unisex",
+      "descripcion": "Overol unisex; con bolsillos; cierre con broches; protección antiestática.",
+      "especificaciones": "Tejido de punto por urdimbre. 94% poliéster texturizado / 6% nailon con carbono. Tallas: S-3XLREGULAR. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "94% poliéster texturizado / 6% nailon con carbono",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ov-024-c01"
+      ],
+      "tallas": [
+        "S-3XLREGULAR"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-092",
+      "idPublico": "zn-go-092",
+      "sku": "ZN-GO-092",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gorra unisex · 100% poliéster",
+      "nombreComercial": "Gorra unisex · 100% poliéster",
+      "nombreFamilia": "Gorra unisex · 100% poliéster",
+      "nombreFamiliaComercial": "Gorra unisex · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-092",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gorra unisex.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-092-c01",
+        "zn-go-092-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
     }
   ],
   "promocionales": [
@@ -22102,6 +53062,12 @@ export default {
     "Deportivas",
     "Pantalones",
     "Infantil",
+    "Batas",
+    "Filipinas",
+    "Mandiles",
+    "Otros",
+    "Overoles",
+    "Termos y vasos",
     "Bolsas"
   ],
   "catalogoVersion": "originales-mas-yazbek-ia-2026-10-14",
