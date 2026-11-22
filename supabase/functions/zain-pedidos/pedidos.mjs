@@ -179,7 +179,7 @@ export function createHandler(env={}, fetcher=fetch) {
   const knownProduct=async id=>(altasEnabled?(await currentCatalog()).productos:C.productos).find(p=>(p.idPublico||p.id)===id);
   const productInfo=(p,photos=[])=>{
     const original=[...PublicC.productos,...PublicC.productosHistoricos].find(x=>x.sku===p.sku),photo=photos.find(x=>x.id===p.fotoReferenciaId&&x.producto_id===(p.idPublico||p.id)&&/^[a-z0-9-]+\/[a-f0-9-]{36}\.webp$/.test(x.objeto));
-    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
+    return {id:p.idPublico||p.id,sku:p.sku,skuProveedor:p.skuProveedor??p.codigoFabricante??'',proveedor:p.proveedorCompras??p.fabricante??'',paginaProveedor:p.paginaProveedor||'',soloCotizar:!!p.soloCotizar,silueta:p.silueta||'',categoria:p.categoria,tecnicas:[...p.tecnicas],activo:p.activo!==false,nombre:p.nombreFamiliaComercial||p.nombreFamilia||p.nombre,descripcion:p.descripcion||'',especificaciones:p.especificaciones||'',tejido:p.tejido||'',composicion:p.composicion||'',gramaje:p.gramaje||null,medidas:p.medidas||'',disponibilidad:p.disponibilidad||'Consulta disponibilidad.',creadoGestion:!!p.creadoGestion,modoRender:p.modoRender||'existente',renderBloqueado:!!p.renderBloqueado,renderListo:!!p.foto,fotoRender:p.creadoGestion?p.foto:original?.foto||'',fotoModelo:photo?base+'/storage/v1/object/public/zain-catalogo-fotos/'+photo.objeto:original?.fotoModelo||'',version:p.versionCatalogo||0};
   };
 
   // Nombre/empresa, teléfono y fecha deseada que escribe el cliente; nunca bloquean la solicitud.
@@ -303,11 +303,15 @@ export function createHandler(env={}, fetcher=fetch) {
           }
           // El catálogo retirado solo puede reintentarse en un folio ya registrado
           // y con su secreto de carga. La RPC conserva la igualdad del contenido.
-          const historical=Array.isArray(body.items)&&body.items.some(x=>C.productosHistoricos?.some(p=>p.id===x?.p));
+          // «Solo para cotizar» (22-nov-2026): las prendas del catálogo mayoreo que no están en la web
+          // las pasa a pedido el equipo desde Cotizaciones, con su sesión.
+          const soloCotizar=Array.isArray(body.items)&&body.items.some(x=>catalog.productos.some(p=>(p.id===x?.p||p.idPublico===x?.p)&&p.soloCotizar&&p.activo===false));
+          if(soloCotizar&&!servicio)await staff(request);
+          const historical=!soloCotizar&&Array.isArray(body.items)&&body.items.some(x=>C.productosHistoricos?.some(p=>p.id===x?.p));
           if(historical) {
             try{await owner(body);}catch(e){if(e.status===404)fail(400,'Esta selección pertenece al catálogo anterior. Elige una referencia del catálogo actual; tus archivos siguen guardados.');throw e;}
           }
-          const x=validateOrder(body,{allowHistoricos:historical,catalogo:catalog,snapshot:catalogEnabled,servicio});
+          const x=validateOrder(body,{allowHistoricos:historical||soloCotizar,catalogo:catalog,snapshot:catalogEnabled,servicio});
           if(requestHash)for(const item of x.items)item.pedido_hash=requestHash;
           // IP del visitante para el tope por hora (revisión de seguridad, 10-nov-2026): se toma de lo que pone la plataforma,
           // nunca de un encabezado que el visitante pueda inventar. Frente a Supabase está Cloudflare, que fija cf-connecting-ip

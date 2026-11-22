@@ -30,7 +30,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionCotizaciones" 
 <p id="cmConvertida" class="cm-aviso" hidden></p>
 <section class="cot-panel"><h2>Cliente y condiciones</h2><div class="cm-campos cm-campos--3"><label>Cliente o empresa (opcional)<input id="cmDestinatario" maxlength="180" autocomplete="off" list="cmClientes" placeholder="Ej. Constructora del Bajío"><datalist id="cmClientes"></datalist></label><label>Precios e IVA<select id="cmIVA"><option value="1600" selected>Más IVA (16%)</option><option value="0">Sin IVA</option></select></label><label id="cmRedondeoCampo">Redondear precios<select id="cmRedondeo"><option value="100" selected>A peso cerrado</option><option value="500">A múltiplos de $5</option><option value="1">Sin redondeo (centavos)</option></select></label><label>Válida hasta<input id="cmVigencia" type="date"></label><label>Entrega (opcional)<input id="cmPlazo" maxlength="120" placeholder="Ej. 10 a 12 días hábiles tras el anticipo"></label><label>Anticipo (%)<input id="cmAnticipo" type="number" min="0" max="100" step="1" inputmode="numeric" value="50" placeholder="Sin anticipo"></label></div></section>
 <details id="cmLogoPanel" class="cot-panel cm-opciones"><summary>Logo del cliente (opcional)</summary><div class="cm-logo"><label>Subir logo<input id="cmLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label><div><p id="cmLogoEstado" class="cot-ayuda">PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.</p><label class="cot-check"><input id="cmQuitarFondo" type="checkbox">Quitar fondo del logo</label><button type="button" id="cmEliminarLogo" class="btn-texto" hidden>Quitar logo</button></div></div></details>
-<section id="cmModelosPanel" class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmLibre" class="btn btn--linea">+ Fuera de catálogo (artículo libre)</button><span class="cot-ayuda">Lo que no está en el catálogo: escribe el artículo, su costo y su precio.</span></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
+<section id="cmModelosPanel" class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, gorra, código del proveedor, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmLibre" class="btn btn--linea">+ Fuera de catálogo (artículo libre)</button><span class="cot-ayuda">Lo que no está en el catálogo: escribe el artículo, su costo y su precio.</span></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
 <div id="cmModelos"></div>
 <section id="cmRapida" class="cot-panel cm-rapida" hidden><h2>Partidas</h2><p class="cot-ayuda">Escribe cada artículo como quieres que lo lea el cliente. La foto es opcional: sin foto, la partida sale como renglón. Sin cantidad, sale el precio por pieza.</p><div id="crFilas"></div><button type="button" id="crAgregar" class="btn btn--linea">+ Agregar partida</button><div id="crTotales" class="cr-totales" aria-live="polite"></div>
 <details class="cm-opciones cr-textos"><summary>Textos del PDF</summary><div class="cm-campos"><label>Título, primera línea<input id="crTitulo1" maxlength="48"></label><label>Título, segunda línea<input id="crTitulo2" maxlength="48"></label><label>Encabezado de las partidas<input id="crSeccion" maxlength="48"></label><label>Nota junto al encabezado<input id="crEtiqueta" maxlength="60"></label></div><label class="cot-check"><input id="crPasos" type="checkbox" checked>Incluir «Cómo seguimos» (confirmar, anticipo, producción y entrega)</label><label>Notas al pie (una por renglón)<textarea id="crNotasPie" rows="3" maxlength="600"></textarea></label></details></section>
@@ -81,7 +81,8 @@ async function cargarLista(){
 }
 function opciones(){
  const busqueda=$('#cmBuscar').value.trim().toLocaleLowerCase('es'),anterior=$('#cmModelo').value;
- $('#cmModelo').innerHTML=catalogo.filter(p=>p.activo!==false&&[p.nombre,p.silueta,p.sku].join(' ').toLocaleLowerCase('es').includes(busqueda)).map(p=>`<option value="${esc(p.sku)}">${esc(nombreDe(p))} · ${esc(p.sku)}</option>`).join('');
+ // Las prendas «solo para cotizar» (catálogo mayoreo, 22-nov-2026) salen con su código del proveedor aunque no estén en la web.
+ $('#cmModelo').innerHTML=catalogo.filter(p=>(p.activo!==false||p.soloCotizar)&&[p.nombre,p.silueta,p.sku,p.skuProveedor,p.proveedor].join(' ').toLocaleLowerCase('es').includes(busqueda)).map(p=>`<option value="${esc(p.sku)}">${esc(nombreDe(p))} · ${p.skuProveedor?esc(p.skuProveedor)+' · ':''}${esc(p.sku)}${p.activo===false?' · solo cotizar':''}</option>`).join('');
  if([...$('#cmModelo').options].some(o=>o.value===anterior))$('#cmModelo').value=anterior;
  $('#cmAgregar').disabled=!$('#cmModelo').value;
 }
@@ -506,7 +507,7 @@ $('#cvCrear').addEventListener('click',async()=>{
   if(!d.recibo){
    estado('Creando el pedido…');
    // Una partida sin prenda solo la acepta el servidor con la sesión del equipo.
-   const cuerpo={id:d.id,token:d.token,items,files:manifest,cliente:{nombre:cliente}},crear=()=>items.some(x=>x.servicio)?api('crear',cuerpo):publico('crear',cuerpo);
+   const cuerpo={id:d.id,token:d.token,items,files:manifest,cliente:{nombre:cliente}},soloCotizar=r.selecciones.some(s=>!s.item.servicio&&modelos[s.modelo]?.producto?.activo===false),crear=()=>items.some(x=>x.servicio)||soloCotizar?api('crear',cuerpo):publico('crear',cuerpo);
    await crear(); // Un conflicto conserva el identificador: nunca crear un segundo pedido a ciegas.
    const s=await publico('subidas',{id:d.id,token:d.token});let n=0;
    for(const f of s.files||[]){
@@ -663,6 +664,13 @@ addEventListener('zain:abrir-cotizacion',async e=>{
  const {id,duplicar,cliente}=e.detail||{};if(!id||!await cotizadorListo())return;
  await abrir(id,!!duplicar);
  if(cliente?.nombre&&actual?.id!==id&&$('#cmDestinatario').value!==cliente.nombre){$('#cmDestinatario').value=cliente.nombre;marcarSucio();}
+});
+// «Cotizar este modelo» desde Catálogo (22-nov-2026): agrega la prenda a la cotización por modelos abierta o empieza una nueva.
+addEventListener('zain:cotizar-modelo',async e=>{
+ const {sku}=e.detail||{};if(!sku||!await cotizadorListo())return;
+ const p=catalogo.find(p=>p.sku===sku);if(!p){avisar('Ese modelo no está disponible para cotizar.');return;}
+ if($('#cmForm').hidden||modo!=='modelos'){if(!nueva())return;ponerModo('modelos');mostrarEditor(true);}
+ $('#cmBuscar').value='';opciones();$('#cmModelo').value=sku;agregar(p);avisar(nombreDe(p)+' agregado a la cotización.');
 });
 addEventListener('zain:nueva-cotizacion',async e=>{
  const {modo:m,cliente}=e.detail||{};if(!await cotizadorListo())return;

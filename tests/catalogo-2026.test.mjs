@@ -7,14 +7,15 @@ import {resolveInternal,projectPublic} from '../server/catalogo-gestion.mjs';
 import {validateOrder} from '../server/pedidos.mjs';
 import {inicial,configurar,generar,calcular,entrada,paraCliente} from '../js/cotizacion-core.js';
 const keep=new Set(['ZN-PL-004','ZN-PL-005']);
-const edits=C.productos.map(p=>({producto_id:p.idPublico||p.id,version:1,cambios:{activo:p.catalogo2026||keep.has(p.sku)||p.grupo==='bolsas',...(p.catalogo2026?{proveedor:'Proveedor ficticio',sku_proveedor:'REF-PRIVADA-'+p.sku}: {})}}));
+const edits=C.productos.map(p=>({producto_id:p.idPublico||p.id,version:1,cambios:{activo:(p.catalogo2026&&!p.soloCotizar)||keep.has(p.sku)||p.grupo==='bolsas',...(p.catalogo2026?{proveedor:'Proveedor ficticio',sku_proveedor:'REF-PRIVADA-'+p.sku}: {})}}));
 const cat=resolveInternal(C,edits),publica=projectPublic(Pub,cat,[],'https://p.test');
 const request=items=>({id:'12345678-1234-4123-8123-123456789abc',token:'a'.repeat(64),items,files:[]});
 const selection=(p,cid,talla)=>({p:p.id,colorId:cid,color:cat.colores.find(c=>c.id===cid).nombre,tecnica:cat.tecnicas.find(t=>t.id===p.tecnicas[0]).nombre,piezas:5,tallasDetalle:{[talla]:5},zona:p.zonas[0].nombre,cm:8});
 test('gama nueva conserva premium y13bolsas, publica41 referencias (incluye gorras, chaleco, camisa utilitaria y camisa pescador) y mantiene32 históricas',()=>{
- assert.equal(publica.productos.length,41);assert.equal(publica.productosHistoricos.length,32);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,26);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,7);
+ assert.equal(publica.productos.length,41);assert.equal(publica.productosHistoricos.filter(p=>!p.soloCotizar).length,32);assert.equal(publica.productosHistoricos.filter(p=>p.soloCotizar).length,98);assert.equal(publica.productos.filter(p=>p.catalogo2026).length,26);assert.equal(publica.productos.filter(p=>p.grupo==='bolsas').length,13);assert.equal(publica.muestrasPortada.length,7);
  assert.ok([...keep].every(sku=>publica.productos.some(p=>p.sku===sku)));
- assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,73);
+ // 22-nov-2026: + 98 prendas del catálogo mayoreo, ocultas y solo para cotizar.
+ assert.equal(new Set([...publica.productos,...publica.productosHistoricos].map(p=>p.sku)).size,171);
  for(const m of publica.muestrasPortada){const p=publica.productos.find(p=>p.id===m.p);assert.ok(p&&p.colores.includes(m.c)&&p.tecnicas.includes(m.t));}
  assert.ok(publica.categoriasCatalogo.includes('Chalecos'));
 });
@@ -24,7 +25,7 @@ test('configuración y proyección pública excluyen nuevos datos de compras',()
  assert.equal(publica.productos.filter(p=>p.catalogo2026&&p.fotoModelo).length,12);
 });
 test('todas las variantes nuevas guardan talla/color canónicos y referencia privada solo en snapshot',()=>{
- for(const p of cat.productos.filter(p=>p.catalogo2026))for(const cid of p.colores)for(const talla of p.tallas){
+ for(const p of cat.productos.filter(p=>p.catalogo2026&&!p.soloCotizar))for(const cid of p.colores)for(const talla of p.tallas){
   const out=validateOrder(request([{...selection(p,cid,talla),composicion:'FALSA',gramaje:999,sku:'OTRO'}]),{catalogo:cat,snapshot:true}).items[0];
   assert.equal(out.sku,p.sku);assert.equal(out.skuProveedor,'REF-PRIVADA-'+p.sku);assert.equal(out.composicion,p.composicionColor[cid]||p.composicion);assert.deepEqual(out.tallasDetalle,{[talla]:5});assert.equal(out.gramaje,p.gramaje);
  }

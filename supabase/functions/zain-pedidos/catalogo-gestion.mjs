@@ -1,6 +1,6 @@
 import {publicNewProduct} from './catalogo-altas.mjs';
 // Proyección del catálogo; el render, SKU ZAIN, paletas y tallas quedan protegidos.
-export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','foto_id','tecnicas','categoria']);
+export const editable=new Set(['activo','nombre','descripcion','especificaciones','tejido','composicion','gramaje','medidas','disponibilidad','proveedor','sku_proveedor','pagina_proveedor','foto_id','tecnicas','categoria']);
 export function normalizeChanges(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||!Object.keys(input).length)throw Error('Faltan los cambios del modelo.');
  const result={};
@@ -10,7 +10,7 @@ export function normalizeChanges(input){
   if(key==='activo'){if(typeof val!=='boolean')throw Error('Actividad inválida.');result[key]=val;continue;}
   if(key==='gramaje'){if(!Number.isInteger(val)||val<1||val>2000)throw Error('Gramaje inválido.');result[key]=val;continue;}
   if(key==='foto_id'){if(val!==null&&!/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(val))throw Error('Foto inválida.');result[key]=val;continue;}
-  const limits={nombre:120,categoria:80,descripcion:900,especificaciones:2400,tejido:120,composicion:250,medidas:300,disponibilidad:300,proveedor:120,sku_proveedor:120};
+  const limits={nombre:120,categoria:80,descripcion:900,especificaciones:2400,tejido:120,composicion:250,medidas:300,disponibilidad:300,proveedor:120,sku_proveedor:120,pagina_proveedor:60};
   if(typeof val!=='string'||val.length>limits[key]||/[\x00-\x08\x0b-\x1f\x7f]/.test(val))throw Error('Revisa '+key+'.');
   if(key==='nombre'&&!val.trim())throw Error('El nombre no puede quedar vacío.');
   result[key]=val.trim();
@@ -30,6 +30,7 @@ export function resolveInternal(base,editions){
   if(d.medidas!==undefined&&d.medidas!==p.medidas){p.medidas=d.medidas;p.dimensiones=null;}
   p.proveedorCompras=d.proveedor??p.proveedorCompras??p.fabricante??'';
   p.skuProveedor=d.sku_proveedor??p.skuProveedor??p.codigoFabricante??'';
+  p.paginaProveedor=d.pagina_proveedor??p.paginaProveedor??'';
   if(p.creadoGestion)p.grupo=p.categoria==='Bolsas'?'bolsas':null;
  }
  catalog.productosHistoricos=catalog.productos.filter(p=>p.activo===false);

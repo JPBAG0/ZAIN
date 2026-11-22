@@ -15,8 +15,9 @@ let archivos=[],cargado=false,epoca=0,visorTurno=0,filtro='',editando=false,porQ
 // PDF ya bajados en esta sesión (id → URL en memoria); se guardan los últimos 4.
 const memoria=new Map();
 
-const titulo=$('#seccionCatalogo .control__titulo');
-(titulo||$('#seccionCatalogo')).insertAdjacentHTML(titulo?'afterend':'afterbegin',`<details id="provPanel" class="cot-panel prov-panel" open>
+// 22-nov-2026: dentro de la vista «Prendas» de Catálogo.
+const titulo=$('#seccionCatalogo .control__titulo'),vistaPrendas=$('#vistaPrendas');
+(vistaPrendas||titulo||$('#seccionCatalogo')).insertAdjacentHTML(vistaPrendas?'afterbegin':titulo?'afterend':'afterbegin',`<details id="provPanel" class="cot-panel prov-panel" open>
 <summary><span><b>Catálogos y listas de precios de proveedores</b><small id="provCuenta"></small></span></summary>
 <div class="prov-barra"><input id="provBuscar" type="search" placeholder="Buscar proveedor o archivo" aria-label="Buscar catálogo o lista de precios" autocomplete="off"><button type="button" id="provSubir" class="btn btn--linea">+ Subir archivo</button><button type="button" id="provEditar" class="btn-texto" aria-pressed="false">Editar lista</button></div>
 <p id="provEstado" class="control__estado" role="status" aria-live="polite"></p>
@@ -62,12 +63,14 @@ $('#provEditar').addEventListener('click',()=>{editando=!editando;porQuitar=null
 
 // Abrir: en computadora, visor dentro de Gestión; en el celular o si no es PDF, pestaña nueva.
 function guardarEnMemoria(id,url){memoria.set(id,url);while(memoria.size>4){const [viejo,u]=memoria.entries().next().value;URL.revokeObjectURL(u);memoria.delete(viejo);}}
-async function abrir(id){
+async function abrir(id,pagina=null){
  const a=archivos.find(x=>x.id===id);if(!a)return;
+ // Desde la ficha de una prenda (22-nov-2026) el PDF abre en la página del modelo.
+ const hoja=a.mime==='application/pdf'&&Number.isSafeInteger(pagina)&&pagina>0?'#page='+pagina:'';
  if(enCelular()||a.mime!=='application/pdf'){
   // La pestaña se abre en el mismo toque (si no, el teléfono la bloquea) y luego recibe el enlace firmado.
   const w=window.open('','_blank');avisar('Abriendo '+a.titulo+'…');
-  try{const r=await api('proveedor-archivo-abrir',{id});if(w&&!w.closed){w.opener=null;w.location.href=r.url;avisar('');}else{avisar('');$('#provEstado').innerHTML='<a href="'+esc(r.url)+'" target="_blank" rel="noopener noreferrer">Abrir '+esc(a.titulo)+'</a>';}}
+  try{const r=await api('proveedor-archivo-abrir',{id});if(w&&!w.closed){w.opener=null;w.location.href=r.url+hoja;avisar('');}else{avisar('');$('#provEstado').innerHTML='<a href="'+esc(r.url)+'" target="_blank" rel="noopener noreferrer">Abrir '+esc(a.titulo)+'</a>';}}
   catch(e){w?.close();avisar(e.message);}
   return;
  }
@@ -82,10 +85,16 @@ async function abrir(id){
    url=URL.createObjectURL(new Blob([await res.blob()],{type:'application/pdf'}));guardarEnMemoria(id,url);
   }
   if(turno!==visorTurno||!d.open)return;
-  marco.src=url;marco.hidden=false;estado.hidden=true;$('#provVisorPestana').href=firmado||url;
+  marco.src=url+hoja;marco.hidden=false;estado.hidden=true;$('#provVisorPestana').href=firmado||url;
  }catch(e){if(turno===visorTurno)estado.textContent=e.message;}
 }
 $('#provVisorCerrar').addEventListener('click',()=>$('#provVisor').close());
+// Para la ficha de cada prenda en Catálogo: sus catálogos del mismo proveedor («Player y Tees» = «Playerytees»).
+const mismoProveedor=(a,b)=>{const n=s=>clave(s).replace(/^proveedor /,'').replace(/\s+/g,'');return !!n(a)&&n(a)===n(b);};
+window.ZAINProveedores={
+ async catalogosDe(proveedor){await cargar();return archivos.filter(a=>a.tipo==='catalogo'&&mismoProveedor(a.proveedor,proveedor)).sort((a,b)=>a.titulo.localeCompare(b.titulo,'es'));},
+ abrir:(id,pagina)=>abrir(id,pagina)
+};
 $('#provVisor').addEventListener('close',()=>{visorTurno++;$('#provVisorMarco').removeAttribute('src');$('#provVisorMarco').hidden=true;});
 
 // Subir o cambiar el nombre.
@@ -132,7 +141,8 @@ $('#provLista').addEventListener('click',async e=>{
  if(si){try{await api('proveedor-archivo-archivar',{id:si.dataset.provQuitarSi});porQuitar=null;await cargar(true);avisar('Se quitó de la lista. El archivo se conserva.');}catch(er){avisar(er.message);}}
 });
 // Recordar si el panel se dejó cerrado (solo en este navegador).
-try{if(localStorage.getItem('zain-prov-panel')==='cerrado')$('#provPanel').open=false;}catch{}
+// 22-nov-2026: cerrado de entrada para que las prendas se vean primero; se recuerda si lo abres.
+try{$('#provPanel').open=localStorage.getItem('zain-prov-panel')==='abierto';}catch{$('#provPanel').open=false;}
 $('#provPanel').addEventListener('toggle',e=>{try{localStorage.setItem('zain-prov-panel',e.currentTarget.open?'abierto':'cerrado');}catch{}});
 
 $('#verCatalogo')?.addEventListener('click',()=>{void cargar();});

@@ -18,7 +18,7 @@ test('originales activos junto con 16 familias / 28 referencias Yazbek sin perso
   for(const [code,sizes] of Object.entries(expected))assert.deepEqual(model(code).tallas,sizes,code);
   assert.equal(C.productos.filter(p=>['gorra','chamarra','playera','polo','camisa','sudadera'].includes(p.id)).length,6);
   assert.equal(C.productosHistoricos.length,5);assert.ok(C.productos.find(p=>p.id==="gorra").activo);
-  assert.deepEqual(C.categoriasCatalogo,['Playeras','Polos','Camisas','Sudaderas','Chalecos','Chamarras','Gorras','Bolsas']);
+  assert.deepEqual(C.categoriasCatalogo,['Playeras','Polos','Camisas','Sudaderas','Chalecos','Chamarras','Gorras','Deportivas','Pantalones','Infantil','Bolsas']);
   for (const p of C.productos.filter(p=>p.imagenLimpia)) { assert.match(p.foto,/originales-limpios/);assert.ok(readFileSync(new URL('../'+p.fotoOriginal,import.meta.url)).length>1000); }
   for(const p of current){assert.deepEqual(Object.keys(p.tablaTallas),p.tallas);assert.equal(p.fuente.catalogo,'Yazbek · catalogo.pdf');assert.equal(p.imagenFuente.origen,'IA');assert.equal(p.imagenIA,true);assert.equal(p.imagenFuente.replicaVerificada,false);assert.match(p.foto,/yazbek-ia/);assert.ok(!p.esquema);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);}
 });
@@ -81,8 +81,8 @@ test('consulta de prendas guarda especificaciones sin exponer notas privadas o r
 });
 
 test('base conserva 44 referencias previas y agrega 21 preparadas ocultas con SKU nuevos',()=>{
- assert.equal(Public.productos.length,42);assert.equal(Public.productosHistoricos.length,31);
- assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,73);
+ assert.equal(Public.productos.length,42);assert.equal(Public.productosHistoricos.filter(p=>!p.soloCotizar).length,31);assert.equal(Public.productosHistoricos.filter(p=>p.soloCotizar).length,98);
+ assert.equal(new Set([...Public.productos,...Public.productosHistoricos].map(p=>p.sku)).size,171);
  assert.ok(!/Yazbek|ActiviTee|\b[CD]\d{4}\b/i.test(JSON.stringify(Public)));
  assert.equal(Public.productos.filter(p=>p.fotoModelo).length,28);
  for(const p of Public.productos.filter(p=>p.fotoModelo)){

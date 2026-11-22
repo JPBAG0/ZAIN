@@ -1880,6 +1880,4887 @@ export default {
       "id": "zn-cm-017-c04",
       "nombre": "Azul rey",
       "hex": "#4a6ad0"
+    },
+    {
+      "id": "zn-pl-012-c01",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-012-c02",
+      "nombre": "Amarillo Brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-pl-012-c03",
+      "nombre": "Oro",
+      "hex": "#fcb61a"
+    },
+    {
+      "id": "zn-pl-012-c04",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-pl-012-c05",
+      "nombre": "Naranja T.",
+      "hex": "#c05a2c"
+    },
+    {
+      "id": "zn-pl-012-c06",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-012-c07",
+      "nombre": "Palo de Rosa",
+      "hex": "#eccad9"
+    },
+    {
+      "id": "zn-pl-012-c08",
+      "nombre": "Rosa Seguridad",
+      "hex": "#f0668b"
+    },
+    {
+      "id": "zn-pl-012-c09",
+      "nombre": "Rosa Tropical",
+      "hex": "#ed367f"
+    },
+    {
+      "id": "zn-pl-012-c10",
+      "nombre": "Coral",
+      "hex": "#f2798a"
+    },
+    {
+      "id": "zn-pl-012-c11",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-012-c12",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-012-c13",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-pl-012-c14",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-012-c15",
+      "nombre": "Azul Celeste",
+      "hex": "#67cdf2"
+    },
+    {
+      "id": "zn-pl-012-c16",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-012-c17",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-012-c18",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-012-c19",
+      "nombre": "Verde Pasto",
+      "hex": "#008869"
+    },
+    {
+      "id": "zn-pl-012-c20",
+      "nombre": "Verde Neón",
+      "hex": "#99cd78"
+    },
+    {
+      "id": "zn-pl-012-c21",
+      "nombre": "Limón",
+      "hex": "#84c561"
+    },
+    {
+      "id": "zn-pl-012-c22",
+      "nombre": "Verde Seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-pl-012-c23",
+      "nombre": "Verde Césped",
+      "hex": "#00833e"
+    },
+    {
+      "id": "zn-pl-012-c24",
+      "nombre": "Verde Militar",
+      "hex": "#44624f"
+    },
+    {
+      "id": "zn-pl-012-c25",
+      "nombre": "Índigo",
+      "hex": "#396079"
+    },
+    {
+      "id": "zn-pl-012-c26",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-pl-012-c27",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-012-c28",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-012-c29",
+      "nombre": "Chocolate",
+      "hex": "#190a12"
+    },
+    {
+      "id": "zn-pl-012-c30",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-012-c31",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-012-c32",
+      "nombre": "Blanco Hueso",
+      "hex": "#e7dab9"
+    },
+    {
+      "id": "zn-pl-012-c33",
+      "nombre": "Rosa Empolvado",
+      "hex": "#f0c6bf"
+    },
+    {
+      "id": "zn-pl-012-c34",
+      "nombre": "Azalea",
+      "hex": "#f178a6"
+    },
+    {
+      "id": "zn-pl-012-c35",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-012-c36",
+      "nombre": "Violeta",
+      "hex": "#7692ca"
+    },
+    {
+      "id": "zn-pl-012-c37",
+      "nombre": "Turquesa Jaspe",
+      "hex": "#007db5"
+    },
+    {
+      "id": "zn-pl-012-c38",
+      "nombre": "Acuático",
+      "hex": "#69aea9"
+    },
+    {
+      "id": "zn-pl-012-c39",
+      "nombre": "Azul Tropical",
+      "hex": "#008fa1"
+    },
+    {
+      "id": "zn-pl-012-c40",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-012-c41",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-pl-012-c42",
+      "nombre": "Azul Crepúsculo",
+      "hex": "#1d374b"
+    },
+    {
+      "id": "zn-pl-012-c43",
+      "nombre": "Azul Marino Jaspe",
+      "hex": "#1c2b39"
+    },
+    {
+      "id": "zn-pl-012-c44",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-013-c01",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-013-c02",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-013-c03",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-013-c04",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-013-c05",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-013-c06",
+      "nombre": "Limón",
+      "hex": "#84c561"
+    },
+    {
+      "id": "zn-pl-013-c07",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-pl-013-c08",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-013-c09",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-013-c10",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-013-c11",
+      "nombre": "Palo de Rosa",
+      "hex": "#eccad9"
+    },
+    {
+      "id": "zn-pl-013-c12",
+      "nombre": "Rosa Tropical",
+      "hex": "#ed367f"
+    },
+    {
+      "id": "zn-pl-013-c13",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-013-c14",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-pl-013-c15",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-014-c01",
+      "nombre": "Amarillo Brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-pl-014-c02",
+      "nombre": "Naranja Jaspe",
+      "hex": "#f69a79"
+    },
+    {
+      "id": "zn-pl-014-c03",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-014-c04",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-014-c05",
+      "nombre": "Púrpura Jaspe",
+      "hex": "#5e4e86"
+    },
+    {
+      "id": "zn-pl-014-c06",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-pl-014-c07",
+      "nombre": "Royal Jaspe",
+      "hex": "#577fc0"
+    },
+    {
+      "id": "zn-pl-014-c08",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-014-c09",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-014-c10",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-014-c11",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-014-c12",
+      "nombre": "Jade",
+      "hex": "#009188"
+    },
+    {
+      "id": "zn-pl-014-c13",
+      "nombre": "Turquesa Antiguo",
+      "hex": "#006285"
+    },
+    {
+      "id": "zn-pl-014-c14",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-014-c15",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#495e70"
+    },
+    {
+      "id": "zn-pl-014-c16",
+      "nombre": "Azul Marino Jaspe",
+      "hex": "#2a3845"
+    },
+    {
+      "id": "zn-pl-014-c17",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-014-c18",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-014-c19",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-014-c20",
+      "nombre": "Chocolate",
+      "hex": "#190a12"
+    },
+    {
+      "id": "zn-pl-014-c21",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-014-c22",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-014-c23",
+      "nombre": "Azalea",
+      "hex": "#f178a6"
+    },
+    {
+      "id": "zn-pl-015-c01",
+      "nombre": "Mostaza",
+      "hex": "#c8a05f"
+    },
+    {
+      "id": "zn-pl-015-c02",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-015-c03",
+      "nombre": "Marrón Sabana",
+      "hex": "#776557"
+    },
+    {
+      "id": "zn-pl-015-c04",
+      "nombre": "Amarillo Brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-pl-015-c05",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-015-c06",
+      "nombre": "Rosa Tropical",
+      "hex": "#ed367f"
+    },
+    {
+      "id": "zn-pl-015-c07",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-015-c08",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-015-c09",
+      "nombre": "Violeta",
+      "hex": "#7692ca"
+    },
+    {
+      "id": "zn-pl-015-c10",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-015-c11",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-015-c12",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-015-c13",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-015-c14",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-015-c15",
+      "nombre": "Salvia",
+      "hex": "#7ea587"
+    },
+    {
+      "id": "zn-pl-015-c16",
+      "nombre": "Azul Piedra",
+      "hex": "#7192a2"
+    },
+    {
+      "id": "zn-pl-015-c17",
+      "nombre": "Paragón",
+      "hex": "#8b7f8e"
+    },
+    {
+      "id": "zn-pl-015-c18",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-015-c19",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-015-c20",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-015-c21",
+      "nombre": "Negro Intenso",
+      "hex": "#00000a"
+    },
+    {
+      "id": "zn-pl-015-c22",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-016-c01",
+      "nombre": "Cacao Jaspe",
+      "hex": "#7c4d3a"
+    },
+    {
+      "id": "zn-pl-016-c02",
+      "nombre": "Duna Jaspe",
+      "hex": "#6a634c"
+    },
+    {
+      "id": "zn-pl-016-c03",
+      "nombre": "Amarillo Jaspe",
+      "hex": "#fadc7a"
+    },
+    {
+      "id": "zn-pl-016-c04",
+      "nombre": "Mandarina Jaspe",
+      "hex": "#f89e6b"
+    },
+    {
+      "id": "zn-pl-016-c05",
+      "nombre": "Rosa Empolvado",
+      "hex": "#f0c6bf"
+    },
+    {
+      "id": "zn-pl-016-c06",
+      "nombre": "Rosa Ciruela",
+      "hex": "#d985a9"
+    },
+    {
+      "id": "zn-pl-016-c07",
+      "nombre": "Rosa Limonada Jaspe",
+      "hex": "#e14585"
+    },
+    {
+      "id": "zn-pl-016-c08",
+      "nombre": "Rojo Jaspe",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-016-c09",
+      "nombre": "Marrón Jaspe",
+      "hex": "#630030"
+    },
+    {
+      "id": "zn-pl-016-c10",
+      "nombre": "Amatista",
+      "hex": "#62479c"
+    },
+    {
+      "id": "zn-pl-016-c11",
+      "nombre": "Azul Celeste Jaspe",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-pl-016-c12",
+      "nombre": "Azul Claro Jaspe",
+      "hex": "#9bb8d3"
+    },
+    {
+      "id": "zn-pl-016-c13",
+      "nombre": "Royal Jaspe CVC",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-016-c14",
+      "nombre": "Marino Jaspe CVC",
+      "hex": "#093166"
+    },
+    {
+      "id": "zn-pl-016-c15",
+      "nombre": "Verde Kelly Jaspe",
+      "hex": "#008869"
+    },
+    {
+      "id": "zn-pl-016-c16",
+      "nombre": "Caribe Jaspe",
+      "hex": "#00b3db"
+    },
+    {
+      "id": "zn-pl-016-c17",
+      "nombre": "Cactus",
+      "hex": "#637c6b"
+    },
+    {
+      "id": "zn-pl-016-c18",
+      "nombre": "Azul Acero",
+      "hex": "#08424d"
+    },
+    {
+      "id": "zn-pl-016-c19",
+      "nombre": "Pizarra",
+      "hex": "#aea4a2"
+    },
+    {
+      "id": "zn-pl-016-c20",
+      "nombre": "Cemento",
+      "hex": "#a3a6a9"
+    },
+    {
+      "id": "zn-pl-016-c21",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-016-c22",
+      "nombre": "Gris Metal",
+      "hex": "#7b8080"
+    },
+    {
+      "id": "zn-pl-016-c23",
+      "nombre": "Negro Intenso",
+      "hex": "#00000a"
+    },
+    {
+      "id": "zn-pl-016-c24",
+      "nombre": "Negro Intenso Jaspe",
+      "hex": "#010b03"
+    },
+    {
+      "id": "zn-pl-016-c25",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-017-c01",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-017-c02",
+      "nombre": "Amarillo Brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-pl-017-c03",
+      "nombre": "Oro",
+      "hex": "#fcb61a"
+    },
+    {
+      "id": "zn-pl-017-c04",
+      "nombre": "Naranja Tennessee",
+      "hex": "#f5821f"
+    },
+    {
+      "id": "zn-pl-017-c05",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-pl-017-c06",
+      "nombre": "Naranja T.",
+      "hex": "#c05a2c"
+    },
+    {
+      "id": "zn-pl-017-c07",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-017-c08",
+      "nombre": "Palo de Rosa",
+      "hex": "#eccad9"
+    },
+    {
+      "id": "zn-pl-017-c09",
+      "nombre": "Azalea",
+      "hex": "#f178a6"
+    },
+    {
+      "id": "zn-pl-017-c10",
+      "nombre": "Rosa Tropical",
+      "hex": "#ed367f"
+    },
+    {
+      "id": "zn-pl-017-c11",
+      "nombre": "Rojo Escarlata",
+      "hex": "#cd153e"
+    },
+    {
+      "id": "zn-pl-017-c12",
+      "nombre": "Rojo Escarlata Jaspe",
+      "hex": "#c23350"
+    },
+    {
+      "id": "zn-pl-017-c13",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-017-c14",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-017-c15",
+      "nombre": "Marrón Oscuro",
+      "hex": "#4a1225"
+    },
+    {
+      "id": "zn-pl-017-c16",
+      "nombre": "Orquídea",
+      "hex": "#bdb1d6"
+    },
+    {
+      "id": "zn-pl-017-c17",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-pl-017-c18",
+      "nombre": "Marino Oscuro Jaspe",
+      "hex": "#43467a"
+    },
+    {
+      "id": "zn-pl-017-c19",
+      "nombre": "Azul Celeste",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-pl-017-c20",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-017-c21",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-017-c22",
+      "nombre": "Royal Intenso Jaspe",
+      "hex": "#1d63af"
+    },
+    {
+      "id": "zn-pl-017-c23",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-017-c24",
+      "nombre": "Royal Intenso",
+      "hex": "#033572"
+    },
+    {
+      "id": "zn-pl-017-c25",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-017-c26",
+      "nombre": "Jade",
+      "hex": "#009188"
+    },
+    {
+      "id": "zn-pl-017-c27",
+      "nombre": "Verde Pasto",
+      "hex": "#008869"
+    },
+    {
+      "id": "zn-pl-017-c28",
+      "nombre": "Limón",
+      "hex": "#84c561"
+    },
+    {
+      "id": "zn-pl-017-c29",
+      "nombre": "Verde Seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-pl-017-c30",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-017-c31",
+      "nombre": "Verde Eléctrico",
+      "hex": "#2cb34a"
+    },
+    {
+      "id": "zn-pl-017-c32",
+      "nombre": "Verde Oscuro",
+      "hex": "#004c31"
+    },
+    {
+      "id": "zn-pl-017-c33",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-pl-017-c34",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-pl-017-c35",
+      "nombre": "Marino Oscuro",
+      "hex": "#001231"
+    },
+    {
+      "id": "zn-pl-017-c36",
+      "nombre": "Gris Ceniza",
+      "hex": "#c6c8c7"
+    },
+    {
+      "id": "zn-pl-017-c37",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-017-c38",
+      "nombre": "Gris Grava",
+      "hex": "#787c82"
+    },
+    {
+      "id": "zn-pl-017-c39",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-017-c40",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-pl-017-c41",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-018-c01",
+      "nombre": "Canela",
+      "hex": "#bb977d"
+    },
+    {
+      "id": "zn-pl-018-c02",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-018-c03",
+      "nombre": "Granate",
+      "hex": "#6c0020"
+    },
+    {
+      "id": "zn-pl-018-c04",
+      "nombre": "Royal Intenso",
+      "hex": "#033572"
+    },
+    {
+      "id": "zn-pl-018-c05",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-pl-018-c06",
+      "nombre": "Azul Crepúsculo",
+      "hex": "#1d374b"
+    },
+    {
+      "id": "zn-pl-018-c07",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-018-c08",
+      "nombre": "Chocolate",
+      "hex": "#190a12"
+    },
+    {
+      "id": "zn-pl-018-c09",
+      "nombre": "Negro Intenso",
+      "hex": "#00000a"
+    },
+    {
+      "id": "zn-pl-018-c10",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-019-c01",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-pl-019-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-019-c03",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-019-c04",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-019-c05",
+      "nombre": "Verde Seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-pl-019-c06",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-pl-019-c07",
+      "nombre": "Gris Ceniza",
+      "hex": "#c6c8c7"
+    },
+    {
+      "id": "zn-pl-019-c08",
+      "nombre": "Grafito Jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-pl-019-c09",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-019-c10",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-pl-019-c11",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-019-c12",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-019-c13",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-019-c14",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-019-c15",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-019-c16",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-019-c17",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-019-c18",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-020-c01",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-020-c02",
+      "nombre": "Púrpura Jaspe",
+      "hex": "#5e4e86"
+    },
+    {
+      "id": "zn-pl-020-c03",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-020-c04",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-020-c05",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#495e70"
+    },
+    {
+      "id": "zn-pl-020-c06",
+      "nombre": "Azul Marino Jaspe",
+      "hex": "#2a3845"
+    },
+    {
+      "id": "zn-pl-020-c07",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-020-c08",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-020-c09",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-020-c10",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-020-c11",
+      "nombre": "Azalea",
+      "hex": "#f178a6"
+    },
+    {
+      "id": "zn-pl-021-c01",
+      "nombre": "Oro",
+      "hex": "#fcb61a"
+    },
+    {
+      "id": "zn-pl-021-c02",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-021-c03",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-021-c04",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-021-c05",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-021-c06",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-021-c07",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-021-c08",
+      "nombre": "Natural",
+      "hex": "#f4d7b5"
+    },
+    {
+      "id": "zn-pl-021-c09",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-021-c10",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-pl-021-c11",
+      "nombre": "Naranja T.",
+      "hex": "#c05a2c"
+    },
+    {
+      "id": "zn-pl-021-c12",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-pl-021-c13",
+      "nombre": "Palo de Rosa",
+      "hex": "#eccad9"
+    },
+    {
+      "id": "zn-pl-021-c14",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-021-c15",
+      "nombre": "Rojo Cardenal",
+      "hex": "#8c0034"
+    },
+    {
+      "id": "zn-pl-021-c16",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-021-c17",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-pl-021-c18",
+      "nombre": "Azul Celeste",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-pl-021-c19",
+      "nombre": "Azul Claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-pl-021-c20",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-pl-021-c21",
+      "nombre": "Verde Seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-pl-021-c22",
+      "nombre": "Verde Irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-pl-021-c23",
+      "nombre": "Verde Militar",
+      "hex": "#44624f"
+    },
+    {
+      "id": "zn-pl-021-c24",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-pl-021-c25",
+      "nombre": "Azul Índigo",
+      "hex": "#396079"
+    },
+    {
+      "id": "zn-pl-021-c26",
+      "nombre": "Jaspe Oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-pl-021-c27",
+      "nombre": "Gris Ceniza",
+      "hex": "#c6c8c7"
+    },
+    {
+      "id": "zn-pl-021-c28",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-021-c29",
+      "nombre": "Chocolate",
+      "hex": "#190a12"
+    },
+    {
+      "id": "zn-pl-021-c30",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-022-c01",
+      "nombre": "Blanco / Azul Marino",
+      "hex": "#f0f1f1",
+      "hex2": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-022-c02",
+      "nombre": "Blanco / Negro",
+      "hex": "#f0f1f1",
+      "hex2": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-022-c03",
+      "nombre": "Blanco / Royal",
+      "hex": "#f0f1f1",
+      "hex2": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-022-c04",
+      "nombre": "Blanco / Rojo",
+      "hex": "#f0f1f1",
+      "hex2": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-022-c05",
+      "nombre": "Gris Jaspe / Azul Marino",
+      "hex": "#868a8f",
+      "hex2": "#868a8f"
+    },
+    {
+      "id": "zn-pl-022-c06",
+      "nombre": "Gris Jaspe / Negro",
+      "hex": "#868a8f",
+      "hex2": "#868a8f"
+    },
+    {
+      "id": "zn-pl-022-c07",
+      "nombre": "Gris Jaspe / Rojo",
+      "hex": "#868a8f",
+      "hex2": "#868a8f"
+    },
+    {
+      "id": "zn-pl-023-c01",
+      "nombre": "Rojo Cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-pl-023-c02",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-pl-023-c03",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-023-c04",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-023-c05",
+      "nombre": "Verde Neón",
+      "hex": "#99cd78"
+    },
+    {
+      "id": "zn-pl-023-c06",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-023-c07",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-023-c08",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-023-c09",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-023-c10",
+      "nombre": "Gris Jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pl-023-c11",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-023-c12",
+      "nombre": "Azalea",
+      "hex": "#f178a6"
+    },
+    {
+      "id": "zn-pl-024-c01",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-pl-024-c02",
+      "nombre": "Royal",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-pl-024-c03",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pl-024-c04",
+      "nombre": "Verde Seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-pl-024-c05",
+      "nombre": "Gris Jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-pl-024-c06",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-pl-024-c07",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-pl-024-c08",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-pl-025-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-025-c02",
+      "nombre": "Natural",
+      "hex": "#cec3a9"
+    },
+    {
+      "id": "zn-pl-025-c03",
+      "nombre": "Amarillo Canario",
+      "hex": "#f9ad27"
+    },
+    {
+      "id": "zn-pl-025-c04",
+      "nombre": "Palo de Rosa",
+      "hex": "#c0757e"
+    },
+    {
+      "id": "zn-pl-025-c05",
+      "nombre": "Coral",
+      "hex": "#d85c6f"
+    },
+    {
+      "id": "zn-pl-025-c06",
+      "nombre": "Naranja",
+      "hex": "#f15a2b"
+    },
+    {
+      "id": "zn-pl-025-c07",
+      "nombre": "Rojo",
+      "hex": "#eb1c27"
+    },
+    {
+      "id": "zn-pl-025-c08",
+      "nombre": "Marrón",
+      "hex": "#621c25"
+    },
+    {
+      "id": "zn-pl-025-c09",
+      "nombre": "Moca",
+      "hex": "#62533e"
+    },
+    {
+      "id": "zn-pl-025-c10",
+      "nombre": "Verde Manzana",
+      "hex": "#009f4c"
+    },
+    {
+      "id": "zn-pl-025-c11",
+      "nombre": "Verde Arrecife",
+      "hex": "#57c2b1"
+    },
+    {
+      "id": "zn-pl-025-c12",
+      "nombre": "Verde Militar",
+      "hex": "#3a4928"
+    },
+    {
+      "id": "zn-pl-025-c13",
+      "nombre": "Azul Pacífico",
+      "hex": "#8fd4e7"
+    },
+    {
+      "id": "zn-pl-025-c14",
+      "nombre": "Azul Rey",
+      "hex": "#1d52a4"
+    },
+    {
+      "id": "zn-pl-025-c15",
+      "nombre": "Azul Marino",
+      "hex": "#013d5b"
+    },
+    {
+      "id": "zn-pl-025-c16",
+      "nombre": "Gris Jaspe",
+      "hex": "#939598"
+    },
+    {
+      "id": "zn-pl-025-c17",
+      "nombre": "Carbón",
+      "hex": "#343839"
+    },
+    {
+      "id": "zn-pl-025-c18",
+      "nombre": "Negro",
+      "hex": "#121717"
+    },
+    {
+      "id": "zn-pl-025-c19",
+      "nombre": "Caqui Safari",
+      "hex": "#c49a6c"
+    },
+    {
+      "id": "zn-pl-025-c20",
+      "nombre": "Rosa",
+      "hex": "#f6abcc"
+    },
+    {
+      "id": "zn-pl-025-c21",
+      "nombre": "Fucsia",
+      "hex": "#e74699"
+    },
+    {
+      "id": "zn-pl-025-c22",
+      "nombre": "Púrpura",
+      "hex": "#5e4a87"
+    },
+    {
+      "id": "zn-pl-025-c23",
+      "nombre": "Gris Ceniza",
+      "hex": "#6d6e71"
+    },
+    {
+      "id": "zn-pl-026-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-026-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-026-c03",
+      "nombre": "Marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-pl-027-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-027-c02",
+      "nombre": "Carbón",
+      "hex": "#57585a"
+    },
+    {
+      "id": "zn-pl-027-c03",
+      "nombre": "Gris Jaspe",
+      "hex": "#c6c6c6"
+    },
+    {
+      "id": "zn-pl-027-c04",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-027-c05",
+      "nombre": "Arena",
+      "hex": "#fff3d9"
+    },
+    {
+      "id": "zn-pl-027-c06",
+      "nombre": "Marrón",
+      "hex": "#680023"
+    },
+    {
+      "id": "zn-pl-027-c07",
+      "nombre": "Rojo",
+      "hex": "#d6171f"
+    },
+    {
+      "id": "zn-pl-027-c08",
+      "nombre": "Naranja",
+      "hex": "#f1641f"
+    },
+    {
+      "id": "zn-pl-027-c09",
+      "nombre": "Mango",
+      "hex": "#fdc10b"
+    },
+    {
+      "id": "zn-pl-027-c10",
+      "nombre": "Jade",
+      "hex": "#008b4e"
+    },
+    {
+      "id": "zn-pl-027-c11",
+      "nombre": "Marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-pl-027-c12",
+      "nombre": "Royal",
+      "hex": "#0066b1"
+    },
+    {
+      "id": "zn-pl-027-c13",
+      "nombre": "Turquesa",
+      "hex": "#00a4d1"
+    },
+    {
+      "id": "zn-pl-027-c14",
+      "nombre": "Fucsia",
+      "hex": "#d4298f"
+    },
+    {
+      "id": "zn-pl-028-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pl-028-c02",
+      "nombre": "Gris Jaspe",
+      "hex": "#c6c6c6"
+    },
+    {
+      "id": "zn-pl-028-c03",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-028-c04",
+      "nombre": "Rojo",
+      "hex": "#d6171f"
+    },
+    {
+      "id": "zn-pl-028-c05",
+      "nombre": "Marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-pl-028-c06",
+      "nombre": "Royal",
+      "hex": "#0066b1"
+    },
+    {
+      "id": "zn-pl-029-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#43484b"
+    },
+    {
+      "id": "zn-pl-029-c02",
+      "nombre": "Marrón Jaspe",
+      "hex": "#935263"
+    },
+    {
+      "id": "zn-pl-029-c03",
+      "nombre": "Rojo Jaspe",
+      "hex": "#e05850"
+    },
+    {
+      "id": "zn-pl-029-c04",
+      "nombre": "Jade Jaspe",
+      "hex": "#377848"
+    },
+    {
+      "id": "zn-pl-029-c05",
+      "nombre": "Verde Bosque Jaspe",
+      "hex": "#5b754e"
+    },
+    {
+      "id": "zn-pl-029-c06",
+      "nombre": "Marino Jaspe",
+      "hex": "#415a79"
+    },
+    {
+      "id": "zn-pl-029-c07",
+      "nombre": "Royal Jaspe",
+      "hex": "#5d80bb"
+    },
+    {
+      "id": "zn-pl-029-c08",
+      "nombre": "Turquesa Jaspe",
+      "hex": "#30a2d6"
+    },
+    {
+      "id": "zn-pl-029-c09",
+      "nombre": "Amarillo Neón",
+      "hex": "#d5ec62"
+    },
+    {
+      "id": "zn-pl-029-c10",
+      "nombre": "Verde Neón",
+      "hex": "#9cd865"
+    },
+    {
+      "id": "zn-pl-029-c11",
+      "nombre": "Naranja Neón",
+      "hex": "#f57432"
+    },
+    {
+      "id": "zn-pl-029-c12",
+      "nombre": "Rosa Neón",
+      "hex": "#f8819d"
+    },
+    {
+      "id": "zn-pl-029-c13",
+      "nombre": "Morado Jaspe",
+      "hex": "#7647df"
+    },
+    {
+      "id": "zn-pl-030-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#44494c"
+    },
+    {
+      "id": "zn-pl-030-c02",
+      "nombre": "Marrón Jaspe",
+      "hex": "#945364"
+    },
+    {
+      "id": "zn-pl-030-c03",
+      "nombre": "Rojo Jaspe",
+      "hex": "#e15b52"
+    },
+    {
+      "id": "zn-pl-030-c04",
+      "nombre": "Jade Jaspe",
+      "hex": "#377748"
+    },
+    {
+      "id": "zn-pl-030-c05",
+      "nombre": "Marino Jaspe",
+      "hex": "#415a79"
+    },
+    {
+      "id": "zn-pl-030-c06",
+      "nombre": "Royal Jaspe",
+      "hex": "#5f81bc"
+    },
+    {
+      "id": "zn-pl-030-c07",
+      "nombre": "Turquesa Jaspe",
+      "hex": "#31a2d6"
+    },
+    {
+      "id": "zn-pl-030-c08",
+      "nombre": "Fucsia Jaspe",
+      "hex": "#f199d4"
+    },
+    {
+      "id": "zn-pl-030-c09",
+      "nombre": "Rosa Neón",
+      "hex": "#f8819c"
+    },
+    {
+      "id": "zn-pl-031-c01",
+      "nombre": "Negro Jaspe",
+      "hex": "#404548"
+    },
+    {
+      "id": "zn-pl-031-c02",
+      "nombre": "Marrón Jaspe",
+      "hex": "#925062"
+    },
+    {
+      "id": "zn-pl-031-c03",
+      "nombre": "Rojo Jaspe",
+      "hex": "#e0574f"
+    },
+    {
+      "id": "zn-pl-031-c04",
+      "nombre": "Jade Jaspe",
+      "hex": "#367647"
+    },
+    {
+      "id": "zn-pl-031-c05",
+      "nombre": "Marino Jaspe",
+      "hex": "#3e5776"
+    },
+    {
+      "id": "zn-pl-031-c06",
+      "nombre": "Royal Jaspe",
+      "hex": "#6083bc"
+    },
+    {
+      "id": "zn-pl-032-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-pl-032-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-032-c03",
+      "nombre": "Verde Olivo",
+      "hex": "#586146"
+    },
+    {
+      "id": "zn-pl-032-c04",
+      "nombre": "Azul Marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-pl-033-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-pl-033-c02",
+      "nombre": "Gris Plata",
+      "hex": "#989699"
+    },
+    {
+      "id": "zn-pl-033-c03",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-033-c04",
+      "nombre": "Kaki",
+      "hex": "#a3947d"
+    },
+    {
+      "id": "zn-pl-034-c01",
+      "nombre": "Negro Deslavado",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-pl-034-c02",
+      "nombre": "Azul Marino Deslavado",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-pl-035-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-pl-035-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-035-c03",
+      "nombre": "Azul Cielo",
+      "hex": "#7fa0af"
+    },
+    {
+      "id": "zn-pl-035-c04",
+      "nombre": "Azul Marino",
+      "hex": "#454c78"
+    },
+    {
+      "id": "zn-pl-035-c05",
+      "nombre": "Gris Carbón",
+      "hex": "#626262"
+    },
+    {
+      "id": "zn-pl-035-c06",
+      "nombre": "Verde Olivo",
+      "hex": "#586146"
+    },
+    {
+      "id": "zn-pl-035-c07",
+      "nombre": "Rojo Vino",
+      "hex": "#904f4d"
+    },
+    {
+      "id": "zn-pl-035-c08",
+      "nombre": "Café",
+      "hex": "#997656"
+    },
+    {
+      "id": "zn-pl-036-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-001-c01",
+      "nombre": "Oro",
+      "hex": "#fdb71a"
+    },
+    {
+      "id": "zn-de-001-c02",
+      "nombre": "Naranja",
+      "hex": "#f3744a"
+    },
+    {
+      "id": "zn-de-001-c03",
+      "nombre": "Rosa seguridad",
+      "hex": "#f1678c"
+    },
+    {
+      "id": "zn-de-001-c04",
+      "nombre": "Rosa ciruela",
+      "hex": "#d986aa"
+    },
+    {
+      "id": "zn-de-001-c05",
+      "nombre": "Rojo",
+      "hex": "#ed1944"
+    },
+    {
+      "id": "zn-de-001-c06",
+      "nombre": "Púrpura",
+      "hex": "#454495"
+    },
+    {
+      "id": "zn-de-001-c07",
+      "nombre": "Azul Carolina",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-de-001-c08",
+      "nombre": "Zafiro",
+      "hex": "#007bb6"
+    },
+    {
+      "id": "zn-de-001-c09",
+      "nombre": "Azul rey",
+      "hex": "#004f9a"
+    },
+    {
+      "id": "zn-de-001-c10",
+      "nombre": "Azul marino",
+      "hex": "#001e45"
+    },
+    {
+      "id": "zn-de-001-c11",
+      "nombre": "Lima",
+      "hex": "#84c661"
+    },
+    {
+      "id": "zn-de-001-c12",
+      "nombre": "Verde seguridad",
+      "hex": "#c4d82e"
+    },
+    {
+      "id": "zn-de-001-c13",
+      "nombre": "Verde irlandés",
+      "hex": "#00ad61"
+    },
+    {
+      "id": "zn-de-001-c14",
+      "nombre": "Salvia",
+      "hex": "#7fa588"
+    },
+    {
+      "id": "zn-de-001-c15",
+      "nombre": "Verde militar",
+      "hex": "#45634f"
+    },
+    {
+      "id": "zn-de-001-c16",
+      "nombre": "Azul piedra",
+      "hex": "#7192a3"
+    },
+    {
+      "id": "zn-de-001-c17",
+      "nombre": "Polvo de pradera/Café coyote",
+      "hex": "#6a634d"
+    },
+    {
+      "id": "zn-de-001-c18",
+      "nombre": "Gris jaspe",
+      "hex": "#878a8f"
+    },
+    {
+      "id": "zn-de-001-c19",
+      "nombre": "Carbón",
+      "hex": "#474c55"
+    },
+    {
+      "id": "zn-de-001-c20",
+      "nombre": "Negro",
+      "hex": "#000005"
+    },
+    {
+      "id": "zn-de-001-c21",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-de-002-c01",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-de-002-c02",
+      "nombre": "Amarillo flúor",
+      "hex": "#d8e25f"
+    },
+    {
+      "id": "zn-de-002-c03",
+      "nombre": "Azul eléctrico",
+      "hex": "#1d8ac3"
+    },
+    {
+      "id": "zn-de-002-c04",
+      "nombre": "Azul rey",
+      "hex": "#1e52a5"
+    },
+    {
+      "id": "zn-de-002-c05",
+      "nombre": "Azul marino",
+      "hex": "#003c5c"
+    },
+    {
+      "id": "zn-de-002-c06",
+      "nombre": "Rojo",
+      "hex": "#eb1b28"
+    },
+    {
+      "id": "zn-de-002-c07",
+      "nombre": "Carbón",
+      "hex": "#455356"
+    },
+    {
+      "id": "zn-de-002-c08",
+      "nombre": "Negro",
+      "hex": "#121617"
+    },
+    {
+      "id": "zn-de-002-c09",
+      "nombre": "Verde irlandés",
+      "hex": "#50ba69"
+    },
+    {
+      "id": "zn-de-002-c10",
+      "nombre": "Naranja flúor",
+      "hex": "#e97942"
+    },
+    {
+      "id": "zn-de-003-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-de-003-c02",
+      "nombre": "Gris",
+      "hex": "#57585a"
+    },
+    {
+      "id": "zn-de-003-c03",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-003-c04",
+      "nombre": "Rojo",
+      "hex": "#d7171f"
+    },
+    {
+      "id": "zn-de-003-c05",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-de-003-c06",
+      "nombre": "Azul rey",
+      "hex": "#0066b2"
+    },
+    {
+      "id": "zn-de-004-c01",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-de-004-c02",
+      "nombre": "Gris",
+      "hex": "#6d6e70"
+    },
+    {
+      "id": "zn-de-004-c03",
+      "nombre": "Verde MX",
+      "hex": "#10522c"
+    },
+    {
+      "id": "zn-de-004-c04",
+      "nombre": "Paprika",
+      "hex": "#8a555f"
+    },
+    {
+      "id": "zn-de-004-c05",
+      "nombre": "Rojo",
+      "hex": "#ec1b28"
+    },
+    {
+      "id": "zn-de-004-c06",
+      "nombre": "Azul rey",
+      "hex": "#1e52a5"
+    },
+    {
+      "id": "zn-de-004-c07",
+      "nombre": "Cobalto",
+      "hex": "#426a83"
+    },
+    {
+      "id": "zn-de-004-c08",
+      "nombre": "Azul marino",
+      "hex": "#003d5c"
+    },
+    {
+      "id": "zn-de-004-c09",
+      "nombre": "Carbón",
+      "hex": "#3c4041"
+    },
+    {
+      "id": "zn-de-004-c10",
+      "nombre": "Café",
+      "hex": "#484540"
+    },
+    {
+      "id": "zn-de-004-c11",
+      "nombre": "Negro",
+      "hex": "#121617"
+    },
+    {
+      "id": "zn-de-004-c12",
+      "nombre": "Café/Gris",
+      "hex": "#47443f"
+    },
+    {
+      "id": "zn-de-004-c13",
+      "nombre": "Carbón/Gris",
+      "hex": "#3c4041"
+    },
+    {
+      "id": "zn-de-005-c01",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-de-005-c02",
+      "nombre": "Azul marino",
+      "hex": "#003d5c"
+    },
+    {
+      "id": "zn-de-005-c03",
+      "nombre": "Carbón",
+      "hex": "#455356"
+    },
+    {
+      "id": "zn-de-005-c04",
+      "nombre": "Negro",
+      "hex": "#121617"
+    },
+    {
+      "id": "zn-de-005-c05",
+      "nombre": "Verde irlandés",
+      "hex": "#51ba68"
+    },
+    {
+      "id": "zn-de-005-c06",
+      "nombre": "Verde MX",
+      "hex": "#10522c"
+    },
+    {
+      "id": "zn-de-005-c07",
+      "nombre": "Rojo coral",
+      "hex": "#ef4538"
+    },
+    {
+      "id": "zn-de-005-c08",
+      "nombre": "Rojo",
+      "hex": "#eb1c27"
+    },
+    {
+      "id": "zn-de-005-c09",
+      "nombre": "Azul rey jaspe",
+      "hex": "#2f4c92"
+    },
+    {
+      "id": "zn-de-005-c10",
+      "nombre": "Azul rey",
+      "hex": "#1e53a5"
+    },
+    {
+      "id": "zn-de-005-c11",
+      "nombre": "Azul marino jaspe",
+      "hex": "#3e4457"
+    },
+    {
+      "id": "zn-de-005-c12",
+      "nombre": "Azul profundo",
+      "hex": "#3a5378"
+    },
+    {
+      "id": "zn-de-006-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-de-006-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-006-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-de-006-c04",
+      "nombre": "Azul marino",
+      "hex": "#313965"
+    },
+    {
+      "id": "zn-de-006-c05",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-de-006-c06",
+      "nombre": "Verde olivo",
+      "hex": "#7d8578"
+    },
+    {
+      "id": "zn-de-006-c07",
+      "nombre": "Palo de rosa",
+      "hex": "#a6928e"
+    },
+    {
+      "id": "zn-de-007-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-de-007-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-007-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-de-007-c04",
+      "nombre": "Azul marino",
+      "hex": "#313965"
+    },
+    {
+      "id": "zn-de-007-c05",
+      "nombre": "Rojo",
+      "hex": "#b90618"
+    },
+    {
+      "id": "zn-de-007-c06",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-de-007-c07",
+      "nombre": "Verde bandera",
+      "hex": "#067f3b"
+    },
+    {
+      "id": "zn-de-007-c08",
+      "nombre": "Verde bandera con blanco",
+      "hex": "#067f3b"
+    },
+    {
+      "id": "zn-de-008-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-de-008-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-008-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-de-008-c04",
+      "nombre": "Azul marino",
+      "hex": "#313965"
+    },
+    {
+      "id": "zn-de-008-c05",
+      "nombre": "Rojo",
+      "hex": "#b90618"
+    },
+    {
+      "id": "zn-de-008-c06",
+      "nombre": "Gris jaspe",
+      "hex": "#adaeb2"
+    },
+    {
+      "id": "zn-de-008-c07",
+      "nombre": "Verde trébol",
+      "hex": "#305f3e"
+    },
+    {
+      "id": "zn-de-009-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-de-009-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-de-009-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-de-009-c04",
+      "nombre": "Azul marino",
+      "hex": "#313965"
+    },
+    {
+      "id": "zn-de-009-c05",
+      "nombre": "Rojo",
+      "hex": "#b90618"
+    },
+    {
+      "id": "zn-de-009-c06",
+      "nombre": "Gris jaspe",
+      "hex": "#989698"
+    },
+    {
+      "id": "zn-de-009-c07",
+      "nombre": "Verde trébol",
+      "hex": "#305f3e"
+    },
+    {
+      "id": "zn-po-014-c01",
+      "nombre": "Arena",
+      "hex": "#d5ccc0"
+    },
+    {
+      "id": "zn-po-014-c02",
+      "nombre": "Oro",
+      "hex": "#fcb61a"
+    },
+    {
+      "id": "zn-po-014-c03",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-po-014-c04",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-po-014-c05",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-po-014-c06",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-po-014-c07",
+      "nombre": "Azul Carolina",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-po-014-c08",
+      "nombre": "Azul claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-po-014-c09",
+      "nombre": "Zafiro",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-po-014-c10",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-po-014-c11",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-po-014-c12",
+      "nombre": "Verde Kelly",
+      "hex": "#008869"
+    },
+    {
+      "id": "zn-po-014-c13",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-po-014-c14",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-po-014-c15",
+      "nombre": "Gris ceniza jaspe",
+      "hex": "#c6c8c7"
+    },
+    {
+      "id": "zn-po-014-c16",
+      "nombre": "Grafito jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-po-014-c17",
+      "nombre": "Gris jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-po-014-c18",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-po-014-c19",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-015-c01",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-po-015-c02",
+      "nombre": "Amarillo brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-po-015-c03",
+      "nombre": "Rojo cereza",
+      "hex": "#ad122a"
+    },
+    {
+      "id": "zn-po-015-c04",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-po-015-c05",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-po-015-c06",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-po-015-c07",
+      "nombre": "Gris jaspe RS",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-po-015-c08",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-po-015-c09",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-po-016-c01",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-po-016-c02",
+      "nombre": "Zafiro",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-po-016-c03",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-po-016-c04",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-po-016-c05",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-po-016-c06",
+      "nombre": "Gris jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-po-016-c07",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-po-016-c08",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-po-016-c09",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-017-c01",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-017-c02",
+      "nombre": "Verde manzana",
+      "hex": "#009d4c"
+    },
+    {
+      "id": "zn-po-017-c03",
+      "nombre": "Rojo",
+      "hex": "#cf202b"
+    },
+    {
+      "id": "zn-po-017-c04",
+      "nombre": "Azul rey",
+      "hex": "#1850a3"
+    },
+    {
+      "id": "zn-po-017-c05",
+      "nombre": "Azul marino",
+      "hex": "#013d5e"
+    },
+    {
+      "id": "zn-po-017-c06",
+      "nombre": "Gris jaspe",
+      "hex": "#98a4a0"
+    },
+    {
+      "id": "zn-po-017-c07",
+      "nombre": "Negro",
+      "hex": "#21201e"
+    },
+    {
+      "id": "zn-po-018-c01",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-018-c02",
+      "nombre": "Agua",
+      "hex": "#4ec3ca"
+    },
+    {
+      "id": "zn-po-018-c03",
+      "nombre": "Azul celeste",
+      "hex": "#507c9f"
+    },
+    {
+      "id": "zn-po-018-c04",
+      "nombre": "Turquesa",
+      "hex": "#17809d"
+    },
+    {
+      "id": "zn-po-018-c05",
+      "nombre": "Verde manzana",
+      "hex": "#009d4c"
+    },
+    {
+      "id": "zn-po-018-c06",
+      "nombre": "Rojo",
+      "hex": "#d0202b"
+    },
+    {
+      "id": "zn-po-018-c07",
+      "nombre": "Púrpura",
+      "hex": "#5e4a87"
+    },
+    {
+      "id": "zn-po-018-c08",
+      "nombre": "Azul rey",
+      "hex": "#1850a3"
+    },
+    {
+      "id": "zn-po-018-c09",
+      "nombre": "Azul marino",
+      "hex": "#013e5e"
+    },
+    {
+      "id": "zn-po-018-c10",
+      "nombre": "Gris jaspe",
+      "hex": "#98a4a0"
+    },
+    {
+      "id": "zn-po-018-c11",
+      "nombre": "Negro",
+      "hex": "#21201e"
+    },
+    {
+      "id": "zn-po-019-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-po-019-c02",
+      "nombre": "Gris jaspe",
+      "hex": "#bfbfbf"
+    },
+    {
+      "id": "zn-po-019-c03",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-po-019-c04",
+      "nombre": "Rojo",
+      "hex": "#d6171f"
+    },
+    {
+      "id": "zn-po-019-c05",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-po-019-c06",
+      "nombre": "Azul rey",
+      "hex": "#0066b1"
+    },
+    {
+      "id": "zn-po-020-c01",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-020-c02",
+      "nombre": "Rojo",
+      "hex": "#d0202b"
+    },
+    {
+      "id": "zn-po-020-c03",
+      "nombre": "Azul marino",
+      "hex": "#013e5d"
+    },
+    {
+      "id": "zn-po-020-c04",
+      "nombre": "Carbón",
+      "hex": "#455256"
+    },
+    {
+      "id": "zn-po-020-c05",
+      "nombre": "Negro",
+      "hex": "#21201e"
+    },
+    {
+      "id": "zn-po-020-c06",
+      "nombre": "Rosa atardecer",
+      "hex": "#f59d9b"
+    },
+    {
+      "id": "zn-po-020-c07",
+      "nombre": "Lavanda",
+      "hex": "#9b7f8e"
+    },
+    {
+      "id": "zn-po-020-c08",
+      "nombre": "Olivo claro",
+      "hex": "#8a9b89"
+    },
+    {
+      "id": "zn-po-020-c09",
+      "nombre": "Verde mineral",
+      "hex": "#758e92"
+    },
+    {
+      "id": "zn-po-020-c10",
+      "nombre": "Verde MX",
+      "hex": "#11522c"
+    },
+    {
+      "id": "zn-po-020-c11",
+      "nombre": "Azul rey",
+      "hex": "#1e52a5"
+    },
+    {
+      "id": "zn-po-020-c12",
+      "nombre": "Cobalto",
+      "hex": "#34556d"
+    },
+    {
+      "id": "zn-po-020-c13",
+      "nombre": "Púrpura",
+      "hex": "#5e4a87"
+    },
+    {
+      "id": "zn-po-021-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-po-021-c02",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-po-021-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-po-021-c04",
+      "nombre": "Azul marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-po-021-c05",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-po-021-c06",
+      "nombre": "Rojo",
+      "hex": "#a42423"
+    },
+    {
+      "id": "zn-po-021-c07",
+      "nombre": "Verde bandera",
+      "hex": "#107f3b"
+    },
+    {
+      "id": "zn-po-022-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-po-022-c02",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-po-022-c03",
+      "nombre": "Azul marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-po-022-c04",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-po-022-c05",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-po-022-c06",
+      "nombre": "Verde olivo",
+      "hex": "#6c6644"
+    },
+    {
+      "id": "zn-po-023-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-po-023-c02",
+      "nombre": "Blanco",
+      "hex": "#fafafa"
+    },
+    {
+      "id": "zn-po-023-c03",
+      "nombre": "Azul rey",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-po-023-c04",
+      "nombre": "Rojo",
+      "hex": "#a52019"
+    },
+    {
+      "id": "zn-po-023-c05",
+      "nombre": "Azul marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-po-023-c06",
+      "nombre": "Verde claro",
+      "hex": "#739483"
+    },
+    {
+      "id": "zn-po-023-c07",
+      "nombre": "Gris plata",
+      "hex": "#949fa5"
+    },
+    {
+      "id": "zn-po-023-c08",
+      "nombre": "Palo de rosa",
+      "hex": "#b28dae"
+    },
+    {
+      "id": "zn-po-023-c09",
+      "nombre": "Azul cielo",
+      "hex": "#5d97af"
+    },
+    {
+      "id": "zn-po-023-c10",
+      "nombre": "Lila",
+      "hex": "#907bb3"
+    },
+    {
+      "id": "zn-po-024-c01",
+      "nombre": "Blanco",
+      "hex": "#f5f5f3"
+    },
+    {
+      "id": "zn-po-024-c02",
+      "nombre": "Gris neutro",
+      "hex": "#c2c3c5"
+    },
+    {
+      "id": "zn-po-024-c03",
+      "nombre": "Beige",
+      "hex": "#dad4be"
+    },
+    {
+      "id": "zn-po-024-c04",
+      "nombre": "Olivo claro",
+      "hex": "#8a9b89"
+    },
+    {
+      "id": "zn-po-024-c05",
+      "nombre": "Verde jade",
+      "hex": "#32835a"
+    },
+    {
+      "id": "zn-po-024-c06",
+      "nombre": "Azul acero",
+      "hex": "#8499a4"
+    },
+    {
+      "id": "zn-po-024-c07",
+      "nombre": "Azul rey",
+      "hex": "#1e52a5"
+    },
+    {
+      "id": "zn-po-024-c08",
+      "nombre": "Terracota",
+      "hex": "#a55a44"
+    },
+    {
+      "id": "zn-po-024-c09",
+      "nombre": "Azul metálico",
+      "hex": "#55616d"
+    },
+    {
+      "id": "zn-po-024-c10",
+      "nombre": "Azul marino",
+      "hex": "#003e5e"
+    },
+    {
+      "id": "zn-po-024-c11",
+      "nombre": "Rojo",
+      "hex": "#bb3341"
+    },
+    {
+      "id": "zn-po-024-c12",
+      "nombre": "Negro",
+      "hex": "#21201e"
+    },
+    {
+      "id": "zn-cm-018-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-cm-018-c02",
+      "nombre": "Azul cielo",
+      "hex": "#75a6b0"
+    },
+    {
+      "id": "zn-cm-018-c03",
+      "nombre": "Azul celeste",
+      "hex": "#4d728c"
+    },
+    {
+      "id": "zn-cm-018-c04",
+      "nombre": "Caqui",
+      "hex": "#7c6e5c"
+    },
+    {
+      "id": "zn-cm-018-c05",
+      "nombre": "Rojo",
+      "hex": "#dd2d36"
+    },
+    {
+      "id": "zn-cm-018-c06",
+      "nombre": "Granate",
+      "hex": "#570e1b"
+    },
+    {
+      "id": "zn-cm-018-c07",
+      "nombre": "Azul marino",
+      "hex": "#003c5b"
+    },
+    {
+      "id": "zn-cm-018-c08",
+      "nombre": "Negro",
+      "hex": "#0c0f13"
+    },
+    {
+      "id": "zn-cm-019-c01",
+      "nombre": "Cuadros azul cielo",
+      "hex": "#80c0d5"
+    },
+    {
+      "id": "zn-cm-019-c02",
+      "nombre": "Cuadros rosa",
+      "hex": "#e2a5ca"
+    },
+    {
+      "id": "zn-cm-019-c03",
+      "nombre": "Cuadros naranja",
+      "hex": "#f59e8e"
+    },
+    {
+      "id": "zn-cm-019-c04",
+      "nombre": "Cuadros amarillo - azul marino",
+      "hex": "#a4af98"
+    },
+    {
+      "id": "zn-cm-019-c05",
+      "nombre": "Cuadros azul marino",
+      "hex": "#767497"
+    },
+    {
+      "id": "zn-cm-020-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-cm-020-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-cm-020-c03",
+      "nombre": "Kaki",
+      "hex": "#b49366"
+    },
+    {
+      "id": "zn-cm-020-c04",
+      "nombre": "Gris plata",
+      "hex": "#a1a1a1"
+    },
+    {
+      "id": "zn-cm-020-c05",
+      "nombre": "Verde olivo",
+      "hex": "#586146"
+    },
+    {
+      "id": "zn-cm-020-c06",
+      "nombre": "Azul rey",
+      "hex": "#004cd5"
+    },
+    {
+      "id": "zn-cm-020-c07",
+      "nombre": "Rojo",
+      "hex": "#b90619"
+    },
+    {
+      "id": "zn-cm-020-c08",
+      "nombre": "Gris carbón",
+      "hex": "#626262"
+    },
+    {
+      "id": "zn-cm-020-c09",
+      "nombre": "Azul cielo",
+      "hex": "#6d89ae"
+    },
+    {
+      "id": "zn-cm-020-c10",
+      "nombre": "Azul marino",
+      "hex": "#454c78"
+    },
+    {
+      "id": "zn-su-006-c01",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-su-006-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-su-006-c03",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-su-006-c04",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-su-006-c05",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-su-006-c06",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-su-006-c07",
+      "nombre": "Verde seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-su-006-c08",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-su-006-c09",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-su-006-c10",
+      "nombre": "Gris jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-su-006-c11",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-su-006-c12",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-su-007-c01",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-su-007-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-su-007-c03",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-su-007-c04",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-su-007-c05",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-su-007-c06",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-su-007-c07",
+      "nombre": "Verde seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-su-007-c08",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-su-007-c09",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-su-007-c10",
+      "nombre": "Gris jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-su-007-c11",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-su-007-c12",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-su-008-c01",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-su-008-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-su-008-c03",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-su-008-c04",
+      "nombre": "Púrpura",
+      "hex": "#444395"
+    },
+    {
+      "id": "zn-su-008-c05",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-su-008-c06",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-su-008-c07",
+      "nombre": "Verde seguridad",
+      "hex": "#c3d82d"
+    },
+    {
+      "id": "zn-su-008-c08",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-su-008-c09",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-su-008-c10",
+      "nombre": "Gris jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-su-008-c11",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-su-008-c12",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-su-009-c01",
+      "nombre": "Blanco roto",
+      "hex": "#e7dbb9"
+    },
+    {
+      "id": "zn-su-009-c02",
+      "nombre": "Arena",
+      "hex": "#cec2b4"
+    },
+    {
+      "id": "zn-su-009-c03",
+      "nombre": "Cacao",
+      "hex": "#6c3d2f"
+    },
+    {
+      "id": "zn-su-009-c04",
+      "nombre": "Marrón sabana",
+      "hex": "#786658"
+    },
+    {
+      "id": "zn-su-009-c05",
+      "nombre": "Amarillo suave",
+      "hex": "#fff0c3"
+    },
+    {
+      "id": "zn-su-009-c06",
+      "nombre": "Amarillo margarita",
+      "hex": "#ffd15e"
+    },
+    {
+      "id": "zn-su-009-c07",
+      "nombre": "Mostaza",
+      "hex": "#c9a060"
+    },
+    {
+      "id": "zn-su-009-c08",
+      "nombre": "Mandarina",
+      "hex": "#f79559"
+    },
+    {
+      "id": "zn-su-009-c09",
+      "nombre": "Naranja T.",
+      "hex": "#c15a2d"
+    },
+    {
+      "id": "zn-su-009-c10",
+      "nombre": "Rosa viejo",
+      "hex": "#e5bab3"
+    },
+    {
+      "id": "zn-su-009-c11",
+      "nombre": "Rosa claro",
+      "hex": "#edcada"
+    },
+    {
+      "id": "zn-su-009-c12",
+      "nombre": "Rosa limonada",
+      "hex": "#ef4a81"
+    },
+    {
+      "id": "zn-su-009-c13",
+      "nombre": "Rojo",
+      "hex": "#ed1944"
+    },
+    {
+      "id": "zn-su-009-c14",
+      "nombre": "Rojo cardenal",
+      "hex": "#8d0134"
+    },
+    {
+      "id": "zn-su-009-c15",
+      "nombre": "Granate",
+      "hex": "#540836"
+    },
+    {
+      "id": "zn-su-009-c16",
+      "nombre": "Morado",
+      "hex": "#454495"
+    },
+    {
+      "id": "zn-su-009-c17",
+      "nombre": "Azul cobalto",
+      "hex": "#2d3494"
+    },
+    {
+      "id": "zn-su-009-c18",
+      "nombre": "Azul Carolina",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-su-009-c19",
+      "nombre": "Azul cielo",
+      "hex": "#68cef3"
+    },
+    {
+      "id": "zn-su-009-c20",
+      "nombre": "Azul rey",
+      "hex": "#004f9a"
+    },
+    {
+      "id": "zn-su-009-c21",
+      "nombre": "Azul marino",
+      "hex": "#001e45"
+    },
+    {
+      "id": "zn-su-009-c22",
+      "nombre": "Aguamarina",
+      "hex": "#6aafaa"
+    },
+    {
+      "id": "zn-su-009-c23",
+      "nombre": "Pistache",
+      "hex": "#acd18c"
+    },
+    {
+      "id": "zn-su-009-c24",
+      "nombre": "Salvia",
+      "hex": "#7fa588"
+    },
+    {
+      "id": "zn-su-009-c25",
+      "nombre": "Verde militar",
+      "hex": "#45634f"
+    },
+    {
+      "id": "zn-su-009-c26",
+      "nombre": "Verde bosque",
+      "hex": "#00251d"
+    },
+    {
+      "id": "zn-su-009-c27",
+      "nombre": "Azul piedra",
+      "hex": "#7192a3"
+    },
+    {
+      "id": "zn-su-009-c28",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5567"
+    },
+    {
+      "id": "zn-su-009-c29",
+      "nombre": "Azul crepúsculo",
+      "hex": "#1e384b"
+    },
+    {
+      "id": "zn-su-009-c30",
+      "nombre": "Malva apagado",
+      "hex": "#968694"
+    },
+    {
+      "id": "zn-su-009-c31",
+      "nombre": "Gris ceniza jaspe",
+      "hex": "#c7c9c8"
+    },
+    {
+      "id": "zn-su-009-c32",
+      "nombre": "Cemento",
+      "hex": "#a3a7a9"
+    },
+    {
+      "id": "zn-su-009-c33",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#878a8f"
+    },
+    {
+      "id": "zn-su-009-c34",
+      "nombre": "Carbón",
+      "hex": "#474c55"
+    },
+    {
+      "id": "zn-su-009-c35",
+      "nombre": "Humo",
+      "hex": "#1e1b1d"
+    },
+    {
+      "id": "zn-su-009-c36",
+      "nombre": "Negro",
+      "hex": "#000005"
+    },
+    {
+      "id": "zn-su-009-c37",
+      "nombre": "Blanco",
+      "hex": "#f1f1f2"
+    },
+    {
+      "id": "zn-su-010-c01",
+      "nombre": "Blanco roto",
+      "hex": "#e7dbb9"
+    },
+    {
+      "id": "zn-su-010-c02",
+      "nombre": "Arena",
+      "hex": "#cec2b4"
+    },
+    {
+      "id": "zn-su-010-c03",
+      "nombre": "Granate",
+      "hex": "#540836"
+    },
+    {
+      "id": "zn-su-010-c04",
+      "nombre": "Azul rey",
+      "hex": "#004f9a"
+    },
+    {
+      "id": "zn-su-010-c05",
+      "nombre": "Azul marino",
+      "hex": "#001e45"
+    },
+    {
+      "id": "zn-su-010-c06",
+      "nombre": "Verde militar",
+      "hex": "#45634f"
+    },
+    {
+      "id": "zn-su-010-c07",
+      "nombre": "Azul piedra",
+      "hex": "#7192a3"
+    },
+    {
+      "id": "zn-su-010-c08",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#878a8f"
+    },
+    {
+      "id": "zn-su-010-c09",
+      "nombre": "Carbón",
+      "hex": "#474c55"
+    },
+    {
+      "id": "zn-su-010-c10",
+      "nombre": "Negro",
+      "hex": "#000005"
+    },
+    {
+      "id": "zn-su-011-c01",
+      "nombre": "Blanco roto",
+      "hex": "#e7dbb9"
+    },
+    {
+      "id": "zn-su-011-c02",
+      "nombre": "Canela",
+      "hex": "#bc977d"
+    },
+    {
+      "id": "zn-su-011-c03",
+      "nombre": "Rojo cereza",
+      "hex": "#ae132a"
+    },
+    {
+      "id": "zn-su-011-c04",
+      "nombre": "Granate oscuro",
+      "hex": "#6d0020"
+    },
+    {
+      "id": "zn-su-011-c05",
+      "nombre": "Azul rey profundo",
+      "hex": "#043673"
+    },
+    {
+      "id": "zn-su-011-c06",
+      "nombre": "Olivo",
+      "hex": "#372a07"
+    },
+    {
+      "id": "zn-su-011-c07",
+      "nombre": "Azul crepúsculo",
+      "hex": "#1e384b"
+    },
+    {
+      "id": "zn-su-011-c08",
+      "nombre": "Gris grava",
+      "hex": "#797d82"
+    },
+    {
+      "id": "zn-su-011-c09",
+      "nombre": "Negro intenso",
+      "hex": "#00000a"
+    },
+    {
+      "id": "zn-su-012-c01",
+      "nombre": "Naranja S.",
+      "hex": "#f47920"
+    },
+    {
+      "id": "zn-su-012-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1944"
+    },
+    {
+      "id": "zn-su-012-c03",
+      "nombre": "Granate",
+      "hex": "#540836"
+    },
+    {
+      "id": "zn-su-012-c04",
+      "nombre": "Azul rey",
+      "hex": "#004f9a"
+    },
+    {
+      "id": "zn-su-012-c05",
+      "nombre": "Azul marino",
+      "hex": "#001e45"
+    },
+    {
+      "id": "zn-su-012-c06",
+      "nombre": "Verde seguridad",
+      "hex": "#c4d82e"
+    },
+    {
+      "id": "zn-su-012-c07",
+      "nombre": "Verde bosque",
+      "hex": "#00251d"
+    },
+    {
+      "id": "zn-su-012-c08",
+      "nombre": "Gris ceniza jaspe",
+      "hex": "#c7c9c8"
+    },
+    {
+      "id": "zn-su-012-c09",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#878a8f"
+    },
+    {
+      "id": "zn-su-012-c10",
+      "nombre": "Carbón",
+      "hex": "#474c55"
+    },
+    {
+      "id": "zn-su-012-c11",
+      "nombre": "Negro",
+      "hex": "#000005"
+    },
+    {
+      "id": "zn-su-012-c12",
+      "nombre": "Blanco",
+      "hex": "#f1f1f2"
+    },
+    {
+      "id": "zn-su-013-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-su-013-c02",
+      "nombre": "Negro jaspe",
+      "hex": "#3f4447"
+    },
+    {
+      "id": "zn-su-013-c03",
+      "nombre": "Gris jaspe",
+      "hex": "#c1c1c1"
+    },
+    {
+      "id": "zn-su-013-c04",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-su-013-c05",
+      "nombre": "Rojo",
+      "hex": "#d7171f"
+    },
+    {
+      "id": "zn-su-013-c06",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-su-013-c07",
+      "nombre": "Azul rey",
+      "hex": "#0066b2"
+    },
+    {
+      "id": "zn-su-014-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-su-014-c02",
+      "nombre": "Rojo",
+      "hex": "#eb1c27"
+    },
+    {
+      "id": "zn-su-014-c03",
+      "nombre": "Azul rey",
+      "hex": "#1d52a4"
+    },
+    {
+      "id": "zn-su-014-c04",
+      "nombre": "Azul marino",
+      "hex": "#142740"
+    },
+    {
+      "id": "zn-su-014-c05",
+      "nombre": "Carbón",
+      "hex": "#343839"
+    },
+    {
+      "id": "zn-su-014-c06",
+      "nombre": "Negro",
+      "hex": "#0c0f13"
+    },
+    {
+      "id": "zn-ch-004-c01",
+      "nombre": "Azul marino",
+      "hex": "#06435f"
+    },
+    {
+      "id": "zn-ch-004-c02",
+      "nombre": "Carbón",
+      "hex": "#3c4041"
+    },
+    {
+      "id": "zn-ch-004-c03",
+      "nombre": "Negro",
+      "hex": "#0c0f14"
+    },
+    {
+      "id": "zn-ch-005-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-ch-005-c02",
+      "nombre": "Azul marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-ch-005-c03",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-ch-006-c01",
+      "nombre": "Negro con blanco",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-ch-006-c02",
+      "nombre": "Azul rey con blanco",
+      "hex": "#004fd8"
+    },
+    {
+      "id": "zn-ch-006-c03",
+      "nombre": "Azul marino con blanco",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-ch-006-c04",
+      "nombre": "Rojo con blanco",
+      "hex": "#db0926"
+    },
+    {
+      "id": "zn-ch-006-c05",
+      "nombre": "Rojo vino con blanco",
+      "hex": "#99413d"
+    },
+    {
+      "id": "zn-ch-006-c06",
+      "nombre": "Verde aqua con blanco",
+      "hex": "#00b87c"
+    },
+    {
+      "id": "zn-ch-007-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-ch-007-c02",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-ch-007-c03",
+      "nombre": "Azul marino",
+      "hex": "#374c5d"
+    },
+    {
+      "id": "zn-ch-007-c04",
+      "nombre": "Gris carbón",
+      "hex": "#6d6b6e"
+    },
+    {
+      "id": "zn-ch-007-c05",
+      "nombre": "Verde olivo",
+      "hex": "#586146"
+    },
+    {
+      "id": "zn-ch-007-c06",
+      "nombre": "Amarillo flúor",
+      "hex": "#8d9905"
+    },
+    {
+      "id": "zn-ch-008-c01",
+      "nombre": "Plata reflejante",
+      "hex": "#a1a1a1"
+    },
+    {
+      "id": "zn-ch-009-c01",
+      "nombre": "Carbón",
+      "hex": "#3c4041"
+    },
+    {
+      "id": "zn-ch-009-c02",
+      "nombre": "Negro",
+      "hex": "#0c0f14"
+    },
+    {
+      "id": "zn-ch-010-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-ch-010-c02",
+      "nombre": "Azul marino",
+      "hex": "#313a65"
+    },
+    {
+      "id": "zn-ch-010-c03",
+      "nombre": "Gris carbón",
+      "hex": "#6f6f6f"
+    },
+    {
+      "id": "zn-pa-001-c01",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-pa-001-c02",
+      "nombre": "Gris Jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-pa-001-c03",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-pa-002-c01",
+      "nombre": "Índigo Oscuro",
+      "hex": "#435778"
+    },
+    {
+      "id": "zn-pa-003-c01",
+      "nombre": "Negro",
+      "hex": "#2a2a2a"
+    },
+    {
+      "id": "zn-pa-003-c02",
+      "nombre": "Kaki",
+      "hex": "#b49366"
+    },
+    {
+      "id": "zn-pa-003-c03",
+      "nombre": "Azul marino",
+      "hex": "#454c78"
+    },
+    {
+      "id": "zn-pa-003-c04",
+      "nombre": "Gris carbón",
+      "hex": "#5d5c61"
+    },
+    {
+      "id": "zn-in-001-c01",
+      "nombre": "Amarillo brillante",
+      "hex": "#ffd05d"
+    },
+    {
+      "id": "zn-in-001-c02",
+      "nombre": "Naranja",
+      "hex": "#f37449"
+    },
+    {
+      "id": "zn-in-001-c03",
+      "nombre": "Rosa claro",
+      "hex": "#eccad9"
+    },
+    {
+      "id": "zn-in-001-c04",
+      "nombre": "Rojo jaspe",
+      "hex": "#d01847"
+    },
+    {
+      "id": "zn-in-001-c05",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-in-001-c06",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-in-001-c07",
+      "nombre": "Azul rey jaspe",
+      "hex": "#557dbf"
+    },
+    {
+      "id": "zn-in-001-c08",
+      "nombre": "Azul claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-in-001-c09",
+      "nombre": "Turquesa",
+      "hex": "#007ab5"
+    },
+    {
+      "id": "zn-in-001-c10",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-in-001-c11",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-in-001-c12",
+      "nombre": "Verde irlandés",
+      "hex": "#00ac61"
+    },
+    {
+      "id": "zn-in-001-c13",
+      "nombre": "Verde militar",
+      "hex": "#44624f"
+    },
+    {
+      "id": "zn-in-001-c14",
+      "nombre": "Jaspe oscuro",
+      "hex": "#3d5467"
+    },
+    {
+      "id": "zn-in-001-c15",
+      "nombre": "Azul marino jaspe",
+      "hex": "#1c2b39"
+    },
+    {
+      "id": "zn-in-001-c16",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-in-001-c17",
+      "nombre": "Grafito jaspe",
+      "hex": "#5d6367"
+    },
+    {
+      "id": "zn-in-001-c18",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-in-001-c19",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-in-001-c20",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-in-002-c01",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-in-002-c02",
+      "nombre": "Marrón",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-in-002-c03",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-in-002-c04",
+      "nombre": "Azul Marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-in-002-c05",
+      "nombre": "Bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-in-002-c06",
+      "nombre": "Gris Jaspe",
+      "hex": "#96979a"
+    },
+    {
+      "id": "zn-in-002-c07",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-in-002-c08",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-in-003-c01",
+      "nombre": "Oro",
+      "hex": "#fcb61a"
+    },
+    {
+      "id": "zn-in-003-c02",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-in-003-c03",
+      "nombre": "Granate",
+      "hex": "#530735"
+    },
+    {
+      "id": "zn-in-003-c04",
+      "nombre": "Azul claro",
+      "hex": "#97c6e9"
+    },
+    {
+      "id": "zn-in-003-c05",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-in-003-c06",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-in-003-c07",
+      "nombre": "Verde bosque",
+      "hex": "#00251c"
+    },
+    {
+      "id": "zn-in-003-c08",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-in-003-c09",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-in-003-c10",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-in-004-c01",
+      "nombre": "Rojo",
+      "hex": "#ed1844"
+    },
+    {
+      "id": "zn-in-004-c02",
+      "nombre": "Azul Carolina",
+      "hex": "#669fd5"
+    },
+    {
+      "id": "zn-in-004-c03",
+      "nombre": "Azul rey",
+      "hex": "#004e99"
+    },
+    {
+      "id": "zn-in-004-c04",
+      "nombre": "Azul marino",
+      "hex": "#001d44"
+    },
+    {
+      "id": "zn-in-004-c05",
+      "nombre": "Gris deportivo jaspe",
+      "hex": "#868a8f"
+    },
+    {
+      "id": "zn-in-004-c06",
+      "nombre": "Carbón",
+      "hex": "#474b55"
+    },
+    {
+      "id": "zn-in-004-c07",
+      "nombre": "Negro",
+      "hex": "#000004"
+    },
+    {
+      "id": "zn-in-004-c08",
+      "nombre": "Blanco",
+      "hex": "#f0f1f1"
+    },
+    {
+      "id": "zn-in-005-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-005-c02",
+      "nombre": "Amarillo canario",
+      "hex": "#f8ac25"
+    },
+    {
+      "id": "zn-in-005-c03",
+      "nombre": "Rosa",
+      "hex": "#eeabca"
+    },
+    {
+      "id": "zn-in-005-c04",
+      "nombre": "Fucsia",
+      "hex": "#e84699"
+    },
+    {
+      "id": "zn-in-005-c05",
+      "nombre": "Púrpura",
+      "hex": "#5f4b88"
+    },
+    {
+      "id": "zn-in-005-c06",
+      "nombre": "Rojo",
+      "hex": "#eb1b28"
+    },
+    {
+      "id": "zn-in-005-c07",
+      "nombre": "Verde manzana",
+      "hex": "#039c4c"
+    },
+    {
+      "id": "zn-in-005-c08",
+      "nombre": "Azul rey",
+      "hex": "#1e52a5"
+    },
+    {
+      "id": "zn-in-005-c09",
+      "nombre": "Azul marino",
+      "hex": "#003d5c"
+    },
+    {
+      "id": "zn-in-005-c10",
+      "nombre": "Gris jaspe",
+      "hex": "#949597"
+    },
+    {
+      "id": "zn-in-005-c11",
+      "nombre": "Negro",
+      "hex": "#131718"
+    },
+    {
+      "id": "zn-in-005-c12",
+      "nombre": "Natural",
+      "hex": "#cdc2a6"
+    },
+    {
+      "id": "zn-in-005-c13",
+      "nombre": "Palo de rosa",
+      "hex": "#c3737e"
+    },
+    {
+      "id": "zn-in-005-c14",
+      "nombre": "Coral",
+      "hex": "#d35d69"
+    },
+    {
+      "id": "zn-in-005-c15",
+      "nombre": "Naranja",
+      "hex": "#f15a2b"
+    },
+    {
+      "id": "zn-in-005-c16",
+      "nombre": "Verde arrecife",
+      "hex": "#54c1ae"
+    },
+    {
+      "id": "zn-in-005-c17",
+      "nombre": "Azul Pacífico",
+      "hex": "#8ed2e5"
+    },
+    {
+      "id": "zn-in-006-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-in-006-c02",
+      "nombre": "Carbón",
+      "hex": "#57585a"
+    },
+    {
+      "id": "zn-in-006-c03",
+      "nombre": "Gris jaspe",
+      "hex": "#bababa"
+    },
+    {
+      "id": "zn-in-006-c04",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-006-c05",
+      "nombre": "Rojo",
+      "hex": "#d7171f"
+    },
+    {
+      "id": "zn-in-006-c06",
+      "nombre": "Naranja",
+      "hex": "#f16420"
+    },
+    {
+      "id": "zn-in-006-c07",
+      "nombre": "Mango",
+      "hex": "#fec10b"
+    },
+    {
+      "id": "zn-in-006-c08",
+      "nombre": "Amarillo canario",
+      "hex": "#ffee6c"
+    },
+    {
+      "id": "zn-in-006-c09",
+      "nombre": "Lima",
+      "hex": "#8cc63e"
+    },
+    {
+      "id": "zn-in-006-c10",
+      "nombre": "Jade",
+      "hex": "#008b4e"
+    },
+    {
+      "id": "zn-in-006-c11",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-in-006-c12",
+      "nombre": "Azul rey",
+      "hex": "#0066b2"
+    },
+    {
+      "id": "zn-in-006-c13",
+      "nombre": "Turquesa",
+      "hex": "#00a4d1"
+    },
+    {
+      "id": "zn-in-006-c14",
+      "nombre": "Celeste",
+      "hex": "#5787bf"
+    },
+    {
+      "id": "zn-in-006-c15",
+      "nombre": "Rosa pastel",
+      "hex": "#fbdce0"
+    },
+    {
+      "id": "zn-in-006-c16",
+      "nombre": "Fucsia",
+      "hex": "#d42a90"
+    },
+    {
+      "id": "zn-in-006-c17",
+      "nombre": "Morado",
+      "hex": "#3d2480"
+    },
+    {
+      "id": "zn-in-007-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-007-c02",
+      "nombre": "Amarillo flúor",
+      "hex": "#d9e25e"
+    },
+    {
+      "id": "zn-in-007-c03",
+      "nombre": "Lima flúor",
+      "hex": "#89cc9d"
+    },
+    {
+      "id": "zn-in-007-c04",
+      "nombre": "Verde irlandés",
+      "hex": "#51ba68"
+    },
+    {
+      "id": "zn-in-007-c05",
+      "nombre": "Verde MX",
+      "hex": "#10522b"
+    },
+    {
+      "id": "zn-in-007-c06",
+      "nombre": "Azul eléctrico",
+      "hex": "#1e8ac4"
+    },
+    {
+      "id": "zn-in-007-c07",
+      "nombre": "Azul rey",
+      "hex": "#1d52a4"
+    },
+    {
+      "id": "zn-in-007-c08",
+      "nombre": "Azul marino",
+      "hex": "#003c5b"
+    },
+    {
+      "id": "zn-in-007-c09",
+      "nombre": "Rojo coral",
+      "hex": "#ef4539"
+    },
+    {
+      "id": "zn-in-007-c10",
+      "nombre": "Rojo",
+      "hex": "#eb1c27"
+    },
+    {
+      "id": "zn-in-007-c11",
+      "nombre": "Fucsia",
+      "hex": "#f1789f"
+    },
+    {
+      "id": "zn-in-007-c12",
+      "nombre": "Naranja flúor",
+      "hex": "#e87942"
+    },
+    {
+      "id": "zn-in-007-c13",
+      "nombre": "Carbón",
+      "hex": "#455357"
+    },
+    {
+      "id": "zn-in-007-c14",
+      "nombre": "Negro",
+      "hex": "#121617"
+    },
+    {
+      "id": "zn-in-007-c15",
+      "nombre": "Laurel",
+      "hex": "#558380"
+    },
+    {
+      "id": "zn-in-007-c16",
+      "nombre": "Azul niebla",
+      "hex": "#7499bd"
+    },
+    {
+      "id": "zn-in-008-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-009-c01",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-009-c02",
+      "nombre": "Rojo",
+      "hex": "#d7171f"
+    },
+    {
+      "id": "zn-in-009-c03",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-in-010-c01",
+      "nombre": "Negro",
+      "hex": "#000000"
+    },
+    {
+      "id": "zn-in-010-c02",
+      "nombre": "Negro jaspe",
+      "hex": "#42474a"
+    },
+    {
+      "id": "zn-in-010-c03",
+      "nombre": "Gris jaspe",
+      "hex": "#bdbdbd"
+    },
+    {
+      "id": "zn-in-010-c04",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-010-c05",
+      "nombre": "Rojo",
+      "hex": "#d7171f"
+    },
+    {
+      "id": "zn-in-010-c06",
+      "nombre": "Azul marino",
+      "hex": "#002458"
+    },
+    {
+      "id": "zn-in-010-c07",
+      "nombre": "Azul rey",
+      "hex": "#0066b2"
+    },
+    {
+      "id": "zn-go-010-c01",
+      "nombre": "Blanco / Negro",
+      "hex": "#d2d2d2",
+      "hex2": "#d2d2d2"
+    },
+    {
+      "id": "zn-go-010-c02",
+      "nombre": "Azul oscuro / Blanco",
+      "hex": "#071832",
+      "hex2": "#071832"
+    },
+    {
+      "id": "zn-go-010-c03",
+      "nombre": "Negro / Blanco",
+      "hex": "#060606",
+      "hex2": "#060606"
+    },
+    {
+      "id": "zn-go-011-c01",
+      "nombre": "Verde",
+      "hex": "#28543b"
+    },
+    {
+      "id": "zn-go-011-c02",
+      "nombre": "Azul marino",
+      "hex": "#141622"
+    },
+    {
+      "id": "zn-go-011-c03",
+      "nombre": "Caqui",
+      "hex": "#c4a48b"
+    },
+    {
+      "id": "zn-go-011-c04",
+      "nombre": "Blanco",
+      "hex": "#dcdcdc"
+    },
+    {
+      "id": "zn-go-011-c05",
+      "nombre": "Gris",
+      "hex": "#555555"
+    },
+    {
+      "id": "zn-go-011-c06",
+      "nombre": "Negro",
+      "hex": "#1a1a1a"
+    },
+    {
+      "id": "zn-go-012-c01",
+      "nombre": "Negro / Oxford",
+      "hex": "#030408",
+      "hex2": "#030408"
+    },
+    {
+      "id": "zn-go-012-c02",
+      "nombre": "Negro / Negro",
+      "hex": "#0a0a0a",
+      "hex2": "#0a0a0a"
+    },
+    {
+      "id": "zn-go-012-c03",
+      "nombre": "Oliva / Blanco",
+      "hex": "#2e2d19",
+      "hex2": "#2e2d19"
+    },
+    {
+      "id": "zn-go-012-c04",
+      "nombre": "Azul acero / Blanco",
+      "hex": "#11344a",
+      "hex2": "#11344a"
+    },
+    {
+      "id": "zn-go-012-c05",
+      "nombre": "Menta / Blanco",
+      "hex": "#99c5aa",
+      "hex2": "#99c5aa"
+    },
+    {
+      "id": "zn-go-012-c06",
+      "nombre": "Caqui / Blanco",
+      "hex": "#a38e73",
+      "hex2": "#a38e73"
+    },
+    {
+      "id": "zn-go-012-c07",
+      "nombre": "Azul marino / Oxford",
+      "hex": "#102a41",
+      "hex2": "#102a41"
+    },
+    {
+      "id": "zn-go-012-c08",
+      "nombre": "Ostra / Oxford",
+      "hex": "#afb0b2",
+      "hex2": "#afb0b2"
+    },
+    {
+      "id": "zn-go-013-c01",
+      "nombre": "Gris / Negro",
+      "hex": "#333333",
+      "hex2": "#333333"
+    },
+    {
+      "id": "zn-go-013-c02",
+      "nombre": "Blanco",
+      "hex": "#c0c0c0"
+    },
+    {
+      "id": "zn-go-013-c03",
+      "nombre": "Marino",
+      "hex": "#071021"
+    },
+    {
+      "id": "zn-go-013-c04",
+      "nombre": "Rojo",
+      "hex": "#950001"
+    },
+    {
+      "id": "zn-go-013-c05",
+      "nombre": "Petróleo / Negro",
+      "hex": "#08151d",
+      "hex2": "#08151d"
+    },
+    {
+      "id": "zn-go-013-c06",
+      "nombre": "Caqui",
+      "hex": "#a98f6a"
+    },
+    {
+      "id": "zn-go-013-c07",
+      "nombre": "Negro",
+      "hex": "#060606"
+    },
+    {
+      "id": "zn-go-013-c08",
+      "nombre": "Gris Oxford / Gris claro",
+      "hex": "#12171d",
+      "hex2": "#12171d"
+    },
+    {
+      "id": "zn-go-013-c09",
+      "nombre": "Gris",
+      "hex": "#252525"
+    },
+    {
+      "id": "zn-go-014-c01",
+      "nombre": "Blanco",
+      "hex": "#e7e7e9"
+    },
+    {
+      "id": "zn-go-014-c02",
+      "nombre": "Azul oscuro",
+      "hex": "#1c2a37"
+    },
+    {
+      "id": "zn-go-014-c03",
+      "nombre": "Olivo",
+      "hex": "#84886f"
+    },
+    {
+      "id": "zn-go-014-c04",
+      "nombre": "Azul claro",
+      "hex": "#566c84"
+    },
+    {
+      "id": "zn-go-014-c05",
+      "nombre": "Piedra",
+      "hex": "#b6a68f"
+    },
+    {
+      "id": "zn-go-014-c06",
+      "nombre": "Negro",
+      "hex": "#131313"
+    },
+    {
+      "id": "zn-go-015-c01",
+      "nombre": "Negro jaspe / Camel / Negro",
+      "hex": "#0e0e10",
+      "hex2": "#0e0e10",
+      "hexMalla": "#4e4e4d"
+    },
+    {
+      "id": "zn-go-015-c02",
+      "nombre": "Gris jaspe / Camel / Café",
+      "hex": "#54595d",
+      "hex2": "#54595d",
+      "hexMalla": "#41372e"
+    },
+    {
+      "id": "zn-go-015-c03",
+      "nombre": "Mostaza / Camel / Café",
+      "hex": "#ae7e3a",
+      "hex2": "#ae7e3a",
+      "hexMalla": "#3e342a"
+    },
+    {
+      "id": "zn-go-016-c01",
+      "nombre": "Mezclilla / Café",
+      "hex": "#13121a",
+      "hex2": "#13121a",
+      "hexMalla": "#6b6152"
+    },
+    {
+      "id": "zn-go-016-c02",
+      "nombre": "Marino mezclilla",
+      "hex": "#121119",
+      "hex2": "#121119",
+      "hexMalla": "#585b5d"
+    },
+    {
+      "id": "zn-go-017-c01",
+      "nombre": "Negro",
+      "hex": "#0a0a0a"
+    },
+    {
+      "id": "zn-go-018-c01",
+      "nombre": "Olivo",
+      "hex": "#1e4028",
+      "hex2": "#1e4028",
+      "hexMalla": "#131311"
+    },
+    {
+      "id": "zn-go-018-c02",
+      "nombre": "Camel",
+      "hex": "#734704",
+      "hex2": "#734704",
+      "hexMalla": "#0c0e0b"
+    },
+    {
+      "id": "zn-go-018-c03",
+      "nombre": "Olivo oscuro",
+      "hex": "#342908",
+      "hex2": "#342908",
+      "hexMalla": "#232320"
+    },
+    {
+      "id": "zn-go-018-c04",
+      "nombre": "Gris",
+      "hex": "#565342",
+      "hex2": "#565342",
+      "hexMalla": "#111113"
+    },
+    {
+      "id": "zn-go-019-c01",
+      "nombre": "Olivo / Camel",
+      "hex": "#424a34",
+      "hex2": "#424a34",
+      "hexMalla": "#979684"
+    },
+    {
+      "id": "zn-go-019-c02",
+      "nombre": "Beige / Olivo / Borgoña",
+      "hex": "#bbb092",
+      "hex2": "#bbb092",
+      "hexMalla": "#784b4d"
+    },
+    {
+      "id": "zn-go-019-c03",
+      "nombre": "Gris Oxford / Negro",
+      "hex": "#7c7a7b",
+      "hex2": "#7c7a7b",
+      "hexMalla": "#575757"
+    },
+    {
+      "id": "zn-go-019-c04",
+      "nombre": "Caqui / Café",
+      "hex": "#bba186",
+      "hex2": "#bba186",
+      "hexMalla": "#e6d5c4"
+    },
+    {
+      "id": "zn-go-020-c01",
+      "nombre": "Gris jaspe / Negro",
+      "hex": "#686667",
+      "hex2": "#686667",
+      "hexMalla": "#4c4a4b"
+    },
+    {
+      "id": "zn-go-020-c02",
+      "nombre": "Gris jaspe / Olivo",
+      "hex": "#696767",
+      "hex2": "#696767",
+      "hexMalla": "#4c4a4b"
+    },
+    {
+      "id": "zn-go-020-c03",
+      "nombre": "Gris jaspe / Borgoña",
+      "hex": "#696667",
+      "hex2": "#696667",
+      "hexMalla": "#4d4b4c"
+    },
+    {
+      "id": "zn-go-020-c04",
+      "nombre": "Gris jaspe / Camel",
+      "hex": "#676161",
+      "hex2": "#676161",
+      "hexMalla": "#4d494b"
+    },
+    {
+      "id": "zn-go-021-c01",
+      "nombre": "Hueso / Mostaza / Verde",
+      "hex": "#d3cdbd",
+      "hex2": "#f1af48",
+      "hexMalla": "#043627"
+    },
+    {
+      "id": "zn-go-021-c02",
+      "nombre": "Negro / Dorado",
+      "hex": "#0f0f0f",
+      "hex2": "#814c13",
+      "hexMalla": "#814c13"
+    },
+    {
+      "id": "zn-go-021-c03",
+      "nombre": "Marino / Camel / Marino",
+      "hex": "#0b0f1b",
+      "hex2": "#b34e10",
+      "hexMalla": "#222536"
+    },
+    {
+      "id": "zn-go-021-c04",
+      "nombre": "Camel",
+      "hex": "#af4817",
+      "hex2": "#b95422",
+      "hexMalla": "#805123"
+    },
+    {
+      "id": "zn-go-021-c05",
+      "nombre": "Piedra / Camel / Gris Oxford",
+      "hex": "#c6b3a2",
+      "hex2": "#95410d",
+      "hexMalla": "#2b2b2b"
+    },
+    {
+      "id": "zn-go-021-c06",
+      "nombre": "Verde oscuro / Gris Oxford / Verde",
+      "hex": "#003428",
+      "hex2": "#191611",
+      "hexMalla": "#053623"
+    },
+    {
+      "id": "zn-go-021-c07",
+      "nombre": "Negro / Azul acero / Gris Oxford",
+      "hex": "#070707",
+      "hex2": "#0a2644",
+      "hexMalla": "#5c6668"
+    },
+    {
+      "id": "zn-go-021-c08",
+      "nombre": "Gris jaspe / Negro",
+      "hex": "#616161",
+      "hex2": "#686868",
+      "hexMalla": "#141414"
+    },
+    {
+      "id": "zn-go-021-c09",
+      "nombre": "Camel / Negro",
+      "hex": "#74551f",
+      "hex2": "#0a0c0b",
+      "hexMalla": "#0a0c0b"
+    },
+    {
+      "id": "zn-go-021-c10",
+      "nombre": "Azul acero / Camel / Marino",
+      "hex": "#407295",
+      "hex2": "#96410c",
+      "hexMalla": "#0d1d3a"
+    },
+    {
+      "id": "zn-go-021-c11",
+      "nombre": "Negro",
+      "hex": "#101010"
+    },
+    {
+      "id": "zn-go-021-c12",
+      "nombre": "Olivo / Marino / Piedra",
+      "hex": "#1f2c10",
+      "hex2": "#0b0a17",
+      "hexMalla": "#aa9f82"
+    },
+    {
+      "id": "zn-go-022-c01",
+      "nombre": "Azul acero / Gris / Marino",
+      "hex": "#0a334f",
+      "hex2": "#5a5b60",
+      "hexMalla": "#262e3f"
+    },
+    {
+      "id": "zn-go-022-c02",
+      "nombre": "Caqui / Camel / Olivo",
+      "hex": "#cca675",
+      "hex2": "#a87a49",
+      "hexMalla": "#46453b"
+    },
+    {
+      "id": "zn-go-022-c03",
+      "nombre": "Camel / Azul / Café",
+      "hex": "#bd6f2d",
+      "hex2": "#444d65",
+      "hexMalla": "#42322a"
+    },
+    {
+      "id": "zn-go-022-c04",
+      "nombre": "Negro / Vino / Café",
+      "hex": "#131313",
+      "hex2": "#6f202b",
+      "hexMalla": "#4b382e"
+    },
+    {
+      "id": "zn-go-022-c05",
+      "nombre": "Negro / Piedra / Camel",
+      "hex": "#0f0f0f",
+      "hex2": "#c6822e",
+      "hexMalla": "#8c8374"
+    },
+    {
+      "id": "zn-go-022-c06",
+      "nombre": "Negro / Verde",
+      "hex": "#0f0f0f",
+      "hex2": "#2a534a"
+    },
+    {
+      "id": "zn-go-022-c07",
+      "nombre": "Caqui / Blanco",
+      "hex": "#b19b76",
+      "hex2": "#dfdfdd",
+      "hexMalla": "#dfdfdd"
+    },
+    {
+      "id": "zn-go-022-c08",
+      "nombre": "Marino / Blanco",
+      "hex": "#020814",
+      "hex2": "#c5c6c8",
+      "hexMalla": "#c5c6c8"
+    },
+    {
+      "id": "zn-go-022-c09",
+      "nombre": "Azul / Caramelo / Blanco",
+      "hex": "#585b6f",
+      "hex2": "#ac601c",
+      "hexMalla": "#a7a8ad"
+    },
+    {
+      "id": "zn-go-022-c10",
+      "nombre": "Hueso / Gris claro / Piedra",
+      "hex": "#aaa390",
+      "hex2": "#46413d",
+      "hexMalla": "#a59a75"
+    },
+    {
+      "id": "zn-go-022-c11",
+      "nombre": "Marino / Gris jaspe / Blanco",
+      "hex": "#12151e",
+      "hex2": "#808691",
+      "hexMalla": "#72757c"
+    },
+    {
+      "id": "zn-go-022-c12",
+      "nombre": "Rojo / Negro / Piedra",
+      "hex": "#9f0311",
+      "hex2": "#0e1213",
+      "hexMalla": "#c2bda9"
+    },
+    {
+      "id": "zn-go-022-c13",
+      "nombre": "Negro",
+      "hex": "#0c100f"
+    },
+    {
+      "id": "zn-go-022-c14",
+      "nombre": "Musgo / Café",
+      "hex": "#523a0a",
+      "hex2": "#39281a",
+      "hexMalla": "#39281a"
+    },
+    {
+      "id": "zn-go-022-c15",
+      "nombre": "Marino / Vino / Piedra",
+      "hex": "#070e1e",
+      "hex2": "#8c0e11",
+      "hexMalla": "#bbb395"
+    },
+    {
+      "id": "zn-go-022-c16",
+      "nombre": "Camuflaje negro",
+      "hex": "#161614",
+      "hex2": "#131313",
+      "hexMalla": "#131313"
+    },
+    {
+      "id": "zn-go-022-c17",
+      "nombre": "Gris jaspe / Blanco",
+      "hex": "#6b6f70",
+      "hex2": "#c1c1c1",
+      "hexMalla": "#c1c1c1"
+    },
+    {
+      "id": "zn-go-022-c18",
+      "nombre": "Mostaza / Marino",
+      "hex": "#914d10",
+      "hex2": "#1d212e",
+      "hexMalla": "#1d212e"
+    },
+    {
+      "id": "zn-go-023-c01",
+      "nombre": "Olivo",
+      "hex": "#62644c",
+      "hex2": "#3a2c23",
+      "hexMalla": "#595951"
+    },
+    {
+      "id": "zn-go-023-c02",
+      "nombre": "Negro",
+      "hex": "#101012",
+      "hex2": "#272727",
+      "hexMalla": "#28282a"
+    },
+    {
+      "id": "zn-go-023-c03",
+      "nombre": "Gris",
+      "hex": "#595860",
+      "hex2": "#562e1c",
+      "hexMalla": "#66656b"
+    },
+    {
+      "id": "zn-go-023-c04",
+      "nombre": "Musgo",
+      "hex": "#604f35",
+      "hex2": "#582f1a",
+      "hexMalla": "#7f6663"
+    },
+    {
+      "id": "zn-go-023-c05",
+      "nombre": "Caqui",
+      "hex": "#b0a07f",
+      "hex2": "#6d6558",
+      "hexMalla": "#acacb4"
+    },
+    {
+      "id": "zn-go-023-c06",
+      "nombre": "Borgoña",
+      "hex": "#3b181c",
+      "hex2": "#381e14",
+      "hexMalla": "#c2b1a9"
+    },
+    {
+      "id": "zn-go-024-c01",
+      "nombre": "Negro / Rojo",
+      "hex": "#101010",
+      "hex2": "#cd1321"
+    },
+    {
+      "id": "zn-go-024-c02",
+      "nombre": "Negro / Azul rey",
+      "hex": "#101010",
+      "hex2": "#0734b0"
+    },
+    {
+      "id": "zn-go-024-c03",
+      "nombre": "Negro / Verde",
+      "hex": "#101010",
+      "hex2": "#0dbc67"
+    },
+    {
+      "id": "zn-go-025-c01",
+      "nombre": "Caqui / Camel",
+      "hex": "#a99a87",
+      "hex2": "#894615"
+    },
+    {
+      "id": "zn-go-025-c02",
+      "nombre": "Caqui / Café",
+      "hex": "#aa9b88",
+      "hex2": "#371e0f"
+    },
+    {
+      "id": "zn-go-025-c03",
+      "nombre": "Caqui / Borgoña",
+      "hex": "#aa9b88",
+      "hex2": "#7a1015"
+    },
+    {
+      "id": "zn-go-025-c04",
+      "nombre": "Caqui / Marino",
+      "hex": "#a99a87",
+      "hex2": "#1f2a44"
+    },
+    {
+      "id": "zn-go-025-c05",
+      "nombre": "Caqui / Gris",
+      "hex": "#aa9b88",
+      "hex2": "#6b6b6b"
+    },
+    {
+      "id": "zn-go-025-c06",
+      "nombre": "Caqui / Negro",
+      "hex": "#aa9b88",
+      "hex2": "#080808"
+    },
+    {
+      "id": "zn-go-025-c07",
+      "nombre": "Caqui / Verde",
+      "hex": "#a39580",
+      "hex2": "#1b543b"
+    },
+    {
+      "id": "zn-go-026-c01",
+      "nombre": "Olivo",
+      "hex": "#3c4532"
+    },
+    {
+      "id": "zn-go-026-c02",
+      "nombre": "Marino",
+      "hex": "#041b2b"
+    },
+    {
+      "id": "zn-go-026-c03",
+      "nombre": "Caqui",
+      "hex": "#ac9b89"
+    },
+    {
+      "id": "zn-go-026-c04",
+      "nombre": "Gris (observado; sin etiqueta)",
+      "hex": "#857d7b"
+    },
+    {
+      "id": "zn-go-027-c01",
+      "nombre": "Olivo",
+      "hex": "#434832",
+      "hex2": "#262e23"
+    },
+    {
+      "id": "zn-go-027-c02",
+      "nombre": "Piedra",
+      "hex": "#c6bc99",
+      "hex2": "#767064"
+    },
+    {
+      "id": "zn-go-028-c01",
+      "nombre": "Negro",
+      "hex": "#0d0d0d"
+    },
+    {
+      "id": "zn-go-028-c02",
+      "nombre": "Azul acero",
+      "hex": "#2c4975",
+      "hex2": "#0b0608"
+    },
+    {
+      "id": "zn-go-028-c03",
+      "nombre": "Blanco",
+      "hex": "#dddddd",
+      "hex2": "#060606"
+    },
+    {
+      "id": "zn-go-029-c01",
+      "nombre": "Azul acero",
+      "hex": "#354866"
+    },
+    {
+      "id": "zn-go-029-c02",
+      "nombre": "Caqui",
+      "hex": "#99815e"
+    },
+    {
+      "id": "zn-go-030-c01",
+      "nombre": "Olivo con visera camuflada",
+      "hex": "#1e2b22"
+    },
+    {
+      "id": "zn-go-030-c02",
+      "nombre": "Negro con visera camuflada",
+      "hex": "#17161b"
+    },
+    {
+      "id": "zn-go-030-c03",
+      "nombre": "Caqui con visera camuflada",
+      "hex": "#a98865"
+    },
+    {
+      "id": "zn-go-030-c04",
+      "nombre": "Camuflaje",
+      "hex": "#66614c"
     }
   ],
   "tecnicas": [
@@ -7360,6 +12241,7215 @@ export default {
       "imagenIA": true,
       "detalleMedidas": "Tallas S a 4XL. Medidas exactas de la prenda por confirmar.",
       "disponibilidad": "Consulta disponibilidad por talla y color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar."
+    },
+    {
+      "id": "zn-pl-012",
+      "sku": "ZN-PL-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera de algodón 180 g",
+      "nombreFamilia": "Playera de algodón 180 g",
+      "familia": "zain-mayoreo-zn-pl-012",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "La playera más vendida para serigrafía: algodón resistente, 75 colores y tallas hasta 5XL.",
+      "especificaciones": "Tallas: Caballero S–5XL · Dama S–3XL. 44 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-012-render.webp",
+      "colores": [
+        "zn-pl-012-c01",
+        "zn-pl-012-c02",
+        "zn-pl-012-c03",
+        "zn-pl-012-c04",
+        "zn-pl-012-c05",
+        "zn-pl-012-c06",
+        "zn-pl-012-c07",
+        "zn-pl-012-c08",
+        "zn-pl-012-c09",
+        "zn-pl-012-c10",
+        "zn-pl-012-c11",
+        "zn-pl-012-c12",
+        "zn-pl-012-c13",
+        "zn-pl-012-c14",
+        "zn-pl-012-c15",
+        "zn-pl-012-c16",
+        "zn-pl-012-c17",
+        "zn-pl-012-c18",
+        "zn-pl-012-c19",
+        "zn-pl-012-c20",
+        "zn-pl-012-c21",
+        "zn-pl-012-c22",
+        "zn-pl-012-c23",
+        "zn-pl-012-c24",
+        "zn-pl-012-c25",
+        "zn-pl-012-c26",
+        "zn-pl-012-c27",
+        "zn-pl-012-c28",
+        "zn-pl-012-c29",
+        "zn-pl-012-c30",
+        "zn-pl-012-c31",
+        "zn-pl-012-c32",
+        "zn-pl-012-c33",
+        "zn-pl-012-c34",
+        "zn-pl-012-c35",
+        "zn-pl-012-c36",
+        "zn-pl-012-c37",
+        "zn-pl-012-c38",
+        "zn-pl-012-c39",
+        "zn-pl-012-c40",
+        "zn-pl-012-c41",
+        "zn-pl-012-c42",
+        "zn-pl-012-c43",
+        "zn-pl-012-c44"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "fotosColor": {
+        "zn-pl-012-c26": "img/productos/zain/zn-pl-012-c26.webp",
+        "zn-pl-012-c27": "img/productos/zain/zn-pl-012-c27.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-012-c37",
+        "zn-pl-012-c43",
+        "zn-pl-012-c44"
+      ]
+    },
+    {
+      "id": "zn-pl-013",
+      "sku": "ZN-PL-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera de algodón grueso 205 g",
+      "nombreFamilia": "Playera de algodón grueso 205 g",
+      "familia": "zain-mayoreo-zn-pl-013",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón de 6 oz, más gruesa y durable. Ideal para uniforme de trabajo diario.",
+      "especificaciones": "Tallas: Caballero S–5XL · Dama XS–3XL. 15 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-013-render.webp",
+      "colores": [
+        "zn-pl-013-c01",
+        "zn-pl-013-c02",
+        "zn-pl-013-c03",
+        "zn-pl-013-c04",
+        "zn-pl-013-c05",
+        "zn-pl-013-c06",
+        "zn-pl-013-c07",
+        "zn-pl-013-c08",
+        "zn-pl-013-c09",
+        "zn-pl-013-c10",
+        "zn-pl-013-c11",
+        "zn-pl-013-c12",
+        "zn-pl-013-c13",
+        "zn-pl-013-c14",
+        "zn-pl-013-c15"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL",
+        "XS"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 205,
+      "fotosColor": {
+        "zn-pl-013-c07": "img/productos/zain/zn-pl-013-c07.webp",
+        "zn-pl-013-c08": "img/productos/zain/zn-pl-013-c08.webp"
+      }
+    },
+    {
+      "id": "zn-pl-014",
+      "sku": "ZN-PL-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera suave de algodón peinado",
+      "nombreFamilia": "Playera suave de algodón peinado",
+      "familia": "zain-mayoreo-zn-pl-014",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón peinado de 150 g, suave y ligera, con corte moderno. 65 colores.",
+      "especificaciones": "Tallas: Caballero XS–5XL · Dama S–3XL. 23 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-014-render.webp",
+      "colores": [
+        "zn-pl-014-c01",
+        "zn-pl-014-c02",
+        "zn-pl-014-c03",
+        "zn-pl-014-c04",
+        "zn-pl-014-c05",
+        "zn-pl-014-c06",
+        "zn-pl-014-c07",
+        "zn-pl-014-c08",
+        "zn-pl-014-c09",
+        "zn-pl-014-c10",
+        "zn-pl-014-c11",
+        "zn-pl-014-c12",
+        "zn-pl-014-c13",
+        "zn-pl-014-c14",
+        "zn-pl-014-c15",
+        "zn-pl-014-c16",
+        "zn-pl-014-c17",
+        "zn-pl-014-c18",
+        "zn-pl-014-c19",
+        "zn-pl-014-c20",
+        "zn-pl-014-c21",
+        "zn-pl-014-c22",
+        "zn-pl-014-c23"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-014-c02": "img/productos/zain/zn-pl-014-c02.webp",
+        "zn-pl-014-c05": "img/productos/zain/zn-pl-014-c05.webp",
+        "zn-pl-014-c07": "img/productos/zain/zn-pl-014-c07.webp",
+        "zn-pl-014-c15": "img/productos/zain/zn-pl-014-c15.webp",
+        "zn-pl-014-c16": "img/productos/zain/zn-pl-014-c16.webp",
+        "zn-pl-014-c18": "img/productos/zain/zn-pl-014-c18.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-014-c17"
+      ]
+    },
+    {
+      "id": "zn-pl-015",
+      "sku": "ZN-PL-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera de algodón peinado peso medio",
+      "nombreFamilia": "Playera de algodón peinado peso medio",
+      "familia": "zain-mayoreo-zn-pl-015",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón peinado de 185 g, con más cuerpo y la misma suavidad.",
+      "especificaciones": "Tallas: Caballero S–5XL · Dama S–3XL. 22 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-015-render.webp",
+      "colores": [
+        "zn-pl-015-c01",
+        "zn-pl-015-c02",
+        "zn-pl-015-c03",
+        "zn-pl-015-c04",
+        "zn-pl-015-c05",
+        "zn-pl-015-c06",
+        "zn-pl-015-c07",
+        "zn-pl-015-c08",
+        "zn-pl-015-c09",
+        "zn-pl-015-c10",
+        "zn-pl-015-c11",
+        "zn-pl-015-c12",
+        "zn-pl-015-c13",
+        "zn-pl-015-c14",
+        "zn-pl-015-c15",
+        "zn-pl-015-c16",
+        "zn-pl-015-c17",
+        "zn-pl-015-c18",
+        "zn-pl-015-c19",
+        "zn-pl-015-c20",
+        "zn-pl-015-c21",
+        "zn-pl-015-c22"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-pl-015-c18": "img/productos/zain/zn-pl-015-c18.webp",
+        "zn-pl-015-c19": "img/productos/zain/zn-pl-015-c19.webp"
+      }
+    },
+    {
+      "id": "zn-pl-016",
+      "sku": "ZN-PL-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera algodón-poliéster 60/40",
+      "nombreFamilia": "Playera algodón-poliéster 60/40",
+      "familia": "zain-mayoreo-zn-pl-016",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Mezcla que no se encoge y resiste el lavado. Superficie lisa para impresión.",
+      "especificaciones": "Tallas: Caballero XS–4XL · Dama S–2XL. 25 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-016-render.webp",
+      "colores": [
+        "zn-pl-016-c01",
+        "zn-pl-016-c02",
+        "zn-pl-016-c03",
+        "zn-pl-016-c04",
+        "zn-pl-016-c05",
+        "zn-pl-016-c06",
+        "zn-pl-016-c07",
+        "zn-pl-016-c08",
+        "zn-pl-016-c09",
+        "zn-pl-016-c10",
+        "zn-pl-016-c11",
+        "zn-pl-016-c12",
+        "zn-pl-016-c13",
+        "zn-pl-016-c14",
+        "zn-pl-016-c15",
+        "zn-pl-016-c16",
+        "zn-pl-016-c17",
+        "zn-pl-016-c18",
+        "zn-pl-016-c19",
+        "zn-pl-016-c20",
+        "zn-pl-016-c21",
+        "zn-pl-016-c22",
+        "zn-pl-016-c23",
+        "zn-pl-016-c24",
+        "zn-pl-016-c25"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-016-c01": "img/productos/zain/zn-pl-016-c01.webp",
+        "zn-pl-016-c02": "img/productos/zain/zn-pl-016-c02.webp",
+        "zn-pl-016-c03": "img/productos/zain/zn-pl-016-c03.webp",
+        "zn-pl-016-c04": "img/productos/zain/zn-pl-016-c04.webp",
+        "zn-pl-016-c06": "img/productos/zain/zn-pl-016-c06.webp",
+        "zn-pl-016-c07": "img/productos/zain/zn-pl-016-c07.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-016-c08",
+        "zn-pl-016-c09",
+        "zn-pl-016-c10",
+        "zn-pl-016-c11",
+        "zn-pl-016-c12",
+        "zn-pl-016-c13",
+        "zn-pl-016-c14",
+        "zn-pl-016-c15",
+        "zn-pl-016-c16",
+        "zn-pl-016-c17",
+        "zn-pl-016-c18",
+        "zn-pl-016-c19",
+        "zn-pl-016-c20",
+        "zn-pl-016-c21",
+        "zn-pl-016-c22",
+        "zn-pl-016-c24"
+      ]
+    },
+    {
+      "id": "zn-pl-017",
+      "sku": "ZN-PL-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera 50/50 de secado rápido",
+      "nombreFamilia": "Playera 50/50 de secado rápido",
+      "familia": "zain-mayoreo-zn-pl-017",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Algodón-poliéster que absorbe la humedad. Muy usada en uniformes de trabajo. 41 colores.",
+      "especificaciones": "Tallas: Caballero S–5XL. 41 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-017-render.webp",
+      "colores": [
+        "zn-pl-017-c01",
+        "zn-pl-017-c02",
+        "zn-pl-017-c03",
+        "zn-pl-017-c04",
+        "zn-pl-017-c05",
+        "zn-pl-017-c06",
+        "zn-pl-017-c07",
+        "zn-pl-017-c08",
+        "zn-pl-017-c09",
+        "zn-pl-017-c10",
+        "zn-pl-017-c11",
+        "zn-pl-017-c12",
+        "zn-pl-017-c13",
+        "zn-pl-017-c14",
+        "zn-pl-017-c15",
+        "zn-pl-017-c16",
+        "zn-pl-017-c17",
+        "zn-pl-017-c18",
+        "zn-pl-017-c19",
+        "zn-pl-017-c20",
+        "zn-pl-017-c21",
+        "zn-pl-017-c22",
+        "zn-pl-017-c23",
+        "zn-pl-017-c24",
+        "zn-pl-017-c25",
+        "zn-pl-017-c26",
+        "zn-pl-017-c27",
+        "zn-pl-017-c28",
+        "zn-pl-017-c29",
+        "zn-pl-017-c30",
+        "zn-pl-017-c31",
+        "zn-pl-017-c32",
+        "zn-pl-017-c33",
+        "zn-pl-017-c34",
+        "zn-pl-017-c35",
+        "zn-pl-017-c36",
+        "zn-pl-017-c37",
+        "zn-pl-017-c38",
+        "zn-pl-017-c39",
+        "zn-pl-017-c40",
+        "zn-pl-017-c41"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-pl-017-c12": "img/productos/zain/zn-pl-017-c12.webp",
+        "zn-pl-017-c18": "img/productos/zain/zn-pl-017-c18.webp",
+        "zn-pl-017-c22": "img/productos/zain/zn-pl-017-c22.webp",
+        "zn-pl-017-c34": "img/productos/zain/zn-pl-017-c34.webp",
+        "zn-pl-017-c36": "img/productos/zain/zn-pl-017-c36.webp",
+        "zn-pl-017-c37": "img/productos/zain/zn-pl-017-c37.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-017-c39"
+      ]
+    },
+    {
+      "id": "zn-pl-018",
+      "sku": "ZN-PL-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera gruesa oversize",
+      "nombreFamilia": "Playera gruesa oversize",
+      "familia": "zain-mayoreo-zn-pl-018",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Algodón grueso de 235 g en corte oversize, estilo noventas. Para merch y marcas de ropa.",
+      "especificaciones": "Tallas: Unisex S–3XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-018-render.webp",
+      "colores": [
+        "zn-pl-018-c01",
+        "zn-pl-018-c02",
+        "zn-pl-018-c03",
+        "zn-pl-018-c04",
+        "zn-pl-018-c05",
+        "zn-pl-018-c06",
+        "zn-pl-018-c07",
+        "zn-pl-018-c08",
+        "zn-pl-018-c09",
+        "zn-pl-018-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 235,
+      "fotosColor": {
+        "zn-pl-018-c07": "img/productos/zain/zn-pl-018-c07.webp"
+      }
+    },
+    {
+      "id": "zn-pl-019",
+      "sku": "ZN-PL-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera con bolsa al pecho",
+      "nombreFamilia": "Playera con bolsa al pecho",
+      "familia": "zain-mayoreo-zn-pl-019",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera clásica con bolsa. En algodón o mezcla 50/50.",
+      "especificaciones": "Tallas: Caballero S–3XL. 18 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-019-render.webp",
+      "colores": [
+        "zn-pl-019-c01",
+        "zn-pl-019-c02",
+        "zn-pl-019-c03",
+        "zn-pl-019-c04",
+        "zn-pl-019-c05",
+        "zn-pl-019-c06",
+        "zn-pl-019-c07",
+        "zn-pl-019-c08",
+        "zn-pl-019-c09",
+        "zn-pl-019-c10",
+        "zn-pl-019-c11",
+        "zn-pl-019-c12",
+        "zn-pl-019-c13",
+        "zn-pl-019-c14",
+        "zn-pl-019-c15",
+        "zn-pl-019-c16",
+        "zn-pl-019-c17",
+        "zn-pl-019-c18"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 205,
+      "fotosColor": {
+        "zn-pl-019-c07": "img/productos/zain/zn-pl-019-c07.webp",
+        "zn-pl-019-c08": "img/productos/zain/zn-pl-019-c08.webp",
+        "zn-pl-019-c09": "img/productos/zain/zn-pl-019-c09.webp"
+      }
+    },
+    {
+      "id": "zn-pl-020",
+      "sku": "ZN-PL-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera cuello V suave",
+      "nombreFamilia": "Playera cuello V suave",
+      "familia": "zain-mayoreo-zn-pl-020",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón peinado de 150 g en cuello V, para caballero y dama.",
+      "especificaciones": "Tallas: Caballero XS–3XL · Dama S–2XL. 11 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-020-render.webp",
+      "colores": [
+        "zn-pl-020-c01",
+        "zn-pl-020-c02",
+        "zn-pl-020-c03",
+        "zn-pl-020-c04",
+        "zn-pl-020-c05",
+        "zn-pl-020-c06",
+        "zn-pl-020-c07",
+        "zn-pl-020-c08",
+        "zn-pl-020-c09",
+        "zn-pl-020-c10",
+        "zn-pl-020-c11"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-020-c02": "img/productos/zain/zn-pl-020-c02.webp",
+        "zn-pl-020-c05": "img/productos/zain/zn-pl-020-c05.webp",
+        "zn-pl-020-c06": "img/productos/zain/zn-pl-020-c06.webp",
+        "zn-pl-020-c07": "img/productos/zain/zn-pl-020-c07.webp"
+      }
+    },
+    {
+      "id": "zn-pl-021",
+      "sku": "ZN-PL-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera manga larga de algodón",
+      "nombreFamilia": "Playera manga larga de algodón",
+      "familia": "zain-mayoreo-zn-pl-021",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Algodón 180 g en manga larga, con o sin bolsa. Para campo y temporada fría.",
+      "especificaciones": "Tallas: Caballero S–5XL. 30 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-021-render.webp",
+      "colores": [
+        "zn-pl-021-c01",
+        "zn-pl-021-c02",
+        "zn-pl-021-c03",
+        "zn-pl-021-c04",
+        "zn-pl-021-c05",
+        "zn-pl-021-c06",
+        "zn-pl-021-c07",
+        "zn-pl-021-c08",
+        "zn-pl-021-c09",
+        "zn-pl-021-c10",
+        "zn-pl-021-c11",
+        "zn-pl-021-c12",
+        "zn-pl-021-c13",
+        "zn-pl-021-c14",
+        "zn-pl-021-c15",
+        "zn-pl-021-c16",
+        "zn-pl-021-c17",
+        "zn-pl-021-c18",
+        "zn-pl-021-c19",
+        "zn-pl-021-c20",
+        "zn-pl-021-c21",
+        "zn-pl-021-c22",
+        "zn-pl-021-c23",
+        "zn-pl-021-c24",
+        "zn-pl-021-c25",
+        "zn-pl-021-c26",
+        "zn-pl-021-c27",
+        "zn-pl-021-c28",
+        "zn-pl-021-c29",
+        "zn-pl-021-c30"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "fotosColor": {
+        "zn-pl-021-c05": "img/productos/zain/zn-pl-021-c05.webp",
+        "zn-pl-021-c26": "img/productos/zain/zn-pl-021-c26.webp",
+        "zn-pl-021-c27": "img/productos/zain/zn-pl-021-c27.webp",
+        "zn-pl-021-c30": "img/productos/zain/zn-pl-021-c30.webp"
+      }
+    },
+    {
+      "id": "zn-pl-022",
+      "sku": "ZN-PL-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera raglan ¾",
+      "nombreFamilia": "Playera raglan ¾",
+      "familia": "zain-mayoreo-zn-pl-022",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuerpo y mangas en dos colores, estilo béisbol.",
+      "especificaciones": "Tallas: Caballero S–3XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-022-render.webp",
+      "colores": [
+        "zn-pl-022-c01",
+        "zn-pl-022-c02",
+        "zn-pl-022-c03",
+        "zn-pl-022-c04",
+        "zn-pl-022-c05",
+        "zn-pl-022-c06",
+        "zn-pl-022-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "fotosColor": {
+        "zn-pl-022-c01": "img/productos/zain/zn-pl-022-c01.webp",
+        "zn-pl-022-c02": "img/productos/zain/zn-pl-022-c02.webp",
+        "zn-pl-022-c03": "img/productos/zain/zn-pl-022-c03.webp",
+        "zn-pl-022-c04": "img/productos/zain/zn-pl-022-c04.webp",
+        "zn-pl-022-c05": "img/productos/zain/zn-pl-022-c05.webp",
+        "zn-pl-022-c06": "img/productos/zain/zn-pl-022-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-022-c07"
+      ]
+    },
+    {
+      "id": "zn-pl-023",
+      "sku": "ZN-PL-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera sin mangas de algodón",
+      "nombreFamilia": "Playera sin mangas de algodón",
+      "familia": "zain-mayoreo-zn-pl-023",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón para gimnasios, carreras y eventos de verano.",
+      "especificaciones": "Tallas: Caballero S–3XL · Dama S–2XL. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-023-render.webp",
+      "colores": [
+        "zn-pl-023-c01",
+        "zn-pl-023-c02",
+        "zn-pl-023-c03",
+        "zn-pl-023-c04",
+        "zn-pl-023-c05",
+        "zn-pl-023-c06",
+        "zn-pl-023-c07",
+        "zn-pl-023-c08",
+        "zn-pl-023-c09",
+        "zn-pl-023-c10",
+        "zn-pl-023-c11",
+        "zn-pl-023-c12"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "fotosColor": {
+        "zn-pl-023-c06": "img/productos/zain/zn-pl-023-c06.webp",
+        "zn-pl-023-c10": "img/productos/zain/zn-pl-023-c10.webp"
+      }
+    },
+    {
+      "id": "zn-pl-024",
+      "sku": "ZN-PL-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera tallas altas",
+      "nombreFamilia": "Playera tallas altas",
+      "familia": "zain-mayoreo-zn-pl-024",
+      "categoria": "Playeras",
+      "silueta": "Altas",
+      "descripcion": "Algodón de 6 oz con largo extra para personas altas.",
+      "especificaciones": "Tallas: Altas LT–3XLT. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-024-render.webp",
+      "colores": [
+        "zn-pl-024-c01",
+        "zn-pl-024-c02",
+        "zn-pl-024-c03",
+        "zn-pl-024-c04",
+        "zn-pl-024-c05",
+        "zn-pl-024-c06",
+        "zn-pl-024-c07",
+        "zn-pl-024-c08"
+      ],
+      "tallas": [
+        "LT",
+        "XLT",
+        "2XLT",
+        "3XLT"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 205,
+      "fotosColor": {
+        "zn-pl-024-c05": "img/productos/zain/zn-pl-024-c05.webp"
+      }
+    },
+    {
+      "id": "zn-pl-025",
+      "sku": "ZN-PL-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera clásica 185 g",
+      "nombreFamilia": "Playera clásica 185 g",
+      "familia": "zain-mayoreo-zn-pl-025",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón 185 g con cuello rib y etiqueta desprendible para poner tu propia etiqueta.",
+      "especificaciones": "Tapacostura. Cuello rib. Etiqueta desprendible. Tejido tubular. Tallas: Caballero S–3XL · Dama S–2XL. 23 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-025-render.webp",
+      "colores": [
+        "zn-pl-025-c01",
+        "zn-pl-025-c02",
+        "zn-pl-025-c03",
+        "zn-pl-025-c04",
+        "zn-pl-025-c05",
+        "zn-pl-025-c06",
+        "zn-pl-025-c07",
+        "zn-pl-025-c08",
+        "zn-pl-025-c09",
+        "zn-pl-025-c10",
+        "zn-pl-025-c11",
+        "zn-pl-025-c12",
+        "zn-pl-025-c13",
+        "zn-pl-025-c14",
+        "zn-pl-025-c15",
+        "zn-pl-025-c16",
+        "zn-pl-025-c17",
+        "zn-pl-025-c18",
+        "zn-pl-025-c19",
+        "zn-pl-025-c20",
+        "zn-pl-025-c21",
+        "zn-pl-025-c22",
+        "zn-pl-025-c23"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-pl-025-c16": "img/productos/zain/zn-pl-025-c16.webp"
+      }
+    },
+    {
+      "id": "zn-pl-026",
+      "sku": "ZN-PL-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera cuello V",
+      "nombreFamilia": "Playera cuello V",
+      "familia": "zain-mayoreo-zn-pl-026",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón 155 g con cuello en V. Para atención a clientes, spas, cafeterías y tiendas.",
+      "especificaciones": "Cuello V. Dama con silueta. Tallas: Caballero S–2XL · Dama S–XL. 3 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-026-render.webp",
+      "colores": [
+        "zn-pl-026-c01",
+        "zn-pl-026-c02",
+        "zn-pl-026-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-pl-027",
+      "sku": "ZN-PL-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera manga larga peso completo",
+      "nombreFamilia": "Playera manga larga peso completo",
+      "familia": "zain-mayoreo-zn-pl-027",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Algodón 195 g en manga larga. Protege del sol en campo y obra.",
+      "especificaciones": "Cuello redondo. Puño en manga. Tallas: Caballero S–2XL · Dama S–XL. 14 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-027-render.webp",
+      "colores": [
+        "zn-pl-027-c01",
+        "zn-pl-027-c02",
+        "zn-pl-027-c03",
+        "zn-pl-027-c04",
+        "zn-pl-027-c05",
+        "zn-pl-027-c06",
+        "zn-pl-027-c07",
+        "zn-pl-027-c08",
+        "zn-pl-027-c09",
+        "zn-pl-027-c10",
+        "zn-pl-027-c11",
+        "zn-pl-027-c12",
+        "zn-pl-027-c13",
+        "zn-pl-027-c14"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 195,
+      "fotosColor": {
+        "zn-pl-027-c03": "img/productos/zain/zn-pl-027-c03.webp"
+      }
+    },
+    {
+      "id": "zn-pl-028",
+      "sku": "ZN-PL-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera sin mangas",
+      "nombreFamilia": "Playera sin mangas",
+      "familia": "zain-mayoreo-zn-pl-028",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Algodón 155 g sin mangas. Para gimnasios, carreras y eventos al aire libre.",
+      "especificaciones": "Cuello redondo. Sisa amplia. Tallas: Caballero S–2XL. 6 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-028-render.webp",
+      "colores": [
+        "zn-pl-028-c01",
+        "zn-pl-028-c02",
+        "zn-pl-028-c03",
+        "zn-pl-028-c04",
+        "zn-pl-028-c05",
+        "zn-pl-028-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-028-c02": "img/productos/zain/zn-pl-028-c02.webp"
+      }
+    },
+    {
+      "id": "zn-pl-029",
+      "sku": "ZN-PL-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera mezcla jaspeada",
+      "nombreFamilia": "Playera mezcla jaspeada",
+      "familia": "zain-mayoreo-zn-pl-029",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Mezcla algodón-poliéster de 155 g con colores jaspeados que no se decoloran.",
+      "especificaciones": "Cuello redondo. Colores neón disponibles. Tallas: Caballero S–2XL · Dama S–XL. 13 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-029-render.webp",
+      "colores": [
+        "zn-pl-029-c01",
+        "zn-pl-029-c02",
+        "zn-pl-029-c03",
+        "zn-pl-029-c04",
+        "zn-pl-029-c05",
+        "zn-pl-029-c06",
+        "zn-pl-029-c07",
+        "zn-pl-029-c08",
+        "zn-pl-029-c09",
+        "zn-pl-029-c10",
+        "zn-pl-029-c11",
+        "zn-pl-029-c12",
+        "zn-pl-029-c13"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-029-c01": "img/productos/zain/zn-pl-029-c01.webp",
+        "zn-pl-029-c02": "img/productos/zain/zn-pl-029-c02.webp",
+        "zn-pl-029-c03": "img/productos/zain/zn-pl-029-c03.webp",
+        "zn-pl-029-c04": "img/productos/zain/zn-pl-029-c04.webp",
+        "zn-pl-029-c05": "img/productos/zain/zn-pl-029-c05.webp",
+        "zn-pl-029-c06": "img/productos/zain/zn-pl-029-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-029-c07",
+        "zn-pl-029-c08",
+        "zn-pl-029-c09",
+        "zn-pl-029-c10",
+        "zn-pl-029-c11",
+        "zn-pl-029-c12",
+        "zn-pl-029-c13"
+      ]
+    },
+    {
+      "id": "zn-pl-030",
+      "sku": "ZN-PL-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera cuello V jaspeada",
+      "nombreFamilia": "Playera cuello V jaspeada",
+      "familia": "zain-mayoreo-zn-pl-030",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Mezcla 50/50 en cuello V con acabado jaspeado.",
+      "especificaciones": "Cuello V. Tallas: Caballero S–2XL · Dama S–XL. 9 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-030-render.webp",
+      "colores": [
+        "zn-pl-030-c01",
+        "zn-pl-030-c02",
+        "zn-pl-030-c03",
+        "zn-pl-030-c04",
+        "zn-pl-030-c05",
+        "zn-pl-030-c06",
+        "zn-pl-030-c07",
+        "zn-pl-030-c08",
+        "zn-pl-030-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-030-c01": "img/productos/zain/zn-pl-030-c01.webp",
+        "zn-pl-030-c02": "img/productos/zain/zn-pl-030-c02.webp",
+        "zn-pl-030-c03": "img/productos/zain/zn-pl-030-c03.webp",
+        "zn-pl-030-c04": "img/productos/zain/zn-pl-030-c04.webp",
+        "zn-pl-030-c05": "img/productos/zain/zn-pl-030-c05.webp",
+        "zn-pl-030-c06": "img/productos/zain/zn-pl-030-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-pl-030-c07",
+        "zn-pl-030-c08",
+        "zn-pl-030-c09"
+      ]
+    },
+    {
+      "id": "zn-pl-031",
+      "sku": "ZN-PL-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera manga larga jaspeada",
+      "nombreFamilia": "Playera manga larga jaspeada",
+      "familia": "zain-mayoreo-zn-pl-031",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Mezcla 50/50 de 155 g en manga larga.",
+      "especificaciones": "Tallas: Caballero S–2XL. 6 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-031-render.webp",
+      "colores": [
+        "zn-pl-031-c01",
+        "zn-pl-031-c02",
+        "zn-pl-031-c03",
+        "zn-pl-031-c04",
+        "zn-pl-031-c05",
+        "zn-pl-031-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155,
+      "fotosColor": {
+        "zn-pl-031-c01": "img/productos/zain/zn-pl-031-c01.webp",
+        "zn-pl-031-c02": "img/productos/zain/zn-pl-031-c02.webp",
+        "zn-pl-031-c03": "img/productos/zain/zn-pl-031-c03.webp",
+        "zn-pl-031-c04": "img/productos/zain/zn-pl-031-c04.webp",
+        "zn-pl-031-c05": "img/productos/zain/zn-pl-031-c05.webp",
+        "zn-pl-031-c06": "img/productos/zain/zn-pl-031-c06.webp"
+      }
+    },
+    {
+      "id": "zn-pl-032",
+      "sku": "ZN-PL-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera regular de algodón-poliéster",
+      "nombreFamilia": "Playera regular de algodón-poliéster",
+      "familia": "zain-mayoreo-zn-pl-032",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Tela suave de 180 g con fibra de origen vegetal, corte regular y aberturas laterales.",
+      "especificaciones": "Corte regular. Aberturas laterales. Tallas: Unisex 2XS–2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "73% algodón / 27% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-032-render.webp",
+      "colores": [
+        "zn-pl-032-c01",
+        "zn-pl-032-c02",
+        "zn-pl-032-c03",
+        "zn-pl-032-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180
+    },
+    {
+      "id": "zn-pl-033",
+      "sku": "ZN-PL-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera oversize",
+      "nombreFamilia": "Playera oversize",
+      "familia": "zain-mayoreo-zn-pl-033",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Corte holgado de tendencia en algodón-poliéster 180 g. Para merch y marcas de ropa.",
+      "especificaciones": "Corte oversize. Aberturas laterales. Tallas: Unisex 3XS–2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "73% algodón / 27% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-033-render.webp",
+      "colores": [
+        "zn-pl-033-c01",
+        "zn-pl-033-c02",
+        "zn-pl-033-c03",
+        "zn-pl-033-c04"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180
+    },
+    {
+      "id": "zn-pl-034",
+      "sku": "ZN-PL-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera oversize deslavada",
+      "nombreFamilia": "Playera oversize deslavada",
+      "familia": "zain-mayoreo-zn-pl-034",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Algodón 220 g con lavado vintage. Perfecta para merch de bandas, eventos y tiendas.",
+      "especificaciones": "Corte oversize. Cerrado de costados. Tallas: Unisex 3XS–2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-034-render.webp",
+      "colores": [
+        "zn-pl-034-c01",
+        "zn-pl-034-c02"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220,
+      "fotosColor": {
+        "zn-pl-034-c01": "img/productos/zain/zn-pl-034-c01.webp",
+        "zn-pl-034-c02": "img/productos/zain/zn-pl-034-c02.webp"
+      }
+    },
+    {
+      "id": "zn-pl-035",
+      "sku": "ZN-PL-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera oversize stretch",
+      "nombreFamilia": "Playera oversize stretch",
+      "familia": "zain-mayoreo-zn-pl-035",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Cuerpo recto con manga oversize, 195 g en algodón-poliéster.",
+      "especificaciones": "Corte del cuerpo recto. Corte de la manga oversize. Cerrado de costados. Tallas: Unisex 3XS–2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "53% algodón / 47% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-035-render.webp",
+      "colores": [
+        "zn-pl-035-c01",
+        "zn-pl-035-c02",
+        "zn-pl-035-c03",
+        "zn-pl-035-c04",
+        "zn-pl-035-c05",
+        "zn-pl-035-c06",
+        "zn-pl-035-c07",
+        "zn-pl-035-c08"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 195
+    },
+    {
+      "id": "zn-pl-036",
+      "sku": "ZN-PL-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera para sublimación",
+      "nombreFamilia": "Playera para sublimación",
+      "familia": "zain-mayoreo-zn-pl-036",
+      "categoria": "Playeras",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Poliéster blanco de 160 g, suave al tacto. Para diseños a todo color y fotografías.",
+      "especificaciones": "Cuello redondo. Suave al tacto. Doble pespunte en cuello. Tapacostura. Tallas: Caballero S–2XL · Dama S–2XL. 1 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pl-036-render.webp",
+      "colores": [
+        "zn-pl-036-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160
+    },
+    {
+      "id": "zn-de-001",
+      "sku": "ZN-DE-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera de alto rendimiento",
+      "nombreFamilia": "Playera de alto rendimiento",
+      "familia": "zain-mayoreo-zn-de-001",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Poliéster 170 g que absorbe el sudor, controla el olor y no se engancha. Manga corta o larga.",
+      "especificaciones": "Tallas: Unisex S–3XL. 21 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-001-render.webp",
+      "colores": [
+        "zn-de-001-c01",
+        "zn-de-001-c02",
+        "zn-de-001-c03",
+        "zn-de-001-c04",
+        "zn-de-001-c05",
+        "zn-de-001-c06",
+        "zn-de-001-c07",
+        "zn-de-001-c08",
+        "zn-de-001-c09",
+        "zn-de-001-c10",
+        "zn-de-001-c11",
+        "zn-de-001-c12",
+        "zn-de-001-c13",
+        "zn-de-001-c14",
+        "zn-de-001-c15",
+        "zn-de-001-c16",
+        "zn-de-001-c17",
+        "zn-de-001-c18",
+        "zn-de-001-c19",
+        "zn-de-001-c20",
+        "zn-de-001-c21"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "fotosColor": {
+        "zn-de-001-c18": "img/productos/zain/zn-de-001-c18.webp"
+      }
+    },
+    {
+      "id": "zn-de-002",
+      "sku": "ZN-DE-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva manga larga",
+      "nombreFamilia": "Playera deportiva manga larga",
+      "familia": "zain-mayoreo-zn-de-002",
+      "categoria": "Deportivas",
+      "silueta": "Caballero",
+      "descripcion": "Malla de poliéster 150 g en manga larga, con costuras a contraste.",
+      "especificaciones": "Cerrado de costados. Tapacostura a contraste. Doble pespunte en cuello. Etiqueta desprendible. Tallas: Caballero S–2XL. 10 colores del proveedor.",
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-002-render.webp",
+      "colores": [
+        "zn-de-002-c01",
+        "zn-de-002-c02",
+        "zn-de-002-c03",
+        "zn-de-002-c04",
+        "zn-de-002-c05",
+        "zn-de-002-c06",
+        "zn-de-002-c07",
+        "zn-de-002-c08",
+        "zn-de-002-c09",
+        "zn-de-002-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150,
+      "fotosColor": {
+        "zn-de-002-c01": "img/productos/zain/zn-de-002-c01.webp",
+        "zn-de-002-c02": "img/productos/zain/zn-de-002-c02.webp",
+        "zn-de-002-c03": "img/productos/zain/zn-de-002-c03.webp",
+        "zn-de-002-c04": "img/productos/zain/zn-de-002-c04.webp",
+        "zn-de-002-c05": "img/productos/zain/zn-de-002-c05.webp",
+        "zn-de-002-c08": "img/productos/zain/zn-de-002-c08.webp"
+      },
+      "coloresSinRender": [
+        "zn-de-002-c06",
+        "zn-de-002-c07",
+        "zn-de-002-c09",
+        "zn-de-002-c10"
+      ]
+    },
+    {
+      "id": "zn-de-003",
+      "sku": "ZN-DE-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva ligera manga larga",
+      "nombreFamilia": "Playera deportiva ligera manga larga",
+      "familia": "zain-mayoreo-zn-de-003",
+      "categoria": "Deportivas",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Mesh 150 g en manga larga para entrenar o trabajar bajo el sol.",
+      "especificaciones": "Tallas: Caballero S–2XL · Dama S–XL. 6 colores del proveedor.",
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-003-render.webp",
+      "colores": [
+        "zn-de-003-c01",
+        "zn-de-003-c02",
+        "zn-de-003-c03",
+        "zn-de-003-c04",
+        "zn-de-003-c05",
+        "zn-de-003-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-de-004",
+      "sku": "ZN-DE-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva cuello cruzado",
+      "nombreFamilia": "Playera deportiva cuello cruzado",
+      "familia": "zain-mayoreo-zn-de-004",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Malla 150 g con tela transpirable en costados y barras reflectivas en hombros.",
+      "especificaciones": "Cuello cruzado. Tela transpirable en hombros y costados. Barras reflectivas en hombros. Doble pespunte en mangas y bajos. Tallas: Unisex XS–2XL. 13 colores del proveedor.",
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-004-render.webp",
+      "colores": [
+        "zn-de-004-c01",
+        "zn-de-004-c02",
+        "zn-de-004-c03",
+        "zn-de-004-c04",
+        "zn-de-004-c05",
+        "zn-de-004-c06",
+        "zn-de-004-c07",
+        "zn-de-004-c08",
+        "zn-de-004-c09",
+        "zn-de-004-c10",
+        "zn-de-004-c11",
+        "zn-de-004-c12",
+        "zn-de-004-c13"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150,
+      "fotosColor": {
+        "zn-de-004-c01": "img/productos/zain/zn-de-004-c01.webp",
+        "zn-de-004-c02": "img/productos/zain/zn-de-004-c02.webp",
+        "zn-de-004-c03": "img/productos/zain/zn-de-004-c03.webp",
+        "zn-de-004-c04": "img/productos/zain/zn-de-004-c04.webp",
+        "zn-de-004-c05": "img/productos/zain/zn-de-004-c05.webp",
+        "zn-de-004-c06": "img/productos/zain/zn-de-004-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-de-004-c07",
+        "zn-de-004-c08",
+        "zn-de-004-c09",
+        "zn-de-004-c10",
+        "zn-de-004-c11",
+        "zn-de-004-c12",
+        "zn-de-004-c13"
+      ]
+    },
+    {
+      "id": "zn-de-005",
+      "sku": "ZN-DE-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva reflectiva",
+      "nombreFamilia": "Playera deportiva reflectiva",
+      "familia": "zain-mayoreo-zn-de-005",
+      "categoria": "Deportivas",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Jersey de poliéster 160 g con barras reflectivas. Para corredores y trabajo nocturno.",
+      "especificaciones": "Cuello redondo. Cerrado de costados. Barras reflectivas en hombros. Doble pespunte cuello. Tallas: Caballero S–2XL · Dama S–2XL. 12 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-005-render.webp",
+      "colores": [
+        "zn-de-005-c01",
+        "zn-de-005-c02",
+        "zn-de-005-c03",
+        "zn-de-005-c04",
+        "zn-de-005-c05",
+        "zn-de-005-c06",
+        "zn-de-005-c07",
+        "zn-de-005-c08",
+        "zn-de-005-c09",
+        "zn-de-005-c10",
+        "zn-de-005-c11",
+        "zn-de-005-c12"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "fotosColor": {
+        "zn-de-005-c01": "img/productos/zain/zn-de-005-c01.webp",
+        "zn-de-005-c02": "img/productos/zain/zn-de-005-c02.webp",
+        "zn-de-005-c03": "img/productos/zain/zn-de-005-c03.webp",
+        "zn-de-005-c04": "img/productos/zain/zn-de-005-c04.webp",
+        "zn-de-005-c09": "img/productos/zain/zn-de-005-c09.webp",
+        "zn-de-005-c11": "img/productos/zain/zn-de-005-c11.webp"
+      },
+      "coloresSinRender": [
+        "zn-de-005-c05",
+        "zn-de-005-c06",
+        "zn-de-005-c07",
+        "zn-de-005-c08",
+        "zn-de-005-c10",
+        "zn-de-005-c12"
+      ]
+    },
+    {
+      "id": "zn-de-006",
+      "sku": "ZN-DE-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera técnica stretch",
+      "nombreFamilia": "Playera técnica stretch",
+      "familia": "zain-mayoreo-zn-de-006",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Nylon con elastano de 170 g, tacto frío y tira reflejante en espalda.",
+      "especificaciones": "Corte del cuerpo regular. Aberturas laterales. Tira reflejante en espalda. Tallas: Unisex 3XS–2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "88% nylon / 12% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-006-render.webp",
+      "colores": [
+        "zn-de-006-c01",
+        "zn-de-006-c02",
+        "zn-de-006-c03",
+        "zn-de-006-c04",
+        "zn-de-006-c05",
+        "zn-de-006-c06",
+        "zn-de-006-c07"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "fotosColor": {
+        "zn-de-006-c01": "img/productos/zain/zn-de-006-c01.webp",
+        "zn-de-006-c02": "img/productos/zain/zn-de-006-c02.webp",
+        "zn-de-006-c03": "img/productos/zain/zn-de-006-c03.webp",
+        "zn-de-006-c04": "img/productos/zain/zn-de-006-c04.webp",
+        "zn-de-006-c05": "img/productos/zain/zn-de-006-c05.webp",
+        "zn-de-006-c06": "img/productos/zain/zn-de-006-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-de-006-c07"
+      ]
+    },
+    {
+      "id": "zn-de-007",
+      "sku": "ZN-DE-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Jersey de fútbol",
+      "nombreFamilia": "Jersey de fútbol",
+      "familia": "zain-mayoreo-zn-de-007",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Poliéster 140 g, corte regular. Para ligas, escuelas y torneos.",
+      "especificaciones": "Corte del cuerpo regular. Cerrado de costados. Tallas: Unisex 2XS–2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-007-render.webp",
+      "colores": [
+        "zn-de-007-c01",
+        "zn-de-007-c02",
+        "zn-de-007-c03",
+        "zn-de-007-c04",
+        "zn-de-007-c05",
+        "zn-de-007-c06",
+        "zn-de-007-c07",
+        "zn-de-007-c08"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 140,
+      "coloresSinRender": [
+        "zn-de-007-c08"
+      ]
+    },
+    {
+      "id": "zn-de-008",
+      "sku": "ZN-DE-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Jersey de béisbol",
+      "nombreFamilia": "Jersey de béisbol",
+      "familia": "zain-mayoreo-zn-de-008",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Jersey abotonado de poliéster 170 g para equipos y merch.",
+      "especificaciones": "Jersey abotonado. Cerrado de costados. Tallas: Unisex 2XS–2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-008-render.webp",
+      "colores": [
+        "zn-de-008-c01",
+        "zn-de-008-c02",
+        "zn-de-008-c03",
+        "zn-de-008-c04",
+        "zn-de-008-c05",
+        "zn-de-008-c06",
+        "zn-de-008-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "fotosColor": {
+        "zn-de-008-c06": "img/productos/zain/zn-de-008-c06.webp"
+      }
+    },
+    {
+      "id": "zn-de-009",
+      "sku": "ZN-DE-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Jersey de fútbol americano",
+      "nombreFamilia": "Jersey de fútbol americano",
+      "familia": "zain-mayoreo-zn-de-009",
+      "categoria": "Deportivas",
+      "silueta": "Unisex",
+      "descripcion": "Poliéster 170 g en corte oversize.",
+      "especificaciones": "Corte oversize. Cerrado de costados. Tallas: Unisex 2XS–2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-de-009-render.webp",
+      "colores": [
+        "zn-de-009-c01",
+        "zn-de-009-c02",
+        "zn-de-009-c03",
+        "zn-de-009-c04",
+        "zn-de-009-c05",
+        "zn-de-009-c06",
+        "zn-de-009-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "fotosColor": {
+        "zn-de-009-c06": "img/productos/zain/zn-de-009-c06.webp"
+      }
+    },
+    {
+      "id": "zn-po-014",
+      "sku": "ZN-PO-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo de jersey 50/50",
+      "nombreFamilia": "Polo de jersey 50/50",
+      "familia": "zain-mayoreo-zn-po-014",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo de jersey algodón-poliéster, fácil de lavar y económico. Tallas hasta 5XL.",
+      "especificaciones": "Tallas: Caballero S–5XL. 19 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-014-render.webp",
+      "colores": [
+        "zn-po-014-c01",
+        "zn-po-014-c02",
+        "zn-po-014-c03",
+        "zn-po-014-c04",
+        "zn-po-014-c05",
+        "zn-po-014-c06",
+        "zn-po-014-c07",
+        "zn-po-014-c08",
+        "zn-po-014-c09",
+        "zn-po-014-c10",
+        "zn-po-014-c11",
+        "zn-po-014-c12",
+        "zn-po-014-c13",
+        "zn-po-014-c14",
+        "zn-po-014-c15",
+        "zn-po-014-c16",
+        "zn-po-014-c17",
+        "zn-po-014-c18",
+        "zn-po-014-c19"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-po-014-c14": "img/productos/zain/zn-po-014-c14.webp",
+        "zn-po-014-c15": "img/productos/zain/zn-po-014-c15.webp",
+        "zn-po-014-c16": "img/productos/zain/zn-po-014-c16.webp",
+        "zn-po-014-c17": "img/productos/zain/zn-po-014-c17.webp"
+      }
+    },
+    {
+      "id": "zn-po-015",
+      "sku": "ZN-PO-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo piqué de algodón peinado",
+      "nombreFamilia": "Polo piqué de algodón peinado",
+      "familia": "zain-mayoreo-zn-po-015",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Piqué de algodón peinado de 175 g, suave y con corte moderno.",
+      "especificaciones": "Tallas: Caballero S–4XL · Dama S–2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-015-render.webp",
+      "colores": [
+        "zn-po-015-c01",
+        "zn-po-015-c02",
+        "zn-po-015-c03",
+        "zn-po-015-c04",
+        "zn-po-015-c05",
+        "zn-po-015-c06",
+        "zn-po-015-c07",
+        "zn-po-015-c08",
+        "zn-po-015-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 175,
+      "fotosColor": {
+        "zn-po-015-c07": "img/productos/zain/zn-po-015-c07.webp"
+      }
+    },
+    {
+      "id": "zn-po-016",
+      "sku": "ZN-PO-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo piqué de algodón grueso",
+      "nombreFamilia": "Polo piqué de algodón grueso",
+      "familia": "zain-mayoreo-zn-po-016",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Piqué 100% algodón de 220 g, firme y con mucha presencia para uniforme ejecutivo.",
+      "especificaciones": "Tallas: Caballero S–4XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-016-render.webp",
+      "colores": [
+        "zn-po-016-c01",
+        "zn-po-016-c02",
+        "zn-po-016-c03",
+        "zn-po-016-c04",
+        "zn-po-016-c05",
+        "zn-po-016-c06",
+        "zn-po-016-c07",
+        "zn-po-016-c08",
+        "zn-po-016-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220,
+      "fotosColor": {
+        "zn-po-016-c06": "img/productos/zain/zn-po-016-c06.webp"
+      }
+    },
+    {
+      "id": "zn-po-017",
+      "sku": "ZN-PO-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo corporativo manga larga",
+      "nombreFamilia": "Polo corporativo manga larga",
+      "familia": "zain-mayoreo-zn-po-017",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Piqué 230 g de algodón-poliéster en manga larga.",
+      "especificaciones": "Refuerzo en hombros. Tapacostura. Doble pespunte en bajos. Cuello y puños tejidos. Tallas: Caballero S–2XL · Dama S–2XL. 7 colores del proveedor.",
+      "tejido": "Piqué preencogido",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-017-render.webp",
+      "colores": [
+        "zn-po-017-c01",
+        "zn-po-017-c02",
+        "zn-po-017-c03",
+        "zn-po-017-c04",
+        "zn-po-017-c05",
+        "zn-po-017-c06",
+        "zn-po-017-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 230,
+      "fotosColor": {
+        "zn-po-017-c06": "img/productos/zain/zn-po-017-c06.webp"
+      }
+    },
+    {
+      "id": "zn-po-018",
+      "sku": "ZN-PO-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo peinado bicolor",
+      "nombreFamilia": "Polo peinado bicolor",
+      "familia": "zain-mayoreo-zn-po-018",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Piqué peinado 230 g con abertura lateral a contraste. Más suave al tacto.",
+      "especificaciones": "Refuerzo en hombros. Tapacostura y abertura lateral bicolor. Doble pespunte en bajos y sisa. Cerrado de costados. Tallas: Caballero S–2XL · Dama S–2XL. 11 colores del proveedor.",
+      "tejido": "Piqué peinado",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-018-render.webp",
+      "colores": [
+        "zn-po-018-c01",
+        "zn-po-018-c02",
+        "zn-po-018-c03",
+        "zn-po-018-c04",
+        "zn-po-018-c05",
+        "zn-po-018-c06",
+        "zn-po-018-c07",
+        "zn-po-018-c08",
+        "zn-po-018-c09",
+        "zn-po-018-c10",
+        "zn-po-018-c11"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 230,
+      "fotosColor": {
+        "zn-po-018-c01": "img/productos/zain/zn-po-018-c01.webp",
+        "zn-po-018-c02": "img/productos/zain/zn-po-018-c02.webp",
+        "zn-po-018-c03": "img/productos/zain/zn-po-018-c03.webp",
+        "zn-po-018-c04": "img/productos/zain/zn-po-018-c04.webp",
+        "zn-po-018-c05": "img/productos/zain/zn-po-018-c05.webp",
+        "zn-po-018-c10": "img/productos/zain/zn-po-018-c10.webp"
+      },
+      "coloresSinRender": [
+        "zn-po-018-c06",
+        "zn-po-018-c07",
+        "zn-po-018-c08",
+        "zn-po-018-c09",
+        "zn-po-018-c11"
+      ]
+    },
+    {
+      "id": "zn-po-019",
+      "sku": "ZN-PO-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo de algodón",
+      "nombreFamilia": "Polo de algodón",
+      "familia": "zain-mayoreo-zn-po-019",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo 100% algodón de 195 g, fresco y cómodo.",
+      "especificaciones": "Tallas: Caballero S–2XL. 6 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-019-render.webp",
+      "colores": [
+        "zn-po-019-c01",
+        "zn-po-019-c02",
+        "zn-po-019-c03",
+        "zn-po-019-c04",
+        "zn-po-019-c05",
+        "zn-po-019-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 195,
+      "fotosColor": {
+        "zn-po-019-c02": "img/productos/zain/zn-po-019-c02.webp"
+      }
+    },
+    {
+      "id": "zn-po-020",
+      "sku": "ZN-PO-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo stretch",
+      "nombreFamilia": "Polo stretch",
+      "familia": "zain-mayoreo-zn-po-020",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Piqué con elastano 190 g, con abertura lateral a contraste. Se mueve contigo.",
+      "especificaciones": "Cerrado de costados. Refuerzo en hombros. Tapacostura y abertura lateral a contraste. Doble pespunte en bajos y mangas. Tallas: Caballero S–2XL · Dama S–2XL. 13 colores del proveedor.",
+      "tejido": "Piqué elastano",
+      "composicion": "94.5% poliéster / 5.5% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-020-render.webp",
+      "colores": [
+        "zn-po-020-c01",
+        "zn-po-020-c02",
+        "zn-po-020-c03",
+        "zn-po-020-c04",
+        "zn-po-020-c05",
+        "zn-po-020-c06",
+        "zn-po-020-c07",
+        "zn-po-020-c08",
+        "zn-po-020-c09",
+        "zn-po-020-c10",
+        "zn-po-020-c11",
+        "zn-po-020-c12",
+        "zn-po-020-c13"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "fotosColor": {
+        "zn-po-020-c01": "img/productos/zain/zn-po-020-c01.webp",
+        "zn-po-020-c02": "img/productos/zain/zn-po-020-c02.webp",
+        "zn-po-020-c03": "img/productos/zain/zn-po-020-c03.webp",
+        "zn-po-020-c04": "img/productos/zain/zn-po-020-c04.webp",
+        "zn-po-020-c05": "img/productos/zain/zn-po-020-c05.webp",
+        "zn-po-020-c06": "img/productos/zain/zn-po-020-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-po-020-c07",
+        "zn-po-020-c08",
+        "zn-po-020-c09",
+        "zn-po-020-c10",
+        "zn-po-020-c11",
+        "zn-po-020-c12",
+        "zn-po-020-c13"
+      ]
+    },
+    {
+      "id": "zn-po-021",
+      "sku": "ZN-PO-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo dry tallas extendidas",
+      "nombreFamilia": "Polo dry tallas extendidas",
+      "familia": "zain-mayoreo-zn-po-021",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Poliéster 175 g con aberturas laterales. Tallas hasta 5XL.",
+      "especificaciones": "3 botones al tono de la tela. Aberturas laterales. Tallas: Caballero S–5XL · Dama S–5XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-021-render.webp",
+      "colores": [
+        "zn-po-021-c01",
+        "zn-po-021-c02",
+        "zn-po-021-c03",
+        "zn-po-021-c04",
+        "zn-po-021-c05",
+        "zn-po-021-c06",
+        "zn-po-021-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 175
+    },
+    {
+      "id": "zn-po-022",
+      "sku": "ZN-PO-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo con espalda ventilada",
+      "nombreFamilia": "Polo con espalda ventilada",
+      "familia": "zain-mayoreo-zn-po-022",
+      "categoria": "Polos",
+      "silueta": "Unisex",
+      "descripcion": "Poliéster con elastano 150 g y abertura de malla en la espalda.",
+      "especificaciones": "3 botones al tono de la tela. Aberturas laterales. Abertura con malla en espalda. Tallas: Unisex 2XS–3XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "88% poliéster / 12% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-022-render.webp",
+      "colores": [
+        "zn-po-022-c01",
+        "zn-po-022-c02",
+        "zn-po-022-c03",
+        "zn-po-022-c04",
+        "zn-po-022-c05",
+        "zn-po-022-c06"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-po-023",
+      "sku": "ZN-PO-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo nylon stretch",
+      "nombreFamilia": "Polo nylon stretch",
+      "familia": "zain-mayoreo-zn-po-023",
+      "categoria": "Polos",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Nylon con elastano 170 g, caída suave y 10 colores. Tallas hasta 5XL.",
+      "especificaciones": "3 botones al tono de la tela. Aberturas laterales. Tallas: Caballero S–5XL · Dama S–5XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "88% nylon / 12% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-023-render.webp",
+      "colores": [
+        "zn-po-023-c01",
+        "zn-po-023-c02",
+        "zn-po-023-c03",
+        "zn-po-023-c04",
+        "zn-po-023-c05",
+        "zn-po-023-c06",
+        "zn-po-023-c07",
+        "zn-po-023-c08",
+        "zn-po-023-c09",
+        "zn-po-023-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
+    },
+    {
+      "id": "zn-po-024",
+      "sku": "ZN-PO-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo micro waffle",
+      "nombreFamilia": "Polo micro waffle",
+      "familia": "zain-mayoreo-zn-po-024",
+      "categoria": "Polos",
+      "silueta": "Unisex",
+      "descripcion": "Nylon con elastano 200 g en micro waffle. Corte recto unisex.",
+      "especificaciones": "3 Botones al tono de la tela. Corte recto. Cerrado de costados. Cuello termosellado. Tallas: Unisex 2XS–2XL. 12 colores del proveedor.",
+      "tejido": "Micro waffle",
+      "composicion": "70% nailon / 30% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-po-024-render.webp",
+      "colores": [
+        "zn-po-024-c01",
+        "zn-po-024-c02",
+        "zn-po-024-c03",
+        "zn-po-024-c04",
+        "zn-po-024-c05",
+        "zn-po-024-c06",
+        "zn-po-024-c07",
+        "zn-po-024-c08",
+        "zn-po-024-c09",
+        "zn-po-024-c10",
+        "zn-po-024-c11",
+        "zn-po-024-c12"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-cm-018",
+      "sku": "ZN-CM-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Camisa ejecutiva de gabardina",
+      "nombreFamilia": "Camisa ejecutiva de gabardina",
+      "familia": "zain-mayoreo-zn-cm-018",
+      "categoria": "Camisas",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Gabardina peinada 160 g con pinzas en espalda. Dama con detalles a contraste. Manga corta o larga.",
+      "especificaciones": "Pinzas en espalda. Botón down en cuello. Bolsa frontal. Contraste en bata y pie de cuello (excepto color Maroon). Tallas: Caballero S–4XL · Dama S–4XL. 8 colores del proveedor.",
+      "tejido": "Gabardina peinada",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-018-render.webp",
+      "colores": [
+        "zn-cm-018-c01",
+        "zn-cm-018-c02",
+        "zn-cm-018-c03",
+        "zn-cm-018-c04",
+        "zn-cm-018-c05",
+        "zn-cm-018-c06",
+        "zn-cm-018-c07",
+        "zn-cm-018-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "fotosColor": {
+        "zn-cm-018-c01": "img/productos/zain/zn-cm-018-c01.webp",
+        "zn-cm-018-c02": "img/productos/zain/zn-cm-018-c02.webp",
+        "zn-cm-018-c03": "img/productos/zain/zn-cm-018-c03.webp",
+        "zn-cm-018-c04": "img/productos/zain/zn-cm-018-c04.webp",
+        "zn-cm-018-c05": "img/productos/zain/zn-cm-018-c05.webp",
+        "zn-cm-018-c07": "img/productos/zain/zn-cm-018-c07.webp"
+      },
+      "coloresSinRender": [
+        "zn-cm-018-c08"
+      ]
+    },
+    {
+      "id": "zn-cm-019",
+      "sku": "ZN-CM-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Camisa de cuadros stretch",
+      "nombreFamilia": "Camisa de cuadros stretch",
+      "familia": "zain-mayoreo-zn-cm-019",
+      "categoria": "Camisas",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Poliéster con elastano 110 g que no se arruga. Manga corta o larga.",
+      "especificaciones": "Pinzas en espalda. Botón down en cuello. Bolsa frontal. Tallas: Caballero S–4XL · Dama S–4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "96% poliéster filamento / 4% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-019-render.webp",
+      "colores": [
+        "zn-cm-019-c01",
+        "zn-cm-019-c02",
+        "zn-cm-019-c03",
+        "zn-cm-019-c04",
+        "zn-cm-019-c05"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 110,
+      "fotosColor": {
+        "zn-cm-019-c01": "img/productos/zain/zn-cm-019-c01.webp",
+        "zn-cm-019-c02": "img/productos/zain/zn-cm-019-c02.webp",
+        "zn-cm-019-c03": "img/productos/zain/zn-cm-019-c03.webp",
+        "zn-cm-019-c04": "img/productos/zain/zn-cm-019-c04.webp",
+        "zn-cm-019-c05": "img/productos/zain/zn-cm-019-c05.webp"
+      }
+    },
+    {
+      "id": "zn-cm-020",
+      "sku": "ZN-CM-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Camisa de pesca ventilada",
+      "nombreFamilia": "Camisa de pesca ventilada",
+      "familia": "zain-mayoreo-zn-cm-020",
+      "categoria": "Camisas",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Poliéster ultraligero con ventilación de malla en espalda y doble bolsa con velcro.",
+      "especificaciones": "Abotonado al tono de la tela. Ventilación en espalda con malla. Doble bolsa frontal con velcro. Tallas: Caballero S–2XL · Dama S–2XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-cm-020-render.webp",
+      "colores": [
+        "zn-cm-020-c01",
+        "zn-cm-020-c02",
+        "zn-cm-020-c03",
+        "zn-cm-020-c04",
+        "zn-cm-020-c05",
+        "zn-cm-020-c06",
+        "zn-cm-020-c07",
+        "zn-cm-020-c08",
+        "zn-cm-020-c09",
+        "zn-cm-020-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 70
+    },
+    {
+      "id": "zn-su-006",
+      "sku": "ZN-SU-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera canguro clásica",
+      "nombreFamilia": "Sudadera canguro clásica",
+      "familia": "zain-mayoreo-zn-su-006",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 50/50 de 270 g con capucha y bolsa canguro. 43 colores, tallas XS a 5XL.",
+      "especificaciones": "Tallas: Unisex XS–5XL. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-006-render.webp",
+      "colores": [
+        "zn-su-006-c01",
+        "zn-su-006-c02",
+        "zn-su-006-c03",
+        "zn-su-006-c04",
+        "zn-su-006-c05",
+        "zn-su-006-c06",
+        "zn-su-006-c07",
+        "zn-su-006-c08",
+        "zn-su-006-c09",
+        "zn-su-006-c10",
+        "zn-su-006-c11",
+        "zn-su-006-c12"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 270,
+      "fotosColor": {
+        "zn-su-006-c09": "img/productos/zain/zn-su-006-c09.webp",
+        "zn-su-006-c10": "img/productos/zain/zn-su-006-c10.webp"
+      }
+    },
+    {
+      "id": "zn-su-007",
+      "sku": "ZN-SU-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera cuello redondo clásica",
+      "nombreFamilia": "Sudadera cuello redondo clásica",
+      "familia": "zain-mayoreo-zn-su-007",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 50/50 de 270 g sin capucha. 37 colores.",
+      "especificaciones": "Tallas: Unisex XS–5XL. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-007-render.webp",
+      "colores": [
+        "zn-su-007-c01",
+        "zn-su-007-c02",
+        "zn-su-007-c03",
+        "zn-su-007-c04",
+        "zn-su-007-c05",
+        "zn-su-007-c06",
+        "zn-su-007-c07",
+        "zn-su-007-c08",
+        "zn-su-007-c09",
+        "zn-su-007-c10",
+        "zn-su-007-c11",
+        "zn-su-007-c12"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 270,
+      "fotosColor": {
+        "zn-su-007-c09": "img/productos/zain/zn-su-007-c09.webp",
+        "zn-su-007-c10": "img/productos/zain/zn-su-007-c10.webp"
+      }
+    },
+    {
+      "id": "zn-su-008",
+      "sku": "ZN-SU-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera con cierre completo",
+      "nombreFamilia": "Sudadera con cierre completo",
+      "familia": "zain-mayoreo-zn-su-008",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 50/50 con capucha, cierre completo y bolsas.",
+      "especificaciones": "Tallas: Unisex S–5XL. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-008-render.webp",
+      "colores": [
+        "zn-su-008-c01",
+        "zn-su-008-c02",
+        "zn-su-008-c03",
+        "zn-su-008-c04",
+        "zn-su-008-c05",
+        "zn-su-008-c06",
+        "zn-su-008-c07",
+        "zn-su-008-c08",
+        "zn-su-008-c09",
+        "zn-su-008-c10",
+        "zn-su-008-c11",
+        "zn-su-008-c12"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 270,
+      "fotosColor": {
+        "zn-su-008-c09": "img/productos/zain/zn-su-008-c09.webp",
+        "zn-su-008-c10": "img/productos/zain/zn-su-008-c10.webp"
+      }
+    },
+    {
+      "id": "zn-su-009",
+      "sku": "ZN-SU-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera premium de algodón peinado",
+      "nombreFamilia": "Sudadera premium de algodón peinado",
+      "familia": "zain-mayoreo-zn-su-009",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 80/20 de 285 g con lavado suave. Con capucha, cuello redondo o cierre.",
+      "especificaciones": "Tallas: Unisex S–5XL. 37 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% algodón peinado / 20% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-009-render.webp",
+      "colores": [
+        "zn-su-009-c01",
+        "zn-su-009-c02",
+        "zn-su-009-c03",
+        "zn-su-009-c04",
+        "zn-su-009-c05",
+        "zn-su-009-c06",
+        "zn-su-009-c07",
+        "zn-su-009-c08",
+        "zn-su-009-c09",
+        "zn-su-009-c10",
+        "zn-su-009-c11",
+        "zn-su-009-c12",
+        "zn-su-009-c13",
+        "zn-su-009-c14",
+        "zn-su-009-c15",
+        "zn-su-009-c16",
+        "zn-su-009-c17",
+        "zn-su-009-c18",
+        "zn-su-009-c19",
+        "zn-su-009-c20",
+        "zn-su-009-c21",
+        "zn-su-009-c22",
+        "zn-su-009-c23",
+        "zn-su-009-c24",
+        "zn-su-009-c25",
+        "zn-su-009-c26",
+        "zn-su-009-c27",
+        "zn-su-009-c28",
+        "zn-su-009-c29",
+        "zn-su-009-c30",
+        "zn-su-009-c31",
+        "zn-su-009-c32",
+        "zn-su-009-c33",
+        "zn-su-009-c34",
+        "zn-su-009-c35",
+        "zn-su-009-c36",
+        "zn-su-009-c37"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 285,
+      "fotosColor": {
+        "zn-su-009-c28": "img/productos/zain/zn-su-009-c28.webp",
+        "zn-su-009-c31": "img/productos/zain/zn-su-009-c31.webp",
+        "zn-su-009-c33": "img/productos/zain/zn-su-009-c33.webp"
+      }
+    },
+    {
+      "id": "zn-su-010",
+      "sku": "ZN-SU-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera premium ¼ de cierre",
+      "nombreFamilia": "Sudadera premium ¼ de cierre",
+      "familia": "zain-mayoreo-zn-su-010",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 80/20 de 285 g con cuello alto y ¼ de cierre.",
+      "especificaciones": "Tallas: Unisex S–3XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% algodón peinado / 20% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-010-render.webp",
+      "colores": [
+        "zn-su-010-c01",
+        "zn-su-010-c02",
+        "zn-su-010-c03",
+        "zn-su-010-c04",
+        "zn-su-010-c05",
+        "zn-su-010-c06",
+        "zn-su-010-c07",
+        "zn-su-010-c08",
+        "zn-su-010-c09",
+        "zn-su-010-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 285,
+      "fotosColor": {
+        "zn-su-010-c08": "img/productos/zain/zn-su-010-c08.webp"
+      }
+    },
+    {
+      "id": "zn-su-011",
+      "sku": "ZN-SU-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera extra gruesa",
+      "nombreFamilia": "Sudadera extra gruesa",
+      "familia": "zain-mayoreo-zn-su-011",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa de 355 g con poliéster reciclado. Con capucha o cuello redondo, estilo noventas.",
+      "especificaciones": "Tallas: Unisex S–4XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "75% algodón / 25% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-011-render.webp",
+      "colores": [
+        "zn-su-011-c01",
+        "zn-su-011-c02",
+        "zn-su-011-c03",
+        "zn-su-011-c04",
+        "zn-su-011-c05",
+        "zn-su-011-c06",
+        "zn-su-011-c07",
+        "zn-su-011-c08",
+        "zn-su-011-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 355
+    },
+    {
+      "id": "zn-su-012",
+      "sku": "ZN-SU-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera gruesa 50/50",
+      "nombreFamilia": "Sudadera gruesa 50/50",
+      "familia": "zain-mayoreo-zn-su-012",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Felpa de 305 g, resistente y abrigadora. Con capucha o cuello redondo.",
+      "especificaciones": "Tallas: Unisex S–3XL. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-012-render.webp",
+      "colores": [
+        "zn-su-012-c01",
+        "zn-su-012-c02",
+        "zn-su-012-c03",
+        "zn-su-012-c04",
+        "zn-su-012-c05",
+        "zn-su-012-c06",
+        "zn-su-012-c07",
+        "zn-su-012-c08",
+        "zn-su-012-c09",
+        "zn-su-012-c10",
+        "zn-su-012-c11",
+        "zn-su-012-c12"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 305,
+      "fotosColor": {
+        "zn-su-012-c08": "img/productos/zain/zn-su-012-c08.webp",
+        "zn-su-012-c09": "img/productos/zain/zn-su-012-c09.webp"
+      }
+    },
+    {
+      "id": "zn-su-013",
+      "sku": "ZN-SU-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera cuello redondo",
+      "nombreFamilia": "Sudadera cuello redondo",
+      "familia": "zain-mayoreo-zn-su-013",
+      "categoria": "Sudaderas",
+      "silueta": "Adultos",
+      "descripcion": "Felpa 275 g sin capucha. Un básico de temporada fría.",
+      "especificaciones": "Tallas: Adultos S–2XL. 7 colores del proveedor.",
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-013-render.webp",
+      "colores": [
+        "zn-su-013-c01",
+        "zn-su-013-c02",
+        "zn-su-013-c03",
+        "zn-su-013-c04",
+        "zn-su-013-c05",
+        "zn-su-013-c06",
+        "zn-su-013-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 275,
+      "fotosColor": {
+        "zn-su-013-c02": "img/productos/zain/zn-su-013-c02.webp",
+        "zn-su-013-c03": "img/productos/zain/zn-su-013-c03.webp"
+      }
+    },
+    {
+      "id": "zn-su-014",
+      "sku": "ZN-SU-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera deportiva de poliéster",
+      "nombreFamilia": "Sudadera deportiva de poliéster",
+      "familia": "zain-mayoreo-zn-su-014",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Poliéster 240 g con capucha y bolsa canguro. No hace bolitas y seca rápido.",
+      "especificaciones": "Capucha. Bolsa tipo canguro. Rib en puño y bajos. Tallas: Unisex S–2XL. 6 colores del proveedor.",
+      "tejido": "Poliéster",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-su-014-render.webp",
+      "colores": [
+        "zn-su-014-c01",
+        "zn-su-014-c02",
+        "zn-su-014-c03",
+        "zn-su-014-c04",
+        "zn-su-014-c05",
+        "zn-su-014-c06"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 240
+    },
+    {
+      "id": "zn-ch-004",
+      "sku": "ZN-CH-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Chamarra softshell reciclada",
+      "nombreFamilia": "Chamarra softshell reciclada",
+      "familia": "zain-mayoreo-zn-ch-004",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Softshell 300 g de poliéster reciclado, con ajuste de puño y bolsillo en pecho.",
+      "especificaciones": "Ajuste de puño con velcro. Bolsillos laterales con cierre. Bolsillo en pecho con cierre. Jaladera de plástico en cierre. Tallas: Unisex XS–2XL. 3 colores del proveedor.",
+      "tejido": "Softshell",
+      "composicion": "88% poliéster tricapa reciclado / 12% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-004-render.webp",
+      "colores": [
+        "zn-ch-004-c01",
+        "zn-ch-004-c02",
+        "zn-ch-004-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300,
+      "fotosColor": {
+        "zn-ch-004-c01": "img/productos/zain/zn-ch-004-c01.webp"
+      }
+    },
+    {
+      "id": "zn-ch-005",
+      "sku": "ZN-CH-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Chamarra acolchada empacable",
+      "nombreFamilia": "Chamarra acolchada empacable",
+      "familia": "zain-mayoreo-zn-ch-005",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Nylon con relleno, se guarda en su propia bolsa. Tallas hasta 4XL.",
+      "especificaciones": "Empacable (bolsa adentro). Cierre completo. Bolsillos frontales individuales. Tallas: Unisex XS–4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% nylon con relleno de poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-005-render.webp",
+      "colores": [
+        "zn-ch-005-c01",
+        "zn-ch-005-c02",
+        "zn-ch-005-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 38
+    },
+    {
+      "id": "zn-ch-006",
+      "sku": "ZN-CH-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Chamarra universitaria",
+      "nombreFamilia": "Chamarra universitaria",
+      "familia": "zain-mayoreo-zn-ch-006",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Estilo varsity bicolor con botones a presión. Para generaciones y equipos.",
+      "especificaciones": "Corte regular. Abotonado completo. Bolsillos frontales individuales. Tallas: Unisex 3XS–2XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "95% poliéster / 5% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-006-render.webp",
+      "colores": [
+        "zn-ch-006-c01",
+        "zn-ch-006-c02",
+        "zn-ch-006-c03",
+        "zn-ch-006-c04",
+        "zn-ch-006-c05",
+        "zn-ch-006-c06"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250,
+      "fotosColor": {
+        "zn-ch-006-c01": "img/productos/zain/zn-ch-006-c01.webp",
+        "zn-ch-006-c02": "img/productos/zain/zn-ch-006-c02.webp",
+        "zn-ch-006-c03": "img/productos/zain/zn-ch-006-c03.webp",
+        "zn-ch-006-c04": "img/productos/zain/zn-ch-006-c04.webp",
+        "zn-ch-006-c05": "img/productos/zain/zn-ch-006-c05.webp",
+        "zn-ch-006-c06": "img/productos/zain/zn-ch-006-c06.webp"
+      }
+    },
+    {
+      "id": "zn-ch-007",
+      "sku": "ZN-CH-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Rompevientos ultraligero",
+      "nombreFamilia": "Rompevientos ultraligero",
+      "familia": "zain-mayoreo-zn-ch-007",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Nylon de 30 g con bolsillos con cierre y líneas reflejantes atrás.",
+      "especificaciones": "Corte regular. Cierre completo. Bolsillos con cierre frontales individuales. Lineas reflejantes en parte posterior. Tallas: Unisex 3XS–2XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% nylon",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-007-render.webp",
+      "colores": [
+        "zn-ch-007-c01",
+        "zn-ch-007-c02",
+        "zn-ch-007-c03",
+        "zn-ch-007-c04",
+        "zn-ch-007-c05",
+        "zn-ch-007-c06"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 30
+    },
+    {
+      "id": "zn-ch-008",
+      "sku": "ZN-CH-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Rompevientos reflejante",
+      "nombreFamilia": "Rompevientos reflejante",
+      "familia": "zain-mayoreo-zn-ch-008",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Nylon plata reflejante de alta visibilidad, con cierre y bolsillos.",
+      "especificaciones": "Corte regular. Cierre completo. Bolsillos con cierre frontales individuales. Tallas: Unisex XS–4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% nylon",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-008-render.webp",
+      "colores": [
+        "zn-ch-008-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 130,
+      "fotosColor": {
+        "zn-ch-008-c01": "img/productos/zain/zn-ch-008-c01.webp"
+      }
+    },
+    {
+      "id": "zn-ch-009",
+      "sku": "ZN-CH-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Chaleco softshell reciclado",
+      "nombreFamilia": "Chaleco softshell reciclado",
+      "familia": "zain-mayoreo-zn-ch-009",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Softshell 300 g reciclado con bolsillo en pecho con cierre.",
+      "especificaciones": "Bolsillos laterales con cierre. Bolsillo en pecho con cierre. Jaladera de plástico en cierre. Tallas: Unisex XS–2XL. 2 colores del proveedor.",
+      "tejido": "Softshell",
+      "composicion": "100% poliéster tricapa reciclado",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-009-render.webp",
+      "colores": [
+        "zn-ch-009-c01",
+        "zn-ch-009-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-ch-010",
+      "sku": "ZN-CH-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Chaleco acolchado empacable",
+      "nombreFamilia": "Chaleco acolchado empacable",
+      "familia": "zain-mayoreo-zn-ch-010",
+      "categoria": "Chamarras",
+      "silueta": "Unisex",
+      "descripcion": "Nylon con relleno que se guarda en su bolsa. Tallas 2XS a 4XL.",
+      "especificaciones": "Empacable (bolsa adentro). Cierre completo. Bolsillos frontales individuales. Tallas: Unisex 2XS–4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% nylon con relleno de poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-ch-010-render.webp",
+      "colores": [
+        "zn-ch-010-c01",
+        "zn-ch-010-c02",
+        "zn-ch-010-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 38
+    },
+    {
+      "id": "zn-pa-001",
+      "sku": "ZN-PA-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Pants deportivo de felpa",
+      "nombreFamilia": "Pants deportivo de felpa",
+      "familia": "zain-mayoreo-zn-pa-001",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Felpa 50/50 con puño o bota abierta. Para kits, uniformes deportivos y escuelas.",
+      "especificaciones": "Tallas: Unisex S–3XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pa-001-render.webp",
+      "colores": [
+        "zn-pa-001-c01",
+        "zn-pa-001-c02",
+        "zn-pa-001-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 270,
+      "fotosColor": {
+        "zn-pa-001-c02": "img/productos/zain/zn-pa-001-c02.webp"
+      }
+    },
+    {
+      "id": "zn-pa-002",
+      "sku": "ZN-PA-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Pantalón de mezclilla",
+      "nombreFamilia": "Pantalón de mezclilla",
+      "familia": "zain-mayoreo-zn-pa-002",
+      "categoria": "Pantalones",
+      "silueta": "Caballero y Dama",
+      "descripcion": "Mezclilla 100% algodón de 440 g, resistente para trabajo pesado.",
+      "especificaciones": "Tallas: Caballero 28–40 · Dama 5–17. 1 colores del proveedor.",
+      "tejido": "Mezclilla",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pa-002-render.webp",
+      "colores": [
+        "zn-pa-002-c01"
+      ],
+      "tallas": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 440,
+      "fotosColor": {
+        "zn-pa-002-c01": "img/productos/zain/zn-pa-002-c01.webp"
+      }
+    },
+    {
+      "id": "zn-pa-003",
+      "sku": "ZN-PA-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Pantalón stretch",
+      "nombreFamilia": "Pantalón stretch",
+      "familia": "zain-mayoreo-zn-pa-003",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Nylon con elastano 140 g, ligero y con bolsillos traseros con cierre.",
+      "especificaciones": "Corte regular. Bolsillos traseros con cierre. Tallas: Unisex XS–3XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "90% nylon / 10% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-pa-003-render.webp",
+      "colores": [
+        "zn-pa-003-c01",
+        "zn-pa-003-c02",
+        "zn-pa-003-c03",
+        "zn-pa-003-c04"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 140
+    },
+    {
+      "id": "zn-in-001",
+      "sku": "ZN-IN-001",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera infantil de algodón",
+      "nombreFamilia": "Playera infantil de algodón",
+      "familia": "zain-mayoreo-zn-in-001",
+      "categoria": "Infantil",
+      "silueta": "Juvenil y Bebé",
+      "descripcion": "Algodón en tallas juveniles y de bebé (2T a 6T). Más de 50 colores.",
+      "especificaciones": "Tallas: Juvenil YXS–YXL · Bebé 2T–6T. 20 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-001-render.webp",
+      "colores": [
+        "zn-in-001-c01",
+        "zn-in-001-c02",
+        "zn-in-001-c03",
+        "zn-in-001-c04",
+        "zn-in-001-c05",
+        "zn-in-001-c06",
+        "zn-in-001-c07",
+        "zn-in-001-c08",
+        "zn-in-001-c09",
+        "zn-in-001-c10",
+        "zn-in-001-c11",
+        "zn-in-001-c12",
+        "zn-in-001-c13",
+        "zn-in-001-c14",
+        "zn-in-001-c15",
+        "zn-in-001-c16",
+        "zn-in-001-c17",
+        "zn-in-001-c18",
+        "zn-in-001-c19",
+        "zn-in-001-c20"
+      ],
+      "tallas": [
+        "YXS",
+        "YS",
+        "YM",
+        "YL",
+        "YXL",
+        "2T",
+        "3T",
+        "4T",
+        "5T",
+        "6T"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "fotosColor": {
+        "zn-in-001-c04": "img/productos/zain/zn-in-001-c04.webp",
+        "zn-in-001-c07": "img/productos/zain/zn-in-001-c07.webp",
+        "zn-in-001-c14": "img/productos/zain/zn-in-001-c14.webp",
+        "zn-in-001-c15": "img/productos/zain/zn-in-001-c15.webp",
+        "zn-in-001-c16": "img/productos/zain/zn-in-001-c16.webp",
+        "zn-in-001-c17": "img/productos/zain/zn-in-001-c17.webp"
+      }
+    },
+    {
+      "id": "zn-in-002",
+      "sku": "ZN-IN-002",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudadera infantil",
+      "nombreFamilia": "Sudadera infantil",
+      "familia": "zain-mayoreo-zn-in-002",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Felpa 50/50 con capucha, cuello redondo o cierre, en tallas juveniles.",
+      "especificaciones": "Tallas: Juvenil YXS–YXL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-002-render.webp",
+      "colores": [
+        "zn-in-002-c01",
+        "zn-in-002-c02",
+        "zn-in-002-c03",
+        "zn-in-002-c04",
+        "zn-in-002-c05",
+        "zn-in-002-c06",
+        "zn-in-002-c07",
+        "zn-in-002-c08"
+      ],
+      "tallas": [
+        "YXS",
+        "YS",
+        "YM",
+        "YL",
+        "YXL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 270,
+      "fotosColor": {
+        "zn-in-002-c06": "img/productos/zain/zn-in-002-c06.webp"
+      }
+    },
+    {
+      "id": "zn-in-003",
+      "sku": "ZN-IN-003",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo infantil 50/50",
+      "nombreFamilia": "Polo infantil 50/50",
+      "familia": "zain-mayoreo-zn-in-003",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Polo de jersey 50/50 para uniforme escolar.",
+      "especificaciones": "Tallas: Juvenil YS–YXL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-003-render.webp",
+      "colores": [
+        "zn-in-003-c01",
+        "zn-in-003-c02",
+        "zn-in-003-c03",
+        "zn-in-003-c04",
+        "zn-in-003-c05",
+        "zn-in-003-c06",
+        "zn-in-003-c07",
+        "zn-in-003-c08",
+        "zn-in-003-c09",
+        "zn-in-003-c10"
+      ],
+      "tallas": [
+        "YS",
+        "YM",
+        "YL",
+        "YXL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-in-003-c08": "img/productos/zain/zn-in-003-c08.webp"
+      }
+    },
+    {
+      "id": "zn-in-004",
+      "sku": "ZN-IN-004",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva infantil de alto rendimiento",
+      "nombreFamilia": "Playera deportiva infantil de alto rendimiento",
+      "familia": "zain-mayoreo-zn-in-004",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Poliéster que absorbe el sudor, para torneos y escuelas.",
+      "especificaciones": "Tallas: Juvenil YXS–YXL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-004-render.webp",
+      "colores": [
+        "zn-in-004-c01",
+        "zn-in-004-c02",
+        "zn-in-004-c03",
+        "zn-in-004-c04",
+        "zn-in-004-c05",
+        "zn-in-004-c06",
+        "zn-in-004-c07",
+        "zn-in-004-c08"
+      ],
+      "tallas": [
+        "YXS",
+        "YS",
+        "YM",
+        "YL",
+        "YXL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "fotosColor": {
+        "zn-in-004-c05": "img/productos/zain/zn-in-004-c05.webp"
+      }
+    },
+    {
+      "id": "zn-in-005",
+      "sku": "ZN-IN-005",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera infantil de algodón",
+      "nombreFamilia": "Playera infantil de algodón",
+      "familia": "zain-mayoreo-zn-in-005",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Algodón 185 g para escuelas, cursos de verano y eventos familiares.",
+      "especificaciones": "Tapacostura. Doble pespunte en cuello. Tejido tubular. Corte recto. Tallas: Infantil XS–XL. 17 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-005-render.webp",
+      "colores": [
+        "zn-in-005-c01",
+        "zn-in-005-c02",
+        "zn-in-005-c03",
+        "zn-in-005-c04",
+        "zn-in-005-c05",
+        "zn-in-005-c06",
+        "zn-in-005-c07",
+        "zn-in-005-c08",
+        "zn-in-005-c09",
+        "zn-in-005-c10",
+        "zn-in-005-c11",
+        "zn-in-005-c12",
+        "zn-in-005-c13",
+        "zn-in-005-c14",
+        "zn-in-005-c15",
+        "zn-in-005-c16",
+        "zn-in-005-c17"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 185,
+      "fotosColor": {
+        "zn-in-005-c10": "img/productos/zain/zn-in-005-c10.webp"
+      }
+    },
+    {
+      "id": "zn-in-006",
+      "sku": "ZN-IN-006",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera infantil peso completo",
+      "nombreFamilia": "Playera infantil peso completo",
+      "familia": "zain-mayoreo-zn-in-006",
+      "categoria": "Infantil",
+      "silueta": "Juvenil y Infantil",
+      "descripcion": "Algodón 195 g en tallas juveniles e infantiles, manga corta o larga.",
+      "especificaciones": "Tallas: Juvenil S–XL · Infantil 4–14 años. 17 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-006-render.webp",
+      "colores": [
+        "zn-in-006-c01",
+        "zn-in-006-c02",
+        "zn-in-006-c03",
+        "zn-in-006-c04",
+        "zn-in-006-c05",
+        "zn-in-006-c06",
+        "zn-in-006-c07",
+        "zn-in-006-c08",
+        "zn-in-006-c09",
+        "zn-in-006-c10",
+        "zn-in-006-c11",
+        "zn-in-006-c12",
+        "zn-in-006-c13",
+        "zn-in-006-c14",
+        "zn-in-006-c15",
+        "zn-in-006-c16",
+        "zn-in-006-c17"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 195,
+      "fotosColor": {
+        "zn-in-006-c03": "img/productos/zain/zn-in-006-c03.webp"
+      }
+    },
+    {
+      "id": "zn-in-007",
+      "sku": "ZN-IN-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera deportiva infantil",
+      "nombreFamilia": "Playera deportiva infantil",
+      "familia": "zain-mayoreo-zn-in-007",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Malla de poliéster 150 g para torneos y escuelas.",
+      "especificaciones": "Cerrado de costados. Tapacostura a contraste. Doble pespunte en cuello. Corte recto. Tallas: Infantil S–XL. 16 colores del proveedor.",
+      "tejido": "Mesh",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-007-render.webp",
+      "colores": [
+        "zn-in-007-c01",
+        "zn-in-007-c02",
+        "zn-in-007-c03",
+        "zn-in-007-c04",
+        "zn-in-007-c05",
+        "zn-in-007-c06",
+        "zn-in-007-c07",
+        "zn-in-007-c08",
+        "zn-in-007-c09",
+        "zn-in-007-c10",
+        "zn-in-007-c11",
+        "zn-in-007-c12",
+        "zn-in-007-c13",
+        "zn-in-007-c14",
+        "zn-in-007-c15",
+        "zn-in-007-c16"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150,
+      "fotosColor": {
+        "zn-in-007-c01": "img/productos/zain/zn-in-007-c01.webp",
+        "zn-in-007-c02": "img/productos/zain/zn-in-007-c02.webp",
+        "zn-in-007-c07": "img/productos/zain/zn-in-007-c07.webp",
+        "zn-in-007-c08": "img/productos/zain/zn-in-007-c08.webp",
+        "zn-in-007-c10": "img/productos/zain/zn-in-007-c10.webp",
+        "zn-in-007-c14": "img/productos/zain/zn-in-007-c14.webp"
+      },
+      "coloresSinRender": [
+        "zn-in-007-c03",
+        "zn-in-007-c04",
+        "zn-in-007-c05",
+        "zn-in-007-c06",
+        "zn-in-007-c09",
+        "zn-in-007-c11",
+        "zn-in-007-c12",
+        "zn-in-007-c13",
+        "zn-in-007-c15",
+        "zn-in-007-c16"
+      ]
+    },
+    {
+      "id": "zn-in-008",
+      "sku": "ZN-IN-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Playera infantil para sublimación",
+      "nombreFamilia": "Playera infantil para sublimación",
+      "familia": "zain-mayoreo-zn-in-008",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Poliéster blanco 160 g para diseños a todo color.",
+      "especificaciones": "Cuello redondo. Suave al tacto. Doble pespunte en cuello. Tapacostura. Tallas: Infantil XS–XL. 1 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-008-render.webp",
+      "colores": [
+        "zn-in-008-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160
+    },
+    {
+      "id": "zn-in-009",
+      "sku": "ZN-IN-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Polo infantil",
+      "nombreFamilia": "Polo infantil",
+      "familia": "zain-mayoreo-zn-in-009",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Polo 100% algodón de 195 g para uniforme escolar.",
+      "especificaciones": "Tallas: Infantil 4–14 años. 3 colores del proveedor.",
+      "tejido": "Jersey",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-009-render.webp",
+      "colores": [
+        "zn-in-009-c01",
+        "zn-in-009-c02",
+        "zn-in-009-c03"
+      ],
+      "tallas": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 195
+    },
+    {
+      "id": "zn-in-010",
+      "sku": "ZN-IN-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sudaderas juveniles e infantiles",
+      "nombreFamilia": "Sudaderas juveniles e infantiles",
+      "familia": "zain-mayoreo-zn-in-010",
+      "categoria": "Infantil",
+      "silueta": "Juvenil y Infantil",
+      "descripcion": "Felpa 275 g: cuello redondo, canguro con capucha o con cierre.",
+      "especificaciones": "Tallas: Juvenil S–XL · Infantil 4–14 años. 7 colores del proveedor.",
+      "tejido": "Felpa",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-in-010-render.webp",
+      "colores": [
+        "zn-in-010-c01",
+        "zn-in-010-c02",
+        "zn-in-010-c03",
+        "zn-in-010-c04",
+        "zn-in-010-c05",
+        "zn-in-010-c06",
+        "zn-in-010-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 275,
+      "fotosColor": {
+        "zn-in-010-c02": "img/productos/zain/zn-in-010-c02.webp",
+        "zn-in-010-c03": "img/productos/zain/zn-in-010-c03.webp"
+      }
+    },
+    {
+      "id": "zn-go-010",
+      "sku": "ZN-GO-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra deportiva visera sándwich",
+      "nombreFamilia": "Gorra deportiva visera sándwich",
+      "familia": "zain-mayoreo-zn-go-010",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Microfibra de secado rápido con visera de dos tonos y velcro.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster performance",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-010-render.webp",
+      "colores": [
+        "zn-go-010-c01",
+        "zn-go-010-c02",
+        "zn-go-010-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-010-c01": "img/productos/zain/zn-go-010-c01.webp",
+        "zn-go-010-c02": "img/productos/zain/zn-go-010-c02.webp",
+        "zn-go-010-c03": "img/productos/zain/zn-go-010-c03.webp"
+      }
+    },
+    {
+      "id": "zn-go-011",
+      "sku": "ZN-GO-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra deportiva 5 paneles perforada",
+      "nombreFamilia": "Gorra deportiva 5 paneles perforada",
+      "familia": "zain-mayoreo-zn-go-011",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Perfil alto con paneles traseros microperforados y snapback.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "95% poliéster / 5% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-011-render.webp",
+      "colores": [
+        "zn-go-011-c01",
+        "zn-go-011-c02",
+        "zn-go-011-c03",
+        "zn-go-011-c04",
+        "zn-go-011-c05",
+        "zn-go-011-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-012",
+      "sku": "ZN-GO-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra deportiva elástica",
+      "nombreFamilia": "Gorra deportiva elástica",
+      "familia": "zain-mayoreo-zn-go-012",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Microfibra transpirable con malla suave de doble capa.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Poliéster · rayón · elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-012-render.webp",
+      "colores": [
+        "zn-go-012-c01",
+        "zn-go-012-c02",
+        "zn-go-012-c03",
+        "zn-go-012-c04",
+        "zn-go-012-c05",
+        "zn-go-012-c06",
+        "zn-go-012-c07",
+        "zn-go-012-c08"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-012-c01": "img/productos/zain/zn-go-012-c01.webp",
+        "zn-go-012-c03": "img/productos/zain/zn-go-012-c03.webp",
+        "zn-go-012-c04": "img/productos/zain/zn-go-012-c04.webp",
+        "zn-go-012-c05": "img/productos/zain/zn-go-012-c05.webp",
+        "zn-go-012-c06": "img/productos/zain/zn-go-012-c06.webp",
+        "zn-go-012-c07": "img/productos/zain/zn-go-012-c07.webp"
+      },
+      "coloresSinRender": [
+        "zn-go-012-c08"
+      ]
+    },
+    {
+      "id": "zn-go-013",
+      "sku": "ZN-GO-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra impermeable",
+      "nombreFamilia": "Gorra impermeable",
+      "familia": "zain-mayoreo-zn-go-013",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Microfibra que repele el agua, paneles microperforados.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "95% poliéster / 5% elastano",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-013-render.webp",
+      "colores": [
+        "zn-go-013-c01",
+        "zn-go-013-c02",
+        "zn-go-013-c03",
+        "zn-go-013-c04",
+        "zn-go-013-c05",
+        "zn-go-013-c06",
+        "zn-go-013-c07",
+        "zn-go-013-c08",
+        "zn-go-013-c09"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-013-c01": "img/productos/zain/zn-go-013-c01.webp",
+        "zn-go-013-c05": "img/productos/zain/zn-go-013-c05.webp",
+        "zn-go-013-c08": "img/productos/zain/zn-go-013-c08.webp"
+      }
+    },
+    {
+      "id": "zn-go-014",
+      "sku": "ZN-GO-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra 5 paneles perfil alto",
+      "nombreFamilia": "Gorra 5 paneles perfil alto",
+      "familia": "zain-mayoreo-zn-go-014",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Estructura rígida, visera semicurva y malla trasera.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-014-render.webp",
+      "colores": [
+        "zn-go-014-c01",
+        "zn-go-014-c02",
+        "zn-go-014-c03",
+        "zn-go-014-c04",
+        "zn-go-014-c05",
+        "zn-go-014-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-015",
+      "sku": "ZN-GO-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker jaspeada",
+      "nombreFamilia": "Gorra trucker jaspeada",
+      "familia": "zain-mayoreo-zn-go-015",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Frente jaspeado con malla y snapback.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón jaspeado · malla poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-015-render.webp",
+      "colores": [
+        "zn-go-015-c01",
+        "zn-go-015-c02",
+        "zn-go-015-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-015-c01": "img/productos/zain/zn-go-015-c01.webp",
+        "zn-go-015-c02": "img/productos/zain/zn-go-015-c02.webp",
+        "zn-go-015-c03": "img/productos/zain/zn-go-015-c03.webp"
+      }
+    },
+    {
+      "id": "zn-go-016",
+      "sku": "ZN-GO-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker de mezclilla",
+      "nombreFamilia": "Gorra trucker de mezclilla",
+      "familia": "zain-mayoreo-zn-go-016",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Paneles frontales de mezclilla con malla trasera.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-016-render.webp",
+      "colores": [
+        "zn-go-016-c01",
+        "zn-go-016-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-016-c01": "img/productos/zain/zn-go-016-c01.webp",
+        "zn-go-016-c02": "img/productos/zain/zn-go-016-c02.webp"
+      }
+    },
+    {
+      "id": "zn-go-017",
+      "sku": "ZN-GO-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker semicurva",
+      "nombreFamilia": "Gorra trucker semicurva",
+      "familia": "zain-mayoreo-zn-go-017",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Algodón con malla suave de doble capa.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-017-render.webp",
+      "colores": [
+        "zn-go-017-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-018",
+      "sku": "ZN-GO-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker perfil medio",
+      "nombreFamilia": "Gorra trucker perfil medio",
+      "familia": "zain-mayoreo-zn-go-018",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Algodón afelpado al tacto con malla suave.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-018-render.webp",
+      "colores": [
+        "zn-go-018-c01",
+        "zn-go-018-c02",
+        "zn-go-018-c03",
+        "zn-go-018-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-018-c01": "img/productos/zain/zn-go-018-c01.webp",
+        "zn-go-018-c02": "img/productos/zain/zn-go-018-c02.webp",
+        "zn-go-018-c03": "img/productos/zain/zn-go-018-c03.webp",
+        "zn-go-018-c04": "img/productos/zain/zn-go-018-c04.webp"
+      }
+    },
+    {
+      "id": "zn-go-019",
+      "sku": "ZN-GO-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker canvas",
+      "nombreFamilia": "Gorra trucker canvas",
+      "familia": "zain-mayoreo-zn-go-019",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Frente de lona de algodón y ojillos metálicos.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Canvas 100% algodón · malla",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-019-render.webp",
+      "colores": [
+        "zn-go-019-c01",
+        "zn-go-019-c02",
+        "zn-go-019-c03",
+        "zn-go-019-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-019-c01": "img/productos/zain/zn-go-019-c01.webp",
+        "zn-go-019-c02": "img/productos/zain/zn-go-019-c02.webp",
+        "zn-go-019-c03": "img/productos/zain/zn-go-019-c03.webp",
+        "zn-go-019-c04": "img/productos/zain/zn-go-019-c04.webp"
+      }
+    },
+    {
+      "id": "zn-go-020",
+      "sku": "ZN-GO-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker visera de gamuza",
+      "nombreFamilia": "Gorra trucker visera de gamuza",
+      "familia": "zain-mayoreo-zn-go-020",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Copa de algodón con visera de gamuza sintética.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón · gamuza sintética",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-020-render.webp",
+      "colores": [
+        "zn-go-020-c01",
+        "zn-go-020-c02",
+        "zn-go-020-c03",
+        "zn-go-020-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-020-c01": "img/productos/zain/zn-go-020-c01.webp",
+        "zn-go-020-c02": "img/productos/zain/zn-go-020-c02.webp",
+        "zn-go-020-c03": "img/productos/zain/zn-go-020-c03.webp",
+        "zn-go-020-c04": "img/productos/zain/zn-go-020-c04.webp"
+      }
+    },
+    {
+      "id": "zn-go-021",
+      "sku": "ZN-GO-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker premium 5 paneles",
+      "nombreFamilia": "Gorra trucker premium 5 paneles",
+      "familia": "zain-mayoreo-zn-go-021",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Algodón con malla premium y muchas combinaciones de color.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 12 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-021-render.webp",
+      "colores": [
+        "zn-go-021-c01",
+        "zn-go-021-c02",
+        "zn-go-021-c03",
+        "zn-go-021-c04",
+        "zn-go-021-c05",
+        "zn-go-021-c06",
+        "zn-go-021-c07",
+        "zn-go-021-c08",
+        "zn-go-021-c09",
+        "zn-go-021-c10",
+        "zn-go-021-c11",
+        "zn-go-021-c12"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-021-c01": "img/productos/zain/zn-go-021-c01.webp",
+        "zn-go-021-c02": "img/productos/zain/zn-go-021-c02.webp",
+        "zn-go-021-c03": "img/productos/zain/zn-go-021-c03.webp",
+        "zn-go-021-c04": "img/productos/zain/zn-go-021-c04.webp",
+        "zn-go-021-c05": "img/productos/zain/zn-go-021-c05.webp",
+        "zn-go-021-c06": "img/productos/zain/zn-go-021-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-go-021-c07",
+        "zn-go-021-c08",
+        "zn-go-021-c09",
+        "zn-go-021-c10",
+        "zn-go-021-c12"
+      ]
+    },
+    {
+      "id": "zn-go-022",
+      "sku": "ZN-GO-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker premium 6 paneles",
+      "nombreFamilia": "Gorra trucker premium 6 paneles",
+      "familia": "zain-mayoreo-zn-go-022",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Perfil alto con malla premium, más de 15 combinaciones.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 18 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-022-render.webp",
+      "colores": [
+        "zn-go-022-c01",
+        "zn-go-022-c02",
+        "zn-go-022-c03",
+        "zn-go-022-c04",
+        "zn-go-022-c05",
+        "zn-go-022-c06",
+        "zn-go-022-c07",
+        "zn-go-022-c08",
+        "zn-go-022-c09",
+        "zn-go-022-c10",
+        "zn-go-022-c11",
+        "zn-go-022-c12",
+        "zn-go-022-c13",
+        "zn-go-022-c14",
+        "zn-go-022-c15",
+        "zn-go-022-c16",
+        "zn-go-022-c17",
+        "zn-go-022-c18"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-022-c01": "img/productos/zain/zn-go-022-c01.webp",
+        "zn-go-022-c02": "img/productos/zain/zn-go-022-c02.webp",
+        "zn-go-022-c03": "img/productos/zain/zn-go-022-c03.webp",
+        "zn-go-022-c04": "img/productos/zain/zn-go-022-c04.webp",
+        "zn-go-022-c05": "img/productos/zain/zn-go-022-c05.webp",
+        "zn-go-022-c06": "img/productos/zain/zn-go-022-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-go-022-c07",
+        "zn-go-022-c08",
+        "zn-go-022-c09",
+        "zn-go-022-c10",
+        "zn-go-022-c11",
+        "zn-go-022-c12",
+        "zn-go-022-c14",
+        "zn-go-022-c15",
+        "zn-go-022-c16",
+        "zn-go-022-c17",
+        "zn-go-022-c18"
+      ]
+    },
+    {
+      "id": "zn-go-023",
+      "sku": "ZN-GO-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra visera de piel sintética",
+      "nombreFamilia": "Gorra visera de piel sintética",
+      "familia": "zain-mayoreo-zn-go-023",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Copa prelavada con visera de piel sintética.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón · piel sintética · poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-023-render.webp",
+      "colores": [
+        "zn-go-023-c01",
+        "zn-go-023-c02",
+        "zn-go-023-c03",
+        "zn-go-023-c04",
+        "zn-go-023-c05",
+        "zn-go-023-c06"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-023-c01": "img/productos/zain/zn-go-023-c01.webp",
+        "zn-go-023-c02": "img/productos/zain/zn-go-023-c02.webp",
+        "zn-go-023-c03": "img/productos/zain/zn-go-023-c03.webp",
+        "zn-go-023-c04": "img/productos/zain/zn-go-023-c04.webp",
+        "zn-go-023-c05": "img/productos/zain/zn-go-023-c05.webp",
+        "zn-go-023-c06": "img/productos/zain/zn-go-023-c06.webp"
+      }
+    },
+    {
+      "id": "zn-go-024",
+      "sku": "ZN-GO-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra trucker bicolor",
+      "nombreFamilia": "Gorra trucker bicolor",
+      "familia": "zain-mayoreo-zn-go-024",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Frente negro con visera interior de color.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón · malla poliéster",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-024-render.webp",
+      "colores": [
+        "zn-go-024-c01",
+        "zn-go-024-c02",
+        "zn-go-024-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-024-c01": "img/productos/zain/zn-go-024-c01.webp",
+        "zn-go-024-c02": "img/productos/zain/zn-go-024-c02.webp",
+        "zn-go-024-c03": "img/productos/zain/zn-go-024-c03.webp"
+      }
+    },
+    {
+      "id": "zn-go-025",
+      "sku": "ZN-GO-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra bitono cerrada",
+      "nombreFamilia": "Gorra bitono cerrada",
+      "familia": "zain-mayoreo-zn-go-025",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Sin malla, con visera de gamuza a contraste.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% algodón / 20% gamuza sintética",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-025-render.webp",
+      "colores": [
+        "zn-go-025-c01",
+        "zn-go-025-c02",
+        "zn-go-025-c03",
+        "zn-go-025-c04",
+        "zn-go-025-c05",
+        "zn-go-025-c06",
+        "zn-go-025-c07"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-025-c01": "img/productos/zain/zn-go-025-c01.webp",
+        "zn-go-025-c02": "img/productos/zain/zn-go-025-c02.webp",
+        "zn-go-025-c03": "img/productos/zain/zn-go-025-c03.webp",
+        "zn-go-025-c04": "img/productos/zain/zn-go-025-c04.webp",
+        "zn-go-025-c05": "img/productos/zain/zn-go-025-c05.webp",
+        "zn-go-025-c06": "img/productos/zain/zn-go-025-c06.webp"
+      },
+      "coloresSinRender": [
+        "zn-go-025-c07"
+      ]
+    },
+    {
+      "id": "zn-go-026",
+      "sku": "ZN-GO-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra con cubre nuca",
+      "nombreFamilia": "Gorra con cubre nuca",
+      "familia": "zain-mayoreo-zn-go-026",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Secado rápido con protección de nuca y cuello. Para campo y pesca.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster performance",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-026-render.webp",
+      "colores": [
+        "zn-go-026-c01",
+        "zn-go-026-c02",
+        "zn-go-026-c03",
+        "zn-go-026-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-027",
+      "sku": "ZN-GO-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sombrero UPF 50+",
+      "nombreFamilia": "Sombrero UPF 50+",
+      "familia": "zain-mayoreo-zn-go-027",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Ala de 3 pulgadas, protección solar UPF 50+ y bolsa interna.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster ligero",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-027-render.webp",
+      "colores": [
+        "zn-go-027-c01",
+        "zn-go-027-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-027-c01": "img/productos/zain/zn-go-027-c01.webp",
+        "zn-go-027-c02": "img/productos/zain/zn-go-027-c02.webp"
+      }
+    },
+    {
+      "id": "zn-go-028",
+      "sku": "ZN-GO-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra outdoor UPF 35+",
+      "nombreFamilia": "Gorra outdoor UPF 35+",
+      "familia": "zain-mayoreo-zn-go-028",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Perfil bajo, ligera, con ajuste de velcro.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster ligero",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-028-render.webp",
+      "colores": [
+        "zn-go-028-c01",
+        "zn-go-028-c02",
+        "zn-go-028-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-028-c02": "img/productos/zain/zn-go-028-c02.webp",
+        "zn-go-028-c03": "img/productos/zain/zn-go-028-c03.webp"
+      }
+    },
+    {
+      "id": "zn-go-029",
+      "sku": "ZN-GO-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Sombrero de secado rápido",
+      "nombreFamilia": "Sombrero de secado rápido",
+      "familia": "zain-mayoreo-zn-go-029",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Protección UPF 50+ y cordón ajustable.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster ligero",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-029-render.webp",
+      "colores": [
+        "zn-go-029-c01",
+        "zn-go-029-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-030",
+      "sku": "ZN-GO-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "activo": false,
+      "nombre": "Gorra camuflaje bosque",
+      "nombreFamilia": "Gorra camuflaje bosque",
+      "familia": "zain-mayoreo-zn-go-030",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Visera o gorra completa en camuflaje de bosque. Para campo, caza y outdoor.",
+      "especificaciones": "Tallas: Unitalla ajustable 58 cm. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "img/productos/zain/zn-go-030-render.webp",
+      "colores": [
+        "zn-go-030-c01",
+        "zn-go-030-c02",
+        "zn-go-030-c03",
+        "zn-go-030-c04"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "imagenIA": true,
+      "disponibilidad": "Consulta disponibilidad por color. Colores e imágenes ilustrativos; confirma tono y acabado al cotizar.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "fotosColor": {
+        "zn-go-030-c01": "img/productos/zain/zn-go-030-c01.webp",
+        "zn-go-030-c02": "img/productos/zain/zn-go-030-c02.webp",
+        "zn-go-030-c03": "img/productos/zain/zn-go-030-c03.webp",
+        "zn-go-030-c04": "img/productos/zain/zn-go-030-c04.webp"
+      }
     }
   ],
   "muestrasPortada": [

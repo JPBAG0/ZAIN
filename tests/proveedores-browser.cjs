@@ -42,6 +42,8 @@ module.exports=async function verificarProveedores(page,{base,capturas}={}){
   await page.setViewportSize({width,height:width===390?844:860});await page.goto(base+'/gestion-zain.html');
   if(width===390)await page.locator('#menuInferior [data-ir="mas"]').click();
   await page.locator('#verCatalogo').click();
+  // Desde el 22-nov el panel empieza cerrado para que las prendas se vean primero.
+  if(!await page.locator('#provPanel').evaluate(d=>d.open))await page.locator('#provPanel > summary').click();
   await page.locator('#provLista .prov-proveedor').first().waitFor();
   assert.deepEqual(await page.locator('#provLista .prov-proveedor h3').allTextContents(),['Dimeo','Playerytees','Wusstek'],'proveedores en orden');
   assert.deepEqual(await page.locator('#provLista .prov-proveedor:nth-child(2) .prov-tipo').allTextContents(),['Catálogo','Lista de precios'],'primero el catálogo');

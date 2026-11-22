@@ -19,7 +19,8 @@ test('las siete referencias nuevas existen ocultas con SKU propio y render en el
   assert.deepEqual(p.tecnicas,['bordado']);assert.ok(readFileSync(new URL('../'+p.foto,import.meta.url)).length>1000);
   assert.ok(Pub.productosHistoricos.some(x=>x.sku===sku)&&!Pub.productos.some(x=>x.sku===sku));
  }
- assert.equal(C.productos.filter(p=>p.categoria==='Gorras'&&p.catalogo2026).length,8);
+ assert.equal(C.productos.filter(p=>p.categoria==='Gorras'&&p.catalogo2026&&!p.soloCotizar).length,8);
+ assert.equal(C.productos.filter(p=>p.categoria==='Gorras'&&p.soloCotizar).length,21);
  assert.equal(prod('ZN-CE-002').categoria,'Chalecos');
 });
 test('gorras: frente y lateral con alto máximo; sin tallas y unitalla en las premium',()=>{
