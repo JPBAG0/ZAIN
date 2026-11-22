@@ -1,13 +1,14 @@
 import {randomUUID} from 'node:crypto';
 // Cotizaciones por modelo y talla guardadas por el equipo. Nunca se borran: «descartada» las archiva.
-const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
+const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i,UUID_CLIENTE=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+const claveNombre=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();
 const BUCKET='zain-cotizaciones-logos',MAX_JSON=300000,MAX_LOGO=15*1024*1024;
 const TIPOS={'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/svg+xml':'svg'};
 // «convertida» solo la pone la conversión a pedido.
 export const ESTADOS=['borrador','enviada','autorizada','convertida','descartada'];
 const ESTADOS_MANUALES=ESTADOS.filter(estado=>estado!=='convertida');
 // tipo y total: la lista distingue la cotización rápida y muestra su total (20-nov-2026).
-const CAMPOS='id,folio,estado,cliente,desde,modelos,pedido_id,version,created_at,updated_at,impuesto:comercial->impuesto,tipo:datos->>tipo,total:comercial->total';
+const CAMPOS='id,folio,estado,cliente,cliente_id,desde,modelos,pedido_id,version,created_at,updated_at,impuesto:comercial->impuesto,tipo:datos->>tipo,total:comercial->total';
 const objetoValido=(id,objeto)=>typeof objeto==='string'&&objeto.startsWith(id+'/')&&/^[a-f0-9-]{36}\/[a-f0-9-]{36}\.(png|jpg|webp|svg)$/.test(objeto);
 // Foto del artículo fuera de catálogo (20-nov-2026): va en datos.modelos[i].foto ({objeto,mime}), en la carpeta de la
 // cotización del mismo bucket privado que el logo. Se sube con la misma firma de cm-logo-subida.
@@ -38,7 +39,9 @@ export function validarCotizacion(b,fail){
  }
  fotosDe(b.id,b.datos,fail);
  const cliente=typeof b.cliente==='string'?b.cliente.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,180):'';
- return {cliente,datos:b.datos,comercial:b.comercial??null,desde:b.desde??null,modelos:b.modelos,logo,...(b.estado?{estado:b.estado}:{})};
+ // cliente_id (21-nov-2026): la ficha de Clientes que eligió el equipo; sin ficha se liga después por nombre.
+ if(b.cliente_id!=null&&!UUID_CLIENTE.test(b.cliente_id))fail(400,'Revisa el cliente de la cotización.');
+ return {cliente,...(b.cliente_id?{cliente_id:b.cliente_id.toLowerCase()}:{}),datos:b.datos,comercial:b.comercial??null,desde:b.desde??null,modelos:b.modelos,logo,...(b.estado?{estado:b.estado}:{})};
 }
 export function createCotizacionesModelos({sb,fail,storageURL,row}){
  const fila=async id=>{if(!UUID.test(id||''))fail(400,'Cotización inválida.');const r=await sb('/rest/v1/zain_cotizaciones_modelos?id=eq.'+id+'&select=*&limit=1');if(!r[0])fail(404,'Cotización no encontrada.');return r[0];};
@@ -78,6 +81,8 @@ export function createCotizacionesModelos({sb,fail,storageURL,row}){
    }
    const old=await fila(b.id);if(v.logo&&old.logo?.objeto!==v.logo.objeto)await logoSubido(b.id,v.logo.objeto);
    const previas=new Set(objetosFoto(old.datos));await subidos(b.id,fotosDe(b.id,b.datos,fail).filter(o=>!previas.has(o)),FOTO_PENDIENTE);
+   // Si el equipo escribió otro cliente sin elegir su ficha, la cotización se vuelve a ligar por nombre.
+   if(!v.cliente_id&&old.cliente_id&&claveNombre(v.cliente)!==claveNombre(old.cliente))v.cliente_id=null;
    return {cotizacion:await actualizar(b.id,b.version,v,user)};
   },
   estado:async(b,user)=>{

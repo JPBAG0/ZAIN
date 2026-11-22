@@ -28,7 +28,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionCotizaciones" 
 <form id="cmForm" hidden><button type="button" id="cmVolver" class="btn-texto">← Volver a cotizaciones</button><fieldset id="cmCampos" disabled>
 <div class="cm-actual"><div><small>Cotización</small><b id="cmFolio">Nueva cotización</b></div><div class="cm-actualacciones"><label>Estado<select id="cmEstadoSel" disabled>${Object.entries(ESTADOS).filter(([k])=>k!=='convertida').map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label><button type="button" id="cmVerPedido" class="btn btn--linea" hidden>Ver pedido</button></div></div>
 <p id="cmConvertida" class="cm-aviso" hidden></p>
-<section class="cot-panel"><h2>Cliente y condiciones</h2><div class="cm-campos cm-campos--3"><label>Cliente o empresa (opcional)<input id="cmDestinatario" maxlength="180" autocomplete="off" placeholder="Ej. Constructora del Bajío"></label><label>Precios e IVA<select id="cmIVA"><option value="1600" selected>Más IVA (16%)</option><option value="0">Sin IVA</option></select></label><label id="cmRedondeoCampo">Redondear precios<select id="cmRedondeo"><option value="100" selected>A peso cerrado</option><option value="500">A múltiplos de $5</option><option value="1">Sin redondeo (centavos)</option></select></label><label>Válida hasta<input id="cmVigencia" type="date"></label><label>Entrega (opcional)<input id="cmPlazo" maxlength="120" placeholder="Ej. 10 a 12 días hábiles tras el anticipo"></label><label>Anticipo (%)<input id="cmAnticipo" type="number" min="0" max="100" step="1" inputmode="numeric" value="50" placeholder="Sin anticipo"></label></div></section>
+<section class="cot-panel"><h2>Cliente y condiciones</h2><div class="cm-campos cm-campos--3"><label>Cliente o empresa (opcional)<input id="cmDestinatario" maxlength="180" autocomplete="off" list="cmClientes" placeholder="Ej. Constructora del Bajío"><datalist id="cmClientes"></datalist></label><label>Precios e IVA<select id="cmIVA"><option value="1600" selected>Más IVA (16%)</option><option value="0">Sin IVA</option></select></label><label id="cmRedondeoCampo">Redondear precios<select id="cmRedondeo"><option value="100" selected>A peso cerrado</option><option value="500">A múltiplos de $5</option><option value="1">Sin redondeo (centavos)</option></select></label><label>Válida hasta<input id="cmVigencia" type="date"></label><label>Entrega (opcional)<input id="cmPlazo" maxlength="120" placeholder="Ej. 10 a 12 días hábiles tras el anticipo"></label><label>Anticipo (%)<input id="cmAnticipo" type="number" min="0" max="100" step="1" inputmode="numeric" value="50" placeholder="Sin anticipo"></label></div></section>
 <details id="cmLogoPanel" class="cot-panel cm-opciones"><summary>Logo del cliente (opcional)</summary><div class="cm-logo"><label>Subir logo<input id="cmLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label><div><p id="cmLogoEstado" class="cot-ayuda">PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.</p><label class="cot-check"><input id="cmQuitarFondo" type="checkbox">Quitar fondo del logo</label><button type="button" id="cmEliminarLogo" class="btn-texto" hidden>Quitar logo</button></div></div></details>
 <section id="cmModelosPanel" class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, playera, gorra, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmLibre" class="btn btn--linea">+ Fuera de catálogo (artículo libre)</button><span class="cot-ayuda">Lo que no está en el catálogo: escribe el artículo, su costo y su precio.</span></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
 <div id="cmModelos"></div>
@@ -315,7 +315,7 @@ function guardar(estado){
   if(conFoto.some(m=>m.fotoOcupada))throw Error('Espera a que termine de cargar la foto.');
   for(const m of conFoto)if(m.foto&&!m.foto.objeto?.startsWith(id+'/')){const nombre=m.rapida?nombreRapida(m):m.nombre;if(session!==epoca)throw Error('Sesión cerrada.');if(!m.foto.blob)throw Error('Vuelve a subir la foto de '+nombre+'.');avisar('Subiendo foto de '+nombre+'…');m.foto.objeto=await subirFoto(id,m.foto.blob);}
   if(session!==epoca)throw Error('Sesión cerrada.');
-  const q=proyeccion(),r=await api('cm-guardar',{id,version:actual?.version||0,cliente:$('#cmDestinatario').value,datos:serializar(),comercial:q,desde:q?minimo(q.partidas.map(p=>p.precio)):null,modelos:modo==='rapida'?rapidas.length:modelos.length,logo:logoRef,...(estado?{estado}:{})});
+  const q=proyeccion(),r=await api('cm-guardar',{id,version:actual?.version||0,cliente:$('#cmDestinatario').value,cliente_id:clienteElegido(),datos:serializar(),comercial:q,desde:q?minimo(q.partidas.map(p=>p.precio)):null,modelos:modo==='rapida'?rapidas.length:modelos.length,logo:logoRef,...(estado?{estado}:{})});
   if(session!==epoca)throw Error('Sesión cerrada.');
   aplicarGuardada(r.cotizacion);logoArchivo=null;marcarLimpio();void cargarLista();return actual;
  })().finally(()=>{guardando=null;});
@@ -641,3 +641,31 @@ async function pdfRapida(q){
   await descargarPDF(documentoRapida(q),{folio:q.folio,imagenes,textos:textosPDF(q)});
  }finally{setTimeout(()=>urls.forEach(u=>URL.revokeObjectURL(u)),60000);}
 }
+
+// Clientes (21-nov-2026): «Cliente o empresa» sugiere las fichas de Clientes y guarda a cuál pertenece la cotización.
+// Desde la ficha de un cliente se abre, se duplica (para él o para otro) o se empieza una cotización nueva.
+let clientesPorNombre=new Map();
+const claveCliente=s=>String(s||'').toLocaleLowerCase('es').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();
+addEventListener('zain:clientes-lista',e=>{
+ const l=Array.isArray(e.detail)?e.detail:[],veces=new Map();
+ for(const c of l)veces.set(claveCliente(c.nombre),(veces.get(claveCliente(c.nombre))||0)+1);
+ // Dos fichas con el mismo nombre no se adivinan: la cotización se liga después por nombre.
+ clientesPorNombre=new Map(l.filter(c=>veces.get(claveCliente(c.nombre))===1).map(c=>[claveCliente(c.nombre),c.id]));
+ $('#cmClientes').innerHTML=l.map(c=>`<option value="${esc(c.nombre)}"></option>`).join('');
+});
+function clienteElegido(){return clientesPorNombre.get(claveCliente($('#cmDestinatario').value))||null;}
+async function cotizadorListo(){
+ if($('#seccionCotizaciones').hidden)$('#verCotizaciones').click();
+ for(let i=0;i<200&&!datos;i++)await new Promise(r=>setTimeout(r,100));
+ return !!datos;
+}
+addEventListener('zain:abrir-cotizacion',async e=>{
+ const {id,duplicar,cliente}=e.detail||{};if(!id||!await cotizadorListo())return;
+ await abrir(id,!!duplicar);
+ if(cliente?.nombre&&actual?.id!==id&&$('#cmDestinatario').value!==cliente.nombre){$('#cmDestinatario').value=cliente.nombre;marcarSucio();}
+});
+addEventListener('zain:nueva-cotizacion',async e=>{
+ const {modo:m,cliente}=e.detail||{};if(!await cotizadorListo())return;
+ $(m==='rapida'?'#cmRapidaNueva':'#cmNueva').click();
+ if(cliente?.nombre&&!actual)$('#cmDestinatario').value=cliente.nombre;
+});

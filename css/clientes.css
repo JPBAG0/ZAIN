@@ -1,0 +1,68 @@
+/* Clientes (21-nov-2026): lista, ficha con historial, barra del cliente en el pedido y selector de cliente.
+   Verde = se cerró, morado = en proceso, rosa = no se cerró (los mismos tonos de los estados de Pedidos). */
+.cl-panel input[type=search]{width:100%;margin-bottom:10px}
+.cl-lista{list-style:none;margin:0;padding:0;border-top:1px solid #dedee4}
+.cl-item{display:flex;align-items:center;gap:12px;width:100%;min-height:64px;padding:12px 6px;border:0;border-bottom:1px solid #dedee4;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.cl-item:active{background:#f1f2f7}
+@media (hover:hover) and (pointer:fine){.cl-item:hover{background:#f5f6fa}}
+.cl-item-nombre{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}
+.cl-item-nombre b{font-size:16px;overflow-wrap:anywhere}
+.cl-item small,.cl-fila small,.cl-opcion small{color:#66666c;font-size:13px}
+.cl-item-cifras{display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-size:13px;color:#4b4b52;text-align:right}
+.cl-item-cifras b{color:#267663;font-size:15px;font-variant-numeric:tabular-nums}
+.cl-si{font-style:normal;color:#267663;font-weight:600}
+.cl-item>i{color:#9a9aa2;font-style:normal}
+.cl-vacia{padding:16px 6px;color:#66666c;list-style:none}
+.cl-ficha>.btn-texto{margin-bottom:4px}
+.cl-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin:8px 0 16px}
+.cl-cab h2{margin:0 0 4px;font-size:clamp(24px,5vw,34px);line-height:1.1;overflow-wrap:anywhere}
+.cl-cab p{margin:0;color:#66666c;overflow-wrap:anywhere}
+.cl-acciones{display:flex;gap:8px;flex-wrap:wrap}
+.cl-acciones .btn{width:auto}
+.cl-cifras{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 16px}
+.cl-cifra{padding:14px;border:1px solid #dedee4;border-radius:12px;background:#fff;min-width:0}
+.cl-cifra strong{display:block;font-size:24px;line-height:1.15;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.cl-cifra span{font-size:13px;color:#66666c}
+.cl-cifra--si strong{color:#267663}.cl-cifra--proceso strong{color:#5858ab}.cl-cifra--no strong{color:#986476}
+.cl-notas{white-space:pre-line;padding:12px 14px;border-radius:10px;background:#fff8e6;color:#5c4a1a;margin:0 0 16px;overflow-wrap:anywhere}
+.cl-historial h3{margin:0 0 10px;display:flex;gap:8px;align-items:center}
+.cl-historial h3 span{font-size:13px;padding:1px 8px;border-radius:99px;background:#ececf0;color:#3b3b40}
+.cl-filas{list-style:none;margin:0;padding:0}
+.cl-fila{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(110px,auto) auto;align-items:center;gap:12px;padding:12px 0 12px 12px;border-top:1px solid #ececf0;border-left:4px solid transparent}
+.cl-fila--si{border-left-color:#2f9a7a}.cl-fila--proceso{border-left-color:#9b9be6}.cl-fila--no{border-left-color:#dcb6c3}
+.cl-abrir{display:flex;flex-direction:column;gap:2px;min-width:0;padding:0;border:0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.cl-abrir b{text-decoration:underline;text-decoration-color:#c9c9d2;text-underline-offset:3px;overflow-wrap:anywhere}
+.cl-abrir small{overflow-wrap:anywhere}
+.cl-estado{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0}
+.cl-estado .cm-chip{margin:0}
+.cl-importe{text-align:right;font-variant-numeric:tabular-nums}
+.cl-fila .cl-duplicar{width:auto;min-height:40px;padding:6px 14px}
+.cl-form h3{margin:0 0 12px}
+.cl-form .cl-campos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.cl-form label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+.cl-form-botones{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.cl-form-botones span{flex:1}
+.cl-form-botones .btn{width:auto}
+.cl-form-estado{min-height:1.2em;margin:8px 0 0;color:#b3261e}
+.ficha-cliente{display:flex;align-items:center;gap:6px 12px;flex-wrap:wrap;margin:10px 0 4px;padding:10px 12px;border-radius:10px;background:#f3f4f8}
+.ficha-cliente span{flex:1 1 180px;min-width:0;overflow-wrap:anywhere}
+.ficha-cliente .btn{width:auto;min-height:40px;padding:6px 14px}
+.cl-dialogo{width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:22px;border:0;border-radius:16px;box-shadow:0 20px 60px rgba(17,17,19,.25)}
+.cl-dialogo::backdrop{background:rgba(17,17,19,.45)}
+.cl-dialogo h2{margin:0 0 6px;font-size:22px;overflow-wrap:anywhere}
+.cl-elegir-buscar{display:flex;flex-direction:column;gap:6px;font-weight:600;margin:12px 0 8px}
+.cl-elegir-lista{list-style:none;margin:0;padding:0;max-height:min(320px,42dvh);overflow:auto}
+.cl-opcion{display:flex;flex-direction:column;gap:2px;width:100%;min-height:48px;padding:10px 12px;margin:0 0 6px;border:1px solid #dedee4;border-radius:10px;background:#fff;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.cl-opcion.on{border-color:#2a3bff;background:#eef0ff;box-shadow:inset 0 0 0 1px #2a3bff}
+.cl-opcion--nuevo{color:#2a3bff;font-weight:600}
+.cl-elegir-estado{min-height:1.2em;color:#b3261e;margin:8px 0 0}
+.cl-dialogo-botones{display:flex;justify-content:flex-end;gap:10px;margin-top:14px}
+.cl-dialogo-botones .btn{width:auto}
+@media (max-width:720px){
+ .cl-cifras{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cl-fila{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"abrir importe" "estado duplicar";row-gap:8px}
+ .cl-abrir{grid-area:abrir}.cl-importe{grid-area:importe}.cl-estado{grid-area:estado}.cl-fila .cl-duplicar{grid-area:duplicar}
+ .cl-form .cl-campos{grid-template-columns:1fr}
+ .cl-acciones{width:100%}.cl-acciones .btn{flex:1 1 auto}
+ .cl-dialogo-botones .btn{flex:1}
+}

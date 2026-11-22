@@ -14,6 +14,7 @@ import PublicC from '../js/config.js';
 import {createWorkshop} from './talleres.mjs';
 import {createQuotes} from './cotizaciones.mjs';
 import {createCotizacionesModelos} from './cotizaciones-modelos.mjs';
+import {createClientes} from './clientes.mjs';
 import {expandCatalog,normalizeNewProduct,normalCategory} from './catalogo-altas.mjs';
 import {resolveInternal,projectPublic,normalizeChanges,stable} from './catalogo-gestion.mjs';
 
@@ -149,10 +150,11 @@ export function createHandler(env={}, fetcher=fetch) {
     const u=new URL(path,base);if(u.origin!==new URL(base).origin)fail(502,'No se pudo preparar el archivo.');return u;
   };
   const serviceHeaders={apikey:key,...(key.startsWith('eyJ')?{Authorization:'Bearer '+key}:{})};
-  const sb = async(path,options={}) => {
+  // errores (opcional, 21-nov-2026): {texto del error de Postgres o Storage: [estado, mensaje para el equipo]}.
+  const sb = async(path,{errores,...options}={}) => {
     const r=await fetcher(base+path,{...options,headers:{...serviceHeaders,'Content-Type':'application/json',...options.headers},signal:AbortSignal.timeout(15000)});
     const body=await r.json().catch(()=>null);
-    if(!r.ok){const message=String(body?.message||'');if(message.includes('zain_rate'))fail(429,'Demasiadas solicitudes. Intenta más tarde.');if(message.includes('zain_capacity'))fail(503,'El guardado de archivos está temporalmente ocupado. Contacta a ZAIN por WhatsApp.');if(message.includes('zain_conflict'))fail(409,'Esta solicitud ya existe con otros datos.');fail(502,'No se pudo guardar o consultar el pedido. Intenta de nuevo.');}
+    if(!r.ok){const message=String(body?.message||'');for(const [clave,[estado,texto]] of Object.entries(errores||{}))if((message+' '+String(body?.error||'')).includes(clave))fail(estado,texto);if(message.includes('zain_rate'))fail(429,'Demasiadas solicitudes. Intenta más tarde.');if(message.includes('zain_capacity'))fail(503,'El guardado de archivos está temporalmente ocupado. Contacta a ZAIN por WhatsApp.');if(message.includes('zain_conflict'))fail(409,'Esta solicitud ya existe con otros datos.');fail(502,'No se pudo guardar o consultar el pedido. Intenta de nuevo.');}
     return body;
   };
 
@@ -239,7 +241,7 @@ export function createHandler(env={}, fetcher=fetch) {
     return {url:signed.href,name:f.name,type:f.type};
   };
   const publicRow=x=>{const {token_hash,consulta_nonce,partidas_version,...rest}=x;return {...rest,items:rest.items.map(item=>{const {pedido_hash,...p}=item;const product=C.productos.find(v=>v.id===p.p || v.idPublico===p.p);return {...p,nombre:p.nombreZain||product?.nombreComercial||p.nombre,nombreProveedor:p.nombre,sku:p.sku||product?.sku||'',skuProveedor:p.skuProveedor??p.codigoFabricante??product?.codigoFabricante??'',proveedor:p.proveedor??p.fabricante??product?.fabricante??''};})};};
-  const quotes=createQuotes({sb,row,fail,commercialItem,publicRow,validarSelecciones:(lista,x,cat)=>validarSelecciones(lista,x,cat,validateOrder,fail)}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row});
+  const quotes=createQuotes({sb,row,fail,commercialItem,publicRow,validarSelecciones:(lista,x,cat)=>validarSelecciones(lista,x,cat,validateOrder,fail)}),cotizacionesModelos=createCotizacionesModelos({sb,fail,storageURL,row}),clientes=createClientes({sb,fail,bucket});
   const gastosEnabled=env.ZAIN_GASTOS_ENABLED==='true',gastos=createGastos({sb,row,fail,base,serviceHeaders,fetcher}),generales=createGenerales({sb,fail,base,serviceHeaders,fetcher}),caja=createCaja({sb,fail});
   const seguimientoEnabled=env.ZAIN_CONFIRMACION_ENABLED==='true',seguimiento=createSeguimiento({sb,fail,quote:quotes.get});
   // Avisos al equipo: en Edge siguen después de responder; en Node se esperan (nunca lanzan).
@@ -411,6 +413,13 @@ export function createHandler(env={}, fetcher=fetch) {
       if(seguimientoEnabled&&op==='cotizacion-aceptar-equipo'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.aceptarEquipo(x,b,user));}
       if(seguimientoEnabled&&op==='cotizacion-pago'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.pago(x,b,user));}
       if(seguimientoEnabled&&op==='anticipo-aceptar'&&request.method==='POST'){const b=await jsonBody(request),x=await row(b.id);return response(200,await seguimiento.anticipo(x,b,user));}
+      // Clientes (21-nov-2026): ficha con pedidos y cotizaciones, juntar repetidos, cambiar el cliente y duplicar.
+      if(op==='clientes'&&request.method==='GET')return response(200,await clientes.lista());
+      if(op==='cliente'&&request.method==='GET')return response(200,await clientes.ficha(url.searchParams.get('id')));
+      if(op==='cliente-guardar'&&request.method==='POST')return response(200,await clientes.guardar(await jsonBody(request),user));
+      if(op==='cliente-unir'&&request.method==='POST')return response(200,await clientes.unir(await jsonBody(request),user));
+      if(op==='cliente-asignar'&&request.method==='POST')return response(200,await clientes.asignar(await jsonBody(request),user));
+      if(op==='pedido-duplicar'&&request.method==='POST')return response(200,await clientes.duplicarPedido(await jsonBody(request),user));
       // Cotizaciones por modelo y talla (Gestión → Cotizaciones), independientes de un pedido.
       if(op.startsWith('cm-')){
         if(!quotesEnabled)fail(503,'El cotizador todavía no está habilitado.');
