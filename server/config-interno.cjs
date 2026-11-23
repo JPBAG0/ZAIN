@@ -38380,7 +38380,7 @@ module.exports = {
       "tejido": "",
       "composicion": "",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-go-033.webp",
       "colores": [
         "zn-go-033-c01",
         "zn-go-033-c02",
@@ -38424,7 +38424,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
     },
     {
@@ -39003,7 +39003,7 @@ module.exports = {
       "tejido": "",
       "composicion": "",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-go-042.webp",
       "colores": [
         "zn-go-042-c01",
         "zn-go-042-c02",
@@ -39049,7 +39049,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-go-042-c06"
@@ -40882,7 +40882,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% poliéster; malla de nylon (porcentajes del conjunto no indicados)",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-go-069.webp",
       "colores": [
         "zn-go-069-c01",
         "zn-go-069-c02",
@@ -40926,7 +40926,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
     },
     {
@@ -87098,7 +87098,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón chifón preencogido ring spun, salvo las excepciones por color indicadas en notas.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-168.webp",
       "colores": [
         "zn-pl-168-c01",
         "zn-pl-168-c02",
@@ -87146,7 +87146,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 150,
       "coloresSinRender": [
@@ -87550,7 +87550,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón chifón preencogido ring spun, salvo las excepciones por color indicadas en notas.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-173.webp",
       "colores": [
         "zn-pl-173-c01",
         "zn-pl-173-c02",
@@ -87589,7 +87589,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 170,
       "coloresSinRender": [
@@ -89013,7 +89013,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón estadounidense; varía según el color",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-in-022.webp",
       "colores": [
         "zn-in-022-c01",
         "zn-in-022-c02",
@@ -89080,7 +89080,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 203,
       "coloresSinRender": [
@@ -90984,7 +90984,7 @@ module.exports = {
       "tejido": "",
       "composicion": "",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-bo-022.webp",
       "colores": [
         "zn-bo-022-c01",
         "zn-bo-022-c02",
@@ -91009,7 +91009,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
     },
     {
