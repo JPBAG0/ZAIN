@@ -14978,6 +14978,3506 @@ module.exports = {
       "id": "zn-pa-117-c03",
       "nombre": "Marino",
       "hex": "#002458"
+    },
+    {
+      "id": "zn-su-018-c01",
+      "nombre": "Negro",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-018-c02",
+      "nombre": "Black Camo",
+      "hex": "#24272a"
+    },
+    {
+      "id": "zn-su-018-c03",
+      "nombre": "Light Pink",
+      "hex": "#edc9dd"
+    },
+    {
+      "id": "zn-su-018-c04",
+      "nombre": "Mint",
+      "hex": "#8fdedb"
+    },
+    {
+      "id": "zn-su-018-c05",
+      "nombre": "Lavender",
+      "hex": "#cdb2dc"
+    },
+    {
+      "id": "zn-su-018-c06",
+      "nombre": "Carbón jaspe",
+      "hex": "#424247"
+    },
+    {
+      "id": "zn-su-018-c07",
+      "nombre": "Carbón Sólido",
+      "hex": "#4c4b56"
+    },
+    {
+      "id": "zn-su-018-c08",
+      "nombre": "Plata jaspe",
+      "hex": "#9b9d9f"
+    },
+    {
+      "id": "zn-su-018-c09",
+      "nombre": "Gris jaspe",
+      "hex": "#c2c3d0"
+    },
+    {
+      "id": "zn-su-018-c10",
+      "nombre": "Blanco",
+      "hex": "#eeeff1"
+    },
+    {
+      "id": "zn-su-018-c11",
+      "nombre": "Navy",
+      "hex": "#242e39"
+    },
+    {
+      "id": "zn-su-018-c12",
+      "nombre": "Azul Slate",
+      "hex": "#363848"
+    },
+    {
+      "id": "zn-su-018-c13",
+      "nombre": "Marrón",
+      "hex": "#5a1730"
+    },
+    {
+      "id": "zn-su-018-c14",
+      "nombre": "Verde alpino",
+      "hex": "#3d5152"
+    },
+    {
+      "id": "zn-su-018-c15",
+      "nombre": "Army",
+      "hex": "#6a6b56"
+    },
+    {
+      "id": "zn-su-018-c16",
+      "nombre": "Brown",
+      "hex": "#4b3328"
+    },
+    {
+      "id": "zn-su-018-c17",
+      "nombre": "Saddle",
+      "hex": "#ad805e"
+    },
+    {
+      "id": "zn-su-018-c18",
+      "nombre": "Sandstone",
+      "hex": "#bfa98e"
+    },
+    {
+      "id": "zn-su-018-c19",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-su-018-c20",
+      "nombre": "Dusty Pink",
+      "hex": "#c4a29d"
+    },
+    {
+      "id": "zn-su-018-c21",
+      "nombre": "Peach",
+      "hex": "#f4bb71"
+    },
+    {
+      "id": "zn-su-018-c22",
+      "nombre": "Light Yellow",
+      "hex": "#eee3a1"
+    },
+    {
+      "id": "zn-su-018-c23",
+      "nombre": "Dusty Sage",
+      "hex": "#aabdb5"
+    },
+    {
+      "id": "zn-su-018-c24",
+      "nombre": "Blue Aqua",
+      "hex": "#86c6dd"
+    },
+    {
+      "id": "zn-su-018-c25",
+      "nombre": "Storm Blue",
+      "hex": "#566f88"
+    },
+    {
+      "id": "zn-su-018-c26",
+      "nombre": "Red",
+      "hex": "#c3163e"
+    },
+    {
+      "id": "zn-su-018-c27",
+      "nombre": "Royal",
+      "hex": "#0e58a2"
+    },
+    {
+      "id": "zn-su-018-c28",
+      "nombre": "Dark Green",
+      "hex": "#23573b"
+    },
+    {
+      "id": "zn-su-018-c29",
+      "nombre": "Gold",
+      "hex": "#f8ba09"
+    },
+    {
+      "id": "zn-su-018-c30",
+      "nombre": "Forest Camo",
+      "hex": "#72745b"
+    },
+    {
+      "id": "zn-su-018-c31",
+      "nombre": "Army Camo",
+      "hex": "#646650"
+    },
+    {
+      "id": "zn-su-018-c32",
+      "nombre": "Snow Camo",
+      "hex": "#d0d0d5"
+    },
+    {
+      "id": "zn-su-018-c33",
+      "nombre": "Tiger Camo",
+      "hex": "#777954"
+    },
+    {
+      "id": "zn-su-018-c34",
+      "nombre": "Duck Camo",
+      "hex": "#554849"
+    },
+    {
+      "id": "zn-su-018-c35",
+      "nombre": "Houndstooth",
+      "hex": "#7d7d7d"
+    },
+    {
+      "id": "zn-su-018-c36",
+      "nombre": "Plum",
+      "hex": "#95839e"
+    },
+    {
+      "id": "zn-su-018-c37",
+      "nombre": "Cement",
+      "hex": "#b7aea6"
+    },
+    {
+      "id": "zn-su-018-c38",
+      "nombre": "Smoke",
+      "hex": "#d1d4cd"
+    },
+    {
+      "id": "zn-su-018-c39",
+      "nombre": "Safety Yellow",
+      "hex": "#c6f237"
+    },
+    {
+      "id": "zn-su-018-c40",
+      "nombre": "Safety Orange",
+      "hex": "#ff8507"
+    },
+    {
+      "id": "zn-su-018-c41",
+      "nombre": "Charcoal Heather / Black",
+      "hex": "#34353b"
+    },
+    {
+      "id": "zn-su-018-c42",
+      "nombre": "Grey Heather / Black",
+      "hex": "#bfc1cc"
+    },
+    {
+      "id": "zn-su-018-c43",
+      "nombre": "Grey Heather / Slate Blue",
+      "hex": "#c0c0ca"
+    },
+    {
+      "id": "zn-su-019-c01",
+      "nombre": "Charcoal Heather",
+      "hex": "#4d4c54"
+    },
+    {
+      "id": "zn-su-019-c02",
+      "nombre": "Solid Charcoal",
+      "hex": "#555460"
+    },
+    {
+      "id": "zn-su-019-c03",
+      "nombre": "White",
+      "hex": "#eef0f1"
+    },
+    {
+      "id": "zn-su-019-c04",
+      "nombre": "Classic Navy",
+      "hex": "#292e45"
+    },
+    {
+      "id": "zn-su-019-c05",
+      "nombre": "Alpine Green",
+      "hex": "#405a54"
+    },
+    {
+      "id": "zn-su-019-c06",
+      "nombre": "Army",
+      "hex": "#6a6b56"
+    },
+    {
+      "id": "zn-su-019-c07",
+      "nombre": "Army Heather",
+      "hex": "#686c58"
+    },
+    {
+      "id": "zn-su-019-c08",
+      "nombre": "Maroon",
+      "hex": "#63263e"
+    },
+    {
+      "id": "zn-su-019-c09",
+      "nombre": "Sandstone",
+      "hex": "#bfa98e"
+    },
+    {
+      "id": "zn-su-019-c10",
+      "nombre": "Black Camo",
+      "hex": "#24272a"
+    },
+    {
+      "id": "zn-su-019-c11",
+      "nombre": "Royal",
+      "hex": "#0e58a2"
+    },
+    {
+      "id": "zn-su-019-c12",
+      "nombre": "Kelly Green",
+      "hex": "#008053"
+    },
+    {
+      "id": "zn-su-019-c13",
+      "nombre": "Kelly Green Heather",
+      "hex": "#059c78"
+    },
+    {
+      "id": "zn-su-019-c14",
+      "nombre": "Red",
+      "hex": "#c3163e"
+    },
+    {
+      "id": "zn-su-019-c15",
+      "nombre": "Peach",
+      "hex": "#f4bb71"
+    },
+    {
+      "id": "zn-su-019-c16",
+      "nombre": "Mint",
+      "hex": "#8fdedb"
+    },
+    {
+      "id": "zn-su-019-c17",
+      "nombre": "Lavender",
+      "hex": "#cdb2dc"
+    },
+    {
+      "id": "zn-su-019-c18",
+      "nombre": "Light Pink",
+      "hex": "#edc9dd"
+    },
+    {
+      "id": "zn-su-019-c19",
+      "nombre": "Forest Camo",
+      "hex": "#72745b"
+    },
+    {
+      "id": "zn-su-019-c20",
+      "nombre": "Cement",
+      "hex": "#b7aea6"
+    },
+    {
+      "id": "zn-su-019-c21",
+      "nombre": "Dusty Pink",
+      "hex": "#c4a29d"
+    },
+    {
+      "id": "zn-su-019-c22",
+      "nombre": "Storm Blue",
+      "hex": "#566f88"
+    },
+    {
+      "id": "zn-su-019-c23",
+      "nombre": "Plum",
+      "hex": "#95839e"
+    },
+    {
+      "id": "zn-su-019-c24",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-019-c25",
+      "nombre": "Gunmetal Heather",
+      "hex": "#999b9a"
+    },
+    {
+      "id": "zn-su-019-c26",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-su-019-c27",
+      "nombre": "Smoke",
+      "hex": "#d1d4cd"
+    },
+    {
+      "id": "zn-su-019-c28",
+      "nombre": "Classic Navy Heather",
+      "hex": "#4a536b"
+    },
+    {
+      "id": "zn-su-019-c29",
+      "nombre": "Dusty Sage",
+      "hex": "#aabdb5"
+    },
+    {
+      "id": "zn-su-019-c30",
+      "nombre": "Brown",
+      "hex": "#4b3328"
+    },
+    {
+      "id": "zn-su-019-c31",
+      "nombre": "Saddle",
+      "hex": "#ad805e"
+    },
+    {
+      "id": "zn-su-019-c32",
+      "nombre": "Royal Heather",
+      "hex": "#3466ad"
+    },
+    {
+      "id": "zn-su-019-c33",
+      "nombre": "Forest Green",
+      "hex": "#17483b"
+    },
+    {
+      "id": "zn-su-019-c34",
+      "nombre": "Orange",
+      "hex": "#ed4216"
+    },
+    {
+      "id": "zn-su-019-c35",
+      "nombre": "Gold",
+      "hex": "#f8ba09"
+    },
+    {
+      "id": "zn-su-019-c36",
+      "nombre": "Purple",
+      "hex": "#2b2773"
+    },
+    {
+      "id": "zn-su-019-c37",
+      "nombre": "Light Yellow",
+      "hex": "#eee3a1"
+    },
+    {
+      "id": "zn-su-019-c38",
+      "nombre": "Aqua Blue",
+      "hex": "#93cadb"
+    },
+    {
+      "id": "zn-su-019-c39",
+      "nombre": "Safety Yellow",
+      "hex": "#c6f237"
+    },
+    {
+      "id": "zn-su-019-c40",
+      "nombre": "Safety Orange",
+      "hex": "#ff8507"
+    },
+    {
+      "id": "zn-su-019-c41",
+      "nombre": "Neon Pink",
+      "hex": "#f14a86"
+    },
+    {
+      "id": "zn-su-019-c42",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-su-020-c01",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-su-020-c02",
+      "nombre": "Blush",
+      "hex": "#dcc0bf"
+    },
+    {
+      "id": "zn-su-020-c03",
+      "nombre": "Sage",
+      "hex": "#9eafaa"
+    },
+    {
+      "id": "zn-su-020-c04",
+      "nombre": "Misty Blue",
+      "hex": "#87afc8"
+    },
+    {
+      "id": "zn-su-020-c05",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-021-c01",
+      "nombre": "Classic Navy",
+      "hex": "#292e45"
+    },
+    {
+      "id": "zn-su-021-c02",
+      "nombre": "Alpine Green",
+      "hex": "#405a54"
+    },
+    {
+      "id": "zn-su-021-c03",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-su-021-c04",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-su-021-c05",
+      "nombre": "White",
+      "hex": "#eef0f1"
+    },
+    {
+      "id": "zn-su-021-c06",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-021-c07",
+      "nombre": "Charcoal Heather",
+      "hex": "#4d4c54"
+    },
+    {
+      "id": "zn-su-021-c08",
+      "nombre": "Red",
+      "hex": "#c3163e"
+    },
+    {
+      "id": "zn-su-021-c09",
+      "nombre": "Royal",
+      "hex": "#0e58a2"
+    },
+    {
+      "id": "zn-su-021-c10",
+      "nombre": "Gold",
+      "hex": "#f8ba09"
+    },
+    {
+      "id": "zn-su-021-c11",
+      "nombre": "Olive",
+      "hex": "#777364"
+    },
+    {
+      "id": "zn-su-021-c12",
+      "nombre": "Maroon",
+      "hex": "#63263e"
+    },
+    {
+      "id": "zn-su-021-c13",
+      "nombre": "Dusty Pink",
+      "hex": "#c4a29d"
+    },
+    {
+      "id": "zn-su-022-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-022-c02",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-su-022-c03",
+      "nombre": "Sandstone",
+      "hex": "#bfa98e"
+    },
+    {
+      "id": "zn-su-022-c04",
+      "nombre": "Ivory",
+      "hex": "#d9d6d1"
+    },
+    {
+      "id": "zn-su-022-c05",
+      "nombre": "Olive",
+      "hex": "#777364"
+    },
+    {
+      "id": "zn-su-022-c06",
+      "nombre": "Pigment dye black",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-023-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-023-c02",
+      "nombre": "Pigment Black",
+      "hex": "#353737"
+    },
+    {
+      "id": "zn-su-023-c03",
+      "nombre": "Ivory",
+      "hex": "#d9d6d1"
+    },
+    {
+      "id": "zn-su-023-c04",
+      "nombre": "Olive",
+      "hex": "#777364"
+    },
+    {
+      "id": "zn-su-023-c05",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-su-024-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-su-024-c02",
+      "nombre": "Army",
+      "hex": "#6a6b56"
+    },
+    {
+      "id": "zn-su-024-c03",
+      "nombre": "Sandstone",
+      "hex": "#bfa98e"
+    },
+    {
+      "id": "zn-su-024-c04",
+      "nombre": "White",
+      "hex": "#eef0f1"
+    },
+    {
+      "id": "zn-su-024-c05",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-su-024-c06",
+      "nombre": "Navy",
+      "hex": "#242e39"
+    },
+    {
+      "id": "zn-su-024-c07",
+      "nombre": "Brown",
+      "hex": "#4b3328"
+    },
+    {
+      "id": "zn-su-024-c08",
+      "nombre": "Storm Blue",
+      "hex": "#566f88"
+    },
+    {
+      "id": "zn-su-024-c09",
+      "nombre": "Dusty Sage",
+      "hex": "#aabdb5"
+    },
+    {
+      "id": "zn-su-024-c10",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-su-024-c11",
+      "nombre": "Pigment dye black",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-024-c12",
+      "nombre": "Ivory",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-024-c13",
+      "nombre": "Olive",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-036-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-ch-036-c02",
+      "nombre": "Classic Navy/Army",
+      "hex": "#606346"
+    },
+    {
+      "id": "zn-ch-036-c03",
+      "nombre": "Classic Navy",
+      "hex": "#292e45"
+    },
+    {
+      "id": "zn-ch-036-c04",
+      "nombre": "Black Camo",
+      "hex": "#24272a"
+    },
+    {
+      "id": "zn-ch-036-c05",
+      "nombre": "Graphite",
+      "hex": "#777b7a"
+    },
+    {
+      "id": "zn-ch-036-c06",
+      "nombre": "Maroon",
+      "hex": "#63263e"
+    },
+    {
+      "id": "zn-ch-036-c07",
+      "nombre": "Red",
+      "hex": "#c3163e"
+    },
+    {
+      "id": "zn-ch-036-c08",
+      "nombre": "Safety Orange",
+      "hex": "#ff8507"
+    },
+    {
+      "id": "zn-ch-036-c09",
+      "nombre": "Safety Yellow",
+      "hex": "#c6f237"
+    },
+    {
+      "id": "zn-ch-036-c10",
+      "nombre": "Khaki/White Zip",
+      "hex": "#d4cbbf"
+    },
+    {
+      "id": "zn-ch-036-c11",
+      "nombre": "Blush/White Zip",
+      "hex": "#e0d1cf"
+    },
+    {
+      "id": "zn-ch-036-c12",
+      "nombre": "Aqua/White Zip",
+      "hex": "#a5d1d8"
+    },
+    {
+      "id": "zn-ch-036-c13",
+      "nombre": "Black/Graphite",
+      "hex": "#666865"
+    },
+    {
+      "id": "zn-ch-036-c14",
+      "nombre": "Maroon/Classic Navy",
+      "hex": "#4b3650"
+    },
+    {
+      "id": "zn-ch-036-c15",
+      "nombre": "Classic Navy/Saddle",
+      "hex": "#a87858"
+    },
+    {
+      "id": "zn-ch-036-c16",
+      "nombre": "Classic Navy/Royal",
+      "hex": "#205b96"
+    },
+    {
+      "id": "zn-ch-036-c17",
+      "nombre": "Black/Forest Camo",
+      "hex": "#61634e"
+    },
+    {
+      "id": "zn-ch-036-c18",
+      "nombre": "Forest Camo",
+      "hex": "#72745b"
+    },
+    {
+      "id": "zn-ch-036-c19",
+      "nombre": "White Camo",
+      "hex": "#c8cbd2"
+    },
+    {
+      "id": "zn-pa-118-c01",
+      "nombre": "Bone",
+      "hex": "#e5dfd3"
+    },
+    {
+      "id": "zn-pa-118-c02",
+      "nombre": "Shadow",
+      "hex": "#55565d"
+    },
+    {
+      "id": "zn-pa-118-c03",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-pa-118-c04",
+      "nombre": "Blush",
+      "hex": "#dcc0bf"
+    },
+    {
+      "id": "zn-pa-118-c05",
+      "nombre": "Dusty Rose",
+      "hex": "#be7e87"
+    },
+    {
+      "id": "zn-pa-118-c06",
+      "nombre": "Misty Blue",
+      "hex": "#87afc8"
+    },
+    {
+      "id": "zn-pa-118-c07",
+      "nombre": "Forest Camo Heather",
+      "hex": "#6e7157"
+    },
+    {
+      "id": "zn-pa-118-c08",
+      "nombre": "Black Camo Heather",
+      "hex": "#34343e"
+    },
+    {
+      "id": "zn-pa-118-c09",
+      "nombre": "Sage",
+      "hex": "#9baa89"
+    },
+    {
+      "id": "zn-pa-119-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-pa-119-c02",
+      "nombre": "Grey Heather",
+      "hex": "#c5c7d3"
+    },
+    {
+      "id": "zn-pa-119-c03",
+      "nombre": "Classic Navy",
+      "hex": "#292e45"
+    },
+    {
+      "id": "zn-pa-119-c04",
+      "nombre": "White",
+      "hex": "#eef0f1"
+    },
+    {
+      "id": "zn-pa-119-c05",
+      "nombre": "Royal",
+      "hex": "#0e58a2"
+    },
+    {
+      "id": "zn-pa-119-c06",
+      "nombre": "Red",
+      "hex": "#c3163e"
+    },
+    {
+      "id": "zn-pa-119-c07",
+      "nombre": "Army",
+      "hex": "#6a6b56"
+    },
+    {
+      "id": "zn-pa-119-c08",
+      "nombre": "Sandstone",
+      "hex": "#bfa98e"
+    },
+    {
+      "id": "zn-pa-119-c09",
+      "nombre": "Mint",
+      "hex": "#8fdedb"
+    },
+    {
+      "id": "zn-pa-119-c10",
+      "nombre": "Light Yellow",
+      "hex": "#eee3a1"
+    },
+    {
+      "id": "zn-pa-119-c11",
+      "nombre": "Light Pink",
+      "hex": "#edc9dd"
+    },
+    {
+      "id": "zn-pa-119-c12",
+      "nombre": "Lavender",
+      "hex": "#cdb2dc"
+    },
+    {
+      "id": "zn-pa-119-c13",
+      "nombre": "Forest Camo",
+      "hex": "#72745b"
+    },
+    {
+      "id": "zn-pa-119-c14",
+      "nombre": "Black Camo",
+      "hex": "#24272a"
+    },
+    {
+      "id": "zn-pa-119-c15",
+      "nombre": "Pigment Black",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-120-c01",
+      "nombre": "Black",
+      "hex": "#24242b"
+    },
+    {
+      "id": "zn-pa-120-c02",
+      "nombre": "Nickel",
+      "hex": "#7e8280"
+    },
+    {
+      "id": "zn-pa-120-c03",
+      "nombre": "Forest Camo Heather",
+      "hex": "#6e7157"
+    },
+    {
+      "id": "zn-ch-037-c01",
+      "nombre": "Black Camo",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-037-c02",
+      "nombre": "Classic Navy/Army",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-037-c03",
+      "nombre": "Reactive black",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-037-c04",
+      "nombre": "Classic Navy",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-025-c01",
+      "nombre": "Mineral wash black",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-026-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-su-026-c02",
+      "nombre": "Pino",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-026-c03",
+      "nombre": "Humo",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-027-c01",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-su-027-c02",
+      "nombre": "Pino",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-027-c03",
+      "nombre": "Humo",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-028-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-029-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-079-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-079-c02",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-079-c03",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-079-c04",
+      "nombre": "Rojo Dulce",
+      "hex": "#e12416"
+    },
+    {
+      "id": "zn-pl-079-c05",
+      "nombre": "Paprika",
+      "hex": "#db647a"
+    },
+    {
+      "id": "zn-pl-079-c06",
+      "nombre": "Canela Vintage",
+      "hex": "#925b3b"
+    },
+    {
+      "id": "zn-pl-079-c07",
+      "nombre": "Verde Olivo",
+      "hex": "#53563d"
+    },
+    {
+      "id": "zn-pl-079-c08",
+      "nombre": "Cactus",
+      "hex": "#009b79"
+    },
+    {
+      "id": "zn-pl-079-c09",
+      "nombre": "Menta",
+      "hex": "#9ac9ac"
+    },
+    {
+      "id": "zn-pl-079-c10",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-pl-079-c11",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-079-c12",
+      "nombre": "Azul Rey",
+      "hex": "#124486"
+    },
+    {
+      "id": "zn-pl-079-c13",
+      "nombre": "Sal Marina",
+      "hex": "#71c5d6"
+    },
+    {
+      "id": "zn-pl-079-c14",
+      "nombre": "Azafrán Claro",
+      "hex": "#f1b8c5"
+    },
+    {
+      "id": "zn-pl-079-c15",
+      "nombre": "Matcha",
+      "hex": "#a4b89f"
+    },
+    {
+      "id": "zn-pl-079-c16",
+      "nombre": "Almendra",
+      "hex": "#e1d4b3"
+    },
+    {
+      "id": "zn-pl-080-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-080-c02",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-080-c03",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-080-c04",
+      "nombre": "Rojo Dulce",
+      "hex": "#e12416"
+    },
+    {
+      "id": "zn-pl-080-c05",
+      "nombre": "Paprika",
+      "hex": "#db647a"
+    },
+    {
+      "id": "zn-pl-080-c06",
+      "nombre": "Canela Vintage",
+      "hex": "#925b3b"
+    },
+    {
+      "id": "zn-pl-080-c07",
+      "nombre": "Verde Olivo",
+      "hex": "#53563d"
+    },
+    {
+      "id": "zn-pl-080-c08",
+      "nombre": "Cactus",
+      "hex": "#009b79"
+    },
+    {
+      "id": "zn-pl-080-c09",
+      "nombre": "Menta",
+      "hex": "#9ac9ac"
+    },
+    {
+      "id": "zn-pl-080-c10",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-pl-080-c11",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-080-c12",
+      "nombre": "Azul Rey",
+      "hex": "#124486"
+    },
+    {
+      "id": "zn-pl-080-c13",
+      "nombre": "Sal Marina",
+      "hex": "#71c5d6"
+    },
+    {
+      "id": "zn-pl-080-c14",
+      "nombre": "Azafrán Claro",
+      "hex": "#f1b8c5"
+    },
+    {
+      "id": "zn-pl-080-c15",
+      "nombre": "Matcha",
+      "hex": "#a4b89f"
+    },
+    {
+      "id": "zn-pl-080-c16",
+      "nombre": "Almendra",
+      "hex": "#e1d4b3"
+    },
+    {
+      "id": "zn-pl-081-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-081-c02",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-081-c03",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-081-c04",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-pl-081-c05",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-081-c06",
+      "nombre": "Azul Rey",
+      "hex": "#124486"
+    },
+    {
+      "id": "zn-pl-081-c07",
+      "nombre": "Matcha",
+      "hex": "#a4b89f"
+    },
+    {
+      "id": "zn-pl-081-c08",
+      "nombre": "Almendra",
+      "hex": "#e1d4b3"
+    },
+    {
+      "id": "zn-pl-082-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-082-c02",
+      "nombre": "Negro Jaspe",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-082-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-082-c04",
+      "nombre": "Marino Jaspe",
+      "hex": "#544f68"
+    },
+    {
+      "id": "zn-pl-082-c05",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-082-c06",
+      "nombre": "Cactus",
+      "hex": "#009b79"
+    },
+    {
+      "id": "zn-pl-082-c07",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-pl-082-c08",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-083-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-083-c02",
+      "nombre": "Negro Jaspe",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-083-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-083-c04",
+      "nombre": "Marino Jaspe",
+      "hex": "#544f68"
+    },
+    {
+      "id": "zn-pl-083-c05",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-083-c06",
+      "nombre": "Cactus",
+      "hex": "#009b79"
+    },
+    {
+      "id": "zn-pl-083-c07",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-pl-083-c08",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-016-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-in-016-c02",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-in-016-c03",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-in-016-c04",
+      "nombre": "Rojo Dulce",
+      "hex": "#e12416"
+    },
+    {
+      "id": "zn-in-016-c05",
+      "nombre": "Cactus",
+      "hex": "#009b79"
+    },
+    {
+      "id": "zn-in-016-c06",
+      "nombre": "Gris Jaspe",
+      "hex": "#bbbbba"
+    },
+    {
+      "id": "zn-in-016-c07",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-in-016-c08",
+      "nombre": "Azul Rey",
+      "hex": "#124486"
+    },
+    {
+      "id": "zn-in-016-c09",
+      "nombre": "Sal Marina",
+      "hex": "#71c5d6"
+    },
+    {
+      "id": "zn-in-016-c10",
+      "nombre": "Azafrán Claro",
+      "hex": "#f1b8c5"
+    },
+    {
+      "id": "zn-pl-084-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-084-c02",
+      "nombre": "Negro Jaspe",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-084-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-084-c04",
+      "nombre": "Marino Jaspe",
+      "hex": "#544f68"
+    },
+    {
+      "id": "zn-pl-084-c05",
+      "nombre": "Azul Rey Jaspe",
+      "hex": "#486e92"
+    },
+    {
+      "id": "zn-pl-084-c06",
+      "nombre": "Azul Playa Jaspe",
+      "hex": "#80c7c4"
+    },
+    {
+      "id": "zn-pl-084-c07",
+      "nombre": "Verde Playa Jaspe",
+      "hex": "#93bc8f"
+    },
+    {
+      "id": "zn-pl-084-c08",
+      "nombre": "Rosa Playa Jaspe",
+      "hex": "#f096ac"
+    },
+    {
+      "id": "zn-pl-084-c09",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-085-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-085-c02",
+      "nombre": "Negro Jaspe",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-085-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-085-c04",
+      "nombre": "Marino Jaspe",
+      "hex": "#544f68"
+    },
+    {
+      "id": "zn-pl-085-c05",
+      "nombre": "Azul Rey Jaspe",
+      "hex": "#486e92"
+    },
+    {
+      "id": "zn-pl-085-c06",
+      "nombre": "Azul Playa Jaspe",
+      "hex": "#80c7c4"
+    },
+    {
+      "id": "zn-pl-085-c07",
+      "nombre": "Verde Playa Jaspe",
+      "hex": "#93bc8f"
+    },
+    {
+      "id": "zn-pl-085-c08",
+      "nombre": "Rosa Playa Jaspe",
+      "hex": "#f096ac"
+    },
+    {
+      "id": "zn-pl-085-c09",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-086-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-086-c02",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-086-c03",
+      "nombre": "Índigo",
+      "hex": "#486f81"
+    },
+    {
+      "id": "zn-pl-086-c04",
+      "nombre": "Rojo",
+      "hex": "#e12416"
+    },
+    {
+      "id": "zn-pl-086-c05",
+      "nombre": "Cacao",
+      "hex": "#766762"
+    },
+    {
+      "id": "zn-pl-086-c06",
+      "nombre": "Roble",
+      "hex": "#b1a268"
+    },
+    {
+      "id": "zn-pl-086-c07",
+      "nombre": "Pistache",
+      "hex": "#a3b79e"
+    },
+    {
+      "id": "zn-pl-086-c08",
+      "nombre": "Girasol",
+      "hex": "#ecd384"
+    },
+    {
+      "id": "zn-pl-086-c09",
+      "nombre": "Marfil",
+      "hex": "#daceb0"
+    },
+    {
+      "id": "zn-pl-086-c10",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-087-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-087-c02",
+      "nombre": "Acero",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-087-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-087-c04",
+      "nombre": "Avena",
+      "hex": "#f6f6f6"
+    },
+    {
+      "id": "zn-pl-087-c05",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-087-c06",
+      "nombre": "Azul Titanio",
+      "hex": "#5b6b80"
+    },
+    {
+      "id": "zn-pl-087-c07",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-088-c01",
+      "nombre": "Negro",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-088-c02",
+      "nombre": "Acero",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-088-c03",
+      "nombre": "Azul Marino",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-088-c04",
+      "nombre": "Avena",
+      "hex": "#f6f6f6"
+    },
+    {
+      "id": "zn-pl-088-c05",
+      "nombre": "Blanco",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-088-c06",
+      "nombre": "Azul Titanio",
+      "hex": "#5b6b80"
+    },
+    {
+      "id": "zn-pl-088-c07",
+      "nombre": "Rojo",
+      "hex": "#ac1818"
+    },
+    {
+      "id": "zn-pl-089-c01",
+      "nombre": "Negro Triblend",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-089-c02",
+      "nombre": "Negro Carbón Triblend",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-089-c03",
+      "nombre": "Azul Marino Triblend",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-089-c04",
+      "nombre": "Rojo Triblend",
+      "hex": "#cd2a28"
+    },
+    {
+      "id": "zn-pl-089-c05",
+      "nombre": "Café Triblend",
+      "hex": "#874641"
+    },
+    {
+      "id": "zn-pl-089-c06",
+      "nombre": "Verde Musgo Triblend",
+      "hex": "#626052"
+    },
+    {
+      "id": "zn-pl-089-c07",
+      "nombre": "Mostaza Triblend",
+      "hex": "#e1ae61"
+    },
+    {
+      "id": "zn-pl-089-c08",
+      "nombre": "Blanco Triblend",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-090-c01",
+      "nombre": "Negro Triblend",
+      "hex": "#13100d"
+    },
+    {
+      "id": "zn-pl-090-c02",
+      "nombre": "Negro Carbón Triblend",
+      "hex": "#433e41"
+    },
+    {
+      "id": "zn-pl-090-c03",
+      "nombre": "Azul Marino Triblend",
+      "hex": "#212c5b"
+    },
+    {
+      "id": "zn-pl-090-c04",
+      "nombre": "Rojo Triblend",
+      "hex": "#cd2a28"
+    },
+    {
+      "id": "zn-pl-090-c05",
+      "nombre": "Café Triblend",
+      "hex": "#874641"
+    },
+    {
+      "id": "zn-pl-090-c06",
+      "nombre": "Verde Musgo Triblend",
+      "hex": "#626052"
+    },
+    {
+      "id": "zn-pl-090-c07",
+      "nombre": "Mostaza Triblend",
+      "hex": "#e1ae61"
+    },
+    {
+      "id": "zn-pl-090-c08",
+      "nombre": "Blanco Triblend",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "zn-pl-091-c01",
+      "nombre": "Negro Mineral",
+      "hex": "#2c2c2d"
+    },
+    {
+      "id": "zn-pl-091-c02",
+      "nombre": "Agua Marina",
+      "hex": "#a0bed4"
+    },
+    {
+      "id": "zn-pl-091-c03",
+      "nombre": "Hielo",
+      "hex": "#acc2d1"
+    },
+    {
+      "id": "zn-pl-091-c04",
+      "nombre": "Malva",
+      "hex": "#bc889d"
+    },
+    {
+      "id": "zn-pl-091-c05",
+      "nombre": "Salvia",
+      "hex": "#b5bcb3"
+    },
+    {
+      "id": "zn-pl-091-c06",
+      "nombre": "Gris Claro",
+      "hex": "#cecfd2"
+    },
+    {
+      "id": "zn-pl-091-c07",
+      "nombre": "Pigmento Carbón",
+      "hex": "#1a1a1a"
+    },
+    {
+      "id": "zn-pl-091-c08",
+      "nombre": "Grafito Antique",
+      "hex": "#393939"
+    },
+    {
+      "id": "zn-pl-091-c09",
+      "nombre": "Azul Mineral",
+      "hex": "#303d5f"
+    },
+    {
+      "id": "zn-pl-092-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-093-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-017-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-112-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-112-c02",
+      "nombre": "Ciruela",
+      "hex": "#6b2f4a"
+    },
+    {
+      "id": "zn-cm-112-c03",
+      "nombre": "Ceniza",
+      "hex": "#b8b6ae"
+    },
+    {
+      "id": "zn-cm-112-c04",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-cm-113-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-113-c02",
+      "nombre": "Ciruela",
+      "hex": "#6b2f4a"
+    },
+    {
+      "id": "zn-cm-113-c03",
+      "nombre": "Ceniza",
+      "hex": "#b8b6ae"
+    },
+    {
+      "id": "zn-cm-113-c04",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-cm-113-c05",
+      "nombre": "Miel",
+      "hex": "#d39a3c"
+    },
+    {
+      "id": "zn-pl-094-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-094-c02",
+      "nombre": "Ciruela",
+      "hex": "#6b2f4a"
+    },
+    {
+      "id": "zn-pl-094-c03",
+      "nombre": "Ceniza",
+      "hex": "#b8b6ae"
+    },
+    {
+      "id": "zn-pl-094-c04",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-pl-095-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-095-c02",
+      "nombre": "Ciruela",
+      "hex": "#6b2f4a"
+    },
+    {
+      "id": "zn-pl-095-c03",
+      "nombre": "Ceniza",
+      "hex": "#b8b6ae"
+    },
+    {
+      "id": "zn-pl-095-c04",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-pl-096-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-096-c02",
+      "nombre": "Ciruela",
+      "hex": "#6b2f4a"
+    },
+    {
+      "id": "zn-pl-096-c03",
+      "nombre": "Ceniza",
+      "hex": "#b8b6ae"
+    },
+    {
+      "id": "zn-pl-096-c04",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-pl-096-c05",
+      "nombre": "Miel",
+      "hex": "#d39a3c"
+    },
+    {
+      "id": "zn-cm-114-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-114-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-cm-114-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-114-c04",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-114-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-114-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-cm-114-c07",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-cm-115-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-115-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-cm-115-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-115-c04",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-115-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-115-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-cm-115-c07",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-097-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-097-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-097-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-097-c04",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pl-097-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-097-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-097-c07",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-098-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-098-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-098-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-098-c04",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pl-098-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-098-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-098-c07",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-099-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-099-c02",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-099-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-099-c04",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pl-099-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-099-c06",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-099-c07",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-cm-116-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-116-c02",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-116-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-117-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-117-c02",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-117-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-100-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-100-c02",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-100-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-101-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-101-c02",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-101-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-102-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-102-c02",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-102-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-118-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-119-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-103-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-104-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-105-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-120-c01",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-106-c01",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-121-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-121-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-cm-121-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-121-c04",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-121-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-121-c06",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-121-c07",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-122-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-122-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-cm-122-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-122-c04",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-122-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-122-c06",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-122-c07",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-122-c08",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-122-c09",
+      "nombre": "Tinto",
+      "hex": "#5e1a24"
+    },
+    {
+      "id": "zn-pl-107-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-107-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-107-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-107-c04",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-107-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-108-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-108-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-108-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-108-c04",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-108-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-109-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-109-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-109-c03",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-109-c04",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-109-c05",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-109-c06",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-109-c07",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-109-c08",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-109-c09",
+      "nombre": "Tinto",
+      "hex": "#5e1a24"
+    },
+    {
+      "id": "zn-cm-123-c01",
+      "nombre": "Blanco - Azul - Rojo",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-110-c01",
+      "nombre": "Blanco - Azul - Rojo",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-124-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-111-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-125-c01",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-cm-125-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-125-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-125-c04",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-126-c01",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-cm-126-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-126-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-126-c04",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-126-c05",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pl-112-c01",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-112-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-112-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-112-c04",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-113-c01",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-113-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-113-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-113-c04",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-114-c01",
+      "nombre": "Rosa",
+      "hex": "#e89ab0"
+    },
+    {
+      "id": "zn-pl-114-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-114-c03",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-114-c04",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-114-c05",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-127-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-127-c02",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-cm-127-c03",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-127-c04",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-cm-127-c05",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-128-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-128-c02",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-cm-128-c03",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-128-c04",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-cm-128-c05",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-128-c06",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-115-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-115-c02",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pl-115-c03",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pl-115-c04",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-pl-115-c05",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-116-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-116-c02",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pl-116-c03",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pl-116-c04",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-pl-116-c05",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-117-c01",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-117-c02",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pl-117-c03",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pl-117-c04",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-pl-117-c05",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-117-c06",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-129-c01",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-129-c02",
+      "nombre": "G. Acero",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-118-c01",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-118-c02",
+      "nombre": "G. Acero",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-130-c01",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-cm-130-c02",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-pl-119-c01",
+      "nombre": "Uva",
+      "hex": "#5b2c5e"
+    },
+    {
+      "id": "zn-pl-119-c02",
+      "nombre": "Lago",
+      "hex": "#4f8aa6"
+    },
+    {
+      "id": "zn-cm-131-c01",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pl-120-c01",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-132-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-132-c02",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-cm-133-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-133-c02",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-121-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-121-c02",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-122-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-122-c02",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-pl-123-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-123-c02",
+      "nombre": "Plumbago",
+      "hex": "#8fa6d6"
+    },
+    {
+      "id": "zn-cm-134-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-cm-135-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pl-124-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pl-125-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pl-126-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-cm-136-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-cm-137-c01",
+      "nombre": "Gris-Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-127-c01",
+      "nombre": "Gris-Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-138-c01",
+      "nombre": "Azul-Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pl-128-c01",
+      "nombre": "Azul-Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-cm-139-c01",
+      "nombre": "Azul-Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-pl-129-c01",
+      "nombre": "Azul-Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-cm-140-c01",
+      "nombre": "Gris-Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-130-c01",
+      "nombre": "Gris-Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-141-c01",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-pl-131-c01",
+      "nombre": "Azul",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-cm-142-c01",
+      "nombre": "Negro-Rojo",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-132-c01",
+      "nombre": "Negro-Rojo",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-143-c01",
+      "nombre": "Lila-Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-pl-133-c01",
+      "nombre": "Lila-Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-cm-144-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-cm-144-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-144-c03",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-cm-144-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-144-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-144-c06",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-cm-144-c07",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-pl-134-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-134-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-134-c03",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-pl-134-c04",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-134-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-134-c06",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pl-134-c07",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-cm-145-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-135-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-136-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-146-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-137-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-138-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-147-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-139-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-140-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-141-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-142-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-143-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-148-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-144-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-121-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-121-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-121-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-121-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-121-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-122-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-122-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-122-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-122-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-122-c05",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pa-123-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-123-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-123-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-123-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-124-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-124-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-124-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-pa-124-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-ot-012-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ot-012-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ot-012-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-ot-012-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-ot-013-c01",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-ot-013-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ot-013-c03",
+      "nombre": "Arena",
+      "hex": "#cdc2b4"
+    },
+    {
+      "id": "zn-ot-013-c04",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-125-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-126-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-po-033-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-033-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-033-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-po-034-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-034-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-034-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-po-035-c01",
+      "nombre": "Rojo Fire",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-035-c02",
+      "nombre": "G. Claro",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-035-c03",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-po-035-c04",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-po-035-c05",
+      "nombre": "G. Oscuro",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-035-c06",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-po-036-c01",
+      "nombre": "Rojo Fire",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-036-c02",
+      "nombre": "G. Claro",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-036-c03",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-po-036-c04",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-po-036-c05",
+      "nombre": "G. Oscuro",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-036-c06",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-po-037-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-037-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-037-c03",
+      "nombre": "V. Lima",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-037-c04",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-po-037-c05",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-037-c06",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-po-037-c07",
+      "nombre": "Titanium",
+      "hex": "#8a8d8f"
+    },
+    {
+      "id": "zn-po-037-c08",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-po-038-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-038-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-po-038-c03",
+      "nombre": "V. Lima",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-038-c04",
+      "nombre": "A. Rey",
+      "hex": "#2846a8"
+    },
+    {
+      "id": "zn-po-038-c05",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-038-c06",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-po-038-c07",
+      "nombre": "Titanium",
+      "hex": "#8a8d8f"
+    },
+    {
+      "id": "zn-po-038-c08",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-038-c01",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-038-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-ch-038-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ch-039-c01",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ch-039-c02",
+      "nombre": "Rojo",
+      "hex": "#b3202a"
+    },
+    {
+      "id": "zn-ch-039-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ce-007-c01",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-007-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ce-008-c01",
+      "nombre": "Gris",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-008-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-cm-149-c01",
+      "nombre": "Amarillo Hi Vis",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-150-c01",
+      "nombre": "Amarillo Hi Vis",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-151-c01",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-cm-152-c01",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-cm-153-c01",
+      "nombre": "Amarillo Hi Vis / Marino",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-154-c01",
+      "nombre": "Amarillo Hi Vis / Marino",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-155-c01",
+      "nombre": "Amarillo Hi Vis",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-156-c01",
+      "nombre": "Amarillo Hi Vis / Marino",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-156-c02",
+      "nombre": "Naranja Hi Vis / Marino",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pl-145-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-146-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ba-033-c01",
+      "nombre": "Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-147-c01",
+      "nombre": "Amarillo Hi Vis",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-pl-148-c01",
+      "nombre": "Amarillo Hi Vis",
+      "hex": "#f2c230"
+    },
+    {
+      "id": "zn-cm-157-c01",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-cm-157-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-cm-157-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-127-c01",
+      "nombre": "Khaki",
+      "hex": "#b8a67e"
+    },
+    {
+      "id": "zn-pa-127-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pa-127-c03",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pa-128-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-128-c02",
+      "nombre": "Índigo - cinta amarilla",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-129-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-129-c02",
+      "nombre": "Índigo - cinta amarilla",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-130-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pa-131-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-pl-149-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-150-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-151-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-152-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-153-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-039-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-040-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-158-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-159-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-160-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-161-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-009-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-010-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-011-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-fi-021-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-fi-021-c02",
+      "nombre": "Negro - Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-fi-021-c03",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-fi-021-c04",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pa-132-c01",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-pa-132-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ot-014-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-015-c01",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-015-c02",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ot-016-c01",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-016-c02",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ot-017-c01",
+      "nombre": "Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ot-017-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ot-017-c03",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-018-c01",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-018-c02",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ma-008-c01",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ma-008-c02",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ma-009-c01",
+      "nombre": "Blanco - Negro",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ma-009-c02",
+      "nombre": "Blanco - Naranja",
+      "hex": "#e8702a"
+    },
+    {
+      "id": "zn-ma-010-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ma-011-c01",
+      "nombre": "Índigo",
+      "hex": "#3b3f7a"
+    },
+    {
+      "id": "zn-ba-034-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-fi-022-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-fi-022-c02",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-fi-022-c03",
+      "nombre": "Verde",
+      "hex": "#2f6b3a"
+    },
+    {
+      "id": "zn-ba-035-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-019-c01",
+      "nombre": "A. Cielo",
+      "hex": "#8ec5e8"
+    },
+    {
+      "id": "zn-ot-019-c02",
+      "nombre": "A. Marino",
+      "hex": "#1f2a44"
+    },
+    {
+      "id": "zn-pl-154-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-154-c02",
+      "nombre": "A. Francia",
+      "hex": "#9a9ca0"
     }
   ],
   "tecnicas": [
@@ -33789,7 +37289,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-005",
@@ -33851,7 +37352,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-006",
@@ -33912,7 +37414,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 278
     },
     {
       "id": "zn-pa-007",
@@ -33969,7 +37472,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-008",
@@ -34026,7 +37529,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258
     },
     {
       "id": "zn-pa-009",
@@ -34085,7 +37589,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-010",
@@ -34143,7 +37648,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-011",
@@ -34204,7 +37710,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
     },
     {
       "id": "zn-pa-012",
@@ -34263,7 +37770,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-013",
@@ -34313,7 +37821,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-014",
@@ -34367,7 +37876,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-015",
@@ -34419,7 +37928,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-016",
@@ -34471,7 +37981,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-017",
@@ -34523,7 +38033,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-018",
@@ -34576,7 +38086,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-019",
@@ -34629,7 +38139,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-020",
@@ -34680,7 +38190,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 246
     },
     {
       "id": "zn-pa-021",
@@ -34739,7 +38250,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-022",
@@ -34800,7 +38312,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-023",
@@ -34853,7 +38366,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-024",
@@ -34905,7 +38418,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 263
     },
     {
       "id": "zn-pa-025",
@@ -34963,7 +38477,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13,
+      "gramaje": 466,
       "coloresSinRender": [
         "zn-pa-025-c01"
       ]
@@ -35027,7 +38541,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 14,
+      "gramaje": 475,
       "coloresSinRender": [
         "zn-pa-026-c01"
       ]
@@ -35092,7 +38606,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 14,
+      "gramaje": 475,
       "coloresSinRender": [
         "zn-pa-027-c01",
         "zn-pa-027-c02"
@@ -35147,7 +38661,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 14,
+      "gramaje": 475,
       "coloresSinRender": [
         "zn-pa-028-c01",
         "zn-pa-028-c02"
@@ -35201,7 +38715,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13,
+      "gramaje": 466,
       "coloresSinRender": [
         "zn-pa-029-c01"
       ]
@@ -35261,7 +38775,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12,
+      "gramaje": 407,
       "coloresSinRender": [
         "zn-pa-030-c01"
       ]
@@ -35321,7 +38835,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12,
+      "gramaje": 407,
       "coloresSinRender": [
         "zn-pa-031-c01"
       ]
@@ -35381,7 +38895,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-pa-033",
@@ -35443,7 +38957,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12,
+      "gramaje": 407,
       "coloresSinRender": [
         "zn-pa-033-c01",
         "zn-pa-033-c02",
@@ -35502,7 +39016,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10,
+      "gramaje": 339,
       "coloresSinRender": [
         "zn-pa-034-c01",
         "zn-pa-034-c02"
@@ -35557,7 +39071,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11
+      "gramaje": 398
     },
     {
       "id": "zn-pa-036",
@@ -35608,7 +39122,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 14,
+      "gramaje": 475,
       "coloresSinRender": [
         "zn-pa-036-c01",
         "zn-pa-036-c02"
@@ -35662,7 +39176,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13,
+      "gramaje": 466,
       "coloresSinRender": [
         "zn-pa-037-c01"
       ]
@@ -35715,7 +39229,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13,
+      "gramaje": 466,
       "coloresSinRender": [
         "zn-pa-038-c01"
       ]
@@ -35768,7 +39282,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 297
     },
     {
       "id": "zn-ov-001",
@@ -35816,7 +39331,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ov-002",
@@ -35870,7 +39386,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ov-003",
@@ -35919,7 +39436,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 263
     },
     {
       "id": "zn-ov-004",
@@ -35971,7 +39488,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 297
     },
     {
       "id": "zn-ov-005",
@@ -36020,7 +39537,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 263
     },
     {
       "id": "zn-ov-006",
@@ -36069,7 +39586,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11
+      "gramaje": 398
     },
     {
       "id": "zn-ov-007",
@@ -36118,7 +39635,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11,
+      "gramaje": 398,
       "coloresSinRender": [
         "zn-ov-007-c01"
       ]
@@ -36170,7 +39687,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11,
+      "gramaje": 398,
       "coloresSinRender": [
         "zn-ov-008-c01"
       ]
@@ -36230,7 +39747,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11
+      "gramaje": 398
     },
     {
       "id": "zn-cm-021",
@@ -36290,7 +39807,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-022",
@@ -36349,7 +39866,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-023",
@@ -36398,7 +39915,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-cm-024",
@@ -36454,7 +39972,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-cm-025",
@@ -36511,7 +40030,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-cm-025-c01",
         "zn-cm-025-c02"
-      ]
+      ],
+      "gramaje": 271
     },
     {
       "id": "zn-cm-026",
@@ -36566,7 +40086,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-027",
@@ -36626,7 +40146,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-028",
@@ -36678,7 +40198,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 156
     },
     {
       "id": "zn-cm-029",
@@ -36735,7 +40256,8 @@ module.exports = {
         "zn-cm-029-c02",
         "zn-cm-029-c03",
         "zn-cm-029-c04"
-      ]
+      ],
+      "gramaje": 144
     },
     {
       "id": "zn-cm-030",
@@ -36792,7 +40314,8 @@ module.exports = {
         "zn-cm-030-c02",
         "zn-cm-030-c03",
         "zn-cm-030-c04"
-      ]
+      ],
+      "gramaje": 144
     },
     {
       "id": "zn-cm-031",
@@ -36840,7 +40363,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-cm-032",
@@ -36891,7 +40415,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 156
     },
     {
       "id": "zn-cm-033",
@@ -36941,7 +40466,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
     },
     {
       "id": "zn-cm-034",
@@ -36991,7 +40517,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
     },
     {
       "id": "zn-cm-035",
@@ -37046,7 +40573,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-036",
@@ -37101,7 +40628,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-037",
@@ -37155,7 +40682,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-cm-037-c01"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-cm-038",
@@ -37209,7 +40737,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-cm-038-c01"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-po-025",
@@ -37273,7 +40802,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-pl-037",
@@ -37584,7 +41114,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 186
     },
     {
       "id": "zn-ch-011",
@@ -37704,7 +41235,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
     },
     {
       "id": "zn-ch-013",
@@ -37768,7 +41300,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
     },
     {
       "id": "zn-ch-014",
@@ -37830,7 +41363,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ch-015",
@@ -37894,7 +41427,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11
+      "gramaje": 190
     },
     {
       "id": "zn-ch-016",
@@ -37958,7 +41491,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ch-017",
@@ -38020,7 +41553,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-ch-018",
@@ -38085,7 +41619,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-ch-018-c01",
         "zn-ch-018-c02"
-      ]
+      ],
+      "gramaje": 271
     },
     {
       "id": "zn-ch-019",
@@ -38142,7 +41677,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 285
     },
     {
       "id": "zn-su-016",
@@ -38250,7 +41786,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-041",
@@ -38319,7 +41856,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-042",
@@ -38380,7 +41918,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 229
     },
     {
       "id": "zn-pa-043",
@@ -38434,7 +41972,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 229
     },
     {
       "id": "zn-pa-044",
@@ -38494,7 +42032,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
     },
     {
       "id": "zn-pa-045",
@@ -38554,7 +42093,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
     },
     {
       "id": "zn-pa-046",
@@ -38613,7 +42153,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 14,
+      "gramaje": 475,
       "coloresSinRender": [
         "zn-pa-046-c01"
       ]
@@ -38674,7 +42214,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-048",
@@ -38727,7 +42268,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-049",
@@ -38786,7 +42328,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12,
+      "gramaje": 407,
       "coloresSinRender": [
         "zn-pa-049-c01"
       ]
@@ -38911,7 +42453,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 278
     },
     {
       "id": "zn-pa-052",
@@ -38963,7 +42506,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 229
     },
     {
       "id": "zn-pa-053",
@@ -39015,7 +42559,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 229
     },
     {
       "id": "zn-pa-054",
@@ -39066,7 +42611,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-055",
@@ -39116,7 +42662,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 441
     },
     {
       "id": "zn-pa-056",
@@ -39167,7 +42713,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 229
     },
     {
       "id": "zn-pa-057",
@@ -39216,7 +42763,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-cm-039",
@@ -39275,7 +42823,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-cm-039-c01"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-cm-040",
@@ -39334,7 +42883,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-cm-040-c01"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-pl-041",
@@ -39399,7 +42949,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-042",
@@ -39462,7 +43012,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-043",
@@ -39525,7 +43075,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 186
     },
     {
       "id": "zn-pl-044",
@@ -39589,7 +43140,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pl-044-c01"
-      ]
+      ],
+      "gramaje": 271
     },
     {
       "id": "zn-pa-058",
@@ -39641,7 +43193,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-059",
@@ -39694,7 +43247,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 263
     },
     {
       "id": "zn-pa-060",
@@ -39744,7 +43297,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 278
     },
     {
       "id": "zn-pa-061",
@@ -39794,7 +43348,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
     },
     {
       "id": "zn-pa-062",
@@ -39845,7 +43400,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12,
+      "gramaje": 407,
       "coloresSinRender": [
         "zn-pa-062-c01"
       ]
@@ -39907,7 +43462,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-064",
@@ -39979,7 +43535,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pa-064-c07"
-      ]
+      ],
+      "gramaje": 288
     },
     {
       "id": "zn-pa-065",
@@ -40040,7 +43597,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-066",
@@ -40102,7 +43660,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-067",
@@ -40159,7 +43718,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-068",
@@ -40217,7 +43777,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 305
     },
     {
       "id": "zn-pa-069",
@@ -40279,7 +43840,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-pa-070",
@@ -40346,7 +43907,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 466
     },
     {
       "id": "zn-pa-071",
@@ -40413,7 +43974,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 466
     },
     {
       "id": "zn-pa-072",
@@ -40477,7 +44038,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13,
+      "gramaje": 466,
       "coloresSinRender": [
         "zn-pa-072-c03"
       ]
@@ -40542,7 +44103,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 466
     },
     {
       "id": "zn-pa-074",
@@ -40660,7 +44221,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-076",
@@ -40735,7 +44297,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pa-076-c08"
-      ]
+      ],
+      "gramaje": 254
     },
     {
       "id": "zn-pa-077",
@@ -40794,7 +44357,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-078",
@@ -40857,7 +44421,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
     },
     {
       "id": "zn-pa-079",
@@ -40920,7 +44485,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-080",
@@ -40981,7 +44547,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-081",
@@ -41051,7 +44618,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-082",
@@ -41110,7 +44678,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-083",
@@ -41169,7 +44738,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-084",
@@ -41234,7 +44804,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pa-084-c05"
-      ]
+      ],
+      "gramaje": 254
     },
     {
       "id": "zn-pa-085",
@@ -41293,7 +44864,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 254
     },
     {
       "id": "zn-pa-086",
@@ -41356,7 +44927,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-087",
@@ -41419,7 +44991,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 263
     },
     {
       "id": "zn-pa-088",
@@ -41483,7 +45055,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-089",
@@ -41539,7 +45112,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-pa-090",
@@ -41602,7 +45176,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-091",
@@ -41664,7 +45239,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
     },
     {
       "id": "zn-pa-092",
@@ -41727,7 +45303,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-093",
@@ -41790,7 +45367,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-094",
@@ -41854,7 +45432,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-095",
@@ -41915,7 +45494,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-096",
@@ -41977,7 +45557,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-cm-041",
@@ -42034,7 +45615,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-042",
@@ -42091,7 +45672,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 178
     },
     {
       "id": "zn-cm-043",
@@ -42139,7 +45720,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 136
     },
     {
       "id": "zn-cm-044",
@@ -42187,7 +45769,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 136
     },
     {
       "id": "zn-cm-045",
@@ -42237,7 +45820,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-cm-046",
@@ -42301,7 +45885,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 68,
+      "gramaje": 217,
       "coloresSinRender": [
         "zn-cm-046-c10",
         "zn-cm-046-c11"
@@ -42369,7 +45953,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 70,
+      "gramaje": 217,
       "coloresSinRender": [
         "zn-cm-047-c10",
         "zn-cm-047-c11"
@@ -42427,7 +46011,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-cm-049",
@@ -42485,7 +46070,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-cm-049-c01",
         "zn-cm-049-c02"
-      ]
+      ],
+      "gramaje": 203
     },
     {
       "id": "zn-cm-050",
@@ -42543,7 +46129,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-cm-050-c01",
         "zn-cm-050-c02"
-      ]
+      ],
+      "gramaje": 203
     },
     {
       "id": "zn-cm-051",
@@ -42592,7 +46179,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-051-c01"
       ]
@@ -42644,7 +46231,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-052-c01"
       ]
@@ -42700,7 +46287,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-cm-054",
@@ -42786,7 +46373,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 79,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-054-c24",
         "zn-cm-054-c25",
@@ -42851,7 +46438,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 80,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-055-c01",
         "zn-cm-055-c02",
@@ -42918,7 +46505,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-057",
@@ -42971,7 +46558,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-058",
@@ -43024,7 +46611,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-059",
@@ -43079,7 +46666,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-059-c01"
       ]
@@ -43167,7 +46754,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-060-c16",
         "zn-cm-060-c17",
@@ -43225,7 +46812,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-061-c01"
       ]
@@ -43277,7 +46864,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-062-c01"
       ]
@@ -43338,7 +46925,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 104,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-063-c01",
         "zn-cm-063-c02",
@@ -43406,7 +46993,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-065",
@@ -43464,7 +47051,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-cm-065-c01",
         "zn-cm-065-c02"
-      ]
+      ],
+      "gramaje": 119
     },
     {
       "id": "zn-cm-066",
@@ -43515,7 +47103,8 @@ module.exports = {
       "coloresSinRender": [
         "zn-cm-066-c01",
         "zn-cm-066-c02"
-      ]
+      ],
+      "gramaje": 119
     },
     {
       "id": "zn-cm-067",
@@ -43567,7 +47156,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 159
     },
     {
       "id": "zn-cm-068",
@@ -43619,7 +47209,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 159
     },
     {
       "id": "zn-cm-069",
@@ -43676,7 +47267,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-070",
@@ -43733,7 +47324,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-071",
@@ -43794,7 +47385,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-072",
@@ -43855,7 +47446,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-073",
@@ -43912,7 +47503,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-074",
@@ -43969,7 +47560,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-075",
@@ -44023,7 +47614,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-076",
@@ -44077,7 +47668,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-077",
@@ -44135,7 +47726,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-077-c01",
         "zn-cm-077-c02",
@@ -44202,7 +47793,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-078-c01",
         "zn-cm-078-c02",
@@ -44262,7 +47853,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-079-c01",
         "zn-cm-079-c02",
@@ -44318,7 +47909,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-080-c01",
         "zn-cm-080-c02",
@@ -44383,7 +47974,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-082",
@@ -44443,7 +48034,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-083",
@@ -44501,7 +48092,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-084",
@@ -44559,7 +48150,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-po-026",
@@ -44630,7 +48221,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180
     },
     {
       "id": "zn-po-027",
@@ -44701,7 +48293,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180
     },
     {
       "id": "zn-po-028",
@@ -44774,7 +48367,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
     },
     {
       "id": "zn-po-029",
@@ -44847,7 +48441,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
     },
     {
       "id": "zn-ot-008",
@@ -44904,7 +48499,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-su-017",
@@ -44960,7 +48555,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-su-017-c05"
-      ]
+      ],
+      "gramaje": 315
     },
     {
       "id": "zn-ch-020",
@@ -45025,7 +48621,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ch-021",
@@ -45089,7 +48685,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ch-022",
@@ -45152,7 +48748,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 349
     },
     {
       "id": "zn-ch-023",
@@ -45271,7 +48867,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ch-025",
@@ -45333,7 +48929,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ot-009",
@@ -45395,7 +48991,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
     },
     {
       "id": "zn-ch-026",
@@ -45458,7 +49055,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ch-027",
@@ -45515,7 +49112,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 246,
       "coloresSinRender": [
         "zn-ch-027-c01"
       ]
@@ -45587,7 +49184,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 246,
       "coloresSinRender": [
         "zn-ch-028-c06",
         "zn-ch-028-c07"
@@ -45655,7 +49252,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-ce-003",
@@ -45716,7 +49314,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ce-004",
@@ -45778,7 +49376,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 349
     },
     {
       "id": "zn-ce-005",
@@ -45895,7 +49493,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ov-010",
@@ -45954,7 +49552,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 11
+      "gramaje": 398
     },
     {
       "id": "zn-ov-011",
@@ -46014,7 +49612,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-ov-012",
@@ -46066,7 +49665,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10,
+      "gramaje": 339,
       "coloresSinRender": [
         "zn-ov-012-c01"
       ]
@@ -46128,7 +49727,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-ov-014",
@@ -46180,7 +49780,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
     },
     {
       "id": "zn-ov-015",
@@ -46237,7 +49838,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-ov-016",
@@ -46289,7 +49890,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ov-017",
@@ -46344,7 +49946,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ov-018",
@@ -46412,7 +50015,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 246,
       "coloresSinRender": [
         "zn-ov-018-c11"
       ]
@@ -46469,7 +50072,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ov-020",
@@ -46522,7 +50125,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ov-021",
@@ -46571,7 +50174,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 246,
       "coloresSinRender": [
         "zn-ov-021-c01"
       ]
@@ -46635,7 +50238,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 264
     },
     {
       "id": "zn-pa-098",
@@ -46697,7 +50301,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-099",
@@ -46762,7 +50367,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-100",
@@ -46824,7 +50430,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
     },
     {
       "id": "zn-pa-101",
@@ -46883,7 +50490,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-102",
@@ -46945,7 +50553,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 254
     },
     {
       "id": "zn-pa-103",
@@ -47004,7 +50612,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 466
     },
     {
       "id": "zn-pa-104",
@@ -47063,7 +50671,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 12
+      "gramaje": 432
     },
     {
       "id": "zn-pa-105",
@@ -47124,7 +50732,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-pa-106",
@@ -47190,7 +50799,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pa-107",
@@ -47254,7 +50864,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 263
     },
     {
       "id": "zn-pa-108",
@@ -47315,7 +50925,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pl-045",
@@ -47382,7 +50993,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-046",
@@ -47450,7 +51061,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-047",
@@ -47511,7 +51122,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-048",
@@ -47573,7 +51184,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-049",
@@ -47642,7 +51253,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-050",
@@ -47711,7 +51322,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-051",
@@ -47782,7 +51393,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 159
     },
     {
       "id": "zn-pl-052",
@@ -47853,7 +51465,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 159
     },
     {
       "id": "zn-pl-053",
@@ -47918,7 +51531,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-054",
@@ -47983,7 +51596,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-055",
@@ -48049,7 +51662,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-056",
@@ -48115,7 +51728,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-057",
@@ -48183,7 +51796,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-pl-058",
@@ -48251,7 +51864,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-po-030",
@@ -48320,7 +51933,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180
     },
     {
       "id": "zn-po-031",
@@ -48391,7 +52005,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
     },
     {
       "id": "zn-ch-030",
@@ -48452,7 +52067,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 349
     },
     {
       "id": "zn-ba-001",
@@ -48507,7 +52122,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-002",
@@ -48562,7 +52177,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-003",
@@ -48617,7 +52232,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-004",
@@ -48672,7 +52287,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-005",
@@ -48730,7 +52345,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ba-006",
@@ -48786,7 +52402,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ba-007",
@@ -48842,7 +52459,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ba-008",
@@ -48895,7 +52513,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ba-009",
@@ -48949,7 +52568,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pa-109",
@@ -49004,7 +52623,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-ot-010",
@@ -49070,7 +52690,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ot-011",
@@ -49135,7 +52756,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-010",
@@ -49191,7 +52813,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ba-011",
@@ -49243,7 +52866,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
     },
     {
       "id": "zn-fi-001",
@@ -49298,7 +52922,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-002",
@@ -49347,7 +52971,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-003",
@@ -49402,7 +53026,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-004",
@@ -49457,7 +53081,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-005",
@@ -49513,7 +53137,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-006",
@@ -49570,7 +53194,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-007",
@@ -49627,7 +53251,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-008",
@@ -49684,7 +53308,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-009",
@@ -49741,7 +53365,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-010",
@@ -49795,7 +53419,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 156
     },
     {
       "id": "zn-fi-011",
@@ -49849,7 +53474,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 156
     },
     {
       "id": "zn-pa-110",
@@ -49904,7 +53530,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 195
     },
     {
       "id": "zn-pa-111",
@@ -49959,7 +53585,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 195
     },
     {
       "id": "zn-pa-112",
@@ -50014,7 +53640,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 75
+      "gramaje": 195
     },
     {
       "id": "zn-pl-059",
@@ -50080,7 +53706,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-085",
@@ -50137,7 +53763,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-012",
@@ -50190,7 +53816,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 212
     },
     {
       "id": "zn-fi-013",
@@ -50243,7 +53869,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-fi-014",
@@ -50300,7 +53926,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-015",
@@ -50352,7 +53978,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-fi-016",
@@ -50409,7 +54036,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-017",
@@ -50462,7 +54089,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-018",
@@ -50519,7 +54146,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-fi-019",
@@ -50576,7 +54203,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-ma-002",
@@ -50635,7 +54262,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ma-003",
@@ -50691,7 +54318,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ma-004",
@@ -50750,7 +54377,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-pa-113",
@@ -50810,7 +54438,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-012",
@@ -50865,7 +54493,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-pl-060",
@@ -50928,7 +54556,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-086",
@@ -50982,7 +54610,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-cm-087",
@@ -51036,7 +54664,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 146
     },
     {
       "id": "zn-cm-088",
@@ -51089,7 +54718,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-cm-089",
@@ -51146,7 +54776,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-cm-090",
@@ -51194,7 +54825,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 146
     },
     {
       "id": "zn-pa-114",
@@ -51251,7 +54883,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-go-090",
@@ -51315,7 +54947,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-go-091",
@@ -51436,7 +55069,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ma-005",
@@ -51493,7 +55126,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ma-006",
@@ -51550,7 +55183,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-013",
@@ -51607,7 +55240,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-ba-014",
@@ -51663,7 +55296,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-ch-031",
@@ -51720,7 +55353,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 144
     },
     {
       "id": "zn-ba-015",
@@ -51778,7 +55411,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-016",
@@ -51832,7 +55466,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-017",
@@ -51886,7 +55521,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-018",
@@ -51940,7 +55576,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-019",
@@ -51998,7 +55635,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-020",
@@ -52050,7 +55688,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-021",
@@ -52107,7 +55746,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-022",
@@ -52169,7 +55809,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-023",
@@ -52221,7 +55862,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-024",
@@ -52274,7 +55916,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-025",
@@ -52326,7 +55969,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-026",
@@ -52381,7 +56025,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-027",
@@ -52435,7 +56080,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-028",
@@ -52491,7 +56137,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-029",
@@ -52546,7 +56193,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170
     },
     {
       "id": "zn-ba-030",
@@ -52599,7 +56247,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 203
     },
     {
       "id": "zn-ov-022",
@@ -52699,7 +56348,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 246,
       "coloresSinRender": [
         "zn-ov-023-c01"
       ]
@@ -52761,7 +56410,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-ch-032-c01"
-      ]
+      ],
+      "gramaje": 254
     },
     {
       "id": "zn-cm-091",
@@ -52818,7 +56468,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-cm-091-c01"
-      ]
+      ],
+      "gramaje": 203
     },
     {
       "id": "zn-cm-092",
@@ -52877,7 +56528,8 @@ module.exports = {
         "zn-cm-092-c01",
         "zn-cm-092-c02",
         "zn-cm-092-c03"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-cm-093",
@@ -52936,7 +56588,8 @@ module.exports = {
         "zn-cm-093-c01",
         "zn-cm-093-c02",
         "zn-cm-093-c03"
-      ]
+      ],
+      "gramaje": 170
     },
     {
       "id": "zn-pl-061",
@@ -53004,7 +56657,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pl-061-c01"
-      ]
+      ],
+      "gramaje": 136
     },
     {
       "id": "zn-pl-062",
@@ -53072,7 +56726,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pl-062-c01"
-      ]
+      ],
+      "gramaje": 136
     },
     {
       "id": "zn-cm-094",
@@ -53122,7 +56777,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-094-c01",
         "zn-cm-094-c02"
@@ -53176,7 +56831,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-095-c01",
         "zn-cm-095-c02"
@@ -53234,7 +56889,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-096-c01",
         "zn-cm-096-c02",
@@ -53295,7 +56950,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-097-c01",
         "zn-cm-097-c02",
@@ -53352,7 +57007,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-098-c01",
         "zn-cm-098-c02"
@@ -53406,7 +57061,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25,
+      "gramaje": 144,
       "coloresSinRender": [
         "zn-cm-099-c01",
         "zn-cm-099-c02"
@@ -53474,7 +57129,8 @@ module.exports = {
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-ce-006-c01"
-      ]
+      ],
+      "gramaje": 159
     },
     {
       "id": "zn-ma-007",
@@ -53531,7 +57187,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 13
+      "gramaje": 466
     },
     {
       "id": "zn-ba-031",
@@ -53593,7 +57249,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 25
+      "gramaje": 246
     },
     {
       "id": "zn-ba-032",
@@ -53647,7 +57303,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 136
     },
     {
       "id": "zn-ch-033",
@@ -53709,7 +57366,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 136
     },
     {
       "id": "zn-ov-024",
@@ -53757,7 +57415,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 136
     },
     {
       "id": "zn-go-092",
@@ -53963,7 +57622,8 @@ module.exports = {
       ],
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
-      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254
     },
     {
       "id": "zn-pl-065",
@@ -54257,7 +57917,7 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
-      "gramaje": 10
+      "gramaje": 339
     },
     {
       "id": "zn-de-010",
@@ -56515,6 +60175,12436 @@ module.exports = {
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 245
+    },
+    {
+      "id": "zn-su-018",
+      "idPublico": "zn-su-018",
+      "sku": "ZN-SU-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera pesada con capucha forrada de felpa",
+      "nombreComercial": "Sudadera pesada con capucha forrada de felpa",
+      "nombreFamilia": "Sudadera pesada con capucha forrada de felpa",
+      "nombreFamiliaComercial": "Sudadera pesada con capucha forrada de felpa",
+      "familia": "zain-proveedor-zn-su-018",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera pesada con capucha forrada de felpa, cordón redondo, bolsillo frontal y ajuste generoso. Ojales de níquel y canalé 1x1 en puños y cintura.",
+      "especificaciones": "Felpa de tres hilos; algodón hilado en anillos.. Sólidos: 70% algodón/30% poliéster, cara 100% algodón. Jaspeados: 52% algodón/48% poliéster. Camuflajes: 75% algodón/25% poliéster, cara 100% algodón. Seguridad: 52% algodón/48% poliéster, hilos frontales 65% poliéster/35% algodón.. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 43 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Sólidos: 70% algodón/30% poliéster, cara 100% algodón. Jaspeados: 52% algodón/48% poliéster. Camuflajes: 75% algodón/25% poliéster, cara 100% algodón. Seguridad: 52% algodón/48% poliéster, hilos frontales 65% poliéster/35% algodón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-018-c01",
+        "zn-su-018-c02",
+        "zn-su-018-c03",
+        "zn-su-018-c04",
+        "zn-su-018-c05",
+        "zn-su-018-c06",
+        "zn-su-018-c07",
+        "zn-su-018-c08",
+        "zn-su-018-c09",
+        "zn-su-018-c10",
+        "zn-su-018-c11",
+        "zn-su-018-c12",
+        "zn-su-018-c13",
+        "zn-su-018-c14",
+        "zn-su-018-c15",
+        "zn-su-018-c16",
+        "zn-su-018-c17",
+        "zn-su-018-c18",
+        "zn-su-018-c19",
+        "zn-su-018-c20",
+        "zn-su-018-c21",
+        "zn-su-018-c22",
+        "zn-su-018-c23",
+        "zn-su-018-c24",
+        "zn-su-018-c25",
+        "zn-su-018-c26",
+        "zn-su-018-c27",
+        "zn-su-018-c28",
+        "zn-su-018-c29",
+        "zn-su-018-c30",
+        "zn-su-018-c31",
+        "zn-su-018-c32",
+        "zn-su-018-c33",
+        "zn-su-018-c34",
+        "zn-su-018-c35",
+        "zn-su-018-c36",
+        "zn-su-018-c37",
+        "zn-su-018-c38",
+        "zn-su-018-c39",
+        "zn-su-018-c40",
+        "zn-su-018-c41",
+        "zn-su-018-c42",
+        "zn-su-018-c43"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 330,
+      "coloresSinRender": [
+        "zn-su-018-c02",
+        "zn-su-018-c06",
+        "zn-su-018-c08",
+        "zn-su-018-c09",
+        "zn-su-018-c30",
+        "zn-su-018-c31",
+        "zn-su-018-c32",
+        "zn-su-018-c33",
+        "zn-su-018-c34",
+        "zn-su-018-c35",
+        "zn-su-018-c41",
+        "zn-su-018-c42",
+        "zn-su-018-c43"
+      ]
+    },
+    {
+      "id": "zn-su-019",
+      "idPublico": "zn-su-019",
+      "sku": "ZN-SU-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera de peso medio con capucha forrada",
+      "nombreComercial": "Sudadera de peso medio con capucha forrada",
+      "nombreFamilia": "Sudadera de peso medio con capucha forrada",
+      "nombreFamiliaComercial": "Sudadera de peso medio con capucha forrada",
+      "familia": "zain-proveedor-zn-su-019",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera de peso medio con capucha forrada, cordón grueso, ojales metálicos y canalé 1x1. Costuras con doble aguja y etiqueta desprendible.",
+      "especificaciones": "Felpa de mezcla de algodón y poliéster.. Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 42 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-019-c01",
+        "zn-su-019-c02",
+        "zn-su-019-c03",
+        "zn-su-019-c04",
+        "zn-su-019-c05",
+        "zn-su-019-c06",
+        "zn-su-019-c07",
+        "zn-su-019-c08",
+        "zn-su-019-c09",
+        "zn-su-019-c10",
+        "zn-su-019-c11",
+        "zn-su-019-c12",
+        "zn-su-019-c13",
+        "zn-su-019-c14",
+        "zn-su-019-c15",
+        "zn-su-019-c16",
+        "zn-su-019-c17",
+        "zn-su-019-c18",
+        "zn-su-019-c19",
+        "zn-su-019-c20",
+        "zn-su-019-c21",
+        "zn-su-019-c22",
+        "zn-su-019-c23",
+        "zn-su-019-c24",
+        "zn-su-019-c25",
+        "zn-su-019-c26",
+        "zn-su-019-c27",
+        "zn-su-019-c28",
+        "zn-su-019-c29",
+        "zn-su-019-c30",
+        "zn-su-019-c31",
+        "zn-su-019-c32",
+        "zn-su-019-c33",
+        "zn-su-019-c34",
+        "zn-su-019-c35",
+        "zn-su-019-c36",
+        "zn-su-019-c37",
+        "zn-su-019-c38",
+        "zn-su-019-c39",
+        "zn-su-019-c40",
+        "zn-su-019-c41",
+        "zn-su-019-c42"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280,
+      "coloresSinRender": [
+        "zn-su-019-c01",
+        "zn-su-019-c07",
+        "zn-su-019-c10",
+        "zn-su-019-c13",
+        "zn-su-019-c19",
+        "zn-su-019-c25",
+        "zn-su-019-c26",
+        "zn-su-019-c28",
+        "zn-su-019-c32"
+      ]
+    },
+    {
+      "id": "zn-su-020",
+      "idPublico": "zn-su-020",
+      "sku": "ZN-SU-020",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera con capucha y mangas raglán",
+      "nombreComercial": "Sudadera con capucha y mangas raglán",
+      "nombreFamilia": "Sudadera con capucha y mangas raglán",
+      "nombreFamiliaComercial": "Sudadera con capucha y mangas raglán",
+      "familia": "zain-proveedor-zn-su-020",
+      "categoria": "Sudaderas",
+      "silueta": "Dama",
+      "descripcion": "Sudadera con capucha y mangas raglán, lavado Wave Wash en prenda, ojales cosidos y ajuste estándar.",
+      "especificaciones": "Felpa de tres hilos; algodón hilado en anillos.. 52% algodón/48% poliéster.. Tallas: XS, S, M, L, XL, 2XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "52% algodón/48% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-020-c01",
+        "zn-su-020-c02",
+        "zn-su-020-c03",
+        "zn-su-020-c04",
+        "zn-su-020-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 230,
+      "coloresSinRender": [
+        "zn-su-020-c01",
+        "zn-su-020-c02",
+        "zn-su-020-c03",
+        "zn-su-020-c04",
+        "zn-su-020-c05"
+      ]
+    },
+    {
+      "id": "zn-su-021",
+      "idPublico": "zn-su-021",
+      "sku": "ZN-SU-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera premium pesada con capucha de doble",
+      "nombreComercial": "Sudadera premium pesada con capucha de doble",
+      "nombreFamilia": "Sudadera premium pesada con capucha de doble",
+      "nombreFamiliaComercial": "Sudadera premium pesada con capucha de doble",
+      "familia": "zain-proveedor-zn-su-021",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera premium pesada con capucha de doble forro, paneles laterales de doble canalé, tejido cruzado y cordón con puntas metálicas.",
+      "especificaciones": "Felpa premium de tres hilos; algodón hilado en anillos.. 70% algodón/30% poliéster; cara 100% algodón en sólidos. Canalé 100% algodón.. Tallas: XS, S, M, L, XL, 2XL, 3XL. 13 colores del proveedor.",
+      "tejido": "",
+      "composicion": "70% algodón/30% poliéster; cara 100% algodón en sólidos. Canalé 100% algodón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-021-c01",
+        "zn-su-021-c02",
+        "zn-su-021-c03",
+        "zn-su-021-c04",
+        "zn-su-021-c05",
+        "zn-su-021-c06",
+        "zn-su-021-c07",
+        "zn-su-021-c08",
+        "zn-su-021-c09",
+        "zn-su-021-c10",
+        "zn-su-021-c11",
+        "zn-su-021-c12",
+        "zn-su-021-c13"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 450,
+      "coloresSinRender": [
+        "zn-su-021-c03",
+        "zn-su-021-c07"
+      ]
+    },
+    {
+      "id": "zn-su-022",
+      "idPublico": "zn-su-022",
+      "sku": "ZN-SU-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera con capucha de una pieza y doble capa",
+      "nombreComercial": "Sudadera con capucha de una pieza y doble capa",
+      "nombreFamilia": "Sudadera con capucha de una pieza y doble capa",
+      "nombreFamiliaComercial": "Sudadera con capucha de una pieza y doble capa",
+      "familia": "zain-proveedor-zn-su-022",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera con capucha de una pieza y doble capa, sin cordón, corte cuadrado, hombros caídos y costuras invisibles. Tela prelavada.",
+      "especificaciones": "Felpa/polar premium de tres hilos; algodón hilado en anillos.. Sólidos: 80% algodón/20% poliéster, cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.. Tallas: XS, S, M, L, XL, 2XL, 3XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Sólidos: 80% algodón/20% poliéster, cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-022-c01",
+        "zn-su-022-c02",
+        "zn-su-022-c03",
+        "zn-su-022-c04",
+        "zn-su-022-c05",
+        "zn-su-022-c06"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280,
+      "coloresSinRender": [
+        "zn-su-022-c02",
+        "zn-su-022-c06"
+      ]
+    },
+    {
+      "id": "zn-su-023",
+      "idPublico": "zn-su-023",
+      "sku": "ZN-SU-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera ultrapesada de corte cuadrado",
+      "nombreComercial": "Sudadera ultrapesada de corte cuadrado",
+      "nombreFamilia": "Sudadera ultrapesada de corte cuadrado",
+      "nombreFamiliaComercial": "Sudadera ultrapesada de corte cuadrado",
+      "familia": "zain-proveedor-zn-su-023",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera ultrapesada de corte cuadrado y hombros caídos, sin cordón, capucha de una pieza y doble capa, costuras ciegas y tacto seco.",
+      "especificaciones": "Felpa premium de tres hilos; tela prelavada.. 75% algodón/25% poliéster; cara 100% algodón. Canalé 100% algodón.. Tallas: XS, S, M, L, XL, 2XL, 3XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "75% algodón/25% poliéster; cara 100% algodón. Canalé 100% algodón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-023-c01",
+        "zn-su-023-c02",
+        "zn-su-023-c03",
+        "zn-su-023-c04",
+        "zn-su-023-c05"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 420,
+      "coloresSinRender": [
+        "zn-su-023-c02",
+        "zn-su-023-c05"
+      ]
+    },
+    {
+      "id": "zn-su-024",
+      "idPublico": "zn-su-024",
+      "sku": "ZN-SU-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera pesada de cuello redondo",
+      "nombreComercial": "Sudadera pesada de cuello redondo",
+      "nombreFamilia": "Sudadera pesada de cuello redondo",
+      "nombreFamiliaComercial": "Sudadera pesada de cuello redondo",
+      "familia": "zain-proveedor-zn-su-024",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera pesada de cuello redondo, corte generoso, canalé 1x1 en puños y cintura y costuras con doble aguja.",
+      "especificaciones": "Felpa/polar de tres hilos; algodón hilado en anillos.. Sólidos: 70% algodón/30% poliéster con cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.. Tallas: XS, S, M, L, XL, 2XL, 3XL. 13 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Sólidos: 70% algodón/30% poliéster con cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-024-c01",
+        "zn-su-024-c02",
+        "zn-su-024-c03",
+        "zn-su-024-c04",
+        "zn-su-024-c05",
+        "zn-su-024-c06",
+        "zn-su-024-c07",
+        "zn-su-024-c08",
+        "zn-su-024-c09",
+        "zn-su-024-c10",
+        "zn-su-024-c11",
+        "zn-su-024-c12",
+        "zn-su-024-c13"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 330,
+      "coloresSinRender": [
+        "zn-su-024-c10",
+        "zn-su-024-c11"
+      ]
+    },
+    {
+      "id": "zn-ch-036",
+      "idPublico": "zn-ch-036",
+      "sku": "ZN-CH-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Rompevientos plegable con cierre frontal",
+      "nombreComercial": "Rompevientos plegable con cierre frontal",
+      "nombreFamilia": "Rompevientos plegable con cierre frontal",
+      "nombreFamiliaComercial": "Rompevientos plegable con cierre frontal",
+      "familia": "zain-proveedor-zn-ch-036",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Rompevientos plegable con cierre frontal completo, cuello de buzo, capucha de tres paneles con forro de malla, puños elásticos y bolsillos ribeteados.",
+      "especificaciones": "Tejido de poliéster con revestimiento interior resistente al agua.. 100% poliéster.. Tallas: XS, S, M, L, XL, 2XL, 3XL. 19 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-036-c01",
+        "zn-ch-036-c02",
+        "zn-ch-036-c03",
+        "zn-ch-036-c04",
+        "zn-ch-036-c05",
+        "zn-ch-036-c06",
+        "zn-ch-036-c07",
+        "zn-ch-036-c08",
+        "zn-ch-036-c09",
+        "zn-ch-036-c10",
+        "zn-ch-036-c11",
+        "zn-ch-036-c12",
+        "zn-ch-036-c13",
+        "zn-ch-036-c14",
+        "zn-ch-036-c15",
+        "zn-ch-036-c16",
+        "zn-ch-036-c17",
+        "zn-ch-036-c18",
+        "zn-ch-036-c19"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 82,
+      "coloresSinRender": [
+        "zn-ch-036-c02",
+        "zn-ch-036-c04",
+        "zn-ch-036-c10",
+        "zn-ch-036-c11",
+        "zn-ch-036-c12",
+        "zn-ch-036-c13",
+        "zn-ch-036-c14",
+        "zn-ch-036-c15",
+        "zn-ch-036-c16",
+        "zn-ch-036-c17",
+        "zn-ch-036-c18",
+        "zn-ch-036-c19"
+      ]
+    },
+    {
+      "id": "zn-pa-118",
+      "idPublico": "zn-pa-118",
+      "sku": "ZN-PA-118",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short California Wave Wash de ajuste estándar",
+      "nombreComercial": "Short California Wave Wash de ajuste estándar",
+      "nombreFamilia": "Short California Wave Wash de ajuste estándar",
+      "nombreFamiliaComercial": "Short California Wave Wash de ajuste estándar",
+      "familia": "zain-proveedor-zn-pa-118",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Short California Wave Wash de ajuste estándar, cintura elástica con cordón, ojales cosidos y bolsillos forrados en jersey.",
+      "especificaciones": "Felpa de tres hilos; algodón hilado en anillos; lavado en prenda.. PDF: 52% algodón/48% poliéster. C45 de la lista: 55% algodón/45% poliéster.. Tallas: XS, S, M, L, XL, 2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "PDF: 52% algodón/48% poliéster. C45 de la lista: 55% algodón/45% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-118-c01",
+        "zn-pa-118-c02",
+        "zn-pa-118-c03",
+        "zn-pa-118-c04",
+        "zn-pa-118-c05",
+        "zn-pa-118-c06",
+        "zn-pa-118-c07",
+        "zn-pa-118-c08",
+        "zn-pa-118-c09"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 230,
+      "coloresSinRender": [
+        "zn-pa-118-c01",
+        "zn-pa-118-c02",
+        "zn-pa-118-c03",
+        "zn-pa-118-c04",
+        "zn-pa-118-c05",
+        "zn-pa-118-c06",
+        "zn-pa-118-c07",
+        "zn-pa-118-c08",
+        "zn-pa-118-c09"
+      ]
+    },
+    {
+      "id": "zn-pa-119",
+      "idPublico": "zn-pa-119",
+      "sku": "ZN-PA-119",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón de felpa de ajuste relajado",
+      "nombreComercial": "Pantalón de felpa de ajuste relajado",
+      "nombreFamilia": "Pantalón de felpa de ajuste relajado",
+      "nombreFamiliaComercial": "Pantalón de felpa de ajuste relajado",
+      "familia": "zain-proveedor-zn-pa-119",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón de felpa de ajuste relajado, cintura elástica con cordón, bragueta simulada, bolsillo trasero, bolsillos forrados en jersey y puños de canalé 1x1.",
+      "especificaciones": "Felpa/polar de mezcla de algodón y poliéster; algodón hilado en anillos.. Sólidos y camuflajes: 80% algodón/20% poliéster, cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.. Tallas: S, M, L, XL, 2XL. 15 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Sólidos y camuflajes: 80% algodón/20% poliéster, cara 100% algodón. Gris jaspeado: 52% algodón/48% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-119-c01",
+        "zn-pa-119-c02",
+        "zn-pa-119-c03",
+        "zn-pa-119-c04",
+        "zn-pa-119-c05",
+        "zn-pa-119-c06",
+        "zn-pa-119-c07",
+        "zn-pa-119-c08",
+        "zn-pa-119-c09",
+        "zn-pa-119-c10",
+        "zn-pa-119-c11",
+        "zn-pa-119-c12",
+        "zn-pa-119-c13",
+        "zn-pa-119-c14",
+        "zn-pa-119-c15"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280,
+      "coloresSinRender": [
+        "zn-pa-119-c02",
+        "zn-pa-119-c13",
+        "zn-pa-119-c14",
+        "zn-pa-119-c15"
+      ]
+    },
+    {
+      "id": "zn-pa-120",
+      "idPublico": "zn-pa-120",
+      "sku": "ZN-PA-120",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón deportivo juvenil de ajuste unisex",
+      "nombreComercial": "Pantalón deportivo juvenil de ajuste unisex",
+      "nombreFamilia": "Pantalón deportivo juvenil de ajuste unisex",
+      "nombreFamiliaComercial": "Pantalón deportivo juvenil de ajuste unisex",
+      "familia": "zain-proveedor-zn-pa-120",
+      "categoria": "Pantalones",
+      "silueta": "Juvenil",
+      "descripcion": "Pantalón deportivo juvenil de ajuste unisex relajado, cintura elástica con cordón plano, bragueta simulada, bolsillos y puños de canalé.",
+      "especificaciones": "Vellón Special Blend; algodón hilado en anillos.. 52% algodón/48% poliéster.. Tallas: S(6/8), M(10/12), L(14/16), XL(18/20). 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "52% algodón/48% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-120-c01",
+        "zn-pa-120-c02",
+        "zn-pa-120-c03"
+      ],
+      "tallas": [
+        "S(6/8)",
+        "M(10/12)",
+        "L(14/16)",
+        "XL(18/20)"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-pa-120-c02",
+        "zn-pa-120-c03"
+      ]
+    },
+    {
+      "id": "zn-ch-037",
+      "idPublico": "zn-ch-037",
+      "sku": "ZN-CH-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "La fila C39 describe chamarra rompevientos",
+      "nombreComercial": "La fila C39 describe chamarra rompevientos",
+      "nombreFamilia": "La fila C39 describe chamarra rompevientos",
+      "nombreFamiliaComercial": "La fila C39 describe chamarra rompevientos",
+      "familia": "zain-proveedor-zn-ch-037",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "La fila C39 describe chamarra rompevientos ligera anorak, cuello de buzo, forro de malla y revestimiento interior resistente al agua.",
+      "especificaciones": "Poliéster con revestimiento interior resistente al agua.. 100% poliéster según C39.. Tallas: S, M, L, XL, 2XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster según C39.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-037-c01",
+        "zn-ch-037-c02",
+        "zn-ch-037-c03",
+        "zn-ch-037-c04"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ch-037-c01",
+        "zn-ch-037-c02"
+      ]
+    },
+    {
+      "id": "zn-su-025",
+      "idPublico": "zn-su-025",
+      "sku": "ZN-SU-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera unisex con capucha",
+      "nombreComercial": "Sudadera unisex con capucha",
+      "nombreFamilia": "Sudadera unisex con capucha",
+      "nombreFamiliaComercial": "Sudadera unisex con capucha",
+      "familia": "zain-proveedor-zn-su-025",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera unisex con capucha, lavado mineral, tacto suave y tapacostura en cinta.",
+      "especificaciones": "Solo se declara cara 100% algodón; composición total no especificada.. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Solo se declara cara 100% algodón; composición total no especificada.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-025-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 305,
+      "coloresSinRender": [
+        "zn-su-025-c01"
+      ]
+    },
+    {
+      "id": "zn-su-026",
+      "idPublico": "zn-su-026",
+      "sku": "ZN-SU-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera con capucha y cierre Performance",
+      "nombreComercial": "Sudadera con capucha y cierre Performance",
+      "nombreFamilia": "Sudadera con capucha y cierre Performance",
+      "nombreFamiliaComercial": "Sudadera con capucha y cierre Performance",
+      "familia": "zain-proveedor-zn-su-026",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera con capucha y cierre Performance, tejido elástico en cuatro direcciones, bolsillos de ribete ocultos y capucha de tres paneles.",
+      "especificaciones": "French Terry elástico en cuatro direcciones.. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-026-c01",
+        "zn-su-026-c02",
+        "zn-su-026-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
+    },
+    {
+      "id": "zn-su-027",
+      "idPublico": "zn-su-027",
+      "sku": "ZN-SU-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Prenda superior Perform con cierre de un cuarto",
+      "nombreComercial": "Prenda superior Perform con cierre de un cuarto",
+      "nombreFamilia": "Prenda superior Perform con cierre de un cuarto",
+      "nombreFamiliaComercial": "Prenda superior Perform con cierre de un cuarto",
+      "familia": "zain-proveedor-zn-su-027",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Prenda superior Perform con cierre de un cuarto y tejido French Terry elástico en cuatro direcciones.",
+      "especificaciones": "French Terry elástico en cuatro direcciones.. Tallas: S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-027-c01",
+        "zn-su-027-c02",
+        "zn-su-027-c03"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
+    },
+    {
+      "id": "zn-su-028",
+      "idPublico": "zn-su-028",
+      "sku": "ZN-SU-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera de cuello redondo Crew de peso medio",
+      "nombreComercial": "Sudadera de cuello redondo Crew de peso medio",
+      "nombreFamilia": "Sudadera de cuello redondo Crew de peso medio",
+      "nombreFamiliaComercial": "Sudadera de cuello redondo Crew de peso medio",
+      "familia": "zain-proveedor-zn-su-028",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera de cuello redondo Crew de peso medio.",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-028-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 288
+    },
+    {
+      "id": "zn-su-029",
+      "idPublico": "zn-su-029",
+      "sku": "ZN-SU-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera con capucha para hombre de corte",
+      "nombreComercial": "Sudadera con capucha para hombre de corte",
+      "nombreFamilia": "Sudadera con capucha para hombre de corte",
+      "nombreFamiliaComercial": "Sudadera con capucha para hombre de corte",
+      "familia": "zain-proveedor-zn-su-029",
+      "categoria": "Sudaderas",
+      "silueta": "Caballero",
+      "descripcion": "Sudadera con capucha para hombre de corte oversize.",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-029-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-079",
+      "idPublico": "zn-pl-079",
+      "sku": "ZN-PL-079",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-079",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuello redondo, manga corta.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: S, M, L, XL, 2XL. 16 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-079-c01",
+        "zn-pl-079-c02",
+        "zn-pl-079-c03",
+        "zn-pl-079-c04",
+        "zn-pl-079-c05",
+        "zn-pl-079-c06",
+        "zn-pl-079-c07",
+        "zn-pl-079-c08",
+        "zn-pl-079-c09",
+        "zn-pl-079-c10",
+        "zn-pl-079-c11",
+        "zn-pl-079-c12",
+        "zn-pl-079-c13",
+        "zn-pl-079-c14",
+        "zn-pl-079-c15",
+        "zn-pl-079-c16"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-079-c10"
+      ]
+    },
+    {
+      "id": "zn-pl-080",
+      "idPublico": "zn-pl-080",
+      "sku": "ZN-PL-080",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-080",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello redondo, manga corta.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: S, M, L, XL, 2XL. 16 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-080-c01",
+        "zn-pl-080-c02",
+        "zn-pl-080-c03",
+        "zn-pl-080-c04",
+        "zn-pl-080-c05",
+        "zn-pl-080-c06",
+        "zn-pl-080-c07",
+        "zn-pl-080-c08",
+        "zn-pl-080-c09",
+        "zn-pl-080-c10",
+        "zn-pl-080-c11",
+        "zn-pl-080-c12",
+        "zn-pl-080-c13",
+        "zn-pl-080-c14",
+        "zn-pl-080-c15",
+        "zn-pl-080-c16"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-080-c10"
+      ]
+    },
+    {
+      "id": "zn-pl-081",
+      "idPublico": "zn-pl-081",
+      "sku": "ZN-PL-081",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-081",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Cuello redondo, manga larga.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: XS, S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-081-c01",
+        "zn-pl-081-c02",
+        "zn-pl-081-c03",
+        "zn-pl-081-c04",
+        "zn-pl-081-c05",
+        "zn-pl-081-c06",
+        "zn-pl-081-c07",
+        "zn-pl-081-c08"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-081-c04"
+      ]
+    },
+    {
+      "id": "zn-pl-082",
+      "idPublico": "zn-pl-082",
+      "sku": "ZN-PL-082",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello V · jersey",
+      "nombreComercial": "Cuello V · jersey",
+      "nombreFamilia": "Cuello V · jersey",
+      "nombreFamiliaComercial": "Cuello V · jersey",
+      "familia": "zain-proveedor-zn-pl-082",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuello V, manga corta.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Negro Jaspe y Marino Jaspe: 50% algodón y 50% poliéster. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Negro Jaspe y Marino Jaspe: 50% algodón y 50% poliéster. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-082-c01",
+        "zn-pl-082-c02",
+        "zn-pl-082-c03",
+        "zn-pl-082-c04",
+        "zn-pl-082-c05",
+        "zn-pl-082-c06",
+        "zn-pl-082-c07",
+        "zn-pl-082-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-082-c02",
+        "zn-pl-082-c04",
+        "zn-pl-082-c07"
+      ]
+    },
+    {
+      "id": "zn-pl-083",
+      "idPublico": "zn-pl-083",
+      "sku": "ZN-PL-083",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello V · jersey",
+      "nombreComercial": "Cuello V · jersey",
+      "nombreFamilia": "Cuello V · jersey",
+      "nombreFamiliaComercial": "Cuello V · jersey",
+      "familia": "zain-proveedor-zn-pl-083",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello V, manga corta.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Negro Jaspe y Marino Jaspe: 50% algodón y 50% poliéster. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Negro Jaspe y Marino Jaspe: 50% algodón y 50% poliéster. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-083-c01",
+        "zn-pl-083-c02",
+        "zn-pl-083-c03",
+        "zn-pl-083-c04",
+        "zn-pl-083-c05",
+        "zn-pl-083-c06",
+        "zn-pl-083-c07",
+        "zn-pl-083-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-083-c02",
+        "zn-pl-083-c04",
+        "zn-pl-083-c07"
+      ]
+    },
+    {
+      "id": "zn-in-016",
+      "idPublico": "zn-in-016",
+      "sku": "ZN-IN-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera infantil de cuello redondo y manga corta · jersey",
+      "nombreComercial": "Playera infantil de cuello redondo y manga corta · jersey",
+      "nombreFamilia": "Playera infantil de cuello redondo y manga corta · jersey",
+      "nombreFamiliaComercial": "Playera infantil de cuello redondo y manga corta · jersey",
+      "familia": "zain-proveedor-zn-in-016",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Playera infantil de cuello redondo y manga corta.",
+      "especificaciones": "Jersey. 100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.. Tallas: XS, S, M, L, XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón peinado ring spun. Gris Jaspe: 90% algodón y 10% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-016-c01",
+        "zn-in-016-c02",
+        "zn-in-016-c03",
+        "zn-in-016-c04",
+        "zn-in-016-c05",
+        "zn-in-016-c06",
+        "zn-in-016-c07",
+        "zn-in-016-c08",
+        "zn-in-016-c09",
+        "zn-in-016-c10"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-in-016-c06"
+      ]
+    },
+    {
+      "id": "zn-pl-084",
+      "idPublico": "zn-pl-084",
+      "sku": "ZN-PL-084",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-084",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuello redondo, manga corta; mezcla algodón/poliéster.",
+      "especificaciones": "Jersey. 50% algodón peinado ring spun y 50% poliéster.. Tallas: S, M, L, XL, 2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón peinado ring spun y 50% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-084-c01",
+        "zn-pl-084-c02",
+        "zn-pl-084-c03",
+        "zn-pl-084-c04",
+        "zn-pl-084-c05",
+        "zn-pl-084-c06",
+        "zn-pl-084-c07",
+        "zn-pl-084-c08",
+        "zn-pl-084-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-084-c02",
+        "zn-pl-084-c04",
+        "zn-pl-084-c05",
+        "zn-pl-084-c06",
+        "zn-pl-084-c07",
+        "zn-pl-084-c08"
+      ]
+    },
+    {
+      "id": "zn-pl-085",
+      "idPublico": "zn-pl-085",
+      "sku": "ZN-PL-085",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-085",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello redondo, manga corta; mezcla algodón/poliéster.",
+      "especificaciones": "Jersey. 50% algodón peinado ring spun y 50% poliéster.. Tallas: S, M, L, XL, 2XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón peinado ring spun y 50% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-085-c01",
+        "zn-pl-085-c02",
+        "zn-pl-085-c03",
+        "zn-pl-085-c04",
+        "zn-pl-085-c05",
+        "zn-pl-085-c06",
+        "zn-pl-085-c07",
+        "zn-pl-085-c08",
+        "zn-pl-085-c09"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 160,
+      "coloresSinRender": [
+        "zn-pl-085-c02",
+        "zn-pl-085-c04",
+        "zn-pl-085-c05",
+        "zn-pl-085-c06",
+        "zn-pl-085-c07",
+        "zn-pl-085-c08"
+      ]
+    },
+    {
+      "id": "zn-pl-086",
+      "idPublico": "zn-pl-086",
+      "sku": "ZN-PL-086",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-086",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Cuello redondo, manga corta; mezcla con rayón y elastano. Nuevo estilo en el PDF.",
+      "especificaciones": "Jersey. 58% poliéster, 17.5% algodón, 17.5% rayón y 7% elastano.. Tallas: S, M, L, XL, 2XL. 10 colores del proveedor.",
+      "tejido": "",
+      "composicion": "58% poliéster, 17.5% algodón, 17.5% rayón y 7% elastano.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-086-c01",
+        "zn-pl-086-c02",
+        "zn-pl-086-c03",
+        "zn-pl-086-c04",
+        "zn-pl-086-c05",
+        "zn-pl-086-c06",
+        "zn-pl-086-c07",
+        "zn-pl-086-c08",
+        "zn-pl-086-c09",
+        "zn-pl-086-c10"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-pl-087",
+      "idPublico": "zn-pl-087",
+      "sku": "ZN-PL-087",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey biopulido",
+      "nombreComercial": "Cuello redondo · jersey biopulido",
+      "nombreFamilia": "Cuello redondo · jersey biopulido",
+      "nombreFamiliaComercial": "Cuello redondo · jersey biopulido",
+      "familia": "zain-proveedor-zn-pl-087",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuello redondo, manga corta; tejido con elastano y biopulido.",
+      "especificaciones": "Jersey biopulido. 92% algodón peinado y 8% elastano. Avena: 91% algodón, 1% poliéster y 8% elastano.. Tallas: S, M, L, XL, 2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "92% algodón peinado y 8% elastano. Avena: 91% algodón, 1% poliéster y 8% elastano.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-087-c01",
+        "zn-pl-087-c02",
+        "zn-pl-087-c03",
+        "zn-pl-087-c04",
+        "zn-pl-087-c05",
+        "zn-pl-087-c06",
+        "zn-pl-087-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-pl-087-c04"
+      ]
+    },
+    {
+      "id": "zn-pl-088",
+      "idPublico": "zn-pl-088",
+      "sku": "ZN-PL-088",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey biopulido",
+      "nombreComercial": "Cuello redondo · jersey biopulido",
+      "nombreFamilia": "Cuello redondo · jersey biopulido",
+      "nombreFamiliaComercial": "Cuello redondo · jersey biopulido",
+      "familia": "zain-proveedor-zn-pl-088",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello redondo, manga corta; tejido con elastano y biopulido.",
+      "especificaciones": "Jersey biopulido. 92% algodón peinado y 8% elastano. Avena: 91% algodón, 1% poliéster y 8% elastano.. Tallas: S, M, L, XL, 2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "92% algodón peinado y 8% elastano. Avena: 91% algodón, 1% poliéster y 8% elastano.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-088-c01",
+        "zn-pl-088-c02",
+        "zn-pl-088-c03",
+        "zn-pl-088-c04",
+        "zn-pl-088-c05",
+        "zn-pl-088-c06",
+        "zn-pl-088-c07"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-pl-088-c04"
+      ]
+    },
+    {
+      "id": "zn-pl-089",
+      "idPublico": "zn-pl-089",
+      "sku": "ZN-PL-089",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-089",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Cuello redondo, manga corta; mezcla triblend.",
+      "especificaciones": "Jersey. 50% poliéster, 25% algodón y 25% rayón.. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% poliéster, 25% algodón y 25% rayón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-089-c01",
+        "zn-pl-089-c02",
+        "zn-pl-089-c03",
+        "zn-pl-089-c04",
+        "zn-pl-089-c05",
+        "zn-pl-089-c06",
+        "zn-pl-089-c07",
+        "zn-pl-089-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150,
+      "coloresSinRender": [
+        "zn-pl-089-c06"
+      ]
+    },
+    {
+      "id": "zn-pl-090",
+      "idPublico": "zn-pl-090",
+      "sku": "ZN-PL-090",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey",
+      "nombreComercial": "Cuello redondo · jersey",
+      "nombreFamilia": "Cuello redondo · jersey",
+      "nombreFamiliaComercial": "Cuello redondo · jersey",
+      "familia": "zain-proveedor-zn-pl-090",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Cuello redondo, manga corta; mezcla triblend.",
+      "especificaciones": "Jersey. 50% poliéster, 25% algodón y 25% rayón.. Tallas: S, M, L, XL, 2XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% poliéster, 25% algodón y 25% rayón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-090-c01",
+        "zn-pl-090-c02",
+        "zn-pl-090-c03",
+        "zn-pl-090-c04",
+        "zn-pl-090-c05",
+        "zn-pl-090-c06",
+        "zn-pl-090-c07",
+        "zn-pl-090-c08"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150,
+      "coloresSinRender": [
+        "zn-pl-090-c06"
+      ]
+    },
+    {
+      "id": "zn-pl-091",
+      "idPublico": "zn-pl-091",
+      "sku": "ZN-PL-091",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello redondo · jersey con teñido en prenda",
+      "nombreComercial": "Cuello redondo · jersey con teñido en prenda",
+      "nombreFamilia": "Cuello redondo · jersey con teñido en prenda",
+      "nombreFamiliaComercial": "Cuello redondo · jersey con teñido en prenda",
+      "familia": "zain-proveedor-zn-pl-091",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "Cuello redondo, manga corta, teñido en prenda; acabado mineral visible en Negro Mineral y Azul Mineral. Nuevo estilo en el PDF.",
+      "especificaciones": "Jersey con teñido en prenda. 100% algodón.. Tallas: XS, S, M, L, XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-091-c01",
+        "zn-pl-091-c02",
+        "zn-pl-091-c03",
+        "zn-pl-091-c04",
+        "zn-pl-091-c05",
+        "zn-pl-091-c06",
+        "zn-pl-091-c07",
+        "zn-pl-091-c08",
+        "zn-pl-091-c09"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "coloresSinRender": [
+        "zn-pl-091-c01",
+        "zn-pl-091-c02",
+        "zn-pl-091-c03",
+        "zn-pl-091-c04",
+        "zn-pl-091-c05",
+        "zn-pl-091-c06",
+        "zn-pl-091-c07",
+        "zn-pl-091-c08",
+        "zn-pl-091-c09"
+      ]
+    },
+    {
+      "id": "zn-pl-092",
+      "idPublico": "zn-pl-092",
+      "sku": "ZN-PL-092",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera slub de cuello redondo",
+      "nombreComercial": "Playera slub de cuello redondo",
+      "nombreFamilia": "Playera slub de cuello redondo",
+      "nombreFamiliaComercial": "Playera slub de cuello redondo",
+      "familia": "zain-proveedor-zn-pl-092",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera slub de cuello redondo, según el encabezado de !B39.",
+      "especificaciones": "Slub. 94% algodón y 6% poliéster.. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "94% algodón y 6% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-092-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-pl-093",
+      "idPublico": "zn-pl-093",
+      "sku": "ZN-PL-093",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera slub de cuello redondo",
+      "nombreComercial": "Playera slub de cuello redondo",
+      "nombreFamilia": "Playera slub de cuello redondo",
+      "nombreFamiliaComercial": "Playera slub de cuello redondo",
+      "familia": "zain-proveedor-zn-pl-093",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Playera slub de cuello redondo, según el encabezado de !B45.",
+      "especificaciones": "Slub. 94% algodón y 6% poliéster.. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "94% algodón y 6% poliéster.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-093-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-in-017",
+      "idPublico": "zn-in-017",
+      "sku": "ZN-IN-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pañalero para bebé · 100% algodón.",
+      "nombreComercial": "Pañalero para bebé · 100% algodón.",
+      "nombreFamilia": "Pañalero para bebé · 100% algodón.",
+      "nombreFamiliaComercial": "Pañalero para bebé · 100% algodón.",
+      "familia": "zain-proveedor-zn-in-017",
+      "categoria": "Infantil",
+      "silueta": "Bebé",
+      "descripcion": "Pañalero para bebé, según el encabezado de !B67. Sin construcción ni cierre especificados.",
+      "especificaciones": "100% algodón.. Tallas: 3M, 6M, 9M, 12M, 18M, 24M. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón.",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-017-c01"
+      ],
+      "tallas": [
+        "3M",
+        "6M",
+        "9M",
+        "12M",
+        "18M",
+        "24M"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210
+    },
+    {
+      "id": "zn-cm-112",
+      "idPublico": "zn-cm-112",
+      "sku": "ZN-CM-112",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Oxford",
+      "nombreComercial": "Manga corta · caballero de Oxford",
+      "nombreFamilia": "Manga corta · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga corta · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-112",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-112-c01",
+        "zn-cm-112-c02",
+        "zn-cm-112-c03",
+        "zn-cm-112-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
+    },
+    {
+      "id": "zn-cm-113",
+      "idPublico": "zn-cm-113",
+      "sku": "ZN-CM-113",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Oxford",
+      "nombreComercial": "Manga larga · caballero de Oxford",
+      "nombreFamilia": "Manga larga · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga larga · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-113",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-113-c01",
+        "zn-cm-113-c02",
+        "zn-cm-113-c03",
+        "zn-cm-113-c04",
+        "zn-cm-113-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
+    },
+    {
+      "id": "zn-pl-094",
+      "idPublico": "zn-pl-094",
+      "sku": "ZN-PL-094",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Oxford",
+      "nombreComercial": "Manga corta pinzada · dama de Oxford",
+      "nombreFamilia": "Manga corta pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-094",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-094-c01",
+        "zn-pl-094-c02",
+        "zn-pl-094-c03",
+        "zn-pl-094-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
+    },
+    {
+      "id": "zn-pl-095",
+      "idPublico": "zn-pl-095",
+      "sku": "ZN-PL-095",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-095",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-095-c01",
+        "zn-pl-095-c02",
+        "zn-pl-095-c03",
+        "zn-pl-095-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
+    },
+    {
+      "id": "zn-pl-096",
+      "idPublico": "zn-pl-096",
+      "sku": "ZN-PL-096",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Oxford",
+      "nombreComercial": "Manga larga pinzada · dama de Oxford",
+      "nombreFamilia": "Manga larga pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-096",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-096-c01",
+        "zn-pl-096-c02",
+        "zn-pl-096-c03",
+        "zn-pl-096-c04",
+        "zn-pl-096-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 142
+    },
+    {
+      "id": "zn-cm-114",
+      "idPublico": "zn-cm-114",
+      "sku": "ZN-CM-114",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Oxford",
+      "nombreComercial": "Manga corta · caballero de Oxford",
+      "nombreFamilia": "Manga corta · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga corta · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-114",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-114-c01",
+        "zn-cm-114-c02",
+        "zn-cm-114-c03",
+        "zn-cm-114-c04",
+        "zn-cm-114-c05",
+        "zn-cm-114-c06",
+        "zn-cm-114-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-cm-115",
+      "idPublico": "zn-cm-115",
+      "sku": "ZN-CM-115",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Oxford",
+      "nombreComercial": "Manga larga · caballero de Oxford",
+      "nombreFamilia": "Manga larga · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga larga · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-115",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-115-c01",
+        "zn-cm-115-c02",
+        "zn-cm-115-c03",
+        "zn-cm-115-c04",
+        "zn-cm-115-c05",
+        "zn-cm-115-c06",
+        "zn-cm-115-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-pl-097",
+      "idPublico": "zn-pl-097",
+      "sku": "ZN-PL-097",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Oxford",
+      "nombreComercial": "Manga corta pinzada · dama de Oxford",
+      "nombreFamilia": "Manga corta pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-097",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-097-c01",
+        "zn-pl-097-c02",
+        "zn-pl-097-c03",
+        "zn-pl-097-c04",
+        "zn-pl-097-c05",
+        "zn-pl-097-c06",
+        "zn-pl-097-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-pl-098",
+      "idPublico": "zn-pl-098",
+      "sku": "ZN-PL-098",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-098",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-098-c01",
+        "zn-pl-098-c02",
+        "zn-pl-098-c03",
+        "zn-pl-098-c04",
+        "zn-pl-098-c05",
+        "zn-pl-098-c06",
+        "zn-pl-098-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-pl-099",
+      "idPublico": "zn-pl-099",
+      "sku": "ZN-PL-099",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Oxford",
+      "nombreComercial": "Manga larga pinzada · dama de Oxford",
+      "nombreFamilia": "Manga larga pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-099",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-099-c01",
+        "zn-pl-099-c02",
+        "zn-pl-099-c03",
+        "zn-pl-099-c04",
+        "zn-pl-099-c05",
+        "zn-pl-099-c06",
+        "zn-pl-099-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-cm-116",
+      "idPublico": "zn-cm-116",
+      "sku": "ZN-CM-116",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Oxford",
+      "nombreComercial": "Manga corta · caballero de Oxford",
+      "nombreFamilia": "Manga corta · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga corta · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-116",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-116-c01",
+        "zn-cm-116-c02",
+        "zn-cm-116-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 181
+    },
+    {
+      "id": "zn-cm-117",
+      "idPublico": "zn-cm-117",
+      "sku": "ZN-CM-117",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Oxford",
+      "nombreComercial": "Manga larga · caballero de Oxford",
+      "nombreFamilia": "Manga larga · caballero de Oxford",
+      "nombreFamiliaComercial": "Manga larga · caballero de Oxford",
+      "familia": "zain-proveedor-zn-cm-117",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-117-c01",
+        "zn-cm-117-c02",
+        "zn-cm-117-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 181
+    },
+    {
+      "id": "zn-pl-100",
+      "idPublico": "zn-pl-100",
+      "sku": "ZN-PL-100",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Oxford",
+      "nombreComercial": "Manga corta pinzada · dama de Oxford",
+      "nombreFamilia": "Manga corta pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-100",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-100-c01",
+        "zn-pl-100-c02",
+        "zn-pl-100-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 181
+    },
+    {
+      "id": "zn-pl-101",
+      "idPublico": "zn-pl-101",
+      "sku": "ZN-PL-101",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-101",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-101-c01",
+        "zn-pl-101-c02",
+        "zn-pl-101-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 181
+    },
+    {
+      "id": "zn-pl-102",
+      "idPublico": "zn-pl-102",
+      "sku": "ZN-PL-102",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Oxford",
+      "nombreComercial": "Manga larga pinzada · dama de Oxford",
+      "nombreFamilia": "Manga larga pinzada · dama de Oxford",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Oxford",
+      "familia": "zain-proveedor-zn-pl-102",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Oxford",
+      "especificaciones": "Oxford. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-102-c01",
+        "zn-pl-102-c02",
+        "zn-pl-102-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 181
+    },
+    {
+      "id": "zn-cm-118",
+      "idPublico": "zn-cm-118",
+      "sku": "ZN-CM-118",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Oxford con rayas",
+      "nombreComercial": "Manga corta · caballero de Oxford con rayas",
+      "nombreFamilia": "Manga corta · caballero de Oxford con rayas",
+      "nombreFamiliaComercial": "Manga corta · caballero de Oxford con rayas",
+      "familia": "zain-proveedor-zn-cm-118",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Oxford con rayas",
+      "especificaciones": "Oxford con rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-118-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-cm-118-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-119",
+      "idPublico": "zn-cm-119",
+      "sku": "ZN-CM-119",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Oxford con rayas",
+      "nombreComercial": "Manga larga · caballero de Oxford con rayas",
+      "nombreFamilia": "Manga larga · caballero de Oxford con rayas",
+      "nombreFamiliaComercial": "Manga larga · caballero de Oxford con rayas",
+      "familia": "zain-proveedor-zn-cm-119",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Oxford con rayas",
+      "especificaciones": "Oxford con rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-119-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-cm-119-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-103",
+      "idPublico": "zn-pl-103",
+      "sku": "ZN-PL-103",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Oxford con rayas",
+      "nombreComercial": "Manga corta pinzada · dama de Oxford con rayas",
+      "nombreFamilia": "Manga corta pinzada · dama de Oxford con rayas",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Oxford con rayas",
+      "familia": "zain-proveedor-zn-pl-103",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Oxford con rayas",
+      "especificaciones": "Oxford con rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-103-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-pl-103-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-104",
+      "idPublico": "zn-pl-104",
+      "sku": "ZN-PL-104",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Oxford con rayas",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Oxford con rayas",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Oxford con rayas",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Oxford con rayas",
+      "familia": "zain-proveedor-zn-pl-104",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Oxford con rayas",
+      "especificaciones": "Oxford con rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-104-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-pl-104-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-105",
+      "idPublico": "zn-pl-105",
+      "sku": "ZN-PL-105",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Oxford con rayas",
+      "nombreComercial": "Manga larga pinzada · dama de Oxford con rayas",
+      "nombreFamilia": "Manga larga pinzada · dama de Oxford con rayas",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Oxford con rayas",
+      "familia": "zain-proveedor-zn-pl-105",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Oxford con rayas",
+      "especificaciones": "Oxford con rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-105-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 180,
+      "coloresSinRender": [
+        "zn-pl-105-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-120",
+      "idPublico": "zn-cm-120",
+      "sku": "ZN-CM-120",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Oxford mil rayas",
+      "nombreComercial": "Manga larga · caballero de Oxford mil rayas",
+      "nombreFamilia": "Manga larga · caballero de Oxford mil rayas",
+      "nombreFamiliaComercial": "Manga larga · caballero de Oxford mil rayas",
+      "familia": "zain-proveedor-zn-cm-120",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Oxford mil rayas",
+      "especificaciones": "Oxford mil rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-120-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 173,
+      "coloresSinRender": [
+        "zn-cm-120-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-106",
+      "idPublico": "zn-pl-106",
+      "sku": "ZN-PL-106",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Oxford mil rayas",
+      "nombreComercial": "Manga larga pinzada · dama de Oxford mil rayas",
+      "nombreFamilia": "Manga larga pinzada · dama de Oxford mil rayas",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Oxford mil rayas",
+      "familia": "zain-proveedor-zn-pl-106",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Oxford mil rayas",
+      "especificaciones": "Oxford mil rayas. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-106-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 173,
+      "coloresSinRender": [
+        "zn-pl-106-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-121",
+      "idPublico": "zn-cm-121",
+      "sku": "ZN-CM-121",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Gabardina",
+      "nombreComercial": "Manga corta · caballero de Gabardina",
+      "nombreFamilia": "Manga corta · caballero de Gabardina",
+      "nombreFamiliaComercial": "Manga corta · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-121",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-121-c01",
+        "zn-cm-121-c02",
+        "zn-cm-121-c03",
+        "zn-cm-121-c04",
+        "zn-cm-121-c05",
+        "zn-cm-121-c06",
+        "zn-cm-121-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-cm-122",
+      "idPublico": "zn-cm-122",
+      "sku": "ZN-CM-122",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Gabardina",
+      "nombreComercial": "Manga larga · caballero de Gabardina",
+      "nombreFamilia": "Manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-122",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-122-c01",
+        "zn-cm-122-c02",
+        "zn-cm-122-c03",
+        "zn-cm-122-c04",
+        "zn-cm-122-c05",
+        "zn-cm-122-c06",
+        "zn-cm-122-c07",
+        "zn-cm-122-c08",
+        "zn-cm-122-c09"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-pl-107",
+      "idPublico": "zn-pl-107",
+      "sku": "ZN-PL-107",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Gabardina",
+      "nombreComercial": "Manga corta pinzada · dama de Gabardina",
+      "nombreFamilia": "Manga corta pinzada · dama de Gabardina",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Gabardina",
+      "familia": "zain-proveedor-zn-pl-107",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-107-c01",
+        "zn-pl-107-c02",
+        "zn-pl-107-c03",
+        "zn-pl-107-c04",
+        "zn-pl-107-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-pl-108",
+      "idPublico": "zn-pl-108",
+      "sku": "ZN-PL-108",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Gabardina",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Gabardina",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Gabardina",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Gabardina",
+      "familia": "zain-proveedor-zn-pl-108",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-108-c01",
+        "zn-pl-108-c02",
+        "zn-pl-108-c03",
+        "zn-pl-108-c04",
+        "zn-pl-108-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-pl-109",
+      "idPublico": "zn-pl-109",
+      "sku": "ZN-PL-109",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Gabardina",
+      "nombreComercial": "Manga larga pinzada · dama de Gabardina",
+      "nombreFamilia": "Manga larga pinzada · dama de Gabardina",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Gabardina",
+      "familia": "zain-proveedor-zn-pl-109",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 9 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-109-c01",
+        "zn-pl-109-c02",
+        "zn-pl-109-c03",
+        "zn-pl-109-c04",
+        "zn-pl-109-c05",
+        "zn-pl-109-c06",
+        "zn-pl-109-c07",
+        "zn-pl-109-c08",
+        "zn-pl-109-c09"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-cm-123",
+      "idPublico": "zn-cm-123",
+      "sku": "ZN-CM-123",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Gabardina estampada",
+      "nombreComercial": "Manga larga · caballero de Gabardina estampada",
+      "nombreFamilia": "Manga larga · caballero de Gabardina estampada",
+      "nombreFamiliaComercial": "Manga larga · caballero de Gabardina estampada",
+      "familia": "zain-proveedor-zn-cm-123",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Gabardina estampada",
+      "especificaciones": "Gabardina estampada. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-123-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 127,
+      "coloresSinRender": [
+        "zn-cm-123-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-110",
+      "idPublico": "zn-pl-110",
+      "sku": "ZN-PL-110",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Gabardina · gabardina estampada",
+      "nombreComercial": "Manga larga pinzada · dama de Gabardina · gabardina estampada",
+      "nombreFamilia": "Manga larga pinzada · dama de Gabardina · gabardina estampada",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Gabardina · gabardina estampada",
+      "familia": "zain-proveedor-zn-pl-110",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Gabardina estampada",
+      "especificaciones": "Gabardina estampada. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-110-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 127,
+      "coloresSinRender": [
+        "zn-pl-110-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-124",
+      "idPublico": "zn-cm-124",
+      "sku": "ZN-CM-124",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Gabardina",
+      "nombreComercial": "Manga larga · caballero de Gabardina",
+      "nombreFamilia": "Manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-124",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-124-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-pl-111",
+      "idPublico": "zn-pl-111",
+      "sku": "ZN-PL-111",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Gabardina",
+      "nombreComercial": "Manga larga pinzada · dama de Gabardina",
+      "nombreFamilia": "Manga larga pinzada · dama de Gabardina",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Gabardina",
+      "familia": "zain-proveedor-zn-pl-111",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-111-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-cm-125",
+      "idPublico": "zn-cm-125",
+      "sku": "ZN-CM-125",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Popelina",
+      "nombreComercial": "Manga corta · caballero de Popelina",
+      "nombreFamilia": "Manga corta · caballero de Popelina",
+      "nombreFamiliaComercial": "Manga corta · caballero de Popelina",
+      "familia": "zain-proveedor-zn-cm-125",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-125-c01",
+        "zn-cm-125-c02",
+        "zn-cm-125-c03",
+        "zn-cm-125-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-cm-125-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-126",
+      "idPublico": "zn-cm-126",
+      "sku": "ZN-CM-126",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina",
+      "nombreComercial": "Manga larga · caballero de Popelina",
+      "nombreFamilia": "Manga larga · caballero de Popelina",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina",
+      "familia": "zain-proveedor-zn-cm-126",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-126-c01",
+        "zn-cm-126-c02",
+        "zn-cm-126-c03",
+        "zn-cm-126-c04",
+        "zn-cm-126-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-cm-126-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-112",
+      "idPublico": "zn-pl-112",
+      "sku": "ZN-PL-112",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Popelina",
+      "nombreComercial": "Manga corta pinzada · dama de Popelina",
+      "nombreFamilia": "Manga corta pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-112",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-112-c01",
+        "zn-pl-112-c02",
+        "zn-pl-112-c03",
+        "zn-pl-112-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-112-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-113",
+      "idPublico": "zn-pl-113",
+      "sku": "ZN-PL-113",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-113",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-113-c01",
+        "zn-pl-113-c02",
+        "zn-pl-113-c03",
+        "zn-pl-113-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-113-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-114",
+      "idPublico": "zn-pl-114",
+      "sku": "ZN-PL-114",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-114",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-114-c01",
+        "zn-pl-114-c02",
+        "zn-pl-114-c03",
+        "zn-pl-114-c04",
+        "zn-pl-114-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-114-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-127",
+      "idPublico": "zn-cm-127",
+      "sku": "ZN-CM-127",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Popelina de cuadros",
+      "nombreComercial": "Manga corta · caballero de Popelina de cuadros",
+      "nombreFamilia": "Manga corta · caballero de Popelina de cuadros",
+      "nombreFamiliaComercial": "Manga corta · caballero de Popelina de cuadros",
+      "familia": "zain-proveedor-zn-cm-127",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-127-c01",
+        "zn-cm-127-c02",
+        "zn-cm-127-c03",
+        "zn-cm-127-c04",
+        "zn-cm-127-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-cm-127-c01",
+        "zn-cm-127-c02",
+        "zn-cm-127-c03",
+        "zn-cm-127-c04",
+        "zn-cm-127-c05"
+      ]
+    },
+    {
+      "id": "zn-cm-128",
+      "idPublico": "zn-cm-128",
+      "sku": "ZN-CM-128",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina de cuadros",
+      "nombreComercial": "Manga larga · caballero de Popelina de cuadros",
+      "nombreFamilia": "Manga larga · caballero de Popelina de cuadros",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina de cuadros",
+      "familia": "zain-proveedor-zn-cm-128",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-128-c01",
+        "zn-cm-128-c02",
+        "zn-cm-128-c03",
+        "zn-cm-128-c04",
+        "zn-cm-128-c05",
+        "zn-cm-128-c06"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-cm-128-c01",
+        "zn-cm-128-c02",
+        "zn-cm-128-c03",
+        "zn-cm-128-c04",
+        "zn-cm-128-c05",
+        "zn-cm-128-c06"
+      ]
+    },
+    {
+      "id": "zn-pl-115",
+      "idPublico": "zn-pl-115",
+      "sku": "ZN-PL-115",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Popelina · popelina de cuadros",
+      "nombreComercial": "Manga corta pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamilia": "Manga corta pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Popelina · popelina de cuadros",
+      "familia": "zain-proveedor-zn-pl-115",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-115-c01",
+        "zn-pl-115-c02",
+        "zn-pl-115-c03",
+        "zn-pl-115-c04",
+        "zn-pl-115-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-115-c01",
+        "zn-pl-115-c02",
+        "zn-pl-115-c03",
+        "zn-pl-115-c04",
+        "zn-pl-115-c05"
+      ]
+    },
+    {
+      "id": "zn-pl-116",
+      "idPublico": "zn-pl-116",
+      "sku": "ZN-PL-116",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Popelina de cuadros",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Popelina de cuadros",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Popelina de cuadros",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Popelina de cuadros",
+      "familia": "zain-proveedor-zn-pl-116",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-116-c01",
+        "zn-pl-116-c02",
+        "zn-pl-116-c03",
+        "zn-pl-116-c04",
+        "zn-pl-116-c05"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-116-c01",
+        "zn-pl-116-c02",
+        "zn-pl-116-c03",
+        "zn-pl-116-c04",
+        "zn-pl-116-c05"
+      ]
+    },
+    {
+      "id": "zn-pl-117",
+      "idPublico": "zn-pl-117",
+      "sku": "ZN-PL-117",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "familia": "zain-proveedor-zn-pl-117",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-117-c01",
+        "zn-pl-117-c02",
+        "zn-pl-117-c03",
+        "zn-pl-117-c04",
+        "zn-pl-117-c05",
+        "zn-pl-117-c06"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 122,
+      "coloresSinRender": [
+        "zn-pl-117-c01",
+        "zn-pl-117-c02",
+        "zn-pl-117-c03",
+        "zn-pl-117-c04",
+        "zn-pl-117-c05",
+        "zn-pl-117-c06"
+      ]
+    },
+    {
+      "id": "zn-cm-129",
+      "idPublico": "zn-cm-129",
+      "sku": "ZN-CM-129",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina / tafetán",
+      "nombreComercial": "Manga larga · caballero de Popelina / tafetán",
+      "nombreFamilia": "Manga larga · caballero de Popelina / tafetán",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina / tafetán",
+      "familia": "zain-proveedor-zn-cm-129",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina / tafetán",
+      "especificaciones": "Popelina / tafetán. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-129-c01",
+        "zn-cm-129-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124,
+      "coloresSinRender": [
+        "zn-cm-129-c01",
+        "zn-cm-129-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-118",
+      "idPublico": "zn-pl-118",
+      "sku": "ZN-PL-118",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina / tafetán",
+      "familia": "zain-proveedor-zn-pl-118",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina / tafetán",
+      "especificaciones": "Popelina / tafetán. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-118-c01",
+        "zn-pl-118-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124,
+      "coloresSinRender": [
+        "zn-pl-118-c01",
+        "zn-pl-118-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-130",
+      "idPublico": "zn-cm-130",
+      "sku": "ZN-CM-130",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina / tafetán",
+      "nombreComercial": "Manga larga · caballero de Popelina / tafetán",
+      "nombreFamilia": "Manga larga · caballero de Popelina / tafetán",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina / tafetán",
+      "familia": "zain-proveedor-zn-cm-130",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina / tafetán",
+      "especificaciones": "Popelina / tafetán. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-130-c01",
+        "zn-cm-130-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124,
+      "coloresSinRender": [
+        "zn-cm-130-c01",
+        "zn-cm-130-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-119",
+      "idPublico": "zn-pl-119",
+      "sku": "ZN-PL-119",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina / tafetán",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina / tafetán",
+      "familia": "zain-proveedor-zn-pl-119",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina / tafetán",
+      "especificaciones": "Popelina / tafetán. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-119-c01",
+        "zn-pl-119-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124,
+      "coloresSinRender": [
+        "zn-pl-119-c01",
+        "zn-pl-119-c02"
+      ]
+    },
+    {
+      "id": "zn-cm-131",
+      "idPublico": "zn-cm-131",
+      "sku": "ZN-CM-131",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina de cuadros",
+      "nombreComercial": "Manga larga · caballero de Popelina de cuadros",
+      "nombreFamilia": "Manga larga · caballero de Popelina de cuadros",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina de cuadros",
+      "familia": "zain-proveedor-zn-cm-131",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-131-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "coloresSinRender": [
+        "zn-cm-131-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-120",
+      "idPublico": "zn-pl-120",
+      "sku": "ZN-PL-120",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina · popelina de cuadros",
+      "familia": "zain-proveedor-zn-pl-120",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina de cuadros",
+      "especificaciones": "Popelina de cuadros. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-120-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 170,
+      "coloresSinRender": [
+        "zn-pl-120-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-132",
+      "idPublico": "zn-cm-132",
+      "sku": "ZN-CM-132",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Popelina",
+      "nombreComercial": "Manga corta · caballero de Popelina",
+      "nombreFamilia": "Manga corta · caballero de Popelina",
+      "nombreFamiliaComercial": "Manga corta · caballero de Popelina",
+      "familia": "zain-proveedor-zn-cm-132",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-132-c01",
+        "zn-cm-132-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124
+    },
+    {
+      "id": "zn-cm-133",
+      "idPublico": "zn-cm-133",
+      "sku": "ZN-CM-133",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina",
+      "nombreComercial": "Manga larga · caballero de Popelina",
+      "nombreFamilia": "Manga larga · caballero de Popelina",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina",
+      "familia": "zain-proveedor-zn-cm-133",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-133-c01",
+        "zn-cm-133-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124
+    },
+    {
+      "id": "zn-pl-121",
+      "idPublico": "zn-pl-121",
+      "sku": "ZN-PL-121",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Popelina",
+      "nombreComercial": "Manga corta pinzada · dama de Popelina",
+      "nombreFamilia": "Manga corta pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-121",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-121-c01",
+        "zn-pl-121-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124
+    },
+    {
+      "id": "zn-pl-122",
+      "idPublico": "zn-pl-122",
+      "sku": "ZN-PL-122",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-122",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-122-c01",
+        "zn-pl-122-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124
+    },
+    {
+      "id": "zn-pl-123",
+      "idPublico": "zn-pl-123",
+      "sku": "ZN-PL-123",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina",
+      "familia": "zain-proveedor-zn-pl-123",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina",
+      "especificaciones": "Popelina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-123-c01",
+        "zn-pl-123-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 124
+    },
+    {
+      "id": "zn-cm-134",
+      "idPublico": "zn-cm-134",
+      "sku": "ZN-CM-134",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero de Mezclilla",
+      "nombreComercial": "Manga corta · caballero de Mezclilla",
+      "nombreFamilia": "Manga corta · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Manga corta · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-cm-134",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-134-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-cm-134-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-135",
+      "idPublico": "zn-cm-135",
+      "sku": "ZN-CM-135",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Mezclilla",
+      "nombreComercial": "Manga larga · caballero de Mezclilla",
+      "nombreFamilia": "Manga larga · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Manga larga · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-cm-135",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-135-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-cm-135-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-124",
+      "idPublico": "zn-pl-124",
+      "sku": "ZN-PL-124",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama de Mezclilla",
+      "nombreComercial": "Manga corta pinzada · dama de Mezclilla",
+      "nombreFamilia": "Manga corta pinzada · dama de Mezclilla",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama de Mezclilla",
+      "familia": "zain-proveedor-zn-pl-124",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-124-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-pl-124-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-125",
+      "idPublico": "zn-pl-125",
+      "sku": "ZN-PL-125",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama de Mezclilla",
+      "nombreComercial": "Manga 3/4 pinzada · dama de Mezclilla",
+      "nombreFamilia": "Manga 3/4 pinzada · dama de Mezclilla",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama de Mezclilla",
+      "familia": "zain-proveedor-zn-pl-125",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-125-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-pl-125-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-126",
+      "idPublico": "zn-pl-126",
+      "sku": "ZN-PL-126",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Mezclilla",
+      "nombreComercial": "Manga larga pinzada · dama de Mezclilla",
+      "nombreFamilia": "Manga larga pinzada · dama de Mezclilla",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Mezclilla",
+      "familia": "zain-proveedor-zn-pl-126",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-126-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-pl-126-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-136",
+      "idPublico": "zn-cm-136",
+      "sku": "ZN-CM-136",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Mezclilla",
+      "nombreComercial": "Manga larga · caballero de Mezclilla",
+      "nombreFamilia": "Manga larga · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Manga larga · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-cm-136",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-136-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 258,
+      "coloresSinRender": [
+        "zn-cm-136-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-137",
+      "idPublico": "zn-cm-137",
+      "sku": "ZN-CM-137",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-137",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-137-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-137-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-127",
+      "idPublico": "zn-pl-127",
+      "sku": "ZN-PL-127",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-127",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-127-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-127-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-138",
+      "idPublico": "zn-cm-138",
+      "sku": "ZN-CM-138",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-138",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-138-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-138-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-128",
+      "idPublico": "zn-pl-128",
+      "sku": "ZN-PL-128",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-128",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-128-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-128-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-139",
+      "idPublico": "zn-cm-139",
+      "sku": "ZN-CM-139",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-139",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-139-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-139-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-129",
+      "idPublico": "zn-pl-129",
+      "sku": "ZN-PL-129",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-129",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-129-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-129-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-140",
+      "idPublico": "zn-cm-140",
+      "sku": "ZN-CM-140",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-140",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-140-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-140-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-130",
+      "idPublico": "zn-pl-130",
+      "sku": "ZN-PL-130",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-130",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-130-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-130-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-141",
+      "idPublico": "zn-cm-141",
+      "sku": "ZN-CM-141",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-141",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-141-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-141-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-131",
+      "idPublico": "zn-pl-131",
+      "sku": "ZN-PL-131",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-131",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-131-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-131-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-142",
+      "idPublico": "zn-cm-142",
+      "sku": "ZN-CM-142",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-142",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-142-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-142-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-132",
+      "idPublico": "zn-pl-132",
+      "sku": "ZN-PL-132",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-132",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-132-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-132-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-143",
+      "idPublico": "zn-cm-143",
+      "sku": "ZN-CM-143",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Popelina preteñida",
+      "nombreComercial": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamilia": "Manga larga · caballero de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga · caballero de Popelina preteñida",
+      "familia": "zain-proveedor-zn-cm-143",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-143-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-cm-143-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-133",
+      "idPublico": "zn-pl-133",
+      "sku": "ZN-PL-133",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamilia": "Manga larga pinzada · dama de Popelina preteñida",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Popelina preteñida",
+      "familia": "zain-proveedor-zn-pl-133",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Popelina preteñida",
+      "especificaciones": "Popelina preteñida. 60% algodón / 40% poliéster reciclado. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-133-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 119,
+      "coloresSinRender": [
+        "zn-pl-133-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-144",
+      "idPublico": "zn-cm-144",
+      "sku": "ZN-CM-144",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero de Microfibra",
+      "nombreComercial": "Manga larga · caballero de Microfibra",
+      "nombreFamilia": "Manga larga · caballero de Microfibra",
+      "nombreFamiliaComercial": "Manga larga · caballero de Microfibra",
+      "familia": "zain-proveedor-zn-cm-144",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero de Microfibra",
+      "especificaciones": "Microfibra. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-144-c01",
+        "zn-cm-144-c02",
+        "zn-cm-144-c03",
+        "zn-cm-144-c04",
+        "zn-cm-144-c05",
+        "zn-cm-144-c06",
+        "zn-cm-144-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 98
+    },
+    {
+      "id": "zn-pl-134",
+      "idPublico": "zn-pl-134",
+      "sku": "ZN-PL-134",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama de Microfibra",
+      "nombreComercial": "Manga larga pinzada · dama de Microfibra",
+      "nombreFamilia": "Manga larga pinzada · dama de Microfibra",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama de Microfibra",
+      "familia": "zain-proveedor-zn-pl-134",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama de Microfibra",
+      "especificaciones": "Microfibra. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 7 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-134-c01",
+        "zn-pl-134-c02",
+        "zn-pl-134-c03",
+        "zn-pl-134-c04",
+        "zn-pl-134-c05",
+        "zn-pl-134-c06",
+        "zn-pl-134-c07"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 98
+    },
+    {
+      "id": "zn-cm-145",
+      "idPublico": "zn-cm-145",
+      "sku": "ZN-CM-145",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero",
+      "nombreComercial": "Manga corta · caballero",
+      "nombreFamilia": "Manga corta · caballero",
+      "nombreFamiliaComercial": "Manga corta · caballero",
+      "familia": "zain-proveedor-zn-cm-145",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-145-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-135",
+      "idPublico": "zn-pl-135",
+      "sku": "ZN-PL-135",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama",
+      "nombreComercial": "Manga corta pinzada · dama",
+      "nombreFamilia": "Manga corta pinzada · dama",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-135",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-135-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-136",
+      "idPublico": "zn-pl-136",
+      "sku": "ZN-PL-136",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama",
+      "nombreComercial": "Manga 3/4 pinzada · dama",
+      "nombreFamilia": "Manga 3/4 pinzada · dama",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-136",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-136-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-146",
+      "idPublico": "zn-cm-146",
+      "sku": "ZN-CM-146",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero",
+      "nombreComercial": "Manga corta · caballero",
+      "nombreFamilia": "Manga corta · caballero",
+      "nombreFamiliaComercial": "Manga corta · caballero",
+      "familia": "zain-proveedor-zn-cm-146",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-146-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-137",
+      "idPublico": "zn-pl-137",
+      "sku": "ZN-PL-137",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama",
+      "nombreComercial": "Manga corta pinzada · dama",
+      "nombreFamilia": "Manga corta pinzada · dama",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-137",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-137-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-138",
+      "idPublico": "zn-pl-138",
+      "sku": "ZN-PL-138",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama",
+      "nombreComercial": "Manga 3/4 pinzada · dama",
+      "nombreFamilia": "Manga 3/4 pinzada · dama",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-138",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-138-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-147",
+      "idPublico": "zn-cm-147",
+      "sku": "ZN-CM-147",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta · caballero",
+      "nombreComercial": "Manga corta · caballero",
+      "nombreFamilia": "Manga corta · caballero",
+      "nombreFamiliaComercial": "Manga corta · caballero",
+      "familia": "zain-proveedor-zn-cm-147",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga corta · caballero",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-147-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-139",
+      "idPublico": "zn-pl-139",
+      "sku": "ZN-PL-139",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama",
+      "nombreComercial": "Manga corta pinzada · dama",
+      "nombreFamilia": "Manga corta pinzada · dama",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-139",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-139-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-140",
+      "idPublico": "zn-pl-140",
+      "sku": "ZN-PL-140",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama",
+      "nombreComercial": "Manga 3/4 pinzada · dama",
+      "nombreFamilia": "Manga 3/4 pinzada · dama",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-140",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-140-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-141",
+      "idPublico": "zn-pl-141",
+      "sku": "ZN-PL-141",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga corta pinzada · dama",
+      "nombreComercial": "Manga corta pinzada · dama",
+      "nombreFamilia": "Manga corta pinzada · dama",
+      "nombreFamiliaComercial": "Manga corta pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-141",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga corta pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-141-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-142",
+      "idPublico": "zn-pl-142",
+      "sku": "ZN-PL-142",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga 3/4 pinzada · dama",
+      "nombreComercial": "Manga 3/4 pinzada · dama",
+      "nombreFamilia": "Manga 3/4 pinzada · dama",
+      "nombreFamiliaComercial": "Manga 3/4 pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-142",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga 3/4 pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-142-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-143",
+      "idPublico": "zn-pl-143",
+      "sku": "ZN-PL-143",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama",
+      "nombreComercial": "Manga larga pinzada · dama",
+      "nombreFamilia": "Manga larga pinzada · dama",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-143",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-143-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-148",
+      "idPublico": "zn-cm-148",
+      "sku": "ZN-CM-148",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga · caballero",
+      "nombreComercial": "Manga larga · caballero",
+      "nombreFamilia": "Manga larga · caballero",
+      "nombreFamiliaComercial": "Manga larga · caballero",
+      "familia": "zain-proveedor-zn-cm-148",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Manga larga · caballero",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-148-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-144",
+      "idPublico": "zn-pl-144",
+      "sku": "ZN-PL-144",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Manga larga pinzada · dama",
+      "nombreComercial": "Manga larga pinzada · dama",
+      "nombreFamilia": "Manga larga pinzada · dama",
+      "nombreFamiliaComercial": "Manga larga pinzada · dama",
+      "familia": "zain-proveedor-zn-pl-144",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Manga larga pinzada · dama",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-144-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pa-121",
+      "idPublico": "zn-pa-121",
+      "sku": "ZN-PA-121",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · caballero de Gabardina stretch",
+      "nombreComercial": "Pantalón · caballero de Gabardina stretch",
+      "nombreFamilia": "Pantalón · caballero de Gabardina stretch",
+      "nombreFamiliaComercial": "Pantalón · caballero de Gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-121",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón · caballero de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48, 50. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-121-c01",
+        "zn-pa-121-c02",
+        "zn-pa-121-c03",
+        "zn-pa-121-c04",
+        "zn-pa-121-c05"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-pa-122",
+      "idPublico": "zn-pa-122",
+      "sku": "ZN-PA-122",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · dama de Gabardina stretch",
+      "nombreComercial": "Pantalón · dama de Gabardina stretch",
+      "nombreFamilia": "Pantalón · dama de Gabardina stretch",
+      "nombreFamiliaComercial": "Pantalón · dama de Gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-122",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón · dama de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. 5 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-122-c01",
+        "zn-pa-122-c02",
+        "zn-pa-122-c03",
+        "zn-pa-122-c04",
+        "zn-pa-122-c05"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-pa-123",
+      "idPublico": "zn-pa-123",
+      "sku": "ZN-PA-123",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short · caballero de Gabardina stretch",
+      "nombreComercial": "Short · caballero de Gabardina stretch",
+      "nombreFamilia": "Short · caballero de Gabardina stretch",
+      "nombreFamiliaComercial": "Short · caballero de Gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-123",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Short · caballero de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48, 50. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-123-c01",
+        "zn-pa-123-c02",
+        "zn-pa-123-c03",
+        "zn-pa-123-c04"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-pa-124",
+      "idPublico": "zn-pa-124",
+      "sku": "ZN-PA-124",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Short · dama de Gabardina stretch",
+      "nombreComercial": "Short · dama de Gabardina stretch",
+      "nombreFamilia": "Short · dama de Gabardina stretch",
+      "nombreFamiliaComercial": "Short · dama de Gabardina stretch",
+      "familia": "zain-proveedor-zn-pa-124",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Short · dama de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-124-c01",
+        "zn-pa-124-c02",
+        "zn-pa-124-c03",
+        "zn-pa-124-c04"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-ot-012",
+      "idPublico": "zn-ot-012",
+      "sku": "ZN-OT-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Otro · dama de Gabardina stretch",
+      "nombreComercial": "Otro · dama de Gabardina stretch",
+      "nombreFamilia": "Otro · dama de Gabardina stretch",
+      "nombreFamiliaComercial": "Otro · dama de Gabardina stretch",
+      "familia": "zain-proveedor-zn-ot-012",
+      "categoria": "Otros",
+      "silueta": "Dama",
+      "descripcion": "Otro · dama de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-012-c01",
+        "zn-ot-012-c02",
+        "zn-ot-012-c03",
+        "zn-ot-012-c04"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-ot-013",
+      "idPublico": "zn-ot-013",
+      "sku": "ZN-OT-013",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Otro · dama de Gabardina stretch",
+      "nombreComercial": "Otro · dama de Gabardina stretch",
+      "nombreFamilia": "Otro · dama de Gabardina stretch",
+      "nombreFamiliaComercial": "Otro · dama de Gabardina stretch",
+      "familia": "zain-proveedor-zn-ot-013",
+      "categoria": "Otros",
+      "silueta": "Dama",
+      "descripcion": "Otro · dama de Gabardina stretch",
+      "especificaciones": "Gabardina stretch. 60% algodón / 37% poliéster / 3% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 37% poliéster / 3% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-013-c01",
+        "zn-ot-013-c02",
+        "zn-ot-013-c03",
+        "zn-ot-013-c04"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 292
+    },
+    {
+      "id": "zn-pa-125",
+      "idPublico": "zn-pa-125",
+      "sku": "ZN-PA-125",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · caballero de Mezclilla",
+      "nombreComercial": "Pantalón · caballero de Mezclilla",
+      "nombreFamilia": "Pantalón · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Pantalón · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-pa-125",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48, 50. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-125-c01"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 458,
+      "coloresSinRender": [
+        "zn-pa-125-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-126",
+      "idPublico": "zn-pa-126",
+      "sku": "ZN-PA-126",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · dama de Mezclilla stretch",
+      "nombreComercial": "Pantalón · dama de Mezclilla stretch",
+      "nombreFamilia": "Pantalón · dama de Mezclilla stretch",
+      "nombreFamiliaComercial": "Pantalón · dama de Mezclilla stretch",
+      "familia": "zain-proveedor-zn-pa-126",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón · dama de Mezclilla stretch",
+      "especificaciones": "Mezclilla stretch. 81% algodón / 17% poliéster / 2% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "81% algodón / 17% poliéster / 2% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-126-c01"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 322,
+      "coloresSinRender": [
+        "zn-pa-126-c01"
+      ]
+    },
+    {
+      "id": "zn-po-033",
+      "idPublico": "zn-po-033",
+      "sku": "ZN-PO-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · caballero de Interlock",
+      "nombreComercial": "Polo manga corta · caballero de Interlock",
+      "nombreFamilia": "Polo manga corta · caballero de Interlock",
+      "nombreFamiliaComercial": "Polo manga corta · caballero de Interlock",
+      "familia": "zain-proveedor-zn-po-033",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo manga corta · caballero de Interlock",
+      "especificaciones": "Interlock. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-033-c01",
+        "zn-po-033-c02",
+        "zn-po-033-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-po-034",
+      "idPublico": "zn-po-034",
+      "sku": "ZN-PO-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · dama de Interlock",
+      "nombreComercial": "Polo manga corta · dama de Interlock",
+      "nombreFamilia": "Polo manga corta · dama de Interlock",
+      "nombreFamiliaComercial": "Polo manga corta · dama de Interlock",
+      "familia": "zain-proveedor-zn-po-034",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo manga corta · dama de Interlock",
+      "especificaciones": "Interlock. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-034-c01",
+        "zn-po-034-c02",
+        "zn-po-034-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-po-035",
+      "idPublico": "zn-po-035",
+      "sku": "ZN-PO-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · caballero de Jersey",
+      "nombreComercial": "Polo manga corta · caballero de Jersey",
+      "nombreFamilia": "Polo manga corta · caballero de Jersey",
+      "nombreFamiliaComercial": "Polo manga corta · caballero de Jersey",
+      "familia": "zain-proveedor-zn-po-035",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo manga corta · caballero de Jersey",
+      "especificaciones": "Jersey. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-035-c01",
+        "zn-po-035-c02",
+        "zn-po-035-c03",
+        "zn-po-035-c04",
+        "zn-po-035-c05",
+        "zn-po-035-c06"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 166,
+      "coloresSinRender": [
+        "zn-po-035-c01",
+        "zn-po-035-c02",
+        "zn-po-035-c03",
+        "zn-po-035-c04",
+        "zn-po-035-c05",
+        "zn-po-035-c06"
+      ]
+    },
+    {
+      "id": "zn-po-036",
+      "idPublico": "zn-po-036",
+      "sku": "ZN-PO-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · dama de Jersey",
+      "nombreComercial": "Polo manga corta · dama de Jersey",
+      "nombreFamilia": "Polo manga corta · dama de Jersey",
+      "nombreFamiliaComercial": "Polo manga corta · dama de Jersey",
+      "familia": "zain-proveedor-zn-po-036",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo manga corta · dama de Jersey",
+      "especificaciones": "Jersey. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 6 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-036-c01",
+        "zn-po-036-c02",
+        "zn-po-036-c03",
+        "zn-po-036-c04",
+        "zn-po-036-c05",
+        "zn-po-036-c06"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 166,
+      "coloresSinRender": [
+        "zn-po-036-c01",
+        "zn-po-036-c02",
+        "zn-po-036-c03",
+        "zn-po-036-c04",
+        "zn-po-036-c05",
+        "zn-po-036-c06"
+      ]
+    },
+    {
+      "id": "zn-po-037",
+      "idPublico": "zn-po-037",
+      "sku": "ZN-PO-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · caballero de Piqué",
+      "nombreComercial": "Polo manga corta · caballero de Piqué",
+      "nombreFamilia": "Polo manga corta · caballero de Piqué",
+      "nombreFamiliaComercial": "Polo manga corta · caballero de Piqué",
+      "familia": "zain-proveedor-zn-po-037",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo manga corta · caballero de Piqué",
+      "especificaciones": "Piqué. 50% algodón / 50% poliéster. Tallas: 3XS, 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-037-c01",
+        "zn-po-037-c02",
+        "zn-po-037-c03",
+        "zn-po-037-c04",
+        "zn-po-037-c05",
+        "zn-po-037-c06",
+        "zn-po-037-c07",
+        "zn-po-037-c08"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271,
+      "coloresSinRender": [
+        "zn-po-037-c01",
+        "zn-po-037-c02",
+        "zn-po-037-c03",
+        "zn-po-037-c04",
+        "zn-po-037-c05",
+        "zn-po-037-c06",
+        "zn-po-037-c07",
+        "zn-po-037-c08"
+      ]
+    },
+    {
+      "id": "zn-po-038",
+      "idPublico": "zn-po-038",
+      "sku": "ZN-PO-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo manga corta · dama de Piqué",
+      "nombreComercial": "Polo manga corta · dama de Piqué",
+      "nombreFamilia": "Polo manga corta · dama de Piqué",
+      "nombreFamiliaComercial": "Polo manga corta · dama de Piqué",
+      "familia": "zain-proveedor-zn-po-038",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo manga corta · dama de Piqué",
+      "especificaciones": "Piqué. 50% algodón / 50% poliéster. Tallas: 3XS, 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 8 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-038-c01",
+        "zn-po-038-c02",
+        "zn-po-038-c03",
+        "zn-po-038-c04",
+        "zn-po-038-c05",
+        "zn-po-038-c06",
+        "zn-po-038-c07",
+        "zn-po-038-c08"
+      ],
+      "tallas": [
+        "3XS",
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271,
+      "coloresSinRender": [
+        "zn-po-038-c01",
+        "zn-po-038-c02",
+        "zn-po-038-c03",
+        "zn-po-038-c04",
+        "zn-po-038-c05",
+        "zn-po-038-c06",
+        "zn-po-038-c07",
+        "zn-po-038-c08"
+      ]
+    },
+    {
+      "id": "zn-ch-038",
+      "idPublico": "zn-ch-038",
+      "sku": "ZN-CH-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra · caballero de Fleece",
+      "nombreComercial": "Chamarra · caballero de Fleece",
+      "nombreFamilia": "Chamarra · caballero de Fleece",
+      "nombreFamiliaComercial": "Chamarra · caballero de Fleece",
+      "familia": "zain-proveedor-zn-ch-038",
+      "categoria": "Chamarras",
+      "silueta": "Caballero",
+      "descripcion": "Chamarra · caballero de Fleece",
+      "especificaciones": "Fleece. 100% poliéster reciclado. Tallas: XS, S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-038-c01",
+        "zn-ch-038-c02",
+        "zn-ch-038-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 336
+    },
+    {
+      "id": "zn-ch-039",
+      "idPublico": "zn-ch-039",
+      "sku": "ZN-CH-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chamarra · dama de Fleece",
+      "nombreComercial": "Chamarra · dama de Fleece",
+      "nombreFamilia": "Chamarra · dama de Fleece",
+      "nombreFamiliaComercial": "Chamarra · dama de Fleece",
+      "familia": "zain-proveedor-zn-ch-039",
+      "categoria": "Chamarras",
+      "silueta": "Dama",
+      "descripcion": "Chamarra · dama de Fleece",
+      "especificaciones": "Fleece. 100% poliéster reciclado. Tallas: XS, S, M, L, XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ch-039-c01",
+        "zn-ch-039-c02",
+        "zn-ch-039-c03"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia",
+        "dtf"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.185,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 336
+    },
+    {
+      "id": "zn-ce-007",
+      "idPublico": "zn-ce-007",
+      "sku": "ZN-CE-007",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco · caballero de Fleece",
+      "nombreComercial": "Chaleco · caballero de Fleece",
+      "nombreFamilia": "Chaleco · caballero de Fleece",
+      "nombreFamiliaComercial": "Chaleco · caballero de Fleece",
+      "familia": "zain-proveedor-zn-ce-007",
+      "categoria": "Chalecos",
+      "silueta": "Caballero",
+      "descripcion": "Chaleco · caballero de Fleece",
+      "especificaciones": "Fleece. 100% poliéster reciclado. Tallas: XS, S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-007-c01",
+        "zn-ce-007-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 336
+    },
+    {
+      "id": "zn-ce-008",
+      "idPublico": "zn-ce-008",
+      "sku": "ZN-CE-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco · dama de Fleece",
+      "nombreComercial": "Chaleco · dama de Fleece",
+      "nombreFamilia": "Chaleco · dama de Fleece",
+      "nombreFamiliaComercial": "Chaleco · dama de Fleece",
+      "familia": "zain-proveedor-zn-ce-008",
+      "categoria": "Chalecos",
+      "silueta": "Dama",
+      "descripcion": "Chaleco · dama de Fleece",
+      "especificaciones": "Fleece. 100% poliéster reciclado. Tallas: XS, S, M, L, XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster reciclado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-008-c01",
+        "zn-ce-008-c02"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 336
+    },
+    {
+      "id": "zn-cm-149",
+      "idPublico": "zn-cm-149",
+      "sku": "ZN-CM-149",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero de Gabardina",
+      "nombreComercial": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-149",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-149-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-149-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-150",
+      "idPublico": "zn-cm-150",
+      "sku": "ZN-CM-150",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · dama de Gabardina",
+      "nombreComercial": "Camisa manga larga · dama de Gabardina",
+      "nombreFamilia": "Camisa manga larga · dama de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · dama de Gabardina",
+      "familia": "zain-proveedor-zn-cm-150",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Camisa manga larga · dama de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-150-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-150-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-151",
+      "idPublico": "zn-cm-151",
+      "sku": "ZN-CM-151",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero de Gabardina",
+      "nombreComercial": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-151",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-151-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-151-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-152",
+      "idPublico": "zn-cm-152",
+      "sku": "ZN-CM-152",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · dama de Gabardina",
+      "nombreComercial": "Camisa manga larga · dama de Gabardina",
+      "nombreFamilia": "Camisa manga larga · dama de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · dama de Gabardina",
+      "familia": "zain-proveedor-zn-cm-152",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Camisa manga larga · dama de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-152-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-152-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-153",
+      "idPublico": "zn-cm-153",
+      "sku": "ZN-CM-153",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero de Gabardina",
+      "nombreComercial": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-153",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-153-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-153-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-154",
+      "idPublico": "zn-cm-154",
+      "sku": "ZN-CM-154",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · dama de Gabardina",
+      "nombreComercial": "Camisa manga larga · dama de Gabardina",
+      "nombreFamilia": "Camisa manga larga · dama de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · dama de Gabardina",
+      "familia": "zain-proveedor-zn-cm-154",
+      "categoria": "Camisas",
+      "silueta": "Dama",
+      "descripcion": "Camisa manga larga · dama de Gabardina",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-154-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210,
+      "coloresSinRender": [
+        "zn-cm-154-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-155",
+      "idPublico": "zn-cm-155",
+      "sku": "ZN-CM-155",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero · gabardina",
+      "nombreComercial": "Camisa manga larga · caballero · gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-155",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero",
+      "especificaciones": "Gabardina. 75% algodón / 24% poliéster / 1% carbón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "75% algodón / 24% poliéster / 1% carbón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-155-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 363,
+      "coloresSinRender": [
+        "zn-cm-155-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-156",
+      "idPublico": "zn-cm-156",
+      "sku": "ZN-CM-156",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero · gabardina",
+      "nombreComercial": "Camisa manga larga · caballero · gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero · gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero · gabardina",
+      "familia": "zain-proveedor-zn-cm-156",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero",
+      "especificaciones": "Gabardina. 80% poliéster / 20% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "80% poliéster / 20% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-156-c01",
+        "zn-cm-156-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 231,
+      "coloresSinRender": [
+        "zn-cm-156-c01",
+        "zn-cm-156-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-145",
+      "idPublico": "zn-pl-145",
+      "sku": "ZN-PL-145",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Dama · solo tabla de medidas",
+      "nombreComercial": "Dama · solo tabla de medidas",
+      "nombreFamilia": "Dama · solo tabla de medidas",
+      "nombreFamiliaComercial": "Dama · solo tabla de medidas",
+      "familia": "zain-proveedor-zn-pl-145",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Dama · solo tabla de medidas",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-145-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-146",
+      "idPublico": "zn-pl-146",
+      "sku": "ZN-PL-146",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Dama · solo tabla de medidas",
+      "nombreComercial": "Dama · solo tabla de medidas",
+      "nombreFamilia": "Dama · solo tabla de medidas",
+      "nombreFamiliaComercial": "Dama · solo tabla de medidas",
+      "familia": "zain-proveedor-zn-pl-146",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Dama · solo tabla de medidas",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-146-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ba-033",
+      "idPublico": "zn-ba-033",
+      "sku": "ZN-BA-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata industrial manga corta de Gabardina",
+      "nombreComercial": "Bata industrial manga corta de Gabardina",
+      "nombreFamilia": "Bata industrial manga corta de Gabardina",
+      "nombreFamiliaComercial": "Bata industrial manga corta de Gabardina",
+      "familia": "zain-proveedor-zn-ba-033",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata industrial manga corta de Gabardina",
+      "especificaciones": "Gabardina. 50% algodón / 50% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-033-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
+    },
+    {
+      "id": "zn-pl-147",
+      "idPublico": "zn-pl-147",
+      "sku": "ZN-PL-147",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera manga larga · caballero de Piqué",
+      "nombreComercial": "Playera manga larga · caballero de Piqué",
+      "nombreFamilia": "Playera manga larga · caballero de Piqué",
+      "nombreFamiliaComercial": "Playera manga larga · caballero de Piqué",
+      "familia": "zain-proveedor-zn-pl-147",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera manga larga · caballero de Piqué",
+      "especificaciones": "Piqué. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-147-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 149,
+      "coloresSinRender": [
+        "zn-pl-147-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-148",
+      "idPublico": "zn-pl-148",
+      "sku": "ZN-PL-148",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera manga larga · dama de Piqué",
+      "nombreComercial": "Playera manga larga · dama de Piqué",
+      "nombreFamilia": "Playera manga larga · dama de Piqué",
+      "nombreFamiliaComercial": "Playera manga larga · dama de Piqué",
+      "familia": "zain-proveedor-zn-pl-148",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Playera manga larga · dama de Piqué",
+      "especificaciones": "Piqué. 100% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-148-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 149,
+      "coloresSinRender": [
+        "zn-pl-148-c01"
+      ]
+    },
+    {
+      "id": "zn-cm-157",
+      "idPublico": "zn-cm-157",
+      "sku": "ZN-CM-157",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa manga larga · caballero de Gabardina",
+      "nombreComercial": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamilia": "Camisa manga larga · caballero de Gabardina",
+      "nombreFamiliaComercial": "Camisa manga larga · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-cm-157",
+      "categoria": "Camisas",
+      "silueta": "Caballero",
+      "descripcion": "Camisa manga larga · caballero de Gabardina",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-157-c01",
+        "zn-cm-157-c02",
+        "zn-cm-157-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-pa-127",
+      "idPublico": "zn-pa-127",
+      "sku": "ZN-PA-127",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · caballero de Gabardina",
+      "nombreComercial": "Pantalón · caballero de Gabardina",
+      "nombreFamilia": "Pantalón · caballero de Gabardina",
+      "nombreFamiliaComercial": "Pantalón · caballero de Gabardina",
+      "familia": "zain-proveedor-zn-pa-127",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón · caballero de Gabardina",
+      "especificaciones": "Gabardina. 65% poliéster / 35% algodón. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "65% poliéster / 35% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-127-c01",
+        "zn-pa-127-c02",
+        "zn-pa-127-c03"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
+    },
+    {
+      "id": "zn-pa-128",
+      "idPublico": "zn-pa-128",
+      "sku": "ZN-PA-128",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · caballero de Mezclilla",
+      "nombreComercial": "Pantalón · caballero de Mezclilla",
+      "nombreFamilia": "Pantalón · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Pantalón · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-pa-128",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48, 50. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-128-c01",
+        "zn-pa-128-c02"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 458,
+      "coloresSinRender": [
+        "zn-pa-128-c01",
+        "zn-pa-128-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-129",
+      "idPublico": "zn-pa-129",
+      "sku": "ZN-PA-129",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · dama de Mezclilla",
+      "nombreComercial": "Pantalón · dama de Mezclilla",
+      "nombreFamilia": "Pantalón · dama de Mezclilla",
+      "nombreFamiliaComercial": "Pantalón · dama de Mezclilla",
+      "familia": "zain-proveedor-zn-pa-129",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón · dama de Mezclilla",
+      "especificaciones": "Mezclilla. 81% algodón / 17% poliéster / 2% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "81% algodón / 17% poliéster / 2% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-129-c01",
+        "zn-pa-129-c02"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 322,
+      "coloresSinRender": [
+        "zn-pa-129-c01",
+        "zn-pa-129-c02"
+      ]
+    },
+    {
+      "id": "zn-pa-130",
+      "idPublico": "zn-pa-130",
+      "sku": "ZN-PA-130",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · caballero de Mezclilla",
+      "nombreComercial": "Pantalón · caballero de Mezclilla",
+      "nombreFamilia": "Pantalón · caballero de Mezclilla",
+      "nombreFamiliaComercial": "Pantalón · caballero de Mezclilla",
+      "familia": "zain-proveedor-zn-pa-130",
+      "categoria": "Pantalones",
+      "silueta": "Caballero",
+      "descripcion": "Pantalón · caballero de Mezclilla",
+      "especificaciones": "Mezclilla. 100% algodón. Tallas: 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42, 44, 46, 48, 50. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-130-c01"
+      ],
+      "tallas": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 475,
+      "coloresSinRender": [
+        "zn-pa-130-c01"
+      ]
+    },
+    {
+      "id": "zn-pa-131",
+      "idPublico": "zn-pa-131",
+      "sku": "ZN-PA-131",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón · dama de Mezclilla",
+      "nombreComercial": "Pantalón · dama de Mezclilla",
+      "nombreFamilia": "Pantalón · dama de Mezclilla",
+      "nombreFamiliaComercial": "Pantalón · dama de Mezclilla",
+      "familia": "zain-proveedor-zn-pa-131",
+      "categoria": "Pantalones",
+      "silueta": "Dama",
+      "descripcion": "Pantalón · dama de Mezclilla",
+      "especificaciones": "Mezclilla. 98% algodón / 2% elastano. Tallas: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "98% algodón / 2% elastano",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-131-c01"
+      ],
+      "tallas": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 373,
+      "coloresSinRender": [
+        "zn-pa-131-c01"
+      ]
+    },
+    {
+      "id": "zn-pl-149",
+      "idPublico": "zn-pl-149",
+      "sku": "ZN-PL-149",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-149",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-149-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-150",
+      "idPublico": "zn-pl-150",
+      "sku": "ZN-PL-150",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-150",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-150-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-151",
+      "idPublico": "zn-pl-151",
+      "sku": "ZN-PL-151",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-151",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-151-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-152",
+      "idPublico": "zn-pl-152",
+      "sku": "ZN-PL-152",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-152",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-152-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-153",
+      "idPublico": "zn-pl-153",
+      "sku": "ZN-PL-153",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-153",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-153-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-039",
+      "idPublico": "zn-po-039",
+      "sku": "ZN-PO-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo",
+      "nombreComercial": "Polo",
+      "nombreFamilia": "Polo",
+      "nombreFamiliaComercial": "Polo",
+      "familia": "zain-proveedor-zn-po-039",
+      "categoria": "Polos",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-039-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-040",
+      "idPublico": "zn-po-040",
+      "sku": "ZN-PO-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo",
+      "nombreComercial": "Polo",
+      "nombreFamilia": "Polo",
+      "nombreFamiliaComercial": "Polo",
+      "familia": "zain-proveedor-zn-po-040",
+      "categoria": "Polos",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-040-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-158",
+      "idPublico": "zn-cm-158",
+      "sku": "ZN-CM-158",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa",
+      "nombreComercial": "Camisa",
+      "nombreFamilia": "Camisa",
+      "nombreFamiliaComercial": "Camisa",
+      "familia": "zain-proveedor-zn-cm-158",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-158-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-159",
+      "idPublico": "zn-cm-159",
+      "sku": "ZN-CM-159",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa",
+      "nombreComercial": "Camisa",
+      "nombreFamilia": "Camisa",
+      "nombreFamiliaComercial": "Camisa",
+      "familia": "zain-proveedor-zn-cm-159",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-159-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-160",
+      "idPublico": "zn-cm-160",
+      "sku": "ZN-CM-160",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa",
+      "nombreComercial": "Camisa",
+      "nombreFamilia": "Camisa",
+      "nombreFamiliaComercial": "Camisa",
+      "familia": "zain-proveedor-zn-cm-160",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-160-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-161",
+      "idPublico": "zn-cm-161",
+      "sku": "ZN-CM-161",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Camisa",
+      "nombreComercial": "Camisa",
+      "nombreFamilia": "Camisa",
+      "nombreFamiliaComercial": "Camisa",
+      "familia": "zain-proveedor-zn-cm-161",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-161-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ce-009",
+      "idPublico": "zn-ce-009",
+      "sku": "ZN-CE-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco",
+      "nombreComercial": "Chaleco",
+      "nombreFamilia": "Chaleco",
+      "nombreFamiliaComercial": "Chaleco",
+      "familia": "zain-proveedor-zn-ce-009",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-009-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ce-010",
+      "idPublico": "zn-ce-010",
+      "sku": "ZN-CE-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco",
+      "nombreComercial": "Chaleco",
+      "nombreFamilia": "Chaleco",
+      "nombreFamiliaComercial": "Chaleco",
+      "familia": "zain-proveedor-zn-ce-010",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-010-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ce-011",
+      "idPublico": "zn-ce-011",
+      "sku": "ZN-CE-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Chaleco",
+      "nombreComercial": "Chaleco",
+      "nombreFamilia": "Chaleco",
+      "nombreFamiliaComercial": "Chaleco",
+      "familia": "zain-proveedor-zn-ce-011",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: 2XS, XS, S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-011-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-fi-021",
+      "idPublico": "zn-fi-021",
+      "sku": "ZN-FI-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina Chef manga larga de Gabardina",
+      "nombreComercial": "Filipina Chef manga larga de Gabardina",
+      "nombreFamilia": "Filipina Chef manga larga de Gabardina",
+      "nombreFamiliaComercial": "Filipina Chef manga larga de Gabardina",
+      "familia": "zain-proveedor-zn-fi-021",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina Chef manga larga de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 4 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-021-c01",
+        "zn-fi-021-c02",
+        "zn-fi-021-c03",
+        "zn-fi-021-c04"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "coloresSinRender": [
+        "zn-fi-021-c02",
+        "zn-fi-021-c03",
+        "zn-fi-021-c04"
+      ]
+    },
+    {
+      "id": "zn-pa-132",
+      "idPublico": "zn-pa-132",
+      "sku": "ZN-PA-132",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Pantalón Chef de Gabardina",
+      "nombreComercial": "Pantalón Chef de Gabardina",
+      "nombreFamilia": "Pantalón Chef de Gabardina",
+      "nombreFamiliaComercial": "Pantalón Chef de Gabardina",
+      "familia": "zain-proveedor-zn-pa-132",
+      "categoria": "Pantalones",
+      "silueta": "Unisex",
+      "descripcion": "Pantalón Chef de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pa-132-c01",
+        "zn-pa-132-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 9.5,
+      "zonas": [
+        {
+          "id": "muslo-izq",
+          "nombre": "Muslo izquierdo",
+          "x": 610,
+          "y": 400,
+          "max": 12,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-ot-014",
+      "idPublico": "zn-ot-014",
+      "sku": "ZN-OT-014",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De Gabardina",
+      "nombreComercial": "De Gabardina",
+      "nombreFamilia": "De Gabardina",
+      "nombreFamiliaComercial": "De Gabardina",
+      "familia": "zain-proveedor-zn-ot-014",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "De Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-014-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-ot-015",
+      "idPublico": "zn-ot-015",
+      "sku": "ZN-OT-015",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De Polivinil · polivinil, base poliéster",
+      "nombreComercial": "De Polivinil · polivinil, base poliéster",
+      "nombreFamilia": "De Polivinil · polivinil, base poliéster",
+      "nombreFamiliaComercial": "De Polivinil · polivinil, base poliéster",
+      "familia": "zain-proveedor-zn-ot-015",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "De Polivinil, base poliéster",
+      "especificaciones": "Polivinil, base poliéster. 100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-015-c01",
+        "zn-ot-015-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ot-015-c01",
+        "zn-ot-015-c02"
+      ]
+    },
+    {
+      "id": "zn-ot-016",
+      "idPublico": "zn-ot-016",
+      "sku": "ZN-OT-016",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De Polivinil · polivinil, base poliéster",
+      "nombreComercial": "De Polivinil · polivinil, base poliéster",
+      "nombreFamilia": "De Polivinil · polivinil, base poliéster",
+      "nombreFamiliaComercial": "De Polivinil · polivinil, base poliéster",
+      "familia": "zain-proveedor-zn-ot-016",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "De Polivinil, base poliéster",
+      "especificaciones": "Polivinil, base poliéster. 100% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-016-c01",
+        "zn-ot-016-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "coloresSinRender": [
+        "zn-ot-016-c01",
+        "zn-ot-016-c02"
+      ]
+    },
+    {
+      "id": "zn-ot-017",
+      "idPublico": "zn-ot-017",
+      "sku": "ZN-OT-017",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De Gabardina",
+      "nombreComercial": "De Gabardina",
+      "nombreFamilia": "De Gabardina",
+      "nombreFamiliaComercial": "De Gabardina",
+      "familia": "zain-proveedor-zn-ot-017",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "De Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Unitalla o ajustable. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-017-c01",
+        "zn-ot-017-c02",
+        "zn-ot-017-c03"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
+    },
+    {
+      "id": "zn-ot-018",
+      "idPublico": "zn-ot-018",
+      "sku": "ZN-OT-018",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De Gabardina",
+      "nombreComercial": "De Gabardina",
+      "nombreFamilia": "De Gabardina",
+      "nombreFamiliaComercial": "De Gabardina",
+      "familia": "zain-proveedor-zn-ot-018",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "De Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-018-c01",
+        "zn-ot-018-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "coloresSinRender": [
+        "zn-ot-018-c01",
+        "zn-ot-018-c02"
+      ]
+    },
+    {
+      "id": "zn-ma-008",
+      "idPublico": "zn-ma-008",
+      "sku": "ZN-MA-008",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "4 de Gabardina",
+      "nombreComercial": "4 de Gabardina",
+      "nombreFamilia": "4 de Gabardina",
+      "nombreFamiliaComercial": "4 de Gabardina",
+      "familia": "zain-proveedor-zn-ma-008",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "4 de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-008-c01",
+        "zn-ma-008-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "coloresSinRender": [
+        "zn-ma-008-c01",
+        "zn-ma-008-c02"
+      ]
+    },
+    {
+      "id": "zn-ma-009",
+      "idPublico": "zn-ma-009",
+      "sku": "ZN-MA-009",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "2 de Gabardina",
+      "nombreComercial": "2 de Gabardina",
+      "nombreFamilia": "2 de Gabardina",
+      "nombreFamiliaComercial": "2 de Gabardina",
+      "familia": "zain-proveedor-zn-ma-009",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "2 de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Unitalla o ajustable. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-009-c01",
+        "zn-ma-009-c02"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "coloresSinRender": [
+        "zn-ma-009-c01",
+        "zn-ma-009-c02"
+      ]
+    },
+    {
+      "id": "zn-ma-010",
+      "idPublico": "zn-ma-010",
+      "sku": "ZN-MA-010",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De",
+      "nombreComercial": "De",
+      "nombreFamilia": "De",
+      "nombreFamiliaComercial": "De",
+      "familia": "zain-proveedor-zn-ma-010",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "De",
+      "especificaciones": "50% algodón / 50% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-010-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 271
+    },
+    {
+      "id": "zn-ma-011",
+      "idPublico": "zn-ma-011",
+      "sku": "ZN-MA-011",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "De",
+      "nombreComercial": "De",
+      "nombreFamilia": "De",
+      "nombreFamiliaComercial": "De",
+      "familia": "zain-proveedor-zn-ma-011",
+      "categoria": "Mandiles",
+      "silueta": "Unisex",
+      "descripcion": "De",
+      "especificaciones": "100% algodón. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ma-011-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 254,
+      "coloresSinRender": [
+        "zn-ma-011-c01"
+      ]
+    },
+    {
+      "id": "zn-ba-034",
+      "idPublico": "zn-ba-034",
+      "sku": "ZN-BA-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata Médica manga larga de Gabardina",
+      "nombreComercial": "Bata Médica manga larga de Gabardina",
+      "nombreFamilia": "Bata Médica manga larga de Gabardina",
+      "nombreFamiliaComercial": "Bata Médica manga larga de Gabardina",
+      "familia": "zain-proveedor-zn-ba-034",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata Médica manga larga de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-034-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
+    },
+    {
+      "id": "zn-fi-022",
+      "idPublico": "zn-fi-022",
+      "sku": "ZN-FI-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Filipina Médica manga corta de Oxford",
+      "nombreComercial": "Filipina Médica manga corta de Oxford",
+      "nombreFamilia": "Filipina Médica manga corta de Oxford",
+      "nombreFamiliaComercial": "Filipina Médica manga corta de Oxford",
+      "familia": "zain-proveedor-zn-fi-022",
+      "categoria": "Filipinas",
+      "silueta": "Unisex",
+      "descripcion": "Filipina Médica manga corta de Oxford (Verde/Blanco); popelina (A. Cielo)",
+      "especificaciones": "Oxford (Verde/Blanco); popelina (A. Cielo). 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 3 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-fi-022-c01",
+        "zn-fi-022-c02",
+        "zn-fi-022-c03"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 153
+    },
+    {
+      "id": "zn-ba-035",
+      "idPublico": "zn-ba-035",
+      "sku": "ZN-BA-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bata de Laboratorio manga corta de Gabardina",
+      "nombreComercial": "Bata de Laboratorio manga corta de Gabardina",
+      "nombreFamilia": "Bata de Laboratorio manga corta de Gabardina",
+      "nombreFamiliaComercial": "Bata de Laboratorio manga corta de Gabardina",
+      "familia": "zain-proveedor-zn-ba-035",
+      "categoria": "Batas",
+      "silueta": "Unisex",
+      "descripcion": "Bata de Laboratorio manga corta de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ba-035-c01"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 237
+    },
+    {
+      "id": "zn-ot-019",
+      "idPublico": "zn-ot-019",
+      "sku": "ZN-OT-019",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Conjunto Médico manga corta de Gabardina (A",
+      "nombreComercial": "Conjunto Médico manga corta de Gabardina (A",
+      "nombreFamilia": "Conjunto Médico manga corta de Gabardina (A",
+      "nombreFamiliaComercial": "Conjunto Médico manga corta de Gabardina (A",
+      "familia": "zain-proveedor-zn-ot-019",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "Conjunto Médico manga corta de Gabardina (A. Cielo); popelina (A. Marino)",
+      "especificaciones": "Gabardina (A. Cielo); popelina (A. Marino). 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-019-c01",
+        "zn-ot-019-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190,
+      "coloresSinRender": [
+        "zn-ot-019-c01",
+        "zn-ot-019-c02"
+      ]
+    },
+    {
+      "id": "zn-pl-154",
+      "idPublico": "zn-pl-154",
+      "sku": "ZN-PL-154",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera Zipp Caballero manga corta de Gabardina",
+      "nombreComercial": "Playera Zipp Caballero manga corta de Gabardina",
+      "nombreFamilia": "Playera Zipp Caballero manga corta de Gabardina",
+      "nombreFamiliaComercial": "Playera Zipp Caballero manga corta de Gabardina",
+      "familia": "zain-proveedor-zn-pl-154",
+      "categoria": "Playeras",
+      "silueta": "Caballero",
+      "descripcion": "Playera Zipp Caballero manga corta de Gabardina",
+      "especificaciones": "Gabardina. 60% algodón / 40% poliéster. Tallas: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "60% algodón / 40% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-154-c01",
+        "zn-pl-154-c02"
+      ],
+      "tallas": [
+        "2XS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 190
     }
   ],
   "promocionales": [
