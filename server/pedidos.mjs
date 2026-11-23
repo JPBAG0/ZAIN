@@ -129,11 +129,12 @@ export function validateOrder(body, { allowHistoricos = false, catalogo = C, sna
   return { items,manifest,bytes,total:items.reduce((s,x)=>s+x.piezas,0) };
 }
 
-async function jsonBody(request) {
+// Tope de 128 KB salvo que la operación pida más (Costos con 1,000+ prendas pesa ~600 KB).
+async function jsonBody(request,max=128*1024) {
   if(!request.headers.get('content-type')?.startsWith('application/json')) fail(415,'Usa una solicitud JSON.');
   const reader=request.body?.getReader(); if(!reader) fail(400,'Falta el pedido.');
   const chunks=[];let bytes=0;
-  while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>128*1024){await reader.cancel();fail(413,'El pedido es demasiado grande.');}chunks.push(value);}
+  while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>max){await reader.cancel();fail(413,'El pedido es demasiado grande.');}chunks.push(value);}
   try{return JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{fail(400,'No se pudo leer la solicitud.');}
 }
 

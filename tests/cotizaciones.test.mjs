@@ -115,6 +115,14 @@ test('pestañas anteriores no pueden borrar tarifas o guardar el esquema de cost
  assert.equal((await f.call('precios-guardar',{version:0,datos:{...cfg(),costeo:undefined}})).status,409);
  assert.equal((await f.call('cotizacion-guardar',{id,version:1,borrador:{...entrada(listo()),schema:2}})).status,409);
 });
+test('Costos con más de 1,000 prendas y más de 128 KB se guarda (catálogos de proveedores, 22-nov-2026)',async()=>{
+ const {default:C}=await import('../server/config-interno.cjs'),skus=C.productos.map(p=>p.sku).slice(0,1100);assert.ok(skus.length>=1000);
+ const prendas=skus.map(sku=>({sku,prenda:null,otros:0,bandas:[{tallas:[],colores:[],costo:12345}],fuente:'Proveedor de prueba · lista 2026 · '.padEnd(200,'x')}));
+ const datos={...cfg(),costos:[],costeo:'area_tallas_volumen_v4',prendas},f=fixture();assert.ok(JSON.stringify(datos).length>128*1024);
+ const r=await f.call('precios-guardar',{version:0,datos});assert.notEqual(r.status,413,'no lo rechaza por tamaño');assert.notEqual(r.status,400,await r.clone().text());
+ assert.ok(f.calls.some(u=>u.includes('/rpc/zain_precios_guardar')),'llega a guardar');
+ assert.equal(configurar(datos).prendas.length,skus.length);
+});
 test('abrir para revisión carga costos guardados aunque preparación automática esté desactivada',async()=>{
  const f=fixture({pricing:{...areaCfg(),activo:false}}),r=await(await f.call('cotizacion&id='+id)).json(),p=r.cotizacion.borrador.partidas[0];
  assert.equal(p.prenda,10000);assert.equal(p.tarifaCm2,20000);assert.equal(p.preparacion,1000);assert.equal(p.modo,'area');

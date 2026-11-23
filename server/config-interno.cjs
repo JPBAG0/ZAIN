@@ -24163,6 +24163,486 @@ module.exports = {
       "id": "zn-bo-038-c01",
       "nombre": "Crudo natural",
       "hex": "#e9dfc8"
+    },
+    {
+      "id": "zn-go-093-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-094-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-095-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-096-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-097-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-098-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-099-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-100-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-go-101-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-go-102-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-bo-039-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-bo-040-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-bo-041-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-021-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-022-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-023-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-024-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-025-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-026-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-027-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-028-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-029-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-030-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-031-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-032-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-033-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-034-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-035-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-036-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-037-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-038-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-039-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-040-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-041-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-042-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ce-012-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-043-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-044-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-045-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-046-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-047-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-048-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-049-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-050-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-051-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-052-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-053-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-cm-243-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-054-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-034-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-035-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-055-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-056-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-057-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-058-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-058-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-ot-059-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-059-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-198-c01",
+      "nombre": "Hueso",
+      "hex": "#efe8d8"
+    },
+    {
+      "id": "zn-pl-198-c02",
+      "nombre": "Negro",
+      "hex": "#1c1c1e"
+    },
+    {
+      "id": "zn-pl-199-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-200-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-201-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-057-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-058-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-059-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-pl-202-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-029-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-030-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-031-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-032-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-po-060-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-po-061-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-060-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-ot-061-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-ot-062-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-036-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-037-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-038-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-039-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-040-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-in-033-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-in-034-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-in-035-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-in-036-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-037-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-in-038-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-pl-203-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-041-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-su-042-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-su-043-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-su-044-c01",
+      "nombre": "Color por confirmar",
+      "hex": "#9a9ca0"
+    },
+    {
+      "id": "zn-su-045-c01",
+      "nombre": "Azul mineral",
+      "hex": "#2f5fa8"
+    },
+    {
+      "id": "zn-su-046-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-su-047-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
+    },
+    {
+      "id": "zn-su-048-c01",
+      "nombre": "Blanco",
+      "hex": "#f7f7f5"
     }
   ],
   "tecnicas": [
@@ -91302,6 +91782,5566 @@ module.exports = {
       "renderOrientativo": true,
       "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-093",
+      "idPublico": "zn-go-093",
+      "sku": "ZN-GO-093",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Microfibra · 100% poliéster",
+      "nombreComercial": "Microfibra · 100% poliéster",
+      "nombreFamilia": "Microfibra · 100% poliéster",
+      "nombreFamiliaComercial": "Microfibra · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-093",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Microfibra. Material publicado: Poliéster 100%. Cierre posterior: Hebilla.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-093-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-094",
+      "idPublico": "zn-go-094",
+      "sku": "ZN-GO-094",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Combinada",
+      "nombreComercial": "Combinada",
+      "nombreFamilia": "Combinada",
+      "nombreFamiliaComercial": "Combinada",
+      "familia": "zain-proveedor-zn-go-094",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Combinada. Material publicado: Poliéster 65%35%. Cierre posterior: Vlecro.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-094-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-095",
+      "idPublico": "zn-go-095",
+      "sku": "ZN-GO-095",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gabardina Adulto",
+      "nombreComercial": "Gabardina Adulto",
+      "nombreFamilia": "Gabardina Adulto",
+      "nombreFamiliaComercial": "Gabardina Adulto",
+      "familia": "zain-proveedor-zn-go-095",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Gabardina Adulto. Material publicado: Gabardina 100% algodón. Cierre posterior: Hebilla.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: ADULTO. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-095-c01"
+      ],
+      "tallas": [
+        "ADULTO"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-096",
+      "idPublico": "zn-go-096",
+      "sku": "ZN-GO-096",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Gabardina Niño",
+      "nombreComercial": "Gabardina Niño",
+      "nombreFamilia": "Gabardina Niño",
+      "nombreFamiliaComercial": "Gabardina Niño",
+      "familia": "zain-proveedor-zn-go-096",
+      "categoria": "Gorras",
+      "silueta": "Infantil",
+      "descripcion": "Gabardina Niño. Material publicado: Gabardina 100% algodón. Cierre posterior: Hebilla.",
+      "especificaciones": "Gabardina. 100% algodón. Tallas: NIÑO. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-096-c01"
+      ],
+      "tallas": [
+        "NIÑO"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-097",
+      "idPublico": "zn-go-097",
+      "sku": "ZN-GO-097",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Visera · gabardina",
+      "nombreComercial": "Visera · gabardina",
+      "nombreFamilia": "Visera · gabardina",
+      "nombreFamiliaComercial": "Visera · gabardina",
+      "familia": "zain-proveedor-zn-go-097",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Visera. Material publicado: Gabardina 100% algodón. Cierre posterior: Velcro.",
+      "especificaciones": "Gabardina. 100% algodón. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-097-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-098",
+      "idPublico": "zn-go-098",
+      "sku": "ZN-GO-098",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Acrilana",
+      "nombreComercial": "Acrilana",
+      "nombreFamilia": "Acrilana",
+      "nombreFamiliaComercial": "Acrilana",
+      "familia": "zain-proveedor-zn-go-098",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Acrilana. Material publicado: Poliéster 65%35%. Cierre posterior: Vlecro.",
+      "especificaciones": "Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-098-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-099",
+      "idPublico": "zn-go-099",
+      "sku": "ZN-GO-099",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Deportiva Dry Fit · 100% poliéster",
+      "nombreComercial": "Deportiva Dry Fit · 100% poliéster",
+      "nombreFamilia": "Deportiva Dry Fit · 100% poliéster",
+      "nombreFamiliaComercial": "Deportiva Dry Fit · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-099",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Deportiva Dry Fit. Material publicado: Poliéster 100%. Cierre posterior: Vlecro.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-099-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-100",
+      "idPublico": "zn-go-100",
+      "sku": "ZN-GO-100",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Beisbolera",
+      "nombreComercial": "Beisbolera",
+      "nombreFamilia": "Beisbolera",
+      "nombreFamiliaComercial": "Beisbolera",
+      "familia": "zain-proveedor-zn-go-100",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Beisbolera. Material publicado: Poliester Stretch 100%. Cierre posterior: Velcro.",
+      "especificaciones": "Stretch (sin más especificación). 100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-100-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-101",
+      "idPublico": "zn-go-101",
+      "sku": "ZN-GO-101",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Malla Bondeada Blanco · 100% poliéster",
+      "nombreComercial": "Malla Bondeada Blanco · 100% poliéster",
+      "nombreFamilia": "Malla Bondeada Blanco · 100% poliéster",
+      "nombreFamiliaComercial": "Malla Bondeada Blanco · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-101",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Malla Bondeada Blanco. Material publicado: Poliéster 100%. Cierre posterior: Plástico.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-101-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-go-102",
+      "idPublico": "zn-go-102",
+      "sku": "ZN-GO-102",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Malla Bondeada Liso · 100% poliéster",
+      "nombreComercial": "Malla Bondeada Liso · 100% poliéster",
+      "nombreFamilia": "Malla Bondeada Liso · 100% poliéster",
+      "nombreFamiliaComercial": "Malla Bondeada Liso · 100% poliéster",
+      "familia": "zain-proveedor-zn-go-102",
+      "categoria": "Gorras",
+      "silueta": "Unisex",
+      "descripcion": "Malla Bondeada Liso. Material publicado: Poliéster 100%. Cierre posterior: Plástico.",
+      "especificaciones": "100% poliéster. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-go-102-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 30,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 470,
+          "y": 430,
+          "max": 20,
+          "maxAlto": 11,
+          "sugerido": 10,
+          "orientativa": true,
+          "inclina": -16,
+          "sesgo": 2,
+          "compresion": 0.88
+        },
+        {
+          "id": "lateral",
+          "nombre": "Lateral izquierdo",
+          "x": 790,
+          "y": 450,
+          "max": 10,
+          "maxAlto": 7,
+          "sugerido": 5,
+          "orientativa": true,
+          "inclina": 5,
+          "compresion": 0.9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-039",
+      "idPublico": "zn-bo-039",
+      "sku": "ZN-BO-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsa ecológica · nonwoven",
+      "nombreComercial": "Bolsa ecológica · nonwoven",
+      "nombreFamilia": "Bolsa ecológica · nonwoven",
+      "nombreFamiliaComercial": "Bolsa ecológica · nonwoven",
+      "familia": "zain-proveedor-zn-bo-039",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Bolsa ecológica. Material publicado: NONWOVEN. Medidas: 42cm por 33 cm.",
+      "especificaciones": "NONWOVEN. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-039-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-040",
+      "idPublico": "zn-bo-040",
+      "sku": "ZN-BO-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsa ecológica · nonwoven",
+      "nombreComercial": "Bolsa ecológica · nonwoven",
+      "nombreFamilia": "Bolsa ecológica · nonwoven",
+      "nombreFamiliaComercial": "Bolsa ecológica · nonwoven",
+      "familia": "zain-proveedor-zn-bo-040",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Bolsa ecológica. Material publicado: NONWOVEN. Medidas: 37.50 por 34.50 cm.",
+      "especificaciones": "NONWOVEN. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-040-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-bo-041",
+      "idPublico": "zn-bo-041",
+      "sku": "ZN-BO-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Bolsa ecológica · nonwoven",
+      "nombreComercial": "Bolsa ecológica · nonwoven",
+      "nombreFamilia": "Bolsa ecológica · nonwoven",
+      "nombreFamiliaComercial": "Bolsa ecológica · nonwoven",
+      "familia": "zain-proveedor-zn-bo-041",
+      "categoria": "Bolsas",
+      "silueta": "Unisex",
+      "descripcion": "Bolsa ecológica. Material publicado: NONWOVEN. Medidas: 37.50 por 34.50 cm.",
+      "especificaciones": "NONWOVEN. Unitalla o ajustable. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-bo-041-c01"
+      ],
+      "tallas": [],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 23.52,
+      "zonas": [
+        {
+          "id": "frente",
+          "nombre": "Frente",
+          "x": 500,
+          "y": 550,
+          "max": 8.1
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-021",
+      "idPublico": "zn-ot-021",
+      "sku": "ZN-OT-021",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PORTUGAL",
+      "nombreComercial": "PORTUGAL",
+      "nombreFamilia": "PORTUGAL",
+      "nombreFamiliaComercial": "PORTUGAL",
+      "familia": "zain-proveedor-zn-ot-021",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "PORTUGAL",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-021-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-022",
+      "idPublico": "zn-ot-022",
+      "sku": "ZN-OT-022",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "CALI",
+      "nombreComercial": "CALI",
+      "nombreFamilia": "CALI",
+      "nombreFamiliaComercial": "CALI",
+      "familia": "zain-proveedor-zn-ot-022",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "CALI",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-022-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-023",
+      "idPublico": "zn-ot-023",
+      "sku": "ZN-OT-023",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "NAPOLI",
+      "nombreComercial": "NAPOLI",
+      "nombreFamilia": "NAPOLI",
+      "nombreFamiliaComercial": "NAPOLI",
+      "familia": "zain-proveedor-zn-ot-023",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "NAPOLI",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-023-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-024",
+      "idPublico": "zn-ot-024",
+      "sku": "ZN-OT-024",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "DELTA",
+      "nombreComercial": "DELTA",
+      "nombreFamilia": "DELTA",
+      "nombreFamiliaComercial": "DELTA",
+      "familia": "zain-proveedor-zn-ot-024",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "DELTA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-024-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-025",
+      "idPublico": "zn-ot-025",
+      "sku": "ZN-OT-025",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "TOKIO",
+      "nombreComercial": "TOKIO",
+      "nombreFamilia": "TOKIO",
+      "nombreFamiliaComercial": "TOKIO",
+      "familia": "zain-proveedor-zn-ot-025",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "TOKIO",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-025-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-026",
+      "idPublico": "zn-ot-026",
+      "sku": "ZN-OT-026",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "BERLIN",
+      "nombreComercial": "BERLIN",
+      "nombreFamilia": "BERLIN",
+      "nombreFamiliaComercial": "BERLIN",
+      "familia": "zain-proveedor-zn-ot-026",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "BERLIN",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-026-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-027",
+      "idPublico": "zn-ot-027",
+      "sku": "ZN-OT-027",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "LIMA",
+      "nombreComercial": "LIMA",
+      "nombreFamilia": "LIMA",
+      "nombreFamiliaComercial": "LIMA",
+      "familia": "zain-proveedor-zn-ot-027",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "LIMA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-027-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-028",
+      "idPublico": "zn-ot-028",
+      "sku": "ZN-OT-028",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "MONTANA",
+      "nombreComercial": "MONTANA",
+      "nombreFamilia": "MONTANA",
+      "nombreFamiliaComercial": "MONTANA",
+      "familia": "zain-proveedor-zn-ot-028",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "MONTANA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-028-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-029",
+      "idPublico": "zn-ot-029",
+      "sku": "ZN-OT-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SOFIA",
+      "nombreComercial": "SOFIA",
+      "nombreFamilia": "SOFIA",
+      "nombreFamiliaComercial": "SOFIA",
+      "familia": "zain-proveedor-zn-ot-029",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "SOFIA",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-029-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-030",
+      "idPublico": "zn-ot-030",
+      "sku": "ZN-OT-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SYDNEY",
+      "nombreComercial": "SYDNEY",
+      "nombreFamilia": "SYDNEY",
+      "nombreFamiliaComercial": "SYDNEY",
+      "familia": "zain-proveedor-zn-ot-030",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "SYDNEY",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-030-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-031",
+      "idPublico": "zn-ot-031",
+      "sku": "ZN-OT-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "DENVER",
+      "nombreComercial": "DENVER",
+      "nombreFamilia": "DENVER",
+      "nombreFamiliaComercial": "DENVER",
+      "familia": "zain-proveedor-zn-ot-031",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "DENVER",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-031-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-032",
+      "idPublico": "zn-ot-032",
+      "sku": "ZN-OT-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "MADRID",
+      "nombreComercial": "MADRID",
+      "nombreFamilia": "MADRID",
+      "nombreFamiliaComercial": "MADRID",
+      "familia": "zain-proveedor-zn-ot-032",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "MADRID",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-032-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-033",
+      "idPublico": "zn-ot-033",
+      "sku": "ZN-OT-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "FRANKFURT",
+      "nombreComercial": "FRANKFURT",
+      "nombreFamilia": "FRANKFURT",
+      "nombreFamiliaComercial": "FRANKFURT",
+      "familia": "zain-proveedor-zn-ot-033",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "FRANKFURT",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-033-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-034",
+      "idPublico": "zn-ot-034",
+      "sku": "ZN-OT-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "CUBA",
+      "nombreComercial": "CUBA",
+      "nombreFamilia": "CUBA",
+      "nombreFamiliaComercial": "CUBA",
+      "familia": "zain-proveedor-zn-ot-034",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "CUBA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-034-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-035",
+      "idPublico": "zn-ot-035",
+      "sku": "ZN-OT-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "AGRA",
+      "nombreComercial": "AGRA",
+      "nombreFamilia": "AGRA",
+      "nombreFamiliaComercial": "AGRA",
+      "familia": "zain-proveedor-zn-ot-035",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "AGRA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-035-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-036",
+      "idPublico": "zn-ot-036",
+      "sku": "ZN-OT-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PANAMA",
+      "nombreComercial": "PANAMA",
+      "nombreFamilia": "PANAMA",
+      "nombreFamiliaComercial": "PANAMA",
+      "familia": "zain-proveedor-zn-ot-036",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "PANAMA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-036-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-037",
+      "idPublico": "zn-ot-037",
+      "sku": "ZN-OT-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "NAIROBI",
+      "nombreComercial": "NAIROBI",
+      "nombreFamilia": "NAIROBI",
+      "nombreFamiliaComercial": "NAIROBI",
+      "familia": "zain-proveedor-zn-ot-037",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "NAIROBI",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-037-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-038",
+      "idPublico": "zn-ot-038",
+      "sku": "ZN-OT-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "TAIPEI",
+      "nombreComercial": "TAIPEI",
+      "nombreFamilia": "TAIPEI",
+      "nombreFamiliaComercial": "TAIPEI",
+      "familia": "zain-proveedor-zn-ot-038",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "TAIPEI",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-038-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-039",
+      "idPublico": "zn-ot-039",
+      "sku": "ZN-OT-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "HABANA",
+      "nombreComercial": "HABANA",
+      "nombreFamilia": "HABANA",
+      "nombreFamiliaComercial": "HABANA",
+      "familia": "zain-proveedor-zn-ot-039",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "HABANA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-039-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-040",
+      "idPublico": "zn-ot-040",
+      "sku": "ZN-OT-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUECIA",
+      "nombreComercial": "SUECIA",
+      "nombreFamilia": "SUECIA",
+      "nombreFamiliaComercial": "SUECIA",
+      "familia": "zain-proveedor-zn-ot-040",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "SUECIA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-040-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-041",
+      "idPublico": "zn-ot-041",
+      "sku": "ZN-OT-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "MANILA",
+      "nombreComercial": "MANILA",
+      "nombreFamilia": "MANILA",
+      "nombreFamiliaComercial": "MANILA",
+      "familia": "zain-proveedor-zn-ot-041",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "MANILA",
+      "especificaciones": "Tallas: XS, S, M, L, XL, 2XL, 3XL, 4XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-041-c01"
+      ],
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-042",
+      "idPublico": "zn-ot-042",
+      "sku": "ZN-OT-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "CLASICA",
+      "nombreComercial": "CLASICA",
+      "nombreFamilia": "CLASICA",
+      "nombreFamiliaComercial": "CLASICA",
+      "familia": "zain-proveedor-zn-ot-042",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "CLASICA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-042-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ce-012",
+      "idPublico": "zn-ce-012",
+      "sku": "ZN-CE-012",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "CHALECO CLASICO",
+      "nombreComercial": "CHALECO CLASICO",
+      "nombreFamilia": "CHALECO CLASICO",
+      "nombreFamiliaComercial": "CHALECO CLASICO",
+      "familia": "zain-proveedor-zn-ce-012",
+      "categoria": "Chalecos",
+      "silueta": "Unisex",
+      "descripcion": "CHALECO CLASICO",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ce-012-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 8.589,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 645,
+          "y": 325,
+          "max": 9
+        },
+        {
+          "id": "pecho-der",
+          "nombre": "Pecho derecho",
+          "x": 355,
+          "y": 325,
+          "max": 9
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-043",
+      "idPublico": "zn-ot-043",
+      "sku": "ZN-OT-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "TORONTO",
+      "nombreComercial": "TORONTO",
+      "nombreFamilia": "TORONTO",
+      "nombreFamiliaComercial": "TORONTO",
+      "familia": "zain-proveedor-zn-ot-043",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "TORONTO",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-043-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-044",
+      "idPublico": "zn-ot-044",
+      "sku": "ZN-OT-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "TORONTO ASIA",
+      "nombreComercial": "TORONTO ASIA",
+      "nombreFamilia": "TORONTO ASIA",
+      "nombreFamiliaComercial": "TORONTO ASIA",
+      "familia": "zain-proveedor-zn-ot-044",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "TORONTO ASIA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-044-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-045",
+      "idPublico": "zn-ot-045",
+      "sku": "ZN-OT-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "LONDRES",
+      "nombreComercial": "LONDRES",
+      "nombreFamilia": "LONDRES",
+      "nombreFamiliaComercial": "LONDRES",
+      "familia": "zain-proveedor-zn-ot-045",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "LONDRES",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-045-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-046",
+      "idPublico": "zn-ot-046",
+      "sku": "ZN-OT-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "LONDRES ASIA",
+      "nombreComercial": "LONDRES ASIA",
+      "nombreFamilia": "LONDRES ASIA",
+      "nombreFamiliaComercial": "LONDRES ASIA",
+      "familia": "zain-proveedor-zn-ot-046",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "LONDRES ASIA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-046-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-047",
+      "idPublico": "zn-ot-047",
+      "sku": "ZN-OT-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "DURANGO",
+      "nombreComercial": "DURANGO",
+      "nombreFamilia": "DURANGO",
+      "nombreFamiliaComercial": "DURANGO",
+      "familia": "zain-proveedor-zn-ot-047",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "DURANGO",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-047-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-048",
+      "idPublico": "zn-ot-048",
+      "sku": "ZN-OT-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "DURANGO ASIA",
+      "nombreComercial": "DURANGO ASIA",
+      "nombreFamilia": "DURANGO ASIA",
+      "nombreFamiliaComercial": "DURANGO ASIA",
+      "familia": "zain-proveedor-zn-ot-048",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "DURANGO ASIA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-048-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-049",
+      "idPublico": "zn-ot-049",
+      "sku": "ZN-OT-049",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "JAKARTA",
+      "nombreComercial": "JAKARTA",
+      "nombreFamilia": "JAKARTA",
+      "nombreFamiliaComercial": "JAKARTA",
+      "familia": "zain-proveedor-zn-ot-049",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "JAKARTA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-049-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-050",
+      "idPublico": "zn-ot-050",
+      "sku": "ZN-OT-050",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "JAKARTA ASIA",
+      "nombreComercial": "JAKARTA ASIA",
+      "nombreFamilia": "JAKARTA ASIA",
+      "nombreFamiliaComercial": "JAKARTA ASIA",
+      "familia": "zain-proveedor-zn-ot-050",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "JAKARTA ASIA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-050-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-051",
+      "idPublico": "zn-ot-051",
+      "sku": "ZN-OT-051",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "G",
+      "nombreComercial": "G",
+      "nombreFamilia": "G",
+      "nombreFamiliaComercial": "G",
+      "familia": "zain-proveedor-zn-ot-051",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "G. CAÑON",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-051-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-052",
+      "idPublico": "zn-ot-052",
+      "sku": "ZN-OT-052",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "GTZ",
+      "nombreComercial": "GTZ",
+      "nombreFamilia": "GTZ",
+      "nombreFamiliaComercial": "GTZ",
+      "familia": "zain-proveedor-zn-ot-052",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "GTZ",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-052-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-053",
+      "idPublico": "zn-ot-053",
+      "sku": "ZN-OT-053",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "MONTEVIDEO",
+      "nombreComercial": "MONTEVIDEO",
+      "nombreFamilia": "MONTEVIDEO",
+      "nombreFamiliaComercial": "MONTEVIDEO",
+      "familia": "zain-proveedor-zn-ot-053",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "MONTEVIDEO",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-053-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-cm-243",
+      "idPublico": "zn-cm-243",
+      "sku": "ZN-CM-243",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "CAMISOLA IGNIFUGA",
+      "nombreComercial": "CAMISOLA IGNIFUGA",
+      "nombreFamilia": "CAMISOLA IGNIFUGA",
+      "nombreFamiliaComercial": "CAMISOLA IGNIFUGA",
+      "familia": "zain-proveedor-zn-cm-243",
+      "categoria": "Camisas",
+      "silueta": "Unisex",
+      "descripcion": "CAMISOLA IGNIFUGA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-cm-243-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.1997,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-054",
+      "idPublico": "zn-ot-054",
+      "sku": "ZN-OT-054",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "RIO",
+      "nombreComercial": "RIO",
+      "nombreFamilia": "RIO",
+      "nombreFamiliaComercial": "RIO",
+      "familia": "zain-proveedor-zn-ot-054",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "RIO",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-054-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-su-034",
+      "idPublico": "zn-su-034",
+      "sku": "ZN-SU-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA #39",
+      "nombreComercial": "SUDADERA #39",
+      "nombreFamilia": "SUDADERA #39",
+      "nombreFamiliaComercial": "SUDADERA #39",
+      "familia": "zain-proveedor-zn-su-034",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA #39",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-034-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-su-035",
+      "idPublico": "zn-su-035",
+      "sku": "ZN-SU-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA #40",
+      "nombreComercial": "SUDADERA #40",
+      "nombreFamilia": "SUDADERA #40",
+      "nombreFamiliaComercial": "SUDADERA #40",
+      "familia": "zain-proveedor-zn-su-035",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA #40",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-035-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-055",
+      "idPublico": "zn-ot-055",
+      "sku": "ZN-OT-055",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "LAGOS",
+      "nombreComercial": "LAGOS",
+      "nombreFamilia": "LAGOS",
+      "nombreFamiliaComercial": "LAGOS",
+      "familia": "zain-proveedor-zn-ot-055",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "LAGOS",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-055-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-056",
+      "idPublico": "zn-ot-056",
+      "sku": "ZN-OT-056",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "BARCELONA",
+      "nombreComercial": "BARCELONA",
+      "nombreFamilia": "BARCELONA",
+      "nombreFamiliaComercial": "BARCELONA",
+      "familia": "zain-proveedor-zn-ot-056",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "BARCELONA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-056-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-057",
+      "idPublico": "zn-ot-057",
+      "sku": "ZN-OT-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "LEON",
+      "nombreComercial": "LEON",
+      "nombreFamilia": "LEON",
+      "nombreFamiliaComercial": "LEON",
+      "familia": "zain-proveedor-zn-ot-057",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "LEON",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-057-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-ot-058",
+      "idPublico": "zn-ot-058",
+      "sku": "ZN-OT-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-058",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-058-c01",
+        "zn-ot-058-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 220
+    },
+    {
+      "id": "zn-ot-059",
+      "idPublico": "zn-ot-059",
+      "sku": "ZN-OT-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Artículo sin ficha en el catálogo",
+      "nombreComercial": "Artículo sin ficha en el catálogo",
+      "nombreFamilia": "Artículo sin ficha en el catálogo",
+      "nombreFamiliaComercial": "Artículo sin ficha en el catálogo",
+      "familia": "zain-proveedor-zn-ot-059",
+      "categoria": "Otros",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-059-c01",
+        "zn-ot-059-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280
+    },
+    {
+      "id": "zn-pl-198",
+      "idPublico": "zn-pl-198",
+      "sku": "ZN-PL-198",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Playera",
+      "nombreComercial": "Playera",
+      "nombreFamilia": "Playera",
+      "nombreFamiliaComercial": "Playera",
+      "familia": "zain-proveedor-zn-pl-198",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL, 3XL. 2 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-198-c01",
+        "zn-pl-198-c02"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-199",
+      "idPublico": "zn-pl-199",
+      "sku": "ZN-PL-199",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA CUELLO REDONDO M/CORTA MAX",
+      "nombreComercial": "PLAYERA CUELLO REDONDO M/CORTA MAX",
+      "nombreFamilia": "PLAYERA CUELLO REDONDO M/CORTA MAX",
+      "nombreFamiliaComercial": "PLAYERA CUELLO REDONDO M/CORTA MAX",
+      "familia": "zain-proveedor-zn-pl-199",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "PLAYERA CUELLO REDONDO M/CORTA MAX",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-199-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-200",
+      "idPublico": "zn-pl-200",
+      "sku": "ZN-PL-200",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA CUELLO REDONDO M/CORTA PRIME (165 GRS)",
+      "nombreComercial": "PLAYERA CUELLO REDONDO M/CORTA PRIME (165 GRS)",
+      "nombreFamilia": "PLAYERA CUELLO REDONDO M/CORTA PRIME (165 GRS)",
+      "nombreFamiliaComercial": "PLAYERA CUELLO REDONDO M/CORTA PRIME (165 GRS)",
+      "familia": "zain-proveedor-zn-pl-200",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "PLAYERA CUELLO REDONDO M/CORTA PRIME (165 GRS)",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-200-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 165
+    },
+    {
+      "id": "zn-pl-201",
+      "idPublico": "zn-pl-201",
+      "sku": "ZN-PL-201",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA CUELLO REDONDO MAX C/R M/LARGA",
+      "nombreComercial": "PLAYERA CUELLO REDONDO MAX C/R M/LARGA",
+      "nombreFamilia": "PLAYERA CUELLO REDONDO MAX C/R M/LARGA",
+      "nombreFamiliaComercial": "PLAYERA CUELLO REDONDO MAX C/R M/LARGA",
+      "familia": "zain-proveedor-zn-pl-201",
+      "categoria": "Playeras",
+      "silueta": "Unisex",
+      "descripcion": "PLAYERA CUELLO REDONDO MAX C/R M/LARGA",
+      "especificaciones": "Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-201-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-057",
+      "idPublico": "zn-po-057",
+      "sku": "ZN-PO-057",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA T/POLO PIQUE M/LARGA CABALLERO · piqué",
+      "nombreComercial": "PLAYERA T/POLO PIQUE M/LARGA CABALLERO · piqué",
+      "nombreFamilia": "PLAYERA T/POLO PIQUE M/LARGA CABALLERO · piqué",
+      "nombreFamiliaComercial": "PLAYERA T/POLO PIQUE M/LARGA CABALLERO · piqué",
+      "familia": "zain-proveedor-zn-po-057",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "PLAYERA T/POLO PIQUE M/LARGA CABALLERO",
+      "especificaciones": "Piqué. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-057-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-058",
+      "idPublico": "zn-po-058",
+      "sku": "ZN-PO-058",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA T/POLO PIQUE M/CORTA CABALLERO · piqué",
+      "nombreComercial": "PLAYERA T/POLO PIQUE M/CORTA CABALLERO · piqué",
+      "nombreFamilia": "PLAYERA T/POLO PIQUE M/CORTA CABALLERO · piqué",
+      "nombreFamiliaComercial": "PLAYERA T/POLO PIQUE M/CORTA CABALLERO · piqué",
+      "familia": "zain-proveedor-zn-po-058",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "PLAYERA T/POLO PIQUE M/CORTA CABALLERO",
+      "especificaciones": "Piqué. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-058-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-po-059",
+      "idPublico": "zn-po-059",
+      "sku": "ZN-PO-059",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "PLAYERA T/POLO PIQUE DAMA M/CORTA · piqué",
+      "nombreComercial": "PLAYERA T/POLO PIQUE DAMA M/CORTA · piqué",
+      "nombreFamilia": "PLAYERA T/POLO PIQUE DAMA M/CORTA · piqué",
+      "nombreFamiliaComercial": "PLAYERA T/POLO PIQUE DAMA M/CORTA · piqué",
+      "familia": "zain-proveedor-zn-po-059",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "PLAYERA T/POLO PIQUE DAMA M/CORTA",
+      "especificaciones": "Piqué. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-059-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar."
+    },
+    {
+      "id": "zn-pl-202",
+      "idPublico": "zn-pl-202",
+      "sku": "ZN-PL-202",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Prime Cuello Redondo DAMA 100% Algodón",
+      "nombreComercial": "Prime Cuello Redondo DAMA 100% Algodón",
+      "nombreFamilia": "Prime Cuello Redondo DAMA 100% Algodón",
+      "nombreFamiliaComercial": "Prime Cuello Redondo DAMA 100% Algodón",
+      "familia": "zain-proveedor-zn-pl-202",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Prime Cuello Redondo DAMA 100% Algodón. 155 g/m2",
+      "especificaciones": "100% Algodón. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-202-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-in-029",
+      "idPublico": "zn-in-029",
+      "sku": "ZN-IN-029",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello Redondo Asiluetada NIÑA 100% Algodón",
+      "nombreComercial": "Cuello Redondo Asiluetada NIÑA 100% Algodón",
+      "nombreFamilia": "Cuello Redondo Asiluetada NIÑA 100% Algodón",
+      "nombreFamiliaComercial": "Cuello Redondo Asiluetada NIÑA 100% Algodón",
+      "familia": "zain-proveedor-zn-in-029",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Cuello Redondo Asiluetada NIÑA 100% Algodón. 155 g/m2",
+      "especificaciones": "100% Algodón. Tallas: XS-S-M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-029-c01"
+      ],
+      "tallas": [
+        "XS-S-M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-in-030",
+      "idPublico": "zn-in-030",
+      "sku": "ZN-IN-030",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Cuello Redondo Asiluetada NIÑO 100% Algodón",
+      "nombreComercial": "Cuello Redondo Asiluetada NIÑO 100% Algodón",
+      "nombreFamilia": "Cuello Redondo Asiluetada NIÑO 100% Algodón",
+      "nombreFamiliaComercial": "Cuello Redondo Asiluetada NIÑO 100% Algodón",
+      "familia": "zain-proveedor-zn-in-030",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Cuello Redondo Asiluetada NIÑO 100% Algodón. 155 g/m2",
+      "especificaciones": "100% Algodón. Tallas: XS-S-M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-030-c01"
+      ],
+      "tallas": [
+        "XS-S-M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 155
+    },
+    {
+      "id": "zn-in-031",
+      "idPublico": "zn-in-031",
+      "sku": "ZN-IN-031",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Piqué Infantil NIÑO 100% Algodón",
+      "nombreComercial": "Polo Piqué Infantil NIÑO 100% Algodón",
+      "nombreFamilia": "Polo Piqué Infantil NIÑO 100% Algodón",
+      "nombreFamiliaComercial": "Polo Piqué Infantil NIÑO 100% Algodón",
+      "familia": "zain-proveedor-zn-in-031",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Polo Piqué Infantil NIÑO 100% Algodón. 200 g/m2",
+      "especificaciones": "Piqué. 100% Algodón. Tallas: XS-S-M. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-031-c01"
+      ],
+      "tallas": [
+        "XS-S-M"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-in-032",
+      "idPublico": "zn-in-032",
+      "sku": "ZN-IN-032",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Piqué Juvenil CABALLERO 100% Algodón",
+      "nombreComercial": "Polo Piqué Juvenil CABALLERO 100% Algodón",
+      "nombreFamilia": "Polo Piqué Juvenil CABALLERO 100% Algodón",
+      "nombreFamiliaComercial": "Polo Piqué Juvenil CABALLERO 100% Algodón",
+      "familia": "zain-proveedor-zn-in-032",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Polo Piqué Juvenil CABALLERO 100% Algodón. 200 g/m2",
+      "especificaciones": "Piqué. 100% Algodón. Tallas: L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-032-c01"
+      ],
+      "tallas": [
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-po-060",
+      "idPublico": "zn-po-060",
+      "sku": "ZN-PO-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Supreme DAMA 50% Algodón peinado 50%",
+      "nombreComercial": "Polo Supreme DAMA 50% Algodón peinado 50%",
+      "nombreFamilia": "Polo Supreme DAMA 50% Algodón peinado 50%",
+      "nombreFamiliaComercial": "Polo Supreme DAMA 50% Algodón peinado 50%",
+      "familia": "zain-proveedor-zn-po-060",
+      "categoria": "Polos",
+      "silueta": "Dama",
+      "descripcion": "Polo Supreme DAMA 50% Algodón peinado 50% Poliéster. 210 g/m2",
+      "especificaciones": "50% Algodón peinado / 50% Poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón peinado / 50% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-060-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210
+    },
+    {
+      "id": "zn-po-061",
+      "idPublico": "zn-po-061",
+      "sku": "ZN-PO-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Mc Supreme CAB",
+      "nombreComercial": "Polo Mc Supreme CAB",
+      "nombreFamilia": "Polo Mc Supreme CAB",
+      "nombreFamiliaComercial": "Polo Mc Supreme CAB",
+      "familia": "zain-proveedor-zn-po-061",
+      "categoria": "Polos",
+      "silueta": "Caballero",
+      "descripcion": "Polo Mc Supreme CAB. 50% Algodón peinado. 50% Poliéster 210g/m2.",
+      "especificaciones": "50% Algodón peinado / 50% Poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón peinado / 50% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-po-061-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.4283,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 595,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 420,
+          "max": 30,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 210
+    },
+    {
+      "id": "zn-ot-060",
+      "idPublico": "zn-ot-060",
+      "sku": "ZN-OT-060",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "London CAB",
+      "nombreComercial": "London CAB",
+      "nombreFamilia": "London CAB",
+      "nombreFamiliaComercial": "London CAB",
+      "familia": "zain-proveedor-zn-ot-060",
+      "categoria": "Otros",
+      "silueta": "Caballero",
+      "descripcion": "London CAB. 50% Algodón peinado. 50% Poliester 140g/m2.",
+      "especificaciones": "50% Algodón peinado / 50% Poliester. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón peinado / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-060-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 140
+    },
+    {
+      "id": "zn-ot-061",
+      "idPublico": "zn-ot-061",
+      "sku": "ZN-OT-061",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Premium CAB 100% Algodón peinado 150g/m2",
+      "nombreComercial": "Premium CAB 100% Algodón peinado 150g/m2",
+      "nombreFamilia": "Premium CAB 100% Algodón peinado 150g/m2",
+      "nombreFamiliaComercial": "Premium CAB 100% Algodón peinado 150g/m2",
+      "familia": "zain-proveedor-zn-ot-061",
+      "categoria": "Otros",
+      "silueta": "Caballero",
+      "descripcion": "Premium CAB 100% Algodón peinado 150g/m2.",
+      "especificaciones": "100% Algodón peinado. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón peinado",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-061-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-ot-062",
+      "idPublico": "zn-ot-062",
+      "sku": "ZN-OT-062",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Snow CAB",
+      "nombreComercial": "Snow CAB",
+      "nombreFamilia": "Snow CAB",
+      "nombreFamiliaComercial": "Snow CAB",
+      "familia": "zain-proveedor-zn-ot-062",
+      "categoria": "Otros",
+      "silueta": "Caballero",
+      "descripcion": "Snow CAB. 50% Algodón peinado. 50% Poliéster 140g/m2.",
+      "especificaciones": "50% Algodón peinado / 50% Poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón peinado / 50% Poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-ot-062-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 140
+    },
+    {
+      "id": "zn-su-036",
+      "idPublico": "zn-su-036",
+      "sku": "ZN-SU-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Supreme Cr 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Supreme Cr 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Supreme Cr 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Supreme Cr 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-su-036",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera Supreme Cr 50% Algodón 50% Poliester 300g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-036-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-su-037",
+      "idPublico": "zn-su-037",
+      "sku": "ZN-SU-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Supreme Cap y Cangurera 50% Algodón · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Supreme Cap y Cangurera 50% Algodón · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Supreme Cap y Cangurera 50% Algodón · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Supreme Cap y Cangurera 50% Algodón · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-su-037",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera Supreme Cap y Cangurera 50% Algodón 50% Poliester 300g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-037-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-su-038",
+      "idPublico": "zn-su-038",
+      "sku": "ZN-SU-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Supreme Cap con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Supreme Cap con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Supreme Cap con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Supreme Cap con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-su-038",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera Supreme Cap con Cierre 50% Algodón 50% Poliester 300g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-038-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-su-039",
+      "idPublico": "zn-su-039",
+      "sku": "ZN-SU-039",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Supreme Cap y Canguro 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Supreme Cap y Canguro 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Supreme Cap y Canguro 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Supreme Cap y Canguro 50% Algodón 50% · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-su-039",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera Supreme Cap y Canguro 50% Algodón 50% Poliester 300g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-039-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-su-040",
+      "idPublico": "zn-su-040",
+      "sku": "ZN-SU-040",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Supreme con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Supreme con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Supreme con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Supreme con Cierre 50% Algodón 50% · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-su-040",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "Sudadera Supreme con Cierre 50% Algodón 50% Poliester 300g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-040-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 300
+    },
+    {
+      "id": "zn-in-033",
+      "idPublico": "zn-in-033",
+      "sku": "ZN-IN-033",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Básica 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Básica 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Básica 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Básica 50% Algodón 50% Poliester · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-in-033",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Sudadera Básica 50% Algodón 50% Poliester 250g/m² 4-6-8 años",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: XS-S-M. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-033-c01"
+      ],
+      "tallas": [
+        "XS-S-M"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-in-034",
+      "idPublico": "zn-in-034",
+      "sku": "ZN-IN-034",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Básica 10-12 y 14-16 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Básica 10-12 y 14-16 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Básica 10-12 y 14-16 50% Algodón 50% · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Básica 10-12 y 14-16 50% Algodón 50% · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-in-034",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Sudadera Básica 10-12 y 14-16 50% Algodón 50% Poliester 250g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-034-c01"
+      ],
+      "tallas": [
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-in-035",
+      "idPublico": "zn-in-035",
+      "sku": "ZN-IN-035",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Sudadera Capu/Canguro 4 · 50% algodón / 50% poliester",
+      "nombreComercial": "Sudadera Capu/Canguro 4 · 50% algodón / 50% poliester",
+      "nombreFamilia": "Sudadera Capu/Canguro 4 · 50% algodón / 50% poliester",
+      "nombreFamiliaComercial": "Sudadera Capu/Canguro 4 · 50% algodón / 50% poliester",
+      "familia": "zain-proveedor-zn-in-035",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Sudadera Capu/Canguro 4, 6, 8 50% Algodón 50% Poliester 250g/m²",
+      "especificaciones": "50% Algodón / 50% Poliester. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% Algodón / 50% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-035-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-in-036",
+      "idPublico": "zn-in-036",
+      "sku": "ZN-IN-036",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Piqué Infantil NIÑA 100% Algodón",
+      "nombreComercial": "Polo Piqué Infantil NIÑA 100% Algodón",
+      "nombreFamilia": "Polo Piqué Infantil NIÑA 100% Algodón",
+      "nombreFamiliaComercial": "Polo Piqué Infantil NIÑA 100% Algodón",
+      "familia": "zain-proveedor-zn-in-036",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Polo Piqué Infantil NIÑA 100% Algodón. 200 g/m2",
+      "especificaciones": "Piqué. 100% Algodón. Tallas: XS-S-M. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-036-c01"
+      ],
+      "tallas": [
+        "XS-S-M"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-in-037",
+      "idPublico": "zn-in-037",
+      "sku": "ZN-IN-037",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Piqué Asiluetada Juvenil DAMA 100% Algodón",
+      "nombreComercial": "Polo Piqué Asiluetada Juvenil DAMA 100% Algodón",
+      "nombreFamilia": "Polo Piqué Asiluetada Juvenil DAMA 100% Algodón",
+      "nombreFamiliaComercial": "Polo Piqué Asiluetada Juvenil DAMA 100% Algodón",
+      "familia": "zain-proveedor-zn-in-037",
+      "categoria": "Infantil",
+      "silueta": "Juvenil",
+      "descripcion": "Polo Piqué Asiluetada Juvenil DAMA 100% Algodón. 200 g/m2",
+      "especificaciones": "Piqué. 100% Algodón. Tallas: L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-037-c01"
+      ],
+      "tallas": [
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-in-038",
+      "idPublico": "zn-in-038",
+      "sku": "ZN-IN-038",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Polo Piqué Toddler 100% Algodón",
+      "nombreComercial": "Polo Piqué Toddler 100% Algodón",
+      "nombreFamilia": "Polo Piqué Toddler 100% Algodón",
+      "nombreFamiliaComercial": "Polo Piqué Toddler 100% Algodón",
+      "familia": "zain-proveedor-zn-in-038",
+      "categoria": "Infantil",
+      "silueta": "Infantil",
+      "descripcion": "Polo Piqué Toddler 100% Algodón. 200 g/m2",
+      "especificaciones": "Piqué. 100% Algodón. Tallas: 2Y3YY3XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% Algodón",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-in-038-c01"
+      ],
+      "tallas": [
+        "2Y3YY3XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 10.1257,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 11,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 32,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 200
+    },
+    {
+      "id": "zn-pl-203",
+      "idPublico": "zn-pl-203",
+      "sku": "ZN-PL-203",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "Premium Cuello V DAMA 99% Algodón · 99% algodón / 1% poliester",
+      "nombreComercial": "Premium Cuello V DAMA 99% Algodón · 99% algodón / 1% poliester",
+      "nombreFamilia": "Premium Cuello V DAMA 99% Algodón · 99% algodón / 1% poliester",
+      "nombreFamiliaComercial": "Premium Cuello V DAMA 99% Algodón · 99% algodón / 1% poliester",
+      "familia": "zain-proveedor-zn-pl-203",
+      "categoria": "Playeras",
+      "silueta": "Dama",
+      "descripcion": "Premium Cuello V DAMA 99% Algodón. 1% Poliester 150 g/m2",
+      "especificaciones": "99% Algodón / 1% Poliester. Tallas: S, M, L, XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "99% Algodón / 1% Poliester",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-pl-203-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "tecnicas": [
+        "serigrafia",
+        "bordado"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 7.789,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 596,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        },
+        {
+          "id": "centro",
+          "nombre": "Frente centrado",
+          "x": 500,
+          "y": 390,
+          "max": 42,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 150
+    },
+    {
+      "id": "zn-su-041",
+      "idPublico": "zn-su-041",
+      "sku": "ZN-SU-041",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA CUELLO REDONDO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreComercial": "SUDADERA CUELLO REDONDO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamilia": "SUDADERA CUELLO REDONDO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamiliaComercial": "SUDADERA CUELLO REDONDO 50/50 ALG · 50% algodón / 50% poliéster",
+      "familia": "zain-proveedor-zn-su-041",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA CUELLO REDONDO 50/50 ALG.POL 250 GRS",
+      "especificaciones": "50% algodón / 50% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-041-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-su-042",
+      "idPublico": "zn-su-042",
+      "sku": "ZN-SU-042",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreComercial": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamilia": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamiliaComercial": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "familia": "zain-proveedor-zn-su-042",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA GORRO Y CANGURO 50/50 ALG.POL 250 GRS",
+      "especificaciones": "50% algodón / 50% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-042-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-su-043",
+      "idPublico": "zn-su-043",
+      "sku": "ZN-SU-043",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA HODDIE PESO COMPLETO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreComercial": "SUDADERA HODDIE PESO COMPLETO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamilia": "SUDADERA HODDIE PESO COMPLETO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamiliaComercial": "SUDADERA HODDIE PESO COMPLETO 50/50 ALG · 50% algodón / 50% poliéster",
+      "familia": "zain-proveedor-zn-su-043",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA HODDIE PESO COMPLETO 50/50 ALG.POL 330 GRS",
+      "especificaciones": "50% algodón / 50% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-043-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 330
+    },
+    {
+      "id": "zn-su-044",
+      "idPublico": "zn-su-044",
+      "sku": "ZN-SU-044",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA CON CAPUCHA 100% POLIESTER 250 GRS · 100% poliéster",
+      "nombreComercial": "SUDADERA CON CAPUCHA 100% POLIESTER 250 GRS · 100% poliéster",
+      "nombreFamilia": "SUDADERA CON CAPUCHA 100% POLIESTER 250 GRS · 100% poliéster",
+      "nombreFamiliaComercial": "SUDADERA CON CAPUCHA 100% POLIESTER 250 GRS · 100% poliéster",
+      "familia": "zain-proveedor-zn-su-044",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA CON CAPUCHA 100% POLIESTER 250 GRS",
+      "especificaciones": "100% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "100% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-044-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-su-045",
+      "idPublico": "zn-su-045",
+      "sku": "ZN-SU-045",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreComercial": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamilia": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "nombreFamiliaComercial": "SUDADERA GORRO Y CANGURO 50/50 ALG · 50% algodón / 50% poliéster",
+      "familia": "zain-proveedor-zn-su-045",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA GORRO Y CANGURO 50/50 ALG.POL 250 GRS",
+      "especificaciones": "50% algodón / 50% poliéster. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "50% algodón / 50% poliéster",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-045-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 250
+    },
+    {
+      "id": "zn-su-046",
+      "idPublico": "zn-su-046",
+      "sku": "ZN-SU-046",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA BASICA CUELLO REDONDO ALG POL · felpa suavizada",
+      "nombreComercial": "SUDADERA BASICA CUELLO REDONDO ALG POL · felpa suavizada",
+      "nombreFamilia": "SUDADERA BASICA CUELLO REDONDO ALG POL · felpa suavizada",
+      "nombreFamiliaComercial": "SUDADERA BASICA CUELLO REDONDO ALG POL · felpa suavizada",
+      "familia": "zain-proveedor-zn-su-046",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA BASICA CUELLO REDONDO ALG POL SUAVIZADO FELPA 280 GRS/M2",
+      "especificaciones": "Felpa suavizada. Algodón-poliéster; porcentajes no publicados. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón-poliéster; porcentajes no publicados",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-046-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280
+    },
+    {
+      "id": "zn-su-047",
+      "idPublico": "zn-su-047",
+      "sku": "ZN-SU-047",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA CON CAPUCHA Y CANGURERA ALG POL · felpa suavizada",
+      "nombreComercial": "SUDADERA CON CAPUCHA Y CANGURERA ALG POL · felpa suavizada",
+      "nombreFamilia": "SUDADERA CON CAPUCHA Y CANGURERA ALG POL · felpa suavizada",
+      "nombreFamiliaComercial": "SUDADERA CON CAPUCHA Y CANGURERA ALG POL · felpa suavizada",
+      "familia": "zain-proveedor-zn-su-047",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA CON CAPUCHA Y CANGURERA ALG POL SUAVIZADO FELPA 280 GRS/ M2",
+      "especificaciones": "Felpa suavizada. Algodón-poliéster; porcentajes no publicados. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón-poliéster; porcentajes no publicados",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-047-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280
+    },
+    {
+      "id": "zn-su-048",
+      "idPublico": "zn-su-048",
+      "sku": "ZN-SU-048",
+      "catalogo2026": true,
+      "prendaCatalogo": true,
+      "soloCotizar": true,
+      "soloGestion": true,
+      "activo": false,
+      "nombre": "SUDADERA CON GORRO Y CIERRE ALG POL SUAVIZADO · felpa suavizada",
+      "nombreComercial": "SUDADERA CON GORRO Y CIERRE ALG POL SUAVIZADO · felpa suavizada",
+      "nombreFamilia": "SUDADERA CON GORRO Y CIERRE ALG POL SUAVIZADO · felpa suavizada",
+      "nombreFamiliaComercial": "SUDADERA CON GORRO Y CIERRE ALG POL SUAVIZADO · felpa suavizada",
+      "familia": "zain-proveedor-zn-su-048",
+      "categoria": "Sudaderas",
+      "silueta": "Unisex",
+      "descripcion": "SUDADERA CON GORRO Y CIERRE ALG POL SUAVIZADO FELPA 280 GRS/ M2",
+      "especificaciones": "Felpa suavizada. Algodón-poliéster; porcentajes no publicados. Tallas: S, M, L, XL, 2XL. 1 colores del proveedor.",
+      "tejido": "",
+      "composicion": "Algodón-poliéster; porcentajes no publicados",
+      "composicionColor": {},
+      "foto": "",
+      "colores": [
+        "zn-su-048-c01"
+      ],
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "tecnicas": [
+        "bordado",
+        "serigrafia"
+      ],
+      "minimoPiezas": 1,
+      "pasoPiezas": 1,
+      "pxPorCm": 11.6745,
+      "zonas": [
+        {
+          "id": "pecho-izq",
+          "nombre": "Pecho izquierdo",
+          "x": 653,
+          "y": 330,
+          "max": 14,
+          "orientativa": true
+        }
+      ],
+      "renderOrientativo": true,
+      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
+      "gramaje": 280
     }
   ],
   "promocionales": [

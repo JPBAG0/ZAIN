@@ -83,7 +83,8 @@ export function configurar(input){
  if(input.metodo!=='margen_bruto')error('El método de cálculo es margen bruto.');
  if(input.costeo!==undefined&&!['area_cm2_v1','area_tallas_v2','area_tallas_volumen_v3','area_tallas_volumen_v4'].includes(input.costeo))error('Revisa el método de costeo.');
  const productos=input.prendas??[];
- if(!Array.isArray(productos)||productos.length>1000)error('Revisa los costos de prendas.');
+ // Hasta 5,000 prendas con costo (22-nov-2026: los catálogos de proveedores ya pasan de 1,000).
+ if(!Array.isArray(productos)||productos.length>5000)error('Revisa los costos de prendas.');
  const skus=new Set(),prendas=productos.map(p=>{
   const sku=texto(p.sku,60);if(!sku||skus.has(sku))error('Revisa los SKU de prendas duplicados.');skus.add(sku);
   const bandas=bandasPrecio(p.bandas),fuente=texto(p.fuente,700);

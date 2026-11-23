@@ -18,11 +18,12 @@ export function createQuotes({sb,row,fail,commercialItem,validarSelecciones,publ
   handle:async(request,url,op,user,jsonBody,currentCatalog)=>{
    if(op==='precios-config'&&request.method==='GET')return {config:await config()};
    if(op==='precios-guardar'&&request.method==='POST'){
-    const b=await jsonBody(request);if(!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Versión inválida.');
+    // La configuración de Costos lleva todas las prendas de los catálogos de proveedores (~600 KB): hasta 4 MB.
+    const b=await jsonBody(request,4*1024*1024);if(!Number.isSafeInteger(b.version)||b.version<0)fail(400,'Versión inválida.');
     if(b.datos?.costeo!=='area_tallas_volumen_v4')fail(409,'El cotizador ahora incluye costos por talla, color y cantidad. Recarga la página antes de guardar.');
     let datos;try{datos=configurar(b.datos);}catch(e){fail(400,e.message);}
     const cat=await currentCatalog();for(const c of datos.costos){const p=[...cat.productos,...cat.productosHistoricos||[]].find(p=>p.sku===c.sku);if(!p||!cat.tecnicas.some(t=>t.nombre===c.tecnica&&p.tecnicas.includes(t.id)))fail(400,'Elige un SKU y técnica válidos.');}
-    for(const c of datos.prendas)if(![...cat.productos,...cat.productosHistoricos||[]].some(p=>p.sku===c.sku))fail(400,'Elige un SKU válido para el costo de prenda.');
+    const skus=new Set([...cat.productos,...cat.productosHistoricos||[]].map(p=>p.sku));for(const c of datos.prendas)if(!skus.has(c.sku))fail(400,'Elige un SKU válido para el costo de prenda.');
     const out=await sb('/rest/v1/rpc/zain_precios_guardar',{method:'POST',body:JSON.stringify({p_version:b.version,p_datos:datos,p_actor:user.id})});
     if(!out)fail(409,'Tu compañero cambió los costos. Actualiza antes de guardar.');return {config:out};
    }

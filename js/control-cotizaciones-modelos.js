@@ -1,4 +1,4 @@
-import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=24';
+import {configurar,decimal,decimalTarifa,pesos,entrada} from './cotizacion-core.js?v=25';
 import {esc} from './cotizacion-vista.js?v=16';
 import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './cotizacion-modelos.js?v=8';
 import {armarPedido} from './cotizacion-modelos-pedido.js?v=4';
