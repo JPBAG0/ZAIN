@@ -13,7 +13,9 @@ let uso='',categoria='',ficha=null,fichaColor=null,fichaTurno=0,costos=new Map()
 const PZ=window.ZAINParecidas,PIEZAS=[1,12,24,50,100,250,500],PREF='zain-cat-prendas';
 const dinero=c=>'$'+(c/100).toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2});
 const piezas=()=>Number($('#piezasCatalogo').value)||50;
-const costoDe=p=>PZ.costoPara(costos.get(p.sku),piezas());
+// Con 800+ prendas, calcular el costo en cada comparación del orden trababa el iPad: se guarda por SKU hasta el siguiente pintado.
+let cacheCosto=new Map(),cachePiezas=0;
+const costoDe=p=>{const n=piezas();if(n!==cachePiezas){cacheCosto=new Map();cachePiezas=n;}if(!cacheCosto.has(p.sku))cacheCosto.set(p.sku,PZ.costoPara(costos.get(p.sku),n));return cacheCosto.get(p.sku);};
 const rango=t=>t.hasta==null?(t.desde<=1?'Cualquier cantidad':t.desde+' piezas o más'):t.desde===t.hasta?t.desde+' pieza'+(t.desde===1?'':'s'):t.desde+' a '+t.hasta+' piezas';
 function guardarPref(){try{localStorage.setItem(PREF,JSON.stringify({orden:$('#ordenCatalogo').value,piezas:piezas()}));}catch{}}
 function leerPref(){let p={};try{p=JSON.parse(localStorage.getItem(PREF)||'{}')||{};}catch{}const o=$('#ordenCatalogo');if([...o.options].some(x=>x.value===p.orden))o.value=p.orden;if(PIEZAS.includes(p.piezas))$('#piezasCatalogo').value=String(p.piezas);}
@@ -25,29 +27,45 @@ const clave=s=>String(s??'').toLocaleLowerCase('es-MX').normalize('NFD').replace
 const compacto=s=>clave(s).replace(/[^a-z0-9]/g,'');
 // «Proveedor gorras premium» → «Gorras premium»; los demás se quedan igual.
 const proveedorDe=p=>{const s=String(p.proveedor||'').replace(/^proveedor\s+/i,'').trim();return s?s[0].toLocaleUpperCase('es-MX')+s.slice(1):'';};
-const publico=p=>{const Z=window.ZAIN;return [...(Z.productos||[]),...(Z.productosHistoricos||[])].find(x=>x.sku===p.sku)||null;};
-const colorDe=id=>(window.ZAIN.colores||[]).find(c=>c.id===id)||null;
+// Índices por SKU y por color: buscar con find en 800 prendas y 3,500 colores por cada tarjeta trababa el iPad.
+let idxPub=null,idxCol=null;
+function indices(){const Z=window.ZAIN;if(!idxPub){idxPub=new Map();for(const x of [...(Z.productos||[]),...(Z.productosHistoricos||[])])if(!idxPub.has(x.sku))idxPub.set(x.sku,x);}if(!idxCol){idxCol=new Map();for(const c of Z.colores||[])if(!idxCol.has(c.id))idxCol.set(c.id,c);}}
+const publico=p=>{indices();return idxPub.get(p.sku)||null;};
+const colorDe=id=>{indices();return idxCol.get(id)||null;};
 // Las prendas de los catálogos de proveedores (soloGestion) no vienen en config.js: llegan con la sesión del equipo.
 const mezclarGestion=cat=>{const Z=window.ZAIN;if(!cat)return;const ya=new Set([...(Z.productos||[]),...(Z.productosHistoricos||[])].map(p=>p.sku));
  const nuevas=[...(cat.productos||[]),...(cat.productosHistoricos||[])].filter(p=>p.soloGestion&&!ya.has(p.sku));if(!nuevas.length)return;
- Z.productosHistoricos=[...(Z.productosHistoricos||[]),...nuevas];const cs=new Set((Z.colores||[]).map(c=>c.id));Z.colores=[...(Z.colores||[]),...(cat.colores||[]).filter(c=>!cs.has(c.id))];};
+ idxPub=idxCol=null;Z.productosHistoricos=[...(Z.productosHistoricos||[]),...nuevas];const cs=new Set((Z.colores||[]).map(c=>c.id));Z.colores=[...(Z.colores||[]),...(cat.colores||[]).filter(c=>!cs.has(c.id))];};
 const paginaDe=p=>Number(String(p.paginaProveedor||'').match(/\d+/)?.[0])||null;
 const cmp=(a,b)=>String(a||'').localeCompare(String(b||''),'es-MX',{numeric:true,sensitivity:'base'});
+// La lista se pinta por partes (TROZO tarjetas) y el resto llega al acercarse al final o con «Ver más».
+const TROZO=60;let pendientes=[],vigia=null;
+function mas(){
+ const caja=$('#masCatalogo');if(!caja)return;let n=0,html='';
+ while(pendientes.length&&n<TROZO){const it=pendientes.shift();html+=it.html();n+=it.peso;}
+ if(html)$('#listaCatalogo').insertAdjacentHTML('beforeend',html);
+ const quedan=pendientes.reduce((a,x)=>a+x.peso,0);caja.hidden=!quedan;$('#masCatalogoBtn').textContent='Ver más · quedan '+quedan+(quedan===1?' prenda':' prendas');
+ // Si el botón sigue a la vista (pantalla alta), se carga otro trozo después de dejar respirar al navegador.
+ if(quedan)requestAnimationFrame(()=>{const r=caja.getBoundingClientRect();if(!caja.hidden&&r.width&&r.top<innerHeight+600)setTimeout(mas,30);});
+}
+function vigilar(){if(vigia||!('IntersectionObserver' in window))return;vigia=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting))mas();},{rootMargin:'0px 0px 600px 0px'});vigia.observe($('#masCatalogo'));}
 const status=(s,error=false)=>{$('#estadoCatalogo').textContent=s;$('#estadoCatalogo').classList.toggle('error',error);};
 const field=(key,label,type='text',max=300)=>'<label>'+label+'<input name="'+key+'" type="'+type+'" maxlength="'+max+'"></label>';
 document.body.insertAdjacentHTML('beforeend','<dialog id="editorCatalogo" class="control__editorcatalogo"><header class="control__fichacab"><span>Editar publicación</span><button type="button" id="cerrarCatalogo" aria-label="Cerrar editor">✕</button></header><form id="formCatalogo"><div class="control__editorcab"><h2 id="tituloCatalogo"></h2><p id="skuCatalogo" class="control__dato"></p><label class="control__publicar"><input name="activo" type="checkbox">Visible para clientes</label></div><div class="control__fotoseditor"><div><img id="renderCatalogo" alt="Render protegido"><b>Render del personalizador</b><small>Se conserva para mantener los colores y el logo.</small></div><div><img id="fotoCatalogo" alt="Foto secundaria del producto"><b>Foto de referencia</b><label class="btn btn--linea control__subirfoto">Cambiar foto<input id="archivoCatalogo" type="file" accept="image/jpeg,image/png,image/webp"></label><button type="button" id="fotoOriginal" class="btn-texto">Usar foto original</button><small>JPG, PNG o WEBP. Guarda para publicar el cambio.</small></div></div><div class="control__camposedicion"><fieldset class="control__tecnicaseditor"><legend>Técnicas disponibles</legend><div id="tecnicasCatalogo" class="control__elegirtecnicas" role="group" aria-label="Técnicas disponibles"></div><p>Selecciona una o varias técnicas que tu equipo pueda producir en este modelo.</p></fieldset>'+field('nombre','Nombre de la familia','text',120)+field('disponibilidad','Aviso de disponibilidad','text',300)+'<label class="control__ancho">Descripción<textarea name="descripcion" maxlength="900" rows="3"></textarea></label><label class="control__ancho">Especificaciones adicionales<textarea name="especificaciones" maxlength="2400" rows="4"></textarea></label>'+field('tejido','Tejido','text',120)+field('gramaje','Gramaje (g/m²)','number')+field('composicion','Composición','text',250)+field('medidas','Medidas','text',300)+'<p class="control__ancho control__dato">La composición se aplica a todos los colores si la cambias. Las tallas, paletas y cantidades mínimas conservan sus valores.</p><div class="control__internotitulo control__ancho"><h3>Para compras · solo equipo ZAIN</h3><p>Estas referencias se guardan en los pedidos nuevos y no se muestran al cliente.</p></div>'+field('proveedor','Proveedor','text',120)+field('sku_proveedor','Código del proveedor','text',120)+field('pagina_proveedor','Página en su catálogo','text',60)+'</div><footer class="control__guardar"><p id="mensajeEditor" role="status" aria-live="polite"></p><div><button type="button" class="btn btn--linea" id="cancelarCatalogo">Cerrar</button><button type="submit" class="btn btn--azul" id="guardarCatalogo">Guardar y publicar</button></div></footer></form></dialog>');
 document.body.insertAdjacentHTML('beforeend','<dialog id="catFicha" class="cat-ficha" aria-labelledby="catFichaNombre"><header class="cat-ficha__cab"><div><small id="catFichaCat"></small><h2 id="catFichaNombre"></h2></div><button type="button" id="catFichaCerrar" class="cat-ficha__cerrar" aria-label="Cerrar ficha">✕</button></header><div class="cat-ficha__cuerpo"><div class="cat-ficha__visual"><div id="catFichaImg" class="cat-ficha__img"></div><p id="catFichaColor" class="cat-ficha__colornombre"></p><div id="catFichaColores" class="cat-ficha__colores" role="group" aria-label="Colores"></div></div><div class="cat-ficha__datos"><section class="cat-ficha__prov" aria-label="Proveedor"><small>Código del proveedor</small><div class="cat-ficha__codigo"><b id="catFichaCodigo"></b><button type="button" id="catFichaCopiar" class="btn-texto">Copiar</button></div><p id="catFichaProveedor"></p><div id="catFichaCatalogos" class="cat-ficha__catalogos"></div></section><section class="cat-ficha__costo" aria-label="Costo por pieza"><small>Costo por pieza, como está en Costos</small><ul id="catFichaTramos" class="cat-ficha__tramos"></ul></section><dl id="catFichaDl" class="cat-ficha__dl"></dl><p id="catFichaDesc" class="cat-ficha__desc"></p><label class="cat-ficha__web"><input type="checkbox" id="catFichaWeb"><span>Mostrar en la página web</span></label><p id="catFichaEstado" class="cat-ficha__estado" role="status" aria-live="polite"></p></div><section id="catFichaParecidas" class="cat-ficha__parecidas" hidden><header><h3 id="catFichaGrupo"></h3><p id="catFichaRanking"></p></header><div id="catFichaLista" class="cat-ficha__lista"></div></section></div><footer class="cat-ficha__acciones"><button type="button" class="btn btn--azul" id="catFichaCotizar">Cotizar este modelo</button><button type="button" class="btn btn--linea" id="catFichaCostos">Costos</button><button type="button" class="btn btn--linea" id="catFichaEditar">Editar datos</button></footer></dialog>');
 $('#seccionCatalogo').insertAdjacentHTML('afterbegin','<p id="estadoCatalogo" role="status" class="control__estado"></p>');
+$('#listaCatalogo').insertAdjacentHTML('afterend','<div id="masCatalogo" class="cat-mas" hidden><button type="button" id="masCatalogoBtn" class="btn btn--linea">Ver más</button></div>');
+$('#masCatalogoBtn').addEventListener('click',mas);
 const dialog=$('#editorCatalogo'), form=$('#formCatalogo'), fichaDlg=$('#catFicha');
 form.elements.gramaje.min='1';form.elements.gramaje.max='2000';form.elements.gramaje.step='1';
 function tab(catalogue){$('#seccionPedidos').hidden=catalogue;$('#seccionCatalogo').hidden=!catalogue;for(const [id,on] of [['verCatalogo',catalogue],['verPedidos',!catalogue]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}if(catalogue){history.replaceState(null,'','#catalogo');if(!loaded)load().catch(error);}else history.replaceState(null,'',location.pathname+location.search);}
 function error(e){status(e.message||'No se pudo actualizar el catálogo.',true);if(e.auth)$('#salir').click();}
-function vista(v){const enCostos=v==='costos';$('#vistaPrendas').hidden=enCostos;$('#vistaCostos').hidden=!enCostos;for(const [id,on] of [['catVerPrendas',!enCostos],['catVerCostos',enCostos]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}
+function vista(v){const enCostos=v==='costos';if(enCostos&&$('#vistaCostos').hidden)dispatchEvent(new CustomEvent('zain:vista-costos'));$('#vistaPrendas').hidden=enCostos;$('#vistaCostos').hidden=!enCostos;for(const [id,on] of [['catVerPrendas',!enCostos],['catVerCostos',enCostos]]){$('#'+id).classList.toggle('on',on);$('#'+id).setAttribute('aria-pressed',String(on));}
  // Al volver de Costos se releen, por si alguien los cambió ahí.
  if(enCostos)costosVistos=true;else if(costosVistos&&loaded){costosVistos=false;void cargarCostos().then(()=>{paint();if(ficha&&fichaDlg.open)abrirFicha(ficha.id,fichaColor);});}
 }
 async function cargarCostos(){
- const turn=epoch;try{const r=await window.ZAINEquipo.call('precios-config');if(turn!==epoch)return;costos=new Map((r?.config?.datos?.prendas||[]).map(c=>[c.sku,c]));}
+ const turn=epoch;try{const r=await window.ZAINEquipo.call('precios-config');if(turn!==epoch)return;costos=new Map((r?.config?.datos?.prendas||[]).map(c=>[c.sku,c]));cacheCosto=new Map();}
  catch(e){if(turn===epoch)costos=new Map();if(e?.auth)throw e;}
 }
 
@@ -86,18 +104,20 @@ function chips(){
  $('#categoriasCatalogo').innerHTML=['',...cats].map(c=>'<button type="button" class="cat-chip'+(categoria===c?' on':'')+'" data-categoria="'+esc(c)+'" aria-pressed="'+(categoria===c)+'">'+esc(c||'Todas')+' <b>'+(c?base.filter(p=>p.categoria===c).length:base.length)+'</b></button>').join('');
 }
 function paint(){
+ cacheCosto=new Map();cachePiezas=piezas();
  chips();
  const visible=ordenar(filtrados()),juntas=$('#ordenCatalogo').value==='parecidas',lista=$('#listaCatalogo');
  $('#resultadoCatalogo').textContent=(visible.length===rows.length?rows.length+' prendas':visible.length+' de '+rows.length+' prendas')+(costos.size?' · costo por pieza para '+piezas()+(piezas()===1?' pieza':' piezas')+', talla más barata':' · sin costos cargados');
  lista.classList.toggle('cat-grid',!juntas);lista.classList.toggle('cat-grupos',juntas);
  const vacio='<div class="control__vacio"><h3>No hay prendas con estos filtros</h3><p>Prueba con otro código, nombre o SKU.</p></div>';
- if(!juntas){lista.innerHTML=visible.map(p=>tarjeta(p)).join('')||vacio;return;}
- lista.innerHTML=grupos(visible).map(({grupo,prendas})=>{
+ if(!juntas)pendientes=visible.map(p=>({peso:1,html:()=>tarjeta(p)}));
+ else pendientes=grupos(visible).map(({grupo,prendas})=>({peso:prendas.length,html:()=>{
   const con=prendas.map(costoDe).filter(c=>c!=null),provs=new Set(prendas.map(proveedorDe).filter(Boolean)).size;
   const barata=con.length>1&&new Set(con).size>1?prendas.find(p=>costoDe(p)!=null):null;
   const resumen=[prendas.length===1?'1 opción':prendas.length+' opciones',provs>1?provs+' proveedores':'',con.length?(Math.min(...con)===Math.max(...con)?dinero(con[0]):'de '+dinero(Math.min(...con))+' a '+dinero(Math.max(...con))):'sin costo'].filter(Boolean).join(' · ');
   return '<section class="cat-grupo"><header class="cat-grupo__cab"><h3>'+esc(grupo)+'</h3><p>'+esc(resumen)+'</p></header><div class="cat-grid">'+prendas.map(p=>tarjeta(p,p===barata)).join('')+'</div></section>';
- }).join('')||vacio;
+ }}));
+ lista.innerHTML=pendientes.length?'':vacio;mas();vigilar();
 }
 async function load(message=''){
  const turn=epoch;status('Cargando prendas…');const [data,vivo]=await Promise.all([window.ZAINEquipo.call('catalogo-lista'),window.ZAINEquipo.call('catalogo-publico').catch(()=>null),cargarCostos()]);if(turn!==epoch||$('#trabajo').hidden)return;
@@ -183,7 +203,7 @@ async function cambiarWeb(p,activo){
 }
 async function verCostos(p){
  vista('costos');
- for(let i=0;i<50&&!$('#buscarCostoPrenda');i++)await new Promise(r=>setTimeout(r,100));
+ for(let i=0;i<150&&!$('#buscarCostoPrenda');i++)await new Promise(r=>setTimeout(r,100));
  const b=$('#buscarCostoPrenda'),v=$('#visibilidadCostos');if(!b)return;
  if(v)v.value='';b.value=p.sku;b.dispatchEvent(new Event('input',{bubbles:true}));b.scrollIntoView({block:'center'});
 }
@@ -195,7 +215,8 @@ function close(force=false){if(!force&&(busy||uploading||window.ZAINRenderPendie
 $('#verCatalogo').addEventListener('click',()=>tab(true));$('#verPedidos').addEventListener('click',()=>tab(false));
 $('#catVerPrendas').addEventListener('click',()=>vista('prendas'));$('#catVerCostos').addEventListener('click',()=>vista('costos'));
 $('#recargarCatalogo').addEventListener('click',()=>load().catch(error));
-$('#buscarCatalogo').addEventListener('input',paint);$('#proveedorCatalogo').addEventListener('change',paint);
+// Al escribir se espera a que termine la palabra: repintar en cada letra trababa el iPad.
+let esperaBusca=0;$('#buscarCatalogo').addEventListener('input',()=>{clearTimeout(esperaBusca);esperaBusca=setTimeout(paint,200);});$('#proveedorCatalogo').addEventListener('change',paint);
 for(const id of ['ordenCatalogo','piezasCatalogo'])$('#'+id).addEventListener('change',()=>{guardarPref();paint();});
 $('#catFichaLista').addEventListener('click',e=>{const b=e.target.closest('[data-par]');if(!b||b.dataset.par===ficha?.id)return;abrirFicha(b.dataset.par);fichaDlg.querySelector('.cat-ficha__cuerpo').scrollTop=0;});
 $('#usoCatalogo').addEventListener('click',e=>{const b=e.target.closest('[data-uso]');if(!b)return;uso=b.dataset.uso;paint();});
@@ -245,6 +266,6 @@ form.addEventListener('submit',async e=>{
 });
 addEventListener('zain:equipo-listo',()=>{if(location.hash==='#catalogo')tab(true);});
 leerPref();
-addEventListener('zain:equipo-salio',()=>{epoch++;rows=[];costos=new Map();costosVistos=false;loaded=false;busy=false;uploading=false;allowed=false;close(true);if(fichaDlg.open)fichaDlg.close();$('#listaCatalogo').replaceChildren();status('');$('#buscarCatalogo').value='';uso='';categoria='';vista('prendas');tab(false);});
+addEventListener('zain:equipo-salio',()=>{epoch++;rows=[];pendientes=[];$('#masCatalogo').hidden=true;costos=new Map();costosVistos=false;loaded=false;busy=false;uploading=false;allowed=false;close(true);if(fichaDlg.open)fichaDlg.close();$('#listaCatalogo').replaceChildren();status('');$('#buscarCatalogo').value='';uso='';categoria='';vista('prendas');tab(false);});
 window.ZAINCatalogo={recargar:load,abrir:open,ficha:abrirFicha,puedePreparar:()=>!dirty&&!busy&&!uploading&&!window.ZAINRenderPendiente};
 })();

@@ -47,6 +47,7 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
  });
  const ancho=async donde=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Sin desbordamiento horizontal: '+donde);
  const resultados=[];
+ const todo=async()=>{for(let i=0;i<80;i++){if(!await page.evaluate(()=>{const c=document.querySelector('#masCatalogo');if(!c||c.hidden)return false;document.querySelector('#masCatalogoBtn').click();return true;}))break;await page.waitForTimeout(20);}};
  // ZAIN_ANCHOS=1180 prueba otros tamaños (por ejemplo el iPad acostado: 1180×760).
  for(const width of (process.env.ZAIN_ANCHOS||'390,1280').split(',').map(Number)){
   ops.length=0;
@@ -56,7 +57,11 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   await page.locator('#listaCatalogo .cat-card').first().waitFor();
   await page.waitForFunction(()=>[...document.querySelectorAll('#listaCatalogo .cat-card img')].slice(0,4).every(i=>i.complete&&i.naturalWidth>0));
   assert.match(await page.locator('#estadoCatalogo').innerText(),/solo para cotizar/);
-  assert.equal(await page.locator('#listaCatalogo .cat-card').count(),filas.length,'todas las prendas');
+  // La lista se pinta por partes (iPad): primero unas 60 tarjetas y el resto con «Ver más» o al bajar.
+  const primeras=await page.locator('#listaCatalogo .cat-card').count();assert.ok(primeras>=Math.min(60,filas.length)&&primeras<filas.length,'primero solo una parte: '+primeras);
+  assert.match(await page.locator('#resultadoCatalogo').innerText(),new RegExp('^'+filas.length+' prendas'));
+  await todo();assert.equal(await page.locator('#listaCatalogo .cat-card').count(),filas.length,'todas las prendas');
+  assert.equal(await page.locator('#masCatalogo').isHidden(),true,'sin «Ver más» al final');
   assert.match(await page.locator('#usoCatalogo [data-uso="cotizar"]').innerText(),new RegExp('Solo cotizar\\s*'+filas.filter(r=>r.soloCotizar).length));
   await ancho('lista');
   assert.equal(await page.locator('#provPanel').evaluate(d=>d.open),false,'el panel de proveedores empieza cerrado');
@@ -72,7 +77,7 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   // Parecidas juntas: las playeras básicas de todos los proveedores, la más barata primero para la cantidad elegida.
   await page.locator('#ordenCatalogo').selectOption('parecidas');await page.locator('#piezasCatalogo').selectOption('50');
   await page.locator('#categoriasCatalogo [data-categoria="Playeras"]').click();
-  const grupo=page.locator('.cat-grupo').filter({has:page.locator('h3',{hasText:/^Playera básica de algodón$/})});
+  await todo();const grupo=page.locator('.cat-grupo').filter({has:page.locator('h3',{hasText:/^Playera básica de algodón$/})});
   await grupo.waitFor();
   const orden=async()=>grupo.locator('.cat-card').evaluateAll(b=>b.map(x=>x.dataset.ficha));
   assert.equal((await orden())[0],porSku('ZN-PL-012').id,'a 50 piezas la más barata es la de tramos por volumen');
@@ -81,7 +86,7 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
   assert.match(await grupo.locator('.cat-grupo__cab p').innerText(),/de \$48\.06 a \$100\.00/);
   assert.equal(await grupo.locator('[data-ficha="'+porSku('ZN-PL-014').id+'"] .cat-card__costo').innerText(),'Sin costo');
   assert.match(await page.locator('#resultadoCatalogo').innerText(),/costo por pieza para 50 piezas/);
-  await page.locator('#piezasCatalogo').selectOption('12');
+  await page.locator('#piezasCatalogo').selectOption('12');await todo();
   assert.equal((await orden())[0],porSku('ZN-PL-025').id,'a 12 piezas la más barata es la de precio único');
   await ancho('parecidas');
   if(capturas){await grupo.scrollIntoViewIfNeeded();await page.waitForTimeout(400);await page.screenshot({path:path.join(capturas,'catalogo-parecidas-'+width+'.png')});}
@@ -137,6 +142,8 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
    // Costos: cambia de vista y filtra por el SKU.
    await page.locator('#catFichaCostos').click();
    await page.locator('#vistaCostos:not([hidden]) #buscarCostoPrenda').waitFor();
+   // La tabla de Costos se arma al abrir la vista; el filtro llega cuando ya existe.
+   await page.waitForFunction(v=>document.querySelector('#buscarCostoPrenda')?.value===v,objetivo.sku);
    assert.equal(await page.locator('#buscarCostoPrenda').inputValue(),objetivo.sku);
    assert.equal(await page.locator('[data-fila-prenda]:not([hidden])').count(),1,'solo la fila de esa prenda');
    await page.locator('#catVerPrendas').click();

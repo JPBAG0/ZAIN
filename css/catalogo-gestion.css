@@ -133,3 +133,6 @@
  .cat-selects select{width:100%;min-height:40px}
  .cat-vistas button{flex:1}
 }
+/* «Ver más»: la lista de Prendas se pinta por partes para que el iPad no se trabe con 800+ prendas. */
+.cat-mas{display:flex;justify-content:center;padding:4px 0 28px}
+.cat-mas[hidden]{display:none}
