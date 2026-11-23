@@ -40446,7 +40446,7 @@ export default {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-go-063.webp",
       "colores": [
         "zn-go-063-c01",
         "zn-go-063-c02",
@@ -40489,7 +40489,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-go-063-c01",
@@ -63667,7 +63667,7 @@ export default {
       "tejido": "",
       "composicion": "100% algodón estadounidense; gris jaspeado: 90% algodón estadounidense y 10% poliéster; gris carbón: 50% algodón estadounidense y 50% poliéster.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-063.webp",
       "colores": [
         "zn-pl-063-c01",
         "zn-pl-063-c02",
@@ -63723,7 +63723,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 245
     },
@@ -65684,7 +65684,7 @@ export default {
       "tejido": "",
       "composicion": "65% Poliéster - 35% Algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-108.webp",
       "colores": [
         "zn-cm-108-c01",
         "zn-cm-108-c02",
@@ -65718,7 +65718,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180
     },
@@ -65802,7 +65802,7 @@ export default {
       "tejido": "",
       "composicion": "100% Poliéster Tricapa",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-ch-035.webp",
       "colores": [
         "zn-ch-035-c01",
         "zn-ch-035-c02",
@@ -65842,7 +65842,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 310,
       "coloresSinRender": [
@@ -66133,7 +66133,7 @@ export default {
       "tejido": "",
       "composicion": "100 % Algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-110.webp",
       "colores": [
         "zn-cm-110-c01"
       ],
@@ -66161,7 +66161,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 255,
       "coloresSinRender": [
@@ -67020,7 +67020,7 @@ export default {
       "tejido": "",
       "composicion": "PDF: 52% algodón/48% poliéster. C45 de la lista: 55% algodón/45% poliéster.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pa-118.webp",
       "colores": [
         "zn-pa-118-c01",
         "zn-pa-118-c02",
@@ -67058,7 +67058,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 230,
       "coloresSinRender": [
@@ -74768,7 +74768,7 @@ export default {
       "tejido": "",
       "composicion": "60% algodón / 37% poliéster / 3% elastano",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pa-124.webp",
       "colores": [
         "zn-pa-124-c01",
         "zn-pa-124-c02",
@@ -74808,7 +74808,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 292
     },
@@ -75752,7 +75752,7 @@ export default {
       "tejido": "",
       "composicion": "100% poliéster reciclado",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-ce-008.webp",
       "colores": [
         "zn-ce-008-c01",
         "zn-ce-008-c02"
@@ -75788,7 +75788,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 336
     },
@@ -78373,7 +78373,7 @@ export default {
       "tejido": "",
       "composicion": "50% algodón / 50% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-ma-010.webp",
       "colores": [
         "zn-ma-010-c01"
       ],
@@ -78404,7 +78404,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 271
     },
@@ -79516,7 +79516,7 @@ export default {
       "tejido": "",
       "composicion": "60% algodón, 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-173.webp",
       "colores": [
         "zn-cm-173-c01",
         "zn-cm-173-c02",
@@ -79554,7 +79554,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 163,
       "coloresSinRender": [
@@ -80093,7 +80093,7 @@ export default {
       "tejido": "",
       "composicion": "65% algodón, 35% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-181.webp",
       "colores": [
         "zn-cm-181-c01",
         "zn-cm-181-c02",
@@ -80131,7 +80131,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 140,
       "coloresSinRender": [
@@ -86040,7 +86040,7 @@ export default {
       "tejido": "",
       "composicion": "50% algodón ring spun peinado / 50% poliéster.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-in-018.webp",
       "colores": [
         "zn-in-018-c01",
         "zn-in-018-c02",
@@ -86089,7 +86089,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 254,
       "coloresSinRender": [
@@ -86194,7 +86194,7 @@ export default {
       "tejido": "",
       "composicion": "50% algodón ring spun peinado / 50% poliéster.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-su-032.webp",
       "colores": [
         "zn-su-032-c01",
         "zn-su-032-c02",
@@ -86244,7 +86244,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 254,
       "coloresSinRender": [
@@ -87026,7 +87026,7 @@ export default {
       "tejido": "",
       "composicion": "100% algodón chifón preencogido ring spun, salvo las excepciones por color indicadas en notas.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-167.webp",
       "colores": [
         "zn-pl-167-c01",
         "zn-pl-167-c02",
@@ -87069,7 +87069,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 150,
       "coloresSinRender": [
@@ -87815,7 +87815,7 @@ export default {
       "tejido": "",
       "composicion": "100% algodón chifón preencogido. La ficha no especifica composición separada del jaspe.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-175.webp",
       "colores": [
         "zn-pl-175-c01",
         "zn-pl-175-c02",
@@ -87868,7 +87868,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190,
       "coloresSinRender": [
