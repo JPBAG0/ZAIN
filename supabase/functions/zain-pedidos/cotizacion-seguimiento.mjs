@@ -17,10 +17,10 @@ export function createSeguimiento({sb,fail,quote}){
   // El cliente aceptó por WhatsApp, en persona o pagando: lo registra el equipo y queda atribuido en el historial.
   if(b.acepto!==true||!Number.isSafeInteger(b.revision)||b.revision<1)fail(400,'Confirma que el cliente aceptó esta cotización.');
   if(x.estado==='cancelado')fail(409,'Este pedido está cancelado.');
-  const out=await sb('/rest/v1/rpc/zain_cotizacion_aceptar',{method:'POST',body:JSON.stringify({p_id:x.id,p_revision:b.revision})});
-  if(!out)fail(409,'No se pudo registrar: la cotización cambió, venció o el pedido ya avanzó. Actualiza la ficha.');
-  // Si la nota no se guarda, la aceptación ya quedó registrada: no reportarla como fallida.
-  try{await sb('/rest/v1/zain_historial',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify({pedido_id:x.id,actor:user.id,estado_anterior:'aceptado',estado_nuevo:'aceptado',notas:'Aceptación de la revisión '+b.revision+' registrada por el equipo (el cliente aceptó fuera de su enlace).'})});}catch{}
+  // 24-nov-2026: también si el pedido ya pasó a Confirmado, Producción o Entregado (conserva su estado); la nota del
+  // historial la escribe la función (aceptacion-equipo-avanzado.sql).
+  const out=await sb('/rest/v1/rpc/zain_cotizacion_aceptar_equipo',{method:'POST',body:JSON.stringify({p_id:x.id,p_revision:b.revision,p_actor:user.id})});
+  if(!out)fail(409,'No se pudo registrar: la cotización cambió. Actualiza la ficha.');
   return {aceptada:true,seguimiento:await leer(x.id)};
  },anticipo:async(x,b,user)=>{
   // El cliente depositó menos del anticipo pactado y el equipo lo acepta: el pedido avanza con lo recibido.

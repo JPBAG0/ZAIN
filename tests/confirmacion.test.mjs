@@ -17,6 +17,7 @@ function fixture(){
   else if(url.includes('/zain_accesos?'))out=[{nombre:'Equipo'}];else if(url.includes('/zain_equipo?'))out=[{user_id:uid,nombre:'Equipo',activo:true}];
   else if(url.includes('/zain_pedidos?'))out=[row];else if(url.includes('/zain_cotizaciones?'))out=[{version:8,publicada}];
   else if(url.includes('/rpc/zain_seguimiento_cotizacion'))out=seguimientoDe(publicada,aceptacion,pagos);
+  else if(url.includes('/rpc/zain_cotizacion_aceptar_equipo')){const b=JSON.parse(options.body);if(b.p_revision!==publicada.revision||row.estado==='cancelado'||b.p_actor!==uid)out=null;else {const antes=row.estado;if(!aceptacion){aceptacion={revision:publicada.revision,aceptada_at:'2026-10-16T16:00:00Z'};if(['nuevo','contactado','cotizado'].includes(antes))row.estado='aceptado';historial.push({actor:b.p_actor,estado_anterior:antes,estado_nuevo:row.estado,notas:'Aceptación de la revisión '+b.p_revision+' registrada por el equipo'});}out=aceptacion;}}
   else if(url.includes('/rpc/zain_cotizacion_aceptar')){const b=JSON.parse(options.body);if(b.p_revision!==publicada.revision||row.estado==='cancelado')out=null;else {aceptacion||={revision:publicada.revision,aceptada_at:'2026-10-16T16:00:00Z'};row.estado='aceptado';aceptarCalls++;out=aceptacion;}}
   else if(url.includes('/rpc/zain_registrar_pago')){const b=JSON.parse(options.body);if(!aceptacion||b.p_revision!==publicada.revision)out=null;else if(pagos.some(p=>p.id===b.p_request))out={registrado:true,repetido:true};else{pagos.push({id:b.p_request,revision:publicada.revision,importe:b.p_importe});out={registrado:true};if(pagos.reduce((n,p)=>n+p.importe,0)>=anticipoDe(publicada.total,publicada.pagos))row.estado='confirmado';}}
   else if(url.endsWith('/rest/v1/zain_historial')){historial.push(JSON.parse(options.body));out=null;}
@@ -60,4 +61,14 @@ test('equipo registra la aceptación hecha por WhatsApp: exige sesión y confirm
  const r=await f.call('cotizacion-aceptar-equipo',b,true);assert.equal(r.status,200);assert.equal(f.row.estado,'aceptado');
  assert.equal(f.historial.length,1);assert.equal(f.historial[0].actor,uid);assert.match(f.historial[0].notas,/registrada por el equipo/);
  assert.equal((await f.call('cotizacion-pago',{id,revision:4,importe:20001,request:id,referencia:'',verificado:true},true)).status,200);assert.equal(f.row.estado,'confirmado');
+});
+test('equipo registra la aceptación aunque el pedido ya esté en producción o entregado (24-nov, pedido real atorado)',async()=>{
+ for(const estado of ['produccion','entregado']){
+  const f=fixture(),b={id,revision:4,acepto:true};f.row.estado=estado;
+  const r=await f.call('cotizacion-aceptar-equipo',b,true);assert.equal(r.status,200,estado);assert.equal(f.row.estado,estado,'no regresa el pedido a Aceptado');
+  assert.ok((await r.json()).seguimiento.aceptada_at);assert.equal(f.historial.length,1);
+  assert.equal((await f.call('cotizacion-aceptar-equipo',b,true)).status,200,'repetir no duplica');assert.equal(f.historial.length,1);
+  assert.equal((await f.call('cotizacion-pago',{id,revision:4,importe:5000,request:id,referencia:'',verificado:true},true)).status,200,'ya se puede registrar el pago');
+ }
+ const f=fixture();f.row.estado='cancelado';assert.equal((await f.call('cotizacion-aceptar-equipo',{id,revision:4,acepto:true},true)).status,409);
 });
