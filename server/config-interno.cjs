@@ -63882,7 +63882,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón estadounidense.",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-066.webp",
       "colores": [
         "zn-pl-066-c01",
         "zn-pl-066-c02",
@@ -63937,7 +63937,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 255,
       "coloresSinRender": [
@@ -68807,7 +68807,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-112.webp",
       "colores": [
         "zn-cm-112-c01",
         "zn-cm-112-c02",
@@ -68842,7 +68842,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 142
     },
@@ -68928,7 +68928,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-094.webp",
       "colores": [
         "zn-pl-094-c01",
         "zn-pl-094-c02",
@@ -68972,7 +68972,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 142
     },
@@ -68997,7 +68997,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-095.webp",
       "colores": [
         "zn-pl-095-c01",
         "zn-pl-095-c02",
@@ -69041,7 +69041,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 142
     },
@@ -69066,7 +69066,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-096.webp",
       "colores": [
         "zn-pl-096-c01",
         "zn-pl-096-c02",
@@ -69111,7 +69111,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 142
     },
@@ -69136,7 +69136,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-114.webp",
       "colores": [
         "zn-cm-114-c01",
         "zn-cm-114-c02",
@@ -69174,7 +69174,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 153
     },
@@ -69199,7 +69199,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-115.webp",
       "colores": [
         "zn-cm-115-c01",
         "zn-cm-115-c02",
@@ -69237,7 +69237,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 153
     },
@@ -69262,7 +69262,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-097.webp",
       "colores": [
         "zn-pl-097-c01",
         "zn-pl-097-c02",
@@ -69309,7 +69309,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 153
     },
@@ -69334,7 +69334,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-098.webp",
       "colores": [
         "zn-pl-098-c01",
         "zn-pl-098-c02",
@@ -69381,7 +69381,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 153
     },
@@ -69406,7 +69406,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-099.webp",
       "colores": [
         "zn-pl-099-c01",
         "zn-pl-099-c02",
@@ -69453,7 +69453,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 153
     },
@@ -69478,7 +69478,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-116.webp",
       "colores": [
         "zn-cm-116-c01",
         "zn-cm-116-c02",
@@ -69512,7 +69512,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 181
     },
@@ -69537,7 +69537,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-117.webp",
       "colores": [
         "zn-cm-117-c01",
         "zn-cm-117-c02",
@@ -69571,7 +69571,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 181
     },
@@ -69596,7 +69596,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-100.webp",
       "colores": [
         "zn-pl-100-c01",
         "zn-pl-100-c02",
@@ -69639,7 +69639,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 181
     },
@@ -69664,7 +69664,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-101.webp",
       "colores": [
         "zn-pl-101-c01",
         "zn-pl-101-c02",
@@ -69707,7 +69707,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 181
     },
@@ -69732,7 +69732,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-102.webp",
       "colores": [
         "zn-pl-102-c01",
         "zn-pl-102-c02",
@@ -69775,7 +69775,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 181
     },
@@ -69800,7 +69800,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-118.webp",
       "colores": [
         "zn-cm-118-c01"
       ],
@@ -69832,7 +69832,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180,
       "coloresSinRender": [
@@ -69860,7 +69860,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-119.webp",
       "colores": [
         "zn-cm-119-c01"
       ],
@@ -69892,7 +69892,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180,
       "coloresSinRender": [
@@ -69920,7 +69920,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-103.webp",
       "colores": [
         "zn-pl-103-c01"
       ],
@@ -69961,7 +69961,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180,
       "coloresSinRender": [
@@ -69989,7 +69989,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-104.webp",
       "colores": [
         "zn-pl-104-c01"
       ],
@@ -70030,7 +70030,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180,
       "coloresSinRender": [
@@ -70058,7 +70058,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-105.webp",
       "colores": [
         "zn-pl-105-c01"
       ],
@@ -70099,7 +70099,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 180,
       "coloresSinRender": [
@@ -70127,7 +70127,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-120.webp",
       "colores": [
         "zn-cm-120-c01"
       ],
@@ -70159,7 +70159,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 173,
       "coloresSinRender": [
@@ -70187,7 +70187,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-106.webp",
       "colores": [
         "zn-pl-106-c01"
       ],
@@ -70228,7 +70228,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 173,
       "coloresSinRender": [
@@ -70256,7 +70256,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-121.webp",
       "colores": [
         "zn-cm-121-c01",
         "zn-cm-121-c02",
@@ -70294,7 +70294,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70384,7 +70384,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-107.webp",
       "colores": [
         "zn-pl-107-c01",
         "zn-pl-107-c02",
@@ -70429,7 +70429,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70454,7 +70454,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-108.webp",
       "colores": [
         "zn-pl-108-c01",
         "zn-pl-108-c02",
@@ -70499,7 +70499,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70524,7 +70524,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-109.webp",
       "colores": [
         "zn-pl-109-c01",
         "zn-pl-109-c02",
@@ -70573,7 +70573,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70598,7 +70598,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-123.webp",
       "colores": [
         "zn-cm-123-c01"
       ],
@@ -70630,7 +70630,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 127,
       "coloresSinRender": [
@@ -70658,7 +70658,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-110.webp",
       "colores": [
         "zn-pl-110-c01"
       ],
@@ -70699,7 +70699,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 127,
       "coloresSinRender": [
@@ -70727,7 +70727,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-124.webp",
       "colores": [
         "zn-cm-124-c01"
       ],
@@ -70759,7 +70759,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70784,7 +70784,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-111.webp",
       "colores": [
         "zn-pl-111-c01"
       ],
@@ -70825,7 +70825,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -70850,7 +70850,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-125.webp",
       "colores": [
         "zn-cm-125-c01",
         "zn-cm-125-c02",
@@ -70885,7 +70885,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -70913,7 +70913,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-126.webp",
       "colores": [
         "zn-cm-126-c01",
         "zn-cm-126-c02",
@@ -70949,7 +70949,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -70977,7 +70977,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-112.webp",
       "colores": [
         "zn-pl-112-c01",
         "zn-pl-112-c02",
@@ -71021,7 +71021,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71049,7 +71049,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-113.webp",
       "colores": [
         "zn-pl-113-c01",
         "zn-pl-113-c02",
@@ -71093,7 +71093,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71121,7 +71121,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-114.webp",
       "colores": [
         "zn-pl-114-c01",
         "zn-pl-114-c02",
@@ -71166,7 +71166,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71194,7 +71194,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-127.webp",
       "colores": [
         "zn-cm-127-c01",
         "zn-cm-127-c02",
@@ -71230,7 +71230,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71262,7 +71262,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-128.webp",
       "colores": [
         "zn-cm-128-c01",
         "zn-cm-128-c02",
@@ -71299,7 +71299,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71332,7 +71332,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-115.webp",
       "colores": [
         "zn-pl-115-c01",
         "zn-pl-115-c02",
@@ -71377,7 +71377,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71409,7 +71409,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-116.webp",
       "colores": [
         "zn-pl-116-c01",
         "zn-pl-116-c02",
@@ -71454,7 +71454,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71486,7 +71486,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-117.webp",
       "colores": [
         "zn-pl-117-c01",
         "zn-pl-117-c02",
@@ -71532,7 +71532,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 122,
       "coloresSinRender": [
@@ -71627,7 +71627,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-118.webp",
       "colores": [
         "zn-pl-118-c01",
         "zn-pl-118-c02"
@@ -71669,7 +71669,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124,
       "coloresSinRender": [
@@ -71758,7 +71758,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-119.webp",
       "colores": [
         "zn-pl-119-c01",
         "zn-pl-119-c02"
@@ -71798,7 +71798,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124,
       "coloresSinRender": [
@@ -71887,7 +71887,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-120.webp",
       "colores": [
         "zn-pl-120-c01"
       ],
@@ -71928,7 +71928,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 170,
       "coloresSinRender": [
@@ -71956,7 +71956,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-132.webp",
       "colores": [
         "zn-cm-132-c01",
         "zn-cm-132-c02"
@@ -71989,7 +71989,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124
     },
@@ -72072,7 +72072,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-121.webp",
       "colores": [
         "zn-pl-121-c01",
         "zn-pl-121-c02"
@@ -72114,7 +72114,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124
     },
@@ -72139,7 +72139,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-122.webp",
       "colores": [
         "zn-pl-122-c01",
         "zn-pl-122-c02"
@@ -72181,7 +72181,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124
     },
@@ -72206,7 +72206,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-123.webp",
       "colores": [
         "zn-pl-123-c01",
         "zn-pl-123-c02"
@@ -72248,7 +72248,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 124
     },
@@ -72273,7 +72273,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-134.webp",
       "colores": [
         "zn-cm-134-c01"
       ],
@@ -72305,7 +72305,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 258,
       "coloresSinRender": [
@@ -72393,7 +72393,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-124.webp",
       "colores": [
         "zn-pl-124-c01"
       ],
@@ -72434,7 +72434,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 258,
       "coloresSinRender": [
@@ -72462,7 +72462,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-125.webp",
       "colores": [
         "zn-pl-125-c01"
       ],
@@ -72503,7 +72503,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 258,
       "coloresSinRender": [
@@ -72531,7 +72531,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-126.webp",
       "colores": [
         "zn-pl-126-c01"
       ],
@@ -72572,7 +72572,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 258,
       "coloresSinRender": [
@@ -76617,7 +76617,7 @@ module.exports = {
       "tejido": "",
       "composicion": "65% poliéster / 35% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-157.webp",
       "colores": [
         "zn-cm-157-c01",
         "zn-cm-157-c02",
@@ -76651,7 +76651,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -78725,7 +78725,7 @@ module.exports = {
       "tejido": "",
       "composicion": "60% algodón / 40% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-154.webp",
       "colores": [
         "zn-pl-154-c01",
         "zn-pl-154-c02"
@@ -78767,7 +78767,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 190
     },
@@ -82710,7 +82710,7 @@ module.exports = {
       "tejido": "",
       "composicion": "70% algodón, 30% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-pl-155.webp",
       "colores": [
         "zn-pl-155-c01",
         "zn-pl-155-c02",
@@ -82757,7 +82757,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 138
     },
@@ -82782,7 +82782,7 @@ module.exports = {
       "tejido": "",
       "composicion": "70% algodón, 30% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-220.webp",
       "colores": [
         "zn-cm-220-c01",
         "zn-cm-220-c02",
@@ -82820,7 +82820,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 138
     },
@@ -82909,7 +82909,7 @@ module.exports = {
       "tejido": "",
       "composicion": "43% algodón, 57% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-222.webp",
       "colores": [
         "zn-cm-222-c01"
       ],
@@ -82945,7 +82945,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 100,
       "coloresSinRender": [
@@ -83037,7 +83037,7 @@ module.exports = {
       "tejido": "",
       "composicion": "43% algodón, 57% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-224.webp",
       "colores": [
         "zn-cm-224-c01"
       ],
@@ -83073,7 +83073,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 100,
       "coloresSinRender": [
@@ -83165,7 +83165,7 @@ module.exports = {
       "tejido": "",
       "composicion": "43% algodón, 57% poliéster",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-226.webp",
       "colores": [
         "zn-cm-226-c01"
       ],
@@ -83201,7 +83201,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 100,
       "coloresSinRender": [
@@ -83293,7 +83293,7 @@ module.exports = {
       "tejido": "",
       "composicion": "100% algodón",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/proveedores/zn-cm-228.webp",
       "colores": [
         "zn-cm-228-c01"
       ],
@@ -83329,7 +83329,7 @@ module.exports = {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo hecho a partir del catálogo del proveedor.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "gramaje": 117,
       "coloresSinRender": [
