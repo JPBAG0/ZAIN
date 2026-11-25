@@ -23741,27 +23741,27 @@ export default {
     {
       "id": "zn-pl-197-c01",
       "nombre": "Negro antiguo deslavado",
-      "hex": "#1c1c1e"
+      "hex": "#3a3836"
     },
     {
       "id": "zn-pl-197-c02",
       "nombre": "Negro mineral",
-      "hex": "#1c1c1e"
+      "hex": "#414244"
     },
     {
       "id": "zn-pl-197-c03",
       "nombre": "Negro pigmento",
-      "hex": "#1c1c1e"
+      "hex": "#2f2e2c"
     },
     {
       "id": "zn-pl-197-c04",
       "nombre": "Verde mineral",
-      "hex": "#2f6b3a"
+      "hex": "#55614f"
     },
     {
       "id": "zn-pl-197-c05",
       "nombre": "Azul mineral",
-      "hex": "#2f5fa8"
+      "hex": "#46596f"
     },
     {
       "id": "zn-in-028-c01",
@@ -90831,7 +90831,7 @@ export default {
       "tejido": "",
       "composicion": "",
       "composicionColor": {},
-      "foto": "",
+      "foto": "img/productos/zain/zn-pl-012-render.webp",
       "colores": [
         "zn-pl-197-c01",
         "zn-pl-197-c02",
@@ -90872,7 +90872,7 @@ export default {
         }
       ],
       "renderOrientativo": true,
-      "disponibilidad": "Consulta disponibilidad por color. Sin render todavía: revisa la foto en el catálogo del proveedor.",
+      "disponibilidad": "Consulta disponibilidad por color. Render orientativo: mismo corte que la 5000; los teñidos minerales y deslavados se ven más irregulares en la prenda real.",
       "detalleMedidas": "Medidas y ajuste se confirman al cotizar.",
       "coloresSinRender": [
         "zn-pl-197-c01",
