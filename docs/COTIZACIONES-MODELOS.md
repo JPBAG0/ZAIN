@@ -69,3 +69,14 @@ JP: «tardo como 40 minutos queriendo hacer una cotización de 3 productos». Pa
 - PDF con el membrete de siempre (`crearPDF` con `textos`), sin renglón de envío. Chats adjunta el mismo PDF. Duplicar vuelve a subir las fotos.
 - Todavía no pasa a pedido (falta definir cómo se vuelve partida del pedido).
 - Pruebas: `tests/cotizacion-rapida.test.mjs` y `tests/cotizacion-rapida-browser.cjs` (390 y 1280).
+
+## Cotización rápida con prendas del catálogo (25-nov-2026)
+JP: «que la cotización rápida sea para los dos tipos, cosas del catálogo y cosas externas… que pueda modificar todos los campos».
+- Cada partida tiene **«Del catálogo (opcional)»**: se busca por nombre, código del proveedor o SKU (también las «solo cotizar» del catálogo mayoreo). Al elegir la prenda se llenan el concepto, la descripción («Negro · Bordado»), el render del color (se pinta como en Catálogo) y se muestran Color, Personalización, medida del logo (solo si la técnica se cobra por cm²) y Margen %.
+- **Costo y precio propuestos** (`js/cotizacion-rapida-catalogo.js`, `costoCatalogo`): costo de la prenda en el tramo de la cantidad (tallas base; avisa si las grandes cuestan más) + personalización (importe fijo por pieza de Costos, o tarifa × ancho × alto + aplicado; 10 × 10 cm de inicio). Precio = costo / (1 − margen) a peso cerrado. Los campos de costo y precio quedan vacíos y muestran lo propuesto; lo que se escriba manda. Sin tarifa o sin costo no se inventa nada.
+- Todo es editable: concepto, descripción, cantidad, precio, descuento, costo, color, técnica, margen. Una descripción escrita a mano ya no la cambia el color ni la técnica. **«Escribir a mano»** desliga la partida; sin prenda ligada todo es como antes (foto subida opcional).
+- Una foto subida manda sobre el render. El PDF usa la foto o el render (sobre blanco).
+- Se guarda en `datos.modelos[i].catalogo` = `{sku,color,tecnica,ancho,alto,margen,precioCotizado}`; el renglón sigue siendo `sku:'articulo-libre'` (misma validación del servidor). `precioCotizado` conserva el precio que salió del margen: al reabrir o duplicar se escribe ese precio aunque cambien los costos (borrarlo recalcula). Lo comercial no lleva costo ni código del proveedor.
+- **«+ Cotizar»** (Pedidos, menú inferior y ficha de Clientes) abre ahora la cotización rápida; «Por modelo y talla» sigue en Cotizaciones y en Clientes. **«Cotizar este modelo»** desde Catálogo agrega la prenda a la cotización por modelo si hay una abierta; si no, a la rápida (abierta o nueva).
+- Arreglo de paso: Nueva, Abrir y Volver ya avisan si hay una cotización rápida con cambios sin guardar (antes solo la por modelo).
+- Pruebas: `tests/cotizacion-rapida-catalogo.test.mjs` y `tests/cotizacion-rapida-catalogo-browser.cjs` (390 y 1280). Sin cambios de servidor, Edge ni SQL.

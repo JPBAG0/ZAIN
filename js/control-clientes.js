@@ -133,7 +133,7 @@ function pintarFicha(){
  const c=ficha.cliente;
  $('#clFicha').innerHTML=`<button type="button" class="btn-texto" data-cl-volver>← Clientes</button>
  <div class="cl-cab"><div><h2>${esc(c.nombre)}</h2><p>${esc([c.empresa,telVista(c.telefono)?'tel. '+telVista(c.telefono):'',c.correo].filter(Boolean).join(' · ')||'Sin datos de contacto')}</p></div>
- <div class="cl-acciones"><button type="button" class="btn btn--azul" data-cl-cotizar="modelos">+ Cotizar</button><button type="button" class="btn btn--linea" data-cl-cotizar="rapida">+ Cotización rápida</button><button type="button" class="btn btn--linea" data-cl-editar>Editar datos</button><button type="button" class="btn btn--linea" data-cl-juntar>Unir con otro cliente…</button></div></div>
+ <div class="cl-acciones"><button type="button" class="btn btn--azul" data-cl-cotizar="rapida">+ Cotizar</button><button type="button" class="btn btn--linea" data-cl-cotizar="modelos">+ Por modelo y talla</button><button type="button" class="btn btn--linea" data-cl-editar>Editar datos</button><button type="button" class="btn btn--linea" data-cl-juntar>Unir con otro cliente…</button></div></div>
  ${editando?formulario(c):''}${cifras()}${c.notas&&!editando?`<p class="cl-notas">${esc(c.notas)}</p>`:''}
  <section class="cot-panel cl-historial"><h3>Pedidos <span>${ficha.pedidos.length}</span></h3>${ficha.pedidos.length?'<ul class="cl-filas">'+ficha.pedidos.map(filaPedido).join('')+'</ul>':'<p class="cot-ayuda">Sin pedidos todavía.</p>'}</section>
  <section class="cot-panel cl-historial"><h3>Cotizaciones <span>${ficha.cotizaciones.length}</span></h3>${ficha.cotizaciones.length?'<ul class="cl-filas">'+ficha.cotizaciones.map(filaCot).join('')+'</ul>':'<p class="cot-ayuda">Sin cotizaciones guardadas.</p>'}</section>`;

@@ -116,3 +116,11 @@
 .cr-totales b{font-size:18px}
 .cr-textos{margin-top:14px}
 @media(max-width:700px){.cr-fila{grid-template-columns:88px minmax(0,1fr)}.cr-foto__caja{width:88px;height:88px}.cr-numeros{grid-template-columns:repeat(2,minmax(0,1fr))}.cr-acciones{grid-column:1/-1;flex-direction:row;justify-content:flex-end}}
+/* Cotización rápida con prendas del catálogo (25-nov-2026) */
+.cr-buscar{display:flex;gap:10px;align-items:flex-end}
+.cr-buscar label{flex:1}
+.cr-buscar .btn-texto{white-space:nowrap;margin-bottom:10px}
+.cr-cat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 12px;padding:8px 10px 0;margin-bottom:6px;border-radius:10px;background:#f3f4fb}
+.cr-medida{display:flex;gap:6px}
+.cr-medida input{min-width:0}
+@media(max-width:700px){.cr-cat{grid-template-columns:repeat(2,minmax(0,1fr))}.cr-buscar{flex-wrap:wrap;gap:0 10px}.cr-buscar label{flex-basis:100%}.cr-buscar .btn-texto{margin:0 0 8px}}

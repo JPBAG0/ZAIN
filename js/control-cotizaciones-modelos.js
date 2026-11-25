@@ -4,6 +4,7 @@ import {filasModelo,precioFila,aplicacionArea,comercial,textoComercial} from './
 import {armarPedido} from './cotizacion-modelos-pedido.js?v=4';
 import {SERVICIO,NOMBRE_SERVICIO,LIBRE,NOMBRE_LIBRE,productoServicio,productoLibre,filasServicio,dibujarLibre,prepararFoto} from './cotizacion-servicio.js?v=4';
 import {comercialRapida,documentoRapida,textosPDF,textoRapida,importeLinea,normalizarTextos,TEXTOS} from './cotizacion-rapida.js?v=1';
+import {costoCatalogo,descripcionCatalogo,MEDIDA_INICIAL} from './cotizacion-rapida-catalogo.js?v=1';
 const $=s=>document.querySelector(s),nav=$('.control__secciones'),api=(op,body,extra)=>window.ZAINEquipo.call(op,body,extra);
 const tecnicas={bordado:'Bordado',serigrafia:'Serigrafía',dtf:'DTF'},numero=n=>n==null?'':(n/100).toFixed(2),nullable=e=>e.value.trim()===''?null:decimal(e.value);
 const ESTADOS={borrador:'Borrador',enviada:'Enviada',autorizada:'Autorizada',convertida:'Convertida en pedido',descartada:'Descartada'};
@@ -32,7 +33,7 @@ $('#trabajo').insertAdjacentHTML('beforeend',`<section id="seccionCotizaciones" 
 <details id="cmLogoPanel" class="cot-panel cm-opciones"><summary>Logo del cliente (opcional)</summary><div class="cm-logo"><label>Subir logo<input id="cmLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label><div><p id="cmLogoEstado" class="cot-ayuda">PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.</p><label class="cot-check"><input id="cmQuitarFondo" type="checkbox">Quitar fondo del logo</label><button type="button" id="cmEliminarLogo" class="btn-texto" hidden>Quitar logo</button></div></div></details>
 <section id="cmModelosPanel" class="cot-panel"><h2>Modelos y precios</h2><div class="cm-agregar"><label>Buscar<input id="cmBuscar" type="search" placeholder="Polo, gorra, código del proveedor, SKU…" autocomplete="off"></label><label>Modelo<select id="cmModelo"></select></label><button type="button" id="cmAgregar" class="btn btn--azul">Agregar</button></div><div class="cm-sinprenda"><button type="button" id="cmLibre" class="btn btn--linea">+ Fuera de catálogo (artículo libre)</button><span class="cot-ayuda">Lo que no está en el catálogo: escribe el artículo, su costo y su precio.</span></div><div class="cm-sinprenda"><button type="button" id="cmServicio" class="btn btn--linea">+ Sin prenda (solo personalización)</button><span class="cot-ayuda">Cuando el cliente trae sus prendas: cotiza solo la serigrafía, el bordado o el DTF.</span></div><p class="cot-ayuda">El precio se calcula con el margen de tus Costos; puedes cambiar el margen del modelo o escribir el precio de cualquier talla.</p></section>
 <div id="cmModelos"></div>
-<section id="cmRapida" class="cot-panel cm-rapida" hidden><h2>Partidas</h2><p class="cot-ayuda">Escribe cada artículo como quieres que lo lea el cliente. La foto es opcional: sin foto, la partida sale como renglón. Sin cantidad, sale el precio por pieza.</p><div id="crFilas"></div><button type="button" id="crAgregar" class="btn btn--linea">+ Agregar partida</button><div id="crTotales" class="cr-totales" aria-live="polite"></div>
+<section id="cmRapida" class="cot-panel cm-rapida" hidden><h2>Partidas</h2><p class="cot-ayuda">Busca la prenda en el catálogo y se llenan la foto, el costo y el precio; o escribe el artículo a mano y sube su foto. Todo se puede cambiar. Sin cantidad, sale el precio por pieza.</p><datalist id="crCatalogo"></datalist><div id="crFilas"></div><button type="button" id="crAgregar" class="btn btn--linea">+ Agregar partida</button><div id="crTotales" class="cr-totales" aria-live="polite"></div>
 <details class="cm-opciones cr-textos"><summary>Textos del PDF</summary><div class="cm-campos"><label>Título, primera línea<input id="crTitulo1" maxlength="48"></label><label>Título, segunda línea<input id="crTitulo2" maxlength="48"></label><label>Encabezado de las partidas<input id="crSeccion" maxlength="48"></label><label>Nota junto al encabezado<input id="crEtiqueta" maxlength="60"></label></div><label class="cot-check"><input id="crPasos" type="checkbox" checked>Incluir «Cómo seguimos» (confirmar, anticipo, producción y entrega)</label><label>Notas al pie (una por renglón)<textarea id="crNotasPie" rows="3" maxlength="600"></textarea></label></details></section>
 <details class="cot-panel cm-cierre cm-opciones"><summary>Cargo único y notas</summary><div class="cm-campos"><label>Concepto del cargo (opcional)<input id="cmCargoConcepto" maxlength="120" placeholder="Ponchado del logo"></label><label>Cargo único (MXN)<input id="cmCargo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Sin cargo"></label></div><p class="cot-ayuda">Se cobra una sola vez, aunque el logo vaya en varios modelos.</p><label>Condiciones o notas para el cliente<textarea id="cmNotas" rows="3" maxlength="2000" placeholder="Forma de pago, envío…"></textarea></label><button type="button" id="cmCopiar" class="btn-texto">Copiar cotización como texto</button></details>
 <section id="cmConvertir" class="cot-panel cm-convertir" hidden aria-labelledby="cvTitulo"><h2 id="cvTitulo">Pasar a pedido</h2><p class="cot-ayuda">Escribe las piezas que autorizó el cliente. Se crea un pedido normal en Pedidos con los precios de esta cotización; de ahí sigue como cualquier pedido: Mi pedido, anticipo, talleres y finanzas.</p><label>Nombre del cliente o empresa<input id="cvCliente" minlength="2" maxlength="120" autocomplete="off"></label><div id="cvLineas"></div><div id="cvTotal" class="cm-cvtotal" aria-live="polite"></div><label class="cot-check"><input id="cvPublicar" type="checkbox" checked>Publicar la cotización del pedido para que el cliente la vea y la acepte en Mi pedido</label><ul id="cvErrores" class="cm-error"></ul><div class="cm-cvbotones"><button type="button" id="cvCancelar" class="btn btn--linea">Cancelar</button><button type="button" id="cvCrear" class="btn btn--azul" disabled>Crear pedido</button></div><p id="cvEstado" class="cot-ayuda" role="status" aria-live="polite"></p><div id="cvResultado" class="cm-cvok" hidden></div></section>
@@ -98,7 +99,7 @@ async function cargar(){
   const publicos=[...c.productos,...c.productosHistoricos];
   catalogo=cat.productos.map(p=>({...publicos.find(x=>x.sku===p.sku),...p})).sort((a,b)=>nombreDe(a).localeCompare(nombreDe(b),'es'));
   if(!$('#cmVigencia').value)$('#cmVigencia').value=hoyMX(15);
-  opciones();$('#cmCampos').disabled=false;cabecera();avisar('Costos guardados · versión '+datos.version+(datos.margen==null?'.':' · margen inicial '+datos.margen/100+'%.'));
+  opciones();opcionesRapida();$('#cmCampos').disabled=false;cabecera();avisar('Costos guardados · versión '+datos.version+(datos.margen==null?'.':' · margen inicial '+datos.margen/100+'%.'));
   void cargarLista();
  }catch(e){if(turno===epoca)avisar(e.message);}finally{if(turno===epoca)cargando=false;}
 }
@@ -280,7 +281,7 @@ function crudoModelo(m){
   filas:m.filas.map(f=>{const tr=el.querySelector('[data-fila="'+f.id+'"]');return {clave:clave(f),incluir:tr.querySelector('[data-campo=incluir]').checked,precio:tr.querySelector('[data-campo=precio]').value,visto:f.visto??null};})};
 }
 const CAMPOS={destinatario:'#cmDestinatario',iva:'#cmIVA',redondeo:'#cmRedondeo',vigencia:'#cmVigencia',plazo:'#cmPlazo',anticipo:'#cmAnticipo',concepto:'#cmCargoConcepto',cargo:'#cmCargo',notas:'#cmNotas'};
-const serializar=()=>modo==='rapida'?{schema:1,tipo:'rapida',...Object.fromEntries(Object.entries(CAMPOS).map(([k,s])=>[k,$(s).value])),textos:crudoTextos(),modelos:rapidas.map(crudoRapida)}
+const serializar=()=>modo==='rapida'?{schema:1,tipo:'rapida',...Object.fromEntries(Object.entries(CAMPOS).map(([k,s])=>[k,$(s).value])),textos:crudoTextos(),modelos:rapidas.map(crudoCotizado)}
  :{schema:1,...Object.fromEntries(Object.entries(CAMPOS).map(([k,s])=>[k,$(s).value])),quitarFondo:$('#cmQuitarFondo').checked,modelos:modelos.map(crudoModelo)};
 function opcionesComerciales(folio){
  const anticipo=$('#cmAnticipo').value.trim();
@@ -335,17 +336,18 @@ $('#cmEstadoSel').addEventListener('change',async e=>{
 });
 function limpiar(){
  for(const m of modelos)m.renderTurno++;modelos=[];$('#cmModelos').replaceChildren();cerrarConversion();
- for(const r of rapidas)r.fotoTurno++;rapidas=[];$('#crFilas').replaceChildren();$('#crTotales').replaceChildren();
+ for(const r of rapidas){r.fotoTurno++;r.vistaTurno++;}rapidas=[];$('#crFilas').replaceChildren();$('#crTotales').replaceChildren();
  sinLogo('PNG, JPG, WEBP o SVG · hasta 15 MB. Opcional. Si falta, el pedido queda con logo pendiente.');
  $('#cmForm').reset();$('#cmVigencia').value=hoyMX(15);marcarLimpio();
 }
 function nueva(){
- if(sucio&&modelos.length&&!confirm('Hay cambios sin guardar. ¿Descartarlos?'))return false;
+ if(sucio&&(modelos.length||rapidas.length)&&!confirm('Hay cambios sin guardar. ¿Descartarlos?'))return false;
  limpiar();actual=null;cabecera();pintarLista();return true;
 }
-$('#cmVolver').addEventListener('click',()=>{if(sucio&&modelos.length&&!confirm('Hay cambios sin guardar. ¿Volver sin guardarlos?'))return;if(sucio){limpiar();actual=null;cabecera();}cerrarConversion();mostrarEditor(false);void cargarLista();});
+$('#cmVolver').addEventListener('click',()=>{if(sucio&&(modelos.length||rapidas.length)&&!confirm('Hay cambios sin guardar. ¿Volver sin guardarlos?'))return;if(sucio){limpiar();actual=null;cabecera();}cerrarConversion();mostrarEditor(false);void cargarLista();});
 // «+ Cotizar» de la pantalla de Pedidos (11-nov-2026): abre una cotización nueva sin pasar por la lista.
-$('#cotizarRapido')?.addEventListener('click',()=>{$('#verCotizaciones').click();$('#cmNueva').click();});
+// 25-nov-2026 (JP): abre la cotización rápida, que ya sirve para prendas del catálogo y para artículos de fuera.
+$('#cotizarRapido')?.addEventListener('click',()=>{$('#verCotizaciones').click();$('#cmRapidaNueva').click();});
 $('#cmRapidaNueva').addEventListener('click',()=>{if(nueva()){ponerModo('rapida');pintarRapida();actualizarRapidas();marcarLimpio();mostrarEditor(true);avisar('Cotización rápida nueva: escribe las partidas.');$('#crFilas [data-cr=concepto]').focus();}});
 $('#cmNueva').addEventListener('click',()=>{if(nueva()){ponerModo('modelos');mostrarEditor(true);avisar('Nueva cotización.');$('#cmDestinatario').focus();}});
 async function restaurar(x,duplicar){
@@ -384,7 +386,7 @@ async function restaurar(x,duplicar){
 }
 async function abrir(id,duplicar=false){
  if(!datos)return;if(!duplicar&&actual?.id===id&&!sucio){mostrarEditor(true);return;}
- if(sucio&&modelos.length&&!confirm('Hay cambios sin guardar. ¿Descartarlos?'))return;
+ if(sucio&&(modelos.length||rapidas.length)&&!confirm('Hay cambios sin guardar. ¿Descartarlos?'))return;
  const session=epoca;avisar('Abriendo cotización…');
  try{const r=await api('cm-leer',undefined,{id});if(session!==epoca)return;avisar(await restaurar(r.cotizacion,duplicar));mostrarEditor(true);$('#cmCampos').scrollIntoView({block:'start',behavior:'smooth'});}
  catch(e){if(session===epoca)avisar(e.message);}
@@ -557,39 +559,51 @@ function ponerModo(m){
 function crudoTextos(){return {titulo1:$('#crTitulo1').value,titulo2:$('#crTitulo2').value,seccion:$('#crSeccion').value,etiqueta:$('#crEtiqueta').value,notas:$('#crNotasPie').value,pasos:$('#crPasos').checked};}
 function crudoRapida(r){
  const el=nodoR(r),v=k=>el.querySelector('[data-cr="'+k+'"]').value;
- return {sku:LIBRE,concepto:v('concepto'),descripcion:v('descripcion'),cantidad:v('cantidad'),precio:v('precio'),descuento:v('descuento'),costo:v('costo'),...(r.foto?.objeto?{foto:{objeto:r.foto.objeto,mime:r.foto.mime}}:{})};
+ return {sku:LIBRE,concepto:v('concepto'),descripcion:v('descripcion'),cantidad:v('cantidad'),precio:v('precio'),descuento:v('descuento'),costo:v('costo'),...(r.foto?.objeto?{foto:{objeto:r.foto.objeto,mime:r.foto.mime}}:{}),
+  ...(r.cat?{catalogo:{sku:r.cat.p.sku,color:v('color'),tecnica:v('tecnica'),ancho:v('ancho'),alto:v('alto'),margen:v('margen')}}:{})};
 }
 function lineaRapida(r){
  const c=crudoRapida(r),num=(t,f)=>String(t).trim()===''?null:f(String(t).trim()),nombre=nombreRapida(r);
  const cantidad=num(c.cantidad,t=>{const n=Number(t);if(!Number.isSafeInteger(n)||n<1)throw Error('La cantidad de '+nombre+' debe ser un número entero.');return n;});
  const dinero=t=>{try{return decimal(t);}catch{throw Error('Revisa los importes de '+nombre+'.');}};
- return {concepto:c.concepto,descripcion:c.descripcion,cantidad,precio:num(c.precio,dinero),descuento:num(c.descuento,dinero)??0,costo:num(c.costo,dinero)};
+ // Prenda del catálogo: costo y precio vacíos toman lo propuesto (costo del tramo + personalización, y el margen).
+ const auto=r.cat?calculoCatalogo(r,cantidad):null;
+ return {concepto:c.concepto,descripcion:c.descripcion,cantidad,precio:num(c.precio,dinero)??auto?.sugerido??null,descuento:num(c.descuento,dinero)??0,costo:num(c.costo,dinero)??auto?.costo??null,auto};
 }
+// Al guardar, el precio que salió del margen queda anotado para reabrir la cotización con ese mismo precio.
+function crudoCotizado(r){const c=crudoRapida(r);if(c.catalogo&&c.precio.trim()===''){try{const a=lineaRapida(r).auto;if(a?.sugerido!=null)c.catalogo.precioCotizado=numero(a.sugerido);}catch{}}return c;}
 const proyeccionRapida=(folio=actual?.folio||'')=>comercialRapida(rapidas.map(lineaRapida),{...opcionesComerciales(folio),textos:crudoTextos()});
 function pintarRapida(l={}){
  if(rapidas.length>=20){avisar('La cotización admite hasta 20 partidas.');return null;}
- const r={id:++rapidaId,rapida:true,foto:null,fotoTurno:0,fotoOcupada:false};rapidas.push(r);
+ const r={id:++rapidaId,rapida:true,foto:null,fotoTurno:0,fotoOcupada:false,cat:null,vista:null,vistaTurno:0,auto:{}};rapidas.push(r);
  const el=document.createElement('article');el.className='cr-fila';el.dataset.rapida=r.id;
  const val=k=>esc(l[k]??'');
  el.innerHTML=`<div class="cr-foto"><label class="cr-foto__caja" title="Foto de la partida (opcional)"><canvas width="240" height="240" hidden></canvas><span data-cr-foto-texto>+ Foto<small>opcional</small></span><input data-cr-foto type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-label="Foto de la partida"></label><button type="button" class="btn-texto" data-cr="quitar-foto" hidden>Quitar foto</button></div>
-<div class="cr-datos"><label>Concepto<input data-cr="concepto" maxlength="150" autocomplete="off" placeholder="Ej. Termo de acero 500 ml" value="${val('concepto')}"></label>
+<div class="cr-datos"><div class="cr-buscar"><label>Del catálogo (opcional)<input data-cr-buscar list="crCatalogo" autocomplete="off" placeholder="Busca polo, gorra, código o SKU"></label><button type="button" class="btn-texto" data-cr="desligar" hidden>Escribir a mano</button></div>
+<div class="cr-cat" data-cr-cat hidden><label>Color<select data-cr="color"></select></label><label>Personalización<select data-cr="tecnica"></select></label><label data-cr-medida hidden>Logo ancho × alto (cm)<span class="cr-medida"><input data-cr="ancho" type="number" min="0.01" step="0.01" inputmode="decimal" aria-label="Ancho del logo en cm"><input data-cr="alto" type="number" min="0.01" step="0.01" inputmode="decimal" aria-label="Alto del logo en cm"></span></label><label>Margen %<input data-cr="margen" type="number" min="0" max="99.99" step="0.01" inputmode="decimal" placeholder="Ej. 35"></label></div>
+<label>Concepto<input data-cr="concepto" maxlength="150" autocomplete="off" placeholder="Ej. Termo de acero 500 ml" value="${val('concepto')}"></label>
 <label>Descripción (opcional)<textarea data-cr="descripcion" rows="2" maxlength="400" placeholder="Ej. Tampografía a 1 tinta, logo al frente">${val('descripcion')}</textarea></label>
 <div class="cr-numeros"><label>Cantidad<input data-cr="cantidad" type="number" min="1" step="1" inputmode="numeric" placeholder="Opcional" value="${val('cantidad')}"></label><label>Precio / pza sin IVA<input data-cr="precio" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" value="${val('precio')}"></label><label>Descuento %<input data-cr="descuento" type="number" min="0" max="100" step="0.01" inputmode="decimal" placeholder="0" value="${val('descuento')}"></label><label>Costo / pza (privado)<input data-cr="costo" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Opcional" value="${val('costo')}"></label></div>
 <p class="cr-importe" data-cr-importe></p></div>
 <div class="cr-acciones"><button type="button" class="btn-texto" data-cr="subir" aria-label="Subir partida">↑</button><button type="button" class="btn-texto" data-cr="bajar" aria-label="Bajar partida">↓</button><button type="button" class="btn-texto" data-cr="quitar">Quitar</button></div>`;
- $('#crFilas').append(el);return r;
+ $('#crFilas').append(el);
+ // Al abrir una guardada, la partida vuelve a ligarse a su prenda (si sigue en el catálogo).
+ const p=l.catalogo?.sku&&catalogo.find(x=>x.sku===l.catalogo.sku);if(p)ligarCatalogo(r,p,l.catalogo);
+ return r;
 }
 function pintarFotoRapida(r){
- const el=nodoR(r);if(!el)return;const canvas=el.querySelector('canvas'),img=r.foto?.img;
+ const el=nodoR(r);if(!el)return;const canvas=el.querySelector('canvas'),img=r.foto?.img||(r.foto?null:r.vista);
  canvas.hidden=!img;el.querySelector('[data-cr-foto-texto]').hidden=!!img;el.querySelector('[data-cr=quitar-foto]').hidden=!r.foto;
+ canvas.title=r.foto?'Foto de la partida':r.vista?'Render del catálogo · toca para usar otra foto':'';
  if(img){const g=canvas.getContext('2d'),S=canvas.width,k=Math.min(S/img.width,S/img.height),w=img.width*k,h=img.height*k;g.fillStyle='#fff';g.fillRect(0,0,S,S);g.drawImage(img,(S-w)/2,(S-h)/2,w,h);}
  else if(r.foto)el.querySelector('[data-cr-foto-texto]').innerHTML='Foto guardada<small>no se pudo abrir; súbela de nuevo</small>';
 }
 function actualizarRapidas(){
  if(modo!=='rapida')return;
  for(const r of rapidas){const el=nodoR(r),out=el.querySelector('[data-cr-importe]');
-  try{const l=lineaRapida(r),imp=importeLinea(l);out.classList.remove('cm-negativo');
+  try{const l=lineaRapida(r),imp=importeLinea(l);out.classList.remove('cm-negativo');pintarCatalogo(r,l.auto);
    out.textContent=imp==null?(l.precio==null?'Escribe el precio.':pesos(l.precio)+' por pieza · sin cantidad, en el PDF sale el precio por pieza.'):'Importe '+pesos(imp)+(l.descuento?' (con '+l.descuento/100+'% de descuento)':'')+(l.costo!=null&&l.cantidad!=null?' · utilidad '+pesos(imp-l.costo*l.cantidad):'');
+   if(l.auto)out.textContent+=' · '+detalleCatalogo(r,l.auto);
    if(l.costo!=null&&l.cantidad!=null&&imp!=null&&imp<l.costo*l.cantidad)out.classList.add('cm-negativo');}
   catch(e){out.textContent=e.message;out.classList.add('cm-negativo');}}
  let q=null,error='';try{q=proyeccionRapida();}catch(e){error=e.message;}
@@ -637,7 +651,7 @@ async function pdfRapida(q){
  if(rapidas.some(r=>r.fotoOcupada))throw Error('Espera a que termine de cargar la foto.');
  const urls=[],imagenes={};
  try{
-  for(const [i,r] of rapidas.entries())if(r.foto?.img){const blob=r.foto.blob||await new Promise(ok=>{const c=document.createElement('canvas');c.width=r.foto.img.width;c.height=r.foto.img.height;c.getContext('2d').drawImage(r.foto.img,0,0);c.toBlob(ok,'image/jpeg',.9);});const url=URL.createObjectURL(blob);urls.push(url);imagenes[i]={src:url,referencia:false};}
+  for(const [i,r] of rapidas.entries()){const img=r.foto?.img||(r.foto?null:r.vista);if(!img)continue;const blob=r.foto?.blob||await new Promise(ok=>{const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.drawImage(img,0,0);c.toBlob(ok,'image/jpeg',.9);});const url=URL.createObjectURL(blob);urls.push(url);imagenes[i]={src:url,referencia:false};}
   const {descargarPDF}=await import('./cotizacion-pdf.js?v=22');
   await descargarPDF(documentoRapida(q),{folio:q.folio,imagenes,textos:textosPDF(q)});
  }finally{setTimeout(()=>urls.forEach(u=>URL.revokeObjectURL(u)),60000);}
@@ -669,11 +683,111 @@ addEventListener('zain:abrir-cotizacion',async e=>{
 addEventListener('zain:cotizar-modelo',async e=>{
  const {sku}=e.detail||{};if(!sku||!await cotizadorListo())return;
  const p=catalogo.find(p=>p.sku===sku);if(!p){avisar('Ese modelo no está disponible para cotizar.');return;}
- if($('#cmForm').hidden||modo!=='modelos'){if(!nueva())return;ponerModo('modelos');mostrarEditor(true);}
- $('#cmBuscar').value='';opciones();$('#cmModelo').value=sku;agregar(p);avisar(nombreDe(p)+' agregado a la cotización.');
+ // 25-nov-2026: si hay una por modelo abierta se agrega ahí; si no, va a la cotización rápida (abierta o nueva).
+ if(!$('#cmForm').hidden&&modo==='modelos'){$('#cmBuscar').value='';opciones();$('#cmModelo').value=sku;agregar(p);avisar(nombreDe(p)+' agregado a la cotización.');return;}
+ if($('#cmForm').hidden||modo!=='rapida'){if(!nueva())return;ponerModo('rapida');mostrarEditor(true);}
+ const vacia=rapidas.length===1&&!crudoRapida(rapidas[0]).concepto.trim()&&!rapidas[0].cat&&!rapidas[0].foto?rapidas[0]:null;
+ const r=vacia||pintarRapida();if(!r)return;ligarCatalogo(r,p);actualizarRapidas();marcarSucio();avisar(nombreDe(p)+' agregado a la cotización rápida.');
 });
 addEventListener('zain:nueva-cotizacion',async e=>{
  const {modo:m,cliente}=e.detail||{};if(!await cotizadorListo())return;
  $(m==='rapida'?'#cmRapidaNueva':'#cmNueva').click();
  if(cliente?.nombre&&!actual)$('#cmDestinatario').value=cliente.nombre;
 });
+
+// ===== Cotización rápida con prendas del catálogo (JP, 25-nov-2026) =====
+// «Que la cotización rápida sea para los dos tipos»: cada partida se puede ligar a una prenda del catálogo. Se proponen
+// concepto, descripción, render del color, costo (tramo de la cantidad + personalización) y precio con el margen. Costo y
+// precio vacíos toman lo propuesto; lo que se escriba manda. Sin prenda ligada, la partida es la de siempre (a mano y foto).
+const etiquetasCat=new Map();
+const etiquetaCat=p=>nombreDe(p)+' · '+(p.skuProveedor?p.skuProveedor+' · ':'')+p.sku;
+function opcionesRapida(){
+ etiquetasCat.clear();const lista=catalogo.filter(p=>p.activo!==false||p.soloCotizar);
+ for(const p of lista)etiquetasCat.set(etiquetaCat(p),p);
+ $('#crCatalogo').innerHTML=lista.map(p=>`<option value="${esc(etiquetaCat(p))}"></option>`).join('');
+}
+// s: lo guardado de la partida al abrir una cotización; sin s es una prenda recién elegida.
+function ligarCatalogo(r,p,s=null){
+ const el=nodoR(r);if(!el||!datos)return;
+ const campo=k=>el.querySelector('[data-cr="'+k+'"]'),hay=(sel,v)=>[...sel.options].some(o=>o.value===v);
+ r.cat={p};el.querySelector('[data-cr-buscar]').value=etiquetaCat(p);
+ campo('color').innerHTML=(p.colores||[]).map(id=>`<option value="${esc(id)}">${esc(nombreColor(id))}</option>`).join('')||'<option value="">Por confirmar</option>';
+ campo('tecnica').innerHTML='<option value="">Sin personalización</option>'+(p.tecnicas||[]).map(t=>`<option value="${esc(t)}">${esc(tecnicas[t]||t)}</option>`).join('');
+ const margen=datos.margen==null?'':String(datos.margen/100);
+ if(s){
+  if(s.color&&hay(campo('color'),s.color))campo('color').value=s.color;
+  if(hay(campo('tecnica'),s.tecnica||''))campo('tecnica').value=s.tecnica||'';
+  campo('ancho').value=s.ancho??numero(MEDIDA_INICIAL);campo('alto').value=s.alto??numero(MEDIDA_INICIAL);campo('margen').value=s.margen??margen;
+  // El precio que salió del margen se conserva como se cotizó aunque cambien los costos (se borra para recalcular).
+  if(campo('precio').value===''&&s.precioCotizado)campo('precio').value=s.precioCotizado;
+ }else{
+  campo('ancho').value=numero(MEDIDA_INICIAL);campo('alto').value=numero(MEDIDA_INICIAL);campo('margen').value=margen;
+  // Costo y precio escritos para otro artículo no pasan a la prenda nueva.
+  campo('costo').value='';campo('precio').value='';
+  const c=campo('concepto'),d=campo('descripcion');
+  if(!c.value.trim()||c.value===r.auto.concepto)c.value=nombreDe(p);
+  if(!d.value.trim()||d.value===r.auto.descripcion)d.value=descripcionCatalogo({colorNombre:nombreColor(campo('color').value),tecnica:campo('tecnica').value});
+ }
+ // Lo propuesto: si el equipo no lo cambia, se sigue actualizando con el color y la técnica.
+ r.auto={concepto:nombreDe(p),descripcion:descripcionCatalogo({colorNombre:nombreColor(campo('color').value),tecnica:campo('tecnica').value})};
+ el.querySelector('[data-cr-cat]').hidden=false;el.querySelector('[data-cr=desligar]').hidden=false;
+ void vistaCatalogo(r);
+}
+function desligarCatalogo(r){
+ const el=nodoR(r);if(!el)return;r.cat=null;r.vistaTurno++;r.vista=null;r.auto={};
+ el.querySelector('[data-cr-cat]').hidden=true;el.querySelector('[data-cr=desligar]').hidden=true;el.querySelector('[data-cr-buscar]').value='';
+ el.querySelector('[data-cr=costo]').placeholder='Opcional';el.querySelector('[data-cr=precio]').placeholder='0.00';
+ pintarFotoRapida(r);
+}
+function calculoCatalogo(r,cantidad){
+ const el=nodoR(r),v=k=>el.querySelector('[data-cr="'+k+'"]').value.trim(),nombre=nombreRapida(r),p=r.cat.p;
+ const num=(k,error)=>{if(!v(k))return null;try{return decimal(v(k));}catch{throw Error(error);}};
+ const margen=num('margen','Revisa el margen de '+nombre+'.');if(margen!=null&&margen>9999)throw Error('El margen de '+nombre+' debe ser menor a 100%.');
+ const producto={...p,colores:(p.colores||[]).map(nombreColor)};
+ return {...costoCatalogo(producto,datos.config,{cantidad,color:nombreColor(v('color')),tecnica:v('tecnica'),ancho:num('ancho','Revisa la medida del logo de '+nombre+'.'),alto:num('alto','Revisa la medida del logo de '+nombre+'.'),margen}),margen};
+}
+function pintarCatalogo(r,a){
+ if(!a)return;const el=nodoR(r);
+ el.querySelector('[data-cr=costo]').placeholder=a.costo==null?'Escríbelo':numero(a.costo);
+ el.querySelector('[data-cr=precio]').placeholder=a.sugerido==null?'Escribe el precio':numero(a.sugerido);
+ el.querySelector('[data-cr-medida]').hidden=!a.porArea;
+}
+function detalleCatalogo(r,a){
+ const el=nodoR(r),escrito=k=>el.querySelector('[data-cr="'+k+'"]').value.trim()!=='',t=el.querySelector('[data-cr=tecnica]').value,partes=[];
+ if(!escrito('costo')){
+  partes.push(a.prenda==null?'falta el costo de la prenda en Costos':'prenda '+pesos(a.prenda)+(a.tallas?' ('+a.tallas+(a.volumen?', '+a.volumen.toLocaleLowerCase('es'):'')+')':''));
+  if(t)partes.push(a.personalizacion==null?(tecnicas[t]||t)+' sin tarifa en Costos: escribe el costo':(tecnicas[t]||t)+' '+pesos(a.personalizacion));
+  if(a.variasTallas)partes.push('las tallas grandes cuestan más');
+ }
+ if(!escrito('precio'))partes.push(a.sugerido==null?(a.margen==null?'escribe el margen o el precio':'escribe el precio'):'precio con margen '+(a.margen/100).toLocaleString('es-MX')+'%');
+ return 'Del catálogo: '+partes.join(' · ');
+}
+// Render del catálogo pintado del color elegido; una foto subida a la partida manda sobre él.
+async function vistaCatalogo(r){
+ const el=nodoR(r);if(!el||!r.cat)return;
+ const turno=++r.vistaTurno,session=epoca,p=r.cat.p,id=el.querySelector('[data-cr=color]').value,col=datos.colores.find(c=>c.id===id),propia=p.fotosColor?.[id];
+ const src=propia||p.fotoRender||p.foto;
+ if(src&&window.ZR){
+  try{const img=await window.ZR.cargar(src);if(turno!==r.vistaTurno||session!==epoca||!nodoR(r))return;
+   r.vista=window.ZR.tenir(img,propia||!col?null:col.hex,600,p.fotoColor?datos.colores.find(c=>c.id===p.fotoColor)?.hex:null,p.acabadosFijos||null);}
+  catch{if(turno===r.vistaTurno)r.vista=null;}
+ }else r.vista=null;
+ if(turno===r.vistaTurno)pintarFotoRapida(r);
+}
+$('#crFilas').addEventListener('input',e=>{
+ if(!e.target.matches('[data-cr-buscar]'))return;
+ const r=rapidaDe(e.target),p=etiquetasCat.get(e.target.value);if(r&&p&&r.cat?.p!==p)ligarCatalogo(r,p);
+});
+$('#crFilas').addEventListener('change',e=>{
+ const r=rapidaDe(e.target);if(!r)return;
+ if(e.target.matches('[data-cr-buscar]')){
+  const texto=e.target.value.trim(),p=etiquetasCat.get(e.target.value);
+  if(p){if(r.cat?.p!==p)ligarCatalogo(r,p);}else if(!texto){if(r.cat)desligarCatalogo(r);}else avisar('Elige la prenda de la lista del catálogo.');
+  return;
+ }
+ if(!r.cat||!e.target.matches('[data-cr=color],[data-cr=tecnica]'))return;
+ const el=nodoR(r),d=el.querySelector('[data-cr=descripcion]'),nueva=descripcionCatalogo({colorNombre:nombreColor(el.querySelector('[data-cr=color]').value),tecnica:el.querySelector('[data-cr=tecnica]').value});
+ if(!d.value.trim()||d.value===r.auto.descripcion)d.value=nueva;r.auto.descripcion=nueva;
+ if(e.target.matches('[data-cr=color]'))void vistaCatalogo(r);
+});
+$('#crFilas').addEventListener('click',e=>{const b=e.target.closest('button[data-cr=desligar]'),r=b&&rapidaDe(b);if(!r)return;desligarCatalogo(r);marcarSucio();actualizarRapidas();avisar('La partida ya no está ligada al catálogo: escríbela a mano.');});
