@@ -47,55 +47,63 @@ module.exports=async function verificarRapidaCatalogo(page,{base,capturas}={}){
   await page.evaluate(()=>document.querySelector('#cotizarRapido').click());await esperar(async()=>await page.locator('#cmCampos:not([disabled])').count()===1,'cargar costos');
   await esperar(async()=>await page.locator('#cmRapida').isVisible(),'abrir la rápida desde + Cotizar');
   const etiqueta=await page.evaluate(()=>document.querySelector('#crCatalogo option')?.value);assert.match(etiqueta,/Gorra 6 paneles · GOR-6P · ZN-GO-001/);
+  const rango=(n,k,c)=>fila(n).locator('[data-escala]').nth(k).locator('[data-e="'+c+'"]'),valores=async(n,c)=>{const out=[];for(let k=0;k<await fila(n).locator('[data-escala]').count();k++)out.push(await rango(n,k,c).inputValue());return out;};
   await fila(0).locator('[data-cr-buscar]').fill(etiqueta);
   await esperar(async()=>await fila(0).locator('[data-cr-cat]').isVisible(),'ligar la prenda');
   assert.equal(await campo(0,'concepto').inputValue(),'Gorra 6 paneles');assert.match(await campo(0,'descripcion').inputValue(),/ · Sin personalización$/);
   assert.equal(await campo(0,'margen').inputValue(),'30');
-  assert.equal(await campo(0,'costo').getAttribute('placeholder'),'100.00');assert.equal(await campo(0,'precio').getAttribute('placeholder'),'143.00','100 / 0.70 a peso cerrado');
+  // Los rangos del proveedor quedan como campos normales con costo y precio propuestos.
+  assert.deepEqual(await valores(0,'desde'),['1','50']);assert.deepEqual(await valores(0,'hasta'),['49','']);
+  assert.deepEqual(await valores(0,'costo'),['100.00','80.00']);assert.deepEqual(await valores(0,'precio'),['143.00','115.00']);
   await page.waitForFunction(()=>!document.querySelector('#crFilas .cr-fila canvas').hidden);
-  await campo(0,'cantidad').fill('10');assert.match(await importe(0),/Importe \$1,430\.00.*utilidad \$430\.00.*Del catálogo: prenda \$100\.00/);
   await campo(0,'tecnica').selectOption('bordado');
   assert.match(await campo(0,'descripcion').inputValue(),/ · Bordado$/,'la descripción propuesta sigue a la técnica');
-  assert.equal(await campo(0,'costo').getAttribute('placeholder'),'140.00');assert.equal(await campo(0,'precio').getAttribute('placeholder'),'200.00');
-  await campo(0,'cantidad').fill('60');assert.equal(await campo(0,'costo').getAttribute('placeholder'),'120.00','con 60 piezas aplica el tramo de 50 o más');
-  await campo(0,'cantidad').fill('10');
-  // Todo se puede cambiar: precio y descripción escritos mandan.
-  await campo(0,'precio').fill('250');await campo(0,'descripcion').fill('Bordado frontal, color a elegir');
-  assert.match(await importe(0),/Importe \$2,500\.00.*utilidad \$1,100\.00/);
-  await campo(0,'color').selectOption({index:1});assert.equal(await campo(0,'descripcion').inputValue(),'Bordado frontal, color a elegir','no pisa lo escrito');
-  // Una partida a mano en la misma cotización.
+  assert.deepEqual(await valores(0,'costo'),['140.00','120.00']);assert.deepEqual(await valores(0,'precio'),['200.00','172.00']);
+  // «Nos cuesta diferente»: el costo escrito manda y el precio sugerido lo sigue; el precio escrito ya no se toca.
+  await rango(0,0,'costo').fill('90');assert.equal(await rango(0,0,'precio').inputValue(),'129.00');
+  await rango(0,1,'precio').fill('150');
+  await campo(0,'margen').fill('40');assert.deepEqual(await valores(0,'precio'),['150.00','150']);assert.deepEqual(await valores(0,'costo'),['90','120.00']);
+  assert.match(await fila(0).locator('[data-escala]').nth(0).locator('[data-e-nota]').textContent(),/Utilidad \$60\.00 \/ pza \(40%\)/);
+  // Agregar y quitar un rango.
+  await campo(0,'agregar-rango').click();assert.equal(await fila(0).locator('[data-escala]').count(),3);
+  await rango(0,2,'desde').fill('100');assert.equal(await rango(0,2,'costo').inputValue(),'120.00','el costo propuesto usa las piezas «De» del rango');
+  await rango(0,2,'costo').fill('70');assert.equal(await rango(0,2,'precio').inputValue(),'117.00');
+  await fila(0).locator('[data-escala]').nth(2).locator('[data-cr=quitar-rango]').click();assert.equal(await fila(0).locator('[data-escala]').count(),2);
+  await campo(0,'descripcion').fill('Bordado frontal, color a elegir');await campo(0,'color').selectOption({index:1});assert.equal(await campo(0,'descripcion').inputValue(),'Bordado frontal, color a elegir','no pisa lo escrito');
+  assert.match(await importe(0),/el cliente ve los 2 precios por rango/);
+  // Una partida escrita a mano: costo y margen sugieren el precio.
   await page.locator('#crAgregar').click();assert.equal(await fila(1).locator('[data-cr-cat]').isHidden(),true);
-  await campo(1,'concepto').fill('Termo de acero 500 ml');await campo(1,'cantidad').fill('10');await campo(1,'precio').fill('85');
-  assert.match(await page.locator('#crTotales').textContent(),/Total \$3,886\.00/);
+  await campo(1,'concepto').fill('Termo de acero 500 ml');await rango(1,0,'costo').fill('50');assert.equal(await rango(1,0,'precio').inputValue(),'72.00');
+  await campo(1,'cantidad').fill('10');assert.match(await importe(1),/Importe \$720\.00.*utilidad \$220\.00/);
+  assert.match(await page.locator('#crTotales').textContent(),/Sin total/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'sin scroll horizontal');
   if(capturas)await page.locator('#cmRapida').screenshot({path:capturas+'/rapida-catalogo-'+width+'.png'});
   await page.locator('#cmGuardar').click();await esperar(()=>filas.size===1,'guardar');
   const [g]=[...filas.values()],d0=g.datos.modelos[0];
-  assert.equal(d0.catalogo.sku,SKU);assert.equal(d0.catalogo.tecnica,'bordado');assert.equal(d0.precio,'250');assert.equal(d0.costo,'');
-  assert.equal(g.comercial.partidas[0].precio,25000);assert.equal(g.comercial.partidas[0].descripcion,'Bordado frontal, color a elegir');
-  assert.ok(!JSON.stringify(g.comercial).includes('14000')&&!JSON.stringify(g.comercial).includes('GOR-6P'),'sin costo ni código del proveedor en lo comercial');
-  // Reabrir: vuelve ligada, con su técnica y el precio escrito.
-  await abrirPrimera();
-  await esperar(async()=>await page.locator('#crFilas .cr-fila').count()===2&&await fila(0).locator('[data-cr-cat]').isVisible(),'reabrir');
-  assert.equal(await fila(0).locator('[data-cr-buscar]').inputValue(),etiqueta);assert.equal(await campo(0,'tecnica').inputValue(),'bordado');assert.equal(await campo(0,'precio').inputValue(),'250');
-  // Precio vacío = el del margen; al guardar queda anotado y al reabrir se respeta.
-  await campo(0,'precio').fill('');assert.match(await importe(0),/Importe \$2,000\.00/);
-  await page.locator('#cmGuardar').click();await esperar(()=>[...filas.values()][0].version===2,'guardar con precio del margen');
-  assert.equal([...filas.values()][0].datos.modelos[0].catalogo.precioCotizado,'200.00');
-  await page.locator('#cmVolver').click();await page.locator('#cmLista [data-duplicar]').first().waitFor();await page.waitForTimeout(400);await page.locator('#cmLista [data-duplicar]').first().click();
-  await esperar(async()=>await page.locator('#cmForm').isVisible()&&await campo(0,'precio').count()&&await campo(0,'precio').inputValue()==='200.00','reabrir (duplicar) con el precio cotizado');
-  // PDF con el render del catálogo.
+  assert.equal(d0.catalogo.sku,SKU);assert.equal(d0.catalogo.tecnica,'bordado');assert.equal(d0.escalas.length,2);
+  assert.deepEqual(d0.escalas.map(e=>[e.costo,e.precio,e.autoCosto,e.autoPrecio]),[['90','150.00',false,true],['120.00','150',true,false]]);
+  assert.deepEqual(g.comercial.partidas[0].escalas,[{rango:'1 a 49 pzas',precio:15000},{rango:'50 pzas o más',precio:15000}]);
+  assert.equal(g.comercial.partidas[1].precio,7200);assert.equal(g.comercial.total,null);
+  assert.ok(!JSON.stringify(g.comercial).includes('GOR-6P')&&!JSON.stringify(g.comercial).includes('9000'),'sin costo ni código del proveedor en lo comercial');
+  // PDF con el render y los precios por rango.
   const [descarga]=await Promise.all([page.waitForEvent('download'),page.locator('#cmPDF').click()]);
   const pdf=fs.readFileSync(await descarga.path());assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert.ok(pdf.length>30000,'el PDF lleva la imagen de la prenda');
   if(capturas)fs.writeFileSync(capturas+'/rapida-catalogo-'+width+'.pdf',pdf);
-  // Desligar: vuelve a ser una partida a mano.
-  await campo(0,'desligar').click();assert.equal(await fila(0).locator('[data-cr-cat]').isHidden(),true);assert.equal(await fila(0).locator('[data-cr-buscar]').inputValue(),'');
+  // Reabrir desde el servidor (Duplicar): mismos precios; lo propuesto se sigue actualizando, lo escrito no.
+  await page.locator('#cmVolver').click();await page.locator('#cmLista [data-duplicar]').first().waitFor();await page.waitForTimeout(400);await page.locator('#cmLista [data-duplicar]').first().click();
+  await esperar(async()=>await page.locator('#cmForm').isVisible()&&await fila(0).locator('[data-cr-cat]').isVisible(),'reabrir');
+  assert.equal(await fila(0).locator('[data-cr-buscar]').inputValue(),etiqueta);assert.deepEqual(await valores(0,'precio'),['150.00','150']);assert.equal(await campo(0,'margen').inputValue(),'40');
+  await campo(0,'margen').fill('50');assert.deepEqual(await valores(0,'precio'),['180.00','150']);
+  await campo(0,'cantidad').fill('60');assert.match(await importe(0),/Importe \$9,000\.00 \(60 pzas × \$150\.00\)/,'con cantidad aplica el rango de 50 o más');
+  await campo(0,'cantidad').fill('');
+  // Quitar la prenda del catálogo: los precios se quedan.
+  await campo(0,'desligar').click();assert.equal(await fila(0).locator('[data-cr-cat]').isHidden(),true);assert.deepEqual(await valores(0,'precio'),['180.00','150']);
   // «Cotizar este modelo» desde Catálogo, sin cotización abierta: abre una rápida con la prenda ligada.
   page.once('dialog',dl=>dl.accept());await page.locator('#cmVolver').click();
   await page.evaluate(sku=>dispatchEvent(new CustomEvent('zain:cotizar-modelo',{detail:{sku}})),SKU);
   await esperar(async()=>await page.locator('#cmRapida').isVisible()&&await page.locator('#crFilas .cr-fila').count()===1&&await fila(0).locator('[data-cr-cat]').isVisible(),'cotizar desde Catálogo');
-  assert.equal(await campo(0,'concepto').inputValue(),'Gorra 6 paneles');
-  resultados.push({width,total:g.comercial.total,pdfBytes:pdf.length});
+  assert.equal(await campo(0,'concepto').inputValue(),'Gorra 6 paneles');assert.deepEqual(await valores(0,'costo'),['100.00','80.00']);
+  resultados.push({width,rangos:g.comercial.partidas[0].escalas.length,pdfBytes:pdf.length});
  }
  assert.deepEqual(errores,[]);assert.ok(red.every(h=>h==='fonts.googleapis.com'||h==='fonts.gstatic.com'),'Solo fuentes externas bloqueadas: '+red.join(','));
  return {resultados,errores,serviciosReales:0};

@@ -18,12 +18,19 @@ export async function pdfModelo(id,api){
  if(x.comercial.tipo==='rapida'){
   const imagenes={},urls=[];
   try{
+   const productos=[...(c.productos||[]),...(c.productosHistoricos||[])];
    for(const [i,s] of (x.datos?.modelos||[]).entries()){
+    // Prenda del catálogo sin foto propia (25-nov-2026): su render pintado del color; si no se puede, va sin imagen.
+    if(!s.foto?.objeto&&s.catalogo?.sku){
+     const p=productos.find(p=>p.sku===s.catalogo.sku),propia=p?.fotosColor?.[s.catalogo.color],src=p&&(propia||p.fotoRender||p.foto),col=c.colores.find(k=>k.id===s.catalogo.color);
+     if(src)try{const img=await window.ZR.cargar(src),t=window.ZR.tenir(img,propia||!col?null:col.hex,1000,p.fotoColor?c.colores.find(k=>k.id===p.fotoColor)?.hex:null,p.acabadosFijos||null),cv=document.createElement('canvas');cv.width=t.width;cv.height=t.height;const g=cv.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,cv.width,cv.height);g.drawImage(t,0,0);imagenes[i]={src:cv.toDataURL('image/jpeg',.9),referencia:false};cv.width=cv.height=0;}catch{}
+     continue;
+    }
     if(!s.foto?.objeto)continue;const url=x.fotosUrl?.[s.foto.objeto];if(!url)throw Error('No se pudo cargar la foto de una partida. Abre la cotización y súbela de nuevo.');
     const res=await fetch(url,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('No se pudo cargar la foto de una partida. Abre la cotización y súbela de nuevo.');
     const u=URL.createObjectURL(await res.blob());urls.push(u);imagenes[i]={src:u,referencia:false};
    }
-   const [{documentoRapida,textosPDF},{crearPDF}]=await Promise.all([import('./cotizacion-rapida.js?v=1'),import('./cotizacion-pdf.js?v=22')]);
+   const [{documentoRapida,textosPDF},{crearPDF}]=await Promise.all([import('./cotizacion-rapida.js?v=2'),import('./cotizacion-pdf.js?v=23')]);
    const blob=await crearPDF(documentoRapida(x.comercial),{folio:x.folio,imagenes,textos:textosPDF(x.comercial)});
    return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
   }finally{urls.forEach(u=>URL.revokeObjectURL(u));}
@@ -53,7 +60,7 @@ export async function pdfModelo(id,api){
    imagenes[i]={src:canvas.toDataURL('image/png'),nota:(s.tecnica?(logo?'Logo en '+(z?.nombre||'zona por confirmar'):'Logo pendiente · referencia del modelo'):'Referencia')+' · '+col.nombre};
   }finally{canvas.width=canvas.height=0;}
  }
- const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=12'),{crearPDF}=await import('./cotizacion-pdf.js?v=22');
+ const {adaptarModelos}=await import('./cotizacion-modelos-pdf.js?v=12'),{crearPDF}=await import('./cotizacion-pdf.js?v=23');
  const q={...x.comercial,folio:x.folio},a=adaptarModelos(q,imagenes),blob=await crearPDF(a.cotizacion,{sinCantidades:true,folio:x.folio,imagenes:a.imagenes});
  return prepararAdjunto(new File([blob],nombrePDF(x.folio),{type:'application/pdf'}),{tipo:'modelo',id:x.id,version:x.version});
 }
@@ -62,7 +69,7 @@ export async function pdfPedido(id,api){
  const q=c?.publicada;if(!q?.partidas?.length)throw Error('Este pedido todavía no tiene una cotización publicada.');
  const imagenes={};
  for(const f of p.archivos||[]){if(f.kind!=='render')continue;const d=await api('archivo',{id,item:f.item,kind:'render'});imagenes[f.item]={src:d.url,referencia:false};}
- const {prepararImagenes}=await import('./cotizacion-imagen.js?v=6'),{crearPDF}=await import('./cotizacion-pdf.js?v=22');
+ const {prepararImagenes}=await import('./cotizacion-imagen.js?v=6'),{crearPDF}=await import('./cotizacion-pdf.js?v=23');
  const blob=await crearPDF(q,{folio:p.folio,imagenes:await prepararImagenes(q,imagenes)});
  return prepararAdjunto(new File([blob],nombrePDF(p.folio),{type:'application/pdf'}),{tipo:'pedido',id,version:q.revision});
 }

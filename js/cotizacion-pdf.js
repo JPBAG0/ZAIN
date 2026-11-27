@@ -54,9 +54,11 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  const svg=fill=>'data:image/svg+xml;base64,'+btoa(logo.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" width="740" height="300" fill="'+fill+'" '));
  const logoBlanco=await jpeg(svg('#ffffff'),740,'#111113');
  // Sin cantidades: el precio por pieza más bajo sustituye al total como cifra principal.
- const desde=sinCantidades?Math.min(...q.partidas.flatMap(p=>(p.preciosTalla||[]).map(g=>g.precio)).filter(Number.isSafeInteger)):null;
+ // Cotización rápida sin total (precios por pieza o por volumen, 26-nov-2026): también se muestra «Desde».
+ const sinTotal=!!textos&&q.total==null;
+ const desde=sinCantidades||sinTotal?Math.min(...q.partidas.flatMap(p=>[p.precio,...(p.preciosTalla||[]).map(g=>g.precio)]).filter(Number.isSafeInteger)):null;
  const unidades=q.partidas.reduce((n,p)=>n+(p.piezas||0),0),pagos=q.pagos,pct=pagos?pagos.anticipo/100:null,anticipo=pagos?anticipoDe(q.total,pagos):null;
- const impuestoTxt=q.impuesto==null?'Impuesto por definir':q.impuesto===0?'Sin IVA · MXN':sinCantidades?'Más IVA '+q.impuesto/100+'% · MXN':'Impuesto incluido · MXN';
+ const impuestoTxt=q.impuesto==null?'Impuesto por definir':q.impuesto===0?'Sin IVA · MXN':sinCantidades||sinTotal?'Más IVA '+q.impuesto/100+'% · MXN':'Impuesto incluido · MXN';
  // Portada
  fondo();doc.setFillColor(...tinta);doc.rect(0,0,210,64,'F');
  doc.addImage(logoBlanco.src,'JPEG',m,10,29,11.8,'marca-blanca');etq('Uniformes · Bordado · Serigrafía · DTF',m,26,gris);
@@ -65,7 +67,7 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
  doc.setDrawColor(52,52,58);doc.setLineWidth(.25);doc.line(m,31,right,31);
  label(textos?textos.titulo1:sinCantidades?'Tu cotización,':'Tu pedido,',m,41.5,21,true,blanco);label(textos?textos.titulo2:sinCantidades?'por modelo y talla.':'listo para producir.',m,50.5,21,true,lila);
  const para=lines('Preparada para '+(q.destinatario||'Tu equipo')+(textos?(unidades?' · '+unidades.toLocaleString('es-MX')+(unidades===1?' pieza':' piezas'):''):sinCantidades?' · Precios por talla':' · '+unidades.toLocaleString('es-MX')+(unidades===1?' pieza':' piezas')+' en '+q.partidas.length+(q.partidas.length===1?' selección':' selecciones')),118,8.5);label(para[0],m,58,8.5,false,[201,201,207]);
- etq(sinCantidades?'Desde':'Total',right,41,gris,'right');label(sinCantidades?numero(desde)+' / pza':numero(q.total),right,50.5,19,true,blanco,'right');label(impuestoTxt,right,56.5,7.5,false,gris,'right');
+ etq(sinCantidades||sinTotal?'Desde':'Total',right,41,gris,'right');label(sinCantidades||sinTotal?(Number.isFinite(desde)?numero(desde)+' / pza':'Por definir'):numero(q.total),right,50.5,19,true,blanco,'right');label(impuestoTxt,right,56.5,7.5,false,gris,'right');
  cinta(64);
  // Datos rápidos
  y=65.6;const celdas=[['Emisión',borrador||!q.publicada_at?'Pendiente de publicación':fecha(q.publicada_at)],['Válida hasta',fecha(q.vigencia,true)],['Entrega',q.plazo||'Por acordar'],sinCantidades?['Cantidades','Por definir']:['Anticipo',pct===null?'Por acordar':pct+'% para iniciar']];
@@ -98,13 +100,13 @@ export async function crearPDF(cotizacion,{folio=cotizacion.folio||'',borrador=f
   // Tallas con distinto costo: un renglón por grupo dentro de la misma partida.
   if(unitarias){let uy=gy;for(const g of unitarias){g.lineas.forEach((l,j)=>label(l,ix,uy+j*4.5,8,false,tinta2,'left',true));label(numero(g.precio)+' / pza',ix+iw,uy,9,true,tinta,'right');uy+=g.lineas.length*4.5;}}
   else (grupos||[{piezas:p.piezas,precio:p.precio}]).forEach((g,k)=>{ox=ix;ly=gy+k*4.5;if(g.tallas){parte(g.tallas,tinta2);ox=Math.max(ox+2,ix+22);}if(g.piezas==null){parte(numero(g.precio),tinta,true);parte(' / pza',tenue);return;}parte(String(g.piezas),tinta,true);parte(g.piezas===1?' pza × ':' pzas × ',tenue);parte(numero(g.precio),tinta,true);if(p.descuento&&k===(grupos?grupos.length-1:0))parte('  - '+p.descuento/100+'%',cobaltoTxt);});
-  if(!sinCantidades)label(numero(p.importe),ix+iw,cy+.5,11.5,true,tinta,'right');
+  if(!sinCantidades&&!(textos&&p.importe==null))label(numero(p.importe),ix+iw,cy+.5,11.5,true,tinta,'right');
   y+=h+3;
  });
  // Cargos únicos (ponchado por logo): partida propia, una vez por pedido.
  for(const c of q.cargos||[]){espacio(17);caja(m,y,width,14);etq('Cargo único · una vez',m+5,y+5.5);label(lines(c.concepto,width-60,10,true)[0],m+5,y+10.5,10,true);label(numero(c.importe),right-5,y+9.5,11.5,true,tinta,'right');y+=17;}
  // Resumen y pago. Sin cantidades no hay importes que resumir: el anticipo va en «Cómo seguimos».
- if(!sinCantidades){
+ if(!sinCantidades&&!sinTotal){
  const filas=sinCantidades?[['Precios','Por pieza · MXN'],['IVA',q.impuesto==null?'Por definir':q.impuesto?'Más '+q.impuesto/100+'%':'Sin IVA'],...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0]+' (una vez)',numero(c.importe)]),['Válida hasta',fecha(q.vigencia,true)]]:[['Productos',q.bruto],...(q.descuento?[['Descuento',-q.descuento,true]]:[]),...(q.cargos||[]).map(c=>[lines(c.concepto,50,8)[0],c.importe]),...(textos?.sinEnvio&&q.envio==null?[]:[['Envío',q.envio]]),['Subtotal',q.subtotal],[q.impuesto==null?'Impuesto por definir':'Impuesto '+q.impuesto/100+'%',q.impuestos]];
  const instr=pagos?.instrucciones?lines(pagos.instrucciones,80,7).slice(0,4):lines('Las condiciones de pago se acuerdan con ZAIN.',80,7);
  const bh=Math.max(12+filas.length*4.8+14,pagos?39+instr.length*3.1:22);

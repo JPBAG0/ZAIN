@@ -149,11 +149,11 @@ module.exports=async function verificarCatalogoPrendas(page,{base,capturas}={}){
    await page.locator('#catVerPrendas').click();
    await page.locator('#listaCatalogo [data-ficha="'+objetivo.id+'"]').click();await page.locator('#catFicha[open]').waitFor();
   }
-  // Cotizar este modelo: abre Cotizaciones con la prenda agregada aunque no esté en la web.
+  // Cotizar este modelo: abre la cotización rápida con la prenda ligada aunque no esté en la web (26-nov-2026).
   await page.locator('#catFichaCotizar').click();
   await page.locator('#seccionCotizaciones:not([hidden])').waitFor();
   await page.waitForFunction(n=>document.querySelector('#cmForm:not([hidden])')&&document.body.innerText.includes(n),objetivo.nombre);
-  assert.match(await page.locator('#cmModelo option:checked').innerText(),/solo cotizar/);
+  assert.match(await page.locator('#crFilas [data-cr-buscar]').first().inputValue(),new RegExp(objetivo.sku));
   await ancho('cotización');
   if(capturas)await page.screenshot({path:path.join(capturas,'catalogo-cotizar-'+width+'.png')});
   resultados.push({width,tarjetas:filas.length,soloCotizar:solo.length,objetivo:objetivo.sku});

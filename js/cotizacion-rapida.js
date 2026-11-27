@@ -19,6 +19,19 @@ export function importeLinea({cantidad,precio,descuento=0}){
  if(cantidad==null||precio==null)return null;
  const bruto=cantidad*precio;return bruto-Math.round(bruto*(descuento||0)/10000);
 }
+// Rangos de piezas (JP, 26-nov-2026: «de tantas a tantas piezas a este precio»). Una partida tiene uno o varios
+// {desde,hasta,precio,costo}; desde/hasta vacíos = cualquier cantidad. Texto corto para el PDF y la lista.
+export function textoRango({desde=null,hasta=null}){
+ if(desde!=null&&hasta!=null)return desde===hasta?desde+' pzas':desde+' a '+hasta+' pzas';
+ if(desde!=null)return desde+' pzas o más';
+ if(hasta!=null)return 'Hasta '+hasta+' pzas';
+ return '';
+}
+// El rango que aplica a una cantidad; sin cantidad, solo si hay un único rango.
+export function rangoDe(escalas,cantidad){
+ if(cantidad==null)return escalas.length===1?escalas[0]:null;
+ return escalas.find(e=>(e.desde??1)<=cantidad&&(e.hasta==null||cantidad<=e.hasta))||null;
+}
 export function comercialRapida(lineas,{folio='',destinatario='',impuesto=1600,vigencia='',plazo='',anticipo=null,concepto='',cargo=null,notas='',textos={}}={}){
  if(!Array.isArray(lineas)||!lineas.length)throw Error('Agrega al menos una partida.');
  if(lineas.length>20)throw Error('La cotización admite hasta 20 partidas.');
@@ -29,9 +42,22 @@ export function comercialRapida(lineas,{folio='',destinatario='',impuesto=1600,v
  const partidas=lineas.map((l,i)=>{
   const nombre=corto(l.concepto,150);if(!nombre)throw Error('Escribe el concepto de la partida '+(i+1)+'.');
   if(l.cantidad!=null&&!entero(l.cantidad,1,999999))throw Error('Revisa la cantidad de '+nombre+'.');
-  if(l.precio!=null&&!entero(l.precio))throw Error('Revisa el precio de '+nombre+'.');
   if(!entero(l.descuento||0,0,10000))throw Error('El descuento de '+nombre+' va de 0 a 100%.');
-  return {indice:i,nombre,descripcion:corto(l.descripcion,400),piezas:l.cantidad??null,precio:l.precio??null,descuento:l.descuento||0,importe:importeLinea(l)};
+  // Partidas de antes (un solo precio) = un rango sin límites.
+  const escalas=(Array.isArray(l.escalas)&&l.escalas.length?l.escalas:[{desde:null,hasta:null,precio:l.precio??null}]).map(e=>{
+   if(e.precio!=null&&!entero(e.precio))throw Error('Revisa el precio de '+nombre+'.');
+   if(e.desde!=null&&!entero(e.desde,1,999999)||e.hasta!=null&&!entero(e.hasta,1,999999))throw Error('Revisa las piezas de los rangos de '+nombre+'.');
+   if(e.desde!=null&&e.hasta!=null&&e.hasta<e.desde)throw Error('En '+nombre+', «hasta» debe ser mayor que «desde».');
+   return {desde:e.desde??null,hasta:e.hasta??null,precio:e.precio??null};
+  });
+  if(escalas.length>12)throw Error('Usa hasta 12 rangos en '+nombre+'.');
+  const aplica=rangoDe(escalas,l.cantidad??null);
+  if(l.cantidad!=null&&!aplica)throw Error('Ningún rango de '+nombre+' incluye '+l.cantidad+' piezas.');
+  const precio=aplica?.precio??null,importe=importeLinea({cantidad:l.cantidad??null,precio,descuento:l.descuento||0});
+  // Sin cantidad y con varios rangos, el cliente ve todos los precios por volumen.
+  const porVolumen=l.cantidad==null&&escalas.length>1;
+  return {indice:i,nombre,descripcion:corto(l.descripcion,400),piezas:l.cantidad??null,precio,descuento:l.descuento||0,importe,
+   ...(porVolumen?{escalas:escalas.map(e=>({rango:textoRango(e),precio:e.precio}))}:{})};
  });
  const completa=partidas.every(p=>p.importe!=null),suma=a=>a.reduce((s,n)=>s+n,0);
  const cargos=cargo?[{concepto:corto(concepto,120)||'Cargo único',importe:cargo}]:[];
@@ -44,7 +70,8 @@ export function comercialRapida(lineas,{folio='',destinatario='',impuesto=1600,v
 export function documentoRapida(q,{publicada_at=new Date().toISOString()}={}){
  return {destinatario:q.destinatario,publicada_at,vigencia:q.vigencia,plazo:q.plazo,condiciones:q.notas,pagos:q.anticipo==null?null:{anticipo:q.anticipo,instrucciones:''},
   cargos:q.cargos||[],impuesto:q.impuesto,bruto:q.bruto,descuento:q.descuento,envio:null,subtotal:q.subtotal,impuestos:q.impuestos,total:q.total,
-  partidas:q.partidas.map(p=>({indice:p.indice,sku:'',nombre:p.nombre,color:p.descripcion,tecnica:'',zona:'',cm:'',tallas:'',piezas:p.piezas,precio:p.precio,descuento:p.descuento,importe:p.importe}))};
+  partidas:q.partidas.map(p=>({indice:p.indice,sku:'',nombre:p.nombre,color:p.descripcion,tecnica:'',zona:'',cm:'',tallas:'',piezas:p.piezas,precio:p.precio,descuento:p.descuento,importe:p.importe,
+   ...(p.escalas?{preciosTalla:p.escalas.map(e=>({tallas:e.rango,piezas:null,precio:e.precio}))}:{})}))};
 }
 // Lo que pide crearPDF para usar los textos de la cotización rápida.
 export function textosPDF(q){
@@ -55,7 +82,7 @@ export function textosPDF(q){
 }
 export function textoRapida(q){
  const vence=q.vigencia?new Date(q.vigencia+'T12:00:00Z').toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Mexico_City'}):'';
- const lineas=q.partidas.map((p,i)=>[(i+1)+'. '+p.nombre,p.descripcion,p.piezas!=null&&p.precio!=null?p.piezas+' pzas × '+pesos(p.precio)+(p.descuento?' − '+p.descuento/100+'%':'')+' = '+pesos(p.importe):p.precio!=null?pesos(p.precio)+' / pieza':'Precio pendiente'].filter(Boolean).join('\n   '));
+ const lineas=q.partidas.map((p,i)=>[(i+1)+'. '+p.nombre,p.descripcion,p.escalas?p.escalas.map(e=>(e.rango?e.rango+': ':'')+(e.precio==null?'precio pendiente':pesos(e.precio)+' / pieza')).join('\n   '):p.piezas!=null&&p.precio!=null?p.piezas+' pzas × '+pesos(p.precio)+(p.descuento?' − '+p.descuento/100+'%':'')+' = '+pesos(p.importe):p.precio!=null?pesos(p.precio)+' / pieza':'Precio pendiente'].filter(Boolean).join('\n   '));
  const totales=q.total==null?[]:[...(q.descuento?['Descuento: −'+pesos(q.descuento)]:[]),...q.cargos.map(c=>c.concepto+': '+pesos(c.importe)),'Subtotal: '+pesos(q.subtotal),(q.impuesto?'IVA '+q.impuesto/100+'%: ':'Sin IVA: ')+pesos(q.impuestos),'Total: '+pesos(q.total)];
  return ['ZAIN · Cotización'+(q.folio?' '+q.folio:''),q.destinatario?'Para: '+q.destinatario:'',lineas.join('\n\n'),totales.join('\n'),
   [vence?'Válida hasta el '+vence:'',q.plazo?'Entrega: '+q.plazo:'',q.anticipo!=null?'Anticipo '+q.anticipo/100+'%':''].filter(Boolean).join(' · '),q.notas].filter(Boolean).join('\n\n');

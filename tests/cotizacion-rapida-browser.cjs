@@ -42,6 +42,8 @@ module.exports=async function verificarCotizacionRapida(page,{base,capturas,foto
  });
  const esperar=async(cond,que)=>{for(let i=0;i<150;i++){if(cond())return;await page.waitForTimeout(100);}throw Error('No terminó: '+que+' · '+await page.locator('#cmEstado').textContent());};
  const fila=n=>page.locator('#crFilas .cr-fila').nth(n),campo=(n,k)=>fila(n).locator('[data-cr="'+k+'"]');
+ // Desde el 26-nov-2026 costo y precio van en el primer rango de piezas de la partida.
+ const rango=(n,k)=>fila(n).locator('[data-escala]').first().locator('[data-e="'+k+'"]');
  const resultados=[];
  for(const width of [390,1280]){
   filas.clear();almacen.clear();operaciones.length=0;
@@ -52,11 +54,11 @@ module.exports=async function verificarCotizacionRapida(page,{base,capturas,foto
   assert.equal(await page.locator('#crFilas .cr-fila').count(),1);assert.equal(await page.locator('#crTitulo1').inputValue(),'Tu cotización,');
   await page.locator('#cmDestinatario').fill('Cafetería de prueba');
   await campo(0,'concepto').fill('Termo de acero 500 ml');await campo(0,'descripcion').fill('Tampografía a 1 tinta, logo al frente');
-  await campo(0,'cantidad').fill('100');await campo(0,'precio').fill('85');await campo(0,'descuento').fill('10');await campo(0,'costo').fill('52');
+  await campo(0,'cantidad').fill('100');await rango(0,'costo').fill('52');await rango(0,'precio').fill('85');await campo(0,'descuento').fill('10');
   await fila(0).locator('[data-cr-foto]').setInputFiles({name:'termo.jpg',mimeType:'image/jpeg',buffer:imagen});
   await page.waitForFunction(()=>!document.querySelector('#crFilas .cr-fila canvas').hidden);
   assert.match(await fila(0).locator('[data-cr-importe]').textContent(),/Importe \$7,650\.00.*utilidad \$2,450\.00/);
-  await page.locator('#crAgregar').click();await campo(1,'concepto').fill('Taza de cerámica 11 oz');await campo(1,'descripcion').fill('Tampografía a 1 tinta');await campo(1,'cantidad').fill('50');await campo(1,'precio').fill('60');
+  await page.locator('#crAgregar').click();await campo(1,'concepto').fill('Taza de cerámica 11 oz');await campo(1,'descripcion').fill('Tampografía a 1 tinta');await campo(1,'cantidad').fill('50');await rango(1,'precio').fill('60');
   // Una partida de más: se agrega, se sube y se quita; las otras dos conservan su orden.
   await page.locator('#crAgregar').click();await campo(2,'concepto').fill('Partida de sobra');await campo(2,'subir').click();
   assert.equal(await campo(1,'concepto').inputValue(),'Partida de sobra');await campo(1,'quitar').click();
@@ -71,13 +73,13 @@ module.exports=async function verificarCotizacionRapida(page,{base,capturas,foto
   // Guardar
   await page.locator('#cmGuardar').click();await esperar(()=>filas.size===1,'guardar');
   const [g]=[...filas.values()];assert.equal(g.datos.tipo,'rapida');assert.equal(g.modelos,2);assert.equal(g.desde,6000);assert.equal(g.comercial.total,1276000);assert.equal(g.comercial.partidas[0].descuento,1000);
-  assert.ok(g.datos.modelos[0].foto&&!g.datos.modelos[1].foto);assert.equal(g.datos.modelos[0].costo,'52');assert.ok(!JSON.stringify(g.comercial).includes('5200'),'el costo no va en lo comercial');
+  assert.ok(g.datos.modelos[0].foto&&!g.datos.modelos[1].foto);assert.equal(g.datos.modelos[0].escalas[0].costo,'52');assert.ok(!JSON.stringify(g.comercial).includes('5200'),'el costo no va en lo comercial');
   assert.equal(g.datos.textos.titulo1,'Hola, Cafetería de prueba');
   // La lista y reabrir
   await page.locator('#cmVolver').click();await page.locator('#cmLista [data-abrir]').first().waitFor();
   assert.match(await page.locator('#cmLista').textContent(),/Rápida · 2 partidas · total \$12,760\.00/);
   await page.locator('#cmLista [data-abrir]').first().click();await page.waitForFunction(()=>document.querySelectorAll('#crFilas .cr-fila').length===2&&!document.querySelector('#crFilas .cr-fila canvas').hidden);
-  assert.equal(await campo(0,'precio').inputValue(),'85');assert.equal(await campo(1,'concepto').inputValue(),'Taza de cerámica 11 oz');assert.equal(await page.locator('#crTitulo1').inputValue(),'Hola, Cafetería de prueba');
+  assert.equal(await rango(0,'precio').inputValue(),'85');assert.equal(await campo(1,'concepto').inputValue(),'Taza de cerámica 11 oz');assert.equal(await page.locator('#crTitulo1').inputValue(),'Hola, Cafetería de prueba');
   assert.equal(await page.locator('#cmModelosPanel').isHidden(),true);
   // PDF
   const [descarga]=await Promise.all([page.waitForEvent('download'),page.locator('#cmPDF').click()]);
