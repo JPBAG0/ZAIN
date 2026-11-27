@@ -38,21 +38,23 @@ module.exports=async function verificarUtilidad(page,{base,capturas}={}){
   const tarjeta=page.locator('#cajaSaldos button[data-tarjeta="utilidad"].fin-kpi-clic');await tarjeta.waitFor();
   assert.match(await tarjeta.innerText(),/\$20,000\.00[\s\S]*JP \$12,240\.00 · García \$7,760\.00/);
   assert.equal(await page.locator('#cajaDesglose').count(),0,'cerrado al cargar');
-  assert.match(await page.locator('#cajaSaldos').innerText(),/Utilidad por cerrar: \$7,300\.00 en 2 pedidos aprobados/);
+  assert.match(await page.locator('#cajaSaldos').innerText(),/Próximo a repartir: \$7,300\.00 en 2 pedidos aprobados/);
   await tarjeta.click();
   const panel=page.locator('#cajaDesglose');await panel.waitFor();
   assert.equal(await page.locator('#cajaSaldos .fin-kpis [data-tarjeta="utilidad"]').getAttribute('aria-expanded'),'true');
   const t=await panel.innerText();
-  assert.match(t,/Le toca \$13,240\.00 · ya se le repartió \$1,000\.00/);assert.match(t,/Le toca \$7,760\.00 · ya se le repartió \$0\.00/);
-  assert.match(t,/ZAIN-FICTICIO-1[\s\S]*Taller ficticio[\s\S]*utilidad \$7,600\.00 · 50\/50/);
-  assert.match(t,/ZAIN-FICTICIO-2[\s\S]*JP 70% · García 30%/);
-  assert.match(t,/Gastos e ingresos generales/);assert.match(t,/Ya repartido a Juan Pablo/);
+  // Solo lo pendiente (JP): lo repartido cubre primero lo más antiguo; F2 quedó a medias y no salen repartos ni generales.
+  assert.doesNotMatch(t,/Le toca|Ya repartido a|Gastos e ingresos generales/);
+  assert.match(t,/Pedidos cerrados sin repartir · 2/);
+  const filasP=await panel.locator('.fin-util-lista').first().locator('.fin-util-fila').allInnerTexts();
+  assert.match(filasP[1],/ZAIN-FICTICIO-1[\s\S]*Taller ficticio[\s\S]*\$3,800\.00[\s\S]*\$3,800\.00/);
+  assert.match(filasP[2],/ZAIN-FICTICIO-2[\s\S]*ya se repartió una parte[\s\S]*\$8,440\.00[\s\S]*\$3,960\.00/);
   const total=await panel.locator('.fin-util-lista').first().locator('.fin-util-total').innerText();
-  assert.match(total,/Por repartir hoy[\s\S]*\$12,240\.00[\s\S]*\$7,760\.00/);
+  assert.match(total,/Falta repartir[\s\S]*\$12,240\.00[\s\S]*\$7,760\.00/);
   // Por cerrar: lo que falta cobrar, gastos ya registrados, utilidad hasta hoy; el que no tiene costo no se cuenta.
   assert.match(t,/ZAIN-FICTICIO-4[\s\S]*En producción[\s\S]*falta cobrar \$10,000\.00[\s\S]*Gastos registrados \$12,700\.00 · costo cotizado \$8,000\.00 · utilidad hasta hoy \$7,300\.00/);
   assert.match(t,/ZAIN-FICTICIO-5[\s\S]*Aceptado[\s\S]*sin costo cotizado ni gastos: no se cuenta/);
-  assert.match(t,/Utilidad por cerrar[\s\S]*falta cobrar \$15,000\.00 · 1 sin costo no se cuenta/);
+  assert.match(t,/Próximo a repartir[\s\S]*falta cobrar \$15,000\.00 · 1 sin costo no se cuenta/);
   assert.match(await panel.locator('.fin-util-futuro').innerText(),/\$15,890\.00[\s\S]*\$11,410\.00/,'por repartir más lo por cerrar');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'sin desbordamiento horizontal');
   if(capturas)await panel.screenshot({path:capturas+'/utilidad-'+width+'.png'});
