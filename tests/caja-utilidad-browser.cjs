@@ -35,13 +35,13 @@ module.exports=async function verificarUtilidad(page,{base,capturas}={}){
  for(const width of [390,1280]){
   await page.setViewportSize({width,height:width===390?844:800});await page.goto(base+'/gestion-zain.html');
   await page.locator(width===390?'#menuInferior [data-ir="verFinanzas"]':'#verFinanzas').click();
-  const tarjeta=page.locator('#cajaSaldos button[data-utilidad].fin-kpi-clic');await tarjeta.waitFor();
+  const tarjeta=page.locator('#cajaSaldos button[data-tarjeta="utilidad"].fin-kpi-clic');await tarjeta.waitFor();
   assert.match(await tarjeta.innerText(),/\$20,000\.00[\s\S]*JP \$12,240\.00 · García \$7,760\.00/);
-  assert.equal(await page.locator('#cajaUtilidad').count(),0,'cerrado al cargar');
+  assert.equal(await page.locator('#cajaDesglose').count(),0,'cerrado al cargar');
   assert.match(await page.locator('#cajaSaldos').innerText(),/Utilidad por cerrar: \$7,300\.00 en 2 pedidos aprobados/);
   await tarjeta.click();
-  const panel=page.locator('#cajaUtilidad');await panel.waitFor();
-  assert.equal(await page.locator('#cajaSaldos button.fin-kpi-clic').getAttribute('aria-expanded'),'true');
+  const panel=page.locator('#cajaDesglose');await panel.waitFor();
+  assert.equal(await page.locator('#cajaSaldos .fin-kpis [data-tarjeta="utilidad"]').getAttribute('aria-expanded'),'true');
   const t=await panel.innerText();
   assert.match(t,/Le toca \$13,240\.00 · ya se le repartió \$1,000\.00/);assert.match(t,/Le toca \$7,760\.00 · ya se le repartió \$0\.00/);
   assert.match(t,/ZAIN-FICTICIO-1[\s\S]*Taller ficticio[\s\S]*utilidad \$7,600\.00 · 50\/50/);
@@ -63,8 +63,8 @@ module.exports=async function verificarUtilidad(page,{base,capturas}={}){
   // Volver a Finanzas (se cierra la ficha del pedido que se abrió): tocar la tarjeta otra vez lo cierra.
   await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.querySelector('#ficha')?.open);
   await page.locator(width===390?'#menuInferior [data-ir="verFinanzas"]':'#verFinanzas').click();
-  await page.locator('#cajaSaldos button.fin-kpi-clic').click();
-  assert.equal(await page.locator('#cajaUtilidad').count(),0,'se cierra al tocar otra vez');
+  await page.locator('#cajaSaldos .fin-kpis [data-tarjeta="utilidad"]').click();
+  assert.equal(await page.locator('#cajaDesglose').count(),0,'se cierra al tocar otra vez');
   resultados.push({width,ok:true});
  }
  assert.deepEqual(errores,[]);

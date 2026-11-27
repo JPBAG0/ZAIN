@@ -50,3 +50,9 @@ node --test tests/caja.test.mjs
 - «Si se cerraran hoy, les tocaría»: lo por repartir más la utilidad por cerrar de cada socio.
 - El folio abre el pedido. `zain_caja_utilidad_detalle()` es solo lectura; si no estuviera en la base, la caja carga igual sin el desglose.
 - Pruebas: `tests/caja-utilidad-detalle.test.mjs` (PGlite: el desglose suma exactamente lo de `zain_caja_resumen`) y `tests/caja-utilidad-browser.cjs` (390 y 1280 px).
+
+## Todas las tarjetas se tocan (27-nov-2026)
+- Caja ZAIN, Oficina JP, Oficina García, Juan Pablo y García abren debajo «De dónde sale»: entradas, salidas y saldo, y los movimientos agrupados por tipo (cobros, gastos de pedidos, gastos generales, transferencias, reembolsos, repartos) con su subtotal; cada grupo se abre.
+- En los socios, lo que pagó de su bolsa suma (ZAIN le debe) y lo que recibió del negocio resta; los repartos no cuentan.
+- Se calcula del mismo libro que los saldos; si no cuadrara con la tarjeta (libro recortado a los últimos 500), lo avisa.
+- «Ver en el libro de movimientos» filtra el libro por esa cuenta. Prueba: `tests/libro-signos-browser.cjs`.

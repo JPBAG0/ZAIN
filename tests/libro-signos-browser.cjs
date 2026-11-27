@@ -53,6 +53,19 @@ module.exports=async function verificarLibro(page,{base,capturas}={}){
   assert.deepEqual(await montos(),[['−$1,400.00','fin-egreso'],['−$3,108.80','fin-egreso'],['+$110.00','fin-ingreso']]);
   await page.locator('#cajaCuentas [data-cuenta="zain"]').click();
   assert.deepEqual(await montos(),[['+$1,769.02','fin-ingreso'],['−$110.00','fin-egreso']]);
+  // Cada tarjeta de saldo abre los movimientos que la suman, por grupos, y cuadra con la tarjeta (27-nov-2026).
+  const desglose=async(k,patrones)=>{await page.locator('#cajaSaldos .fin-kpis [data-tarjeta="'+k+'"]').click();const d=page.locator('#cajaDesglose');await d.waitFor();const t=await d.innerText();for(const p of patrones)assert.match(t,p,k);assert.equal(await d.locator('.cot-alerta').count(),0,'cuadra '+k);return d;};
+  let d=await desglose('zain',[/Caja ZAIN/,/Entradas\s*\+\$1,769\.02/,/Salidas\s*−\$110\.00/,/Saldo\s*\$1,659\.02/,/Cobros recibidos[\s\S]*\+\$1,769\.02/,/Reembolsos pagados a socios[\s\S]*−\$110\.00/]);
+  await d.locator('summary',{hasText:'Cobros recibidos'}).click();assert.match(await d.innerText(),/Transferencia a la cuenta[\s\S]*ZAIN-FICTICIO-3/);
+  if(capturas)await d.screenshot({path:capturas+'/tarjeta-zain-'+width+'.png'});
+  await desglose('oficina_garcia',[/Transferencias recibidas[\s\S]*\+\$3,108\.80/,/Gastos de pedidos pagados[\s\S]*−\$1,554\.40/,/Saldo\s*\$1,554\.40/]);
+  await desglose('garcia',[/Gastos que pagó de su bolsa · ZAIN le debe[\s\S]*\+\$1,400\.00/,/Dinero que metió a una caja[\s\S]*\+\$3,108\.80/,/Reembolsos que ya le dieron[\s\S]*−\$110\.00/,/ZAIN le debe\s*\$4,398\.80/]);
+  d=await desglose('juan_pablo',[/Cobros que recibió[\s\S]*−\$4,400\.00/,/Gastos que pagó de su bolsa[\s\S]*\+\$4,548\.00/,/ZAIN le debe\s*\$148\.00/]);
+  if(capturas)await d.screenshot({path:capturas+'/tarjeta-jp-'+width+'.png'});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Sin desbordamiento con el desglose');
+  await d.locator('[data-ver-libro]').click();assert.equal(await page.locator('#cajaCuentas [data-cuenta="juan_pablo"]').getAttribute('aria-pressed'),'true','«Ver en el libro» filtra por la cuenta');
+  await page.locator('#cajaSaldos .fin-kpis [data-tarjeta="juan_pablo"]').click();assert.equal(await page.locator('#cajaDesglose').count(),0,'tocar otra vez la cierra');
+  await page.locator('#cajaCuentas [data-cuenta=""]').click();
   resultados.push({width,todas:todas.map(x=>x[0]).join(' ')});
  }
  assert.deepEqual(errores,[]);

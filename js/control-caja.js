@@ -8,7 +8,7 @@ const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_Ci
 // Los repartos de utilidad van aparte: «Todo» y los totales de cada cuenta no los cuentan (27-oct-2026, JP).
 const FILTROS=[['','Todo sin repartos'],['todo','Todo con repartos'],['cobro','Cobros'],['gasto','Gastos'],['caja','Transferencias'],['reparto','Repartos']];
 const TIPOS=[['cobro','Cobro de pedido'],['gasto','Gasto'],['ingreso','Ingreso'],['reembolso','Reembolso'],['transferencia','Transferencia'],['reparto','Reparto']];
-let avisoHasta=0,datos=null,detalle=null,verUtilidad=false,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
+let avisoHasta=0,datos=null,detalle=null,verTarjeta=null,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
 // Casillas del libro para sumar varios movimientos (27-oct-2026, JP).
 const marcados=new Set();
 // Finanzas de cada pedido (partidas cotizadas y partida de cada gasto) para elegir la partida al registrar un gasto.
@@ -54,18 +54,58 @@ export async function cargarCaja(){
  try{const r=await api('caja');if(turn!==epoca)return;datos=r.caja;detalle=r.detalle||null;categorias=r.categorias||categorias;pintar();if(Date.now()>=avisoHasta)$('#cajaEstado').textContent='';}
  catch(e){if(turn!==epoca)return;$('#cajaEstado').textContent=/no encontrada|404|zain_caja/i.test(e.message)?'Falta aplicar la actualización de la caja en el servidor.':e.message;}
 }
-export function limpiarCaja(){epoca++;datos=null;detalle=null;verUtilidad=false;editando=null;gastosPedido.clear();marcados.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
+export function limpiarCaja(){epoca++;datos=null;detalle=null;verTarjeta=null;editando=null;gastosPedido.clear();marcados.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
 const firmado=n=>(n>0?'+':n<0?'−':'')+pesos(Math.abs(n));
+// ===== Desglose de cada tarjeta de saldo (JP, 27-nov-2026) =====
+// Tocar Caja ZAIN, una oficina o un socio abre, debajo de las tarjetas, los movimientos que suman ese saldo agrupados por
+// tipo con su subtotal. Sale del mismo libro que los saldos; si no cuadra (libro recortado), se avisa.
+const SOCIOS=['juan_pablo','garcia'];
+const tarjetaAttrs=(k,clase)=>`class="fin-kpi-clic ${clase}${verTarjeta===k?' on':''}" data-tarjeta="${k}" aria-expanded="${verTarjeta===k}" aria-controls="cajaDesglose"`;
+const pista=k=>`<em>${verTarjeta===k?'Ocultar desglose ▴':'Ver de dónde sale ▾'}</em>`;
+const saldoDe=k=>SOCIOS.includes(k)?Number(datos.socios[k]):Number((datos.cajas||{zain:datos.caja})[k]||0);
+const efectoTarjeta=(m,k)=>SOCIOS.includes(k)?(m.persona===k?Number(m.efecto_socio)||0:0):efectoEn(m,k);
+function grupoCuenta(m,k,v){
+ if(SOCIOS.includes(k)){
+  if(m.origen==='pago')return 'Cobros que recibió · tiene dinero del negocio';
+  if(m.origen==='caja')return v>0?'Dinero que metió a una caja':'Dinero que sacó de una caja';
+  if(m.tipo==='reembolso')return 'Reembolsos que ya le dieron';
+  if(m.tipo==='ingreso')return 'Ingresos que recibió';
+  return 'Gastos que pagó de su bolsa · ZAIN le debe';
+ }
+ if(m.origen==='pago')return 'Cobros recibidos';
+ if(m.origen==='caja')return m.tipo==='reparto'?'Repartos de utilidad pagados':v>0?'Transferencias recibidas':'Transferencias enviadas';
+ if(m.tipo==='reembolso')return 'Reembolsos pagados a socios';
+ if(m.tipo==='ingreso')return 'Ingresos generales';
+ return m.origen==='general'?'Gastos generales pagados':'Gastos de pedidos pagados';
+}
+function desgloseCuenta(k){
+ const lista=datos.libro.map(m=>({m,v:efectoTarjeta(m,k)})).filter(x=>x.v),socioK=SOCIOS.includes(k),saldo=saldoDe(k);
+ const grupos=new Map();for(const x of lista){const g=grupoCuenta(x.m,k,x.v);if(!grupos.has(g))grupos.set(g,[]);grupos.get(g).push(x);}
+ const orden=[...grupos.entries()].map(([g,l])=>({g,l,t:l.reduce((a,x)=>a+x.v,0)})).sort((a,b)=>Math.abs(b.t)-Math.abs(a.t));
+ const entra=lista.reduce((a,x)=>a+Math.max(0,x.v),0),sale=lista.reduce((a,x)=>a+Math.min(0,x.v),0),total=entra+sale;
+ const renglon=({m,v})=>{const quien=personas[m.persona]||'',t=m.origen==='pago'?'Cobro':m.origen==='caja'?(m.tipo==='reparto'?'Reparto a '+personas[m.destino]:(personas[m.origen_persona]||'')+' → '+(personas[m.destino]||'')):m.tipo==='reembolso'?'Reembolso a '+quien:m.tipo==='ingreso'?'Ingreso':'Gasto';
+  const extra=[m.folio?m.folio:m.origen==='general'?'General':'',!socioK&&m.origen!=='caja'&&quien&&m.persona!==k&&m.tipo!=='reembolso'?quien:''].filter(Boolean).join(' · ');
+  return `<li class="fin-util-fila fin-cuenta-fila"><div><b>${esc(t)}</b> <span class="fin-util-cliente">${esc(m.concepto)}</span><p>${esc(fechaLarga(m.fecha))}${extra?' · '+esc(extra):''}</p></div><b class="num ${v>0?'fin-ingreso':'fin-egreso'}">${esc(firmado(v))}</b></li>`;};
+ const ayuda=socioK?'Lo que pagó de su bolsa suma (ZAIN le debe); lo que recibió del negocio resta. Los repartos de utilidad no cuentan aquí.':'Entradas suman y salidas restan. Toca un grupo para ver sus movimientos.';
+ const cuadra=total===saldo;
+ return `<section id="cajaDesglose" class="fin-util" aria-label="Desglose de ${esc(personas[k])}">
+ <div class="fin-util-cab"><h3>De dónde sale · ${esc(personas[k])}</h3><button type="button" class="btn-texto" data-tarjeta="${k}">Cerrar</button></div>
+ <p class="cot-ayuda">${ayuda}</p>
+ <div class="fin-cuenta-resumen"><div><small>${socioK?'ZAIN le debe (suma)':'Entradas'}</small><b class="num fin-ingreso">${esc(firmado(entra))}</b></div><div><small>${socioK?'Tiene del negocio (resta)':'Salidas'}</small><b class="num fin-egreso">${esc(firmado(sale))}</b></div><div><small>${socioK?(total>0?'ZAIN le debe':total<0?'Tiene dinero del negocio':'Sin saldo'):'Saldo'}</small><b class="num">${esc(socioK?pesos(Math.abs(total)):firmado(total).replace(/^\+/,''))}</b></div></div>
+ ${cuadra?'':`<p class="cot-alerta">Estos movimientos suman ${esc(firmado(total))} y la tarjeta dice ${esc(firmado(saldo))}: el libro solo trae los movimientos más recientes.</p>`}
+ ${orden.length?orden.map(({g,l,t})=>`<details class="fin-cuenta-grupo"><summary><span><b>${esc(g)}</b><small>${l.length} ${l.length===1?'movimiento':'movimientos'}</small></span><b class="num ${t>0?'fin-ingreso':t<0?'fin-egreso':''}">${esc(firmado(t))}</b></summary><ol class="fin-util-lista">${l.map(renglon).join('')}</ol></details>`).join(''):'<p class="cot-ayuda">Sin movimientos en esta cuenta.</p>'}
+ <div class="fin-cuenta-pie"><button type="button" class="btn btn--linea" data-ver-libro="${k}">Ver en el libro de movimientos</button></div></section>`;
+}
 function socio(k){
  const v=Number(datos.socios[k]);
- return `<div class="${v<0?'fin-debe':''}"><small>${personas[k]}</small><strong>${esc(pesos(Math.abs(v)))}</strong><span>${v>0?'ZAIN le debe':v<0?'Tiene dinero del negocio':'Sin saldo'}</span></div>`;
+ return `<button type="button" ${tarjetaAttrs(k,v<0?'fin-debe':'')}><small>${personas[k]}</small><strong>${esc(pesos(Math.abs(v)))}</strong><span>${v>0?'ZAIN le debe':v<0?'Tiene dinero del negocio':'Sin saldo'}</span>${pista(k)}</button>`;
 }
 function pintar(){
  const u=datos.utilidad,n=k=>Number(u.por_repartir[k]),caja=Number(datos.caja),cerrados=Number(u.pedidos_cerrados);
- const cajas=datos.cajas||{zain:caja},cajaHTML=(k,nota)=>{const v=Number(cajas[k]||0);return `<div class="${k==='zain'?'fin-kpi-neta ':''}${v<0?'fin-negativa':''}"><small>${personas[k]}</small><strong>${esc(firmado(v).replace(/^\+/,''))}</strong><span>${nota}</span></div>`;};
+ const cajas=datos.cajas||{zain:caja},cajaHTML=(k,nota)=>{const v=Number(cajas[k]||0);return `<button type="button" ${tarjetaAttrs(k,(k==='zain'?'fin-kpi-neta ':'')+(v<0?'fin-negativa':''))}><small>${personas[k]}</small><strong>${esc(firmado(v).replace(/^\+/,''))}</strong><span>${nota}</span>${pista(k)}</button>`;};
  $('#cajaSaldos').innerHTML=`<div class="fin-kpis fin-saldos">${cajaHTML('zain','Dinero del negocio · con IVA')}${cajaHTML('oficina_jp','Caja aparte')}${cajaHTML('oficina_garcia','Caja aparte')}${socio('juan_pablo')}${socio('garcia')}
- <button type="button" class="fin-kpi-clic${verUtilidad?' on':''}" data-utilidad aria-expanded="${verUtilidad}" aria-controls="cajaUtilidad"><small>Por repartir · utilidad cerrada</small><strong>${esc(pesos(Math.max(0,n('juan_pablo'))+Math.max(0,n('garcia'))))}</strong><span>JP ${esc(pesos(n('juan_pablo')))} · García ${esc(pesos(n('garcia')))}</span><span>${cerrados} ${cerrados===1?'pedido cerrado':'pedidos cerrados'} · repartido ${esc(pesos(Number(u.repartido.juan_pablo)+Number(u.repartido.garcia)))}</span><em>${verUtilidad?'Ocultar desglose ▴':'Ver de qué pedidos sale ▾'}</em></button></div>
- ${verUtilidad?desglose():''}
+ <button type="button" class="fin-kpi-clic${verTarjeta==='utilidad'?' on':''}" data-tarjeta="utilidad" aria-expanded="${verTarjeta==='utilidad'}" aria-controls="cajaDesglose"><small>Por repartir · utilidad cerrada</small><strong>${esc(pesos(Math.max(0,n('juan_pablo'))+Math.max(0,n('garcia'))))}</strong><span>JP ${esc(pesos(n('juan_pablo')))} · García ${esc(pesos(n('garcia')))}</span><span>${cerrados} ${cerrados===1?'pedido cerrado':'pedidos cerrados'} · repartido ${esc(pesos(Number(u.repartido.juan_pablo)+Number(u.repartido.garcia)))}</span><em>${verTarjeta==='utilidad'?'Ocultar desglose ▴':'Ver de qué pedidos sale ▾'}</em></button></div>
+ ${verTarjeta==='utilidad'?desglose():verTarjeta?desgloseCuenta(verTarjeta):''}
  ${Number(datos.iva_cobrado)?`<p class="cot-ayuda">IVA incluido en las ventas: ${esc(pesos(Number(datos.iva_cobrado)))}. Todo se cuenta con IVA; si un cliente pide factura, ese IVA se paga.</p>`:''}
  ${porCerrarAviso(u)}
  ${Number(datos.papelera)?`<p class="cot-alerta">El libro incluye cobros o gastos de ${datos.papelera} ${datos.papelera==1?'pedido':'pedidos'} en papelera. Es dinero real: restaura el pedido o corrige sus movimientos.</p>`:''}`;
@@ -83,11 +123,11 @@ const folioBoton=x=>`<button type="button" class="fin-util-folio" data-util-pedi
 function porCerrarAviso(u){
  const l=detalle?.por_cerrar;
  if(!l)return Number(u.provisional)?`<p class="cot-ayuda">Utilidad provisional de pedidos vendidos sin cerrar: ${esc(pesos(Number(u.provisional)))}. Se puede repartir al cerrarlos.</p>`:'';
- const con=l.filter(x=>x.utilidad!=null);if(!l.length||verUtilidad)return '';
- return `<p class="cot-ayuda">Utilidad por cerrar: <b>${esc(firmado(suma(con,'utilidad')).replace(/^\+/,''))}</b> en ${l.length} ${l.length===1?'pedido aprobado':'pedidos aprobados'} sin cerrar. <button type="button" class="btn-texto" data-utilidad>Ver desglose</button></p>`;
+ const con=l.filter(x=>x.utilidad!=null);if(!l.length||verTarjeta==='utilidad')return '';
+ return `<p class="cot-ayuda">Utilidad por cerrar: <b>${esc(firmado(suma(con,'utilidad')).replace(/^\+/,''))}</b> en ${l.length} ${l.length===1?'pedido aprobado':'pedidos aprobados'} sin cerrar. <button type="button" class="btn-texto" data-tarjeta="utilidad">Ver desglose</button></p>`;
 }
 function desglose(){
- if(!detalle)return `<section id="cajaUtilidad" class="fin-util"><p class="cot-ayuda">El desglose todavía no está disponible. Actualiza la página en un momento.</p></section>`;
+ if(!detalle)return `<section id="cajaDesglose" class="fin-util"><p class="cot-ayuda">El desglose todavía no está disponible. Actualiza la página en un momento.</p></section>`;
  const u=datos.utilidad,c=detalle.cerrados||[],g=detalle.generales||{},r=detalle.repartos||[],pc=detalle.por_cerrar||[];
  const rep=k=>suma(r.filter(x=>x.destino===k),'importe'),toca=k=>suma(c,k)+N(g[k]);
  const socioCaja=(k,t)=>`<div><small>${t}</small><strong class="num">${esc(firmado(N(u.por_repartir[k])).replace(/^\+/,''))}</strong><span>Le toca ${esc(pesos(toca(k)))} · ya se le repartió ${esc(pesos(rep(k)))}</span></div>`;
@@ -102,8 +142,8 @@ function desglose(){
   <p>Gastos registrados ${esc(pesos(N(x.gastos)))}${x.costo_cotizado!=null?` · costo cotizado ${esc(pesos(N(x.costo_cotizado)))}`:''}${x.utilidad!=null?` · utilidad hasta hoy <b>${esc(firmado(N(x.utilidad)).replace(/^\+/,''))}</b> · ${esc(repartoTexto(x.reparto_bp))}`:' · <b>sin costo cotizado ni gastos: no se cuenta</b>'}</p></div>
   ${x.utilidad!=null?monto(x.juan_pablo)+monto(x.garcia):'<b class="num">—</b><b class="num">—</b>'}</li>`;
  const futuro=k=>N(u.por_repartir[k])+suma(con,k);
- return `<section id="cajaUtilidad" class="fin-util" aria-label="Desglose de la utilidad">
- <div class="fin-util-cab"><h3>De dónde sale «Por repartir»</h3><button type="button" class="btn-texto" data-utilidad>Cerrar</button></div>
+ return `<section id="cajaDesglose" class="fin-util" aria-label="Desglose de la utilidad">
+ <div class="fin-util-cab"><h3>De dónde sale «Por repartir»</h3><button type="button" class="btn-texto" data-tarjeta="utilidad">Cerrar</button></div>
  <div class="fin-reparto">${socioCaja('juan_pablo','Juan Pablo · por repartir')}${socioCaja('garcia','García · por repartir')}</div>
  <h4>Pedidos cerrados · ${c.length}</h4>
  <ol class="fin-util-lista">${c.length||filaGenerales||filasReparto?cab+c.map(filaCerrado).join('')+filaGenerales+filasReparto+total:'<li class="cot-ayuda">Todavía no hay pedidos cerrados.</li>'}</ol>
@@ -255,7 +295,8 @@ async function guardar(e){
 function clic(e){
  const b=e.target.closest('button');if(!b||ocupado)return;
  if(b.dataset.nuevo){abrir(b.dataset.nuevo);return;}
- if(b.hasAttribute('data-utilidad')&&datos){verUtilidad=!verUtilidad;pintar();if(verUtilidad)$('#cajaUtilidad')?.scrollIntoView({behavior:'smooth',block:'nearest'});else $('#cajaSaldos [data-utilidad]')?.focus();return;}
+ if(b.dataset.tarjeta&&datos){const k=b.dataset.tarjeta;verTarjeta=verTarjeta===k?null:k;pintar();if(verTarjeta)$('#cajaDesglose')?.scrollIntoView({behavior:'smooth',block:'nearest'});else $('#cajaSaldos .fin-kpis [data-tarjeta="'+k+'"]')?.focus();return;}
+ if(b.dataset.verLibro&&datos){cuenta=b.dataset.verLibro;filtro='';visibles=30;libro();$('#finLibro').scrollIntoView({behavior:'smooth',block:'start'});return;}
  if(b.dataset.utilPedido){$('#verPedidos').click();dispatchEvent(new CustomEvent('zain:abrir-pedido',{detail:{id:b.dataset.utilPedido}}));return;}
  if(b.hasAttribute('data-cancelar')){cerrar();return;}
  if(b.dataset.verComprobante){verComprobante(b);return;}

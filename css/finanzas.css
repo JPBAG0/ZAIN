@@ -188,3 +188,23 @@
  .fin-util-fila>b{font-size:13px}
  .fin-util-fila>div>b{font-size:14px}
 }
+/* Todas las tarjetas de saldo se tocan (27-nov-2026): conservan su color y abren su desglose por grupos. */
+.fin-kpis>.fin-kpi-clic.fin-kpi-neta{background:#182034;border-color:#182034;color:#fff}
+.fin-kpis>.fin-kpi-clic.fin-kpi-neta.fin-negativa{background:#7a1d24;border-color:#7a1d24}
+.fin-kpis>.fin-kpi-clic.fin-kpi-neta em{color:#aab4ff}
+.fin-kpis>.fin-kpi-clic.fin-kpi-neta.on{box-shadow:0 0 0 3px rgba(42,59,255,.45)}
+.fin-cuenta-resumen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.fin-cuenta-resumen>div{display:grid;gap:2px;background:#fff;border:1px solid #e3e7ef;border-radius:12px;padding:10px 12px;min-width:0}
+.fin-cuenta-resumen small{font-size:11.5px;color:#5d6880}.fin-cuenta-resumen b{font-size:16px;overflow-wrap:anywhere}
+.fin-util .fin-ingreso{color:#267663}.fin-util .fin-egreso{color:#b3261e}
+.fin-cuenta-grupo{background:#fff;border:1px solid #e3e7ef;border-radius:12px;margin:0 0 8px}
+.fin-cuenta-grupo>summary{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px;cursor:pointer;min-height:48px;list-style:none}
+.fin-cuenta-grupo>summary::-webkit-details-marker{display:none}
+.fin-cuenta-grupo>summary>span{display:grid;gap:2px;min-width:0}.fin-cuenta-grupo>summary small{font-size:11.5px;color:#68758b}
+.fin-cuenta-grupo>summary>span>b::before{content:'▸ ';color:#2a30b8}.fin-cuenta-grupo[open]>summary>span>b::before{content:'▾ '}
+.fin-cuenta-grupo>summary>b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.fin-cuenta-grupo>summary>span>b{font-size:15px}
+.fin-cuenta-grupo .fin-util-lista{border:0;border-top:1px solid #e3e7ef;border-radius:0 0 12px 12px}
+.fin-util-fila.fin-cuenta-fila{grid-template-columns:minmax(0,1fr) auto}
+.fin-cuenta-pie{margin-top:10px}
+@media(max-width:700px){.fin-cuenta-resumen{gap:6px}.fin-cuenta-resumen>div{padding:8px}.fin-cuenta-resumen b{font-size:14px}}
