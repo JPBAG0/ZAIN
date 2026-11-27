@@ -42,3 +42,11 @@ node --test tests/caja.test.mjs
 - Un gasto puede adjuntar su comprobante (JPG, PNG, WEBP o PDF hasta 4 MB) al registrarse o corregirse desde el libro; el renglón muestra «Ver comprobante».
 - Un gasto con comprobante no se mueve entre pedidos ni entre pedido y generales (el archivo pertenece a su registro): se borra y se registra de nuevo.
 - Finanzas ya no muestra la sección anterior de «Movimientos generales» ni su formulario: el libro de la caja los reemplaza.
+
+## Desglose de «Por repartir» (27-nov-2026, `supabase/caja-utilidad-detalle.sql`)
+- La tarjeta «Por repartir · utilidad cerrada» se toca y abre el desglose; se cierra tocándola otra vez o con «Cerrar».
+- **Pedidos cerrados:** por pedido, venta − costo = utilidad, el reparto pactado y lo que le toca a JP y a García; luego los gastos e ingresos generales al 50/50, cada reparto ya pagado y el total «Por repartir hoy» (igual a la tarjeta).
+- **Utilidad por cerrar:** pedidos aceptados, confirmados, en producción o entregados sin cierre, fuera de papelera. Muestra venta, cobrado, lo que falta cobrar, gastos registrados, costo cotizado y la utilidad hasta hoy (mismo costo que el tablero: el cotizado del material hasta que lo gastado lo supere, más los gastos extra). Los que no tienen costo cotizado ni gastos no se suman.
+- «Si se cerraran hoy, les tocaría»: lo por repartir más la utilidad por cerrar de cada socio.
+- El folio abre el pedido. `zain_caja_utilidad_detalle()` es solo lectura; si no estuviera en la base, la caja carga igual sin el desglose.
+- Pruebas: `tests/caja-utilidad-detalle.test.mjs` (PGlite: el desglose suma exactamente lo de `zain_caja_resumen`) y `tests/caja-utilidad-browser.cjs` (390 y 1280 px).

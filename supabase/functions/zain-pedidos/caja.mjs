@@ -36,7 +36,11 @@ export function validarLibro(b,fail){
  return {modo:'guardar',origen:b.id==null?null:b.origen,id:b.id??null,datos:{...v,concepto}};
 }
 export function createCaja({sb,fail}){
- const leer=async()=>({caja:await sb('/rest/v1/rpc/zain_caja_resumen',{method:'POST',body:'{}'}),categorias:CATEGORIAS});
+ // El desglose de «Por repartir» (27-nov-2026) es aparte: si su función aún no está en la base, la caja carga igual.
+ const leer=async()=>{
+  const [caja,detalle]=await Promise.all([sb('/rest/v1/rpc/zain_caja_resumen',{method:'POST',body:'{}'}),sb('/rest/v1/rpc/zain_caja_utilidad_detalle',{method:'POST',body:'{}'}).catch(()=>null)]);
+  return {caja,detalle,categorias:CATEGORIAS};
+ };
  return {leer,
   guardar:async(b,user)=>{
    const v=validarCaja(b,fail);

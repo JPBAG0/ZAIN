@@ -160,3 +160,31 @@
 @media(max-width:720px){.fin-cuentas{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.fin-cuenta{padding:8px 9px;min-height:48px}.fin-cuenta b{font-size:12.5px}.fin-libro-totales{grid-template-columns:1fr 1fr}.fin-libro-todos{grid-column:1/-1}}
 #cajaTotales label.fin-libro-todos{display:flex;flex-direction:row;align-items:center;gap:8px;margin:0}
 #finLibro #cajaFiltro{flex-wrap:wrap;overflow:visible}
+/* Desglose de «Por repartir» (27-nov-2026): la tarjeta se toca y abre qué le toca a cada socio de cada pedido. */
+.fin-kpis>.fin-kpi-clic{display:grid;gap:3px;background:#fff;border:1px solid #d9dfe7;border-radius:14px;padding:14px;min-width:0;text-align:left;font:inherit;color:inherit;cursor:pointer;transition:border-color .18s,box-shadow .18s,transform .14s}
+.fin-kpis>.fin-kpi-clic em{font-style:normal;font-size:12px;font-weight:700;color:#2a30b8;margin-top:2px}
+.fin-kpis>.fin-kpi-clic.on{border-color:#2a3bff;box-shadow:0 0 0 2px rgba(42,59,255,.18)}
+.fin-kpis>.fin-kpi-clic:active{transform:scale(.98)}
+@media(hover:hover) and (pointer:fine){.fin-kpis>.fin-kpi-clic:hover{border-color:#2a3bff}}
+.fin-util{background:#f7f8fb;border:1px solid #d9dfe7;border-radius:14px;padding:14px;margin:0 0 14px}
+.fin-util-cab{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}
+.fin-util h3{font-size:16px;margin:0}.fin-util h4{font-size:14px;margin:16px 0 6px}.fin-util .fin-util-sub{margin:22px 0 4px}
+.fin-util .fin-reparto>div{background:#fff}
+.fin-util-lista{list-style:none;padding:0;margin:0;background:#fff;border:1px solid #e3e7ef;border-radius:12px}
+.fin-util-fila{display:grid;grid-template-columns:minmax(0,1fr) 112px 112px;gap:10px;align-items:start;padding:10px 12px;border-top:1px solid #e3e7ef}
+.fin-util-fila:first-child{border-top:0}
+.fin-util-fila>b,.fin-util-fila>small{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fin-util-fila p{font-size:12px;color:#5d6880;margin:3px 0 0;overflow-wrap:anywhere}
+.fin-util-titulos{padding-top:6px;padding-bottom:6px}.fin-util-titulos small{font-size:11px;color:#68758b;font-weight:700}
+.fin-util-folio{border:0;background:none;padding:0;font:700 14px Archivo,Arial,sans-serif;color:#2a30b8;cursor:pointer;text-decoration:underline;text-underline-offset:2px;min-height:28px}
+.fin-util-cliente{font-size:13px;color:#2b3446}
+.fin-util-estado{display:inline-block;font-size:11px;font-weight:700;background:#eef0ff;color:#2a30b8;border-radius:999px;padding:2px 8px}
+.fin-util-reparto>div b{font-weight:600}
+.fin-util-total{background:#f1f4fa}.fin-util-futuro{background:#182034;color:#fff;border-radius:0 0 11px 11px}.fin-util-futuro p{color:#c9cfdd}
+.fin-util-futuro .fin-egreso{color:#ffb4ab}
+@media(max-width:700px){
+ .fin-util{padding:12px 10px}
+ .fin-util-fila{grid-template-columns:minmax(0,1fr) 84px 84px;gap:6px;padding:10px 8px}
+ .fin-util-fila>b{font-size:13px}
+ .fin-util-fila>div>b{font-size:14px}
+}

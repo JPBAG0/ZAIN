@@ -8,7 +8,7 @@ const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_Ci
 // Los repartos de utilidad van aparte: «Todo» y los totales de cada cuenta no los cuentan (27-oct-2026, JP).
 const FILTROS=[['','Todo sin repartos'],['todo','Todo con repartos'],['cobro','Cobros'],['gasto','Gastos'],['caja','Transferencias'],['reparto','Repartos']];
 const TIPOS=[['cobro','Cobro de pedido'],['gasto','Gasto'],['ingreso','Ingreso'],['reembolso','Reembolso'],['transferencia','Transferencia'],['reparto','Reparto']];
-let avisoHasta=0,datos=null,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
+let avisoHasta=0,datos=null,detalle=null,verUtilidad=false,categorias={gasto:[],ingreso:[]},epoca=0,filtro='',cuenta='',visibles=30,ocupado=false,editando=null,ultima=null,porBorrar=null;
 // Casillas del libro para sumar varios movimientos (27-oct-2026, JP).
 const marcados=new Set();
 // Finanzas de cada pedido (partidas cotizadas y partida de cada gasto) para elegir la partida al registrar un gasto.
@@ -51,10 +51,10 @@ export function montarCaja(){
 }
 export async function cargarCaja(){
  const turn=++epoca,conAviso=Date.now()<avisoHasta;if(!conAviso)$('#cajaEstado').textContent='Calculando saldos…';
- try{const r=await api('caja');if(turn!==epoca)return;datos=r.caja;categorias=r.categorias||categorias;pintar();if(Date.now()>=avisoHasta)$('#cajaEstado').textContent='';}
+ try{const r=await api('caja');if(turn!==epoca)return;datos=r.caja;detalle=r.detalle||null;categorias=r.categorias||categorias;pintar();if(Date.now()>=avisoHasta)$('#cajaEstado').textContent='';}
  catch(e){if(turn!==epoca)return;$('#cajaEstado').textContent=/no encontrada|404|zain_caja/i.test(e.message)?'Falta aplicar la actualización de la caja en el servidor.':e.message;}
 }
-export function limpiarCaja(){epoca++;datos=null;editando=null;gastosPedido.clear();marcados.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
+export function limpiarCaja(){epoca++;datos=null;detalle=null;verUtilidad=false;editando=null;gastosPedido.clear();marcados.clear();for(const id of ['cajaSaldos','cajaLibro'])$('#'+id)?.replaceChildren();}
 const firmado=n=>(n>0?'+':n<0?'−':'')+pesos(Math.abs(n));
 function socio(k){
  const v=Number(datos.socios[k]);
@@ -64,11 +64,53 @@ function pintar(){
  const u=datos.utilidad,n=k=>Number(u.por_repartir[k]),caja=Number(datos.caja),cerrados=Number(u.pedidos_cerrados);
  const cajas=datos.cajas||{zain:caja},cajaHTML=(k,nota)=>{const v=Number(cajas[k]||0);return `<div class="${k==='zain'?'fin-kpi-neta ':''}${v<0?'fin-negativa':''}"><small>${personas[k]}</small><strong>${esc(firmado(v).replace(/^\+/,''))}</strong><span>${nota}</span></div>`;};
  $('#cajaSaldos').innerHTML=`<div class="fin-kpis fin-saldos">${cajaHTML('zain','Dinero del negocio · con IVA')}${cajaHTML('oficina_jp','Caja aparte')}${cajaHTML('oficina_garcia','Caja aparte')}${socio('juan_pablo')}${socio('garcia')}
- <div><small>Por repartir · utilidad cerrada</small><strong>${esc(pesos(Math.max(0,n('juan_pablo'))+Math.max(0,n('garcia'))))}</strong><span>JP ${esc(pesos(n('juan_pablo')))} · García ${esc(pesos(n('garcia')))}</span><span>${cerrados} ${cerrados===1?'pedido cerrado':'pedidos cerrados'} · repartido ${esc(pesos(Number(u.repartido.juan_pablo)+Number(u.repartido.garcia)))}</span></div></div>
+ <button type="button" class="fin-kpi-clic${verUtilidad?' on':''}" data-utilidad aria-expanded="${verUtilidad}" aria-controls="cajaUtilidad"><small>Por repartir · utilidad cerrada</small><strong>${esc(pesos(Math.max(0,n('juan_pablo'))+Math.max(0,n('garcia'))))}</strong><span>JP ${esc(pesos(n('juan_pablo')))} · García ${esc(pesos(n('garcia')))}</span><span>${cerrados} ${cerrados===1?'pedido cerrado':'pedidos cerrados'} · repartido ${esc(pesos(Number(u.repartido.juan_pablo)+Number(u.repartido.garcia)))}</span><em>${verUtilidad?'Ocultar desglose ▴':'Ver de qué pedidos sale ▾'}</em></button></div>
+ ${verUtilidad?desglose():''}
  ${Number(datos.iva_cobrado)?`<p class="cot-ayuda">IVA incluido en las ventas: ${esc(pesos(Number(datos.iva_cobrado)))}. Todo se cuenta con IVA; si un cliente pide factura, ese IVA se paga.</p>`:''}
- ${Number(u.provisional)?`<p class="cot-ayuda">Utilidad provisional de pedidos vendidos sin cerrar: ${esc(pesos(Number(u.provisional)))}. Se puede repartir al cerrarlos.</p>`:''}
+ ${porCerrarAviso(u)}
  ${Number(datos.papelera)?`<p class="cot-alerta">El libro incluye cobros o gastos de ${datos.papelera} ${datos.papelera==1?'pedido':'pedidos'} en papelera. Es dinero real: restaura el pedido o corrige sus movimientos.</p>`:''}`;
  libro();
+}
+// ===== Desglose de «Por repartir» (JP, 27-nov-2026) =====
+// Qué le toca a cada socio de cada pedido cerrado, los generales 50/50 y lo ya repartido; abajo, lo que llevan los pedidos
+// aprobados que faltan por cerrar. Los números salen de zain_caja_utilidad_detalle con las mismas reglas que la tarjeta.
+const ESTADOS={aceptado:'Aceptado',confirmado:'Confirmado',produccion:'En producción',entregado:'Entregado'};
+const N=v=>Number(v)||0,suma=(l,k)=>l.reduce((a,x)=>a+N(x[k]),0);
+const repartoTexto=bp=>{const j=N(bp)/100;return j===50?'50/50':'JP '+j+'% · García '+(100-j)+'%';};
+const fechaLarga=f=>f?new Date(f+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric'}):'';
+const monto=v=>`<b class="num${N(v)<0?' fin-egreso':''}">${esc(firmado(N(v)).replace(/^\+/,''))}</b>`;
+const folioBoton=x=>`<button type="button" class="fin-util-folio" data-util-pedido="${esc(x.id)}" title="Abrir el pedido">${esc(x.folio||'Pedido')}</button>`;
+function porCerrarAviso(u){
+ const l=detalle?.por_cerrar;
+ if(!l)return Number(u.provisional)?`<p class="cot-ayuda">Utilidad provisional de pedidos vendidos sin cerrar: ${esc(pesos(Number(u.provisional)))}. Se puede repartir al cerrarlos.</p>`:'';
+ const con=l.filter(x=>x.utilidad!=null);if(!l.length||verUtilidad)return '';
+ return `<p class="cot-ayuda">Utilidad por cerrar: <b>${esc(firmado(suma(con,'utilidad')).replace(/^\+/,''))}</b> en ${l.length} ${l.length===1?'pedido aprobado':'pedidos aprobados'} sin cerrar. <button type="button" class="btn-texto" data-utilidad>Ver desglose</button></p>`;
+}
+function desglose(){
+ if(!detalle)return `<section id="cajaUtilidad" class="fin-util"><p class="cot-ayuda">El desglose todavía no está disponible. Actualiza la página en un momento.</p></section>`;
+ const u=datos.utilidad,c=detalle.cerrados||[],g=detalle.generales||{},r=detalle.repartos||[],pc=detalle.por_cerrar||[];
+ const rep=k=>suma(r.filter(x=>x.destino===k),'importe'),toca=k=>suma(c,k)+N(g[k]);
+ const socioCaja=(k,t)=>`<div><small>${t}</small><strong class="num">${esc(firmado(N(u.por_repartir[k])).replace(/^\+/,''))}</strong><span>Le toca ${esc(pesos(toca(k)))} · ya se le repartió ${esc(pesos(rep(k)))}</span></div>`;
+ const cab=`<li class="fin-util-fila fin-util-titulos" aria-hidden="true"><span></span><small>JP</small><small>García</small></li>`;
+ const filaCerrado=x=>`<li class="fin-util-fila"><div>${folioBoton(x)}${x.cliente?` <span class="fin-util-cliente">${esc(x.cliente)}</span>`:''}<p>Cerrado ${esc(fechaLarga(x.cerrado))} · venta ${esc(pesos(N(x.venta)))} − costo ${esc(pesos(N(x.costo)))} = utilidad <b>${esc(firmado(N(x.utilidad)).replace(/^\+/,''))}</b> · ${esc(repartoTexto(x.reparto_bp))}</p></div>${monto(x.juan_pablo)}${monto(x.garcia)}</li>`;
+ const filaGenerales=N(g.movimientos)?`<li class="fin-util-fila"><div><b>Gastos e ingresos generales</b><p>Ingresos ${esc(pesos(N(g.ingresos)))} − gastos ${esc(pesos(N(g.gastos)))} (sin IVA recuperable ni aportaciones de capital) · 50/50</p></div>${monto(g.juan_pablo)}${monto(g.garcia)}</li>`:'';
+ const filasReparto=r.map(x=>`<li class="fin-util-fila fin-util-reparto"><div><b>Ya repartido a ${esc(personas[x.destino]||x.destino)}</b><p>${esc(fechaLarga(x.fecha))} · ${esc(x.concepto)}</p></div>${x.destino==='juan_pablo'?monto(-N(x.importe)):'<b class="num">—</b>'}${x.destino==='garcia'?monto(-N(x.importe)):'<b class="num">—</b>'}</li>`).join('');
+ const total=`<li class="fin-util-fila fin-util-total"><div><b>Por repartir hoy</b></div>${monto(u.por_repartir.juan_pablo)}${monto(u.por_repartir.garcia)}</li>`;
+ const con=pc.filter(x=>x.utilidad!=null),sin=pc.length-con.length;
+ const filaAbierto=x=>`<li class="fin-util-fila"><div>${folioBoton(x)}${x.cliente?` <span class="fin-util-cliente">${esc(x.cliente)}</span>`:''} <span class="fin-util-estado">${esc(ESTADOS[x.estado]||x.estado)}</span>
+  <p>Venta ${esc(pesos(N(x.venta)))} · cobrado ${esc(pesos(N(x.cobrado)))}${N(x.por_cobrar)?` · <b>falta cobrar ${esc(pesos(N(x.por_cobrar)))}</b>`:' · cobrado completo'}</p>
+  <p>Gastos registrados ${esc(pesos(N(x.gastos)))}${x.costo_cotizado!=null?` · costo cotizado ${esc(pesos(N(x.costo_cotizado)))}`:''}${x.utilidad!=null?` · utilidad hasta hoy <b>${esc(firmado(N(x.utilidad)).replace(/^\+/,''))}</b> · ${esc(repartoTexto(x.reparto_bp))}`:' · <b>sin costo cotizado ni gastos: no se cuenta</b>'}</p></div>
+  ${x.utilidad!=null?monto(x.juan_pablo)+monto(x.garcia):'<b class="num">—</b><b class="num">—</b>'}</li>`;
+ const futuro=k=>N(u.por_repartir[k])+suma(con,k);
+ return `<section id="cajaUtilidad" class="fin-util" aria-label="Desglose de la utilidad">
+ <div class="fin-util-cab"><h3>De dónde sale «Por repartir»</h3><button type="button" class="btn-texto" data-utilidad>Cerrar</button></div>
+ <div class="fin-reparto">${socioCaja('juan_pablo','Juan Pablo · por repartir')}${socioCaja('garcia','García · por repartir')}</div>
+ <h4>Pedidos cerrados · ${c.length}</h4>
+ <ol class="fin-util-lista">${c.length||filaGenerales||filasReparto?cab+c.map(filaCerrado).join('')+filaGenerales+filasReparto+total:'<li class="cot-ayuda">Todavía no hay pedidos cerrados.</li>'}</ol>
+ <h3 class="fin-util-sub">Utilidad por cerrar · ${pc.length} ${pc.length===1?'pedido aprobado':'pedidos aprobados'}</h3>
+ <p class="cot-ayuda">Pedidos aceptados, confirmados, en producción o entregados que faltan por cerrar. La utilidad es la venta menos el costo: se usa el costo cotizado del material hasta que lo gastado lo supere, y se restan todos los gastos extra ya registrados. Cambia conforme registren gastos; se reparte al cerrar el pedido.</p>
+ <ol class="fin-util-lista">${pc.length?cab+pc.map(filaAbierto).join('')+`<li class="fin-util-fila fin-util-total"><div><b>Utilidad por cerrar</b><p>${esc(pesos(suma(con,'utilidad')))} en total · falta cobrar ${esc(pesos(suma(pc,'por_cobrar')))}${sin?` · ${sin} sin costo no se cuenta${sin===1?'':'n'}`:''}</p></div>${monto(suma(con,'juan_pablo'))}${monto(suma(con,'garcia'))}</li>
+  <li class="fin-util-fila fin-util-futuro"><div><b>Si se cerraran hoy, les tocaría</b><p>Lo por repartir más la utilidad por cerrar</p></div>${monto(futuro('juan_pablo'))}${monto(futuro('garcia'))}</li>`:'<li class="cot-ayuda">No hay pedidos aprobados pendientes de cerrar.</li>'}</ol></section>`;
 }
 const tipoDe=m=>m.origen==='pago'?'cobro':m.origen==='caja'?(m.tipo==='reparto'?'reparto':'caja'):m.tipo==='ingreso'?'cobro':'gasto';
 // Dinero que entra (+) o sale (−) de una cuenta con cada movimiento. Los reembolsos salen de la Caja ZAIN.
@@ -176,7 +218,7 @@ function abrir(tipo,m=null){
 function cerrar(){$('#cajaForm').hidden=true;editando=null;ultima=null;if(datos)libro();}
 async function enviar(cuerpo,aviso){
  ocupado=true;const f=$('#cajaForm');for(const el of f.elements)el.disabled=true;$('#cajaMensaje').textContent='Guardando…';
- try{const r=await api('libro-operar',cuerpo);gastosPedido.clear();datos=r.caja;categorias=r.categorias||categorias;porBorrar=null;cerrar();pintar();$('#cajaEstado').textContent=aviso;avisoHasta=Date.now()+6000;
+ try{const r=await api('libro-operar',cuerpo);gastosPedido.clear();datos=r.caja;if('detalle' in r)detalle=r.detalle||null;categorias=r.categorias||categorias;porBorrar=null;cerrar();pintar();$('#cajaEstado').textContent=aviso;avisoHasta=Date.now()+6000;
   // Pedidos, cobro y gastos abiertos se actualizan con los mismos datos.
   for(const ev of ['zain:pago-registrado','zain:gastos-guardados','zain:libro-cambio'])dispatchEvent(new CustomEvent(ev));
  }catch(er){$('#cajaMensaje').textContent=er.message;if(f.hidden)$('#cajaEstado').textContent=er.message;porBorrar=null;if(datos)libro();}
@@ -213,6 +255,8 @@ async function guardar(e){
 function clic(e){
  const b=e.target.closest('button');if(!b||ocupado)return;
  if(b.dataset.nuevo){abrir(b.dataset.nuevo);return;}
+ if(b.hasAttribute('data-utilidad')&&datos){verUtilidad=!verUtilidad;pintar();if(verUtilidad)$('#cajaUtilidad')?.scrollIntoView({behavior:'smooth',block:'nearest'});else $('#cajaSaldos [data-utilidad]')?.focus();return;}
+ if(b.dataset.utilPedido){$('#verPedidos').click();dispatchEvent(new CustomEvent('zain:abrir-pedido',{detail:{id:b.dataset.utilPedido}}));return;}
  if(b.hasAttribute('data-cancelar')){cerrar();return;}
  if(b.dataset.verComprobante){verComprobante(b);return;}
  if(b.dataset.editar){const m=datos.libro.find(x=>x.id===b.dataset.editar);if(m)abrir(null,m);return;}
