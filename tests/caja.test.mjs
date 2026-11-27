@@ -79,7 +79,7 @@ sqlTest('la base rechaza transferencias sin caja y repartos hacia la caja',async
 test('validarCaja exige caja en un extremo, reparto desde caja, importe y fecha válidos',()=>{
  const base={request:randomUUID(),tipo:'transferencia',origen:'juan_pablo',destino:'zain',importe:5000,fecha:'2026-10-20',concepto:'Depósito de cobro'};
  assert.equal(validarCaja(base,fail).importe,5000);
- assert.throws(()=>validarCaja({...base,destino:'garcia'},fail),/una caja/);
+ assert.equal(validarCaja({...base,destino:'garcia'},fail).destino,'garcia','de socio a socio (27-nov-2026)');assert.throws(()=>validarCaja({...base,destino:'juan_pablo'},fail),/distintos/);
  assert.equal(validarCaja({...base,origen:'oficina_jp',destino:'oficina_garcia'},fail).destino,'oficina_garcia','entre oficinas');
  assert.throws(()=>validarCaja({...base,tipo:'reparto',origen:'zain',destino:'oficina_jp'},fail),/reparto/);
  assert.throws(()=>validarCaja({...base,tipo:'reparto'},fail),/reparto/);

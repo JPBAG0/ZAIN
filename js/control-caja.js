@@ -63,10 +63,13 @@ const SOCIOS=['juan_pablo','garcia'];
 const tarjetaAttrs=(k,clase)=>`class="fin-kpi-clic ${clase}${verTarjeta===k?' on':''}" data-tarjeta="${k}" aria-expanded="${verTarjeta===k}" aria-controls="cajaDesglose"`;
 const pista=k=>`<em>${verTarjeta===k?'Ocultar desglose ▴':'Ver de dónde sale ▾'}</em>`;
 const saldoDe=k=>SOCIOS.includes(k)?Number(datos.socios[k]):Number((datos.cajas||{zain:datos.caja})[k]||0);
-const efectoTarjeta=(m,k)=>SOCIOS.includes(k)?(m.persona===k?Number(m.efecto_socio)||0:0):efectoEn(m,k);
+// Transferencia directa entre socios (27-nov-2026): quien entrega tiene menos dinero del negocio (+), quien recibe −.
+const entreSocios=m=>m.origen==='caja'&&m.tipo==='transferencia'&&SOCIOS.includes(m.origen_persona)&&SOCIOS.includes(m.destino);
+const efectoTarjeta=(m,k)=>SOCIOS.includes(k)?(entreSocios(m)?(m.origen_persona===k?Number(m.importe):m.destino===k?-Number(m.importe):0):m.persona===k?Number(m.efecto_socio)||0:0):efectoEn(m,k);
 function grupoCuenta(m,k,v){
  if(SOCIOS.includes(k)){
   if(m.origen==='pago')return 'Cobros que recibió · tiene dinero del negocio';
+  if(entreSocios(m))return v>0?'Dinero que le pasó a '+personas[m.destino]:'Dinero que recibió de '+personas[m.origen_persona];
   if(m.origen==='caja')return v>0?'Dinero que metió a una caja':'Dinero que sacó de una caja';
   if(m.tipo==='reembolso')return 'Reembolsos que ya le dieron';
   if(m.tipo==='ingreso')return 'Ingresos que recibió';
@@ -247,7 +250,7 @@ function formulario(reiniciar,cambio){
  const sugerido=tipo==='reparto'&&datos?Number(datos.utilidad.por_repartir[f.elements.persona.value]):0;
  if(reiniciar!==true&&tipo==='reparto'&&sugerido>0&&!f.elements.importe.dataset.tocado)f.elements.importe.value=(sugerido/100).toFixed(2);
  if(tipo==='cobro'&&sel?.publicada&&!f.elements.importe.dataset.tocado&&!editando)f.elements.importe.value=(Math.max(0,Number(sel.total)-Number(sel.cobrado))/100).toFixed(2);
- f.querySelector('[data-ayuda]').textContent={cobro:'Se suma al saldo del pedido y a lo que el cliente ve en su enlace. Si el cliente no aceptó en su enlace, queda aceptada por el equipo.',gasto:conPedido?'Cuenta como costo real del pedido.':'Gasto general del negocio (publicidad, software, flete…).',ingreso:'Dinero que entra sin ser cobro de un pedido.',reembolso:'Devolución a un socio de lo que pagó de su bolsa.',transferencia:'Mover dinero entre cajas (Caja ZAIN, Oficina JP, Oficina García), o entre un socio y una caja.',reparto:'Sale de la Caja ZAIN y cuenta como utilidad repartida. Pendiente para esta persona: '+pesos(Math.max(0,sugerido))+'.'}[tipo];
+ f.querySelector('[data-ayuda]').textContent={cobro:'Se suma al saldo del pedido y a lo que el cliente ve en su enlace. Si el cliente no aceptó en su enlace, queda aceptada por el equipo.',gasto:conPedido?'Cuenta como costo real del pedido.':'Gasto general del negocio (publicidad, software, flete…).',ingreso:'Dinero que entra sin ser cobro de un pedido.',reembolso:'Devolución a un socio de lo que pagó de su bolsa.',transferencia:'Mover dinero entre cajas (Caja ZAIN, Oficina JP, Oficina García), entre un socio y una caja, o de un socio al otro (quien entrega queda con menos dinero del negocio y a quien recibe ZAIN le debe menos).',reparto:'Sale de la Caja ZAIN y cuenta como utilidad repartida. Pendiente para esta persona: '+pesos(Math.max(0,sugerido))+'.'}[tipo];
 }
 function abrir(tipo,m=null){
  const f=$('#cajaForm');f.hidden=false;f.reset();delete f.elements.importe.dataset.tocado;delete f.elements.partida.dataset.tocado;editando=m;porBorrar=null;

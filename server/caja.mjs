@@ -7,7 +7,7 @@ const hoy=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Mexico_Ci
 const fechaValida=f=>typeof f==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(f)&&new Date(f+'T12:00Z').toISOString().slice(0,10)===f&&f>='2000-01-01'&&f<=hoy();
 export function validarCaja(b,fail){
  if(!UUID.test(b?.request||'')||!['transferencia','reparto'].includes(b.tipo))fail(400,'Elige transferencia o reparto.');
- if(!PERSONAS.includes(b.origen)||!PERSONAS.includes(b.destino)||b.origen===b.destino||!(CAJAS.includes(b.origen)||CAJAS.includes(b.destino)))fail(400,'Una transferencia va entre dos cajas, o entre un socio y una caja.');
+ if(!PERSONAS.includes(b.origen)||!PERSONAS.includes(b.destino)||b.origen===b.destino)fail(400,'Elige de dónde sale y a dónde va el dinero (deben ser distintos).');
  if(b.tipo==='reparto'&&(b.origen!=='zain'||CAJAS.includes(b.destino)))fail(400,'El reparto sale de la Caja ZAIN hacia un socio.');
  if(!Number.isSafeInteger(b.importe)||b.importe<1||b.importe>MAX)fail(400,'Revisa el importe.');
  if(!fechaValida(b.fecha))fail(400,'Revisa la fecha (no puede ser futura).');

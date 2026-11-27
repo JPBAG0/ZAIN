@@ -60,3 +60,8 @@ node --test tests/caja.test.mjs
 ## «Por repartir» solo con lo pendiente (27-nov-2026, JP)
 - Ya no muestra todo el historial: solo los pedidos cerrados que falta repartir y lo próximo a repartir (aprobados sin cerrar).
 - Los repartos no van ligados a pedidos: lo pagado y los generales cubren primero los cierres más antiguos. Lo que falta son los cierres más recientes; el que quedó a medias dice «ya se repartió una parte» y muestra solo lo que falta. Si a un socio se le repartió de más, sale «Repartido de más» en negativo. La suma siempre es igual a la tarjeta.
+
+## Transferencia de socio a socio (27-nov-2026, `supabase/transferencia-entre-socios.sql`)
+- «Transferencia» ya permite De Juan Pablo → Para García (y al revés). No toca cajas ni el resultado del negocio: en el libro sale como «solo mueve dinero entre cuentas».
+- Quien entrega: +importe en su saldo (tiene menos dinero del negocio o ZAIN le debe más). Quien recibe: −importe (ZAIN le debe menos o tiene más del negocio).
+- La migración corrige las funciones vigentes con reemplazos comprobados; si el texto esperado no está, falla sin aplicar nada. Prueba: `tests/transferencia-entre-socios.test.mjs`.
